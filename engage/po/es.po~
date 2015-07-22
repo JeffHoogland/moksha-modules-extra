@@ -1,0 +1,309 @@
+# Spanish translation for engage.
+# This file is put in the public domain.
+# Aníbal Garrido <khany@member.trisquel.info>, 2012.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: engage\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-11-08 02:06+0100\n"
+"PO-Revision-Date: 2012-11-08 02:06+0100\n"
+"Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
+"Language-Team: Enlightenment Team\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/ng_launcher.c:275
+msgid "Open folder with EFM"
+msgstr "Abrir carpeta con EFM"
+
+#: src/ng_launcher.c:561
+msgid "Configure Bar"
+msgstr "Configurar barra"
+
+#: src/ng_launcher.c:565
+msgid "Lock Dragging"
+msgstr "Bloquear el arrastrado"
+
+#: src/ng_launcher.c:574
+msgid "Applications"
+msgstr "Aplicaciones"
+
+#: src/ng_launcher.c:578
+msgid "Edit Icon"
+msgstr "Editar icono"
+
+#: src/ng_config_instances.c:64
+#: src/ng_config_instances.c:94
+msgid "Engage Instances"
+msgstr "Instancias de Engage"
+
+#: src/ng_config_instances.c:102
+#: src/ng_config.c:272
+#: src/ng_config.c:545
+msgid "Add"
+msgstr "Añadir"
+
+#: src/ng_config_instances.c:104
+#: src/ng_config.c:261
+#: src/ng_config.c:547
+msgid "Delete"
+msgstr "Eliminar"
+
+#: src/ng_config_instances.c:106
+#: src/ng_config.c:263
+#: src/ng_config.c:549
+msgid "Configure"
+msgstr "Configurar"
+
+#: src/ng_config_instances.c:164
+msgid "Bar"
+msgstr "Barra"
+
+#: src/ng_config_instances.c:271
+#, c-format
+msgid "You requested to delete \"%s\".<br><br>Are you sure you want to delete this Instance?"
+msgstr "Solicitó eliminar \"%s\".<br><br>¿Está seguro de que quiere eliminar esta instancia?"
+
+#: src/ng_config_instances.c:275
+msgid "Are you sure you want to delete this Instance?"
+msgstr "¿Está seguro de que quiere eliminar esta instancia?"
+
+#: src/ng_border_menu.c:30
+msgid "Fullscreen"
+msgstr "Pantalla completa"
+
+#: src/ng_border_menu.c:45
+msgid "Close"
+msgstr "Cerrar"
+
+#: src/ng_border_menu.c:66
+msgid "Maximized"
+msgstr "Maximizado"
+
+#: src/ng_border_menu.c:86
+msgid "Uniconify"
+msgstr "Restaurar"
+
+#: src/ng_border_menu.c:88
+msgid "Iconify"
+msgstr "Minimizar"
+
+#: src/ng_gadcon.c:299
+msgid "Available Gadgets"
+msgstr "Gadgets disponibles"
+
+#: src/ng_gadcon.c:306
+msgid "Add Gadget"
+msgstr "Añadir Gadget"
+
+#: src/ng_gadcon.c:312
+msgid "Selected Gadgets"
+msgstr "Gadgets seleccionados"
+
+#: src/ng_gadcon.c:319
+msgid "Remove Gadget"
+msgstr "Eliminar gadget"
+
+#: src/ng_gadcon.c:327
+#: src/ng_gadcon.c:370
+#: src/ng_gadcon.c:394
+msgid "Description: Unavailable"
+msgstr "Descripción: no disponible"
+
+#: src/ng_taskbar.c:641
+msgid "No name!"
+msgstr "¡Sin nombre!"
+
+#: src/e_mod_main.c:1705
+#: src/e_mod_main.c:1863
+#: src/e_mod_main.c:1890
+msgid "Engage"
+msgstr "Engage"
+
+#: src/ng_config.c:98
+msgid "Engage Configuration"
+msgstr "Configuración de Engage"
+
+#: src/ng_config.c:167
+#: src/ng_config.c:228
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: src/ng_config.c:168
+msgid "Icon Size:"
+msgstr "Tamaño del icono:"
+
+#: src/ng_config.c:170
+#, c-format
+msgid "%1.0f px"
+msgstr "%1.0f px"
+
+#: src/ng_config.c:184
+msgid "Background Opacity:"
+msgstr "Opacidad del fondo:"
+
+#: src/ng_config.c:186
+msgid "%1.0f \\%"
+msgstr "%1.0f \\%"
+
+#: src/ng_config.c:194
+msgid "Show Background Box"
+msgstr "Mostrar caja del fondo"
+
+#: src/ng_config.c:197
+msgid "Show Mouse-Over Animation"
+msgstr "Mostrar animación al pasar el ratón por encima"
+
+#: src/ng_config.c:202
+msgid "Orientation"
+msgstr "Orientación"
+
+#: src/ng_config.c:204
+msgid "Bottom Edge"
+msgstr "Borde inferior"
+
+#: src/ng_config.c:206
+msgid "Top Edge"
+msgstr "Borde superior"
+
+#: src/ng_config.c:208
+msgid "Left Edge"
+msgstr "Borde izquierdo"
+
+#: src/ng_config.c:210
+msgid "Right Edge"
+msgstr "Borde derecho"
+
+#: src/ng_config.c:231
+#: src/ng_config.c:250
+msgid "Zoom"
+msgstr "Zoom"
+
+#: src/ng_config.c:232
+msgid "Factor:"
+msgstr "Factor:"
+
+#: src/ng_config.c:238
+msgid "Range:"
+msgstr "Rango:"
+
+#: src/ng_config.c:244
+msgid "Duration:"
+msgstr "Duración:"
+
+#: src/ng_config.c:253
+#: src/ng_config.c:281
+msgid "Bar Items"
+msgstr "Elementos de la barra"
+
+#: src/ng_config.c:265
+msgid "Up"
+msgstr "Arriba"
+
+#: src/ng_config.c:267
+msgid "Down"
+msgstr "Abajo"
+
+#: src/ng_config.c:274
+msgid "Taskbar"
+msgstr "Barra de herramientas"
+
+#: src/ng_config.c:276
+msgid "Launcher"
+msgstr "Lanzador"
+
+#: src/ng_config.c:278
+msgid "Gadcon"
+msgstr "Gadcon"
+
+#: src/ng_config.c:284
+#: src/ng_config.c:303
+msgid "Auto Hide"
+msgstr "Ocultar automáticamente"
+
+#: src/ng_config.c:301
+msgid "Show Bar when Urgent"
+msgstr "Mostrar barra cuando sea urgente"
+
+#: src/ng_config.c:309
+msgid "Stacking"
+msgstr "Escalar"
+
+#: src/ng_config.c:311
+msgid "Above All"
+msgstr "Por encima de todo"
+
+#: src/ng_config.c:313
+msgid "Below Fullscreen"
+msgstr "Por debajo de la pantalla completa"
+
+#: src/ng_config.c:317
+#: src/ng_config.c:324
+msgid "Other"
+msgstr "Otro"
+
+#: src/ng_config.c:318
+msgid "Ecomorph Features"
+msgstr "Opciones de Ecomorph"
+
+#: src/ng_config.c:320
+msgid "Show Icon Label"
+msgstr "Mostrar etiqueta del icono"
+
+#: src/ng_config.c:537
+msgid "Launcher Settings"
+msgstr "Preferencias del lanzador"
+
+#: src/ng_config.c:557
+msgid "Taskbar Settings"
+msgstr "Preferencias de la barra de herramientas"
+
+#: src/ng_config.c:559
+msgid "Dont Show Dialogs"
+msgstr "No mostrar los diálogos"
+
+#: src/ng_config.c:562
+msgid "Advanced Window Menu"
+msgstr "Menú de ventana avanzado"
+
+#: src/ng_config.c:565
+msgid "Only Show Current Desk"
+msgstr "Mostrar solo el escritorio actual"
+
+#: src/ng_config.c:568
+msgid "Group Applications by Window Class"
+msgstr "Agrupar aplicaciones por la clase de ventana"
+
+#: src/ng_config.c:571
+msgid "Append new Applications on the right Side"
+msgstr "Colocar las nuevas aplicaciones en el lado derecho"
+
+#: src/ng_config.c:577
+msgid "Iconified Applications"
+msgstr "Aplicaciones minimizadas"
+
+#: src/ng_config.c:652
+#: src/ng_config.c:692
+msgid "Engage Bar Configuration"
+msgstr "Configuración de la barra Engage"
+
+#: src/ng_config.c:797
+msgid "Create new source"
+msgstr "Crear una nueva fuente"
+
+#: src/ng_config.c:798
+msgid "Enter a name for this new Application Launcher:"
+msgstr "Introduzca un nombre para este nuevo lanzador de aplicaciones:"
+
+#: src/ng_config.c:807
+#, c-format
+msgid "You requested to delete \"%s\".<br><br>Are you sure you want to delete this source?"
+msgstr "Solicitó eliminar \"%s\".<br><br>¿Está seguro de que quiere eliminar esta fuente?"
+
+#: src/ng_config.c:811
+msgid "Are you sure you want to delete this source?"
+msgstr "¿Está seguro de que quiere eliminar esta fuente?"
+

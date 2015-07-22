@@ -1,0 +1,14 @@
+Source: places-e17
+Section: unknown
+Priority: extra
+Maintainer: root <jeffhoogland@linux.com>
+Build-Depends: e17
+Conflicts: e19
+Standards-Version: 3.8.3
+Homepage: <insert the upstream URL, if relevant>
+
+Package: places-e17
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Places Modules for e17
+ A module that allows you to integrate non-EFM file managers into the Enlightenment desktop

@@ -1,0 +1,129 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Marc Furtià  i Puig\\\n"
+"Report-Msgid-Bugs-To: $MSGID_BUGS_ADDRESS\n"
+"POT-Creation-Date: 2014-06-14 19:06+0200\n"
+"PO-Revision-Date: 2013-12-30 11:20+0000\n"
+"Last-Translator: joancoll <Unknown>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-06-16 06:24+0000\n"
+"X-Generator: Launchpad (build 17045)\n"
+"Language: ca\n"
+"X-Poedit-Bookmarks: -1,-1,1139,-1,-1,-1,-1,-1,-1,-1\n"
+
+#: src/e_mod_config.c:55
+msgid "Places Settings"
+msgstr "Configuració Llocs"
+
+#: src/e_mod_config.c:138
+msgid "General"
+msgstr "Opcions generals"
+
+#: src/e_mod_config.c:141
+msgid "Show in main menu"
+msgstr "Mostra al menú principal"
+
+#: src/e_mod_config.c:145
+msgid "Hide the gadget header"
+msgstr "Amaga la capçalera del giny"
+
+#: src/e_mod_config.c:149
+msgid "Auto close the popup"
+msgstr "Tanca automàticament la finestra emergent"
+
+#: src/e_mod_config.c:153
+msgid "Mount volumes at boot"
+msgstr "Munta els volums a l'arrancar"
+
+#: src/e_mod_config.c:157
+msgid "Mount volumes on insert"
+msgstr "Munta els volums en inserir"
+
+#: src/e_mod_config.c:161
+msgid "Open filemanager on insert"
+msgstr "Obre el gestor d'arxius en inserir"
+
+#: src/e_mod_config.c:168
+msgid "Use a custom file manager"
+msgstr "Utilitza un gestor d'arxius personalitzat"
+
+#: src/e_mod_config.c:181
+msgid "Show in menu"
+msgstr "Mostra al menú"
+
+#: src/e_mod_config.c:184 src/e_mod_places.c:794
+msgid "Home"
+msgstr "Directori Personal"
+
+#: src/e_mod_config.c:187 src/e_mod_places.c:803
+msgid "Desktop"
+msgstr "Escriptori"
+
+#: src/e_mod_config.c:190 src/e_mod_places.c:812
+msgid "Trash"
+msgstr "Paperera"
+
+#: src/e_mod_config.c:193 src/e_mod_places.c:643 src/e_mod_places.c:821
+msgid "Filesystem"
+msgstr "Sistema d'arxius"
+
+#: src/e_mod_config.c:196 src/e_mod_places.c:830
+msgid "Temp"
+msgstr "Temp"
+
+#: src/e_mod_config.c:199
+msgid "Favorites"
+msgstr "Preferits"
+
+#: src/e_mod_main.c:59
+msgid "Files"
+msgstr "Fitxers"
+
+#: src/e_mod_main.c:61 src/e_mod_main.c:315 src/e_mod_places.c:265
+#: src/e_mod_places.c:887
+msgid "Places"
+msgstr "Llocs"
+
+#: src/e_mod_main.c:412
+msgid "Places Configuration Updated"
+msgstr "Paràmetres dels llocs actualitzats"
+
+#: src/e_mod_main.c:534
+msgid "Settings"
+msgstr "Preferències"
+
+#: src/e_mod_places.c:497
+msgid "Warning"
+msgstr "Avís"
+
+#: src/e_mod_places.c:498
+msgid ""
+"<b>Cannot run the Enlightenment FileManager.</b><br>Please choose a custom "
+"file manager in<br>the gadget configuration."
+msgstr ""
+"<b>No es pot iniciar el gestor d'arxius d'Enlightenment.</b><br>Si us plau "
+"triï un gestor d'arxius personalitzat en<br>la configuració del giny."
+
+#: src/e_mod_places.c:647
+msgid "No Name"
+msgstr "Sense Nom"
+
+#: src/e_mod_places.c:654
+msgid "free of"
+msgstr "lliure de"
+
+#: src/e_mod_places.c:660
+#, c-format
+msgid "%s Not Mounted"
+msgstr "%s No muntat"
+
+#: src/e_mod_places.c:687
+msgid "unmount"
+msgstr "desmunta"
+
+#: src/e_mod_places.c:692
+msgid "eject"
+msgstr "expulsa"

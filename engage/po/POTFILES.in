@@ -1,0 +1,12 @@
+# List of source files which contain translatable strings.
+src/e_mod_main.c
+src/e_mod_main.h
+src/ng_taskbar.c
+src/ng_launcher.c
+src/ng_item.c
+src/ng_box.c
+src/ng_border_menu.c
+src/ng_gadcon.c
+src/ng_config.c
+src/ng_config_instances.c
+src/ng_launcher.c

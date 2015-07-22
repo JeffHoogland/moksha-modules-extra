@@ -1,0 +1,741 @@
+
+images
+{
+   image: "icon_hdd.png" COMP;
+   image: "eject.png" COMP;
+   image: "eject_bg.png" COMP;
+   image: "tag_ext3.png" COMP;
+   image: "tag_fat.png" COMP;
+   image: "tag_hfs.png" COMP;
+   image: "tag_ufs.png" COMP;
+   image: "tag_dvd.png" COMP;
+   image: "header_bg.png" COMP;
+   image: "header_down.png" COMP;
+   image: "home.png" COMP;
+}
+
+
+collections
+{
+/****************************************************/
+/**  MODULE ICON  ***********************************/
+/****************************************************/
+   group { name: "icon";
+      max: 24 24;
+      parts {
+         part { name: "image";
+            mouse_events: 0;
+            type: IMAGE;
+            description { state: "default" 0.0;
+               image.normal: "icon_hdd.png";
+            }
+         }
+      }
+   }
+/****************************************************/
+/**  GADGET MAIN BOX  *******************************/
+/****************************************************/
+   group { name: "modules/places/main";
+      parts {
+         // part { name: "DEBUG";
+            // type: RECT;
+            // description { state: "default" 0.0;
+               // color: 200 0 0 100;
+            // }
+         // }
+         part { name: "box";
+            type: BOX;
+            description { state: "default" 0.0;
+               box {
+                  layout: "vertical";
+                  align: 0.5 0.0;
+                  min: 1 1;
+               }
+            }
+            description { state: "horiz" 0.0;
+               box {
+                  layout: "orizontal";
+                  align: 0.5 0.5;
+                  min: 1 1;
+               }
+            }
+         }
+      }
+      programs {
+         program { name: "set_box_horiz";
+            signal: "box,set,horiz";
+            source: "places";
+            action: STATE_SET "horiz" 0.0;
+            target: "box";
+         }
+         program { name: "set_box_vert";
+            signal: "box,set,vert";
+            source: "places";
+            action: STATE_SET "default" 0.0;
+            target: "box";
+         }
+      }
+   }
+/****************************************************/
+/**  GADGET HEADER  *********************************/
+/****************************************************/
+   group { name: "modules/places/header";
+      min: 200 35;
+      max: 384 35;
+      parts {
+         part { name: "bg";
+            mouse_events: 1;
+            type: IMAGE;
+            description { state: "default" 0.0;
+               color: 255 255 255 200;
+               image.normal: "header_bg.png";
+            }
+            description { state: "down" 0.0;
+               color: 255 255 255 200;
+               image.normal: "header_down.png";
+            }
+         }
+         part { name: "home";
+            mouse_events: 1;
+            repeat_events: 1;
+            type: IMAGE;
+            description { state: "default" 0.0;
+               aspect: 1 1;
+               aspect_preference: VERTICAL;
+               align: 1.0 0.5;
+               color: 255 255 255 150;
+               image.normal: "home.png";
+            }
+            description { state: "hilight" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 255;
+            }
+         }
+         part { name: "label";
+            mouse_events: 0;
+            type: TEXT;
+            effect: SOFT_SHADOW;
+            description { state: "default" 0.0;
+               color: 255 255 255 255;
+               color3: 0 0 0 60;
+               text {
+                  font: "Sans:style=Bold";
+                  size: 14;
+                  text: "Places";
+                  align: 0.5 0.5;
+                  text_class: "module_large";
+               }
+            }
+         }
+         part { name: "separator";
+            mouse_events: 0;
+            type: RECT;
+            description { state: "default" 0.0;
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 0.0 0.0;
+               color: 0 0 0 0;
+            }
+            description { state: "horiz" 0.0;
+               rel1.relative: 0.0 1.0;
+               rel2.relative: 1.0 1.0;
+               rel1.offset: 0 -1;
+               color: 0 0 0 100;
+            }
+            description { state: "vert" 0.0;
+               rel1.relative: 1.0 0.0;
+               rel2.relative: 1.0 1.0;
+               rel2.offset: 0 0;
+               color: 0 0 0 100;
+               color: 0 0 0 100;
+            }
+         }
+         part { name: "separator2";
+            mouse_events: 0;
+            type: RECT;
+            description { state: "default" 0.0;
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 1.0 0.0;
+               rel2.offset: 0 0;
+               color: 255 255 255 0;
+            }
+            description { state: "horiz" 0.0;
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 1.0 0.0;
+               rel2.offset: 0 0;
+               color: 255 255 255 50;
+            }
+            description { state: "vert" 0.0;
+               rel1.relative: 1.0 0.0;
+               rel2.relative: 1.0 1.0;
+               rel1.offset: -1 0;
+               color: 255 255 255 50;
+            }
+         }
+      }
+      programs {
+         /**  INTERNAL PROGRAMS  *****************************/
+         program { name: "header_mouse_in";
+            signal: "mouse,in";
+            source: "bg";
+            action: STATE_SET "hilight" 0.0;
+            transition: SINUSOIDAL 0.4;
+            target: "home";
+         }
+         program { name: "header_mouse_out";
+            signal: "mouse,out";
+            source: "bg";
+            action: STATE_SET "default" 0.0;
+            transition: SINUSOIDAL 0.4;
+            target: "home";
+         }
+         program { name: "header_mouse_down";
+            signal: "mouse,down,1";
+            source: "bg";
+            action: STATE_SET "down" 0.0;
+            target: "bg";
+         }
+         program { name: "header_mouse_up";
+            signal: "mouse,up,1";
+            source: "bg";
+            action: STATE_SET "default" 0.0;
+            target: "bg";
+         }
+         /**  SIGNALS RECEIVED FROM THE MODULE  **************/
+         program { name: "set_separator_horiz";
+            signal: "separator,set,horiz";
+            source: "places";
+            action: STATE_SET "horiz" 0.0;
+            target: "separator";
+            target: "separator2";
+         }
+         program { name: "set_separator_vert";
+            signal: "separator,set,vert";
+            source: "places";
+            action: STATE_SET "vert" 0.0;
+            target: "separator";
+            target: "separator2";
+         }
+         program { name: "set_separator_hidden";
+            signal: "separator,set,hidden";
+            source: "places";
+            action: STATE_SET "default" 0.0;
+            target: "separator";
+            target: "separator2";
+         }
+         /**  SIGNALS EMITTED TO THE MODULE  **************/
+         program { name: "header_activated";
+            signal: "mouse,clicked,1";
+            source: "bg";
+            action: SIGNAL_EMIT "header,activated" "places";
+         }
+      }
+   }
+/****************************************************/
+/**  SEPARATOR  *************************************/
+/****************************************************/
+   group { name: "modules/places/separator";
+      min: 1 1;
+      max: 384 50;
+      parts {
+         part { name: "separator";
+            mouse_events: 0;
+            type: RECT;
+            description { state: "default" 0.0;
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 1.0 0.0;
+               rel2.offset: 0 0;
+               color: 0 0 0 0;
+            }
+            description { state: "horiz" 0.0;
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 1.0 0.0;
+               rel2.offset: 0 0;
+               color: 0 0 0 100;
+            }
+            description { state: "vert" 0.0;
+               rel1.relative: 1.0 0.0;
+               rel2.relative: 1.0 1.0;
+               rel2.offset: 0 0;
+               color: 0 0 0 100;
+            }
+         }
+      }
+      programs {
+         /**  SIGNALS RECEIVED FROM THE MODULE  **************/
+         program { name: "set_separator_horiz";
+            signal: "separator,set,horiz";
+            source: "places";
+            action: STATE_SET "horiz" 0.0;
+            target: "separator";
+         }
+         program { name: "set_separator_vert";
+            signal: "separator,set,vert";
+            source: "places";
+            action: STATE_SET "vert" 0.0;
+            target: "separator";
+         }
+         program { name: "set_separator_hidden";
+            signal: "separator,set,hidden";
+            source: "places";
+            action: STATE_SET "default" 0.0;
+            target: "separator";
+         }
+      }
+   }
+/****************************************************/
+/**  GADGET VOLUME  *********************************/
+/****************************************************/
+   group { name: "modules/places/volume";
+      min: 200 50;
+      max: 384 50;
+      script { /* this set the gauge value */
+         public message(Msg_Type:type, id, ...) {
+            if ((type == MSG_FLOAT) && (id == 1)) {
+               new Float:val;
+               val = getfarg(2);
+               set_state(PART:"gauge", "default", val);
+            }
+         }
+      }
+      parts {
+         part { name: "bg";
+            mouse_events: 0;
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part { name: "separator";
+            mouse_events: 0;
+            type: RECT;
+            description { state: "default" 0.0;
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 0.0 0.0;
+               color: 0 0 0 0;
+            }
+            description { state: "horiz" 0.0;
+               rel1.relative: 0.0 1.0;
+               rel2.relative: 1.0 1.0;
+               rel1.offset: 0 -1;
+               color: 0 0 0 100;
+            }
+            description { state: "vert" 0.0;
+               rel1.relative: 1.0 0.0;
+               rel2.relative: 1.0 1.0;
+               rel1.offset: -1 0;
+               color: 0 0 0 100;
+            }
+         }
+         part { name: "event";
+            mouse_events: 1;
+            type: RECT;
+            description { state: "default" 0.0;
+               color:  0 0 0 0;
+            }
+         }
+         part { name: "icon_events";
+            mouse_events: 1;
+            repeat_events: 1;
+            type: RECT;
+            description { state: "default" 0.0;
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 0.0 0.0;
+               rel1.offset: 0 0;
+               rel2.offset: 45 45;
+               color: 255 0 0 0;
+            }
+         }
+         part { name: "icon";
+            mouse_events: 0;
+            type: SWALLOW;
+            clip_to: "icon_clip";
+            description { state: "default" 0.0;
+               rel2.relative: 0 0;
+               rel1.offset: 5 5;
+               rel2.offset: 45 45;
+            }
+            description { state: "big" 0.0;
+               color: 255 255 255 0;
+               rel2.relative: 0 0;
+               rel1.offset: -10 -10;
+               rel2.offset: 60 60;
+            }
+         }
+         part { name: "icon_clip";
+            mouse_events: 0;
+            type: RECT;
+            description { state: "default" 0.0;
+               rel2.relative: 0 0;
+               rel1.offset: -10 -10;
+               rel2.offset: 60 60;
+               color: 255 255 255 255;
+            }
+            description { state: "big" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 0;
+            }
+         }
+         part { name: "icon_tag";
+            mouse_events: 0;
+            clip_to: "icon_clip";
+            description { state: "default" 0.0;
+               rel1.to: "icon";
+               rel2.relative: 0.5 0.5;
+               rel2.to: "icon";
+               color: 255 255 255 0;
+            }
+            description { state: "ext3" 0.0;
+               inherit: "default" 0.0;
+               image.normal: "tag_ext3.png";
+               color: 255 255 255 240;
+            }
+            description { state: "fat" 0.0;
+               inherit: "default" 0.0;
+               image.normal: "tag_fat.png";
+               color: 255 255 255 240;
+            }
+            description { state: "hfs" 0.0;
+               inherit: "default" 0.0;
+               image.normal: "tag_hfs.png";
+               color: 255 255 255 240;
+            }
+            description { state: "ufs" 0.0;
+               inherit: "default" 0.0;
+               image.normal: "tag_ufs.png";
+               color: 255 255 255 240;
+            }
+            description { state: "dvd" 0.0;
+               inherit: "default" 0.0;
+               image.normal: "tag_dvd.png";
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 1.0 0.5;
+               color: 255 255 255 240;
+            }
+         }
+         part { name: "gauge_bg";
+            mouse_events: 0;
+            type: RECT;
+            description { state: "default" 0.0;
+               rel1.to: "volume_label";
+               rel1.relative: 0.0 1.0;
+               rel2.to_x: "eject_bg";
+               rel2.relative: -0.1 0.65;
+               color: 0 0 0 150;
+            }
+            description { state: "hidden" 0.0;
+               inherit: "default" 0.0;
+               rel2.relative: -0.1 0.40;
+               visible: 1;
+            }
+         }
+         part { name: "gauge";
+            mouse_events: 0;
+            type: RECT;
+            description { state: "default" 0.0;
+               rel1.to: "gauge_bg";
+               rel1.offset: 1 1;
+               rel2.to: "gauge_bg";
+               rel2.offset: -2 -2;
+               rel2.relative: 0.0 1.0;
+               color: 0 200 0 200;
+            }
+            description { state: "default" 0.1;
+               inherit: "default" 0.0;
+               rel2.relative: 0.1 1.0;
+            }
+            description { state: "default" 0.2;
+               inherit: "default" 0.0;
+               rel2.relative: 0.2 1.0;
+            }
+            description { state: "default" 0.3;
+               inherit: "default" 0.0;
+               rel2.relative: 0.3 1.0;
+            }
+            description { state: "default" 0.4;
+               inherit: "default" 0.0;
+               rel2.relative: 0.4 1.0;
+            }
+            description { state: "default" 0.5;
+               inherit: "default" 0.0;
+               rel2.relative: 0.5 1.0;
+            }
+            description { state: "default" 0.6;
+               inherit: "default" 0.0;
+               rel2.relative: 0.6 1.0;
+            }
+            description { state: "default" 0.7;
+               inherit: "default" 0.0;
+               rel2.relative: 0.7 1.0;
+            }
+            description { state: "default" 0.8;
+               inherit: "default" 0.0;
+               rel2.relative: 0.8 1.0;
+               color: 200 0 0 200;
+            }
+            description { state: "default" 0.9;
+               inherit: "default" 0.0;
+               rel2.relative: 0.9 1.0;
+               color: 200 0 0 200;
+            }
+            description { state: "default" 1.0;
+               inherit: "default" 0.0;
+               rel2.relative: 1.0 1.0;
+               color: 200 0 0 200;
+            }
+         }
+         part { name: "volume_label";
+            mouse_events: 0;
+            type: TEXT;
+            effect: SOFT_SHADOW;
+            description { state: "default" 0.0;
+               rel1.relative: 0.0 0.1;
+               rel1.offset: 52 0;
+               rel2.relative: 0.98 0.40;
+               rel2.to: "bg";
+               color: 255 255 255 255;
+               color3: 0 0 0 60;
+               text {
+                  font: "Sans:style=Bold";
+                  size: 11;
+                  text: "";
+                  align: 0.0 0.5;
+                  text_class: "module_large";
+               }
+            }
+         }
+         part { name: "size_label";
+            mouse_events: 0;
+            type: TEXT;
+            effect: SOFT_SHADOW;
+            description { state: "default" 0.0;
+               rel1.relative: 0.0 1.0;
+               rel1.to: "gauge_bg";
+               rel2.relative: 0.98 1.0;
+               rel2.to: "bg";
+               color: 255 255 255 255;
+               color3: 0 0 0 60;
+               text {
+                  font: "Sans";
+                  size: 10;
+                  text: "";
+                  align: 0.0 0.5;
+                  text_class: "module_normal";
+               }
+            }
+         }
+         part { name: "percent_label";
+            mouse_events: 0;
+            type: TEXT;
+            effect: SOFT_SHADOW;
+            description { state: "default" 0.0;
+               rel1.to: "gauge_bg";
+               rel2.to: "gauge_bg";
+               color: 255 255 255 255;
+               color3: 0 0 0 60;
+               text {
+                  font: "Sans";
+                  size: 9;
+                  text: "";
+                  min: 0 1;
+                  align: 0.5 1.0;
+                  text_class: "module_small";
+               }
+            }
+         }
+         part { name: "eject_bg";
+            mouse_events: 0;
+            repeat_events: 1;
+            type: IMAGE;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+               rel1.to: "eject_icon";
+               rel2.to: "eject_icon";
+               image {
+                  normal: "eject_bg.png";
+                  border: 5 5 5 5;
+               }
+            }
+            description { state: "moved" 0.0;
+               inherit: "default" 0.0;
+               rel1.offset: -70 0;
+               color: 255 255 255 180;
+            }
+         }
+         part { name: "eject_label";
+            mouse_events: 0;
+            type: TEXT;
+            effect: NONE;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+               rel1.to: "eject_bg";
+               rel2.to: "eject_bg";
+               text {
+                  font: "Sans:style=Bold";
+                  text: "unmount";
+                  size: 11;
+                  align: 0.2 0.5;
+                  text_class: "module_large";
+               }
+            }
+            description { state: "moved" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 255;
+            }
+         }
+         part { name: "eject_icon";
+            mouse_events: 1;
+            type: IMAGE;
+            description { state: "default" 0.0;
+               image {normal: "eject.png";}
+               rel1.relative: 1.0 0.0;
+               rel1.offset: -2 10;
+               rel2.offset: 0 -10;
+               visible: 0;
+            }
+            description { state: "visible" 0.0;
+               inherit: "default" 0.0;
+               rel1.offset: -30 10;
+               visible: 1;
+            }
+         }
+      }
+      programs {
+/****************************************************/
+/**  INTERNAL PROGRAMS  *****************************/
+/****************************************************/
+         program { name: "pulse";
+            signal: "mouse,in";
+            source: "icon_events";
+            action: STATE_SET "big" 0.0;
+            transition: DECELERATE 0.5;
+            target: "icon_clip";
+            target: "icon";
+            after: "reset_pulse";
+            after: "pulse";
+         }
+         program { name: "icon_mouse_out";
+            signal: "mouse,out";
+            source: "icon_events";
+            action: ACTION_STOP;
+            target: "pulse";
+            after: "reset_pulse";
+         }
+         program { name: "reset_pulse";
+            action: STATE_SET "default" 0.0;
+            transition: LINEAR 0.0;
+            target: "icon_clip";
+            target: "icon";
+         }
+         program { name: "eject_mouse_in";
+            signal: "mouse,in";
+            source: "eject_icon";
+            action: STATE_SET "moved" 0.0;
+            transition: SINUSOIDAL 0.4;
+            target: "eject_bg";
+            target: "eject_label";
+         }
+         program { name: "eject_mouse_out";
+            signal: "mouse,out";
+            source: "eject_icon";
+            action: STATE_SET "default" 0.0;
+            transition: SINUSOIDAL 0.4;
+            target: "eject_bg";
+            target: "eject_label";
+         }
+/****************************************************/
+/**  SIGNALS EMITTED TO THE MODULE  *****************/
+/****************************************************/
+         program { name: "icon_activated";
+            signal: "mouse,down,1";
+            source: "icon_events";
+            action: SIGNAL_EMIT "icon,activated" "places";
+         }
+         program { name: "eject_activated";
+            signal: "mouse,down,1";
+            source: "eject_icon";
+            action: SIGNAL_EMIT "eject,activated" "places";
+         }
+/****************************************************/
+/**  SIGNALS RECEIVED FROM THE MODULE  **************/
+/****************************************************/
+         program { name: "hide_gauge";
+            signal: "gauge,hide";
+            source: "places";
+            action: STATE_SET "hidden" 0.0;
+            target: "gauge_bg";
+         }
+         program { name: "show_gauge";
+            signal: "gauge,show";
+            source: "places";
+            action: STATE_SET "default" 0.0;
+            target: "gauge_bg";
+         }
+         program { name: "set_eject_hidden";
+            signal: "icon,eject,hide";
+            source: "places";
+            action: STATE_SET "default" 0.0;
+            target: "eject_icon";
+         }
+         program { name: "set_eject_visible";
+            signal: "icon,eject,show";
+            source: "places";
+            action: STATE_SET "visible" 0.0;
+            target: "eject_icon";
+         }
+         program { name: "set_tag_none";
+            signal: "icon,tag,none";
+            source: "places";
+            action: STATE_SET "default" 0.0;
+            target: "icon_tag";
+         }
+         program { name: "set_tag_ext3";
+            signal: "icon,tag,ext3";
+            source: "places";
+            action: STATE_SET "ext3" 0.0;
+            target: "icon_tag";
+         }
+         program { name: "set_tag_fat";
+            signal: "icon,tag,fat";
+            source: "places";
+            action: STATE_SET "fat" 0.0;
+            target: "icon_tag";
+         }
+         program { name: "set_tag_hfs";
+            signal: "icon,tag,hfs";
+            source: "places";
+            action: STATE_SET "hfs" 0.0;
+            target: "icon_tag";
+         }
+         program { name: "set_tag_ufs";
+            signal: "icon,tag,ufs";
+            source: "places";
+            action: STATE_SET "ufs" 0.0;
+            target: "icon_tag";
+         }
+         program { name: "set_tag_dvd";
+            signal: "icon,tag,dvd";
+            source: "places";
+            action: STATE_SET "dvd" 0.0;
+            target: "icon_tag";
+         }
+         program { name: "set_separator_horiz";
+            signal: "separator,set,horiz";
+            source: "places";
+            action: STATE_SET "horiz" 0.0;
+            target: "separator";
+         }
+         program { name: "set_separator_vert";
+            signal: "separator,set,vert";
+            source: "places";
+            action: STATE_SET "vert" 0.0;
+            target: "separator";
+         }
+         program { name: "set_separator_hidden";
+            signal: "separator,set,hidden";
+            source: "places";
+            action: STATE_SET "default" 0.0;
+            target: "separator";
+         }
+      }
+   }
+}

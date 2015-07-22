@@ -1,0 +1,319 @@
+# Slovenian translation of itask_ng.
+# This file is put in the public domain.
+# r1to <renato.rener@gmail.com>, 2011.
+# , fuzzy
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: itask_ng 1.0\n"
+"Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
+"POT-Creation-Date: 2011-04-04 14:24+0200\n"
+"PO-Revision-Date: 2011-02-24 16:58+0100\n"
+"Last-Translator: r1to <renato.rener@gmail.com>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:1695 src/e_mod_main.c:1786 src/e_mod_main.c:1810
+msgid "Engage"
+msgstr ""
+
+#: src/ng_taskbar.c:684
+msgid "No name!"
+msgstr "Ni imena !"
+
+#: src/ng_launcher.c:529
+msgid "Configure Bar"
+msgstr "Nastavi vrstico"
+
+#: src/ng_launcher.c:533
+msgid "Lock Dragging"
+msgstr "Zakleni vleko"
+
+#: src/ng_launcher.c:542
+msgid "Applications"
+msgstr "Programi"
+
+#: src/ng_launcher.c:546
+msgid "Edit Icon"
+msgstr "Uredi ikono"
+
+#: src/ng_border_menu.c:30
+msgid "Fullscreen"
+msgstr "Celozaslonsko"
+
+#: src/ng_border_menu.c:45
+msgid "Close"
+msgstr "Zapri"
+
+#: src/ng_border_menu.c:66
+msgid "Maximized"
+msgstr "Razpeto"
+
+#: src/ng_border_menu.c:86
+msgid "Uniconify"
+msgstr "Deikoniziraj"
+
+#: src/ng_border_menu.c:88
+msgid "Iconify"
+msgstr "Ikoniziraj"
+
+#: src/ng_gadcon.c:299
+msgid "Available Gadgets"
+msgstr "Dostopni gadgeti"
+
+#: src/ng_gadcon.c:306
+msgid "Add Gadget"
+msgstr "Dodaj gadget"
+
+#: src/ng_gadcon.c:312
+msgid "Selected Gadgets"
+msgstr "Izbrani gadgeti"
+
+#: src/ng_gadcon.c:319
+msgid "Remove Gadget"
+msgstr "Odstrani gadget"
+
+#: src/ng_gadcon.c:327 src/ng_gadcon.c:370 src/ng_gadcon.c:394
+msgid "Description: Unavailable"
+msgstr "Opis: Nedostopno"
+
+#: src/ng_config.c:101
+#, fuzzy
+msgid "Engage Configuration"
+msgstr "Itask·NG·nastavitve"
+
+#: src/ng_config.c:171 src/ng_config.c:229
+msgid "Appearance"
+msgstr "Videz"
+
+#: src/ng_config.c:172
+msgid "Icon Size:"
+msgstr "Velikost ikone"
+
+#: src/ng_config.c:174
+#, c-format
+msgid "%1.0f px"
+msgstr "%1.0f·pik."
+
+#: src/ng_config.c:179
+msgid "Reflection Opacity:"
+msgstr "Prozornost zrcaljenja"
+
+#: src/ng_config.c:181
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/ng_config.c:188
+msgid "Background Opacity:"
+msgstr "Prozornost ozadja"
+
+#: src/ng_config.c:190
+msgid "%1.0f \\%"
+msgstr "%1.0f·\\%"
+
+#: src/ng_config.c:198
+msgid "Show Background Box"
+msgstr "Prikaži škatlo ozadja"
+
+#: src/ng_config.c:203
+msgid "Orientation"
+msgstr "Usmeritev"
+
+#: src/ng_config.c:205
+msgid "Bottom Edge"
+msgstr ""
+
+#: src/ng_config.c:207
+msgid "Top Edge"
+msgstr ""
+
+#: src/ng_config.c:209
+msgid "Left Edge"
+msgstr ""
+
+#: src/ng_config.c:211
+msgid "Right Edge"
+msgstr ""
+
+#: src/ng_config.c:232 src/ng_config.c:251
+msgid "Zoom"
+msgstr "Povečava"
+
+#: src/ng_config.c:233
+msgid "Factor:"
+msgstr "Dejavnik:"
+
+#: src/ng_config.c:239
+msgid "Range:"
+msgstr "Domet:"
+
+#: src/ng_config.c:245
+msgid "Duration:"
+msgstr "Trajanje:"
+
+#: src/ng_config.c:254 src/ng_config.c:282
+msgid "Bar Items"
+msgstr "Predmeti vrstice"
+
+#: src/ng_config.c:262 src/ng_config.c:539 src/ng_config_instances.c:104
+msgid "Delete"
+msgstr "Izbriši"
+
+#: src/ng_config.c:264 src/ng_config.c:541 src/ng_config_instances.c:106
+msgid "Configure"
+msgstr "Nastavi"
+
+#: src/ng_config.c:266
+msgid "Up"
+msgstr "Gor"
+
+#: src/ng_config.c:268
+msgid "Down"
+msgstr "Dol"
+
+#: src/ng_config.c:273 src/ng_config.c:537 src/ng_config_instances.c:102
+msgid "Add"
+msgstr "Dodaj"
+
+#: src/ng_config.c:275
+msgid "Taskbar"
+msgstr "Opravilna vrstica"
+
+#: src/ng_config.c:277
+msgid "Launcher"
+msgstr "Zaganjalnik"
+
+#: src/ng_config.c:279
+msgid "Gadcon"
+msgstr "Gadcon"
+
+#: src/ng_config.c:285 src/ng_config.c:301
+msgid "Auto Hide"
+msgstr "Samodejno skrij"
+
+#: src/ng_config.c:299
+msgid "Show Bar when Urgent"
+msgstr "Pokaži vrstico ko je nujno"
+
+#: src/ng_config.c:307
+msgid "Stacking"
+msgstr "Skladanje"
+
+#: src/ng_config.c:309
+msgid "Above All"
+msgstr "Nad vsem"
+
+#: src/ng_config.c:311
+msgid "Below Fullscreen"
+msgstr "Pod celozaslonskim"
+
+#: src/ng_config.c:315 src/ng_config.c:322
+msgid "Other"
+msgstr "Drugo"
+
+#: src/ng_config.c:316
+msgid "Ecomorph Features"
+msgstr "Ecomorph funkcije"
+
+#: src/ng_config.c:318
+msgid "Show Icon Label"
+msgstr "Prikaži oznako ikone"
+
+#: src/ng_config.c:529
+msgid "Launcher Settings"
+msgstr "Nastavitve zaganjalnika"
+
+#: src/ng_config.c:549
+msgid "Taskbar Settings"
+msgstr "Nastavitve opravilne vrstice"
+
+#: src/ng_config.c:551
+msgid "Dont Show Dialogs"
+msgstr "Ne prikaži pojavnih oken"
+
+#: src/ng_config.c:554
+msgid "Advanced Window Menu"
+msgstr "Napreden meni oken"
+
+#: src/ng_config.c:557
+msgid "Only Show Current Desk"
+msgstr "Prikaži le trenutno namizje"
+
+#: src/ng_config.c:560
+msgid "Group Applications by Window Class"
+msgstr "Uskupini programe po razredih okna"
+
+#: src/ng_config.c:563
+msgid "Append new Applications on the right Side"
+msgstr "Dodaj nove programe na desni strani"
+
+#: src/ng_config.c:569
+msgid "Iconified Applications"
+msgstr "Ikonizirani programi"
+
+#: src/ng_config.c:644 src/ng_config.c:684
+#, fuzzy
+msgid "Engage Bar Configuration"
+msgstr "Nastavitve Itask·NG vrstice"
+
+#: src/ng_config.c:789
+#, fuzzy
+msgid "Create new source"
+msgstr "Ustvari nov vir·Itask·NG"
+
+#: src/ng_config.c:790
+msgid "Enter a name for this new Application Launcher:"
+msgstr "Vnesi ime za ta novi zaganjalnik programov"
+
+#: src/ng_config.c:799
+#, fuzzy, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"source?"
+msgstr ""
+"Zahtevali ste izbris·\"%s\".<br><br>Ali ste prepričani da hočete izbrisati "
+"ta vir·ng ?"
+
+#: src/ng_config.c:803
+#, fuzzy
+msgid "Are you sure you want to delete this source?"
+msgstr "Ali ste prepričani da hočete izbrisati ta primerek?"
+
+#: src/ng_config_instances.c:64 src/ng_config_instances.c:94
+#, fuzzy
+msgid "Engage Instances"
+msgstr "Primerki Itask·NG"
+
+#: src/ng_config_instances.c:164
+msgid "Bar"
+msgstr "Vrstica"
+
+#: src/ng_config_instances.c:338
+#, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"Instance?"
+msgstr ""
+"Zahtevali ste izbris·\"%s\".<br><br>Ali ste prepričani da hočete izbrisati "
+"ta primerek?"
+
+#: src/ng_config_instances.c:342
+msgid "Are you sure you want to delete this Instance?"
+msgstr "Ali ste prepričani da hočete izbrisati ta primerek?"
+
+#~ msgid "Itask-NG"
+#~ msgstr "Itask-NG"
+
+#~ msgid "Itask NG"
+#~ msgstr "Itask·NG"
+
+#~ msgid "Are you sure you want to delete this Itask NG source?"
+#~ msgstr "Ali ste prepričani da hočete izbrisati ta vir·Itask·NG?"
+
+#~ msgid "Itask NG - Instances"
+#~ msgstr "Itask·NG·-·Primerki"

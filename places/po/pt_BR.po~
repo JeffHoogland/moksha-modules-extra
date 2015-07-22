@@ -1,0 +1,128 @@
+# Brazilian Portuguese translation for enlightenment
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-04-14 18:28+0200\n"
+"PO-Revision-Date: 2010-02-14 04:51+0000\n"
+"Last-Translator: Teylo Laundos Aguiar <teylo.aguiar@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-02-15 04:49+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/e_mod_config.c:54
+msgid "Places Settings"
+msgstr ""
+
+#: src/e_mod_config.c:136
+msgid "General"
+msgstr ""
+
+#: src/e_mod_config.c:139
+msgid "Show in main menu"
+msgstr "Exibir no menu principal"
+
+#: src/e_mod_config.c:143
+msgid "Hide the gadget header"
+msgstr ""
+
+#: src/e_mod_config.c:147
+#, fuzzy
+msgid "Mount volumes at boot"
+msgstr "Montar volumes ao inserir"
+
+#: src/e_mod_config.c:151
+msgid "Mount volumes on insert"
+msgstr "Montar volumes ao inserir"
+
+#: src/e_mod_config.c:155
+msgid "Open filemanager on insert"
+msgstr "Abrir gerenciados de arquivos ao inserir"
+
+#: src/e_mod_config.c:162
+msgid "Use a custom file manager"
+msgstr ""
+
+#: src/e_mod_config.c:175
+msgid "Show in menu"
+msgstr "Exibir no menu"
+
+#: src/e_mod_config.c:178 src/e_mod_places.c:774
+msgid "Home"
+msgstr ""
+
+#: src/e_mod_config.c:181 src/e_mod_places.c:783
+msgid "Desktop"
+msgstr ""
+
+#: src/e_mod_config.c:184 src/e_mod_places.c:793
+msgid "Trash"
+msgstr ""
+
+#: src/e_mod_config.c:187 src/e_mod_places.c:618 src/e_mod_places.c:802
+msgid "Filesystem"
+msgstr ""
+
+#: src/e_mod_config.c:190 src/e_mod_places.c:811
+msgid "Temp"
+msgstr ""
+
+#: src/e_mod_config.c:193
+msgid "Favorites"
+msgstr ""
+
+#: src/e_mod_main.c:59
+msgid "Files"
+msgstr ""
+
+#: src/e_mod_main.c:61 src/e_mod_main.c:298 src/e_mod_places.c:236
+#: src/e_mod_places.c:868
+msgid "Places"
+msgstr ""
+
+#: src/e_mod_main.c:394
+msgid "Places Configuration Updated"
+msgstr ""
+
+#: src/e_mod_main.c:434
+msgid "Settings"
+msgstr ""
+
+#: src/e_mod_places.c:599
+msgid "Warning"
+msgstr ""
+
+#: src/e_mod_places.c:600
+msgid ""
+"<b>Cannot run the Enlightenment FileManager.</b><br>Please choose a custom "
+"file manager in<br>the gadget configuration."
+msgstr ""
+
+#: src/e_mod_places.c:622
+msgid "No Name"
+msgstr ""
+
+#: src/e_mod_places.c:629
+msgid "free of"
+msgstr ""
+
+#: src/e_mod_places.c:635
+#, c-format
+msgid "%s Not Mounted"
+msgstr "%s Não montado"
+
+#: src/e_mod_places.c:662
+msgid "unmount"
+msgstr ""
+
+#: src/e_mod_places.c:667
+msgid "eject"
+msgstr ""

@@ -1,0 +1,335 @@
+# Czech translation.
+# This file is put in the public domain.
+# quaker66@gmail.com
+# Vít Pelčák <vit@pelcak.org>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: Itask-ng\n"
+"Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
+"POT-Creation-Date: 2011-10-16 14:36+0200\n"
+"PO-Revision-Date: 2011-10-15 15:42+0200\n"
+"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: ../src/e_mod_main.c:1691 ../src/e_mod_main.c:1849 ../src/e_mod_main.c:1876
+msgid "Engage"
+msgstr "Engage"
+
+#: ../src/ng_taskbar.c:641
+msgid "No name!"
+msgstr "Beze jména!"
+
+#: ../src/ng_launcher.c:275
+msgid "Open folder with EFM"
+msgstr ""
+
+#: ../src/ng_launcher.c:561
+msgid "Configure Bar"
+msgstr "Nastavit panel"
+
+#: ../src/ng_launcher.c:565
+msgid "Lock Dragging"
+msgstr "Uzamknout přesun"
+
+#: ../src/ng_launcher.c:574
+msgid "Applications"
+msgstr "Aplikace"
+
+#: ../src/ng_launcher.c:578
+msgid "Edit Icon"
+msgstr "Upravit ikonu"
+
+#: ../src/ng_border_menu.c:30
+msgid "Fullscreen"
+msgstr "Celá obrazovka"
+
+#: ../src/ng_border_menu.c:45
+msgid "Close"
+msgstr "Zavřít"
+
+#: ../src/ng_border_menu.c:66
+msgid "Maximized"
+msgstr "Maximalizováno"
+
+#: ../src/ng_border_menu.c:86
+msgid "Uniconify"
+msgstr "Deminimalizovat"
+
+#: ../src/ng_border_menu.c:88
+msgid "Iconify"
+msgstr "Minimalizovat"
+
+#: ../src/ng_gadcon.c:299
+msgid "Available Gadgets"
+msgstr "Dostupné gadgety"
+
+#: ../src/ng_gadcon.c:306
+msgid "Add Gadget"
+msgstr "Přidat gadget"
+
+#: ../src/ng_gadcon.c:312
+msgid "Selected Gadgets"
+msgstr "Vybrané gadgety"
+
+#: ../src/ng_gadcon.c:319
+msgid "Remove Gadget"
+msgstr "Odstranit gadget"
+
+#: ../src/ng_gadcon.c:327 ../src/ng_gadcon.c:370 ../src/ng_gadcon.c:394
+msgid "Description: Unavailable"
+msgstr "Popis: nedostupný"
+
+#: ../src/ng_config.c:98
+msgid "Engage Configuration"
+msgstr "Nastavení Engage"
+
+#: ../src/ng_config.c:164 ../src/ng_config.c:225
+msgid "Appearance"
+msgstr "Vzhled"
+
+#: ../src/ng_config.c:165
+msgid "Icon Size:"
+msgstr "Velikost ikon:"
+
+#: ../src/ng_config.c:167
+#, c-format
+msgid "%1.0f px"
+msgstr "%1.0f px"
+
+#: ../src/ng_config.c:181
+msgid "Background Opacity:"
+msgstr "Neprůhlednost pozadí:"
+
+#: ../src/ng_config.c:183
+msgid "%1.0f \\%"
+msgstr "%1.0f \\%"
+
+#: ../src/ng_config.c:191
+msgid "Show Background Box"
+msgstr "Zobrazit pozadí"
+
+#: ../src/ng_config.c:194
+msgid "Show Mouse-Over Animation"
+msgstr ""
+
+#: ../src/ng_config.c:199
+msgid "Orientation"
+msgstr "Orientace"
+
+#: ../src/ng_config.c:201
+msgid "Bottom Edge"
+msgstr "Spodní okraj"
+
+#: ../src/ng_config.c:203
+msgid "Top Edge"
+msgstr "Horní okraj"
+
+#: ../src/ng_config.c:205
+msgid "Left Edge"
+msgstr "Levý okraj"
+
+#: ../src/ng_config.c:207
+msgid "Right Edge"
+msgstr "Pravý okraj"
+
+#: ../src/ng_config.c:228 ../src/ng_config.c:247
+msgid "Zoom"
+msgstr "Přiblížení"
+
+#: ../src/ng_config.c:229
+msgid "Factor:"
+msgstr "Faktor:"
+
+#: ../src/ng_config.c:235
+msgid "Range:"
+msgstr "Šířka:"
+
+#: ../src/ng_config.c:241
+msgid "Duration:"
+msgstr "Trvání:"
+
+#: ../src/ng_config.c:250 ../src/ng_config.c:278
+msgid "Bar Items"
+msgstr "Položky panelu"
+
+#: ../src/ng_config.c:258 ../src/ng_config.c:538
+#: ../src/ng_config_instances.c:104
+msgid "Delete"
+msgstr "Odstranit"
+
+#: ../src/ng_config.c:260 ../src/ng_config.c:540
+#: ../src/ng_config_instances.c:106
+msgid "Configure"
+msgstr "Nastavit"
+
+#: ../src/ng_config.c:262
+msgid "Up"
+msgstr "Nahoru"
+
+#: ../src/ng_config.c:264
+msgid "Down"
+msgstr "Dolů"
+
+#: ../src/ng_config.c:269 ../src/ng_config.c:536
+#: ../src/ng_config_instances.c:102
+msgid "Add"
+msgstr "Přidat"
+
+#: ../src/ng_config.c:271
+msgid "Taskbar"
+msgstr "Správce úloh"
+
+#: ../src/ng_config.c:273
+msgid "Launcher"
+msgstr "Spouštěč"
+
+#: ../src/ng_config.c:275
+msgid "Gadcon"
+msgstr "Gadcon"
+
+#: ../src/ng_config.c:281 ../src/ng_config.c:300
+msgid "Auto Hide"
+msgstr "Automaticky skrývat"
+
+#: ../src/ng_config.c:298
+msgid "Show Bar when Urgent"
+msgstr "Zobrazit panel při naléhavé notifikaci"
+
+#: ../src/ng_config.c:306
+msgid "Stacking"
+msgstr "Skládání"
+
+#: ../src/ng_config.c:308
+msgid "Above All"
+msgstr "Nad vším"
+
+#: ../src/ng_config.c:310
+msgid "Below Fullscreen"
+msgstr "Pod celoobrazovkovými"
+
+#: ../src/ng_config.c:314 ../src/ng_config.c:321
+msgid "Other"
+msgstr "Ostatní"
+
+#: ../src/ng_config.c:315
+msgid "Ecomorph Features"
+msgstr "Funkce Ecomorphu"
+
+#: ../src/ng_config.c:317
+msgid "Show Icon Label"
+msgstr "Zobrazit text ikony"
+
+#: ../src/ng_config.c:528
+msgid "Launcher Settings"
+msgstr "Nastavení spouštěče"
+
+#: ../src/ng_config.c:548
+msgid "Taskbar Settings"
+msgstr "Nastavení správce úloh"
+
+#: ../src/ng_config.c:550
+msgid "Dont Show Dialogs"
+msgstr "Nezobrazovat dialogy"
+
+#: ../src/ng_config.c:553
+msgid "Advanced Window Menu"
+msgstr "Pokročilé menu okna"
+
+#: ../src/ng_config.c:556
+msgid "Only Show Current Desk"
+msgstr "Zobrazit jen aktuální plochu"
+
+#: ../src/ng_config.c:559
+msgid "Group Applications by Window Class"
+msgstr "Seskupovat aplikace podle třídy okna"
+
+#: ../src/ng_config.c:562
+msgid "Append new Applications on the right Side"
+msgstr "Přidávat nové aplikace na pravém okraji"
+
+#: ../src/ng_config.c:568
+msgid "Iconified Applications"
+msgstr "Ikonifikované aplikace"
+
+#: ../src/ng_config.c:643 ../src/ng_config.c:683
+msgid "Engage Bar Configuration"
+msgstr "Nastavení panelu Engage"
+
+#: ../src/ng_config.c:788
+msgid "Create new source"
+msgstr "Vytvořit nový zdroj"
+
+#: ../src/ng_config.c:789
+msgid "Enter a name for this new Application Launcher:"
+msgstr "Zadejte název tohoto nového spouštěče aplikací:"
+
+#: ../src/ng_config.c:798
+#, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"source?"
+msgstr ""
+"Vyžádali jste si smazání \"%s\".<br><br>Opravdu chcete tento zdroj smazat?"
+
+#: ../src/ng_config.c:802
+msgid "Are you sure you want to delete this source?"
+msgstr "Opravdu chcete tento zdroj smazat?"
+
+#: ../src/ng_config_instances.c:64 ../src/ng_config_instances.c:94
+msgid "Engage Instances"
+msgstr "Instance Engage"
+
+#. FIXME
+#. if(ci->launcher)
+#. label = D_("Launcher NG");
+#. else if(ci->taskbar)
+#. label = D_("Taskbar NG");
+#.
+#: ../src/ng_config_instances.c:164
+msgid "Bar"
+msgstr "Panel"
+
+#: ../src/ng_config_instances.c:271
+#, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"Instance?"
+msgstr ""
+"Vyžádali jste si smazání \"%s\".<br><br>Opravdu chcete tuto instanci smazat?"
+
+#: ../src/ng_config_instances.c:275
+msgid "Are you sure you want to delete this Instance?"
+msgstr "Opravdu chcete smazat tuto Itask NG instanci?"
+
+#~ msgid "Reflection Opacity:"
+#~ msgstr "Neprůhlednost zrcadlení:"
+
+#~ msgid "%1.0f"
+#~ msgstr "%1.0f"
+
+#~ msgid "Itask-NG"
+#~ msgstr "Itask-NG"
+
+#~ msgid "Itask NG"
+#~ msgstr "Itask NG"
+
+#~ msgid "Zoom only one icon"
+#~ msgstr "Přiblížit pouze jednu ikonu"
+
+#~ msgid "Hide Timeout:"
+#~ msgstr "Časový limit skrytí:"
+
+#~ msgid "Lock Deskflip on Edge"
+#~ msgstr "Zamknout přepnutí plochy na okraji"
+
+#~ msgid "Are you sure you want to delete this Itask NG source?"
+#~ msgstr "Opravdu chcete smazat tento Itask NG zdroj?"
+
+#~ msgid "Itask NG - Instances"
+#~ msgstr "Itask NG - Instance"

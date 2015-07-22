@@ -1,0 +1,331 @@
+# Russian translation of Engage module
+# This file is put in the public domain.
+# Igor Murzov <e-mail@date.by>, 2012, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Engage\n"
+"Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
+"POT-Creation-Date: 2012-12-24 00:19+0400\n"
+"PO-Revision-Date: 2013-01-15 02:00+0400\n"
+"Last-Translator: Igor Murzov <e-mail@date.by>\n"
+"Language-Team: Russian <enlightenment-intl@lists.sourceforge.net>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:1705 src/e_mod_main.c:1863 src/e_mod_main.c:1890
+msgid "Engage"
+msgstr "Engage"
+
+#: src/ng_taskbar.c:641
+msgid "No name!"
+msgstr "Нет имени!"
+
+#: src/ng_launcher.c:275
+msgid "Open Directory"
+msgstr "Открыть каталог"
+
+#: src/ng_launcher.c:561
+msgid "Configure Bar"
+msgstr "Настроить панель"
+
+#: src/ng_launcher.c:565
+msgid "Lock Dragging"
+msgstr "Запретить перетаскивание"
+
+#: src/ng_launcher.c:574
+msgid "Applications"
+msgstr "Приложения"
+
+#: src/ng_launcher.c:578
+msgid "Edit Icon"
+msgstr "Редактировать значок"
+
+#: src/ng_border_menu.c:30
+msgid "Fullscreen"
+msgstr "На весь экран"
+
+#: src/ng_border_menu.c:45
+msgid "Close"
+msgstr "Закрыть"
+
+#: src/ng_border_menu.c:66
+msgid "Maximized"
+msgstr "Увеличенное"
+
+#: src/ng_border_menu.c:86
+msgid "Uniconify"
+msgstr "Развернуть в окно"
+
+#: src/ng_border_menu.c:88
+msgid "Iconify"
+msgstr "Уменьшить"
+
+#: src/ng_gadcon.c:260
+msgid "Gadcon Config"
+msgstr "Настройка Контейнера гаджетов"
+
+#: src/ng_gadcon.c:299
+msgid "Available Gadgets"
+msgstr "Доступные гаджеты"
+
+#: src/ng_gadcon.c:306
+msgid "Add Gadget"
+msgstr "Добавить гаджет"
+
+#: src/ng_gadcon.c:312
+msgid "Selected Gadgets"
+msgstr "Выбранные гаджеты"
+
+#: src/ng_gadcon.c:319
+msgid "Remove Gadget"
+msgstr "Убрать гаджет"
+
+#: src/ng_gadcon.c:327 src/ng_gadcon.c:370 src/ng_gadcon.c:394
+msgid "Description: Unavailable"
+msgstr "Описание не доступно"
+
+#: src/ng_config.c:98
+msgid "Engage Configuration"
+msgstr "Настройки Engage"
+
+#: src/ng_config.c:167 src/ng_config.c:228
+msgid "Appearance"
+msgstr "Внешний вид"
+
+#: src/ng_config.c:168
+msgid "Icon Size:"
+msgstr "Размер значков:"
+
+#: src/ng_config.c:170
+#, c-format
+msgid "%1.0f px"
+msgstr "%1.0f пикс."
+
+#: src/ng_config.c:184
+msgid "Background Opacity:"
+msgstr "Непрозрачность фона:"
+
+#: src/ng_config.c:186
+msgid "%1.0f \\%"
+msgstr "%1.0f \\%"
+
+#: src/ng_config.c:194
+msgid "Show Background Box"
+msgstr "Показывать фоновую рамку"
+
+#: src/ng_config.c:197
+msgid "Show Mouse-Over Animation"
+msgstr "Показывать анимацию при наведении мыши"
+
+#: src/ng_config.c:202
+msgid "Orientation"
+msgstr "Расположение"
+
+#: src/ng_config.c:204
+msgid "Bottom Edge"
+msgstr "Нижний край"
+
+#: src/ng_config.c:206
+msgid "Top Edge"
+msgstr "Верхний край"
+
+#: src/ng_config.c:208
+msgid "Left Edge"
+msgstr "Левый край"
+
+#: src/ng_config.c:210
+msgid "Right Edge"
+msgstr "Правый край"
+
+#: src/ng_config.c:231 src/ng_config.c:250
+msgid "Zoom"
+msgstr "Приближение"
+
+#: src/ng_config.c:232
+msgid "Factor:"
+msgstr "Множитель:"
+
+#: src/ng_config.c:238
+msgid "Range:"
+msgstr "Диапазон:"
+
+#: src/ng_config.c:244
+msgid "Duration:"
+msgstr "Продолжительность:"
+
+#: src/ng_config.c:253 src/ng_config.c:281
+msgid "Bar Items"
+msgstr "Элементы панели"
+
+#: src/ng_config.c:261 src/ng_config.c:547 src/ng_config_instances.c:104
+msgid "Delete"
+msgstr "Удалить"
+
+#: src/ng_config.c:263 src/ng_config.c:549 src/ng_config_instances.c:106
+msgid "Configure"
+msgstr "Настроить"
+
+#: src/ng_config.c:265
+msgid "Up"
+msgstr "Вверх"
+
+#: src/ng_config.c:267
+msgid "Down"
+msgstr "Вниз"
+
+#: src/ng_config.c:272 src/ng_config.c:545 src/ng_config_instances.c:102
+msgid "Add"
+msgstr "Добавить"
+
+#: src/ng_config.c:274
+msgid "Taskbar"
+msgstr "Панель задач"
+
+#: src/ng_config.c:276
+msgid "Launcher"
+msgstr "Запускатель"
+
+#: src/ng_config.c:278
+msgid "Gadcon"
+msgstr "Конт. гаджетов"
+
+#: src/ng_config.c:284 src/ng_config.c:303
+msgid "Auto Hide"
+msgstr "Автоскрытие"
+
+#: src/ng_config.c:288
+msgid "None"
+msgstr "Выключено"
+
+#: src/ng_config.c:291
+msgid "Autohide"
+msgstr "Скрывать автоматически"
+
+#: src/ng_config.c:294
+msgid "Hide when Window overlaps"
+msgstr "Скрывать при перекрытии окном"
+
+#: src/ng_config.c:297
+msgid "Hide on Fullscreen"
+msgstr "Скрывать под полноэкранными окнами"
+
+#: src/ng_config.c:301
+msgid "Show Bar when Urgent"
+msgstr "Показывать панель для срочных окон"
+
+#: src/ng_config.c:309
+msgid "Stacking"
+msgstr "Уровень размещения"
+
+#: src/ng_config.c:311
+msgid "Above All"
+msgstr "Поверх всего"
+
+#: src/ng_config.c:313
+msgid "Below Fullscreen"
+msgstr "Под полноэкранными окнами"
+
+#: src/ng_config.c:317 src/ng_config.c:324
+msgid "Other"
+msgstr "Разное"
+
+#: src/ng_config.c:318
+msgid "Ecomorph Features"
+msgstr "Функции Ecomorph"
+
+#: src/ng_config.c:320
+msgid "Show Icon Label"
+msgstr "Показывать метки значков"
+
+#: src/ng_config.c:537
+msgid "Launcher Settings"
+msgstr "Настройки запускателя"
+
+#: src/ng_config.c:557
+msgid "Taskbar Settings"
+msgstr "Настройки панели задач"
+
+#: src/ng_config.c:559
+msgid "Don't Show Dialogs"
+msgstr "Не показывать диалоги"
+
+#: src/ng_config.c:562
+msgid "Advanced Window Menu"
+msgstr "Продвинутое меню окон"
+
+#: src/ng_config.c:565
+msgid "Only Show Current Desk"
+msgstr "Показывать только текущий рабочий стол"
+
+#: src/ng_config.c:568
+msgid "Group Applications by Window Class"
+msgstr "Группировать приложения по классам окон"
+
+#: src/ng_config.c:571
+msgid "Append new Applications on the right Side"
+msgstr "Добавлять новые приложения справа"
+
+#: src/ng_config.c:577
+msgid "Iconified Applications"
+msgstr "Уменьшенные приложения"
+
+#: src/ng_config.c:579
+msgid "Not Shown"
+msgstr "Не показывать"
+
+#: src/ng_config.c:581
+msgid "Show"
+msgstr "Показывать"
+
+#: src/ng_config.c:583
+msgid "Only Iconified"
+msgstr "Только уменьшенные"
+
+#: src/ng_config.c:652 src/ng_config.c:692
+msgid "Engage Bar Configuration"
+msgstr "Настройки панели Engage"
+
+#: src/ng_config.c:797
+msgid "Create new source"
+msgstr "Создать новый источник"
+
+#: src/ng_config.c:798
+msgid "Enter a name for this new Application Launcher:"
+msgstr "Введите имя для нового Запускателя приложения:"
+
+#: src/ng_config.c:807
+#, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"source?"
+msgstr ""
+"Вы просите удалить \"%s\".<br><br>Вы уверены, что хотите удалить этот "
+"источник?"
+
+#: src/ng_config.c:811
+msgid "Are you sure you want to delete this source?"
+msgstr "Вы уверены, что хотите удалить этот источник?"
+
+#: src/ng_config_instances.c:64 src/ng_config_instances.c:94
+msgid "Engage Instances"
+msgstr "Экземпляры Engage"
+
+#: src/ng_config_instances.c:164
+msgid "Bar"
+msgstr "Панель"
+
+#: src/ng_config_instances.c:271
+#, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"Instance?"
+msgstr ""
+"Вы просите удалить \"%s\".<br><br>Вы уверены, что хотите удалить этот "
+"экземпляр?"
+
+#: src/ng_config_instances.c:275
+msgid "Are you sure you want to delete this Instance?"
+msgstr "Вы уверены, что хотите убрать этот экземпляр?"
