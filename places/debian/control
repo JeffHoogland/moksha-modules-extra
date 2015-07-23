@@ -3,13 +3,13 @@ Section: unknown
 Priority: extra
 Maintainer: root <jeffhoogland@linux.com>
 Build-Depends: moksha
-Replaces: places-e17
-Conflicts: e19, places-e17
 Standards-Version: 3.8.3
 Homepage: <insert the upstream URL, if relevant>
 
 Package: places-moksha
 Architecture: any
+Replaces: places-e17
+Conflicts: e19, places-e17
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Places Moksha Module
  A module that allows you to integrate file managers into the Moksha desktop
