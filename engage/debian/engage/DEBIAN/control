@@ -1,11 +1,11 @@
 Package: engage
-Version: 20150403-1
+Version: 20150722-1
 Architecture: amd64
 Maintainer: root <Jeff Hoogland <jeffhoogland@linux.com>>
-Installed-Size: 1679
+Installed-Size: 1682
 Depends: efl, libc6 (>= 2.4)
 Section: unknown
 Priority: optional
 Homepage: <insert the upstream URL, if relevant>
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Engage Moksha Module
+ OSX style application launcher for the Moksha desktop

@@ -1,8 +1,8 @@
 c8a7ac73ba4f271142d76e37e28606b2  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/e-module-ng.edj
 1f943507969c6cbc9cd8b3846c3be36e  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/engage.edj
-622571b0300dd8282a4feb44fcc096f3  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/linux-gnu-x86_64-0.17.6/module.a
-0f065736c69a7fe1b6974bc989f63c64  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/linux-gnu-x86_64-0.17.6/module.la
-b0379e5e392a0ddc0ea0bf65c01ad901  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/linux-gnu-x86_64-0.17.6/module.so
+c295b0d01a4cef9e773f6594a5cc544f  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/linux-gnu-x86_64-0.1.0/module.a
+73d494c9efec0eb9749bf96d7a77cc02  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/linux-gnu-x86_64-0.1.0/module.la
+c4139a78a53468755883c4b281a76f4a  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/linux-gnu-x86_64-0.1.0/module.so
 44df797293c206d145c03a1393b40ed4  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/locale/ar/LC_MESSAGES/engage.mo
 a82a3ac8dcf2417afa0c9cc16856c874  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/locale/ca/LC_MESSAGES/engage.mo
 485ba672b87357d6b82e13b8bcd312d7  usr/lib/x86_64-linux-gnu/enlightenment/modules/engage/locale/cs/LC_MESSAGES/engage.mo
@@ -26,5 +26,5 @@ ace2891965312ee21e0fcf4dc68f1e40  usr/share/doc/engage/NEWS.gz
 eae15885d5a99878479b0eccaa6375b3  usr/share/doc/engage/README
 1d19a82927ebeeab4a0f15b59998e614  usr/share/doc/engage/README.Debian
 59ef5b85a07de623ee2840c07a0a7b2a  usr/share/doc/engage/TODO
-78c4b1044d3413d1b889cfd4e17e84df  usr/share/doc/engage/changelog.Debian.gz
+53c9f5f42e9dfda1a9030d39c6886584  usr/share/doc/engage/changelog.Debian.gz
 e0ec3423b3e5cdf2abcc742ae1deab26  usr/share/doc/engage/copyright
