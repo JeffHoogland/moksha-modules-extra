@@ -1,0 +1,125 @@
+# Esperanto translation of forecast
+# Copyright (C) 2008-2009 Enlightenment development team
+# This file is distributed under the same license as the forecast package.
+#
+# Olivier M. <olivierweb@ifrance.com>, 2008-2009.
+# Olivier <eliovir@nospam.gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: eo\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-05-11 00:13+0000\n"
+"Last-Translator: Olivier <eliovir@nospam.gmail.com>\n"
+"Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Configuration"
+msgstr "Agordo de Vetero"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "Vidigaj Agordoj"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "Ofteco de ĝisdatigo"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minutoj"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "Vidigi Priskibon"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "Mesaĝo"
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "Agordoj de Unuoj"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "Metriko"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "Angla"
+
+#: ../src/e_mod_config.c:111
+msgid "Yahoo Forecasts Code"
+msgstr "Vetera Kodo de Yahoo"
+
+#: ../src/e_mod_config.c:112
+msgid "Yahoo Forecasts Code/US Zip Code"
+msgstr "Yahoo Forecasts Code/Usona Poŝtkodo"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "Por trovi la kodon por via zono, iru al:"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s, trovu vian zonon, kaj rigardu la URL-on"
+
+#: ../src/e_mod_main.c:255
+msgid "Forecasts"
+msgstr "Veteroj"
+
+#: ../src/e_mod_main.c:300
+msgid "Configuration"
+msgstr "Konfiguraĵo"
+
+#: ../src/e_mod_main.c:1030
+msgid "Wind Chill"
+msgstr "Venta malvarmigo"
+
+#: ../src/e_mod_main.c:1036
+msgid "Wind Speed"
+msgstr "Venta Rapideco"
+
+#: ../src/e_mod_main.c:1042
+msgid "Humidity"
+msgstr "Humideco"
+
+#: ../src/e_mod_main.c:1048
+msgid "Visibility"
+msgstr "Videbleco"
+
+#: ../src/e_mod_main.c:1054
+msgid "Pressure"
+msgstr "Aerpremo"
+
+#: ../src/e_mod_main.c:1061
+msgid "Rising"
+msgstr "Sunleviĝo"
+
+#: ../src/e_mod_main.c:1063
+msgid "Falling"
+msgstr "Krepusko"
+
+#: ../src/e_mod_main.c:1065
+msgid "Steady"
+msgstr "Konstanta"
+
+#: ../src/e_mod_main.c:1069
+msgid "Sunrise / Sunset"
+msgstr "Suna leviĝo / malleviĝo"
+
+#: ../src/e_mod_main.c:1093
+msgid "High"
+msgstr "Alta"
+
+#: ../src/e_mod_main.c:1104
+msgid "Low"
+msgstr "Malalta"

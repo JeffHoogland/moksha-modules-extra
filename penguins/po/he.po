@@ -1,0 +1,54 @@
+# Hebrew translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Yaron <sh.yaron@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-11-29 23:20+0000\n"
+"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Population Settings"
+msgstr "הגדרות אוכלוסיה"
+
+#: ../src/e_mod_config.c:92
+msgid "Number of penguins:"
+msgstr "מספר הפינגווינים:"
+
+#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:104
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/e_mod_config.c:97
+msgid "Zoom factor:"
+msgstr "מקדם התקריב:"
+
+#: ../src/e_mod_config.c:99
+#, c-format
+msgid "%1.1f X"
+msgstr "%1.1f X"
+
+#: ../src/e_mod_config.c:102
+msgid "Transparency:"
+msgstr "שקיפות:"
+
+#. Lista
+#: ../src/e_mod_config.c:108
+msgid "Select population:"
+msgstr "בחר אוכלוסיה:"
+
+#: ../src/e_mod_main.c:62
+msgid "Appearance"
+msgstr "חזות"
+
+#: ../src/e_mod_main.c:63
+msgid "Penguins"
+msgstr "פינגווינים"

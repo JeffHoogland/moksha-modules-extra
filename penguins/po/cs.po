@@ -1,0 +1,57 @@
+# Czech translation.
+# This file is put in the public domain.
+# quaker66@gmail.com
+msgid ""
+msgstr ""
+"Project-Id-Version: Penguins\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-10-16 14:36+0200\n"
+"PO-Revision-Date: 2011-01-04 18:03+0100\n"
+"Last-Translator: quaker66 <quaker66@gmail.com>\n"
+"Language-Team: Czech <quaker66@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Population Settings"
+msgstr "Nastavení populace"
+
+#: ../src/e_mod_config.c:92
+msgid "Number of penguins:"
+msgstr "Počet tučňáků:"
+
+#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:104
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/e_mod_config.c:97
+msgid "Zoom factor:"
+msgstr "Faktor přiblížení:"
+
+#: ../src/e_mod_config.c:99
+#, c-format
+msgid "%1.1f X"
+msgstr "%1.1f X"
+
+#: ../src/e_mod_config.c:102
+msgid "Transparency:"
+msgstr "Průhlednost:"
+
+#. Lista
+#: ../src/e_mod_config.c:108
+msgid "Select population:"
+msgstr "Vybrat populaci:"
+
+#: ../src/e_mod_main.c:61
+msgid "Look"
+msgstr "Vzhled"
+
+#: ../src/e_mod_main.c:62
+msgid "Penguins"
+msgstr "Tučňáci"
+
+#~ msgid "Appearance"
+#~ msgstr "Vzhled"

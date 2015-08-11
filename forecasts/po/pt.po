@@ -1,0 +1,140 @@
+# Portuguese translation for forecasts
+# This file is distributed under the same license as the enlightenment package.
+# Adaptado ao acordo ortográfico de 1990
+# Sérgio Marques <smarquespt@gmail.com>, 2010.
+# Sérgio Marques <sarquespt@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: forecasts\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2010-09-26 05:00-0700\n"
+"PO-Revision-Date: 2012-08-25 01:08+0100\n"
+"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"Language-Team: Portuguese <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: Portugal\n"
+"X-Generator: Lokalize 1.1\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Settings"
+msgstr "Definições"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "Definições de exibição"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "Intervalo entre atualizações"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minutos"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "Mostrar descrição"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "Mostrar ao passar com o rato"
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "Unidade de medição"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "Métrico"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "Inglês"
+
+#: ../src/e_mod_config.c:111
+msgid "Weather.com Forecasts Code"
+msgstr "Código Weather.com"
+
+#: ../src/e_mod_config.c:112
+msgid "Forecasts Code/US Zip Code"
+msgstr "Código das previsões"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "Para encontrar o código da sua área vá a:"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s, encontre a sua área e veja a URL"
+
+#: ../src/e_mod_main.c:254
+msgid "Forecasts"
+msgstr "Previsões meteorológicas"
+
+#: ../src/e_mod_main.c:301
+msgid "Settings"
+msgstr "Definições"
+
+#: ../src/e_mod_main.c:993
+#, c-format
+msgid "%s: Current Conditions"
+msgstr "%s: Condições atuais"
+
+#: ../src/e_mod_main.c:1009
+msgid "Wind Chill"
+msgstr "Temperatura aparente"
+
+#: ../src/e_mod_main.c:1015
+msgid "Wind Speed"
+msgstr "Velocidade do vento"
+
+#: ../src/e_mod_main.c:1021
+msgid "Humidity"
+msgstr "Humidade"
+
+#: ../src/e_mod_main.c:1027
+msgid "Visibility"
+msgstr "Visibilidade"
+
+#: ../src/e_mod_main.c:1033
+msgid "Pressure"
+msgstr "Pressão"
+
+#: ../src/e_mod_main.c:1040
+msgid "Rising"
+msgstr "A subir"
+
+#: ../src/e_mod_main.c:1042
+msgid "Falling"
+msgstr "A descer"
+
+#: ../src/e_mod_main.c:1044
+msgid "Steady"
+msgstr "Estável"
+
+#: ../src/e_mod_main.c:1048
+msgid "Sunrise / Sunset"
+msgstr "Nascer do sol/Pôr do sol"
+
+#: ../src/e_mod_main.c:1066
+msgid "Today"
+msgstr "Hoje"
+
+#: ../src/e_mod_main.c:1068
+msgid "Tomorrow"
+msgstr "Amanhã"
+
+#: ../src/e_mod_main.c:1076
+msgid "High"
+msgstr "Alta"
+
+#: ../src/e_mod_main.c:1087
+msgid "Low"
+msgstr "Baixa"
+

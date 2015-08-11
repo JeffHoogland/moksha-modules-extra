@@ -1,0 +1,21 @@
+[Desktop Entry]
+Type=Link
+Name=Screenshot
+Name[ru]=Снимок экрана
+Name[cs]=Snímek obrazovky
+Name[eo]=Ekrankopio
+Name[hu]=Képernyőkép készítő
+Name[fr]=Capture
+Name[el]=Στιγμιότυπο Οθόνης
+Name[pt]=Captura de ecrã
+Icon=e-module-screenshot
+X-Enlightenment-ModuleType=utils
+Comment=Gadget to take screenshots using emprint.
+Comment[ru]=Гаджет для получения снимков экрана.
+Comment[cs]=Gadget umožňující vytvářet snímky obrazovky pomocí emprint.
+Comment[eo]=Ekrankopii per emprint.
+Comment[hu]=Képernyőkép készítő modul, amely az emprintet használja.
+Comment[it]=Modulo per la cattura di istantanee dello schermo utilizzando emprint.
+Comment[fr]=Un gadget qui permet de faire des captures d'écran en utilisant Emprint.
+Comment[el]=Συστατικό για τη λήψη στιγμιοτύπων της οθόνης με το emprint.
+Comment[pt]=Módulo para obter capturas do ecrã através do emprint

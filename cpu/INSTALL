@@ -1,0 +1,11 @@
+COMPILING and INSTALLING:
+
+If you got a official release tar archive do:
+    ./autogen.sh
+      
+Then to compile:
+    make
+
+To install:
+    make install
+

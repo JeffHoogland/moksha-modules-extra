@@ -1,0 +1,21 @@
+[Desktop Entry]
+Type=Link
+Name=Forecasts
+Name[ru]=Прогноз погоды
+Name[cs]=Předpověď počasí
+Name[eo]=Veteraj prognozoj
+Name[hu]=Elõrejelzés
+Name[fr]=Prévisions
+Name[el]=Προβλέψεις
+Name[pt]=Previsões meteorológicas
+Icon=e-module-forecasts
+X-Enlightenment-ModuleType=utils
+Comment=The forecasts gadget will display the current weather conditions plus a few days forecast.
+Comment[ru]=Гаджет показывает текущую погоду и прогноз на несколько дней.
+Comment[cs]=Zobrazuje aktuální počasí plus předpověď na několik dní.
+Comment[eo]=Vidigi la nunan veteron kaj prognozo por kelkaj tagoj.
+Comment[hu]=Az elõrejelzõ modul megmutatja az aktuális idõjárást, és elõre jelzi a következõ két nap idõjárását.
+Comment[it]=Il modulo forecasts mostrerà le attuali condizioni del tempo e le previsioni per qualche giorno.
+Comment[el]=Το συστατικό προβλέψεων θα εμφανίσει τις τρέχουσες καιρικές συνθήκες και των επόμενων ημερών.
+Comment[fr]=Affiche les conditions météo actuelles et les prévisions sur quelques jours.
+Comment[pt]=Um módulo que exibe as condições atmosféricas para um conjunto de dias

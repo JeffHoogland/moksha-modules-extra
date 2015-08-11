@@ -1,0 +1,121 @@
+# Norwegian Bokmal translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-03-21 15:30+0000\n"
+"Last-Translator: Kenneth Langdalen <Unknown>\n"
+"Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Configuration"
+msgstr ""
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr ""
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr ""
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minutter"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr ""
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr ""
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr ""
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "Metrisk"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "Engelsk"
+
+#: ../src/e_mod_config.c:111
+msgid "Yahoo Forecasts Code"
+msgstr ""
+
+#: ../src/e_mod_config.c:112
+msgid "Yahoo Forecasts Code/US Zip Code"
+msgstr ""
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr ""
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr ""
+
+#: ../src/e_mod_main.c:255
+msgid "Forecasts"
+msgstr "Prognoser"
+
+#: ../src/e_mod_main.c:300
+msgid "Configuration"
+msgstr ""
+
+#: ../src/e_mod_main.c:1030
+msgid "Wind Chill"
+msgstr ""
+
+#: ../src/e_mod_main.c:1036
+msgid "Wind Speed"
+msgstr "Vindhastighet"
+
+#: ../src/e_mod_main.c:1042
+msgid "Humidity"
+msgstr "Luftfuktighet"
+
+#: ../src/e_mod_main.c:1048
+msgid "Visibility"
+msgstr "Sikt"
+
+#: ../src/e_mod_main.c:1054
+msgid "Pressure"
+msgstr "Lufttrykk"
+
+#: ../src/e_mod_main.c:1061
+msgid "Rising"
+msgstr "Soloppgang"
+
+#: ../src/e_mod_main.c:1063
+msgid "Falling"
+msgstr "Solnedgang"
+
+#: ../src/e_mod_main.c:1065
+msgid "Steady"
+msgstr ""
+
+#: ../src/e_mod_main.c:1069
+msgid "Sunrise / Sunset"
+msgstr "Soloppgang / Solnedgang"
+
+#: ../src/e_mod_main.c:1093
+msgid "High"
+msgstr "Høy"
+
+#: ../src/e_mod_main.c:1104
+msgid "Low"
+msgstr "Lav"

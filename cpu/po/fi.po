@@ -1,0 +1,43 @@
+# Cpu module (e17), Finnish translation
+# This file is put in the public domain.
+# Jani väyrynen <janivayrynen@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cpu module (e17)\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-01-23 01:50+0200\n"
+"Last-Translator: Jani väyrynen <janivayrynen@gmail.com>\n"
+"Language-Team: Finnish <janivayrynen@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_main.c:132
+msgid "Cpu"
+msgstr "Cpu"
+
+#: ../src/e_mod_main.c:366
+msgid "Fast (0.5 sec)"
+msgstr "Nopea (0.5 s)"
+
+#: ../src/e_mod_main.c:373
+msgid "Medium (1 sec)"
+msgstr "Melko nopea (1 s)"
+
+#: ../src/e_mod_main.c:380
+msgid "Normal (2 sec)"
+msgstr "Normaali (2 s)"
+
+#: ../src/e_mod_main.c:387
+msgid "Slow (5 sec)"
+msgstr "Hidas (5 s)"
+
+#: ../src/e_mod_main.c:394
+msgid "Very Slow (30 sec)"
+msgstr "Hyvin hidas (30 s)"
+
+#: ../src/e_mod_main.c:405
+msgid "Time Between Updates"
+msgstr "Päivitysväli"

@@ -1,0 +1,141 @@
+# Dutch translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2011-09-04 06:00-0700\n"
+"PO-Revision-Date: 2011-09-04 16:01+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@gmail.com>\n"
+"Language-Team: Dutch <nl@li.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Settings"
+msgstr "Weerbericht-instellingen"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "Weergave-instellingen"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "Meetinterval"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minuten"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "Toon beschrijving"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "Popup bij muisover"
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "Eenheid-instellingen"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "Metrisch"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "Engels"
+
+#: ../src/e_mod_config.c:111
+msgid "Weather.com Forecasts Code"
+msgstr "Weather.com Forecasts-code"
+
+#: ../src/e_mod_config.c:112
+msgid "Forecasts Code/US Zip Code"
+msgstr "Forecast Code/Amerikaanse postcode"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "Om de code van uw regio te vinden, ga naar:"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s, vindt uw regio en kijk naar de URL"
+
+#: ../src/e_mod_main.c:249
+msgid "Forecasts"
+msgstr "Weerbericht"
+
+#: ../src/e_mod_main.c:291
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../src/e_mod_main.c:989
+#, c-format
+msgid "%s: Current Conditions"
+msgstr "%s: Huidige omstandigheden"
+
+#: ../src/e_mod_main.c:1005
+msgid "Wind Chill"
+msgstr "Windkoude"
+
+#: ../src/e_mod_main.c:1011
+msgid "Wind Speed"
+msgstr "Windsnelheid"
+
+#: ../src/e_mod_main.c:1017
+msgid "Humidity"
+msgstr "Luchtvochtigheid"
+
+#: ../src/e_mod_main.c:1023
+msgid "Visibility"
+msgstr "Zichtbaarheid"
+
+#: ../src/e_mod_main.c:1029
+msgid "Pressure"
+msgstr "Luchtdruk"
+
+#: ../src/e_mod_main.c:1036
+msgid "Rising"
+msgstr "Stijgend"
+
+#: ../src/e_mod_main.c:1038
+msgid "Falling"
+msgstr "Dalend"
+
+#: ../src/e_mod_main.c:1040
+msgid "Steady"
+msgstr "Constant"
+
+#: ../src/e_mod_main.c:1044
+msgid "Sunrise / Sunset"
+msgstr "Zonsopgang / Zonsondergang"
+
+#: ../src/e_mod_main.c:1062
+msgid "Today"
+msgstr "Vandaag"
+
+#: ../src/e_mod_main.c:1064
+msgid "Tomorrow"
+msgstr "Morgen"
+
+#: ../src/e_mod_main.c:1072
+msgid "High"
+msgstr "Hoog"
+
+#: ../src/e_mod_main.c:1083
+msgid "Low"
+msgstr "Laag"
+
+#~ msgid "Forecasts Configuration"
+#~ msgstr "Weerbericht-configuratie"
+
+#~ msgid "Configuration"
+#~ msgstr "Instellingen"

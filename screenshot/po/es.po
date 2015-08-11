@@ -1,0 +1,159 @@
+# Spanish translation for enlightenment
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-12-03 16:30+0800\n"
+"PO-Revision-Date: 2010-01-11 17:06+0000\n"
+"Last-Translator: Paco Molinero <paco@byasl.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-12 04:47+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:48
+msgid "Screenshot Settings"
+msgstr "Configuración de la captura de pantalla"
+
+#: ../src/e_mod_config.c:99 ../src/e_mod_config.c:180
+msgid "General Settings"
+msgstr "Configuración general"
+
+#: ../src/e_mod_config.c:100 ../src/e_mod_config.c:181
+msgid "Beep when taking screenshot"
+msgstr "Pitar al tomar una captura"
+
+#: ../src/e_mod_config.c:103 ../src/e_mod_config.c:184
+msgid "Delay Time:"
+msgstr "Tiempo de retardo:"
+
+#: ../src/e_mod_config.c:110 ../src/e_mod_config.c:197 ../src/e_mod_main.c:389
+msgid "Capture Mode"
+msgstr "Modo de captura"
+
+#: ../src/e_mod_config.c:112 ../src/e_mod_config.c:199 ../src/e_mod_main.c:364
+msgid "Whole Screen"
+msgstr "Pantalla completa"
+
+#: ../src/e_mod_config.c:114 ../src/e_mod_config.c:201 ../src/e_mod_main.c:371
+msgid "Select Window"
+msgstr "Seleccionar ventana"
+
+#: ../src/e_mod_config.c:116 ../src/e_mod_config.c:203 ../src/e_mod_main.c:378
+msgid "Select Region"
+msgstr "Seleccionar región"
+
+#: ../src/e_mod_config.c:120 ../src/e_mod_config.c:207
+msgid "File Settings"
+msgstr "Configuración del archivo"
+
+#: ../src/e_mod_config.c:121 ../src/e_mod_config.c:208
+msgid "Always prompt for filename"
+msgstr "Preguntar siempre por el nombre del archivo"
+
+#: ../src/e_mod_config.c:124 ../src/e_mod_config.c:211
+msgid "Save Directory:"
+msgstr "Guardar directorio:"
+
+#: ../src/e_mod_config.c:128 ../src/e_mod_config.c:215
+msgid "Filename:"
+msgstr "Nombre de archivo:"
+
+#: ../src/e_mod_config.c:134 ../src/e_mod_config.c:221
+msgid "Application Settings"
+msgstr "Configuración de la aplicación"
+
+#: ../src/e_mod_config.c:135 ../src/e_mod_config.c:222
+msgid "Launch application after taking screenshot"
+msgstr "Lanzar aplicación tras tomar captura"
+
+#: ../src/e_mod_config.c:140 ../src/e_mod_config.c:238
+msgid "Thumbnail Settings"
+msgstr "Configuración de miniaturas"
+
+#: ../src/e_mod_config.c:141 ../src/e_mod_config.c:239
+msgid "Generate thumbnail from screenshot"
+msgstr "Generar miniatura de captura"
+
+#: ../src/e_mod_config.c:190
+msgid "Image Quality:"
+msgstr "Calidad de la imagen:"
+
+#: ../src/e_mod_config.c:226
+msgid "Application:"
+msgstr "Aplicación:"
+
+#: ../src/e_mod_config.c:242
+msgid "Size:"
+msgstr "Tamaño:"
+
+#: ../src/e_mod_config.c:247
+msgid "(Percentage of original image to use for thumbnail)"
+msgstr "(Porcentaje de la imagen original para usar en la miniatura)"
+
+#: ../src/e_mod_main.c:91 ../src/e_mod_main.c:266
+msgid "Screenshot"
+msgstr "Captura de pantalla"
+
+#: ../src/e_mod_main.c:121
+msgid ""
+"Screenshot Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means Screenshot module needs new configuration<br>data by "
+"default for usable functionality that your old<br>configuration simply "
+"lacks. This new set of defaults will fix<br>that by adding it in. You can re-"
+"configure things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+"La configuración del módulo de captura de pantalla necesita actualizarse. Su "
+"antigua configuración <br> ha sido eliminada y un nueva configuración "
+"predeterminada se ha establecido, lo que <br> sucederá regularmente durante "
+"el desarrollo, así que no informe del <br> error. Esto simplemente significa "
+"que el modulo de captura de pantalla necesita nuevos datos de <br> "
+"configuración predeterminados para la funcionalidad que su antigua "
+"configuración <br> no posee. Este nuevo conjunto de configuraciones las "
+"arreglará <br> añadiendo las configuraciones que faltan. Ahora puede "
+"reconfigurar los ajustes a su <br> gusto. Lamentamos los inconvenientes.<br>"
+
+#: ../src/e_mod_main.c:139
+msgid ""
+"Your Screenshot Module configuration is NEWER than the Screenshot Module "
+"version. This is very<br>strange. This should not happen unless you "
+"downgraded<br>the Screenshot Module or copied the configuration from a place "
+"where<br>a newer version of the Screenshot Module was running. This is bad "
+"and<br>as a precaution your configuration has been now restored "
+"to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+"Su configuración del módulo de captura de pantallas es MÁS RECIENTE que la "
+"versión del propio módulo. Esto es muy <br> extraño y no debería pasar a "
+"menos que haya desactualizado <br> el módulo o haya copiado la configuración "
+"de otro lugar en donde <br> se está ejecutando una versión más reciente del "
+"módulo de captura de pantalla. Esto no es bueno, y <br> como medida de "
+"precaución, su configuración ha sido restaurada a los ajustes "
+"predeterminados. Lamentamos los inconvenientes. <br>"
+
+#: ../src/e_mod_main.c:161 ../src/e_mod_main.c:176
+msgid "Take Screenshot"
+msgstr "Capturar pantalla"
+
+#: ../src/e_mod_main.c:304
+msgid "Screenshot Configuration Updated"
+msgstr "Configuración de la captura de pantalla actualizada"
+
+#: ../src/e_mod_main.c:393
+msgid "Settings"
+msgstr "Configuración"
+
+#: ../src/e_mod_main.c:467
+msgid "Screenshot Module"
+msgstr "Módulo de captura de pantalla"
+
+#: ../src/e_mod_main.c:468
+msgid "Enter a new filename for this screenshot"
+msgstr "Introduzca un nombre nuevo de aarchivo para la captura de pantalla"

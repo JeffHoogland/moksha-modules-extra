@@ -1,0 +1,51 @@
+# Italian translation for E17 rain module.
+# This file is put in the public domain.
+# Massimo Maiurana <maiurana@inwind.it>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rain\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2010-10-19 18:43+0200\n"
+"PO-Revision-Date: 2010-10-19 18:48+0200\n"
+"Last-Translator: Massimo Maiurana <maiurana@inwind.it>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_config.c:42
+msgid "Rain Module"
+msgstr "Modulo Rain"
+
+#: src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "Impostazioni generali"
+
+#: src/e_mod_config.c:101
+msgid "Show Clouds"
+msgstr "Mostra nuvole"
+
+#: src/e_mod_config.c:105
+msgid "Rain Density"
+msgstr "Intensità della pioggia"
+
+#: src/e_mod_config.c:107
+msgid "Sprinkle"
+msgstr "Schizzi"
+
+#: src/e_mod_config.c:109
+msgid "Drizzle"
+msgstr "Pioggia"
+
+#: src/e_mod_config.c:111
+msgid "Downpour"
+msgstr "Nubifragio"
+
+#: src/e_mod_main.c:33
+msgid "Look"
+msgstr "Aspetto"
+
+#: src/e_mod_main.c:35
+msgid "Rain"
+msgstr "Rain"

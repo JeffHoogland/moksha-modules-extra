@@ -1,0 +1,17 @@
+TODO
+********************************************
+                      
+First in the config dialog you have two options: 
+	(i) Be so smart as win_must_die does, and 
+	(ii) be suitable for advanced users like everybody on this list. 
+
+If the first option is selected, then each scrapshot is saved in /tmp, 
+or ~/tmp and the preview box is displayed with a thumbanailed scrapshot image, 
+and two buttons "Close" and "Save As....". 
+
+In the Advanced case, i'd leave the behaviour of the ss as is.
+
+* Nice to have *
+
+* The ss module should highlight when mouse overs it. Similarly as Start module does.
+  Because now, it is not clear if the user can press on it and expect some actions.

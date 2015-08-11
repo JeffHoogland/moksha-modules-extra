@@ -1,0 +1,46 @@
+# Brazilian Portuguese translation for enlightenment
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-01-10 01:25+0000\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-01-17 15:25+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_main.c:132
+msgid "Cpu"
+msgstr "Cpu"
+
+#: ../src/e_mod_main.c:366
+msgid "Fast (0.5 sec)"
+msgstr "Rápido (0.5 seg)"
+
+#: ../src/e_mod_main.c:373
+msgid "Medium (1 sec)"
+msgstr "Médio (1 seg)"
+
+#: ../src/e_mod_main.c:380
+msgid "Normal (2 sec)"
+msgstr "Normal (2 seg)"
+
+#: ../src/e_mod_main.c:387
+msgid "Slow (5 sec)"
+msgstr "Lento (5 seg)"
+
+#: ../src/e_mod_main.c:394
+msgid "Very Slow (30 sec)"
+msgstr "Muito lento (30 seg)"
+
+#: ../src/e_mod_main.c:405
+msgid "Time Between Updates"
+msgstr "Tempo entre atualizações"

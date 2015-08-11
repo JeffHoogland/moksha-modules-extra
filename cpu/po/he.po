@@ -1,0 +1,43 @@
+# Hebrew translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Yaron <sh.yaron@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-11-29 21:06+0000\n"
+"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_main.c:132
+msgid "Cpu"
+msgstr "מעבד"
+
+#: ../src/e_mod_main.c:366
+msgid "Fast (0.5 sec)"
+msgstr "מהיר (0.5 שנ')"
+
+#: ../src/e_mod_main.c:373
+msgid "Medium (1 sec)"
+msgstr "ממוצע (1 שנ')"
+
+#: ../src/e_mod_main.c:380
+msgid "Normal (2 sec)"
+msgstr "רגיל (2 שנ')"
+
+#: ../src/e_mod_main.c:387
+msgid "Slow (5 sec)"
+msgstr "איטי (5 שנ')"
+
+#: ../src/e_mod_main.c:394
+msgid "Very Slow (30 sec)"
+msgstr "איטי מאוד (30 sec)"
+
+#: ../src/e_mod_main.c:405
+msgid "Time Between Updates"
+msgstr "הזמן בין העדכונים"

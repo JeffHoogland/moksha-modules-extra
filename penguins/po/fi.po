@@ -1,0 +1,54 @@
+# Penguins module (e17), Finnish translation
+# This file is put in the public domain.
+# Jani väyrynen <janivayrynen@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Penguins module (e17)\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-01-23 01:50+0200\n"
+"Last-Translator: Jani väyrynen <janivayrynen@gmail.com>\n"
+"Language-Team: Finnish <janivayrynen@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Population Settings"
+msgstr "Populaation asetukset"
+
+#: ../src/e_mod_config.c:92
+msgid "Number of penguins:"
+msgstr "Pingviinien määrä:"
+
+#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:104
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/e_mod_config.c:97
+msgid "Zoom factor:"
+msgstr "Suurennuskerroin:"
+
+#: ../src/e_mod_config.c:99
+#, c-format
+msgid "%1.1f X"
+msgstr "%1.1f X"
+
+#: ../src/e_mod_config.c:102
+msgid "Transparency:"
+msgstr "Läpinäkyvyys:"
+
+#. Lista
+#: ../src/e_mod_config.c:108
+msgid "Select population:"
+msgstr "Valitse populaatio:"
+
+#: ../src/e_mod_main.c:62
+msgid "Appearance"
+msgstr "Ulkonäkö"
+
+#: ../src/e_mod_main.c:63
+msgid "Penguins"
+msgstr "Pingviinit"

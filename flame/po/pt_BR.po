@@ -1,0 +1,77 @@
+# Brazilian Portuguese translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Ricardo Ichizo <n1ghtcr4wler@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-02-26 23:20+0000\n"
+"Last-Translator: Ricardo Ichizo <n1ghtcr4wler@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_main.c:61
+msgid "Appearance"
+msgstr "Aparência"
+
+#: ../src/e_mod_main.c:63
+msgid "Flame"
+msgstr "Chama"
+
+#: ../src/e_mod_config.c:47
+msgid "Flame Configuration"
+msgstr "Configuração da Chama"
+
+#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:177
+msgid "Flame Color"
+msgstr "Cor da Chama"
+
+#: ../src/e_mod_config.c:96
+msgid "Gold"
+msgstr "Ouro"
+
+#: ../src/e_mod_config.c:98
+msgid "Fire"
+msgstr "Fogo"
+
+#: ../src/e_mod_config.c:100
+msgid "Plasma"
+msgstr "Plasma"
+
+#: ../src/e_mod_config.c:102
+msgid "Matrix"
+msgstr "Matriz"
+
+#: ../src/e_mod_config.c:104
+msgid "Ice"
+msgstr "Gelo"
+
+#: ../src/e_mod_config.c:106
+msgid "White"
+msgstr "Branco"
+
+#: ../src/e_mod_config.c:108
+msgid "Custom"
+msgstr "Personalizado"
+
+#: ../src/e_mod_config.c:179
+msgid "Red Amount"
+msgstr "Intensidade do Vermelho"
+
+#: ../src/e_mod_config.c:182 ../src/e_mod_config.c:189
+#: ../src/e_mod_config.c:196
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/e_mod_config.c:186
+msgid "Blue Amount"
+msgstr "Intensidade do Azul"
+
+#: ../src/e_mod_config.c:193
+msgid "Green Amount"
+msgstr "Intensidade do Verde"

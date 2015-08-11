@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# Yasufumi Haga <yasufumi.haga@nifty.com>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rain\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"PO-Revision-Date: 2010-01-19 16:45+0000\n"
+"Last-Translator: jugger Yamamoto <Unknown>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-20 04:36+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Rain Module"
+msgstr "雨モジュール"
+
+#: ../src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "一般の設定"
+
+#: ../src/e_mod_config.c:101
+msgid "Show Clouds"
+msgstr "雲を表示する"
+
+#: ../src/e_mod_config.c:105
+msgid "Rain Density"
+msgstr "雨の強さ"
+
+#: ../src/e_mod_config.c:107
+msgid "Sprinkle"
+msgstr "霧雨"
+
+#: ../src/e_mod_config.c:109
+msgid "Drizzle"
+msgstr "小雨"
+
+#: ../src/e_mod_config.c:111
+msgid "Downpour"
+msgstr "大雨"
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr "外観"
+
+#: ../src/e_mod_main.c:35
+msgid "Rain"
+msgstr "雨"
+
+#~ msgid "Enlightenment Rain Module"
+#~ msgstr "Enlightenment rain モジュール"
+
+#~ msgid ""
+#~ "This is a simple module to display some rain on the desktop.<br>It can "
+#~ "display clouds too, if you like clouds."
+#~ msgstr "デスクトップにちょっと雨を降らせる簡単なモジュールです.<br>なんなら雨雲も出せますよ."

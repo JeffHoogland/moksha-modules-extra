@@ -1,0 +1,147 @@
+# German translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Ansgar Burchardt <Unknown>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2010-11-23 23:42+0100\n"
+"PO-Revision-Date: 2010-07-16 11:19+0100\n"
+"Last-Translator: AlexAnteMachina <alexander-jung@t-online.de>\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:51+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/e_mod_config.c:42
+#, fuzzy
+msgid "Forecasts Settings"
+msgstr "Wettervorhersagen"
+
+#: src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "Anzeige-Einstellungen"
+
+#: src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "Aktualisierungsintervall"
+
+#: src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f Minuten"
+
+#: src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "Beschreibung anzeigen"
+
+#: src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "Beim Überfahren mit dem Mauszeiger ein Popup öffnen"
+
+#: src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "Einheiteneinstellungen"
+
+#: src/e_mod_config.c:105
+msgid "Metric"
+msgstr "Metrisch"
+
+#: src/e_mod_config.c:107
+msgid "English"
+msgstr "Englisch"
+
+#: src/e_mod_config.c:111
+#, fuzzy
+msgid "Weather.com Forecasts Code"
+msgstr "Yahoo Wettervorhersage Code"
+
+#: src/e_mod_config.c:112
+#, fuzzy
+msgid "Forecasts Code/US Zip Code"
+msgstr "Yahoo Wettervorhersage Code/US Zip Code"
+
+#: src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "Um den Code für Ihre Region zu finden, gehen Sie auf"
+
+#: src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s, suchen Sie Ihre Region und entnehmen den Code der URL"
+
+#: src/e_mod_main.c:249
+msgid "Forecasts"
+msgstr "Wettervorhersagen"
+
+#: src/e_mod_main.c:296
+#, fuzzy
+msgid "Settings"
+msgstr "Einheiteneinstellungen"
+
+#: src/e_mod_main.c:991
+#, c-format
+msgid "%s: Current Conditions"
+msgstr ""
+
+#: src/e_mod_main.c:1007
+msgid "Wind Chill"
+msgstr "Gefühlte Temperatur (Windchill)"
+
+#: src/e_mod_main.c:1013
+msgid "Wind Speed"
+msgstr "Windgeschwindigkeit"
+
+#: src/e_mod_main.c:1019
+msgid "Humidity"
+msgstr "Luftfeuchtigkeit"
+
+#: src/e_mod_main.c:1025
+msgid "Visibility"
+msgstr "Sicht"
+
+#: src/e_mod_main.c:1031
+msgid "Pressure"
+msgstr "Luftdruck"
+
+#: src/e_mod_main.c:1038
+msgid "Rising"
+msgstr "Steigend"
+
+#: src/e_mod_main.c:1040
+msgid "Falling"
+msgstr "Fallend"
+
+#: src/e_mod_main.c:1042
+msgid "Steady"
+msgstr "beständig"
+
+#: src/e_mod_main.c:1046
+msgid "Sunrise / Sunset"
+msgstr "Sonnenaufgang / Sonnenuntergang"
+
+#: src/e_mod_main.c:1064
+msgid "Today"
+msgstr ""
+
+#: src/e_mod_main.c:1066
+msgid "Tomorrow"
+msgstr ""
+
+#: src/e_mod_main.c:1074
+msgid "High"
+msgstr "Hoch"
+
+#: src/e_mod_main.c:1085
+msgid "Low"
+msgstr "Niedrig"
+
+#~ msgid "Forecasts Configuration"
+#~ msgstr "Vorhersageeinstellungen"
+
+#~ msgid "Configuration"
+#~ msgstr "Einstellungen"

@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marc Furtià  i Puig\\\n"
-"Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
-"POT-Creation-Date: 2015-04-03 21:27+0000\n"
+"Report-Msgid-Bugs-To: $MSGID_BUGS_ADDRESS\n"
+"POT-Creation-Date: 2015-02-11 18:46+0100\n"
 "PO-Revision-Date: 2015-02-20 08:38+0000\n"
 "Last-Translator: JoanColl <Unknown>\n"
 "Language-Team: \n"
-"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2015-02-21 05:12+0000\n"
 "X-Generator: Launchpad (build 17355)\n"
+"Language: ca\n"
 "X-Poedit-Bookmarks: -1,-1,1139,-1,-1,-1,-1,-1,-1,-1\n"
 
 #: src/e_mod_main.c:1705 src/e_mod_main.c:1863 src/e_mod_main.c:1890
@@ -108,8 +108,7 @@ msgid "Background Opacity:"
 msgstr "Opacitat del fons:"
 
 #: src/ng_config.c:186
-#, fuzzy
-msgid "%1.0f \\%"
+msgid "%1.0f %"
 msgstr "%1.0f %"
 
 #: src/ng_config.c:194

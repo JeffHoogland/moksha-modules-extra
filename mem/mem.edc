@@ -1,0 +1,454 @@
+images
+{
+   image: "icon.png" COMP;
+   image: "real_00.png" COMP;
+   image: "real_01.png" COMP;
+   image: "real_02.png" COMP;
+   image: "real_03.png" COMP;
+   image: "real_04.png" COMP;
+   image: "real_05.png" COMP;
+   image: "real_06.png" COMP;
+   image: "real_07.png" COMP;
+   image: "real_08.png" COMP;
+   image: "real_09.png" COMP;
+   image: "real_10.png" COMP;
+   image: "swap_00.png" COMP;
+   image: "swap_01.png" COMP;
+   image: "swap_02.png" COMP;
+   image: "swap_03.png" COMP;
+   image: "swap_04.png" COMP;
+   image: "swap_05.png" COMP;
+   image: "swap_06.png" COMP;
+   image: "swap_07.png" COMP;
+   image: "swap_08.png" COMP;
+   image: "swap_09.png" COMP;
+   image: "swap_10.png" COMP;
+}
+
+collections
+{
+   group
+     {
+	name: "modules/mem/main";
+	min: 4 4;
+	max: 128 128;
+	script 
+	  {
+	   public message(Msg_Type:type, id, ...) 
+	       {
+		  if ((type == MSG_FLOAT) && (id == 1)) 
+		    {
+		       new Float:value;
+		       
+		       value = getfarg(2);
+		       set_state(PART:"real_meter", "default", value);
+		    }
+		  if ((type == MSG_FLOAT) && (id == 2)) 
+		    {
+		       new Float:value;
+		       
+		       value = getfarg(2);
+		       set_state(PART:"swap_meter", "default", value);
+		    }		  
+	       }	     
+	  }
+	
+	parts
+	  {
+	     part
+	       {
+		  name: "fade_clip";
+		  type: RECT;
+		  description
+		    {
+		       state: "default" 0.0;
+		       color: 255 255 255 255;
+		       rel1
+			 {
+			    relative: 0.0 0.0;
+			    offset: 0 0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 1.0;
+			    offset: -1 -1;
+			 }
+		    }
+	       }
+	     part
+	       {
+		  name: "mem";
+		  type: IMAGE;
+		  clip_to: "fade_clip";
+		  description
+		    {
+		       state: "default" 0.0;
+		       aspect: 1.0 1.0;
+		       aspect_preference: BOTH;
+		       rel1
+			 {
+			    relative: 0.0 0.0;
+			    offset: 0 0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 1.0;
+			    offset: -1 -1;
+			 }
+		       image
+			 {
+			    normal: "icon.png";
+			 }
+		       color: 255 255 255 192;
+		    }
+	       }
+	     part
+	       {
+		  name: "real_meter";
+		  type: IMAGE;
+		  clip_to: "fade_clip";
+		  description
+		    {
+		       state: "default" 0.0;
+		       rel1
+			 {
+			    relative: 0.0 0.0;
+			    offset: 0 0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 0.25;
+			    offset: -1 -1;
+			 }
+		       image
+			 {
+			    normal: "real_00.png";
+			 }
+		       color: 255 255 255 192;
+		    }
+		  description
+		    {
+		       state: "default" 0.1;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "real_01.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.2;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "real_02.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.3;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "real_03.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.4;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "real_04.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.5;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "real_05.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.6;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "real_06.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.7;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "real_07.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.8;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "real_08.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.9;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "real_09.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 1.0;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "real_10.png";
+			 }
+		    }
+	       }
+	     part 
+	       {
+		  name: "real_label";
+		  type: TEXT;
+		  effect: SOFT_SHADOW;
+		  description 
+		    {
+		       state: "default" 0.0;
+		       color: 255 255 255 0;
+		       color3: 0 0 0 0;
+		       visible: 0;
+		       rel1 
+			 {
+			    relative: 0.5 0.0;
+			    offset: 0 0;
+			    to: "real_meter";
+			 }
+		       rel2 
+			 {
+			    relative: 0.5 1.0;
+			    offset: -1 -1;
+			    to: "real_meter";
+			 }
+		       text 
+			 {
+			    text: "Real:";
+			    font: "Sans:style=Mono";
+			    size: 9;
+			    min: 1 1;
+			    align: 0.5 1.0;
+			    text_class: "module_small";
+			 }
+		    }
+		  description 
+		    {
+		       state: "visible" 0.0;
+		       inherit: "default" 0.0;
+		       visible: 1;
+		       color: 255 255 255 255;
+		       color3: 0 0 0 42;
+		       color_class: "module_label";
+		    }
+	       }
+	     part
+	       {
+		  name: "swap_meter";
+		  type: IMAGE;
+		  clip_to: "fade_clip";
+		  description
+		    {
+		       state: "default" 0.0;
+		       rel1
+			 {
+			    relative: 0.0 0.75;
+			    offset: 0 0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 1.0;
+			    offset: -1 -1;
+			 }
+		       image
+			 {
+			    normal: "swap_00.png";
+			 }
+		       color: 255 255 255 192;
+		    }
+		  description
+		    {
+		       state: "default" 0.1;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "swap_01.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.2;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "swap_02.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.3;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "swap_03.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.4;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "swap_04.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.5;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "swap_05.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.6;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "swap_06.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.7;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "swap_07.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.8;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "swap_08.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.9;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "swap_09.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 1.0;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "swap_10.png";
+			 }
+		    }
+	       }
+	     part 
+	       {
+		  name: "swap_label";
+		  type: TEXT;
+		  effect: SOFT_SHADOW;
+		  description 
+		    {
+		       state: "default" 0.0;
+		       color: 255 255 255 0;
+		       color3: 0 0 0 0;
+		       visible: 0;
+		       rel1 
+			 {
+			    relative: 0.5 0.0;
+			    offset: 0 0;
+			    to: "swap_meter";
+			 }
+		       rel2 
+			 {
+			    relative: 0.5 1.0;
+			    offset: -1 -1;
+			    to: "swap_meter";
+			 }
+		       text 
+			 {
+			    text: "Swap:";
+			    font: "Sans:style=Mono";
+			    size: 9;
+			    min: 1 1;
+			    align: 0.5 1.0;
+			    text_class: "module_small";
+			 }
+		    }
+		  description 
+		    {
+		       state: "visible" 0.0;
+		       inherit: "default" 0.0;
+		       visible: 1;
+		       color: 255 255 255 255;
+		       color3: 0 0 0 42;
+		       color_class: "module_label";
+		    }
+	       }	     
+	  }
+	programs 
+	  {
+	     program 
+	       {
+		  name: "go_active";
+		  signal: "label_active";
+		  source: "";
+		  action: STATE_SET "visible" 0.0;
+		  transition: SINUSOIDAL 0.5;
+		  target: "real_label";
+		  target: "swap_label";
+	       }
+	     program 
+	       {
+		  name: "go_passive2";
+		  signal: "label_passive2";
+		  source: "";
+		  action: ACTION_STOP;
+		  target: "go_active";
+	       }
+	     program 
+	       {
+		  name: "go_passive";
+		  signal: "label_passive";
+		  source: "";
+		  action: STATE_SET "default" 0.0;
+		  transition: SINUSOIDAL 1.0;		  
+		  target: "real_label";
+		  target: "swap_label";
+	       }
+	  }
+     }
+}

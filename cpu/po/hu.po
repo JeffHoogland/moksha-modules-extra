@@ -1,0 +1,46 @@
+# translation of cpu.po to hungarian
+# Copyright (C) YEAR Enlightenment development team
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Lisovszki  <lisovszki@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: cpu\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-28 16:31+0800\n"
+"PO-Revision-Date: 2008-02-02 20:13+0100\n"
+"Last-Translator: Lisovszki  <lisovszki@gmail.com>\n"
+"Language-Team: hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../src/e_mod_main.c:132
+msgid "Cpu"
+msgstr "CPU"
+
+#: ../src/e_mod_main.c:366
+msgid "Fast (0.5 sec)"
+msgstr "Gyors (0.5 mp)"
+
+#: ../src/e_mod_main.c:373
+msgid "Medium (1 sec)"
+msgstr "Közepes (1 mp)"
+
+#: ../src/e_mod_main.c:380
+msgid "Normal (2 sec)"
+msgstr "Normál (2 mp)"
+
+#: ../src/e_mod_main.c:387
+msgid "Slow (5 sec)"
+msgstr "Lassú (5 mp)"
+
+#: ../src/e_mod_main.c:394
+msgid "Very Slow (30 sec)"
+msgstr "Nagyon lassú (30 mp)"
+
+#: ../src/e_mod_main.c:405
+msgid "Time Between Updates"
+msgstr "Frissítési időköz"

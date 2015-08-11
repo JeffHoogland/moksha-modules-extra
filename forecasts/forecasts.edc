@@ -1,0 +1,699 @@
+#define ORIENT_TARGETS \
+	       target: "day0"; \
+	       target: "day1"; \
+	       target: "icon"; \
+	       target: "e.text.location"; \
+               target: "e.text.temp"; \
+               target: "e.text.description"; \
+               target: "e.swallow.day0.icon"; \
+               target: "e.text.day0.date"; \
+               target: "e.text.day0.description"; \
+               target: "e.text.day0.low"; \
+               target: "e.text.day0.high"; \
+               target: "e.swallow.day1.icon"; \
+               target: "e.text.day1.date"; \
+               target: "e.text.day1.description"; \
+               target: "e.text.day1.low"; \
+               target: "e.text.day1.high"; \
+
+#define FORECASTS_ICON(icon_code, minw, minh, maxw, maxh, a) \
+images { \
+   image: icon_code".png" COMP; \
+} \
+group { \
+   name: "modules/forecasts/icons/"icon_code; \
+   min: minw minh; \
+   max: maxw maxh; \
+   parts { \
+      part { \
+         name: "icon"; \
+         description { \
+            state: "default" 0.0; \
+	    aspect: a a; \
+	    aspect_preference: BOTH; \
+            image { \
+               normal: icon_code".png"; \
+            } \
+            fill { \
+               smooth: 1; \
+            } \
+         } \
+      } \
+   } \
+}
+
+collections {
+   group {
+       name: "modules/forecasts/main";
+       script {
+           public is_float;
+       }
+       parts {
+	   part {
+	       name: "base";
+	       type: RECT;
+	       mouse_events: 1;
+	       description {
+		   state: "default" 0.0;
+		   color: 0 0 0 0;
+		   rel1 {
+		       offset: 0 0;
+		   }
+		   rel2 {
+		       offset: -1 -1;
+		   }
+	       }
+	   }
+	   part {
+	       name:         "icon";
+	       type:         SWALLOW;
+	       mouse_events: 0;
+	       description {
+		   state:    "default" 0.0;
+		   aspect_preference: BOTH;
+		   align:    0.0 0.0;
+		   rel1 {
+		       relative: 0.0 0.0;
+		       offset:   0   0;
+		   }
+		   rel2 {
+		       relative: 1.0 1.0;
+		       offset:   -1  -1;
+		   }
+		   //color: 0 0 0 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+		   inherit: "default" 0.0;
+                   aspect: 1.0 1.0;
+                   rel1 {
+                       relative: 0.0 0.0;
+                   }
+                   rel2 {
+                       relative: 0.6 1.0;
+                       offset: 2 2;
+                   }
+	       }
+	   }
+	   part {
+	       name:         "e.text.temp";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+		   rel1 {
+		       relative: 0.0 0.0;
+		       offset:   0   0;
+		       to: "icon";
+		   } 
+		   rel2 {
+		       relative: 1.0 1.0;
+		       offset:   -1  -1;
+		       to:       "icon";
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "";
+		       font:  "Sans:style=Bold";
+		       size:  10;
+		       min:   1 1;
+		       align: 0.0 0.1;
+		       text_class: "module_large";
+		   }
+	       }
+	       description {
+		   state: "float" 0.0;
+		   inherit: "default" 0.0;
+                   rel1 {
+                       relative: 0.0 1.0;
+                       offset: 2 -20;
+                   }
+                   rel2 {
+                       relative: 1.0 1.0;
+                       offset: -2 -2;
+                   }
+                   text.align: 0.5 1.0;
+	       }
+	   }
+	   part {
+	       name:         "e.text.description";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+		   rel1 {
+		       relative: 0.0 1.0;
+		       offset:   -1  -1;
+		       to_x:     "icon";
+		   }
+		   rel2 {
+		       relative: 1.0 1.0;
+		       offset:   -1  -10;
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "";
+		       font:  "Sans:style=Bold";
+		       size:  10;
+                       min:   1 1;
+		       align: 0.5 0.5;
+		       text_class: "module_normal";
+		   }
+	       }
+	       description {
+		   state: "hidden" 0.0;
+		   inherit: "default" 0.0;
+		   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+		   inherit: "default" 0.0;
+                   rel1 {
+                       relative: 0.0 0.0;
+                       offset: 1 -14;
+                       to: "e.text.temp";
+                   }
+                   rel2 {
+                       relative: 1.0 0.0;
+                       offset: -2 -2;
+                       to: "e.text.temp";
+                   }
+	       }
+	   }
+	   part {
+	       name:         "e.text.location";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+		       relative: 0.0 0.2;
+		       offset:   1  1;
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "Location";
+		       font:  "Sans:style=Bold";
+		       size:  10;
+		       min:   1 1;
+		       align: 0.0 0.0;
+		       text_class: "module_normal";
+		   }
+	       }
+	   }
+           part {
+               name: "day0";
+               type: RECT;
+               description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+                   color: 0 0 0 0;
+                   rel1 {
+                       relative: 0.6 0.0;
+                       offset: 1 1;
+                   }
+                   rel2 {
+                       relative: 1.0 0.5;
+                       offset: -5 -5;
+                   }
+               }
+           }
+	   part {
+	       name:         "e.swallow.day0.icon";
+	       type:         SWALLOW;
+	       mouse_events: 0;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+                       to: "day0";
+		   }
+		   rel2 {
+                       to: "day0";
+		   }
+	       }
+	   }
+	   part {
+	       name:         "e.text.day0.date";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+		       relative: 0.0 0.0;
+		       offset:   1  1;
+                       to: "day0";
+		   }
+		   rel2 {
+		       relative: 1.0 1.0;
+		       offset:   -1  -1;
+                       to: "day0";
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "Date0";
+		       font:  "Sans:style=Bold";
+		       size:  10;
+		       min:   1 1;
+		       align: 0.5 0.0;
+		       text_class: "module_normal";
+		   }
+	       }
+	   }
+	   part {
+	       name:         "e.text.day0.description";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+		       relative: 0.0 0.0;
+		       offset:   1  -14;
+                       to_x: "day0";
+                       to_y: "e.text.day0.low";
+		   }
+		   rel2 {
+		       relative: 1.0 0.0;
+		       offset:   -1  -1;
+                       to_x: "day0";
+                       to_y: "e.text.day0.low";
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "Description0";
+		       font:  "Sans:style=Bold";
+		       size:  10;
+		       min:   1 1;
+		       align: 0.5 0.0;
+		       text_class: "module_normal";
+		   }
+	       }
+	   }
+	   part {
+	       name:         "e.text.day0.low";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+		       relative: 0.0 1.0;
+		       offset:   1  -14;
+                       to: "day0";
+		   }
+		   rel2 {
+		       relative: 1.0 1.0;
+		       offset:   -1  -1;
+                       to: "day0";
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "Low0";
+		       font:  "Sans:style=Bold";
+		       size:  9;
+		       min:   1 1;
+		       align: 0.0 0.0;
+		       text_class: "module_normal";
+		   }
+	       }
+	   }
+	   part {
+	       name:         "e.text.day0.high";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+		       relative: 0.0 1.0;
+                       offset: 0 -14;
+                       to: "day0";
+		   }
+		   rel2 {
+		       relative: 1.0 1.0;
+                       to: "day0";
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "High0";
+		       font:  "Sans:style=Bold";
+		       size:  9;
+		       min:   1 1;
+		       align: 1.0 0.0;
+		       text_class: "module_normal";
+		   }
+	       }
+	   }
+
+           part {
+               name: "day1";
+               type: RECT;
+               description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+                   color: 0 0 0 0;
+                   rel1 {
+                       relative: 0.6 0.5;
+                       offset: 4 4;
+                   }
+                   rel2 {
+                       relative: 1.0 1.0;
+                       offset: -1 -1;
+                   }
+               }
+           }
+	   part {
+	       name:         "e.swallow.day1.icon";
+	       type:         SWALLOW;
+	       mouse_events: 0;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+                       to: "day1";
+		   }
+		   rel1 {
+                       to: "day1";
+		   }
+	       }
+	   }
+	   part {
+	       name:         "e.text.day1.date";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+		       relative: 0.0 0.0;
+		       offset:   1  1;
+                       to: "day1";
+		   }
+		   rel2 {
+		       relative: 1.0 1.0;
+		       offset:   -1  -1;
+                       to: "day1";
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "Date1";
+		       font:  "Sans:style=Bold";
+		       size:  10;
+		       min:   1 1;
+		       align: 0.5 0.0;
+		       text_class: "module_normal";
+		   }
+	       }
+	   }
+	   part {
+	       name:         "e.text.day1.description";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+		       relative: 0.0 0.0;
+		       offset:   1  -14;
+                       to_x: "day1";
+                       to_y: "e.text.day1.low";
+		   }
+		   rel2 {
+		       relative: 1.0 0.0;
+		       offset:   -1  -1;
+                       to_x: "day1";
+                       to_y: "e.text.day1.low";
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "Description1";
+		       font:  "Sans:style=Bold";
+		       size:  10;
+		       min:   1 1;
+		       align: 0.5 0.0;
+		       text_class: "module_normal";
+		   }
+	       }
+	   }
+	   part {
+	       name:         "e.text.day1.low";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+		       relative: 0.0 1.0;
+		       offset:   1  -14;
+                       to: "day1";
+		   }
+		   rel2 {
+		       relative: 1.0 1.0;
+		       offset:   -1  -1;
+                       to: "day1";
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "Low1";
+		       font:  "Sans:style=Bold";
+		       size:  9;
+		       min:   1 1;
+		       align: 0.0 0.0;
+		       text_class: "module_normal";
+		   }
+	       }
+	   }
+	   part {
+	       name:         "e.text.day1.high";
+	       type:         TEXT;
+	       effect:       OUTLINE_SOFT_SHADOW;
+	       mouse_events: 0;
+               scale:        1;
+	       description {
+		   state: "default" 0.0;
+                   visible: 0;
+	       }
+	       description {
+		   state: "float" 0.0;
+                   visible: 1;
+		   rel1 {
+		       relative: 0.0 1.0;
+                       offset: 0 -14;
+                       to: "day1";
+		   }
+		   rel2 {
+		       relative: 1.0 1.0;
+                       to: "day1";
+		   }
+		   color:  255 255 255 255;
+		   color2: 0 0 0 96;
+		   color3: 0 0 0 32;
+		   color_class: "module_label";
+		   text {
+		       text:  "High1";
+		       font:  "Sans:style=Bold";
+		       size:  9;
+		       min:   1 1;
+		       align: 1.0 0.0;
+		       text_class: "module_normal";
+		   }
+	       }
+	   }
+       }
+       programs {
+	   program {
+	       name: "text_hide";
+	       signal: "e,state,description,hide";
+	       source: "e";
+	       action: STATE_SET "hidden" 0.0;
+	       target: "e.text.description";
+	   }
+	   program {
+	       name: "text_show";
+	       signal: "e,state,description,show";
+	       source: "e";
+	       action: STATE_SET "default" 0.0;
+	       target: "e.text.description";
+	   }
+	   program {
+	       name: "float";
+	       signal: "e,state,orientation,float";
+	       source: "e";
+               script {
+                   set_int(is_float, 1);
+                   run_program(PROGRAM:"float_complete");
+               }
+	   }
+           program {
+               name: "float_complete";
+	       action: STATE_SET "float" 0.0;
+               ORIENT_TARGETS
+           }
+	   program {
+	       name: "shelf";
+	       signal: "e,state,orientation,default";
+	       source: "e";
+               script {
+                   set_int(is_float, 0);
+                   run_program(PROGRAM:"shelf_complete");
+               }
+	   }
+           program {
+               name: "shelf_complete";
+	       action: STATE_SET "default" 0.0;
+               ORIENT_TARGETS
+           }
+       }
+   }
+   FORECASTS_ICON(0, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(1, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(2, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(3, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(4, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(5, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(6, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(7, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(8, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(9, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(10, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(11, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(12, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(13, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(14, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(15, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(16, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(17, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(18, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(19, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(20, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(21, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(22, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(23, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(24, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(25, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(26, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(27, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(28, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(29, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(30, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(31, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(32, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(33, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(34, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(35, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(36, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(37, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(38, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(39, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(40, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(41, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(42, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(43, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(44, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(45, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(46, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(47, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(3200, 10, 10, 110, 110, 1.0)
+}
+

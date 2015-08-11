@@ -1,0 +1,86 @@
+# Portuguese translation for flame
+# This file is distributed under the same license as the enlightenment package.
+# Adaptado ao acordo ortográfico de 1990
+# Sérgio Marques <smarquespt@gmail.com>, 2010.
+# Sérgio Marques <sarquespt@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: flame\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2010-10-17 11:00-0700\n"
+"PO-Revision-Date: 2010-12-05 10:50+0000\n"
+"Last-Translator: Sérgio Marques <sarquespt@gmail.com>\n"
+"Language-Team: Portuguese <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: Portugal\n"
+"X-Generator: Lokalize 1.1\n"
+
+#: ../src/e_mod_main.c:61
+msgid "Look"
+msgstr "Aspeto"
+
+#: ../src/e_mod_main.c:63
+msgid "Flame"
+msgstr "Chama"
+
+#: ../src/e_mod_config.c:47
+msgid "Flame Configuration"
+msgstr "Configuração"
+
+#: ../src/e_mod_config.c:94
+#: ../src/e_mod_config.c:177
+msgid "Flame Color"
+msgstr "Cor da chama"
+
+#: ../src/e_mod_config.c:96
+msgid "Gold"
+msgstr "Dourada"
+
+#: ../src/e_mod_config.c:98
+msgid "Fire"
+msgstr "Fogo"
+
+#: ../src/e_mod_config.c:100
+msgid "Plasma"
+msgstr "Plasma"
+
+#: ../src/e_mod_config.c:102
+msgid "Matrix"
+msgstr "Matrix"
+
+#: ../src/e_mod_config.c:104
+msgid "Ice"
+msgstr "Gelo"
+
+#: ../src/e_mod_config.c:106
+msgid "White"
+msgstr "Branco"
+
+#: ../src/e_mod_config.c:108
+msgid "Custom"
+msgstr "Personalizada"
+
+#: ../src/e_mod_config.c:179
+msgid "Red Amount"
+msgstr "Intensidade de vermelhos"
+
+#: ../src/e_mod_config.c:182
+#: ../src/e_mod_config.c:189
+#: ../src/e_mod_config.c:196
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/e_mod_config.c:186
+msgid "Blue Amount"
+msgstr "Intensidade de azuis"
+
+#: ../src/e_mod_config.c:193
+msgid "Green Amount"
+msgstr "Intensidade de verdes"
+
+

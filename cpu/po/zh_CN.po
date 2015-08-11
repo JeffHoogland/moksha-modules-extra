@@ -1,0 +1,46 @@
+# Simplified Chinese translations for Cpu module in e17
+# Copyright 2008 GNU project.
+#
+# Aron Xu <aronmalache@163.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cpu module (e17)\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-09-11 05:58+0000\n"
+"Last-Translator: fujianwzh <Unknown>\n"
+"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:52+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_main.c:132
+msgid "Cpu"
+msgstr "Cpu"
+
+#: ../src/e_mod_main.c:366
+msgid "Fast (0.5 sec)"
+msgstr "快(0.5 秒)"
+
+#: ../src/e_mod_main.c:373
+msgid "Medium (1 sec)"
+msgstr "中(1 秒)"
+
+#: ../src/e_mod_main.c:380
+msgid "Normal (2 sec)"
+msgstr "标准 (2 秒)"
+
+#: ../src/e_mod_main.c:387
+msgid "Slow (5 sec)"
+msgstr "慢(5 秒)"
+
+#: ../src/e_mod_main.c:394
+msgid "Very Slow (30 sec)"
+msgstr "很慢(30 秒)"
+
+#: ../src/e_mod_main.c:405
+msgid "Time Between Updates"
+msgstr "更新间隔"

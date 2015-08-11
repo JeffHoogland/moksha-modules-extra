@@ -1,0 +1,23 @@
+[Desktop Entry]
+Type=Link
+Name=Cpu
+Name[ru]=Процессор
+Name[de]=Prozessor
+Name[eo]=Ĉeforgano
+Name[hu]=Processzor
+Name[zh_CN]=CPU 工具
+Name[el]=Επεξεργαστής
+Name[pt]=Processador
+Icon=e-module-cpu
+X-Enlightenment-ModuleType=system
+Comment=Used to monitor CPU utilization.
+Comment[ru]=Показывает текущую нагрузку на ЦПУ.
+Comment[cs]=Použitý k měření vytížení CPU.
+Comment[de]=Prozessorauslastung visualisieren
+Comment[eo]=Elrigardi la uzadon de la ĉeforgano.
+Comment[hu]=A processzor monitorozására (felügyeletére) használható modul.
+Comment[it]=Usato per monitorare l'utilizzo della CPU.
+Comment[zh_CN]=用以监视 CPU 使用情况。
+Comment[fr]=Affiche l'utilisation du CPU.
+Comment[el]=Για την παρατήρηση της δραστηριότητας του επεξεργαστή.
+Comment[pt]=Módulo para monitorizar o processador

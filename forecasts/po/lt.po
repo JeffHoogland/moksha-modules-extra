@@ -1,0 +1,124 @@
+# Lithuanian translation for enlightenment
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"PO-Revision-Date: 2010-01-28 20:40+0000\n"
+"Last-Translator: Joshas <Unknown>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-29 04:53+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Configuration"
+msgstr "Orų prognozės konfigūracija"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "Rodymo nuostatos"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "Apklausos laikas"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minutės"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "Rodyti aprašymą"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "Iškilti užvedus žymeklį"
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "Matų snuostatos"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "Metrinė"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "Angliška"
+
+#: ../src/e_mod_config.c:111
+msgid "Yahoo Forecasts Code"
+msgstr "Yahoo orų prognozių kodas"
+
+#: ../src/e_mod_config.c:112
+msgid "Yahoo Forecasts Code/US Zip Code"
+msgstr "Yahoo orų prognozių kodas/JAV pašto kodas"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "Norėdami rasti savo vietovės kodą, apsilankykite:"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s, suraskite savo vietovę ir pažiūrėkite į interneto adresą"
+
+#: ../src/e_mod_main.c:255
+msgid "Forecasts"
+msgstr "Orų prognozės"
+
+#: ../src/e_mod_main.c:300
+msgid "Configuration"
+msgstr "Konfigūracija"
+
+#: ../src/e_mod_main.c:1030
+msgid "Wind Chill"
+msgstr "Vėjo žvarbumas"
+
+#: ../src/e_mod_main.c:1036
+msgid "Wind Speed"
+msgstr "Vėjo greitis"
+
+#: ../src/e_mod_main.c:1042
+msgid "Humidity"
+msgstr "Drėgnumas"
+
+#: ../src/e_mod_main.c:1048
+msgid "Visibility"
+msgstr "Matomumas"
+
+#: ../src/e_mod_main.c:1054
+msgid "Pressure"
+msgstr "Slėgis"
+
+#: ../src/e_mod_main.c:1061
+msgid "Rising"
+msgstr "Kyla"
+
+#: ../src/e_mod_main.c:1063
+msgid "Falling"
+msgstr "Krinta"
+
+#: ../src/e_mod_main.c:1065
+msgid "Steady"
+msgstr "Pastovus"
+
+#: ../src/e_mod_main.c:1069
+msgid "Sunrise / Sunset"
+msgstr "Saulėtekis / Saulėlydis"
+
+#: ../src/e_mod_main.c:1093
+msgid "High"
+msgstr "Aukštas"
+
+#: ../src/e_mod_main.c:1104
+msgid "Low"
+msgstr "Žemas"

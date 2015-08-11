@@ -1,0 +1,51 @@
+# Portuguese translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Diogo Lavareda <diogolavareda9@hotmail.com>, 2009.
+# Sérgio Marques <smarquespt@gmail.com>, 2010
+# Adaptado ao acordo ortográfico de 1990
+msgid ""
+msgstr ""
+"Project-Id-Version: cpu\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-11-22 07:39+0100\n"
+"PO-Revision-Date: 2012-08-23 17:05+0100\n"
+"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"Language-Team: Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: Portugal\n"
+
+#: src/e_mod_main.c:132
+msgid "Cpu"
+msgstr "Processador"
+
+#: src/e_mod_main.c:377
+msgid "Fast (0.5 sec)"
+msgstr "Rápido (0,5 seg.)"
+
+#: src/e_mod_main.c:384
+msgid "Medium (1 sec)"
+msgstr "Médio (1 seg.)"
+
+#: src/e_mod_main.c:391
+msgid "Normal (2 sec)"
+msgstr "Normal (2 seg.)"
+
+#: src/e_mod_main.c:398
+msgid "Slow (5 sec)"
+msgstr "Lento (5 seg.)"
+
+#: src/e_mod_main.c:405
+msgid "Very Slow (30 sec)"
+msgstr "Muito lento (30 seg.)"
+
+#: src/e_mod_main.c:412
+msgid "Time Between Updates"
+msgstr "Tempo entre atualizações"
+
+#: src/e_mod_main.c:418
+msgid "Merge CPU's into single Statistic"
+msgstr "Unir CPUs numa só estatística"
+

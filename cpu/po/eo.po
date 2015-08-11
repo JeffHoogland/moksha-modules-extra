@@ -1,0 +1,47 @@
+# translation of eo.po to
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Olivier M. <olivierweb@ifrance.com>, 2008.
+# Olivier <eliovir@nospam.gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: eo\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-05-16 12:30+0000\n"
+"Last-Translator: Olivier <eliovir@nospam.gmail.com>\n"
+"Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/e_mod_main.c:132
+msgid "Cpu"
+msgstr "Ĉeforgano"
+
+#: ../src/e_mod_main.c:366
+msgid "Fast (0.5 sec)"
+msgstr "Rapida (0.5 sek)"
+
+#: ../src/e_mod_main.c:373
+msgid "Medium (1 sec)"
+msgstr "Meza (1 sek)"
+
+#: ../src/e_mod_main.c:380
+msgid "Normal (2 sec)"
+msgstr "Normala (2 sek)"
+
+#: ../src/e_mod_main.c:387
+msgid "Slow (5 sec)"
+msgstr "Malrapida (5 sek)"
+
+#: ../src/e_mod_main.c:394
+msgid "Very Slow (30 sec)"
+msgstr "Malrapidega (30 sek)"
+
+#: ../src/e_mod_main.c:405
+msgid "Time Between Updates"
+msgstr "Tempo inter ĝisdatigoj"

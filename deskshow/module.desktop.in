@@ -1,0 +1,24 @@
+[Desktop Entry]
+Type=Link
+Name=Deskshow
+Name[ru]=Показать рабочий стол
+Name[cs]=Zobrazit plochu
+Name[de]=Arbeitsflächenzeiger
+Name[el]=Εμφάνιση Επιφάνειας
+Name[eo]=LabortabloVidigilo
+Name[fr]=Bureau
+Name[hu]=Munkaasztal megjelenítése
+Name[pt]=Mostrar área de trabalho
+Icon=e-module-deskshow
+X-Enlightenment-ModuleType=utils
+Comment=Gadget to allow you to quickly uncover your desktop.
+Comment[ru]=Позволяет быстро добраться до рабочего стола методом сворачивания всех окон.
+Comment[cs]=Umožňuje rychle odkrýt plochu.
+Comment[de]=Helfer zum schnellen Freilegen der Arbeitsfläche.
+Comment[el]=Ένα συστατικό για την γρήγορη αποκάλυψη της επιφάνειας εργασίας.
+Comment[eo]=Rapide malkovri sian labortablon.
+Comment[fr]=Un gadget permettant de découvrir rapidement votre bureau.
+Comment[hu]=A modul segítségével egy kattintásra az összes megnyitott ablak minimalizálódik.
+Comment[it]=Modulo che consente di scoprire rapidamente il desktop.
+Comment[zh_CN]=允许快速显示桌面的小程序。
+Comment[pt]=Módulo para mostrar a área de trabalho

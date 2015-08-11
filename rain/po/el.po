@@ -1,0 +1,53 @@
+# translation of el.po to Greek
+# French translation for Rain module for Enlightenment DR0.17
+# This file is put in the public domain.
+# Chidambar 'ilLogict' Zinnoury <illogict@online.fr>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: el\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-11-11 09:53+0200\n"
+"Last-Translator: \n"
+"Language-Team: Greek <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Rain Module"
+msgstr "Άρθρωμα Βροχής"
+
+#: ../src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "Γενικές Ρυθμίσεις"
+
+#: ../src/e_mod_config.c:101
+msgid "Show Clouds"
+msgstr "Εμφάνισε Σύννεφα"
+
+#: ../src/e_mod_config.c:105
+msgid "Rain Density"
+msgstr "Πυκνότητα Βροχής"
+
+#: ../src/e_mod_config.c:107
+msgid "Sprinkle"
+msgstr ""
+
+#: ../src/e_mod_config.c:109
+msgid "Drizzle"
+msgstr ""
+
+#: ../src/e_mod_config.c:111
+msgid "Downpour"
+msgstr ""
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#: ../src/e_mod_main.c:35
+msgid "Rain"
+msgstr "Βροχή"

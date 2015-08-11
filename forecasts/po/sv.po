@@ -1,0 +1,156 @@
+# Swedish translation of forecasts module for E17.
+# This file is put in the public domain.
+# Anders Trobäck <enlightenment@troback.com>, 2006.
+# Daniel Nylander <yeager@ubuntu.com>, 2009.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: forecasts E17\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-01-10 12:15+0000\n"
+"Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
+"Language-Team: Swedish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Configuration"
+msgstr "Prognoskonfiguration"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "Visningsinställningar"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "Uppdateringsintervall"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minuter"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "Visa beskrivning"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "Popup vid muspekare"
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "Enhetsinställningar"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "Metriskt"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "Engelska"
+
+#: ../src/e_mod_config.c:111
+msgid "Yahoo Forecasts Code"
+msgstr "Kod för Yahoo Forecast"
+
+#: ../src/e_mod_config.c:112
+msgid "Yahoo Forecasts Code/US Zip Code"
+msgstr "Kod för Yahoo Forecast/Amerikanskt postnummer"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "Gå till följande sida för att hitta koden för ditt område:"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s. Hitta ditt område och besök URL:en"
+
+#: ../src/e_mod_main.c:255
+msgid "Forecasts"
+msgstr "Prognoser"
+
+#: ../src/e_mod_main.c:300
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#: ../src/e_mod_main.c:1030
+msgid "Wind Chill"
+msgstr "Vindavkylning"
+
+#: ../src/e_mod_main.c:1036
+msgid "Wind Speed"
+msgstr "Vindhastighet"
+
+#: ../src/e_mod_main.c:1042
+msgid "Humidity"
+msgstr "Luftfuktighet"
+
+#: ../src/e_mod_main.c:1048
+msgid "Visibility"
+msgstr "Sikt"
+
+#: ../src/e_mod_main.c:1054
+msgid "Pressure"
+msgstr "Lufttryck"
+
+#: ../src/e_mod_main.c:1061
+msgid "Rising"
+msgstr "Soluppgång"
+
+#: ../src/e_mod_main.c:1063
+msgid "Falling"
+msgstr "Solnedgång"
+
+#: ../src/e_mod_main.c:1065
+msgid "Steady"
+msgstr "Ihållande"
+
+#: ../src/e_mod_main.c:1069
+msgid "Sunrise / Sunset"
+msgstr "Soluppgång / Solnedgång"
+
+#: ../src/e_mod_main.c:1093
+msgid "High"
+msgstr "Hög"
+
+#: ../src/e_mod_main.c:1104
+msgid "Low"
+msgstr "Låg"
+
+#~ msgid "Simple"
+#~ msgstr "Enkel"
+
+#~ msgid "Detailed"
+#~ msgstr "Detaljerad"
+
+#~ msgid "Degree Settings"
+#~ msgstr "Grader"
+
+#~ msgid "Celsius"
+#~ msgstr "Celsius"
+
+#~ msgid "Farenheit"
+#~ msgstr "Farenheit"
+
+#~ msgid "ICAO Code"
+#~ msgstr "ICAO kod"
+
+#~ msgid "Get your ICAO code at:"
+#~ msgstr "Hitta din ICAO kod på:"
+
+#~ msgid "Enlightenment Weather Module"
+#~ msgstr "Enlightenment väder modul"
+
+#~ msgid "A weather forecast module for Enlightenment"
+#~ msgstr "En väderleksmodul för Enlightenment"
+
+#~ msgid "http://www.weather.gov/tg/siteloc.shtml"
+#~ msgstr "http://www.weather.gov/tg/siteloc.shtml"
+
+#~ msgid "Weather"
+#~ msgstr "Väder"

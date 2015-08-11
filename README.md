@@ -5,3 +5,10 @@ Module List:
 
 - Engage
 - Places
+- Screenshot
+- Cpu
+- Memory
+- Forecasts
+- Penguins
+- Flame
+- Rain
