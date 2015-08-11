@@ -3,12 +3,13 @@ Optional additional modules for the [Moksha desktop](https://github.com/JeffHoog
 
 Module List:
 
-- Engage
-- Places
-- Screenshot
 - Cpu
-- Memory
-- Forecasts
-- Penguins
+- Deskshow
+- Engage
 - Flame
+- Forecasts
+- Mem
+- Penguins
+- Places
 - Rain
+- Screenshot
