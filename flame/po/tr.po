@@ -1,0 +1,80 @@
+# Turkish translation for enlightenment
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-11-15 10:21+0000\n"
+"Last-Translator: Mustafa Yılmaz <apshalasha@gmail.com>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-16 04:45+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_main.c:61
+msgid "Appearance"
+msgstr "Görünüm"
+
+#: ../src/e_mod_main.c:63
+msgid "Flame"
+msgstr "Alev"
+
+#: ../src/e_mod_config.c:47
+msgid "Flame Configuration"
+msgstr "Alev Yapılandırması"
+
+#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:177
+msgid "Flame Color"
+msgstr "Alev Rengi"
+
+#: ../src/e_mod_config.c:96
+msgid "Gold"
+msgstr "Altın"
+
+#: ../src/e_mod_config.c:98
+msgid "Fire"
+msgstr "Ateş"
+
+#: ../src/e_mod_config.c:100
+msgid "Plasma"
+msgstr "Plazma"
+
+#: ../src/e_mod_config.c:102
+msgid "Matrix"
+msgstr "Matrix"
+
+#: ../src/e_mod_config.c:104
+msgid "Ice"
+msgstr "Buz"
+
+#: ../src/e_mod_config.c:106
+msgid "White"
+msgstr "Beyaz"
+
+#: ../src/e_mod_config.c:108
+msgid "Custom"
+msgstr "Özel"
+
+#: ../src/e_mod_config.c:179
+msgid "Red Amount"
+msgstr "Kırmızı Miktarı"
+
+#: ../src/e_mod_config.c:182 ../src/e_mod_config.c:189
+#: ../src/e_mod_config.c:196
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/e_mod_config.c:186
+msgid "Blue Amount"
+msgstr "Mavi Miktarı"
+
+#: ../src/e_mod_config.c:193
+msgid "Green Amount"
+msgstr "Yeşil Miktarı"

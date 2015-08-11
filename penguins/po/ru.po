@@ -1,0 +1,54 @@
+# Russian translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-06-01 07:51+0000\n"
+"Last-Translator: Lucky <lucky1.data@gmail.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Population Settings"
+msgstr "Настройки популяции"
+
+#: ../src/e_mod_config.c:92
+msgid "Number of penguins:"
+msgstr "Число пингвинов:"
+
+#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:104
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/e_mod_config.c:97
+msgid "Zoom factor:"
+msgstr "Фактор зума:"
+
+#: ../src/e_mod_config.c:99
+#, c-format
+msgid "%1.1f X"
+msgstr "%1.1f X"
+
+#: ../src/e_mod_config.c:102
+msgid "Transparency:"
+msgstr "Прозрачность:"
+
+#. Lista
+#: ../src/e_mod_config.c:108
+msgid "Select population:"
+msgstr "Выбор популяции:"
+
+#: ../src/e_mod_main.c:62
+msgid "Appearance"
+msgstr "Внешний вид"
+
+#: ../src/e_mod_main.c:63
+msgid "Penguins"
+msgstr "Пингвины"

@@ -1,0 +1,152 @@
+# Ukrainian translation for enlightenment
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-12-03 16:30+0800\n"
+"PO-Revision-Date: 2011-09-04 16:26+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@gmail.com>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-18 04:44+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:48
+msgid "Screenshot Settings"
+msgstr "Screenshot-instellingen"
+
+#: ../src/e_mod_config.c:99
+#: ../src/e_mod_config.c:180
+msgid "General Settings"
+msgstr "Algemene instellingen"
+
+#: ../src/e_mod_config.c:100
+#: ../src/e_mod_config.c:181
+msgid "Beep when taking screenshot"
+msgstr "Pieptoon bij het maken van een screenshot"
+
+#: ../src/e_mod_config.c:103
+#: ../src/e_mod_config.c:184
+msgid "Delay Time:"
+msgstr "Vertragingstijd:"
+
+#: ../src/e_mod_config.c:110
+#: ../src/e_mod_config.c:197
+#: ../src/e_mod_main.c:389
+msgid "Capture Mode"
+msgstr "Opnamemodus"
+
+#: ../src/e_mod_config.c:112
+#: ../src/e_mod_config.c:199
+#: ../src/e_mod_main.c:364
+msgid "Whole Screen"
+msgstr "Volledige scherm"
+
+#: ../src/e_mod_config.c:114
+#: ../src/e_mod_config.c:201
+#: ../src/e_mod_main.c:371
+msgid "Select Window"
+msgstr "Selecteer scherm"
+
+#: ../src/e_mod_config.c:116
+#: ../src/e_mod_config.c:203
+#: ../src/e_mod_main.c:378
+msgid "Select Region"
+msgstr "Selecteer gebied"
+
+#: ../src/e_mod_config.c:120
+#: ../src/e_mod_config.c:207
+msgid "File Settings"
+msgstr "Bestandsinstellingen"
+
+#: ../src/e_mod_config.c:121
+#: ../src/e_mod_config.c:208
+msgid "Always prompt for filename"
+msgstr "Vraag altijd om bestandsnaam"
+
+#: ../src/e_mod_config.c:124
+#: ../src/e_mod_config.c:211
+msgid "Save Directory:"
+msgstr "Map om in op te slaan:"
+
+#: ../src/e_mod_config.c:128
+#: ../src/e_mod_config.c:215
+msgid "Filename:"
+msgstr "Bestandsnaam:"
+
+#: ../src/e_mod_config.c:134
+#: ../src/e_mod_config.c:221
+msgid "Application Settings"
+msgstr "Programma-instellingen"
+
+#: ../src/e_mod_config.c:135
+#: ../src/e_mod_config.c:222
+msgid "Launch application after taking screenshot"
+msgstr "Open programma na maken van het screenshot"
+
+#: ../src/e_mod_config.c:140
+#: ../src/e_mod_config.c:238
+msgid "Thumbnail Settings"
+msgstr "Miniatuur-instellingen"
+
+#: ../src/e_mod_config.c:141
+#: ../src/e_mod_config.c:239
+msgid "Generate thumbnail from screenshot"
+msgstr "Genereer miniatuur uit screenshot"
+
+#: ../src/e_mod_config.c:190
+msgid "Image Quality:"
+msgstr "Afbeeldingskwaliteit:"
+
+#: ../src/e_mod_config.c:226
+msgid "Application:"
+msgstr "Programma:"
+
+#: ../src/e_mod_config.c:242
+msgid "Size:"
+msgstr "Grootte:"
+
+#: ../src/e_mod_config.c:247
+msgid "(Percentage of original image to use for thumbnail)"
+msgstr "(Percentage van originele afbeelding om te gebruiken voor miniatuur)"
+
+#: ../src/e_mod_main.c:91
+#: ../src/e_mod_main.c:266
+msgid "Screenshot"
+msgstr "Screenshot"
+
+#: ../src/e_mod_main.c:121
+msgid "Screenshot Module Configuration data needed upgrading. Your old configuration<br> has been wiped and a new set of defaults initialized. This<br>will happen regularly during development, so don't report a<br>bug. This simply means Screenshot module needs new configuration<br>data by default for usable functionality that your old<br>configuration simply lacks. This new set of defaults will fix<br>that by adding it in. You can re-configure things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr "Screenshot-module-configuratie had een upgrade nodig. Uw oude instellingen zijn<br>gewist en een nieuwe set van standaarden is geïnitialiseerd. Dit<br>zal regelmatig gebeuren tijdens de ontwikkeling, dus rapporteer geen<br>bug. Dit betekent simpelweg dat Screenshot-module nieuwe instellingen-data<br>als standaard nodig heeft voor bruikbare functionaliteit die uw oude<br>simpelweg niet heeft. Deze nieuwe set van standaarden zal dit oplossen<br>door het toe te voegen. U kunt uw dingen nu her-instellen naar uw<br>wensen. Excuses voor het ongemak.<br>"
+
+#: ../src/e_mod_main.c:139
+msgid "Your Screenshot Module configuration is NEWER than the Screenshot Module version. This is very<br>strange. This should not happen unless you downgraded<br>the Screenshot Module or copied the configuration from a place where<br>a newer version of the Screenshot Module was running. This is bad and<br>as a precaution your configuration has been now restored to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr "Uw instellingen zijn NIEUWER dan de Screenshot-module-versie Dit is heel erg<br>vreemd. Dit zou niet moeten gebeuren tenzij u de Screenshot-module<br>hebt gedowngrade of uw instellingen gekopieerd heeft van een plaats waar<br>een nieuwere versie van Ede Screenshot-module aan het draaien was. Dit is slecht en<br>uit voorzorg zijn uw instellingen nu teruggezet naar de<br>standaarden. Excuses voor het ongemak.<br>"
+
+#: ../src/e_mod_main.c:161
+#: ../src/e_mod_main.c:176
+msgid "Take Screenshot"
+msgstr "Maak screenshot"
+
+#: ../src/e_mod_main.c:304
+msgid "Screenshot Configuration Updated"
+msgstr "Screenshot-instellingen geüpdate"
+
+#: ../src/e_mod_main.c:393
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../src/e_mod_main.c:467
+msgid "Screenshot Module"
+msgstr "Screenshot-module"
+
+#: ../src/e_mod_main.c:468
+msgid "Enter a new filename for this screenshot"
+msgstr "Voer een nieuwe bestandsnaam in voor dit screenshot"
+

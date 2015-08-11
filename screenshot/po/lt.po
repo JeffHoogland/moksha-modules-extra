@@ -1,0 +1,157 @@
+# Lithuanian translation for enlightenment
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-12-03 16:30+0800\n"
+"PO-Revision-Date: 2010-01-17 18:27+0000\n"
+"Last-Translator: Joshas <Unknown>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-18 04:44+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:48
+msgid "Screenshot Settings"
+msgstr "Ekrano nuotraukos nuostatos"
+
+#: ../src/e_mod_config.c:99 ../src/e_mod_config.c:180
+msgid "General Settings"
+msgstr "Bendros nuostatos"
+
+#: ../src/e_mod_config.c:100 ../src/e_mod_config.c:181
+msgid "Beep when taking screenshot"
+msgstr "Pyptelėti darant ekrano nuotrauką"
+
+#: ../src/e_mod_config.c:103 ../src/e_mod_config.c:184
+msgid "Delay Time:"
+msgstr "Uždelsimas:"
+
+#: ../src/e_mod_config.c:110 ../src/e_mod_config.c:197 ../src/e_mod_main.c:389
+msgid "Capture Mode"
+msgstr "Pagavos sritis"
+
+#: ../src/e_mod_config.c:112 ../src/e_mod_config.c:199 ../src/e_mod_main.c:364
+msgid "Whole Screen"
+msgstr "Visas ekranas"
+
+#: ../src/e_mod_config.c:114 ../src/e_mod_config.c:201 ../src/e_mod_main.c:371
+msgid "Select Window"
+msgstr "Pasirinktas langas"
+
+#: ../src/e_mod_config.c:116 ../src/e_mod_config.c:203 ../src/e_mod_main.c:378
+msgid "Select Region"
+msgstr "Pasirinkta sritis"
+
+#: ../src/e_mod_config.c:120 ../src/e_mod_config.c:207
+msgid "File Settings"
+msgstr "Failo nuostatos"
+
+#: ../src/e_mod_config.c:121 ../src/e_mod_config.c:208
+msgid "Always prompt for filename"
+msgstr "Visada prašyti įvesti failo vardą"
+
+#: ../src/e_mod_config.c:124 ../src/e_mod_config.c:211
+msgid "Save Directory:"
+msgstr "Išsaugojimo katalogas"
+
+#: ../src/e_mod_config.c:128 ../src/e_mod_config.c:215
+msgid "Filename:"
+msgstr "Failo vardas:"
+
+#: ../src/e_mod_config.c:134 ../src/e_mod_config.c:221
+msgid "Application Settings"
+msgstr "Programos nuostatos"
+
+#: ../src/e_mod_config.c:135 ../src/e_mod_config.c:222
+msgid "Launch application after taking screenshot"
+msgstr "Padarius ekrano nuotrauką paleisti programą"
+
+#: ../src/e_mod_config.c:140 ../src/e_mod_config.c:238
+msgid "Thumbnail Settings"
+msgstr "Miniatiūros nuostatos"
+
+#: ../src/e_mod_config.c:141 ../src/e_mod_config.c:239
+msgid "Generate thumbnail from screenshot"
+msgstr "Sukurti nuotraukos miniatiūrą"
+
+#: ../src/e_mod_config.c:190
+msgid "Image Quality:"
+msgstr "Paveikslo kokybė:"
+
+#: ../src/e_mod_config.c:226
+msgid "Application:"
+msgstr "Programa:"
+
+#: ../src/e_mod_config.c:242
+msgid "Size:"
+msgstr "Dydis:"
+
+#: ../src/e_mod_config.c:247
+msgid "(Percentage of original image to use for thumbnail)"
+msgstr "(Kokią nuotraukos procentinę dalį naudoti miniatiūros sukūrimui)"
+
+#: ../src/e_mod_main.c:91 ../src/e_mod_main.c:266
+msgid "Screenshot"
+msgstr "Ekrano nuotrauka"
+
+#: ../src/e_mod_main.c:121
+msgid ""
+"Screenshot Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means Screenshot module needs new configuration<br>data by "
+"default for usable functionality that your old<br>configuration simply "
+"lacks. This new set of defaults will fix<br>that by adding it in. You can re-"
+"configure things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+"Ekrano nuotraukos modulio konfigūracijos duomenys turi būti atnaujinti. Jūsų "
+"sena konfigūracija<br>buvo ištrinta ir įrašyti nauji numatytieji "
+"nustatymai.<br>Tobulinimo metu tai nutiks dažnai, todėl nesiųskite pranešimo "
+"apie klaidą.<br>Tai reiškia, kad modulio veikimui reikia naujų "
+"konfigūracijos duomenų, kurių nėra Jūsų senojoje konfigūracijoje.<br>Tai bus "
+"sutaisyta pridedant naujas numatytąsias konfigūracijos reikšmes.<br>Jūs "
+"galėsite pasikeisti nustatymus pagal savo poreikius.<br>Atsiprašome už "
+"sukeltus nepatogumus.<br>"
+
+#: ../src/e_mod_main.c:139
+msgid ""
+"Your Screenshot Module configuration is NEWER than the Screenshot Module "
+"version. This is very<br>strange. This should not happen unless you "
+"downgraded<br>the Screenshot Module or copied the configuration from a place "
+"where<br>a newer version of the Screenshot Module was running. This is bad "
+"and<br>as a precaution your configuration has been now restored "
+"to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+"Jūsų ekrano nuotraukos modulio konfigūracija yra NAUJESNĖ nei modulio "
+"versija. Tai labai keista.<br>To neturėtų nutikti, nebent įrašėte senesnę "
+"modulio versiją,<br>arba nukopijavote konfigūraciją iš sistemos su naujesne "
+"modulio versija.<br>Tai yra blogai, todėl saugumo sumetimais Jūsų "
+"konfigūracijos reikšmės buvo atstatytos į numatytąsias.<br>Atsiprašome už "
+"sukeltus nepatogumus.<br>"
+
+#: ../src/e_mod_main.c:161 ../src/e_mod_main.c:176
+msgid "Take Screenshot"
+msgstr "Nufotografuoti ekraną"
+
+#: ../src/e_mod_main.c:304
+msgid "Screenshot Configuration Updated"
+msgstr "Ekrano nuotraukos konfigūracija atnaujinta"
+
+#: ../src/e_mod_main.c:393
+msgid "Settings"
+msgstr "Nuostatos"
+
+#: ../src/e_mod_main.c:467
+msgid "Screenshot Module"
+msgstr "Ekrano nuotraukos modulis"
+
+#: ../src/e_mod_main.c:468
+msgid "Enter a new filename for this screenshot"
+msgstr "Įveskite šios nuotraukos failo pavadinimą"

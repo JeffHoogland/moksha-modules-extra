@@ -1,0 +1,23 @@
+[Desktop Entry]
+Type=Link
+Name=Rain
+Name[ru]=Дождь
+Name[cs]=Déšť
+Name[de]=Regen
+Name[eo]=Pluvo
+Name[hu]=Nyári Zápor
+Name[fr]=Pluie
+Name[el]=Βροχή
+Name[pt]=Chuva
+Icon=e-module-rain
+X-Enlightenment-ModuleType=look
+Comment=Module to display rain on the desktop.
+Comment[ru]=Модуль для показа дождя на рабочем столе.
+Comment[cs]=Zobrazí déšť na ploše.
+Comment[de]=Regen auf dem Desktop.
+Comment[eo]=Vidigi pluvon sur la labortablo.
+Comment[hu]=Nyári záporral áztathatjuk a munkaasztalunkat.
+Comment[it]=Modulo per visualizzare la pioggia sul desktop.
+Comment[fr]=Un module montrant de la pluie sur le bureau.
+Comment[el]=Άρθρωμα που εμφανίζει βροχή στην επιφάνεια εργασίας.
+Comment[pt]=Módulo que exibe chuva na área de trabalho

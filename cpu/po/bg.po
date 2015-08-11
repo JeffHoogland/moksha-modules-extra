@@ -1,0 +1,66 @@
+# Bulgarian translations for cpu package.
+# This file is put in the public domain.
+#  <luchezar.petkov@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cpu 0.0.1\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-09-11 09:10+0000\n"
+"Last-Translator: vlood <vlood.vassilev@gmail.com>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-10 07:13+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_main.c:132
+msgid "Cpu"
+msgstr "Cpu"
+
+#: ../src/e_mod_main.c:366
+msgid "Fast (0.5 sec)"
+msgstr "Бързо (0.5 сек)"
+
+#: ../src/e_mod_main.c:373
+msgid "Medium (1 sec)"
+msgstr "Средно (1 сек)"
+
+#: ../src/e_mod_main.c:380
+msgid "Normal (2 sec)"
+msgstr "Нормално (2 сек)"
+
+#: ../src/e_mod_main.c:387
+msgid "Slow (5 sec)"
+msgstr "Бавно (5 сек)"
+
+#: ../src/e_mod_main.c:394
+msgid "Very Slow (30 sec)"
+msgstr "Много бавно (30 сек)"
+
+#: ../src/e_mod_main.c:405
+msgid "Time Between Updates"
+msgstr "Време между обновяванията"
+
+#~ msgid "Cpu Configuration"
+#~ msgstr "Конфигурация на модул Cpu"
+
+#~ msgid "Cpu Settings"
+#~ msgstr "Настройки на модул Cpu"
+
+#~ msgid "Show Text"
+#~ msgstr "Показва графика"
+
+#~ msgid "Show Graph"
+#~ msgstr "Показва графика"
+
+#~ msgid "Check Interval:"
+#~ msgstr "Интервал от време за проверка:"
+
+#~ msgid "Enlightenment Cpu Monitor Module"
+#~ msgstr "Модул за наблюдение на процесора към Enlightenment"
+
+#~ msgid "This module is used to monitor a cpu."
+#~ msgstr "Този модул се използва за наблюдение на процесора."

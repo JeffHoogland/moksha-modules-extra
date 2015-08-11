@@ -1,0 +1,46 @@
+# Slovenian translation of CPU.
+# This file is put in the public domain.
+# r1to <renato.rener@gmail.com>, 2011.
+# , fuzzy
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: CPU 1.0\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2011-02-17 15:00-0800\n"
+"PO-Revision-Date: 2011-02-20 17:44+0100\n"
+"Last-Translator: r1to <renato.rener@gmail.com>\n"
+"Language-Team: Slovenian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: ../src/e_mod_main.c:129
+msgid "Cpu"
+msgstr "Cpu"
+
+#: ../src/e_mod_main.c:374
+msgid "Fast (0.5 sec)"
+msgstr "Hitro·(0.5·sek)"
+
+#: ../src/e_mod_main.c:381
+msgid "Medium (1 sec)"
+msgstr "Srednje·(1·sek)"
+
+#: ../src/e_mod_main.c:388
+msgid "Normal (2 sec)"
+msgstr "Normalno·(2·sek)"
+
+#: ../src/e_mod_main.c:395
+msgid "Slow (5 sec)"
+msgstr "Počasno·(5·sek)"
+
+#: ../src/e_mod_main.c:402
+msgid "Very Slow (30 sec)"
+msgstr "Zelo počasi·(30·sek)"
+
+#: ../src/e_mod_main.c:411
+msgid "Time Between Updates"
+msgstr "Čas med posodobitvami"
+

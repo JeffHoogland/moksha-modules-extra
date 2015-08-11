@@ -1,0 +1,79 @@
+# translation of flame.po to hungarian
+# Copyright (C) 2008-2009 Enlightenment development team
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Lisovszki  <lisovszki@gmail.com>, 2008-2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: flame\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-28 16:31+0800\n"
+"PO-Revision-Date: 2008-11-22 04:47+0000\n"
+"Last-Translator: lisovszki <lisovszki@gmail.com>\n"
+"Language-Team: hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_main.c:61
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: ../src/e_mod_main.c:63
+msgid "Flame"
+msgstr "Láng"
+
+#: ../src/e_mod_config.c:47
+msgid "Flame Configuration"
+msgstr "Láng beállítás"
+
+#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:177
+msgid "Flame Color"
+msgstr "Láng szín"
+
+#: ../src/e_mod_config.c:96
+msgid "Gold"
+msgstr "Arany"
+
+#: ../src/e_mod_config.c:98
+msgid "Fire"
+msgstr "Tűz"
+
+#: ../src/e_mod_config.c:100
+msgid "Plasma"
+msgstr "Plazma"
+
+#: ../src/e_mod_config.c:102
+msgid "Matrix"
+msgstr "Mátrix"
+
+#: ../src/e_mod_config.c:104
+msgid "Ice"
+msgstr "Jég"
+
+#: ../src/e_mod_config.c:106
+msgid "White"
+msgstr "Fehér"
+
+#: ../src/e_mod_config.c:108
+msgid "Custom"
+msgstr "Egyéni"
+
+#: ../src/e_mod_config.c:179
+msgid "Red Amount"
+msgstr "Vörös mennyisége"
+
+#: ../src/e_mod_config.c:182 ../src/e_mod_config.c:189
+#: ../src/e_mod_config.c:196
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/e_mod_config.c:186
+msgid "Blue Amount"
+msgstr "Kék mennyisége"
+
+#: ../src/e_mod_config.c:193
+msgid "Green Amount"
+msgstr "Zöld mennyisége"

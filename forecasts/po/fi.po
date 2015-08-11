@@ -1,0 +1,121 @@
+# Forecasts module (e17), Finnish translation
+# This file is put in the public domain.
+# Jani väyrynen <janivayrynen@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Forecasts module (e17)\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-11-22 04:19+0000\n"
+"Last-Translator: Jani väyrynen <Unknown>\n"
+"Language-Team: Finnish <janivayrynen@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Configuration"
+msgstr "Sääennusteen asetukset"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "Näytön asetukset"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "Kyselyväli"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minuuttia"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "Näytä kuvaus"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "Ponnahdus hiiren ollessa kohdalla"
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "Yksikköasetukset"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "Metrinen"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "Englantilainen"
+
+#: ../src/e_mod_config.c:111
+msgid "Yahoo Forecasts Code"
+msgstr "Yahoo Forecasts -koodi"
+
+#: ../src/e_mod_config.c:112
+msgid "Yahoo Forecasts Code/US Zip Code"
+msgstr "Yahoo Forecasts -koodi/Postiosoite"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "Löytääksesi alueesi koodin, mene:"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s, etsi alueesi ja katso URL:ia"
+
+#: ../src/e_mod_main.c:255
+msgid "Forecasts"
+msgstr "Sääennuste"
+
+#: ../src/e_mod_main.c:300
+msgid "Configuration"
+msgstr "Asetukset"
+
+#: ../src/e_mod_main.c:1030
+msgid "Wind Chill"
+msgstr "Tuulen hyytävyys"
+
+#: ../src/e_mod_main.c:1036
+msgid "Wind Speed"
+msgstr "Tuulennopeus"
+
+#: ../src/e_mod_main.c:1042
+msgid "Humidity"
+msgstr "Kosteus"
+
+#: ../src/e_mod_main.c:1048
+msgid "Visibility"
+msgstr "Näkyvyys"
+
+#: ../src/e_mod_main.c:1054
+msgid "Pressure"
+msgstr "Ilmanpaine"
+
+#: ../src/e_mod_main.c:1061
+msgid "Rising"
+msgstr "Nousee"
+
+#: ../src/e_mod_main.c:1063
+msgid "Falling"
+msgstr "Laskee"
+
+#: ../src/e_mod_main.c:1065
+msgid "Steady"
+msgstr "Vakaa"
+
+#: ../src/e_mod_main.c:1069
+msgid "Sunrise / Sunset"
+msgstr "Auringonnousu / Auringonlasku"
+
+#: ../src/e_mod_main.c:1093
+msgid "High"
+msgstr "Korkea"
+
+#: ../src/e_mod_main.c:1104
+msgid "Low"
+msgstr "Matala"

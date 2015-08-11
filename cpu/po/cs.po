@@ -1,0 +1,46 @@
+# Czech translation.
+# This file is put in the public domain.
+# quaker66@gmail.com
+# Vít Pelčák <vit@pelcak.org>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cpu\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-10-16 14:36+0200\n"
+"PO-Revision-Date: 2011-10-15 13:18+0200\n"
+"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: ../src/e_mod_main.c:129
+msgid "Cpu"
+msgstr "Procesor"
+
+#: ../src/e_mod_main.c:372
+msgid "Fast (0.5 sec)"
+msgstr "Rychlý (0.5 sec)"
+
+#: ../src/e_mod_main.c:379
+msgid "Medium (1 sec)"
+msgstr "Střední (1 sec)"
+
+#: ../src/e_mod_main.c:386
+msgid "Normal (2 sec)"
+msgstr "Normální (2 sec)"
+
+#: ../src/e_mod_main.c:393
+msgid "Slow (5 sec)"
+msgstr "Pomalý (5 sec)"
+
+#: ../src/e_mod_main.c:400
+msgid "Very Slow (30 sec)"
+msgstr "Velmi pomalý (30 sec)"
+
+#: ../src/e_mod_main.c:407
+msgid "Time Between Updates"
+msgstr "Čas mezi aktualizacemi"

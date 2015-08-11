@@ -1,0 +1,59 @@
+# Portuguese translation for penguins
+# This file is distributed under the same license as the enlightenment package.
+# Sérgio Marques <smarquespt@gmail.com>, 2010
+# Adaptado ao acordo ortográfico de 1990
+msgid ""
+msgstr ""
+"Project-Id-Version: penguins\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2010-10-17 11:00-0700\n"
+"PO-Revision-Date: 2010-10-24 15:49-0000\n"
+"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"Language-Team: Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: Portugal\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Population Settings"
+msgstr "Definições da população"
+
+#: ../src/e_mod_config.c:92
+msgid "Number of penguins:"
+msgstr "Número de pinguins:"
+
+#: ../src/e_mod_config.c:94
+#: ../src/e_mod_config.c:104
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/e_mod_config.c:97
+msgid "Zoom factor:"
+msgstr "Ampliação:"
+
+#: ../src/e_mod_config.c:99
+#, c-format
+msgid "%1.1f X"
+msgstr "%1.1f X"
+
+#: ../src/e_mod_config.c:102
+msgid "Transparency:"
+msgstr "Transparência:"
+
+#. Lista
+#: ../src/e_mod_config.c:108
+msgid "Select population:"
+msgstr "Selecione a população:"
+
+#: ../src/e_mod_main.c:61
+msgid "Look"
+msgstr "Aparência"
+
+#: ../src/e_mod_main.c:62
+msgid "Penguins"
+msgstr "Pinguins"
+

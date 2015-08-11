@@ -1,0 +1,1173 @@
+#define FRAME LOSSY 90
+images
+{
+   image: "icon.png" FRAME;
+   image: "walker1a.png" FRAME;
+   image: "walker1b.png" FRAME;
+   image: "walker2a.png" FRAME;
+   image: "walker2b.png" FRAME;
+   image: "walker3a.png" FRAME;
+   image: "walker3b.png" FRAME;
+   image: "walker4a.png" FRAME;
+   image: "walker4b.png" FRAME;
+   image: "walker5a.png" FRAME;
+   image: "walker5b.png" FRAME;
+   image: "walker6a.png" FRAME;
+   image: "walker6b.png" FRAME;
+   image: "walker7a.png" FRAME;
+   image: "walker7b.png" FRAME;
+   image: "walker8a.png" FRAME;
+   image: "walker8b.png" FRAME;
+
+   image: "faller1a.png" FRAME;
+   image: "faller1b.png" FRAME;
+   image: "faller2a.png" FRAME;
+   image: "faller2b.png" FRAME;
+   image: "faller3a.png" FRAME;
+   image: "faller3b.png" FRAME;
+   image: "faller4a.png" FRAME;
+   image: "faller4b.png" FRAME;
+
+   image: "climber1a.png" FRAME;
+   image: "climber2a.png" FRAME;
+   image: "climber3a.png" FRAME;
+   image: "climber4a.png" FRAME;
+   image: "climber5a.png" FRAME;
+   image: "climber6a.png" FRAME;
+   image: "climber7a.png" FRAME;
+   image: "climber8a.png" FRAME;
+   image: "climber1b.png" FRAME;
+   image: "climber2b.png" FRAME;
+   image: "climber3b.png" FRAME;
+   image: "climber4b.png" FRAME;
+   image: "climber5b.png" FRAME;
+   image: "climber6b.png" FRAME;
+   image: "climber7b.png" FRAME;
+   image: "climber8b.png" FRAME;
+
+   image: "floater0a.png" FRAME;
+   image: "floater1a.png" FRAME;
+   image: "floater2a.png" FRAME;
+   image: "floater3a.png" FRAME;
+   image: "floater4a.png" FRAME;
+   image: "floater5a.png" FRAME;
+   image: "floater6a.png" FRAME;
+   image: "floater7a.png" FRAME;
+   
+   image: "floater0b.png" FRAME;
+   image: "floater1b.png" FRAME;
+   image: "floater2b.png" FRAME;
+   image: "floater3b.png" FRAME;
+   image: "floater4b.png" FRAME;
+   image: "floater5b.png" FRAME;
+   image: "floater6b.png" FRAME;
+   image: "floater7b.png" FRAME;
+   
+   image: "splatter0.png" FRAME;
+   image: "splatter1.png" FRAME;
+   image: "splatter2.png" FRAME;
+   image: "splatter3.png" FRAME;
+   image: "splatter4.png" FRAME;
+   image: "splatter5.png" FRAME;
+   image: "splatter6.png" FRAME;
+   image: "splatter7.png" FRAME;
+   image: "splatter8.png" FRAME;
+   image: "splatter9.png" FRAME;
+   image: "splatter10.png" FRAME;
+   image: "splatter11.png" FRAME;
+   image: "splatter12.png" FRAME;
+   image: "splatter13.png" FRAME;
+   image: "splatter14.png" FRAME;
+   image: "splatter15.png" FRAME;
+   image: "splatter16.png" FRAME;
+   
+   image: "blocker0a.png" FRAME;
+   image: "blocker1a.png" FRAME;
+   image: "blocker2a.png" FRAME;
+   image: "blocker3a.png" FRAME;
+   image: "blocker4a.png" FRAME;
+   image: "blocker5a.png" FRAME;
+   image: "blocker5a.png" FRAME;
+   image: "blocker6a.png" FRAME;
+   image: "blocker7a.png" FRAME;
+   image: "blocker8a.png" FRAME;
+   image: "blocker9a.png" FRAME;
+   image: "blocker10a.png" FRAME;
+   image: "blocker11a.png" FRAME;
+   image: "blocker0b.png" FRAME;
+   image: "blocker1b.png" FRAME;
+   image: "blocker2b.png" FRAME;
+   image: "blocker3b.png" FRAME;
+   image: "blocker4b.png" FRAME;
+   image: "blocker5b.png" FRAME;
+   image: "blocker5b.png" FRAME;
+   image: "blocker6b.png" FRAME;
+   image: "blocker7b.png" FRAME;
+   image: "blocker8b.png" FRAME;
+   image: "blocker9b.png" FRAME;
+   image: "blocker10b.png" FRAME;
+   image: "blocker11b.png" FRAME;
+   
+   image: "miner0a.png" FRAME;
+   image: "miner1a.png" FRAME;
+   image: "miner2a.png" FRAME;
+   image: "miner3a.png" FRAME;
+   image: "miner4a.png" FRAME;
+   image: "miner5a.png" FRAME;
+   image: "miner6a.png" FRAME;
+   image: "miner7a.png" FRAME;
+   image: "miner8a.png" FRAME;
+   image: "miner9a.png" FRAME;
+   image: "miner10a.png" FRAME;
+   image: "miner11a.png" FRAME;
+   image: "miner12a.png" FRAME;
+   image: "miner13a.png" FRAME;
+   image: "miner14a.png" FRAME;
+   image: "miner15a.png" FRAME;
+   image: "miner16a.png" FRAME;
+   image: "miner17a.png" FRAME;
+   image: "miner18a.png" FRAME;
+   image: "miner19a.png" FRAME;
+   image: "miner20a.png" FRAME;
+   image: "miner21a.png" FRAME;
+   image: "miner22a.png" FRAME;
+   image: "miner23a.png" FRAME;
+   image: "miner0b.png" FRAME;
+   image: "miner1b.png" FRAME;
+   image: "miner2b.png" FRAME;
+   image: "miner3b.png" FRAME;
+   image: "miner4b.png" FRAME;
+   image: "miner5b.png" FRAME;
+   image: "miner6b.png" FRAME;
+   image: "miner7b.png" FRAME;
+   image: "miner8b.png" FRAME;
+   image: "miner9b.png" FRAME;
+   image: "miner10b.png" FRAME;
+   image: "miner11b.png" FRAME;
+   image: "miner12b.png" FRAME;
+   image: "miner13b.png" FRAME;
+   image: "miner14b.png" FRAME;
+   image: "miner15b.png" FRAME;
+   image: "miner16b.png" FRAME;
+   image: "miner17b.png" FRAME;
+   image: "miner18b.png" FRAME;
+   image: "miner19b.png" FRAME;
+   image: "miner20b.png" FRAME;
+   image: "miner21b.png" FRAME;
+   image: "miner22b.png" FRAME;
+   image: "miner23b.png" FRAME;
+   
+   image: "basher0a.png" FRAME;
+   image: "basher1a.png" FRAME;
+   image: "basher2a.png" FRAME;
+   image: "basher3a.png" FRAME;
+   image: "basher4a.png" FRAME;
+   image: "basher5a.png" FRAME;
+   image: "basher6a.png" FRAME;
+   image: "basher7a.png" FRAME;
+   image: "basher8a.png" FRAME;
+   image: "basher9a.png" FRAME;
+   image: "basher10a.png" FRAME;
+   image: "basher11a.png" FRAME;
+   image: "basher12a.png" FRAME;
+   image: "basher13a.png" FRAME;
+   image: "basher14a.png" FRAME;
+   image: "basher15a.png" FRAME;
+   image: "basher16a.png" FRAME;
+   image: "basher17a.png" FRAME;
+   image: "basher18a.png" FRAME;
+   image: "basher19a.png" FRAME;
+   image: "basher20a.png" FRAME;
+   image: "basher21a.png" FRAME;
+   image: "basher22a.png" FRAME;
+   image: "basher23a.png" FRAME;
+   image: "basher24a.png" FRAME;
+   image: "basher25a.png" FRAME;
+   image: "basher26a.png" FRAME;
+   image: "basher27a.png" FRAME;
+   
+   image: "basher0b.png" FRAME;
+   image: "basher1b.png" FRAME;
+   image: "basher2b.png" FRAME;
+   image: "basher3b.png" FRAME;
+   image: "basher4b.png" FRAME;
+   image: "basher5b.png" FRAME;
+   image: "basher6b.png" FRAME;
+   image: "basher7b.png" FRAME;
+   image: "basher8b.png" FRAME;
+   image: "basher9b.png" FRAME;
+   image: "basher10b.png" FRAME;
+   image: "basher11b.png" FRAME;
+   image: "basher12b.png" FRAME;
+   image: "basher13b.png" FRAME;
+   image: "basher14b.png" FRAME;
+   image: "basher15b.png" FRAME;
+   image: "basher16b.png" FRAME;
+   image: "basher17b.png" FRAME;
+   image: "basher18b.png" FRAME;
+   image: "basher19b.png" FRAME;
+   image: "basher20b.png" FRAME;
+   image: "basher21b.png" FRAME;
+   image: "basher22b.png" FRAME;
+   image: "basher23b.png" FRAME;
+   image: "basher24b.png" FRAME;
+   image: "basher25b.png" FRAME;
+   image: "basher26b.png" FRAME;
+   image: "basher27b.png" FRAME;
+   
+   image: "bomber0.png" FRAME;
+   image: "bomber1.png" FRAME;
+   image: "bomber2.png" FRAME;
+   image: "bomber3.png" FRAME;
+   image: "bomber4.png" FRAME;
+   image: "bomber5.png" FRAME;
+   image: "bomber6.png" FRAME;
+   image: "bomber7.png" FRAME;
+   image: "bomber8.png" FRAME;
+   image: "bomber9.png" FRAME;
+   image: "bomber10.png" FRAME;
+   image: "bomber11.png" FRAME;
+   image: "bomber12.png" FRAME;
+   image: "bomber13.png" FRAME;
+   image: "bomber14.png" FRAME;
+   image: "bomber15.png" FRAME;
+   image: "bomber16.png" FRAME;
+   image: "bomber17.png" FRAME;
+   image: "bomber18.png" FRAME;
+   image: "bomber19.png" FRAME;
+   image: "bomber20.png" FRAME;
+   image: "bomber21.png" FRAME;
+   image: "bomber22.png" FRAME;
+   image: "bomber23.png" FRAME;
+   image: "bomber24.png" FRAME;
+   image: "bomber25.png" FRAME;
+   image: "bomber26.png" FRAME;
+   image: "bomber27.png" FRAME;
+   image: "bomber28.png" FRAME;
+   image: "bomber29.png" FRAME;
+   image: "bomber30.png" FRAME;
+   image: "bomber31.png" FRAME;
+   image: "bomber32.png" FRAME;
+   image: "bomber33.png" FRAME;
+   image: "bomber34.png" FRAME;
+   image: "bomber35.png" FRAME;
+   image: "bomber36.png" FRAME;
+   image: "bomber37.png" FRAME;
+   image: "bomber38.png" FRAME;
+   image: "bomber39.png" FRAME;
+   image: "bomber40.png" FRAME;
+   image: "bomber41.png" FRAME;
+   image: "bomber42.png" FRAME;
+   image: "bomber43.png" FRAME;
+   image: "bomber44.png" FRAME;
+   image: "bomber45.png" FRAME;
+   image: "bomber46.png" FRAME;
+   image: "bomber47.png" FRAME;
+   image: "bomber48.png" FRAME;
+   image: "bomber49.png" FRAME;
+   image: "bomber50.png" FRAME;
+   image: "bomber51.png" FRAME;
+   image: "bomber52.png" FRAME;
+   image: "bomber53.png" FRAME;
+   image: "bomber54.png" FRAME;
+   image: "bomber55.png" FRAME;
+   image: "bomber56.png" FRAME;
+}
+
+data
+{
+   item: "PopulationName" "Lemmings";
+ //item: "<action>" "width height speed";
+   item: "Walker" "20 20 25";
+   item: "Faller" "16 20 150";
+   item: "Climber" "16 32 20";
+   item: "Floater" "18 32 35";
+   item: "Splatter" "32 32 35";
+   item: "Flyer" "18 32 35";
+   item: "Bomber" "64 83 0";
+
+ //item: "Custom_x" "width height h_speed v_speed r_min r_max";
+   item: "Custom_1" "20 20 0 0 10 10"; //blocker
+   item: "Custom_2" "64 83 0 0 1 1"; //bomber
+   item: "Custom_3" "32 32 2 0 3 10"; //miner
+   item: "Custom_4" "32 32 2 0 3 8"; //basher
+}
+
+collections
+{
+   group
+   {
+      name: "icon";
+      parts
+      {
+         part
+         {
+            name: "icon_";
+            type: IMAGE;
+            mouse_events: 0;
+            description
+            {
+               state: "default" 0.0;
+               color: 255 255 255 255;
+               rel1
+               {
+                  relative: 0.0 0.0;
+                  offset: 0 0;
+               }
+               rel2
+               {
+                  relative: 1.0 1.0;
+                  offset: 0 0;
+               }
+               image
+               {
+                  normal: "icon.png";
+               }
+            }
+         }
+      }
+   }
+   group
+   {
+      name: "anims";
+      parts
+      {
+         part
+         {
+            name: "penguins";
+            type: IMAGE;
+            mouse_events: 1;
+            description
+            {
+               state: "default" 0.0;
+               color: 255 255 255 255;
+               rel1
+               {
+                  relative: 0.0 0.0;
+                  offset: 0 0;
+               }
+               rel2
+               {
+                  relative: 1.0 1.0;
+                  offset: 0 0;
+               }
+               image
+               {
+                  normal: "walker1a.png";
+               }
+            }
+            description
+            {
+               state: "walker" 0.0;
+               image
+               {
+                  normal: "walker1a.png";
+                  tween: "walker2a.png";
+                  tween: "walker3a.png";
+                  tween: "walker4a.png";
+                  tween: "walker5a.png";
+                  tween: "walker6a.png";
+                  tween: "walker7a.png";
+                  tween: "walker8a.png";
+               }
+            }
+            description
+            {
+               state: "walker" 1.0;
+               image
+               {
+                  normal: "walker1b.png";
+                  tween: "walker2b.png";
+                  tween: "walker3b.png";
+                  tween: "walker4b.png";
+                  tween: "walker5b.png";
+                  tween: "walker6b.png";
+                  tween: "walker7b.png";
+                  tween: "walker8b.png";
+               }
+            }
+            description
+            {
+               state: "faller" 0.0;
+               image
+               {
+                  normal: "faller1a.png";
+                  tween: "faller2a.png";
+                  tween: "faller3a.png";
+                  tween: "faller4a.png";
+               }
+            }
+            description
+            {
+               state: "faller" 1.0;
+               image
+               {
+                  normal: "faller1b.png";
+                  tween: "faller2b.png";
+                  tween: "faller3b.png";
+                  tween: "faller4b.png";
+               }
+            }
+            description
+            {
+               state: "floater" 0.0;
+               image
+               {
+                  normal: "floater0a.png";
+                  tween: "floater1a.png";
+                  tween: "floater2a.png";
+                  tween: "floater3a.png";
+                  tween: "floater4a.png";
+                  tween: "floater5a.png";
+                  tween: "floater6a.png";
+                  tween: "floater7a.png";
+               }
+            }
+            description
+            {
+               state: "floater" 1.0;
+               image
+               {
+                  normal: "floater0b.png";
+                  tween: "floater1b.png";
+                  tween: "floater2b.png";
+                  tween: "floater3b.png";
+                  tween: "floater4b.png";
+                  tween: "floater5b.png";
+                  tween: "floater6b.png";
+                  tween: "floater7b.png";
+               }
+            }
+            description
+            {
+               state: "flyer" 0.0;
+               image
+               {
+                  normal: "floater0a.png";
+                  tween: "floater1a.png";
+                  tween: "floater2a.png";
+                  tween: "floater3a.png";
+                  tween: "floater4a.png";
+                  tween: "floater5a.png";
+                  tween: "floater6a.png";
+                  tween: "floater7a.png";
+               }
+            }
+            description
+            {
+               state: "flyer" 1.0;
+               image
+               {
+                  normal: "floater0b.png";
+                  tween: "floater1b.png";
+                  tween: "floater2b.png";
+                  tween: "floater3b.png";
+                  tween: "floater4b.png";
+                  tween: "floater5b.png";
+                  tween: "floater6b.png";
+                  tween: "floater7b.png";
+               }
+            }
+            description
+            {
+               state: "climber" 0.0;
+               image
+               {
+                  normal: "climber1a.png";
+                  tween: "climber2a.png";
+                  tween: "climber3a.png";
+                  tween: "climber4a.png";
+                  tween: "climber5a.png";
+                  tween: "climber6a.png";
+                  tween: "climber7a.png";
+                  tween: "climber8a.png";
+               }
+            }
+            description
+            {
+               state: "climber" 1.0;
+               image
+               {
+                  normal: "climber1b.png";
+                  tween: "climber2b.png";
+                  tween: "climber3b.png";
+                  tween: "climber4b.png";
+                  tween: "climber5b.png";
+                  tween: "climber6b.png";
+                  tween: "climber7b.png";
+                  tween: "climber8b.png";
+               }
+            }
+            description
+            {
+               state: "splatter" 0.0;
+               image
+               {
+                  normal: "splatter16.png";
+                  tween: "splatter0.png";
+                  tween: "splatter1.png";
+                  tween: "splatter2.png";
+                  tween: "splatter3.png";
+                  tween: "splatter4.png";
+                  tween: "splatter5.png";
+                  tween: "splatter6.png";
+                  tween: "splatter7.png";
+                  tween: "splatter8.png";
+                  tween: "splatter9.png";
+                  tween: "splatter10.png";
+                  tween: "splatter11.png";
+                  tween: "splatter12.png";
+                  tween: "splatter13.png";
+                  tween: "splatter14.png";
+                  tween: "splatter15.png";
+               }
+            }
+            description
+            {
+               state: "splatter" 1.0;
+               image
+               {
+                  normal: "splatter16.png";
+                  tween: "splatter0.png";
+                  tween: "splatter1.png";
+                  tween: "splatter2.png";
+                  tween: "splatter3.png";
+                  tween: "splatter4.png";
+                  tween: "splatter5.png";
+                  tween: "splatter6.png";
+                  tween: "splatter7.png";
+                  tween: "splatter8.png";
+                  tween: "splatter9.png";
+                  tween: "splatter10.png";
+                  tween: "splatter11.png";
+                  tween: "splatter12.png";
+                  tween: "splatter13.png";
+                  tween: "splatter14.png";
+                  tween: "splatter15.png";
+               }
+            }
+            description
+            {
+               state: "bomber" 0.0;
+               image
+               {
+                  normal: "bomber0.png";
+                  tween: "bomber1.png";
+                  tween: "bomber2.png";
+                  tween: "bomber3.png";
+                  tween: "bomber4.png";
+                  tween: "bomber5.png";
+                  tween: "bomber6.png";
+                  tween: "bomber7.png";
+                  tween: "bomber8.png";
+                  tween: "bomber9.png";
+                  tween: "bomber10.png";
+                  tween: "bomber11.png";
+                  tween: "bomber12.png";
+                  tween: "bomber13.png";
+                  tween: "bomber14.png";
+                  tween: "bomber15.png";
+                  tween: "bomber16.png";
+                  tween: "bomber17.png";
+                  tween: "bomber18.png";
+                  tween: "bomber19.png";
+                  tween: "bomber20.png";
+                  tween: "bomber21.png";
+                  tween: "bomber22.png";
+                  tween: "bomber23.png";
+                  tween: "bomber24.png";
+                  tween: "bomber25.png";
+                  tween: "bomber26.png";
+                  tween: "bomber27.png";
+                  tween: "bomber28.png";
+                  tween: "bomber29.png";
+                  tween: "bomber30.png";
+                  tween: "bomber31.png";
+                  tween: "bomber32.png";
+                  tween: "bomber33.png";
+                  tween: "bomber34.png";
+                  tween: "bomber35.png";
+                  tween: "bomber36.png";
+                  tween: "bomber37.png";
+                  tween: "bomber38.png";
+                  tween: "bomber39.png";
+                  tween: "bomber40.png";
+                  tween: "bomber41.png";
+                  tween: "bomber42.png";
+                  tween: "bomber43.png";
+                  tween: "bomber44.png";
+                  tween: "bomber45.png";
+                  tween: "bomber46.png";
+                  tween: "bomber47.png";
+                  tween: "bomber48.png";
+                  tween: "bomber49.png";
+                  tween: "bomber50.png";
+                  tween: "bomber51.png";
+                  tween: "bomber52.png";
+                  tween: "bomber53.png";
+                  tween: "bomber54.png";
+                  tween: "bomber55.png";
+                  tween: "bomber56.png";
+               }
+            }
+            description
+            {
+               state: "blocker" 0.0;
+               image
+               {
+                  normal: "blocker0a.png";
+                  tween: "blocker1a.png";
+                  tween: "blocker2a.png";
+                  tween: "blocker3a.png";
+                  tween: "blocker4a.png";
+                  tween: "blocker5a.png";
+                  tween: "blocker6a.png";
+                  tween: "blocker7a.png";
+                  tween: "blocker8a.png";
+                  tween: "blocker9a.png";
+                  tween: "blocker10a.png";
+                  tween: "blocker11a.png";
+               }
+            }
+            description
+            {
+               state: "blocker" 1.0;
+               image
+               {
+                  normal: "blocker0b.png";
+                  tween: "blocker1b.png";
+                  tween: "blocker2b.png";
+                  tween: "blocker3b.png";
+                  tween: "blocker4b.png";
+                  tween: "blocker5b.png";
+                  tween: "blocker6b.png";
+                  tween: "blocker7b.png";
+                  tween: "blocker8b.png";
+                  tween: "blocker9b.png";
+                  tween: "blocker10b.png";
+                  tween: "blocker11b.png";
+               }
+            }
+            description
+            {
+               state: "basher" 0.0;
+               image
+               {
+                  normal: "basher0a.png";
+                  tween: "basher1a.png";
+                  tween: "basher2a.png";
+                  tween: "basher3a.png";
+                  tween: "basher4a.png";
+                  tween: "basher5a.png";
+                  tween: "basher6a.png";
+                  tween: "basher7a.png";
+                  tween: "basher8a.png";
+                  tween: "basher9a.png";
+                  tween: "basher10a.png";
+                  tween: "basher11a.png";
+                  tween: "basher12a.png";
+                  tween: "basher13a.png";
+                  tween: "basher14a.png";
+                  tween: "basher15a.png";
+                  tween: "basher16a.png";
+                  tween: "basher17a.png";
+                  tween: "basher18a.png";
+                  tween: "basher19a.png";
+                  tween: "basher20a.png";
+                  tween: "basher21a.png";
+                  tween: "basher22a.png";
+                  tween: "basher23a.png";
+                  tween: "basher24a.png";
+                  tween: "basher25a.png";
+                  tween: "basher26a.png";
+                  tween: "basher27a.png";
+               }
+            }
+            description
+            {
+               state: "basher" 1.0;
+               image
+               {
+                  normal: "basher0a.png";
+                  tween: "basher1a.png";
+                  tween: "basher2a.png";
+                  tween: "basher3a.png";
+                  tween: "basher4a.png";
+                  tween: "basher5a.png";
+                  tween: "basher6a.png";
+                  tween: "basher7a.png";
+                  tween: "basher8a.png";
+                  tween: "basher9a.png";
+                  tween: "basher10a.png";
+                  tween: "basher11a.png";
+                  tween: "basher12a.png";
+                  tween: "basher13a.png";
+                  tween: "basher14a.png";
+                  tween: "basher15a.png";
+                  tween: "basher16a.png";
+                  tween: "basher17a.png";
+                  tween: "basher18a.png";
+                  tween: "basher19a.png";
+                  tween: "basher20a.png";
+                  tween: "basher21a.png";
+                  tween: "basher22a.png";
+                  tween: "basher23a.png";
+                  tween: "basher24a.png";
+                  tween: "basher25a.png";
+                  tween: "basher26a.png";
+                  tween: "basher27a.png";
+               }
+            }
+            description
+            {
+               state: "miner" 0.0;
+               image
+               {
+                  normal: "miner0a.png";
+                  tween: "miner1a.png";
+                  tween: "miner2a.png";
+                  tween: "miner3a.png";
+                  tween: "miner4a.png";
+                  tween: "miner5a.png";
+                  tween: "miner6a.png";
+                  tween: "miner7a.png";
+                  tween: "miner8a.png";
+                  tween: "miner9a.png";
+                  tween: "miner10a.png";
+                  tween: "miner11a.png";
+                  tween: "miner12a.png";
+                  tween: "miner13a.png";
+                  tween: "miner14a.png";
+                  tween: "miner15a.png";
+                  tween: "miner16a.png";
+                  tween: "miner17a.png";
+                  tween: "miner18a.png";
+                  tween: "miner19a.png";
+                  tween: "miner20a.png";
+                  tween: "miner21a.png";
+                  tween: "miner22a.png";
+                  tween: "miner23a.png";
+               }
+            }
+            description
+            {
+               state: "miner" 1.0;
+               image
+               {
+                  normal: "miner0b.png";
+                  tween: "miner1b.png";
+                  tween: "miner2b.png";
+                  tween: "miner3b.png";
+                  tween: "miner4b.png";
+                  tween: "miner5b.png";
+                  tween: "miner6b.png";
+                  tween: "miner7b.png";
+                  tween: "miner8b.png";
+                  tween: "miner9b.png";
+                  tween: "miner10b.png";
+                  tween: "miner11b.png";
+                  tween: "miner12b.png";
+                  tween: "miner13b.png";
+                  tween: "miner14b.png";
+                  tween: "miner15b.png";
+                  tween: "miner16b.png";
+                  tween: "miner17b.png";
+                  tween: "miner18b.png";
+                  tween: "miner19b.png";
+                  tween: "miner20b.png";
+                  tween: "miner21b.png";
+                  tween: "miner22b.png";
+                  tween: "miner23b.png";
+               }
+            }
+         }
+      }
+      programs
+      {
+         /****************************
+          * Mouse click
+          ****************************/
+         program
+         {
+            name: "left_click";
+            signal: "mouse,down,1";
+            source: "penguins";
+            action: SIGNAL_EMIT "click_l" "penguins";
+         }
+         program
+         {
+            name: "center_click";
+            signal: "mouse,down,2";
+            source: "penguins";
+            action: SIGNAL_EMIT "click_c" "penguins";
+         }
+         program
+         {
+            name: "right_click";
+            signal: "mouse,down,3";
+            source: "penguins";
+            action: SIGNAL_EMIT "click_r" "penguins";
+         }
+         /****************************
+          * Faller
+          ****************************/
+         program 
+         {
+            name: "start_falling_right";
+            signal: "start_falling_right";
+            source: "epenguins";
+            action: STATE_SET "faller" 0.0;
+            transition: LINEAR 0;
+            target: "penguins";
+            after: "falling_right";
+         }
+         program
+         {
+            name: "falling_right";
+            action: STATE_SET "faller" 0.0;
+            transition: LINEAR 0.5;
+            target: "penguins";
+            after: "falling_right";
+         }
+         program 
+         {
+            name: "start_falling_left";
+            signal: "start_falling_left";
+            source: "epenguins";
+            action: STATE_SET "faller" 1.0;
+            transition: LINEAR 0;
+            target: "penguins";
+            after: "falling_left";
+         }
+         program
+         {
+            name: "falling_left";
+            action: STATE_SET "faller" 1.0;
+            transition: LINEAR 1;
+            target: "penguins";
+            after: "falling_left";
+         }
+         /****************************
+          * Floater
+          ****************************/
+         program 
+         {
+            name: "start_floating_right";
+            signal: "start_floating_right";
+            source: "epenguins";
+            action: STATE_SET "floater" 0.0;
+            transition: LINEAR 0;
+            target: "penguins";
+            after: "floating_right";
+         }
+         program
+         {
+            name: "floating_right";
+            action: STATE_SET "floater" 0.0;
+            transition: LINEAR 0.8;
+            target: "penguins";
+            after: "floating_right";
+         }
+         program 
+         {
+            name: "start_floating_left";
+            signal: "start_floating_left";
+            source: "epenguins";
+            action: STATE_SET "floater" 1.0;
+            transition: LINEAR 0;
+            target: "penguins";
+            after: "floating_left";
+         }
+         program
+         {
+            name: "floating_left";
+            action: STATE_SET "floater" 1.0;
+            transition: LINEAR 0.8;
+            target: "penguins";
+            after: "floating_left";
+         }
+         /****************************
+          * Walker
+          ****************************/
+         program
+         {
+            name: "start_walking_right";
+            signal: "start_walking_right";
+            source: "epenguins";
+            action: STATE_SET "walker" 0.0;
+            transition: LINEAR 0;
+            target: "penguins";
+            after: "walking_right";
+         }
+         program
+         {
+            name: "walking_right";
+            action: STATE_SET "walker" 0.0;
+            transition: LINEAR 0.8;
+            target: "penguins";
+            after: "walking_right";
+         }
+         program
+         {
+            name: "start_walking_left";
+            signal: "start_walking_left";
+            source: "epenguins";
+            action: STATE_SET "walker" 1.0;
+            transition: LINEAR 0;
+            target: "penguins";
+            after: "walking_left";
+         }
+         program
+         {
+            name: "walking_left";
+            action: STATE_SET "walker" 1.0;
+            transition: LINEAR 0.8;
+            target: "penguins";
+            after: "walking_left";
+         }
+         /****************************
+          * Flyer
+          ****************************/ 
+         program
+         {
+            name: "start_flying_right";
+            signal: "start_flying_right";
+            source: "epenguins";
+            action: STATE_SET "flyer" 0.0;
+            transition: LINEAR 0;
+            target: "penguins";
+            //after: "stop_all";
+            after: "flying_right";
+         }
+         program
+         {
+            name: "flying_right";
+            action: STATE_SET "flyer" 0.0;
+            transition: LINEAR 0.8;
+            target: "penguins";
+            after: "flying_right";
+         }
+         program
+         {
+            name: "start_flying_left";
+            signal: "start_flying_left";
+            source: "epenguins";
+            action: STATE_SET "flyer" 1.0;
+            transition: LINEAR 0;
+            target: "penguins";
+            //after: "stop_all";
+            after: "flying_left";
+         }
+         program
+         {
+            name: "flying_left";
+            action: STATE_SET "flyer" 1.0;
+            transition: LINEAR 0.8;
+            target: "penguins";
+            after: "flying_left";
+         }
+         /****************************
+          * Climber
+          ****************************/
+         program
+         {
+            name: "start_climbing_right";
+            signal: "start_climbing_right";
+            source: "epenguins";
+            action: STATE_SET "climber" 0.0;
+            transition: LINEAR 0;
+            target: "penguins";
+            after: "climbing_right";
+         }
+         program
+         {
+            name: "climbing_right";
+            action: STATE_SET "climber" 0.0;
+            transition: LINEAR 1;
+            target: "penguins";
+            after: "climbing_right";
+         }
+         program
+         {
+            name: "start_climbing_left";
+            signal: "start_climbing_left";
+            source: "epenguins";
+            action: STATE_SET "climber" 1.0;
+            transition: LINEAR 0;
+            target: "penguins";
+            after: "climbing_left";
+         }
+         program
+         {
+            name: "climbing_left";
+            action: STATE_SET "climber" 1.0;
+            transition: LINEAR 1;
+            target: "penguins";
+            after: "climbing_left";
+         }
+         /****************************
+          * Splatter
+          ****************************/ 
+         program
+         {
+            name: "start_splatting_right";
+            signal: "start_splatting_right";
+            source: "epenguins";
+            action: STATE_SET "splatter" 0.0;
+            transition: LINEAR 1;
+            target: "penguins";
+            //after: "stop_all";
+            after: "splatting_done";
+         }
+         program
+         {
+            name: "start_splatting_left";
+            signal: "start_splatting_left";
+            source: "epenguins";
+            action: STATE_SET "splatter" 1.0;
+            transition: LINEAR 1;
+            target: "penguins";
+            after: "splatting_done";
+         }
+         program
+         {
+            name: "splatting_done";
+            action: SIGNAL_EMIT "splatting_done" "edje";
+         }
+         /****************************
+          * Bomber
+          ****************************/ 
+         program
+         {
+            name: "start_bombing_right";
+            signal: "start_bombing_right";
+            source: "epenguins";
+            action: STATE_SET "bomber" 0.0;
+            transition: LINEAR 3;
+            target: "penguins";
+            after: "bombing_done";
+         }
+         program
+         {
+            name: "start_bombing_left";
+            signal: "start_bombing_left";
+            source: "epenguins";
+            action: STATE_SET "bomber" 0.0;
+            transition: LINEAR 3;
+            target: "penguins";
+            after: "bombing_done";
+         }
+         program
+         {
+            name: "bombing_done";
+            action: SIGNAL_EMIT "bombing_done" "edje";
+         }
+         /****************************
+          * Customs programs
+          ****************************/ 
+         program
+         {
+            name: "custom_done";
+            action: SIGNAL_EMIT "custom_done" "edje";
+         }
+         /****************************
+          * Custom_1 - blocker
+          ****************************/ 
+         program
+         {
+            name: "start_custom_1_right";
+            signal: "start_custom_1_right";
+            source: "epenguins";
+            action: STATE_SET "blocker" 0.0;
+            transition: LINEAR 1;
+            target: "penguins";
+            //  after: "stop_all";
+            after: "custom_done";
+         }
+         program
+         {
+            name: "start_custom_1_left";
+            signal: "start_custom_1_left";
+            source: "epenguins";
+            action: STATE_SET "blocker" 1.0;
+            transition: LINEAR 1;
+            target: "penguins";
+            // after: "stop_all";
+            after: "custom_done";
+         }
+         /****************************
+          * Custom_2 - bomber
+          ****************************/ 
+         program
+         {
+            name: "start_custom_2_right";
+            signal: "start_custom_2_right";
+            source: "epenguins";
+            action: STATE_SET "bomber" 0.0;
+            transition: LINEAR 3;
+            target: "penguins";
+            after: "custom_done";
+         }
+         program
+         {
+            name: "start_custom_2_left";
+            signal: "start_custom_2_left";
+            source: "epenguins";
+            action: STATE_SET "bomber" 0.0;
+            transition: LINEAR 3;
+            target: "penguins";
+            after: "custom_done";
+         }
+         /****************************
+          * Custom_3 - miner
+          ****************************/ 
+         program
+         {
+            name: "start_custom_3_right";
+            signal: "start_custom_3_right";
+            source: "epenguins";
+            action: STATE_SET "miner" 0.0;
+            transition: LINEAR 2;
+            target: "penguins";
+            //  after: "stop_all";
+            after: "custom_done";
+         }
+         program
+         {
+            name: "start_custom_3_left";
+            signal: "start_custom_3_left";
+            source: "epenguins";
+            action: STATE_SET "miner" 1.0;
+            transition: LINEAR 2;
+            target: "penguins";
+            // after: "stop_all";
+            after: "custom_done";
+         }
+         /****************************
+          * Custom_4 - basher
+          ****************************/ 
+         program
+         {
+            name: "start_custom_4_right";
+            signal: "start_custom_4_right";
+            source: "epenguins";
+            action: STATE_SET "basher" 0.0;
+            transition: LINEAR 2;
+            target: "penguins";
+            //  after: "stop_all";
+            after: "custom_done";
+         }
+         program
+         {
+            name: "start_custom_4_left";
+            signal: "start_custom_4_left";
+            source: "epenguins";
+            action: STATE_SET "basher" 1.0;
+            transition: LINEAR 2;
+            target: "penguins";
+            // after: "stop_all";
+            after: "custom_done";
+         }
+      }
+   }
+}

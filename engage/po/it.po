@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Engage\n"
 "Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
-"POT-Creation-Date: 2015-04-03 21:27+0000\n"
+"POT-Creation-Date: 2015-03-11 18:29+0100\n"
 "PO-Revision-Date: 2015-03-11 18:30+0100\n"
 "Last-Translator: Massimo Maiurana <maiurana@gmail.com>\n"
 "Language-Team: none\n"
@@ -109,8 +109,7 @@ msgid "Background Opacity:"
 msgstr "Trasparenza sfondo:"
 
 #: src/ng_config.c:186
-#, fuzzy
-msgid "%1.0f \\%"
+msgid "%1.0f %"
 msgstr "%1.0f %"
 
 #: src/ng_config.c:194

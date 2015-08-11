@@ -1,0 +1,149 @@
+# Chinese translations for screenshot package
+# screenshot 软件包的简体中文翻译.
+# This file is put in the public domain.
+# Aron Xu <happyaron.xu@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: screenshot HEAD\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-12-03 16:30+0800\n"
+"PO-Revision-Date: 2009-12-03 16:41+0800\n"
+"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:48
+msgid "Screenshot Settings"
+msgstr "截图设置"
+
+#: ../src/e_mod_config.c:99 ../src/e_mod_config.c:180
+msgid "General Settings"
+msgstr "常规设置"
+
+#: ../src/e_mod_config.c:100 ../src/e_mod_config.c:181
+msgid "Beep when taking screenshot"
+msgstr "截图时鸣响"
+
+#: ../src/e_mod_config.c:103 ../src/e_mod_config.c:184
+msgid "Delay Time:"
+msgstr "延迟时间："
+
+#: ../src/e_mod_config.c:110 ../src/e_mod_config.c:197 ../src/e_mod_main.c:389
+msgid "Capture Mode"
+msgstr "抓取模式"
+
+#: ../src/e_mod_config.c:112 ../src/e_mod_config.c:199 ../src/e_mod_main.c:364
+msgid "Whole Screen"
+msgstr "整个屏幕"
+
+#: ../src/e_mod_config.c:114 ../src/e_mod_config.c:201 ../src/e_mod_main.c:371
+msgid "Select Window"
+msgstr "选择窗口"
+
+#: ../src/e_mod_config.c:116 ../src/e_mod_config.c:203 ../src/e_mod_main.c:378
+msgid "Select Region"
+msgstr "选择区域"
+
+#: ../src/e_mod_config.c:120 ../src/e_mod_config.c:207
+msgid "File Settings"
+msgstr "文件设置"
+
+#: ../src/e_mod_config.c:121 ../src/e_mod_config.c:208
+msgid "Always prompt for filename"
+msgstr "总是询问文件名"
+
+#: ../src/e_mod_config.c:124 ../src/e_mod_config.c:211
+msgid "Save Directory:"
+msgstr "保存目录："
+
+#: ../src/e_mod_config.c:128 ../src/e_mod_config.c:215
+msgid "Filename:"
+msgstr "文件名："
+
+#: ../src/e_mod_config.c:134 ../src/e_mod_config.c:221
+msgid "Application Settings"
+msgstr "应用程序设置"
+
+#: ../src/e_mod_config.c:135 ../src/e_mod_config.c:222
+msgid "Launch application after taking screenshot"
+msgstr "截图后启动程序"
+
+#: ../src/e_mod_config.c:140 ../src/e_mod_config.c:238
+msgid "Thumbnail Settings"
+msgstr "缩略图设置"
+
+#: ../src/e_mod_config.c:141 ../src/e_mod_config.c:239
+msgid "Generate thumbnail from screenshot"
+msgstr "从抓图生成缩略图"
+
+#: ../src/e_mod_config.c:190
+msgid "Image Quality:"
+msgstr "图像质量："
+
+#: ../src/e_mod_config.c:226
+msgid "Application:"
+msgstr "应用程序："
+
+#: ../src/e_mod_config.c:242
+msgid "Size:"
+msgstr "大小："
+
+#: ../src/e_mod_config.c:247
+msgid "(Percentage of original image to use for thumbnail)"
+msgstr "(缩略图相对于原图的百分比)"
+
+#: ../src/e_mod_main.c:91 ../src/e_mod_main.c:266
+msgid "Screenshot"
+msgstr "截图"
+
+#: ../src/e_mod_main.c:121
+msgid ""
+"Screenshot Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means Screenshot module needs new configuration<br>data by "
+"default for usable functionality that your old<br>configuration simply "
+"lacks. This new set of defaults will fix<br>that by adding it in. You can re-"
+"configure things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+"截图模块配置数据需要升级。您原有的配置已被一组新的默认配置取代。<br>"
+"这通常发生在开发过程中，所以请勿为此报告 Bug。<br>"
+"类似的情况通常源于原来的配置文件缺少新版本所必须的设置项，<br>"
+"而新的配置可以满足要求。您应当重新配置此模块。<br>"
+"为此带来的不便敬请谅解。<br>"
+
+#: ../src/e_mod_main.c:139
+msgid ""
+"Your Screenshot Module configuration is NEWER than the Screenshot Module "
+"version. This is very<br>strange. This should not happen unless you "
+"downgraded<br>the Screenshot Module or copied the configuration from a place "
+"where<br>a newer version of the Screenshot Module was running. This is bad "
+"and<br>as a precaution your configuration has been now restored "
+"to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+"您的截图模块设置比您所安装的模块版本更新。这是一个奇怪的现象，<br>"
+"除非您曾经对此模块进行降级操作或者从其他地方复制了一个配置文件。<br>"
+"现已使用当前安装的模块版本的默认配置覆盖，为此带来的不便敬请谅解。<br>"
+
+#: ../src/e_mod_main.c:161 ../src/e_mod_main.c:176
+msgid "Take Screenshot"
+msgstr "截图"
+
+#: ../src/e_mod_main.c:304
+msgid "Screenshot Configuration Updated"
+msgstr "截图程序配置已更新"
+
+#: ../src/e_mod_main.c:393
+msgid "Settings"
+msgstr "设置"
+
+#: ../src/e_mod_main.c:467
+msgid "Screenshot Module"
+msgstr "截图模块"
+
+#: ../src/e_mod_main.c:468
+msgid "Enter a new filename for this screenshot"
+msgstr "为这个截图输入文件名"

@@ -1,0 +1,51 @@
+# Bulgarian translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Siyan Panayotov <fungi_vn@yahoo.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-01-30 22:50+0000\n"
+"Last-Translator: Siyan Panayotov <fungi_vn@yahoo.com>\n"
+"Language-Team: Bulgarian <bg@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Rain Module"
+msgstr "Модул за дъжд"
+
+#: ../src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "Общи настройки"
+
+#: ../src/e_mod_config.c:101
+msgid "Show Clouds"
+msgstr "Показване на облаци"
+
+#: ../src/e_mod_config.c:105
+msgid "Rain Density"
+msgstr "Плътност на дъжда"
+
+#: ../src/e_mod_config.c:107
+msgid "Sprinkle"
+msgstr "Лек дъжд"
+
+#: ../src/e_mod_config.c:109
+msgid "Drizzle"
+msgstr "Ръмеж"
+
+#: ../src/e_mod_config.c:111
+msgid "Downpour"
+msgstr "Порой"
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr "Изглед"
+
+#: ../src/e_mod_main.c:35
+msgid "Rain"
+msgstr "Дъжд"

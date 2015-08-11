@@ -1,0 +1,123 @@
+# Korean translation of forecast
+# Copyright (C) 2008 Enlightenment development team
+# This file is distributed under the same license as the forecast package.
+# Dongsik Lee. <zecksmaster@gmail.com>, 2008.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: forecast e17\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-01-18 19:18+0000\n"
+"Last-Translator: Aron <Unknown>\n"
+"Language-Team: Korea <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Configuration"
+msgstr "일기예보 설정"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "화면 설정"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "갱신 주기"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f 분"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "일기예보 보이기"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr ""
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "단위 설정"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "섭씨"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "화씨"
+
+#: ../src/e_mod_config.c:111
+msgid "Yahoo Forecasts Code"
+msgstr "야후 일기예보 코드"
+
+#: ../src/e_mod_config.c:112
+msgid "Yahoo Forecasts Code/US Zip Code"
+msgstr "야후 일기예보 코드/US Zip Code"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "해당 지역의 코드를 찾을려면"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s로 가서 지역을 검색하면 URL에 코드가 있습니다."
+
+#: ../src/e_mod_main.c:255
+msgid "Forecasts"
+msgstr "일기예보"
+
+#: ../src/e_mod_main.c:300
+msgid "Configuration"
+msgstr "설정"
+
+#: ../src/e_mod_main.c:1030
+msgid "Wind Chill"
+msgstr "온도"
+
+#: ../src/e_mod_main.c:1036
+msgid "Wind Speed"
+msgstr "풍속"
+
+#: ../src/e_mod_main.c:1042
+msgid "Humidity"
+msgstr "습도"
+
+#: ../src/e_mod_main.c:1048
+msgid "Visibility"
+msgstr "가시거리"
+
+#: ../src/e_mod_main.c:1054
+msgid "Pressure"
+msgstr "기압"
+
+#: ../src/e_mod_main.c:1061
+msgid "Rising"
+msgstr "상승"
+
+#: ../src/e_mod_main.c:1063
+msgid "Falling"
+msgstr "하강"
+
+#: ../src/e_mod_main.c:1065
+msgid "Steady"
+msgstr "안정"
+
+#: ../src/e_mod_main.c:1069
+msgid "Sunrise / Sunset"
+msgstr "일출 / 일몰"
+
+#: ../src/e_mod_main.c:1093
+msgid "High"
+msgstr "최고"
+
+#: ../src/e_mod_main.c:1104
+msgid "Low"
+msgstr "최저"

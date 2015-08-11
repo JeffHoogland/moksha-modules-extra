@@ -1,0 +1,59 @@
+# German translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2010-11-23 23:46+0100\n"
+"PO-Revision-Date: 2009-11-07 18:16+0000\n"
+"Last-Translator: MixCool <lars.thoms@mixcool.de>\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:51+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/e_mod_config.c:42
+msgid "Population Settings"
+msgstr "Populationseinstellungen"
+
+#: src/e_mod_config.c:92
+msgid "Number of penguins:"
+msgstr "Anzahl der Pinguine"
+
+#: src/e_mod_config.c:94 src/e_mod_config.c:104
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/e_mod_config.c:97
+msgid "Zoom factor:"
+msgstr "Vergrößerung:"
+
+#: src/e_mod_config.c:99
+#, c-format
+msgid "%1.1f X"
+msgstr "%1.1f X"
+
+#: src/e_mod_config.c:102
+msgid "Transparency:"
+msgstr "Transparenz:"
+
+#: src/e_mod_config.c:108
+msgid "Select population:"
+msgstr "Bevölkerung auswählen:"
+
+#: src/e_mod_main.c:61
+msgid "Look"
+msgstr "Aussehen"
+
+#: src/e_mod_main.c:62
+msgid "Penguins"
+msgstr "Pinguine"
+
+#~ msgid "Appearance"
+#~ msgstr "Erscheinungsbild"

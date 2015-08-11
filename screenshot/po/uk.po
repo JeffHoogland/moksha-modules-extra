@@ -1,0 +1,157 @@
+# Ukrainian translation for enlightenment
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-12-03 16:30+0800\n"
+"PO-Revision-Date: 2010-01-17 13:12+0000\n"
+"Last-Translator: Sergio Gavrylov <sergiovana@bigmir.net>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-18 04:44+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:48
+msgid "Screenshot Settings"
+msgstr "Налаштування знімків екрана"
+
+#: ../src/e_mod_config.c:99 ../src/e_mod_config.c:180
+msgid "General Settings"
+msgstr "Загальні налаштування"
+
+#: ../src/e_mod_config.c:100 ../src/e_mod_config.c:181
+msgid "Beep when taking screenshot"
+msgstr "Сигнал під час створення знімка екрана"
+
+#: ../src/e_mod_config.c:103 ../src/e_mod_config.c:184
+msgid "Delay Time:"
+msgstr "Час затримки:"
+
+#: ../src/e_mod_config.c:110 ../src/e_mod_config.c:197 ../src/e_mod_main.c:389
+msgid "Capture Mode"
+msgstr "Режим фіксації"
+
+#: ../src/e_mod_config.c:112 ../src/e_mod_config.c:199 ../src/e_mod_main.c:364
+msgid "Whole Screen"
+msgstr "Весь екран"
+
+#: ../src/e_mod_config.c:114 ../src/e_mod_config.c:201 ../src/e_mod_main.c:371
+msgid "Select Window"
+msgstr "Вибрати вікно"
+
+#: ../src/e_mod_config.c:116 ../src/e_mod_config.c:203 ../src/e_mod_main.c:378
+msgid "Select Region"
+msgstr "Вибрати область"
+
+#: ../src/e_mod_config.c:120 ../src/e_mod_config.c:207
+msgid "File Settings"
+msgstr "Параметри файла"
+
+#: ../src/e_mod_config.c:121 ../src/e_mod_config.c:208
+msgid "Always prompt for filename"
+msgstr "Завжди нагадувати ім’я файла"
+
+#: ../src/e_mod_config.c:124 ../src/e_mod_config.c:211
+msgid "Save Directory:"
+msgstr "Каталог для збереження:"
+
+#: ../src/e_mod_config.c:128 ../src/e_mod_config.c:215
+msgid "Filename:"
+msgstr "Ім'я файла:"
+
+#: ../src/e_mod_config.c:134 ../src/e_mod_config.c:221
+msgid "Application Settings"
+msgstr "Налаштування програми"
+
+#: ../src/e_mod_config.c:135 ../src/e_mod_config.c:222
+msgid "Launch application after taking screenshot"
+msgstr "Запуск програми після створення знімка екрана"
+
+#: ../src/e_mod_config.c:140 ../src/e_mod_config.c:238
+msgid "Thumbnail Settings"
+msgstr "Параметри мініатюр"
+
+#: ../src/e_mod_config.c:141 ../src/e_mod_config.c:239
+msgid "Generate thumbnail from screenshot"
+msgstr "Генерування мініатюр знімків екрана"
+
+#: ../src/e_mod_config.c:190
+msgid "Image Quality:"
+msgstr "Якість зображення:"
+
+#: ../src/e_mod_config.c:226
+msgid "Application:"
+msgstr "Програма:"
+
+#: ../src/e_mod_config.c:242
+msgid "Size:"
+msgstr "Розмір:"
+
+#: ../src/e_mod_config.c:247
+msgid "(Percentage of original image to use for thumbnail)"
+msgstr "(Відсоткове відношення мініатюри до початкового зображення)"
+
+#: ../src/e_mod_main.c:91 ../src/e_mod_main.c:266
+msgid "Screenshot"
+msgstr "Знімок екрана"
+
+#: ../src/e_mod_main.c:121
+msgid ""
+"Screenshot Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means Screenshot module needs new configuration<br>data by "
+"default for usable functionality that your old<br>configuration simply "
+"lacks. This new set of defaults will fix<br>that by adding it in. You can re-"
+"configure things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+"Дані параметрів модуля \"Знімок екрана\", потребують оновлення. Старі "
+"параметри<br>були знищені, а нові встановлено типовими. "
+"Таке<br>відбуватиметься регулярно під час розробки, тому не "
+"повідомляйте<br>про ваду. Це просто означає, що модуль \"Знімок екрана\" "
+"потребує нових типових параметрів даних<br>з прийнятною функціональністю, а "
+"старих бракує.<br>Новий типовий набір параметрів буде виправлений<br>шляхом "
+"додавання старих. Ви можете повторно налаштувати систему<br>за власним "
+"смаком. Вибачте за незручності<br>."
+
+#: ../src/e_mod_main.c:139
+msgid ""
+"Your Screenshot Module configuration is NEWER than the Screenshot Module "
+"version. This is very<br>strange. This should not happen unless you "
+"downgraded<br>the Screenshot Module or copied the configuration from a place "
+"where<br>a newer version of the Screenshot Module was running. This is bad "
+"and<br>as a precaution your configuration has been now restored "
+"to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+"Конфігурація модуля \"Знімок екрана\" НОВІША ніж конфігурація встановленої "
+"версії. Це дуже<br>дивно. Таке не мало б трапитись, якщо тільки ви не "
+"занизили<br>версію модуля \"Знімок екрана\", або не скопіювали "
+"конфігурацію<br>з місця з більш новою версією модуля \"Знімок "
+"екрана\".<br>Це неправильно, тому ваша конфігурація<br >відновлена до "
+"стандартної. Вибачте за незручності.<br>"
+
+#: ../src/e_mod_main.c:161 ../src/e_mod_main.c:176
+msgid "Take Screenshot"
+msgstr "Зробити знімок екрана"
+
+#: ../src/e_mod_main.c:304
+msgid "Screenshot Configuration Updated"
+msgstr "Оновлення конфігурації модуля \"Знімок екрана\""
+
+#: ../src/e_mod_main.c:393
+msgid "Settings"
+msgstr "Параметри"
+
+#: ../src/e_mod_main.c:467
+msgid "Screenshot Module"
+msgstr "Модуль \"Знімок екрана\""
+
+#: ../src/e_mod_main.c:468
+msgid "Enter a new filename for this screenshot"
+msgstr "Введіть ’м’я для цього знімка екрана"

@@ -1,0 +1,147 @@
+# This file is put in the public domain.
+# Daniel Korostil <ted.korostiled@gmail.com>, 2009.
+# Korostil Daniel <ted.korostiled@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: forecasts.HEAD\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2010-09-21 11:00-0700\n"
+"PO-Revision-Date: 2011-02-06 07:26+0300\n"
+"Last-Translator: Korostil Daniel <ted.korostiled@gmail.com>\n"
+"Language-Team: translation@linux.org.ua\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.6.1\n"
+
+#: ../src/e_mod_config.c:42
+#| msgid "Forecasts"
+msgid "Forecasts Settings"
+msgstr "Налаштування"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "Налаштування екрана"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "Час запиту"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f хвилин"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "Показати опис"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "Виринання при наведені курсора"
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "Налаштування одиниць вимірювання"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "Метрична"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "Англійська"
+
+#: ../src/e_mod_config.c:111
+#| msgid "Yahoo Forecasts Code"
+msgid "Weather.com Forecasts Code"
+msgstr "Код прогнозу погоди Weather.com"
+
+#: ../src/e_mod_config.c:112
+#| msgid "Yahoo Forecasts Code/US Zip Code"
+msgid "Forecasts Code/US Zip Code"
+msgstr "Code/US Zip код прогнозу погоди"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "Щоб знайти код вашої місцевості, перейдіть до:"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s, знайдіть вашу місцевість, і загляньте за посиланням"
+
+#: ../src/e_mod_main.c:254
+msgid "Forecasts"
+msgstr "Прогноз погоди"
+
+#: ../src/e_mod_main.c:301
+#| msgid "Unit Settings"
+msgid "Settings"
+msgstr "Налаштування"
+
+#: ../src/e_mod_main.c:993
+#, c-format
+msgid "%s: Current Conditions"
+msgstr "%s: Теперішні умови"
+
+#: ../src/e_mod_main.c:1009
+msgid "Wind Chill"
+msgstr "Прохолодний вітер"
+
+#: ../src/e_mod_main.c:1015
+msgid "Wind Speed"
+msgstr "Швидкий вітер"
+
+#: ../src/e_mod_main.c:1021
+msgid "Humidity"
+msgstr "Вологість"
+
+#: ../src/e_mod_main.c:1027
+msgid "Visibility"
+msgstr "Видимість"
+
+#: ../src/e_mod_main.c:1033
+msgid "Pressure"
+msgstr "Тиск"
+
+#: ../src/e_mod_main.c:1040
+msgid "Rising"
+msgstr "Зростання"
+
+#: ../src/e_mod_main.c:1042
+msgid "Falling"
+msgstr "Спадання"
+
+#: ../src/e_mod_main.c:1044
+msgid "Steady"
+msgstr "Рівномірний"
+
+#: ../src/e_mod_main.c:1048
+msgid "Sunrise / Sunset"
+msgstr "Схід / Захід"
+
+#: ../src/e_mod_main.c:1066
+msgid "Today"
+msgstr "Сьогодні"
+
+#: ../src/e_mod_main.c:1068
+msgid "Tomorrow"
+msgstr "Завтра"
+
+#: ../src/e_mod_main.c:1076
+msgid "High"
+msgstr "Високий"
+
+#: ../src/e_mod_main.c:1087
+msgid "Low"
+msgstr "Низький"
+
+#~ msgid "Forecasts Configuration"
+#~ msgstr "Налаштування пронозу погоди"
+
+#~ msgid "Configuration"
+#~ msgstr "Налаштування"

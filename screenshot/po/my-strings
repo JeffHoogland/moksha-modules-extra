@@ -1,0 +1,144 @@
+#: e_mod_config.c:33 e_mod_config.c:48 e_mod_main.c:72 e_mod_main.c:90
+#: e_mod_main.c:92 e_mod_main.c:160 e_mod_main.c:176 e_mod_main.c:267
+msgid "Screenshot"
+msgstr ""
+
+#: e_mod_config.c:48
+msgid "Screenshot Configuration"
+msgstr ""
+
+#: e_mod_config.c:99 e_mod_config.c:180
+msgid "General Settings"
+msgstr ""
+
+#: e_mod_config.c:100 e_mod_config.c:181
+msgid "Beep when taking screenshot"
+msgstr ""
+
+#: e_mod_config.c:103 e_mod_config.c:184
+msgid "Delay Time:"
+msgstr ""
+
+#: e_mod_config.c:105 e_mod_config.c:186
+#, c-format
+msgid "%1.0f seconds"
+msgstr ""
+
+#: e_mod_config.c:110 e_mod_config.c:197 e_mod_main.c:390
+msgid "Capture Mode"
+msgstr ""
+
+#: e_mod_config.c:112 e_mod_config.c:199 e_mod_main.c:365
+msgid "Whole Screen"
+msgstr ""
+
+#: e_mod_config.c:114 e_mod_config.c:201 e_mod_main.c:372
+msgid "Select Window"
+msgstr ""
+
+#: e_mod_config.c:116 e_mod_config.c:203 e_mod_main.c:379
+msgid "Select Region"
+msgstr ""
+
+#: e_mod_config.c:120 e_mod_config.c:207
+msgid "File Settings"
+msgstr ""
+
+#: e_mod_config.c:121 e_mod_config.c:208
+msgid "Always prompt for filename"
+msgstr ""
+
+#: e_mod_config.c:124 e_mod_config.c:211
+msgid "Save Directory:"
+msgstr ""
+
+#: e_mod_config.c:128 e_mod_config.c:215
+msgid "Filename:"
+msgstr ""
+
+#: e_mod_config.c:134 e_mod_config.c:221
+msgid "Application Settings"
+msgstr ""
+
+#: e_mod_config.c:135 e_mod_config.c:222
+msgid "Launch application after taking screenshot"
+msgstr ""
+
+#: e_mod_config.c:140 e_mod_config.c:238
+msgid "Thumbnail Settings"
+msgstr ""
+
+#: e_mod_config.c:141 e_mod_config.c:239
+msgid "Generate thumbnail from screenshot"
+msgstr ""
+
+#: e_mod_config.c:190
+msgid "Image Quality:"
+msgstr ""
+
+#: e_mod_config.c:226
+msgid "Application:"
+msgstr ""
+
+#: e_mod_config.c:242
+msgid "Size:"
+msgstr ""
+
+#: e_mod_config.c:247
+msgid "(Percentage of original image to use for thumbnail)"
+msgstr ""
+
+#: e_mod_main.c:64 e_mod_main.c:156 e_mod_main.c:161 e_mod_main.c:177
+#: e_mod_main.c:182
+msgid "screenshot"
+msgstr ""
+
+#: e_mod_main.c:81 e_mod_main.c:228 e_mod_main.c:484 e_mod_main.c:485
+#: e_mod_main.c:535 e_mod_main.c:616
+msgid ""
+msgstr ""
+
+#: e_mod_main.c:96
+msgid "Config"
+msgstr ""
+
+#: e_mod_main.c:122
+msgid ""
+"Screenshot Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means Screenshot module needs new configuration<br>data by "
+"default for usable functionality that your old<br>configuration simply "
+"lacks. This new set of defaults will fix<br>that by adding it in. You can re-"
+"configure things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+
+#: e_mod_main.c:140
+msgid ""
+"Your Screenshot Module configuration is NEWER than the Screenshot Module "
+"version. This is very<br>strange. This should not happen unless you "
+"downgraded<br>the Screenshot Module or copied the configuration from a place "
+"where<br>a newer version of the Screenshot Module was running. This is bad "
+"and<br>as a precaution your configuration has been now restored "
+"to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+
+#: e_mod_main.c:160 e_mod_main.c:176
+msgid "Take Screenshot"
+msgstr ""
+
+#: e_mod_main.c:305
+msgid "Screenshot Configuration Updated"
+msgstr ""
+
+#: e_mod_main.c:394
+msgid "Configuration"
+msgstr ""
+
+#: e_mod_main.c:468
+msgid "Screenshot Module"
+msgstr ""
+
+#: e_mod_main.c:469
+msgid "Enter a new filename for this screenshot"
+msgstr ""

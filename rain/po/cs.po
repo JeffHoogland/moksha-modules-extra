@@ -1,0 +1,54 @@
+# Czech translation.
+# This file is put in the public domain.
+# quaker66@gmail.com
+msgid ""
+msgstr ""
+"Project-Id-Version: Rain\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-10-16 14:36+0200\n"
+"PO-Revision-Date: 2011-01-04 18:52+0100\n"
+"Last-Translator: quaker66 <quaker66@gmail.com>\n"
+"Language-Team: Czech <quaker66@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Rain Module"
+msgstr "Modul Déšť"
+
+#: ../src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "Obecné nastavení"
+
+#: ../src/e_mod_config.c:101
+msgid "Show Clouds"
+msgstr "Zobrazit mraky"
+
+#: ../src/e_mod_config.c:105
+msgid "Rain Density"
+msgstr "Hustota deště"
+
+#: ../src/e_mod_config.c:107
+msgid "Sprinkle"
+msgstr "Přeháňka"
+
+#: ../src/e_mod_config.c:109
+msgid "Drizzle"
+msgstr "Mrholení"
+
+#: ../src/e_mod_config.c:111
+msgid "Downpour"
+msgstr "Liják"
+
+#: ../src/e_mod_main.c:33
+msgid "Look"
+msgstr "Vzhled"
+
+#: ../src/e_mod_main.c:35
+msgid "Rain"
+msgstr "Déšť"
+
+#~ msgid "Appearance"
+#~ msgstr "Vzhled"

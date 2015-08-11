@@ -1,0 +1,139 @@
+# Bulgarian translation of forecasts.
+# This file is put in the public domain.
+# Viktor Kojouharov <vkojouharov@abv.bg>, 2007-2009.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: forecasts 0.1.5\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-09-11 08:42+0000\n"
+"Last-Translator: vlood <vlood.vassilev@gmail.com>\n"
+"Language-Team: Bulgarian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:51+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Configuration"
+msgstr "Настройки на Прогнози"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "Настройки на изглед"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "Време за подновяване"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f·минути"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "Покажи описание"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "Да изскача на минаване отгоре с мишката"
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "Настройки за величини"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "Десетични"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "Английски"
+
+#: ../src/e_mod_config.c:111
+msgid "Yahoo Forecasts Code"
+msgstr "Код на Yahoo Forecasts"
+
+#: ../src/e_mod_config.c:112
+msgid "Yahoo Forecasts Code/US Zip Code"
+msgstr "(Пощенски) Код на Yahoo Forecasts"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "За да намерите кода на вашият район, отидете на:"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s, намерете си района, и вижте адреса на страницата"
+
+#: ../src/e_mod_main.c:255
+msgid "Forecasts"
+msgstr "Прогнози"
+
+#: ../src/e_mod_main.c:300
+msgid "Configuration"
+msgstr "Конфигурация"
+
+#: ../src/e_mod_main.c:1030
+msgid "Wind Chill"
+msgstr "Температура на вятъра"
+
+#: ../src/e_mod_main.c:1036
+msgid "Wind Speed"
+msgstr "Скорост на вятъра"
+
+#: ../src/e_mod_main.c:1042
+msgid "Humidity"
+msgstr "Влажност"
+
+#: ../src/e_mod_main.c:1048
+msgid "Visibility"
+msgstr "Видимост"
+
+#: ../src/e_mod_main.c:1054
+msgid "Pressure"
+msgstr "Налягане"
+
+#: ../src/e_mod_main.c:1061
+msgid "Rising"
+msgstr "Издигане"
+
+#: ../src/e_mod_main.c:1063
+msgid "Falling"
+msgstr "Спад"
+
+#: ../src/e_mod_main.c:1065
+msgid "Steady"
+msgstr "Без промяна"
+
+#: ../src/e_mod_main.c:1069
+msgid "Sunrise / Sunset"
+msgstr "Изгрев / Залез"
+
+#: ../src/e_mod_main.c:1093
+msgid "High"
+msgstr "Максимална"
+
+#: ../src/e_mod_main.c:1104
+msgid "Low"
+msgstr "Минимална"
+
+#~ msgid "A weather forecast module for Enlightenment"
+#~ msgstr "Модул за време и прогнози на Enlightenment"
+
+#~ msgid "Enlightenment Forecasts Module"
+#~ msgstr "Модул 'Прогнози' на Enlightenment"
+
+#~ msgid "Get your Yahoo Forecasts Code code at:"
+#~ msgstr "Намерете вашият Yahoo Forecasts код на:"
+
+#~ msgid "No location"
+#~ msgstr "Няма място"
+
+#~ msgid "No date"
+#~ msgstr "Няма дата"

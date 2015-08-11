@@ -1,0 +1,54 @@
+# Lithuanian translation for enlightenment
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"PO-Revision-Date: 2010-01-17 18:34+0000\n"
+"Last-Translator: Joshas <Unknown>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-18 04:44+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Rain Module"
+msgstr "Lietaus modulis"
+
+#: ../src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "Bendros nuostatos"
+
+#: ../src/e_mod_config.c:101
+msgid "Show Clouds"
+msgstr "Rodyti debesis"
+
+#: ../src/e_mod_config.c:105
+msgid "Rain Density"
+msgstr "Lietaus tankis"
+
+#: ../src/e_mod_config.c:107
+msgid "Sprinkle"
+msgstr "Purškimas"
+
+#: ../src/e_mod_config.c:109
+msgid "Drizzle"
+msgstr "Dulksna"
+
+#: ../src/e_mod_config.c:111
+msgid "Downpour"
+msgstr "Liūtis"
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr "Išvaizda"
+
+#: ../src/e_mod_main.c:35
+msgid "Rain"
+msgstr "Lietus"

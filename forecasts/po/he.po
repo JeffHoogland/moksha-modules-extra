@@ -1,0 +1,121 @@
+# Hebrew translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Yaron <sh.yaron@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-11-29 21:44+0000\n"
+"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Configuration"
+msgstr "תצורת התחזיות"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "הגדרות תצוגה"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "זמן האיחזור"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f דקות"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "הצג תיאור"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "הקפצת חלונית עם מעבר העכבר"
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "הגדרות יחידה"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "מטרית"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "אימפריאלית"
+
+#: ../src/e_mod_config.c:111
+msgid "Yahoo Forecasts Code"
+msgstr "קוד התחזית של יאהו"
+
+#: ../src/e_mod_config.c:112
+msgid "Yahoo Forecasts Code/US Zip Code"
+msgstr "קוד התחזיות של יאהו/קוד המיקוד האמריקאי"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "על מנת למצוא את הקוד התואם לאזורך, פנה אל:"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s, מצא את האזור שלך, והבט בכתובת"
+
+#: ../src/e_mod_main.c:255
+msgid "Forecasts"
+msgstr "תחזיות"
+
+#: ../src/e_mod_main.c:300
+msgid "Configuration"
+msgstr "תצורה"
+
+#: ../src/e_mod_main.c:1030
+msgid "Wind Chill"
+msgstr "משב הרוח"
+
+#: ../src/e_mod_main.c:1036
+msgid "Wind Speed"
+msgstr "מהירות הרוח"
+
+#: ../src/e_mod_main.c:1042
+msgid "Humidity"
+msgstr "לחות"
+
+#: ../src/e_mod_main.c:1048
+msgid "Visibility"
+msgstr "ראות"
+
+#: ../src/e_mod_main.c:1054
+msgid "Pressure"
+msgstr "לחץ"
+
+#: ../src/e_mod_main.c:1061
+msgid "Rising"
+msgstr "מתחזקת"
+
+#: ../src/e_mod_main.c:1063
+msgid "Falling"
+msgstr "נחלשת"
+
+#: ../src/e_mod_main.c:1065
+msgid "Steady"
+msgstr "יציבה"
+
+#: ../src/e_mod_main.c:1069
+msgid "Sunrise / Sunset"
+msgstr "זריחה / שקיעה"
+
+#: ../src/e_mod_main.c:1093
+msgid "High"
+msgstr "גבוהה"
+
+#: ../src/e_mod_main.c:1104
+msgid "Low"
+msgstr "נמוכה"

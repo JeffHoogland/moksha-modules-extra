@@ -1,0 +1,63 @@
+# Bulgarian translation for enlightenment
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-09-25 16:19+0000\n"
+"Last-Translator: vlood <vlood.vassilev@gmail.com>\n"
+"Language-Team: Bulgarian <bg@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:50+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:43
+msgid "Mem Configuration"
+msgstr "Конфигурация на Mem"
+
+#: ../src/e_mod_config.c:92
+msgid "General Settings"
+msgstr "Общи настройки"
+
+#: ../src/e_mod_config.c:94
+msgid "Always Show Text"
+msgstr "Винаги показвай текста"
+
+#: ../src/e_mod_config.c:96
+msgid "Show Text On Mouse Over"
+msgstr "Показвай текста при преминаване с мишката"
+
+#: ../src/e_mod_config.c:99
+msgid "Show Text As Percent"
+msgstr "Показвай текста като процент"
+
+#: ../src/e_mod_config.c:104
+msgid "Ignore Buffers"
+msgstr "Игнорирай буферите"
+
+#: ../src/e_mod_config.c:108
+msgid "Ignore Cached"
+msgstr "Игнорирай кеша"
+
+#: ../src/e_mod_config.c:112
+msgid "Check Interval:"
+msgstr "Интервал от време за проверка:"
+
+#: ../src/e_mod_config.c:115
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f·секунди"
+
+#: ../src/e_mod_main.c:105
+msgid "Mem"
+msgstr "Mem"
+
+#: ../src/e_mod_main.c:162
+msgid "Configuration"
+msgstr "Настройка"

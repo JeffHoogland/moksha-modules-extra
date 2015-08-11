@@ -1,0 +1,51 @@
+# Rain module (e17), Finnish translation
+# This file is put in the public domain.
+# Jani väyrynen <janivayrynen@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rain module (e17)\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-01-23 01:50+0200\n"
+"Last-Translator: Jani väyrynen <janivayrynen@gmail.com>\n"
+"Language-Team: Finnish <janivayrynen@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Rain Module"
+msgstr "Sademoduuli"
+
+#: ../src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "Yleisasetukset"
+
+#: ../src/e_mod_config.c:101
+msgid "Show Clouds"
+msgstr "Näytä pilvet"
+
+#: ../src/e_mod_config.c:105
+msgid "Rain Density"
+msgstr "Sateen tiheys"
+
+#: ../src/e_mod_config.c:107
+msgid "Sprinkle"
+msgstr "Tihkusade"
+
+#: ../src/e_mod_config.c:109
+msgid "Drizzle"
+msgstr "Normaali sade"
+
+#: ../src/e_mod_config.c:111
+msgid "Downpour"
+msgstr "Kaatosade"
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr "Ulkonäkö"
+
+#: ../src/e_mod_main.c:35
+msgid "Rain"
+msgstr "Sade"

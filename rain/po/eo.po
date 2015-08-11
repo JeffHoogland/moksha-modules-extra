@@ -1,0 +1,54 @@
+# Esperanto translations for places package.
+# Copyright (C) 2009 Enlightenment development team
+# This file is distributed under the same license as the places package.
+#
+# Olivier <eliovir@nospam.gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: places 0.1.0\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"PO-Revision-Date: 2010-01-23 19:59+0000\n"
+"Last-Translator: Michael Moroni <haikara90@gmail.com>\n"
+"Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-24 04:50+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Rain Module"
+msgstr "Modulo de pluvo"
+
+#: ../src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "Ĝeneralaj agordoj"
+
+#: ../src/e_mod_config.c:101
+msgid "Show Clouds"
+msgstr "Vidigi nubojn"
+
+#: ../src/e_mod_config.c:105
+msgid "Rain Density"
+msgstr "Denseco de pluvo"
+
+#: ../src/e_mod_config.c:107
+msgid "Sprinkle"
+msgstr "Surŝprucigi"
+
+#: ../src/e_mod_config.c:109
+msgid "Drizzle"
+msgstr "Pluveto"
+
+#: ../src/e_mod_config.c:111
+msgid "Downpour"
+msgstr "Pluvego"
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr "Aspekto"
+
+#: ../src/e_mod_main.c:35
+msgid "Rain"
+msgstr "Pluvo"

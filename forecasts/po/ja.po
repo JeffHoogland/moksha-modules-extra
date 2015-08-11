@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# Yasufumi Haga <yasufumi.haga@nifty.com>, 2006-2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Weather\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-11-22 04:19+0000\n"
+"Last-Translator: Yasufumi Haga <yasufumi.haga@nifty.com>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-04-12 06:45+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Forecasts Configuration"
+msgstr "forecasts の設定"
+
+#: ../src/e_mod_config.c:90
+msgid "Display Settings"
+msgstr "表示設定"
+
+#: ../src/e_mod_config.c:91
+msgid "Poll Time"
+msgstr "監視間隔"
+
+#: ../src/e_mod_config.c:94
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f 分"
+
+#: ../src/e_mod_config.c:97
+msgid "Show Description"
+msgstr "説明を表示する"
+
+#: ../src/e_mod_config.c:99
+msgid "Popup on mouse over"
+msgstr "マウスが乗ったらポップアップ表示"
+
+#: ../src/e_mod_config.c:103
+msgid "Unit Settings"
+msgstr "単位設定"
+
+#: ../src/e_mod_config.c:105
+msgid "Metric"
+msgstr "メートル法"
+
+#: ../src/e_mod_config.c:107
+msgid "English"
+msgstr "ヤード・ポンド法"
+
+#: ../src/e_mod_config.c:111
+msgid "Yahoo Forecasts Code"
+msgstr "Yahoo 天気予報コード"
+
+#: ../src/e_mod_config.c:112
+msgid "Yahoo Forecasts Code/US Zip Code"
+msgstr "Yahoo 天気予報コード／米国郵便番号"
+
+#: ../src/e_mod_config.c:117
+msgid "To find the code for your area, go to:"
+msgstr "自分の居住地のコードは以下のサイトに行き:"
+
+#: ../src/e_mod_config.c:119
+#, c-format
+msgid "%s, find your area, and look at the URL"
+msgstr "%s, 自分の居住地を探して、そのURLを見てください"
+
+#: ../src/e_mod_main.c:255
+msgid "Forecasts"
+msgstr ""
+
+#: ../src/e_mod_main.c:300
+msgid "Configuration"
+msgstr "設定"
+
+#: ../src/e_mod_main.c:1030
+msgid "Wind Chill"
+msgstr "体感温度"
+
+#: ../src/e_mod_main.c:1036
+msgid "Wind Speed"
+msgstr "風速"
+
+#: ../src/e_mod_main.c:1042
+msgid "Humidity"
+msgstr "湿度"
+
+#: ../src/e_mod_main.c:1048
+msgid "Visibility"
+msgstr "視界"
+
+#: ../src/e_mod_main.c:1054
+msgid "Pressure"
+msgstr "気圧"
+
+#: ../src/e_mod_main.c:1061
+msgid "Rising"
+msgstr "上昇"
+
+#: ../src/e_mod_main.c:1063
+msgid "Falling"
+msgstr "下降"
+
+#: ../src/e_mod_main.c:1065
+msgid "Steady"
+msgstr "横ばい"
+
+#: ../src/e_mod_main.c:1069
+msgid "Sunrise / Sunset"
+msgstr "日の出／日の入り"
+
+#: ../src/e_mod_main.c:1093
+msgid "High"
+msgstr "高"
+
+#: ../src/e_mod_main.c:1104
+msgid "Low"
+msgstr "低"
+
+#~ msgid "Simple"
+#~ msgstr "簡略"
+
+#~ msgid "Detailed"
+#~ msgstr "詳細"
+
+#~ msgid "Degree Settings"
+#~ msgstr "温度単位"
+
+#~ msgid "Celsius"
+#~ msgstr "摂氏"
+
+#~ msgid "Farenheit"
+#~ msgstr "華氏"
+
+#~ msgid "ICAO Code"
+#~ msgstr "ICAO コード"
+
+#~ msgid "Get your ICAO code at:"
+#~ msgstr "指定 ICAO コードの入手先"
+
+#~ msgid "Enlightenment Weather Module"
+#~ msgstr "Enlightenment weather モジュール"
+
+#~ msgid "A weather forecast module for Enlightenment"
+#~ msgstr "Enlightenment 用天気予報モジュール"
