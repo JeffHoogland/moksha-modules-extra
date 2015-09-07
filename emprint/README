@@ -1,0 +1,6 @@
+Emprint
+---------------------------------------------------------
+Emprint is a utility for taking screenshots of the entire screen, a specific
+window, or a specific region. It is written with the Enlightenment Foundation
+Libraries (http://www.enlightnement.org). It depends on a large number of
+libraries that are only available in CVS at the moment.
