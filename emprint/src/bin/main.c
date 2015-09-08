@@ -554,7 +554,8 @@ _em_take_shot(int x, int y, int w, int h)
    char buff[1024];
 
    /* if user wanted a beep, then beep there shall be */
-   if (opts->beep) ecore_x_bell(0);
+    if (opts->beep) system("aplay /usr/local/share/emprint/images/Camera.wav");
+   //if (opts->beep) ecore_x_bell(0);
 
    memset(&att, 0, sizeof(Ecore_X_Window_Attributes));
    root = ecore_x_window_root_first_get();
