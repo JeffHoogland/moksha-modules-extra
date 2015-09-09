@@ -1,0 +1,73 @@
+# Esperanto translation of net.
+# This file is distributed under the same license as the net package.
+# Olivier M. <olivierweb@ifrance.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Net\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"PO-Revision-Date: 2010-01-24 16:19+0000\n"
+"Last-Translator: Michael Moroni <haikara90@gmail.com>\n"
+"Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-25 04:49+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-Language: Esperanto\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../src/e_mod_configure.c:44
+msgid "Net Module Configuration"
+msgstr "Agordo de la modulo pri reto"
+
+#: ../src/e_mod_configure.c:114
+msgid "General Settings"
+msgstr "Ĝeneralaj agordoj"
+
+#: ../src/e_mod_configure.c:115
+msgid "Show Text"
+msgstr "Montri tekston"
+
+#: ../src/e_mod_configure.c:117
+msgid "Show Popup On Mouse-Over"
+msgstr "Montri ŝprucfenestron dum muso supras"
+
+#: ../src/e_mod_configure.c:119
+msgid "Launch Application On Double-Click"
+msgstr "Ruli aplikaĵon per duobla alklako"
+
+#: ../src/e_mod_configure.c:125
+msgid "Activity Notification Level"
+msgstr "Ofteco de atentigo pri aktiveco"
+
+#: ../src/e_mod_configure.c:127
+msgid "High (MB)"
+msgstr "Alta (MB)"
+
+#: ../src/e_mod_configure.c:129
+msgid "Middle (KB)"
+msgstr "Meza (KB)"
+
+#: ../src/e_mod_configure.c:131
+msgid "Low (B)"
+msgstr "Malalta (B)"
+
+#: ../src/e_mod_configure.c:137
+msgid "Device Settings"
+msgstr "Agordoj pri aparatoj"
+
+#: ../src/e_mod_gadcon.c:91
+msgid "Net"
+msgstr "Reto"
+
+#: ../src/e_mod_net.c:168
+msgid "Configuration"
+msgstr "Agordoj"
+
+#: ../src/e_mod_net.c:203
+#, c-format
+msgid "Device - %s"
+msgstr "Aparato - %s"

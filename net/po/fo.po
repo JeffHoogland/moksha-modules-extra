@@ -1,0 +1,68 @@
+# Faroese translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-07-14 16:55+0000\n"
+"Last-Translator: Gunleif Joensen <Unknown>\n"
+"Language-Team: Faroese <fo@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_configure.c:44
+msgid "Net Module Configuration"
+msgstr "Net-mótula samanseting"
+
+#: ../src/e_mod_configure.c:114
+msgid "General Settings"
+msgstr "Almennar setingar"
+
+#: ../src/e_mod_configure.c:115
+msgid "Show Text"
+msgstr "Vís tekst"
+
+#: ../src/e_mod_configure.c:117
+msgid "Show Popup On Mouse-Over"
+msgstr "Vís støkkmynd við at halda músina yvir"
+
+#: ../src/e_mod_configure.c:119
+msgid "Launch Application On Double-Click"
+msgstr "Koyr nýtsluskipan við at dupultklikkja"
+
+#: ../src/e_mod_configure.c:125
+msgid "Activity Notification Level"
+msgstr ""
+
+#: ../src/e_mod_configure.c:127
+msgid "High (MB)"
+msgstr "Høgt (MB)"
+
+#: ../src/e_mod_configure.c:129
+msgid "Middle (KB)"
+msgstr "Meðal (KB)"
+
+#: ../src/e_mod_configure.c:131
+msgid "Low (B)"
+msgstr "Lágt (B)"
+
+#: ../src/e_mod_configure.c:137
+msgid "Device Settings"
+msgstr "Samanseting av tóleindum"
+
+#: ../src/e_mod_gadcon.c:91
+msgid "Net"
+msgstr "Net"
+
+#: ../src/e_mod_net.c:168
+msgid "Configuration"
+msgstr "Samanseting"
+
+#: ../src/e_mod_net.c:203
+#, c-format
+msgid "Device - %s"
+msgstr "Tóleind - %s"

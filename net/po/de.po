@@ -1,0 +1,75 @@
+# German translation of net.
+# Copyright (C) 2008 Enlightenment development team
+# This file is distributed under the same license as the net package.
+# Andreas Volz <andreas.volz@tux-style.de>, 2008.
+# , fuzzy
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: net 0.0.1\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2010-11-23 23:44+0100\n"
+"PO-Revision-Date: 2008-01-06 17:54+0100\n"
+"Last-Translator: Andreas Volz <andreas.volz@tux-style.de>\n"
+"Language-Team: German\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_configure.c:44
+msgid "Net Module Settings"
+msgstr "Einstellungen für Netzwerkmodul"
+
+#: src/e_mod_configure.c:116
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: src/e_mod_configure.c:117
+msgid "Show Text"
+msgstr "Text zeigen"
+
+#: src/e_mod_configure.c:119
+msgid "Show Popup On Mouse-Over"
+msgstr "Popup mit Übertragungsdetails bei Überfahren mit Maus zeigen"
+
+#: src/e_mod_configure.c:121
+msgid "Launch Application On Double-Click"
+msgstr "Folgende Anwendung bei einem Doppelklick ausführen:"
+
+#: src/e_mod_configure.c:127
+msgid "Activity Notification Level"
+msgstr "Empfindlichkeit für Netzwerkverkehr"
+
+#: src/e_mod_configure.c:129
+msgid "High (MB)"
+msgstr "Hoch (MB)"
+
+#: src/e_mod_configure.c:131
+msgid "Middle (KB)"
+msgstr "Mittel (KB)"
+
+#: src/e_mod_configure.c:133
+msgid "Low (B)"
+msgstr "Niedrig (Byte)"
+
+#: src/e_mod_configure.c:139
+msgid "Device Settings"
+msgstr "Geräte-Einstellungen"
+
+#: src/e_mod_gadcon.c:91
+msgid "Net"
+msgstr "Netzwerk"
+
+#: src/e_mod_net.c:167
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: src/e_mod_net.c:199
+#, c-format
+msgid "Device - %s"
+msgstr "Gerät %s"
+
+#~ msgid "Configuration"
+#~ msgstr "Konfiguration"

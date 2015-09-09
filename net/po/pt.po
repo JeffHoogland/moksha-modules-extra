@@ -1,0 +1,76 @@
+# Portuguese translation for net
+# This file is distributed under the same license as the enlightenment package.
+# Adaptado ao acordo ortográfico de 1990
+# Sérgio Marques <smarquespt@gmail.com>, 2010.
+# Sérgio Marques <sarquespt@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: net\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2010-09-09 08:00-0700\n"
+"PO-Revision-Date: 2012-08-25 01:28+0100\n"
+"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"Language-Team: Portuguese <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: Portugal\n"
+"X-Generator: Lokalize 1.1\n"
+
+#: ../src/e_mod_configure.c:44
+#| msgid "Net Module Configuration"
+msgid "Net Module Settings"
+msgstr "Definições"
+
+#: ../src/e_mod_configure.c:116
+msgid "General Settings"
+msgstr "Definições gerais"
+
+#: ../src/e_mod_configure.c:117
+msgid "Show Text"
+msgstr "Mostrar texto "
+
+#: ../src/e_mod_configure.c:119
+msgid "Show Popup On Mouse-Over"
+msgstr "Mostrar alerta ao passar com o rato"
+
+#: ../src/e_mod_configure.c:121
+msgid "Launch Application On Double-Click"
+msgstr "Iniciar aplicação com duplo clique"
+
+#: ../src/e_mod_configure.c:127
+msgid "Activity Notification Level"
+msgstr "Notificação do nível de atividade"
+
+#: ../src/e_mod_configure.c:129
+msgid "High (MB)"
+msgstr "Alta (MB)"
+
+#: ../src/e_mod_configure.c:131
+msgid "Middle (KB)"
+msgstr "Média (KB)"
+
+#: ../src/e_mod_configure.c:133
+msgid "Low (B)"
+msgstr "Baixa (B)"
+
+#: ../src/e_mod_configure.c:139
+msgid "Device Settings"
+msgstr "Definições do dispositivo"
+
+#: ../src/e_mod_gadcon.c:91
+msgid "Net"
+msgstr "Net"
+
+#: ../src/e_mod_net.c:167
+#| msgid "Device Settings"
+msgid "Settings"
+msgstr "Definições"
+
+#: ../src/e_mod_net.c:199
+#, c-format
+msgid "Device - %s"
+msgstr "Dispositivo - %s"
+
