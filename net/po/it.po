@@ -1,0 +1,68 @@
+# Italian translation for E17 net module.
+# This file is put in the public domain.
+# Massimo Maiurana <maiurana@inwind.it>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Net\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2010-09-10 12:29+0200\n"
+"PO-Revision-Date: 2010-09-10 12:47+0200\n"
+"Last-Translator: Massimo Maiurana <maiurana@inwind.it>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: src/e_mod_configure.c:44
+msgid "Net Module Settings"
+msgstr "Impostazioni di Net"
+
+#: src/e_mod_configure.c:116
+msgid "General Settings"
+msgstr "Impostazioni generali"
+
+#: src/e_mod_configure.c:117
+msgid "Show Text"
+msgstr "Mostra testo"
+
+#: src/e_mod_configure.c:119
+msgid "Show Popup On Mouse-Over"
+msgstr "Mostra popup al passaggio del mouse"
+
+#: src/e_mod_configure.c:121
+msgid "Launch Application On Double-Click"
+msgstr "Lancia applicazione al doppio click"
+
+#: src/e_mod_configure.c:127
+msgid "Activity Notification Level"
+msgstr "Livello di notifica attività"
+
+#: src/e_mod_configure.c:129
+msgid "High (MB)"
+msgstr "Alto (MB)"
+
+#: src/e_mod_configure.c:131
+msgid "Middle (KB)"
+msgstr "Medio (KB)"
+
+#: src/e_mod_configure.c:133
+msgid "Low (B)"
+msgstr "Basso (B)"
+
+#: src/e_mod_configure.c:139
+msgid "Device Settings"
+msgstr "Impostazione del dispositivo"
+
+#: src/e_mod_gadcon.c:91
+msgid "Net"
+msgstr "Net"
+
+#: src/e_mod_net.c:167
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: src/e_mod_net.c:199
+#, c-format
+msgid "Device - %s"
+msgstr "Dispositivo - %s"

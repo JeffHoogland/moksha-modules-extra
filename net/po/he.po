@@ -1,0 +1,68 @@
+# Hebrew translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Yaron <sh.yaron@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-02-23 16:11+0800\n"
+"PO-Revision-Date: 2008-11-29 21:17+0000\n"
+"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_configure.c:44
+msgid "Net Module Configuration"
+msgstr "תצורת מודול הרשת"
+
+#: ../src/e_mod_configure.c:114
+msgid "General Settings"
+msgstr "הגדרות כלליות"
+
+#: ../src/e_mod_configure.c:115
+msgid "Show Text"
+msgstr "הצג טקסט"
+
+#: ../src/e_mod_configure.c:117
+msgid "Show Popup On Mouse-Over"
+msgstr "הצג חלונית עם מעבר סמן העכבר"
+
+#: ../src/e_mod_configure.c:119
+msgid "Launch Application On Double-Click"
+msgstr "טען תוכניות עם לחיצה כפולה"
+
+#: ../src/e_mod_configure.c:125
+msgid "Activity Notification Level"
+msgstr "רמת פעילות ההתרעות"
+
+#: ../src/e_mod_configure.c:127
+msgid "High (MB)"
+msgstr "גבוהה (מ\"ב)"
+
+#: ../src/e_mod_configure.c:129
+msgid "Middle (KB)"
+msgstr "ממוצעת (ק\"ב)"
+
+#: ../src/e_mod_configure.c:131
+msgid "Low (B)"
+msgstr "נמוכה (ב')"
+
+#: ../src/e_mod_configure.c:137
+msgid "Device Settings"
+msgstr "הגדרות ההתקן"
+
+#: ../src/e_mod_gadcon.c:91
+msgid "Net"
+msgstr "רשת"
+
+#: ../src/e_mod_net.c:168
+msgid "Configuration"
+msgstr "תצורה"
+
+#: ../src/e_mod_net.c:203
+#, c-format
+msgid "Device - %s"
+msgstr "התקן - %s"

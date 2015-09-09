@@ -1,0 +1,71 @@
+# Bulgarian translation for enlightenment
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-09-25 16:34+0000\n"
+"Last-Translator: vlood <vlood.vassilev@gmail.com>\n"
+"Language-Team: Bulgarian <bg@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:51+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_configure.c:44
+msgid "Net Module Configuration"
+msgstr "Настройка на модула за мрежата"
+
+#: ../src/e_mod_configure.c:114
+msgid "General Settings"
+msgstr "Общи настройки"
+
+#: ../src/e_mod_configure.c:115
+msgid "Show Text"
+msgstr "Показване на текста"
+
+#: ../src/e_mod_configure.c:117
+msgid "Show Popup On Mouse-Over"
+msgstr "Покажи изскачащ диалог при преминаване с мишката"
+
+#: ../src/e_mod_configure.c:119
+msgid "Launch Application On Double-Click"
+msgstr "Пусни приложението при двойно кликане"
+
+#: ../src/e_mod_configure.c:125
+msgid "Activity Notification Level"
+msgstr "Ниво на известие за активността"
+
+#: ../src/e_mod_configure.c:127
+msgid "High (MB)"
+msgstr "Високо (МБ)"
+
+#: ../src/e_mod_configure.c:129
+msgid "Middle (KB)"
+msgstr "Средно (КБ)"
+
+#: ../src/e_mod_configure.c:131
+msgid "Low (B)"
+msgstr "Ниско (Б)"
+
+#: ../src/e_mod_configure.c:137
+msgid "Device Settings"
+msgstr "Настройки на устройство"
+
+#: ../src/e_mod_gadcon.c:91
+msgid "Net"
+msgstr "Мрежа"
+
+#: ../src/e_mod_net.c:168
+msgid "Configuration"
+msgstr "Настройка"
+
+#: ../src/e_mod_net.c:203
+#, c-format
+msgid "Device - %s"
+msgstr "Устройство - %s"
