@@ -13,6 +13,8 @@
 #define DEGREES_F 0
 #define DEGREES_C 1
 
+
+
 typedef struct _Config Config;
 typedef struct _Config_Item Config_Item;
 typedef struct _Popup Popup;
@@ -31,6 +33,7 @@ struct _Config_Item
    const char *id;
 
    double poll_time;
+   double days;
    int degrees;
    const char *host, *code;
    int show_text;

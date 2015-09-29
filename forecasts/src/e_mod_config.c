@@ -4,6 +4,7 @@
 struct _E_Config_Dialog_Data
 {
    double poll_time;
+   double days;
    int    display;
    int    degrees;
    char  *code;
@@ -47,6 +48,7 @@ static void
 _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
 {
    cfdata->poll_time = (ci->poll_time / 60.0);
+   cfdata->days = (ci->days / 5.0);
    cfdata->degrees = ci->degrees;
    if (ci->code)
      cfdata->code = strdup(ci->code);
@@ -90,10 +92,14 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas,
    of = e_widget_framelist_add(evas, D_("Display Settings"), 0);
    ob = e_widget_label_add(evas, D_("Poll Time"));
    e_widget_framelist_object_append(of, ob);
-   ob =
-     e_widget_slider_add(evas, 1, 0, D_("%2.0f minutes"), 15.0, 60.0, 1.0, 0,
-                         &(cfdata->poll_time), NULL, 40);
+   ob = e_widget_slider_add(evas, 1, 0, D_("%2.0f minutes"), 15.0, 60.0, 1.0, 0,&(cfdata->poll_time), NULL, 40);
    e_widget_framelist_object_append(of, ob);
+   
+   ob = e_widget_label_add(evas, D_("Forecasts days"));
+   e_widget_framelist_object_append(of, ob);
+   ob = e_widget_slider_add(evas, 1, 0, D_("%2.0f days       "), 2.0, 5.0, 1.0, 0, &(cfdata->days), NULL, 40);
+   e_widget_framelist_object_append(of, ob);
+   
    ob = e_widget_check_add(evas, D_("Show Description"), &(cfdata->show_text));
    e_widget_framelist_object_append(of, ob);
    ob = e_widget_check_add(evas, D_("Popup on mouse over"), &(cfdata->popup_on_hover));
@@ -112,7 +118,7 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas,
    ob = e_widget_label_add(evas, D_("Forecasts Code/US Zip Code"));
    e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 0, 1, 0);
    ob = e_widget_entry_add(evas, &cfdata->code, NULL, NULL, NULL);
-   e_widget_size_min_set(ob, 100, 28);
+   e_widget_size_min_set(ob, 120, 28);
    e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 0, 1, 0);
    ob = e_widget_label_add(evas, D_("To find the code for your area, go to:"));
    e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 0, 1, 0);
@@ -138,6 +144,8 @@ _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 
    ci->degrees = cfdata->degrees;
    ci->poll_time = (cfdata->poll_time * 60.0);
+   ci->days = (cfdata->days * 5.0);
+   
    if (ci->code)
      eina_stringshare_del(ci->code);
 

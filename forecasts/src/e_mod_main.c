@@ -1,7 +1,7 @@
 #include <e.h>
 #include "e_mod_main.h"
 
-#define FORECASTS    2
+//#define FORECASTS    5
 #define KM_TO_MI     1.609344
 #define MB_TO_IN     68.946497518
 
@@ -84,7 +84,7 @@ struct _Instance
       char date[12];
       int  low, high, code;
       char desc[256];
-   } forecast[FORECASTS];
+   } forecast[5];
 
    Eina_Strbuf    *buffer;
    const char     *location;
@@ -370,6 +370,7 @@ _forecasts_config_item_get(const char *id)
    ci = E_NEW(Config_Item, 1);
    ci->id = eina_stringshare_add(id);
    ci->poll_time = 60.0;
+   ci->days = 15.0;
    ci->degrees = DEGREES_C;
    ci->host = eina_stringshare_add("xml.weather.yahoo.com");
    ci->code = eina_stringshare_add("BUXX0005");
@@ -402,6 +403,7 @@ e_modapi_init(E_Module *m)
 #define D conf_item_edd
    E_CONFIG_VAL(D, T, id, STR);
    E_CONFIG_VAL(D, T, poll_time, DOUBLE);
+   E_CONFIG_VAL(D, T, days, DOUBLE);
    E_CONFIG_VAL(D, T, degrees, INT);
    E_CONFIG_VAL(D, T, host, STR);
    E_CONFIG_VAL(D, T, code, STR);
@@ -424,6 +426,7 @@ e_modapi_init(E_Module *m)
 
         ci = E_NEW(Config_Item, 1);
         ci->poll_time = 60.0;
+        ci->days = 15.0;
         ci->degrees = DEGREES_C;
         ci->host = eina_stringshare_add("xml.weather.yahoo.com");
         ci->code = eina_stringshare_add("BUXX0005");
@@ -764,7 +767,7 @@ _forecasts_parse(void *data)
    sscanf(needle, "\"%8[^\"]\"", inst->details.astronomy.sunset);
 
    /* Forecasts */
-   for (i = 0; i < FORECASTS; i++)
+   for (i = 0; i < inst->ci->days / 5; i++)
      {
         needle = strstr(needle, "<yweather:forecast day=");
         if (!needle) goto error;
@@ -827,7 +830,7 @@ _forecasts_converter(Instance *inst)
    _forecasts_convert_distances(&inst->details.wind.speed, dir);
    _forecasts_convert_distances_float(&inst->details.atmosphere.visibility, dir);
    _forecasts_convert_pressures(&inst->details.atmosphere.pressure, dir);
-   for (i = 0; i < FORECASTS; i++)
+   for (i = 0; i < inst->ci->days / 5; i++)
      {
         _forecasts_convert_degrees(&inst->forecast[i].low, dir);
         _forecasts_convert_degrees(&inst->forecast[i].high, dir);
@@ -894,8 +897,7 @@ _forecasts_display_set(Instance *inst, int ok)
 
    snprintf(buf, sizeof(buf), "%d°%c", inst->condition.temp, inst->units.temp);
    edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.temp", buf);
-   edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.description",
-                             inst->condition.desc);
+   edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.description", inst->condition.desc);
    edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.location", inst->location);
 
    if (inst->gcc->gadcon->orient == E_GADCON_ORIENT_FLOAT)
@@ -903,7 +905,7 @@ _forecasts_display_set(Instance *inst, int ok)
         char buf[4096], name[60];
         int i;
 
-        for (i = 0; i < FORECASTS; i++)
+        for (i = 0; i < inst->ci->days / 5; i++)
           {
              Evas_Object *swallow;
 
@@ -970,13 +972,13 @@ _forecasts_config_updated(Config_Item *ci)
 
         if (area_changed)
           _forecasts_cb_check(inst);
+          
         if (!inst->check_timer)
-          inst->check_timer =
-            ecore_timer_add(inst->ci->poll_time, _forecasts_cb_check,
-                            inst);
+          inst->check_timer = ecore_timer_add(inst->ci->poll_time, _forecasts_cb_check, inst);
         else
-          ecore_timer_interval_set(inst->check_timer,
-                                   inst->ci->poll_time);
+          ecore_timer_interval_set(inst->check_timer, inst->ci->poll_time);
+          
+          
      }
 }
 
@@ -1000,16 +1002,15 @@ _forecasts_popup_content_create(Instance *inst)
 
    snprintf(buf, sizeof(buf), "%s: %d°%c", inst->condition.desc, inst->condition.temp, inst->units.temp);
    ob = e_widget_label_add(evas, buf);
-   e_widget_frametable_object_append(of, ob, 0, row, 2, 1, 0, 0, 1, 0);
+   e_widget_frametable_object_append(of, ob, 0, row, 2, 1, 0, 1, 1, 0);
 
-   oi = _forecasts_popup_icon_create(inst->popup->win->evas,
-                                     inst->condition.code);
+   oi = _forecasts_popup_icon_create(inst->popup->win->evas, inst->condition.code);
    edje_object_size_max_get(oi, &w, &h);
    DEBUG("Icon size %dx%d", w, h);
    if (w > 160) w = 160;  /* For now there is a limit to how big the icon should be */
    if (h > 160) h = 160;  /* In the future, the icon should be set from the theme, not part of the table */
    ob = e_widget_image_add_from_object(evas, oi, w, h);
-   e_widget_frametable_object_append(of, ob, 2, row, 1, 4, 1, 1, 1, 1);
+   e_widget_frametable_object_append(of, ob, 2, row, 1, 2, 1, 0, 1, 1);
 
    ob = e_widget_label_add(evas, D_("Wind Chill"));
    e_widget_frametable_object_append(of, ob, 0, ++row, 1, 1, 1, 0, 0, 0);
@@ -1063,7 +1064,7 @@ _forecasts_popup_content_create(Instance *inst)
    e_widget_list_object_append(o, of, 1, 1, 0.5);
    ol = e_widget_list_add(evas, 1, 1);
 
-   for (i = 0; i < FORECASTS; i++)
+   for (i = 0; i < inst->ci->days / 5; i++)
      {
         int row = 0;
 
@@ -1076,7 +1077,7 @@ _forecasts_popup_content_create(Instance *inst)
         of = e_widget_frametable_add(evas, buf, 0);
 
         ob = e_widget_label_add(evas, inst->forecast[i].desc);
-        e_widget_frametable_object_append(of, ob, 0, row, 3, 1, 0, 0, 1, 0);
+        e_widget_frametable_object_append(of, ob, 0, row, 3, 1, 0, 1, 1, 1);
 
         ob = e_widget_label_add(evas, D_("High"));
         e_widget_frametable_object_append(of, ob, 0, ++row, 1, 1, 1, 0, 1, 0);
@@ -1084,9 +1085,7 @@ _forecasts_popup_content_create(Instance *inst)
         ob = e_widget_label_add(evas, buf);
         e_widget_frametable_object_append(of, ob, 1, row, 1, 1, 1, 0, 1, 0);
 
-        ob = e_widget_image_add_from_object(evas,
-                                            _forecasts_popup_icon_create(inst->popup->win->evas,
-                                                                         inst->forecast[i].code), 0, 0);
+        ob = e_widget_image_add_from_object(evas,_forecasts_popup_icon_create(inst->popup->win->evas,inst->forecast[i].code), 0, 0);
         e_widget_frametable_object_append(of, ob, 2, row, 1, 2, 1, 1, 0, 0);
 
         ob = e_widget_label_add(evas, D_("Low"));
