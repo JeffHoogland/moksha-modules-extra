@@ -323,7 +323,7 @@ _cfg_new(void)
    ss_cfg->mode = 0;
    ss_cfg->quality = 75;
    ss_cfg->thumb_size = 50;
-   ss_cfg->delay = 60.0;
+   ss_cfg->delay = 5.0;
    ss_cfg->prompt = 0;
    ss_cfg->use_app = 0;
    ss_cfg->use_bell = 1;
