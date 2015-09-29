@@ -323,7 +323,7 @@ _cfg_new(void)
    ss_cfg->mode = 0;
    ss_cfg->quality = 75;
    ss_cfg->thumb_size = 50;
-   ss_cfg->delay = 5.0;
+   ss_cfg->delay = 5.0; //fixed value
    ss_cfg->prompt = 0;
    ss_cfg->use_app = 0;
    ss_cfg->use_bell = 1;
@@ -721,3 +721,4 @@ _cb_timer(void *data)
    inst->counter++;
    return EINA_TRUE;
 }
+
