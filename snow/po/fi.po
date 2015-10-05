@@ -1,0 +1,51 @@
+# Snow module (e17), Finnish translation
+# This file is put in the public domain.
+# Jani väyrynen <janivayrynen@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Snow module (e17)\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-01-23 01:50+0200\n"
+"Last-Translator: Jani väyrynen <janivayrynen@gmail.com>\n"
+"Language-Team: Finnish <janivayrynen@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Snow Configuration"
+msgstr "Lumen asetukset"
+
+#: ../src/e_mod_config.c:99
+msgid "General Settings"
+msgstr "Yleisasetukset"
+
+#: ../src/e_mod_config.c:100
+msgid "Show Trees"
+msgstr "Näytä puut"
+
+#: ../src/e_mod_config.c:104
+msgid "Snow Density"
+msgstr "Lumen tiheys"
+
+#: ../src/e_mod_config.c:106
+msgid "Sparse"
+msgstr "Harva"
+
+#: ../src/e_mod_config.c:108
+msgid "Medium"
+msgstr "Keskitaso"
+
+#: ../src/e_mod_config.c:110
+msgid "Dense"
+msgstr "Sankka"
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr "Ulkonäkö"
+
+#: ../src/e_mod_main.c:35
+msgid "Snow"
+msgstr "Lumi"

@@ -1,0 +1,51 @@
+# Russian translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-04-17 18:46+0000\n"
+"Last-Translator: Roman Azarenko aka BasicXP <x12ozmouse@ya.ru>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Snow Configuration"
+msgstr "Конфигурация модуля \"Снег\""
+
+#: ../src/e_mod_config.c:99
+msgid "General Settings"
+msgstr "Основные параметры"
+
+#: ../src/e_mod_config.c:100
+msgid "Show Trees"
+msgstr "Показать деревья"
+
+#: ../src/e_mod_config.c:104
+msgid "Snow Density"
+msgstr "Плотность снега"
+
+#: ../src/e_mod_config.c:106
+msgid "Sparse"
+msgstr "Слабый снег"
+
+#: ../src/e_mod_config.c:108
+msgid "Medium"
+msgstr "Средний снег"
+
+#: ../src/e_mod_config.c:110
+msgid "Dense"
+msgstr "Сильный снег"
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr "Внешний вид"
+
+#: ../src/e_mod_main.c:35
+msgid "Snow"
+msgstr "Снег"

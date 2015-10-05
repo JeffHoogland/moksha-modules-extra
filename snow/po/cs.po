@@ -1,0 +1,54 @@
+# Czech translation.
+# This file is put in the public domain.
+# quaker66@gmail.com
+msgid ""
+msgstr ""
+"Project-Id-Version: Snow\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-10-16 14:36+0200\n"
+"PO-Revision-Date: 2011-01-04 18:52+0100\n"
+"Last-Translator: quaker66 <quaker66@gmail.com>\n"
+"Language-Team: Czech <quaker66@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Snow Configuration"
+msgstr "Nastavení modulu Sníh"
+
+#: ../src/e_mod_config.c:99
+msgid "General Settings"
+msgstr "Obecné nastavení"
+
+#: ../src/e_mod_config.c:100
+msgid "Show Trees"
+msgstr "Zobrazit stromy"
+
+#: ../src/e_mod_config.c:104
+msgid "Snow Density"
+msgstr "Hustota sněhu"
+
+#: ../src/e_mod_config.c:106
+msgid "Sparse"
+msgstr "Rozptýlený"
+
+#: ../src/e_mod_config.c:108
+msgid "Medium"
+msgstr "Střední"
+
+#: ../src/e_mod_config.c:110
+msgid "Dense"
+msgstr "Hustý"
+
+#: ../src/e_mod_main.c:33
+msgid "Look"
+msgstr "Vzhled"
+
+#: ../src/e_mod_main.c:35
+msgid "Snow"
+msgstr "Sníh"
+
+#~ msgid "Appearance"
+#~ msgstr "Vzhled"

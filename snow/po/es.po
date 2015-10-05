@@ -1,0 +1,52 @@
+# Spanish translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Paco Molinero <paco@byasl.com>, 2008.
+# DiegoJ <diegojromerolopez@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-04-11 14:49+0000\n"
+"Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Snow Configuration"
+msgstr "Configuración de Snow"
+
+#: ../src/e_mod_config.c:99
+msgid "General Settings"
+msgstr "Configuración general"
+
+#: ../src/e_mod_config.c:100
+msgid "Show Trees"
+msgstr "Mostrar árboles"
+
+#: ../src/e_mod_config.c:104
+msgid "Snow Density"
+msgstr "Densidad de nieve"
+
+#: ../src/e_mod_config.c:106
+msgid "Sparse"
+msgstr "Escasa"
+
+#: ../src/e_mod_config.c:108
+msgid "Medium"
+msgstr "Media"
+
+#: ../src/e_mod_config.c:110
+msgid "Dense"
+msgstr "Densa"
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: ../src/e_mod_main.c:35
+msgid "Snow"
+msgstr "Nieve"

@@ -1,0 +1,32 @@
+images {
+	image: "module_icon.png" COMP;
+}
+collections {
+	group {
+		name: "icon";
+		max: 48 48;
+		parts {
+			part {
+				name: "image";
+				type: IMAGE;
+				mouse_events: 0;
+				description {
+					state: "default" 0.00;
+					visible: 1;
+					aspect: 1.00 1.00;
+					rel1 {
+						relative: 0.00 0.00;
+						offset: 0 0;
+					}
+					rel2 {
+						relative: 1.00 1.00;
+						offset: -1 -1;
+					}
+					image {
+						normal: "module_icon.png";
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+[Desktop Entry]
+Type=Link
+Name=Snow
+Name[ru]=Снег
+Name[cs]=Sníh
+Name[de]=Schnee
+Name[eo]=Neĝo
+Name[es]=Nieve
+Name[gl]=Neve
+Name[hu]=Havazás
+Name[fr]=Neige
+Name[el]=Χιόνι
+Name[pt]=Neve
+Icon=e-module-snow
+X-Enlightenment-ModuleType=look
+Comment=Module to display snow on the desktop.
+Comment[ru]=Модуль для показа снега на рабочем столе.
+Comment[cs]=Modul zobrazující sněžení na ploše.
+Comment[de]=Schnee auf dem Desktop
+Comment[eo]=Vidigi neĝon sur la labortablo.
+Comment[es]=Módulo para mostrar nieve en el escritorio.
+Comment[gl]=Módulo para amosar neve no escritorio.
+Comment[hu]=Havazik a munkaasztalunkon...
+Comment[it]=Modulo per visualizzare la neve sul desktop.
+Comment[fr]=Un module montrant de la neige sur le bureau.
+Comment[el]=Άρθρωμα για την προβολή χιονιού στην επιφάνεια εργασίας.
+Comment[pt]=Módulo que exibe neve na área de trabalho

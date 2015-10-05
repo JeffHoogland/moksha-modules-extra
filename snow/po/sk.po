@@ -1,0 +1,51 @@
+# Slovak translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-06-09 17:50+0000\n"
+"Last-Translator: milboy <Unknown>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Snow Configuration"
+msgstr "Nastavenie modulu sneženie"
+
+#: ../src/e_mod_config.c:99
+msgid "General Settings"
+msgstr "NHlavné nastavenia"
+
+#: ../src/e_mod_config.c:100
+msgid "Show Trees"
+msgstr "Zobraziť stromy"
+
+#: ../src/e_mod_config.c:104
+msgid "Snow Density"
+msgstr "Hustota snehu"
+
+#: ../src/e_mod_config.c:106
+msgid "Sparse"
+msgstr "Rozptýlený"
+
+#: ../src/e_mod_config.c:108
+msgid "Medium"
+msgstr "Stredný"
+
+#: ../src/e_mod_config.c:110
+msgid "Dense"
+msgstr "Hustý"
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr "Vzhľad"
+
+#: ../src/e_mod_main.c:35
+msgid "Snow"
+msgstr "Sneh"

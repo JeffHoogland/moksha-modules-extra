@@ -1,0 +1,54 @@
+# Danish translation for enlightenment
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-11-03 08:07+0000\n"
+"Last-Translator: Kris <lakristho@gmail.com>\n"
+"Language-Team: Danish <da@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:52+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:42
+msgid "Snow Configuration"
+msgstr ""
+
+#: ../src/e_mod_config.c:99
+msgid "General Settings"
+msgstr ""
+
+#: ../src/e_mod_config.c:100
+msgid "Show Trees"
+msgstr ""
+
+#: ../src/e_mod_config.c:104
+msgid "Snow Density"
+msgstr ""
+
+#: ../src/e_mod_config.c:106
+msgid "Sparse"
+msgstr ""
+
+#: ../src/e_mod_config.c:108
+msgid "Medium"
+msgstr ""
+
+#: ../src/e_mod_config.c:110
+msgid "Dense"
+msgstr ""
+
+#: ../src/e_mod_main.c:33
+msgid "Appearance"
+msgstr ""
+
+#: ../src/e_mod_main.c:35
+msgid "Snow"
+msgstr "Sne"
