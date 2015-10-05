@@ -1,0 +1,344 @@
+# translation of eo.po to Esperanto
+# Esperanto translation of alarm
+# Copyright (C) 2008 Enlightenment development team
+# This file is distributed under the same license as the alarm package.
+#
+# Olivier M. <olivierweb@ifrance.com>, 2008.
+# Olivier <eliovir@nospam.gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: eo\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-12-04 13:32+0100\n"
+"PO-Revision-Date: 2012-11-26 09:42+0000\n"
+"Last-Translator: Eliovir <Unknown>\n"
+"Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-12-05 05:28+0000\n"
+"X-Generator: Launchpad (build 16335)\n"
+
+#: src/e_mod_config.c:52
+msgid "Alarm Configuration"
+msgstr "Agordoj pri vekhorloĝo"
+
+#: src/e_mod_config.c:152 src/e_mod_main.c:185
+msgid "Alarm"
+msgstr "Alarmo"
+
+#: src/e_mod_config.c:154 src/e_mod_config_alarm.c:187
+msgid "Active"
+msgstr "Enŝaltita"
+
+#: src/e_mod_config.c:163
+msgid "Add"
+msgstr "Aldoni"
+
+#: src/e_mod_config.c:165
+msgid "Delete"
+msgstr "Forigi"
+
+#: src/e_mod_config.c:167
+msgid "Configure"
+msgstr "Agordi"
+
+#: src/e_mod_config.c:169
+msgid "Duplicate"
+msgstr "Duobligi"
+
+#: src/e_mod_config.c:223
+msgid "Alarm Options"
+msgstr "Opcioj pri alarmo"
+
+#: src/e_mod_config.c:235
+msgid "Show next alarm"
+msgstr "Montri sekvan alarmon"
+
+#: src/e_mod_config.c:241
+msgid "Alarms Defaults"
+msgstr "Aprioroj de alarmoj"
+
+#: src/e_mod_config.c:243 src/e_mod_config_alarm.c:401
+msgid "Open popup"
+msgstr "Malfermi ŝprucfenestron"
+
+#: src/e_mod_config.c:246
+msgid "Run program"
+msgstr "Ruli programaron"
+
+#: src/e_mod_config.c:253
+msgid "Auto-Remove alarms"
+msgstr "Aŭtomate forigi alarmon"
+
+#: src/e_mod_config_alarm.c:68
+msgid "Alarm Configuration : Setup an alarm"
+msgstr "Agordoj de alarmo: agordi alarmon"
+
+#: src/e_mod_config_alarm.c:185
+msgid "Informations"
+msgstr "Informoj"
+
+#: src/e_mod_config_alarm.c:189
+msgid "Name"
+msgstr "Nomo"
+
+#: src/e_mod_config_alarm.c:194
+msgid "Description"
+msgstr "Priskribo"
+
+#: src/e_mod_config_alarm.c:204
+msgid "Schedule"
+msgstr "Plano"
+
+#: src/e_mod_config_alarm.c:206
+#, c-format
+msgid "%1.0f hour"
+msgstr "%1.0f horo"
+
+#: src/e_mod_config_alarm.c:209
+#, c-format
+msgid "%1.0f minute"
+msgstr "%1.0f minuto"
+
+#: src/e_mod_config_alarm.c:215
+msgid "Days of the week"
+msgstr "Semajntagoj"
+
+#: src/e_mod_config_alarm.c:219
+msgid "Monday"
+msgstr "Lundo"
+
+#: src/e_mod_config_alarm.c:221
+msgid "Tuesday"
+msgstr "Mardo"
+
+#: src/e_mod_config_alarm.c:223
+msgid "Wenesday"
+msgstr "Merkredo"
+
+#: src/e_mod_config_alarm.c:225
+msgid "Thursday"
+msgstr "Ĵaŭdo"
+
+#: src/e_mod_config_alarm.c:227
+msgid "Friday"
+msgstr "Vendredo"
+
+#: src/e_mod_config_alarm.c:229
+msgid "Saturday"
+msgstr "Sabato"
+
+#: src/e_mod_config_alarm.c:231
+msgid "Sunday"
+msgstr "Dimanĉo"
+
+#: src/e_mod_config_alarm.c:236
+msgid "One day"
+msgstr "Unu tago"
+
+#: src/e_mod_config_alarm.c:240
+msgid "Date (YYYY/MM/DD)"
+msgstr "Dato (JJJJ/MM/TT)"
+
+#: src/e_mod_config_alarm.c:245
+msgid "Today"
+msgstr "Hodiaŭ"
+
+#: src/e_mod_config_alarm.c:247
+msgid "Tomorrow"
+msgstr "Morgaŭ"
+
+#: src/e_mod_config_alarm.c:285
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
+"in the informations / schedule of your alarm"
+msgstr ""
+"<hilight>Eraro, la alarmo ne estis aldonita!</hilight><br><br>Eraro estas en "
+"la informoj/tempoplano de via alarmo"
+
+#: src/e_mod_config_alarm.c:290
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>You have to enter "
+"a name for the alarm"
+msgstr ""
+"<hilight>Eraro, la alarmo ne estis aldonita!</hilight><br><br>Vi entajpu "
+"nomon por la alarmo"
+
+#: src/e_mod_config_alarm.c:295
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>You have to "
+"select at least one day in the week"
+msgstr ""
+"<hilight>Eraro, la alarmo ne estis aldonita!</hilight><br><br>Vi elektu "
+"almenaŭ unu tagon en la semajno"
+
+#: src/e_mod_config_alarm.c:300
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
+"entered for the alarm has incorrect syntax<br><br>You have to respect this "
+"format :<br>   YYYY/MM/DD<br>YYYY is the year on 4 numbers<br>MM is the "
+"month on 2 numbers<br>DD is the day on 2 numbers<br>"
+msgstr ""
+"<hilight>Eraro, la alarmo ne estis aldonita!</hilight><br><br>La dato de vi "
+"entajpita por la alarmo enhavas malkorektan sintakson<br><br>Vi respektu ĉi "
+"tiun formaton:<br>JJJJ/MM/TT<br>JJJJ estas la jaro 4-ĉifere<br>MM estas la "
+"monato 2-ĉifere<br>TT estas la tago 2-ĉifere<br>"
+
+#: src/e_mod_config_alarm.c:310
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
+"entered is before now"
+msgstr ""
+"<hilight>Eraro, la alarmo ne estis aldonita!</hilight><br><br>La dato de vi "
+"entajpita estas antaŭ nun"
+
+#: src/e_mod_config_alarm.c:314 src/e_mod_main.c:424
+msgid "Alarm Module Error"
+msgstr "Eraro de modulo Alarmo"
+
+#: src/e_mod_config_alarm.c:351 src/e_mod_config_alarm.c:439
+msgid "Test this alarm"
+msgstr "Testi ĉi tiun alarmon"
+
+#: src/e_mod_config_alarm.c:379
+msgid "Ring Options"
+msgstr "Opcioj de sonorilo"
+
+#: src/e_mod_config_alarm.c:381
+msgid "Remove alarm"
+msgstr "Forigi alarmon"
+
+#: src/e_mod_config_alarm.c:388 src/e_mod_config_alarm.c:408
+msgid "No [default]"
+msgstr "Ne [apriore]"
+
+#: src/e_mod_config_alarm.c:390 src/e_mod_config_alarm.c:410
+msgid "Yes"
+msgstr "Jes"
+
+#: src/e_mod_config_alarm.c:395 src/e_mod_config_alarm.c:415
+#: src/e_mod_config_alarm.c:426
+msgid "No"
+msgstr "Ne"
+
+#: src/e_mod_config_alarm.c:397 src/e_mod_config_alarm.c:417
+msgid "Yes [default]"
+msgstr "Jes [apriore]"
+
+#: src/e_mod_config_alarm.c:421
+msgid "Run a program"
+msgstr "Ruli programaron"
+
+#: src/e_mod_config_alarm.c:428
+msgid "Run default one"
+msgstr "Ruli aprioron"
+
+#: src/e_mod_config_alarm.c:430
+msgid "Run this program"
+msgstr "Ruli ĉi tiun programaron"
+
+#: src/e_mod_config_alarm.c:475
+msgid ""
+"<hilight>Alarm test SUCCEED !</hilight><br><br>But DONT FORGET to ACTIVATE "
+"the alarms<br>via the 'Active' check button on the<br>main Alarm "
+"configuration panel."
+msgstr ""
+"<hilight>Testo de alarmo SUKCESIS!</hilight><br><br>Sed NE FORGESU enŝalti "
+"la vekhorloĝojn<br>pere de la butono \"Enŝalti\" en la<br>ĉefa panelo de "
+"agordo de la modulo."
+
+#: src/e_mod_config_alarm.c:481
+msgid "<hilight>Alarm test SUCCEED !</hilight>"
+msgstr "<hilight>Testo de alarmo SUKCESIS!</hilight>"
+
+#: src/e_mod_config_alarm.c:486
+msgid "<hilight>Alarm test FAILED !</hilight>"
+msgstr "<hilight>Testo de alarmo FIASKIS!</hilight>"
+
+#: src/e_mod_config_alarm.c:488
+msgid "Alarm Module Test Report"
+msgstr "Raporto de la testo de la modulo pri vekhorloĝo"
+
+#: src/e_mod_main.c:396
+#, c-format
+msgid "<hilight>Alarm : %s</hilight><br><br>%s"
+msgstr "<hilight>Alarmo: %s</hilight><br><br>%s"
+
+#: src/e_mod_main.c:399
+msgid "Alarm Module Popup"
+msgstr "Ŝprucfenestro de la modulo Vekhorloĝo"
+
+#: src/e_mod_main.c:422
+msgid ""
+"<hilight>Failed !</hilight><br><br>Alarm couln't launch the program you "
+"specified"
+msgstr ""
+"<hilight>Tio fiaskis!</hilight><br><br>Vekhorloĝo ne povas lanĉi la "
+"programaron, kiun vi difinis"
+
+#: src/e_mod_main.c:656 src/e_mod_main.c:846
+#, c-format
+msgid "Snooze %s"
+msgstr "Paŭzo %s"
+
+#: src/e_mod_main.c:660
+#, c-format
+msgid "%1.0f hours"
+msgstr "%1.0f horoj"
+
+#: src/e_mod_main.c:663
+#, c-format
+msgid "%1.0f minutes"
+msgstr "%1.0f minutoj"
+
+#: src/e_mod_main.c:670
+msgid "Ok"
+msgstr "Bone"
+
+#: src/e_mod_main.c:671
+msgid "Close"
+msgstr "Fermi"
+
+#: src/e_mod_main.c:821
+msgid "Add an alarm"
+msgstr "Aldoni alarmon"
+
+#: src/e_mod_main.c:828
+msgid "Settings"
+msgstr "Agordoj"
+
+#: src/e_mod_main.c:854
+#, c-format
+msgid "Snooze %.14s of %.2d:%.2d"
+msgstr "Paŭzo %.14s de %.2d:%.2d"
+
+#: src/e_mod_main.c:868
+msgid "Snooze (No alarm to delay)"
+msgstr "Paŭzo (neniu malfruenda alarmo)"
+
+#: src/e_mod_main.c:1050
+#, c-format
+msgid ""
+"<hilight>Alarm module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of alarm module<br>has been upgraded<br>Your settings and "
+"alarms were removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Modulo Vekhorloĝo: agordoj promociitaj</hilight><br><br>Viaj "
+"agordoj de la modulo<br>estis promociitaj<br>Viaj agordoj kaj alarmoj estis "
+"forigitaj<br>Bonvole pardonu pro la ĝeno<br><br>(%d → %d)"
+
+#: src/e_mod_main.c:1056 src/e_mod_main.c:1070
+msgid "Alarm Module version "
+msgstr "Versio de la modulo Vekhorloĝo "
+
+#: src/e_mod_main.c:1064
+#, c-format
+msgid ""
+"<hilight>Alarm module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Alarm module<br>has been downgraded<br>Your settings and "
+"alarms were removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Modulo Vekhorloĝo: agordoj malpromociitaj</hilight><br><br>Viaj "
+"agordoj de la modulo<br>estis malpromociitaj<br>Viaj agordoj kaj alarmoj "
+"estis forigitaj<br>Bonvole pardonu pro la ĝeno<br><br>(%d → %d)"

@@ -1,0 +1,321 @@
+# Arabic translation for alarm.
+# This file is put in the public domain.
+# sameeer hussain <almusalimalmusalimah> 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: alarm module\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2010-09-09 08:00-0700\n"
+"PO-Revision-Date: 2012-01-24 20:45+0300\n"
+"Last-Translator: سمير حسين <almusalimalmusalimah@gmail.com>\n"
+"Language-Team: Arabic <almusalimalmusalimah@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-08-27 10:01+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+"X-Poedit-Language: Arabic\n"
+"X-Poedit-Country: SAUDI ARABIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../src/e_mod_config.c:52
+msgid "Alarm Configuration"
+msgstr "إعدادات المنبه"
+
+#: ../src/e_mod_config.c:152
+#: ../src/e_mod_main.c:185
+msgid "Alarm"
+msgstr "المنبه"
+
+#: ../src/e_mod_config.c:154
+#: ../src/e_mod_config_alarm.c:187
+msgid "Active"
+msgstr "مفعّل"
+
+#: ../src/e_mod_config.c:163
+msgid "Add"
+msgstr "أضف"
+
+#: ../src/e_mod_config.c:165
+msgid "Delete"
+msgstr "أمحِ"
+
+#: ../src/e_mod_config.c:167
+msgid "Configure"
+msgstr "اضبط"
+
+#: ../src/e_mod_config.c:169
+msgid "Duplicate"
+msgstr "كرر"
+
+#: ../src/e_mod_config.c:223
+msgid "Alarm Options"
+msgstr "إعدادات المنبه"
+
+#.
+#. ob = e_widget_label_add(evas, D_("Time format"));
+#. e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
+#. rg = e_widget_radio_group_new(&(cfdata->time_format));
+#. ob = e_widget_radio_add(evas, D_("12h"), TIME_FORMAT_12, rg);
+#. e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1);
+#. ob = e_widget_radio_add(evas, D_("24h"), TIME_FORMAT_24, rg);
+#. e_widget_frametable_object_append(of, ob, 2, 0, 1, 1, 1, 1, 1, 1);
+#.
+#: ../src/e_mod_config.c:235
+msgid "Show next alarm"
+msgstr "اعرض المنبه التالي"
+
+#: ../src/e_mod_config.c:241
+msgid "Alarms Defaults"
+msgstr "افتراضيات المنبه"
+
+#: ../src/e_mod_config.c:243
+#: ../src/e_mod_config_alarm.c:401
+msgid "Open popup"
+msgstr "افتح نافذة منبثقة"
+
+#: ../src/e_mod_config.c:246
+msgid "Run program"
+msgstr "شغّل برنامج"
+
+#: ../src/e_mod_config.c:253
+msgid "Auto-Remove alarms"
+msgstr "إزالة تلقائية للمنبهات"
+
+#: ../src/e_mod_config_alarm.c:68
+msgid "Alarm Configuration : Setup an alarm"
+msgstr "إعدادات المنبه : اضبط منبها"
+
+#: ../src/e_mod_config_alarm.c:185
+msgid "Informations"
+msgstr "معلومات"
+
+#: ../src/e_mod_config_alarm.c:189
+msgid "Name"
+msgstr "اﻹسم"
+
+#: ../src/e_mod_config_alarm.c:194
+msgid "Description"
+msgstr "الوصف"
+
+#: ../src/e_mod_config_alarm.c:204
+msgid "Schedule"
+msgstr "جدوِل"
+
+#: ../src/e_mod_config_alarm.c:206
+#, c-format
+msgid "%1.0f hour"
+msgstr "%1.0f ساعة"
+
+#: ../src/e_mod_config_alarm.c:209
+#, c-format
+msgid "%1.0f minute"
+msgstr "%1.0f ثانية"
+
+#: ../src/e_mod_config_alarm.c:215
+msgid "Days of the week"
+msgstr "أيام اﻷسبوع"
+
+#: ../src/e_mod_config_alarm.c:219
+msgid "Monday"
+msgstr "الاثنين"
+
+#: ../src/e_mod_config_alarm.c:221
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#: ../src/e_mod_config_alarm.c:223
+msgid "Wenesday"
+msgstr "اﻷربعاء"
+
+#: ../src/e_mod_config_alarm.c:225
+msgid "Thursday"
+msgstr "الخميس"
+
+#: ../src/e_mod_config_alarm.c:227
+msgid "Friday"
+msgstr "الجمعة"
+
+#: ../src/e_mod_config_alarm.c:229
+msgid "Saturday"
+msgstr "السبت"
+
+#: ../src/e_mod_config_alarm.c:231
+msgid "Sunday"
+msgstr "اﻷحد"
+
+#: ../src/e_mod_config_alarm.c:236
+msgid "One day"
+msgstr "يوم واحد"
+
+#: ../src/e_mod_config_alarm.c:240
+msgid "Date (YYYY/MM/DD)"
+msgstr "التاريخ (سنة/شهر/يوم)"
+
+#: ../src/e_mod_config_alarm.c:245
+msgid "Today"
+msgstr "اليوم"
+
+#: ../src/e_mod_config_alarm.c:247
+msgid "Tomorrow"
+msgstr "غدًا"
+
+#: ../src/e_mod_config_alarm.c:285
+msgid "<hilight>Error, The alarm was not added !</hilight><br><br>There is an error in the informations / schedule of your alarm"
+msgstr "<hilight>خطأ ، المنبه لم يضف !</hilight><br><br>كان هنالك خطأ في معلومات / جدولة المنبه"
+
+#: ../src/e_mod_config_alarm.c:290
+msgid "<hilight>Error, The alarm was not added !</hilight><br><br>You have to enter a name for the alarm"
+msgstr "<hilight>خطأ ، المنبه لم يضف !</hilight><br><br>يتوجب عليك إدخال إسم للمنبه"
+
+#: ../src/e_mod_config_alarm.c:295
+msgid "<hilight>Error, The alarm was not added !</hilight><br><br>You have to select at least one day in the week"
+msgstr "<hilight>خطأ ، المنبه لم يضف !</hilight><br><br>يتوجب عليك إختيار يوم في اﻷسبوع على اﻷقل"
+
+#: ../src/e_mod_config_alarm.c:300
+msgid "<hilight>Error, The alarm was not added !</hilight><br><br>The date you entered for the alarm has incorrect syntax<br><br>You have to respect this format :<br>   YYYY/MM/DD<br>YYYY is the year on 4 numbers<br>MM is the month on 2 numbers<br>DD is the day on 2 numbers<br>"
+msgstr "<hilight>خطأ ،المنبه لم يضف !</hilight><br><br>التاريخ الذي أدخلته للمنبه يخالف النسق المتبع<br><br>يجب أن تتبع هذه الصيغة :<br>   سنة/شهر/يوم<br>حيث  سنة  تتكون من 4 أرقام<br>شهر  يتكون من رقمين<br>كذلك يوم يتكون من رقمين<br>"
+
+#: ../src/e_mod_config_alarm.c:310
+msgid "<hilight>Error, The alarm was not added !</hilight><br><br>The date you entered is before now"
+msgstr "<hilight>خطأ ، المنبه لم يضف !</hilight><br><br>التاريخ الذي أدخلته يسبق تاريخ يومنا هذا"
+
+#: ../src/e_mod_config_alarm.c:314
+#: ../src/e_mod_main.c:424
+msgid "Alarm Module Error"
+msgstr "خطأ وحدة المنبه"
+
+#: ../src/e_mod_config_alarm.c:351
+#: ../src/e_mod_config_alarm.c:439
+msgid "Test this alarm"
+msgstr "افحص هذا المنبه"
+
+#: ../src/e_mod_config_alarm.c:379
+msgid "Ring Options"
+msgstr "خيارات الرنين"
+
+#: ../src/e_mod_config_alarm.c:381
+msgid "Remove alarm"
+msgstr "أزل منبها"
+
+#: ../src/e_mod_config_alarm.c:388
+#: ../src/e_mod_config_alarm.c:408
+msgid "No [default]"
+msgstr "لا [افتراضي]"
+
+#: ../src/e_mod_config_alarm.c:390
+#: ../src/e_mod_config_alarm.c:410
+msgid "Yes"
+msgstr "نعم"
+
+#: ../src/e_mod_config_alarm.c:395
+#: ../src/e_mod_config_alarm.c:415
+#: ../src/e_mod_config_alarm.c:426
+msgid "No"
+msgstr "لا"
+
+#: ../src/e_mod_config_alarm.c:397
+#: ../src/e_mod_config_alarm.c:417
+msgid "Yes [default]"
+msgstr "نعم [افتراضي]"
+
+#: ../src/e_mod_config_alarm.c:421
+msgid "Run a program"
+msgstr "شغل برنامجا"
+
+#: ../src/e_mod_config_alarm.c:428
+msgid "Run default one"
+msgstr "شغل اﻹفتراضي"
+
+#: ../src/e_mod_config_alarm.c:430
+msgid "Run this program"
+msgstr "شغل هذا البرنامج"
+
+#: ../src/e_mod_config_alarm.c:475
+msgid "<hilight>Alarm test SUCCEED !</hilight><br><br>But DONT FORGET to ACTIVATE the alarms<br>via the 'Active' check button on the<br>main Alarm configuration panel."
+msgstr "<hilight>نجح اختبار المنبه !</hilight><br><br>لكن لا تنسَ تفعيل المنبه<br>عبر زر خانة تحديد 'تفعيل' المتواجد<br>في لوحة إعدادات المنبه الرئيسية"
+
+#: ../src/e_mod_config_alarm.c:481
+msgid "<hilight>Alarm test SUCCEED !</hilight>"
+msgstr "<hilight>نجح اختبار المنبه !</hilight>"
+
+#: ../src/e_mod_config_alarm.c:486
+msgid "<hilight>Alarm test FAILED !</hilight>"
+msgstr "<hilight>فشل اختبار المنبه !</hilight>"
+
+#: ../src/e_mod_config_alarm.c:488
+msgid "Alarm Module Test Report"
+msgstr "تقرير اختبار وحدة المنبه"
+
+#: ../src/e_mod_main.c:396
+#, c-format
+msgid "<hilight>Alarm : %s</hilight><br><br>%s"
+msgstr "<hilight>المنبه : %s</hilight><br><br>%s"
+
+#: ../src/e_mod_main.c:399
+msgid "Alarm Module Popup"
+msgstr "منبثقة وحدة المنبه"
+
+#: ../src/e_mod_main.c:422
+msgid "<hilight>Failed !</hilight><br><br>Alarm couln't launch the program you specified"
+msgstr "<hilight>فشل !</hilight><br><br>لا يستطيع المنبه بدء البرنامج الذي حددته"
+
+#: ../src/e_mod_main.c:656
+#: ../src/e_mod_main.c:835
+#, c-format
+msgid "Snooze %s"
+msgstr "غفوة %s"
+
+#: ../src/e_mod_main.c:660
+#, c-format
+msgid "%1.0f hours"
+msgstr "%1.0f ساعات"
+
+#: ../src/e_mod_main.c:663
+#, c-format
+msgid "%1.0f minutes"
+msgstr "%1.0f دقائق"
+
+#: ../src/e_mod_main.c:670
+msgid "Ok"
+msgstr "حسناً"
+
+#: ../src/e_mod_main.c:671
+msgid "Close"
+msgstr "إغلاق"
+
+#: ../src/e_mod_main.c:843
+#, c-format
+msgid "Snooze %.14s of %.2d:%.2d"
+msgstr "غفوة %.14s من %.2d:%.2d"
+
+#: ../src/e_mod_main.c:857
+msgid "Snooze (No alarm to delay)"
+msgstr "الغفوة ( دون تنبيه للتأخير )"
+
+#: ../src/e_mod_main.c:865
+msgid "Add an alarm"
+msgstr "أضف منبها"
+
+#: ../src/e_mod_main.c:872
+msgid "Settings"
+msgstr "إعدادات"
+
+#: ../src/e_mod_main.c:1053
+#, c-format
+msgid "<hilight>Alarm module : Configuration Upgraded</hilight><br><br>Your configuration of alarm module<br>has been upgraded<br>Your settings and alarms were removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr "<hilight>وحدة المنبه : رُقيت اﻹعدادات</hilight><br><br>إعداداتك لوحدة المنبه<br>رُقيت<br>إعداداتك و كذلك المنبهات أُزيلت<br>نأسف ﻹزعاجك<br><br>(%d -> %d)"
+
+#: ../src/e_mod_main.c:1059
+#: ../src/e_mod_main.c:1073
+msgid "Alarm Module version "
+msgstr "إصدار وحدة المنبه"
+
+#: ../src/e_mod_main.c:1067
+#, c-format
+msgid "<hilight>Alarm module : Configuration Downgraded</hilight><br><br>Your configuration of Alarm module<br>has been downgraded<br>Your settings and alarms were removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr "<hilight>وحدة المنبه : اﻹعدادات خُفّضت</hilight><br><br>إعداداتك لوحدة المنبه<br>خُفّضت<br>إعداداتك و كذلك المنبهات أُزيلت<br>نأسف ﻹزعاجك<br><br>(%d ->%d)"
+
+#~ msgid "Configuration"
+#~ msgstr "الإعدادات"

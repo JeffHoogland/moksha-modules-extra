@@ -1,0 +1,352 @@
+# Lithuanian translation for enlightenment
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"PO-Revision-Date: 2010-01-31 15:15+0000\n"
+"Last-Translator: Joshas <Unknown>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-02-01 04:45+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:55
+msgid "Alarm Configuration"
+msgstr "Žadintuvo konfigūracija"
+
+#: ../src/e_mod_config.c:155 ../src/e_mod_main.c:188
+msgid "Alarm"
+msgstr "Žadintuvas"
+
+#: ../src/e_mod_config.c:157 ../src/e_mod_config_alarm.c:190
+msgid "Active"
+msgstr "Aktyvus"
+
+#: ../src/e_mod_config.c:166
+msgid "Add"
+msgstr "Pridėti"
+
+#: ../src/e_mod_config.c:168
+msgid "Delete"
+msgstr "Pašalinti"
+
+#: ../src/e_mod_config.c:170
+msgid "Configure"
+msgstr "Konfigūruoti"
+
+#: ../src/e_mod_config.c:172
+msgid "Duplicate"
+msgstr "Dubliuoti"
+
+#: ../src/e_mod_config.c:226
+msgid "Alarm Options"
+msgstr "Žadintuvo parinktys"
+
+#. 
+#. ob = e_widget_label_add(evas, D_("Time format"));
+#. e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
+#. rg = e_widget_radio_group_new(&(cfdata->time_format));
+#. ob = e_widget_radio_add(evas, D_("12h"), TIME_FORMAT_12, rg);
+#. e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1);
+#. ob = e_widget_radio_add(evas, D_("24h"), TIME_FORMAT_24, rg);
+#. e_widget_frametable_object_append(of, ob, 2, 0, 1, 1, 1, 1, 1, 1);
+#. 
+#: ../src/e_mod_config.c:238
+msgid "Show next alarm"
+msgstr "Rodyti kitą žadintuvą"
+
+#: ../src/e_mod_config.c:244
+msgid "Alarms Defaults"
+msgstr "Žadintuvo numatytosios parinktys"
+
+#: ../src/e_mod_config.c:246 ../src/e_mod_config_alarm.c:404
+msgid "Open popup"
+msgstr "Atverti iššokantįjį langą"
+
+#: ../src/e_mod_config.c:249
+msgid "Run program"
+msgstr "Vykdyti programą"
+
+#: ../src/e_mod_config.c:256
+msgid "Auto-Remove alarms"
+msgstr "Automatiškai pašalinti žadintuvus"
+
+#: ../src/e_mod_config_alarm.c:71
+msgid "Alarm Configuration : Setup an alarm"
+msgstr "Žadintuvo konfigūracija : Nustatyti žadintuvą"
+
+#: ../src/e_mod_config_alarm.c:188
+msgid "Informations"
+msgstr "Informacija"
+
+#: ../src/e_mod_config_alarm.c:192
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: ../src/e_mod_config_alarm.c:197
+msgid "Description"
+msgstr "Aprašas"
+
+#: ../src/e_mod_config_alarm.c:207
+msgid "Schedule"
+msgstr "Tvarkaraštis"
+
+#: ../src/e_mod_config_alarm.c:209
+#, c-format
+msgid "%1.0f hour"
+msgstr "%1.0f valanda"
+
+#: ../src/e_mod_config_alarm.c:212
+#, c-format
+msgid "%1.0f minute"
+msgstr "%1.0f minutė"
+
+#: ../src/e_mod_config_alarm.c:218
+msgid "Days of the week"
+msgstr "Savaitės dienos"
+
+#: ../src/e_mod_config_alarm.c:222
+msgid "Monday"
+msgstr "Pirmadienis"
+
+#: ../src/e_mod_config_alarm.c:224
+msgid "Tuesday"
+msgstr "Antradienis"
+
+#: ../src/e_mod_config_alarm.c:226
+msgid "Wenesday"
+msgstr "Trečiadienis"
+
+#: ../src/e_mod_config_alarm.c:228
+msgid "Thursday"
+msgstr "Ketvirtadienis"
+
+#: ../src/e_mod_config_alarm.c:230
+msgid "Friday"
+msgstr "Penktadienis"
+
+#: ../src/e_mod_config_alarm.c:232
+msgid "Saturday"
+msgstr "Šeštadienis"
+
+#: ../src/e_mod_config_alarm.c:234
+msgid "Sunday"
+msgstr "Sekmadienis"
+
+#: ../src/e_mod_config_alarm.c:239
+msgid "One day"
+msgstr "Vieną dieną"
+
+#: ../src/e_mod_config_alarm.c:243
+msgid "Date (YYYY/MM/DD)"
+msgstr "Data (YYYY/MM/DD)"
+
+#: ../src/e_mod_config_alarm.c:248
+msgid "Today"
+msgstr "Šiandiena"
+
+#: ../src/e_mod_config_alarm.c:250
+msgid "Tomorrow"
+msgstr "Rytoj"
+
+#: ../src/e_mod_config_alarm.c:288
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
+"in the informations / schedule of your alarm"
+msgstr ""
+"<hilight>Klaida, žadintuvas nepridėtas !</hilight><br><br>Jūsų žadintuvo "
+"informacijoje / tvarkaraštyje yra klaida"
+
+#: ../src/e_mod_config_alarm.c:293
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>You have to enter "
+"a name for the alarm"
+msgstr ""
+"<hilight>Klaida, žadintuvas nepridėtas !</hilight><br><br>Įveskite žadintuvo "
+"pavadinimą"
+
+#: ../src/e_mod_config_alarm.c:298
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>You have to "
+"select at least one day in the week"
+msgstr ""
+"<hilight>Klaida, žadintuvas nepridėtas !</hilight><br><br>Pasirinkite bent "
+"vieną savaitės dieną"
+
+#: ../src/e_mod_config_alarm.c:303
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
+"entered for the alarm has incorrect syntax<br><br>You have to respect this "
+"format :<br>   YYYY/MM/DD<br>YYYY is the year on 4 numbers<br>MM is the "
+"month on 2 numbers<br>DD is the day on 2 numbers<br>"
+msgstr ""
+"<hilight>Klaida, žadintuvas nepridėtas !</hilight><br><br>Jūsų įvesta data "
+"yra neteisinga<br><br>Prašome naudoti šį formatą:<br> YYYY/MM/DD<br>YYYY yra "
+"metai užrašyti 4 skaitmenimis<br>MM yra mėnuo užrašytas dviem "
+"skaitmenimis<br>DD yra diena užrašyta 2 skaitmenimis"
+
+#: ../src/e_mod_config_alarm.c:313
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
+"entered is before now"
+msgstr ""
+"<hilight>Klaida, žadintuvas nepridėtas !</hilight><br><br>Jūsų įvesta data "
+"jau praėjo"
+
+#: ../src/e_mod_config_alarm.c:317 ../src/e_mod_main.c:427
+msgid "Alarm Module Error"
+msgstr "Žadintuvo modulio klaida"
+
+#: ../src/e_mod_config_alarm.c:354 ../src/e_mod_config_alarm.c:442
+msgid "Test this alarm"
+msgstr "Patikrinti šį žadintuvą"
+
+#: ../src/e_mod_config_alarm.c:382
+msgid "Ring Options"
+msgstr "Skambėjimo parinktys"
+
+#: ../src/e_mod_config_alarm.c:384
+msgid "Remove alarm"
+msgstr "Pašalinti žadintuvą"
+
+#: ../src/e_mod_config_alarm.c:391 ../src/e_mod_config_alarm.c:411
+msgid "No [default]"
+msgstr "Ne [numatytasis]"
+
+#: ../src/e_mod_config_alarm.c:393 ../src/e_mod_config_alarm.c:413
+msgid "Yes"
+msgstr "Taip"
+
+#: ../src/e_mod_config_alarm.c:398 ../src/e_mod_config_alarm.c:418
+#: ../src/e_mod_config_alarm.c:429
+msgid "No"
+msgstr "Ne"
+
+#: ../src/e_mod_config_alarm.c:400 ../src/e_mod_config_alarm.c:420
+msgid "Yes [default]"
+msgstr "Taip [numatytasis]"
+
+#: ../src/e_mod_config_alarm.c:424
+msgid "Run a program"
+msgstr "Vykdyti programą"
+
+#: ../src/e_mod_config_alarm.c:431
+msgid "Run default one"
+msgstr "Vykdyti numatytąją"
+
+#: ../src/e_mod_config_alarm.c:433
+msgid "Run this program"
+msgstr "Vykdyti šią programą"
+
+#: ../src/e_mod_config_alarm.c:478
+msgid ""
+"<hilight>Alarm test SUCCEED !</hilight><br><br>But DONT FORGET to ACTIVATE "
+"the alarms<br>via the 'Active' check button on the<br>main Alarm "
+"configuration panel."
+msgstr ""
+"<hilight>Žadintuvo bandymas PAVYKO !</hilight><br><br>Bet NEPAMIRŠKITE jo "
+"AKTYVUOTI<br>pasinaudodami 'Aktyvuoti' mygtuku pagrindiniame<br>žadintuvo "
+"konfigūracijos skydelyje."
+
+#: ../src/e_mod_config_alarm.c:484
+msgid "<hilight>Alarm test SUCCEED !</hilight>"
+msgstr "<hilight>Žadintuvo bandymas PAVYKO !</hilight>"
+
+#: ../src/e_mod_config_alarm.c:489
+msgid "<hilight>Alarm test FAILED !</hilight>"
+msgstr "<hilight>Žadintuvo bandymas NEPAVYKO !</hilight>"
+
+#: ../src/e_mod_config_alarm.c:491
+msgid "Alarm Module Test Report"
+msgstr "Žadintuvo modulio bandymo ataskaita"
+
+#: ../src/e_mod_main.c:399
+#, c-format
+msgid "<hilight>Alarm : %s</hilight><br><br>%s"
+msgstr "<hilight>Žadintuvas : %s</hilight><br><br>%s"
+
+#: ../src/e_mod_main.c:402
+msgid "Alarm Module Popup"
+msgstr "Žadintuvo modulio iškylantysis langas"
+
+#: ../src/e_mod_main.c:425
+msgid ""
+"<hilight>Failed !</hilight><br><br>Alarm couln't launch the program you "
+"specified"
+msgstr ""
+"<hilight>Nepavyko !</hilight><br><br>Žadintuvui nepavyko paleisti Jūsų "
+"parinktos programos"
+
+#: ../src/e_mod_main.c:659 ../src/e_mod_main.c:838
+#, c-format
+msgid "Snooze %s"
+msgstr "Atidėti %s"
+
+#: ../src/e_mod_main.c:663
+#, c-format
+msgid "%1.0f hours"
+msgstr "%1.0f valandoms"
+
+#: ../src/e_mod_main.c:666
+#, c-format
+msgid "%1.0f minutes"
+msgstr "%1.0f minutėms"
+
+#: ../src/e_mod_main.c:673
+msgid "Ok"
+msgstr "Gerai"
+
+#: ../src/e_mod_main.c:674
+msgid "Close"
+msgstr "Užverti"
+
+#: ../src/e_mod_main.c:846
+#, c-format
+msgid "Snooze %.14s of %.2d:%.2d"
+msgstr "Atidėti %.14s iš %.2d:%.2d"
+
+#: ../src/e_mod_main.c:860
+msgid "Snooze (No alarm to delay)"
+msgstr "Atidėti (Nėra žadintuvo uždelsimui)"
+
+#: ../src/e_mod_main.c:867
+msgid "Add an alarm"
+msgstr "Pridėti žadintuvą"
+
+#: ../src/e_mod_main.c:874
+msgid "Configuration"
+msgstr "Konfigūracija"
+
+#: ../src/e_mod_main.c:1055
+#, c-format
+msgid ""
+"<hilight>Alarm module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of alarm module<br>has been upgraded<br>Your settings and "
+"alarms were removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Žadintuvo modulis : konfigūracija atnaujinta</hilight><br><br>Jūsų "
+"žadintuvo modulio konfigūracija<br>buvo atnaujinta<br>Jūsų nuostatos ir "
+"žadintuvai buvo pašalinti<br>Atsiprašome už nepatogumus<br><br>(%d -> %d)"
+
+#: ../src/e_mod_main.c:1061 ../src/e_mod_main.c:1075
+msgid "Alarm Module version "
+msgstr "Žadintuvo modulio versija "
+
+#: ../src/e_mod_main.c:1069
+#, c-format
+msgid ""
+"<hilight>Alarm module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Alarm module<br>has been downgraded<br>Your settings and "
+"alarms were removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Žadintuvo modulis : konfigūracija pakeista "
+"senesne</hilight><br><br>Jūsų žadintuvo modulio konfigūracija<br>buvo "
+"pakeista senesne<br>Jūsų nuostatos ir žadintuvai buvo "
+"pašalinti<br>Atsiprašome už nepatogumus<br><br>(%d -> %d)"

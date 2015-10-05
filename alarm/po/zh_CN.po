@@ -1,0 +1,339 @@
+# Simplified Chinese translation for alarm in e17
+# Copyright (C) 2008-2009 Free Software Foundation, Inc.
+# Aron Xu <aronmalache@163.com>, 2008.
+# Careone <zzbusagain@yahoo.com.cn>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Alarm e17\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-12-22 04:21+0800\n"
+"PO-Revision-Date: 2012-12-22 04:22+0800\n"
+"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:52
+msgid "Alarm Configuration"
+msgstr "闹钟配置"
+
+#: ../src/e_mod_config.c:152 ../src/e_mod_main.c:185
+msgid "Alarm"
+msgstr "闹钟"
+
+#: ../src/e_mod_config.c:154 ../src/e_mod_config_alarm.c:187
+msgid "Active"
+msgstr "启用"
+
+#: ../src/e_mod_config.c:163
+msgid "Add"
+msgstr "添加"
+
+#: ../src/e_mod_config.c:165
+msgid "Delete"
+msgstr "删除"
+
+#: ../src/e_mod_config.c:167
+msgid "Configure"
+msgstr "配置"
+
+#: ../src/e_mod_config.c:169
+msgid "Duplicate"
+msgstr "创建副本"
+
+#: ../src/e_mod_config.c:223
+msgid "Alarm Options"
+msgstr "闹钟选项"
+
+#.
+#. ob = e_widget_label_add(evas, D_("Time format"));
+#. e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
+#. rg = e_widget_radio_group_new(&(cfdata->time_format));
+#. ob = e_widget_radio_add(evas, D_("12h"), TIME_FORMAT_12, rg);
+#. e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1);
+#. ob = e_widget_radio_add(evas, D_("24h"), TIME_FORMAT_24, rg);
+#. e_widget_frametable_object_append(of, ob, 2, 0, 1, 1, 1, 1, 1, 1);
+#.
+#: ../src/e_mod_config.c:235
+msgid "Show next alarm"
+msgstr "显示下一个闹钟"
+
+#: ../src/e_mod_config.c:241
+msgid "Alarms Defaults"
+msgstr "闹钟默认设置"
+
+#: ../src/e_mod_config.c:243 ../src/e_mod_config_alarm.c:401
+msgid "Open popup"
+msgstr "打开气泡"
+
+#: ../src/e_mod_config.c:246
+msgid "Run program"
+msgstr "运行程序"
+
+#: ../src/e_mod_config.c:253
+msgid "Auto-Remove alarms"
+msgstr "自动移除闹钟"
+
+#: ../src/e_mod_config_alarm.c:68
+msgid "Alarm Configuration : Setup an alarm"
+msgstr "闹钟设置：设定一个闹铃"
+
+#: ../src/e_mod_config_alarm.c:185
+msgid "Informations"
+msgstr "提示信息"
+
+#: ../src/e_mod_config_alarm.c:189
+msgid "Name"
+msgstr "名称"
+
+#: ../src/e_mod_config_alarm.c:194
+msgid "Description"
+msgstr "描述"
+
+#: ../src/e_mod_config_alarm.c:204
+msgid "Schedule"
+msgstr "日程表"
+
+#: ../src/e_mod_config_alarm.c:206
+#, c-format
+msgid "%1.0f hour"
+msgstr "%1.0f 小时"
+
+#: ../src/e_mod_config_alarm.c:209
+#, c-format
+msgid "%1.0f minute"
+msgstr "%1.0f 分钟"
+
+#: ../src/e_mod_config_alarm.c:215
+msgid "Days of the week"
+msgstr "每周天数"
+
+#: ../src/e_mod_config_alarm.c:219
+msgid "Monday"
+msgstr "星期一"
+
+#: ../src/e_mod_config_alarm.c:221
+msgid "Tuesday"
+msgstr "星期二"
+
+#: ../src/e_mod_config_alarm.c:223
+msgid "Wenesday"
+msgstr "星期三"
+
+#: ../src/e_mod_config_alarm.c:225
+msgid "Thursday"
+msgstr "星期四"
+
+#: ../src/e_mod_config_alarm.c:227
+msgid "Friday"
+msgstr "星期五"
+
+#: ../src/e_mod_config_alarm.c:229
+msgid "Saturday"
+msgstr "星期六"
+
+#: ../src/e_mod_config_alarm.c:231
+msgid "Sunday"
+msgstr "星期日"
+
+#: ../src/e_mod_config_alarm.c:236
+msgid "One day"
+msgstr "一天"
+
+#: ../src/e_mod_config_alarm.c:240
+msgid "Date (YYYY/MM/DD)"
+msgstr "日期(年年年年/月月/日日)"
+
+#: ../src/e_mod_config_alarm.c:245
+msgid "Today"
+msgstr "今日"
+
+#: ../src/e_mod_config_alarm.c:247
+msgid "Tomorrow"
+msgstr "明天"
+
+#: ../src/e_mod_config_alarm.c:285
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
+"in the informations / schedule of your alarm"
+msgstr ""
+"<hilight>错误，没有添加此闹铃！</hilight><br><br>您提供的信息或者计划有误。"
+
+#: ../src/e_mod_config_alarm.c:290
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>You have to enter "
+"a name for the alarm"
+msgstr "<hilight>错误，没有添加此闹铃！</hilight><br><br>您必须设定一个名称"
+
+#: ../src/e_mod_config_alarm.c:295
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>You have to "
+"select at least one day in the week"
+msgstr "<hilight>错误，没有添加此闹铃！</hilight><br><br>您必须选择响铃的日子"
+
+#: ../src/e_mod_config_alarm.c:300
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
+"entered for the alarm has incorrect syntax<br><br>You have to respect this "
+"format :<br>   YYYY/MM/DD<br>YYYY is the year on 4 numbers<br>MM is the "
+"month on 2 numbers<br>DD is the day on 2 numbers<br>"
+msgstr ""
+"<hilight>错误，闹钟没有被添加！</hilight><br><br>您输入的日期格式有误<br><br>"
+"请按以下格式输入：br> 年年年年/月月/日日<br>4位年<br>2位月<br>2位日<br>"
+
+#: ../src/e_mod_config_alarm.c:310
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
+"entered is before now"
+msgstr "<hilight>错误，闹钟没有被添加！</hilight><br><br>您输入的是过去的日期"
+
+#: ../src/e_mod_config_alarm.c:314 ../src/e_mod_main.c:424
+msgid "Alarm Module Error"
+msgstr "闹钟模块错误"
+
+#: ../src/e_mod_config_alarm.c:351 ../src/e_mod_config_alarm.c:439
+msgid "Test this alarm"
+msgstr "对当前的闹钟进行测试"
+
+#: ../src/e_mod_config_alarm.c:379
+msgid "Ring Options"
+msgstr "铃声选项"
+
+#: ../src/e_mod_config_alarm.c:381
+msgid "Remove alarm"
+msgstr "删除闹钟"
+
+#: ../src/e_mod_config_alarm.c:388 ../src/e_mod_config_alarm.c:408
+msgid "No [default]"
+msgstr "无[默认值]"
+
+#: ../src/e_mod_config_alarm.c:390 ../src/e_mod_config_alarm.c:410
+msgid "Yes"
+msgstr "是"
+
+#: ../src/e_mod_config_alarm.c:395 ../src/e_mod_config_alarm.c:415
+#: ../src/e_mod_config_alarm.c:426
+msgid "No"
+msgstr "否"
+
+#: ../src/e_mod_config_alarm.c:397 ../src/e_mod_config_alarm.c:417
+msgid "Yes [default]"
+msgstr "是[默认值]"
+
+#: ../src/e_mod_config_alarm.c:421
+msgid "Run a program"
+msgstr "运行程序"
+
+#: ../src/e_mod_config_alarm.c:428
+msgid "Run default one"
+msgstr "运行默认的"
+
+#: ../src/e_mod_config_alarm.c:430
+msgid "Run this program"
+msgstr "运行这个程序"
+
+#: ../src/e_mod_config_alarm.c:475
+msgid ""
+"<hilight>Alarm test SUCCEED !</hilight><br><br>But DONT FORGET to ACTIVATE "
+"the alarms<br>via the 'Active' check button on the<br>main Alarm "
+"configuration panel."
+msgstr ""
+"<hilight>闹钟测试 成功！</hilight><br><br>请不要忘记开启闹钟<br>操作方法：在"
+"主闹钟配置面板里<br>选中“开启”选框。"
+
+#: ../src/e_mod_config_alarm.c:481
+msgid "<hilight>Alarm test SUCCEED !</hilight>"
+msgstr "<hilight>闹钟测试 成功！</hilight>"
+
+#: ../src/e_mod_config_alarm.c:486
+msgid "<hilight>Alarm test FAILED !</hilight>"
+msgstr "<hilight>闹钟测试 失败！</hilight>"
+
+#: ../src/e_mod_config_alarm.c:488
+msgid "Alarm Module Test Report"
+msgstr "闹钟模块测试报告"
+
+#: ../src/e_mod_main.c:396
+#, c-format
+msgid "<hilight>Alarm : %s</hilight><br><br>%s"
+msgstr "<hilight>Alarm : %s</hilight><br><br>%s"
+
+#: ../src/e_mod_main.c:399
+msgid "Alarm Module Popup"
+msgstr "闹钟模块弹出框"
+
+#: ../src/e_mod_main.c:422
+msgid ""
+"<hilight>Failed !</hilight><br><br>Alarm couln't launch the program you "
+"specified"
+msgstr "<hilight>失败！</hilight><br><br>闹钟不能启动您指定的程序"
+
+#: ../src/e_mod_main.c:656 ../src/e_mod_main.c:846
+#, c-format
+msgid "Snooze %s"
+msgstr "Snooze %s"
+
+#: ../src/e_mod_main.c:660
+#, c-format
+msgid "%1.0f hours"
+msgstr "%1.0f hours"
+
+#: ../src/e_mod_main.c:663
+#, c-format
+msgid "%1.0f minutes"
+msgstr "%1.0f 分钟"
+
+#: ../src/e_mod_main.c:670
+msgid "Ok"
+msgstr "确定"
+
+#: ../src/e_mod_main.c:671
+msgid "Close"
+msgstr "关闭"
+
+#: ../src/e_mod_main.c:821
+msgid "Add an alarm"
+msgstr "添加闹钟"
+
+#: ../src/e_mod_main.c:828
+msgid "Settings"
+msgstr "设置"
+
+#: ../src/e_mod_main.c:854
+#, c-format
+msgid "Snooze %.14s of %.2d:%.2d"
+msgstr "Snooze %.14s of %.2d:%.2d"
+
+#: ../src/e_mod_main.c:868
+msgid "Snooze (No alarm to delay)"
+msgstr "打盹(没有闹钟需要延迟)"
+
+#: ../src/e_mod_main.c:1050
+#, c-format
+msgid ""
+"<hilight>Alarm module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of alarm module<br>has been upgraded<br>Your settings and "
+"alarms were removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>闹钟模块：配置已升级</hilight><br><br>您的闹钟模块的配置<br>已升级"
+"<br>您的设置和闹钟已被删除<br>很抱歉给您带来不便<br><br>(%d ->%d)"
+
+#: ../src/e_mod_main.c:1056 ../src/e_mod_main.c:1070
+msgid "Alarm Module version "
+msgstr "闹钟模块版本 "
+
+#: ../src/e_mod_main.c:1064
+#, c-format
+msgid ""
+"<hilight>Alarm module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Alarm module<br>has been downgraded<br>Your settings and "
+"alarms were removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>闹钟模块：配置已降级</hilight><br><br>您的闹钟模块的配置<br>已降级"
+"<br>您的设置和闹钟已被删除<br>很抱歉给您带来不便<br><br>(%d ->%d)"
+
+#~ msgid "Configuration"
+#~ msgstr "配置"

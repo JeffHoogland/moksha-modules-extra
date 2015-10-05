@@ -1,0 +1,31 @@
+-------------------------------------------
+BUGS
+-------------------------------------------
+
+ - MODULE_VERSION don't show up
+ - fix the translations
+
+-------------------------------------------
+TODO
+-------------------------------------------
+
+ - snooze program ?
+
+ - [Config_Dialog] sort alarms list by 'next time ring' order
+
+ - add predefined alarms action like command is not user friendly
+ - full size popup like exebuf when ringing
+ - alarm logo like an e, instead of alarm clock image, a bit like on e_module
+ - ? keep alarms on config change ?
+ - exact alarm time ring
+ - pill mode for alarms
+ - handle alarms wich happend when no E on come back
+
+ - 12h time format
+
+ - dont share state for icons and detail between instance
+   and save it
+
+ - "Time table" button
+   to add alarms for a whole week for example
+   does it create multiple alarms, or time tables are objects ?
