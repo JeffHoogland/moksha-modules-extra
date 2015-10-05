@@ -1,0 +1,25 @@
+[Desktop Entry]
+Type=Link
+Name=Winselector
+Name[ru]=Выбор окна
+Name[cs]=Výběr oken
+Name[eo]=Fenestro-elektilo
+Name[es]=Selector de ventanas
+Name[gl]=Selector de xanelas
+Name[hu]=Ablak választó
+Name[fr]=Sélecteur
+Name[el]=Επιλογέας Παραθύρων
+Name[pt]=Seletor de janelas
+Icon=e-module-winselector
+X-Enlightenment-ModuleType=utils
+Comment=This module provides a menu-based access to all the windows.
+Comment[ru]=Модуль предоставляет доступ ко всем открытым окнам.
+Comment[cs]=Modul poskytující menu-přístup ke všem oknům.
+Comment[eo]=Provizi aliron al ĉiuj fenestroj per menuo.
+Comment[es]=Este módulo proporciona un acceso a todas las ventanas a través de un menú.
+Comment[gl]=Este módulo proporciona un acceso a tódalas xanelas a través dun menú.
+Comment[hu]=Ez a modul elérhetõséget biztosít számunkra az összes megnyitott ablakhoz, amelyeket egy listába rendez.
+Comment[it]=Questo modulo fornisce accesso a tutte le finestre tramite menù.
+Comment[fr]=Ce module donne accès à toutes les fenêtres via un menu.
+Comment[el]=Το συστατικό αυτό παρέχει πρόσβαση σε όλα τα παράθυρα μέσω ενός μενού.
+Comment[pt]=Módulo que disponibiliza o acesso a um menu com todas as janelas
