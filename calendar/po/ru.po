@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# Koptev Oleg <koptev.oleg@gmail.com>, 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: Calendar\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2010-10-13 10:43-0300\n"
+"PO-Revision-Date: 2009-05-15 19:39+0400\n"
+"Last-Translator: Koptev Oleg <koptev.oleg@gmail.com>\n"
+"Language-Team: Russian Ubuntu Translators\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.3.1\n"
+
+#: src/e_mod_main.c:586
+msgid "Sunday"
+msgstr "Воскресенье"
+
+#: src/e_mod_main.c:593
+msgid "Monday"
+msgstr "Понедельник"
+
+#: src/e_mod_main.c:602
+msgid "First Day of Week"
+msgstr "Первый день недели"
+
+#: src/e_mod_main.c:685 src/e_mod_main.c:702
+msgid "Calendar"
+msgstr "Календарь"
+
+#: src/e_mod_main.c:686 src/e_mod_main.c:702
+msgid "Monthview Popup (Show/Hide)"
+msgstr "Всплывающее окно (показать/скрыть)"

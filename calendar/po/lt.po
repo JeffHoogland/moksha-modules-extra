@@ -1,0 +1,38 @@
+# Lithuanian translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Igr <Igoris.repovas@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2010-10-13 10:43-0300\n"
+"PO-Revision-Date: 2010-01-04 16:03+0000\n"
+"Last-Translator: Joshas <Unknown>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-05 04:40+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/e_mod_main.c:586
+msgid "Sunday"
+msgstr "sekmadienis"
+
+#: src/e_mod_main.c:593
+msgid "Monday"
+msgstr "pirmadienis"
+
+#: src/e_mod_main.c:602
+msgid "First Day of Week"
+msgstr "Pirmoji savaitės diena"
+
+#: src/e_mod_main.c:685 src/e_mod_main.c:702
+msgid "Calendar"
+msgstr "Kalendorius"
+
+#: src/e_mod_main.c:686 src/e_mod_main.c:702
+msgid "Monthview Popup (Show/Hide)"
+msgstr "Mėnesio iššokantysis langas (Rodyti/Slėpti)"

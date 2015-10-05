@@ -1,0 +1,25 @@
+[Desktop Entry]
+Type=Link
+Name=Calendar
+Name[ru]=Календарь
+Name[cs]=Kalendář
+Name[de]=Kalender
+Name[eo]=Kalendaro
+Name[hu]=Naptár
+Name[fr]=Calendrier
+Name[zh_CN]=Calendar 日历
+Name[el]=Ημερολόγιο
+Name[pt]=Calendário
+Icon=e-module-calendar
+X-Enlightenment-ModuleType=utils
+Comment=Calendar sheet showing the current day.
+Comment[ru]=Календарный лист, показывает сегодняшний день.
+Comment[cs]=Kalendář zobrazující aktuální den.
+Comment[de]=Kalenderblatt mit dem aktuellen Datum und dahinter befindlichem Kalender
+Comment[eo]=Kalendara folio vidiganta la nunan tagon.
+Comment[hu]=Naptár, amely az aktuális napot mutatja.
+Comment[it]=Un foglio di calendario che mostra la data attuale.
+Comment[zh_CN]=显示当前日期的日历。
+Comment[fr]=Une feuille de calendrier montrant le jour du mois.
+Comment[el]=Ένα ημερολόγιο που δείχνει την τρέχουσα ημέρα.
+Comment[pt]=Um calendário que mostra o dia atual

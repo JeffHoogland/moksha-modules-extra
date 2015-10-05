@@ -1,0 +1,36 @@
+# Italian translation for E17 calendar module.
+# This file is put in the public domain.
+# Massimo Maiurana <maiurana@inwind.it>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Calendar\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2010-10-13 10:43-0300\n"
+"PO-Revision-Date: 2007-12-09 18:38+0100\n"
+"Last-Translator: Massimo Maiurana <maiurana@inwind.it>\n"
+"Language-Team: none\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:586
+msgid "Sunday"
+msgstr "Domenica"
+
+#: src/e_mod_main.c:593
+msgid "Monday"
+msgstr "Lunedì"
+
+#: src/e_mod_main.c:602
+msgid "First Day of Week"
+msgstr "Primo giorno della settimana"
+
+#: src/e_mod_main.c:685 src/e_mod_main.c:702
+msgid "Calendar"
+msgstr "Calendar"
+
+#: src/e_mod_main.c:686 src/e_mod_main.c:702
+msgid "Monthview Popup (Show/Hide)"
+msgstr "Popup mese (mostra/nascondi)"

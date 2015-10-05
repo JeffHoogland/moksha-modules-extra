@@ -1,0 +1,39 @@
+# translation of calendar.po to Slovenian
+# Slovenian translation of Calendar.
+# This file is put in the public domain.
+#
+# r1to <renato.rener@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: calendar\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2011-02-17 15:00-0800\n"
+"PO-Revision-Date: 2011-02-22 07:39+0100\n"
+"Last-Translator: r1to <renato.rener@gmail.com>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#: ../src/e_mod_main.c:600
+msgid "Sunday"
+msgstr "Nedelja"
+
+#: ../src/e_mod_main.c:607
+msgid "Monday"
+msgstr "Ponedeljek"
+
+#: ../src/e_mod_main.c:616
+msgid "First Day of Week"
+msgstr "Prvi dan v tednu"
+
+#: ../src/e_mod_main.c:699 ../src/e_mod_main.c:716
+msgid "Calendar"
+msgstr "Koledar"
+
+#: ../src/e_mod_main.c:700 ../src/e_mod_main.c:716
+msgid "Monthview Popup (Show/Hide)"
+msgstr "Pojavno okno meseca (Prikaži/Skrij)"
+

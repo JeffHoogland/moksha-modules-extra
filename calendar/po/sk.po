@@ -1,0 +1,36 @@
+# Slovak translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2010-10-13 10:43-0300\n"
+"PO-Revision-Date: 2009-03-24 12:34+0000\n"
+"Last-Translator: helix84 <Unknown>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:586
+msgid "Sunday"
+msgstr "nedeľa"
+
+#: src/e_mod_main.c:593
+msgid "Monday"
+msgstr "pondelok"
+
+#: src/e_mod_main.c:602
+msgid "First Day of Week"
+msgstr "Prvý deň v týždni"
+
+#: src/e_mod_main.c:685 src/e_mod_main.c:702
+msgid "Calendar"
+msgstr "Kalendár"
+
+#: src/e_mod_main.c:686 src/e_mod_main.c:702
+msgid "Monthview Popup (Show/Hide)"
+msgstr "Vyskakovacie zobrazenie mesiaca (Zobraziť/skryť)"
