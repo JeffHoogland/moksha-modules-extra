@@ -1,0 +1,375 @@
+# translation of el.po to Greek
+# Photo module (e17), French translation
+# This file is put in the public domain.
+#
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: el\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-12-07 16:54+0200\n"
+"Last-Translator: \n"
+"Language-Team: Greek <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../src/e_mod_main.c:53 ../src/e_mod_main.c:60 ../src/e_mod_main.c:67
+#: ../src/e_mod_main.c:74 ../src/e_mod_main.c:81 ../src/e_mod_main.c:88
+msgid "Photo Module"
+msgstr "Άρθρωμα Photo"
+
+#: ../src/e_mod_main.c:53
+msgid "E Canvas init failed !"
+msgstr "Αρχικοποίηση Καμβά E απέτυχε!"
+
+#: ../src/e_mod_main.c:60
+msgid "Theme init failed !"
+msgstr "Αρχικοποίηση Θέματος απέτυχε!"
+
+#: ../src/e_mod_main.c:67
+msgid "Config init failed"
+msgstr "Αρχικοποίηση Ρύθμισης απέτυχε!"
+
+#: ../src/e_mod_main.c:74
+msgid "Picture subsystem init failed"
+msgstr "Αρχικοποίηση υπο-συστήματος εικόνας απέτυχε!"
+
+#: ../src/e_mod_main.c:81
+msgid "Popup warn subsystem init failed"
+msgstr "Αρχικοποίηση υπο-συστήματος ειδοποιήσεων απέτυχε!"
+
+#: ../src/e_mod_main.c:88
+msgid "Popup info subsystem init failed"
+msgstr "Αρχικοποίηση υπο-συστήματος πληροφοριών απέτυχε!"
+
+#: ../src/e_mod_main.c:181
+msgid "Photo"
+msgstr "Photo"
+
+#: ../src/photo_config.c:65
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+
+#: ../src/photo_config.c:71 ../src/photo_config.c:85
+msgid "Photo Module version "
+msgstr "Έκδωση Αρθρώματος Photo"
+
+#: ../src/photo_config.c:79
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+
+#: ../src/photo_config_dialog.c:64
+msgid "Photo Configuration"
+msgstr "Ρύθμιση Photo"
+
+#: ../src/photo_config_dialog.c:220
+msgid "Picture directories"
+msgstr "Κατάλογοι εικόνων"
+
+#: ../src/photo_config_dialog.c:235
+msgid "Add"
+msgstr "Προσθήκη"
+
+#: ../src/photo_config_dialog.c:237
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: ../src/photo_config_dialog.c:239
+msgid "Configure"
+msgstr "Ρύθμιση"
+
+#: ../src/photo_config_dialog.c:242
+msgid "Reload picture directories"
+msgstr "Επαναφόρτωση καταλόγων εικόνων"
+
+#: ../src/photo_config_dialog.c:245
+msgid "Stop loading"
+msgstr "Ακύρωση φόρτωσης"
+
+#: ../src/photo_config_dialog.c:252 ../src/photo_config_dialog_item.c:127
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#: ../src/photo_config_dialog.c:254 ../src/photo_config_dialog_item.c:136
+msgid "Always show label"
+msgstr "Εμφάνιση ετικέτας πάντα"
+
+#: ../src/photo_config_dialog.c:256
+msgid "Nice transitions"
+msgstr "Όμορφες μεταβάσεις"
+
+#: ../src/photo_config_dialog.c:262
+msgid "Default Mouse actions"
+msgstr "Προκαθορισμένες ενέργειες ποντικιού"
+
+#: ../src/photo_config_dialog.c:264 ../src/photo_config_dialog_item.c:191
+msgid "Over"
+msgstr ""
+
+#: ../src/photo_config_dialog.c:268 ../src/photo_config_dialog_item.c:195
+msgid "Left"
+msgstr "Αριστερά"
+
+#: ../src/photo_config_dialog.c:270 ../src/photo_config_dialog.c:276
+#: ../src/photo_config_dialog_item.c:197 ../src/photo_config_dialog_item.c:203
+msgid "click"
+msgstr "κλικ"
+
+#: ../src/photo_config_dialog.c:274 ../src/photo_config_dialog_item.c:201
+msgid "Middle"
+msgstr "Μέση"
+
+#: ../src/photo_config_dialog.c:279 ../src/photo_config_dialog_item.c:142
+msgid "No"
+msgstr "Όχι"
+
+#: ../src/photo_config_dialog.c:318
+msgid "Popups"
+msgstr "Γρήγορες Ειδοποιήσεις"
+
+#: ../src/photo_config_dialog.c:320
+msgid "Picture loader popup"
+msgstr "Ειδοποίηση φορτωτή εικόνων"
+
+#: ../src/photo_config_dialog.c:323
+msgid "Never"
+msgstr "Ποτέ"
+
+#: ../src/photo_config_dialog.c:325
+msgid "Summary"
+msgstr "Σύνοψη"
+
+#: ../src/photo_config_dialog.c:327
+msgid "Verbose"
+msgstr ""
+
+#: ../src/photo_config_dialog.c:332
+msgid "Miscellaneous"
+msgstr "Διάφορα"
+
+#: ../src/photo_config_dialog.c:334
+msgid "Remove generated backgrounds"
+msgstr "Αφαίρεση φόντων που έχουν παραχθεί"
+
+#: ../src/photo_config_dialog.c:338
+msgid "Pictures viewer"
+msgstr "Προβολέας Εικόνων"
+
+#: ../src/photo_config_dialog.c:344
+msgid "Images Quality"
+msgstr "Ποιότητα Εικόνων"
+
+#: ../src/photo_config_dialog.c:346
+#, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f pixel"
+
+#: ../src/photo_config_dialog.c:353
+msgid "Automaticly reload directories"
+msgstr "Αυτόματη επαναφόρτωση καταλόγων"
+
+#: ../src/photo_config_dialog.c:356
+msgid "when add / modify directory list"
+msgstr "όταν προσθέτεις / τροποποιείς μια λίστα καταλόγων"
+
+#: ../src/photo_config_dialog.h:36
+msgid "Show label"
+msgstr "Εμφάνιση ετικέτας"
+
+#: ../src/photo_config_dialog.h:38
+msgid "Show informations"
+msgstr "Εμφάνιση πληροφοριών"
+
+#: ../src/photo_config_dialog.h:40 ../src/photo_menu.c:44
+msgid "Previous picture"
+msgstr "Προηγούμενη Εικόνα"
+
+#: ../src/photo_config_dialog.h:42 ../src/photo_menu.c:40
+msgid "Next picture"
+msgstr "Επόμενη Εικόνα"
+
+#: ../src/photo_config_dialog.h:44
+msgid "Pause"
+msgstr "Παύση"
+
+#: ../src/photo_config_dialog.h:46 ../src/photo_menu.c:58
+msgid "Set as background"
+msgstr "Ορισμός ως ταπετσαρία"
+
+#: ../src/photo_config_dialog.h:48
+msgid "Open viewer"
+msgstr "Άνοιγμα προβολέα"
+
+#: ../src/photo_config_dialog.h:50
+msgid "Show menu"
+msgstr "Εμφάνιση μενού"
+
+#: ../src/photo_config_dialog_dir.c:38
+msgid "Photo Directory Configuration"
+msgstr ""
+
+#: ../src/photo_config_dialog_dir.c:118
+msgid "Directory"
+msgstr "Κατάλογος"
+
+#: ../src/photo_config_dialog_dir.c:127
+msgid "Loading options"
+msgstr "Επιλογές φορτώματος"
+
+#: ../src/photo_config_dialog_dir.c:129
+msgid "Recursive"
+msgstr ""
+
+#: ../src/photo_config_dialog_dir.c:131
+msgid "Read hidden files"
+msgstr "Ανάγνωση κρυφών αρχείων"
+
+#: ../src/photo_config_dialog_dir.c:158
+msgid "Photo Module Warning"
+msgstr ""
+
+#: ../src/photo_config_dialog_item.c:48
+#, fuzzy
+msgid "Photo Item Configuration"
+msgstr "Ρύθμιση Αντικειμένου Photo"
+
+#: ../src/photo_config_dialog_item.c:112
+msgid "Timer between pictures change"
+msgstr "Χρόνος ανάμεσα στην εναλλαγή εικόνων"
+
+#: ../src/photo_config_dialog_item.c:114
+msgid "Activate"
+msgstr "Ενεργοποίηση"
+
+#: ../src/photo_config_dialog_item.c:117
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f δευτερόλεπτα"
+
+#: ../src/photo_config_dialog_item.c:129
+msgid "Alpha"
+msgstr "Διαφάνεια Alpha"
+
+#: ../src/photo_config_dialog_item.c:132
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/photo_config_dialog_item.c:140
+msgid "Yes"
+msgstr "Ναί"
+
+#: ../src/photo_config_dialog_item.c:144 ../src/photo_config_dialog_item.c:206
+msgid "Default setting"
+msgstr "Προκαθορισμένη ρύθμιση"
+
+#: ../src/photo_config_dialog_item.c:189
+msgid "Mouse actions"
+msgstr "Ενέργειες ποντικιού"
+
+#: ../src/photo_item.c:389
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists.</hilight><br><br>This file is in Photo "
+"module picture list, but it seems you removed it from the disk<br>It cant be "
+"set as background, sorry."
+msgstr ""
+
+#: ../src/photo_item.c:392 ../src/photo_item.c:417 ../src/photo_item.c:455
+#: ../src/photo_item.c:475 ../src/photo_picture_local.c:259
+msgid "Photo Module Error"
+msgstr ""
+
+#: ../src/photo_item.c:413
+#, c-format
+msgid ""
+"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file !"
+"<br>Photo module needs e17setroot util from e_utils package to set you're "
+"picture as backgroundPlease install it and try again"
+msgstr ""
+
+#: ../src/photo_item.c:452
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's "
+"module picture list, but it seems you removed it from the disk.<br>It cant "
+"be set opened in a viewer, sorry."
+msgstr ""
+
+#: ../src/photo_item.c:472
+#, c-format
+msgid ""
+"<hilight>Viewer %s not found !</hilight><br><br>You can change the viewer "
+"for images in Photo module configuration panel (Advanced view)"
+msgstr ""
+
+#: ../src/photo_menu.c:30
+msgid "Pause slideshow"
+msgstr "Παύση προβολής σλάιντ"
+
+#: ../src/photo_menu.c:35
+msgid "Resume slideshow"
+msgstr ""
+
+#: ../src/photo_menu.c:54
+msgid "Picture informations"
+msgstr "Πληροφορίες Εικόνας"
+
+#: ../src/photo_menu.c:62
+#, fuzzy
+msgid "Open in"
+msgstr "Άνοιγμα σε"
+
+#: ../src/photo_menu.c:71
+msgid "Configure Photo module"
+msgstr "Ρύθμιση Αρθρώματος Photo"
+
+#: ../src/photo_menu.c:75
+msgid "Configure this Photo gadget"
+msgstr "Ρύθμιση αυτού του συστατικού Photo"
+
+#: ../src/photo_menu.c:82
+msgid "Configure Gadget and Shelf"
+msgstr "Ρύθμιση Συστατικού και Ραφιού"
+
+#: ../src/photo_picture_histo.c:121
+msgid "Historic"
+msgstr "Ιστορικό"
+
+#: ../src/photo_picture_local.c:253
+#, c-format
+msgid ""
+"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr ""
+
+#: ../src/photo_picture_local.c:593
+msgid "Photo Module Information"
+msgstr "Πληροφορίες Αρθρώματος Photo"
+
+#: ../src/photo_picture_local.c:594
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time wou will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr ""

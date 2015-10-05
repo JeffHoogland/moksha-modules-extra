@@ -1,0 +1,104 @@
+part
+{
+	name: "background";
+	type: IMAGE;
+	mouse_events: 1;
+	description
+	{
+		state: "default" 0.0;
+		min: 60 120;
+		rel1
+		{
+			relative: 0.0 0.0;
+		}
+		rel2
+		{
+			relative: 1.0 1.0;
+		}
+		image
+		{
+			normal: "popup_info_background.png";
+			border: 10 10 10 10;
+		}
+	}
+}
+
+part
+{
+	name: "icon";
+	type: SWALLOW;
+	description
+	{
+		state: "default" 0.0;
+		color:  255 255 255 255;
+		rel1
+		{
+			relative: 0.3 0.0;
+			to_x: "background";
+			offset: 0 18;
+		}
+		rel2
+		{
+			relative: 0.7 0.0;
+			to_x: "background";
+			offset: 0 88;
+		}
+	}
+}
+
+part
+{
+	name: "title";
+	type: TEXT;
+	description
+	{
+		state: "default" 0.0;
+		rel1
+		{
+			relative: 0.0 1.0;
+			to_x: "background";
+			to_y: "icon";
+			offset: 0 10;
+		}
+		rel2
+		{
+			relative: 1.0 1.0;
+			to_x: "background";
+			to_y: "icon";
+			offset: 0 22;
+		}
+		color: 0 0 0 255;
+		color2: 0 0 0 255;
+		color3: 255 255 255 255;
+		text
+		{
+			text: "Photo module";
+			font: "Sans";
+			size: 11;
+			align: 0.5 0.0;
+		}
+	}
+}
+
+part
+{
+	name: "text";
+	type: SWALLOW;
+	description
+	{
+		state: "default" 0.0;
+		rel1
+		{
+			relative: 0.0 1.0;
+			to_x: "background";
+			to_y: "title";
+			offset: 20 10;
+		}
+		rel2
+		{
+			relative: 1.0 1.0;
+			to: "background";
+			offset: -5 -15;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+/* Item group */
+
+#define MSG_RECV_LABEL_ALWAYS 0
+
+group
+{
+        name: "modules/photo/item";
+
+        script
+        {
+                public label_always;
+
+                public message(Msg_Type: type, id, msg)
+                {
+                        if (type == MSG_INT)
+                        {
+                                if (id == MSG_RECV_LABEL_ALWAYS)
+                                {
+                                        set_int(label_always, getarg(2));
+                                        if (!get_int(label_always))
+                                                run_program(PROGRAM:"label_hide_go");
+                                }
+                        }
+                }
+        }
+
+        parts
+        {
+                #include "photo_item_parts.edc"
+        }
+
+        programs
+        {
+                #include "photo_item_programs.edc"
+        }
+}

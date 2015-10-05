@@ -1,0 +1,395 @@
+# Photo module (e17), Finnish translation
+# This file is put in the public domain.
+# Jani väyrynen <janivayrynen@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Photo module (e17)\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-01-23 01:50+0200\n"
+"Last-Translator: Jani väyrynen <janivayrynen@gmail.com>\n"
+"Language-Team: Finnish <janivayrynen@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_main.c:53 ../src/e_mod_main.c:60 ../src/e_mod_main.c:67
+#: ../src/e_mod_main.c:74 ../src/e_mod_main.c:81 ../src/e_mod_main.c:88
+msgid "Photo Module"
+msgstr "Fotomoduuli"
+
+#: ../src/e_mod_main.c:53
+msgid "E Canvas init failed !"
+msgstr "E-kankaan käynnistys epäonnistui!"
+
+#: ../src/e_mod_main.c:60
+msgid "Theme init failed !"
+msgstr "Teeman käynnistys epäonnistui!"
+
+#: ../src/e_mod_main.c:67
+msgid "Config init failed"
+msgstr "Asetusten asetus epäonnistui"
+
+#: ../src/e_mod_main.c:74
+msgid "Picture subsystem init failed"
+msgstr "Kuva-alijärjestelmän käynnistys epäonnisti"
+
+#: ../src/e_mod_main.c:81
+msgid "Popup warn subsystem init failed"
+msgstr "Ponnahdusvaroitusalijärjestelmän käynnistys epäonnistui"
+
+#: ../src/e_mod_main.c:88
+msgid "Popup info subsystem init failed"
+msgstr "Ponnahdustietoalijärjestelmän käynnistys epäonnistui"
+
+#: ../src/e_mod_main.c:181
+msgid "Photo"
+msgstr "Foto"
+
+#: ../src/photo_config.c:65
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Fotomoduuli : Asetukset päivitetty</hilight><br><br>Sinun "
+"Fotomoduulisi asetukset<br>on päivitetty<br>Asetuksesi "
+"poistettiin<br>Pahoittelut aiheutetusta vaivasta<br><br>(%d -> %d)"
+
+#: ../src/photo_config.c:71 ../src/photo_config.c:85
+msgid "Photo Module version "
+msgstr "Fotomoduulin versio "
+
+#: ../src/photo_config.c:79
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Fotomoduuli : Asetukset alipäivitetty</hilight><br><br>Sinun "
+"Fotomoduulisi asetukset<br>on alipäivitetty<br>Asetuksesi "
+"poistettiin<br>Pahoittelut aiheutetusta vaivasta<br><br>(%d -> %d)"
+
+#: ../src/photo_config_dialog.c:64
+msgid "Photo Configuration"
+msgstr "Foton asetukset"
+
+#: ../src/photo_config_dialog.c:220
+msgid "Picture directories"
+msgstr "Kuvahakemistot"
+
+#: ../src/photo_config_dialog.c:235
+msgid "Add"
+msgstr "Lisää"
+
+#: ../src/photo_config_dialog.c:237
+msgid "Delete"
+msgstr "Poista"
+
+#: ../src/photo_config_dialog.c:239
+msgid "Configure"
+msgstr "Muokkaa"
+
+#: ../src/photo_config_dialog.c:242
+msgid "Reload picture directories"
+msgstr "Lataa kuvahakemistot uudelleen"
+
+#: ../src/photo_config_dialog.c:245
+msgid "Stop loading"
+msgstr "Lopeta lataaminen"
+
+#: ../src/photo_config_dialog.c:252 ../src/photo_config_dialog_item.c:127
+msgid "Appearance"
+msgstr "Ulkonäkö"
+
+#: ../src/photo_config_dialog.c:254 ../src/photo_config_dialog_item.c:136
+msgid "Always show label"
+msgstr "Näytä aina nimike"
+
+#: ../src/photo_config_dialog.c:256
+msgid "Nice transitions"
+msgstr "Sulavat siirtymät"
+
+#: ../src/photo_config_dialog.c:262
+msgid "Default Mouse actions"
+msgstr "Oletushiiritoiminnot"
+
+#: ../src/photo_config_dialog.c:264 ../src/photo_config_dialog_item.c:191
+msgid "Over"
+msgstr "Yllä"
+
+#: ../src/photo_config_dialog.c:268 ../src/photo_config_dialog_item.c:195
+msgid "Left"
+msgstr "Vasen"
+
+#: ../src/photo_config_dialog.c:270 ../src/photo_config_dialog.c:276
+#: ../src/photo_config_dialog_item.c:197 ../src/photo_config_dialog_item.c:203
+msgid "click"
+msgstr "klikkaa"
+
+#: ../src/photo_config_dialog.c:274 ../src/photo_config_dialog_item.c:201
+msgid "Middle"
+msgstr "Keski"
+
+#: ../src/photo_config_dialog.c:279 ../src/photo_config_dialog_item.c:142
+msgid "No"
+msgstr "Ei"
+
+#: ../src/photo_config_dialog.c:318
+msgid "Popups"
+msgstr "Ponnahdukset"
+
+#: ../src/photo_config_dialog.c:320
+msgid "Picture loader popup"
+msgstr "Kuvanlataimen ponnahdus"
+
+#: ../src/photo_config_dialog.c:323
+msgid "Never"
+msgstr "Ei koskaan"
+
+#: ../src/photo_config_dialog.c:325
+msgid "Summary"
+msgstr "Yhteenveto"
+
+#: ../src/photo_config_dialog.c:327
+msgid "Verbose"
+msgstr "Kattava"
+
+#: ../src/photo_config_dialog.c:332
+msgid "Miscellaneous"
+msgstr "Sekalainen"
+
+#: ../src/photo_config_dialog.c:334
+msgid "Remove generated backgrounds"
+msgstr "Poista luodut taustakuvat"
+
+#: ../src/photo_config_dialog.c:338
+msgid "Pictures viewer"
+msgstr "Kuvankatselin"
+
+#: ../src/photo_config_dialog.c:344
+msgid "Images Quality"
+msgstr "Kuvanlaatu"
+
+#: ../src/photo_config_dialog.c:346
+#, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f pikseliä"
+
+#: ../src/photo_config_dialog.c:353
+msgid "Automaticly reload directories"
+msgstr "Lataa hakemistot uudelleen automaattisesti"
+
+#: ../src/photo_config_dialog.c:356
+msgid "when add / modify directory list"
+msgstr "lisättäessä / muokattaessa hakemistolistaa"
+
+#: ../src/photo_config_dialog.h:36
+msgid "Show label"
+msgstr "Näytä nimike"
+
+#: ../src/photo_config_dialog.h:38
+msgid "Show informations"
+msgstr "Näytä tiedot"
+
+#: ../src/photo_config_dialog.h:40 ../src/photo_menu.c:44
+msgid "Previous picture"
+msgstr "Edellinen kuva"
+
+#: ../src/photo_config_dialog.h:42 ../src/photo_menu.c:40
+msgid "Next picture"
+msgstr "Seuraava kuva"
+
+#: ../src/photo_config_dialog.h:44
+msgid "Pause"
+msgstr "Tauko"
+
+#: ../src/photo_config_dialog.h:46 ../src/photo_menu.c:58
+msgid "Set as background"
+msgstr "Aseta taustakuvaksi"
+
+#: ../src/photo_config_dialog.h:48
+msgid "Open viewer"
+msgstr "Avaa katselin"
+
+#: ../src/photo_config_dialog.h:50
+msgid "Show menu"
+msgstr "Näytä valikko"
+
+#: ../src/photo_config_dialog_dir.c:38
+msgid "Photo Directory Configuration"
+msgstr "Foton hakemistoasetukset"
+
+#: ../src/photo_config_dialog_dir.c:118
+msgid "Directory"
+msgstr "Hakemisto"
+
+#: ../src/photo_config_dialog_dir.c:127
+msgid "Loading options"
+msgstr "Latauksen valinnat"
+
+#: ../src/photo_config_dialog_dir.c:129
+msgid "Recursive"
+msgstr "Rekursiivinen"
+
+#: ../src/photo_config_dialog_dir.c:131
+msgid "Read hidden files"
+msgstr "Lue piilotiedostot"
+
+#: ../src/photo_config_dialog_dir.c:158
+msgid "Photo Module Warning"
+msgstr "Fotomoduulin varoitus"
+
+#: ../src/photo_config_dialog_item.c:48
+msgid "Photo Item Configuration"
+msgstr "Foton kohteen asetukset"
+
+#: ../src/photo_config_dialog_item.c:112
+msgid "Timer between pictures change"
+msgstr "Ajastin kuvien vaihtamiselle"
+
+#: ../src/photo_config_dialog_item.c:114
+msgid "Activate"
+msgstr "Aktivoi"
+
+#: ../src/photo_config_dialog_item.c:117
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f sekuntia"
+
+#: ../src/photo_config_dialog_item.c:129
+msgid "Alpha"
+msgstr "Alfa"
+
+#: ../src/photo_config_dialog_item.c:132
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/photo_config_dialog_item.c:140
+msgid "Yes"
+msgstr "Kyllä"
+
+#: ../src/photo_config_dialog_item.c:144 ../src/photo_config_dialog_item.c:206
+msgid "Default setting"
+msgstr "Oletusasetus"
+
+#: ../src/photo_config_dialog_item.c:189
+msgid "Mouse actions"
+msgstr "Hiiritoiminnot"
+
+#: ../src/photo_item.c:389
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists.</hilight><br><br>This file is in Photo "
+"module picture list, but it seems you removed it from the disk<br>It cant be "
+"set as background, sorry."
+msgstr ""
+"<hilight>Tiedostoa %s ei ole.</hilight><br><br>Tämä tiedosto on Fotomoduulin "
+"kuvalistalla, mutta näytät poistaneesi sen levyltä.<br>Sitä ei voi asettaa "
+"taustakuvaksi, pahoittelen."
+
+#: ../src/photo_item.c:392 ../src/photo_item.c:417 ../src/photo_item.c:455
+#: ../src/photo_item.c:475 ../src/photo_picture_local.c:259
+msgid "Photo Module Error"
+msgstr "Fotomoduulin virhe"
+
+#: ../src/photo_item.c:413
+#, c-format
+msgid ""
+"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file !"
+"<br>Photo module needs e17setroot util from e_utils package to set you're "
+"picture as backgroundPlease install it and try again"
+msgstr ""
+"<hilight>e17setroot tarvitaan</hilight><br><br>%s ei ole edje-tiedosto!"
+"<br>Fotomoduuli tarvitsee e_utils-paketin e17setroot-ohjelman asettaakseen "
+"kuvasi taustakuvaksi. Asenna se ja yritä uudelleen, kiitos"
+
+#: ../src/photo_item.c:452
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's "
+"module picture list, but it seems you removed it from the disk.<br>It cant "
+"be set opened in a viewer, sorry."
+msgstr ""
+"<hilight>Tiedostoa %s ei ole!</hilight><br><br>Tämä tiedosto on Fotomoduulin "
+"kuvalistalla, mutta näytät poistaneesi sen levyltä.<br>Sitä ei voi avata "
+"katselimessa, pahoittelen."
+
+#: ../src/photo_item.c:472
+#, c-format
+msgid ""
+"<hilight>Viewer %s not found !</hilight><br><br>You can change the viewer "
+"for images in Photo module configuration panel (Advanced view)"
+msgstr ""
+"<hilight>Katselinta %s ei löytynyt</hilight><br><br>Voit vaihtaa kuvien "
+"katselinta Fotomoduulin asetuspaneelissa (lisäasetusnäyttö)"
+
+#: ../src/photo_menu.c:30
+msgid "Pause slideshow"
+msgstr "Pysäytä kuvaesitys"
+
+#: ../src/photo_menu.c:35
+msgid "Resume slideshow"
+msgstr "Jatka kuvaesitystä"
+
+#: ../src/photo_menu.c:54
+msgid "Picture informations"
+msgstr "Kuvan tiedot"
+
+#: ../src/photo_menu.c:62
+msgid "Open in"
+msgstr "Avaa"
+
+#: ../src/photo_menu.c:71
+msgid "Configure Photo module"
+msgstr "Muokkaa Fotomoduulia"
+
+#: ../src/photo_menu.c:75
+msgid "Configure this Photo gadget"
+msgstr "Muokkaa tätä Fotovempainta"
+
+#: ../src/photo_menu.c:82
+msgid "Configure Gadget and Shelf"
+msgstr "Muokkaa vempainta ja hyllyä"
+
+#: ../src/photo_picture_histo.c:121
+msgid "Historic"
+msgstr "Historia"
+
+#: ../src/photo_picture_local.c:253
+#, c-format
+msgid ""
+"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr ""
+"<hilight>Hakemistoa %s ei ole olemassa.</hilight><br><br>Voit vaihtaa kuvien "
+"kansioita pääasetuspaneelissa<br>Ne voivat olla joko jpeg- tai png-"
+"tiedostoja<br><br>Jos tuonnin jälkeen voitkin poistaa nämä kuvat ja silti "
+"katsella<br>niitä, et kuitenkaan voi asettaa niitä enää taustakuvaksi<br><br>"
+
+#: ../src/photo_picture_local.c:593
+msgid "Photo Module Information"
+msgstr "Fotomoduulin tiedot"
+
+#: ../src/photo_picture_local.c:594
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time wou will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr ""
+"<hilight>Luodaan pienoiskuvia</hilight><br><br>Jotkin kuvat käsitellään "
+"<hilight>taustatyönä</hilight>.<br>Se voi kestää hetken, mutta sen jälkeen "
+"kuvien lataaminen on nopeampaa ja keveämpää :)<br><br>Aina kun lataat "
+"Fotomoduulissa kuvia, joita ei aikaisemmin ole ladattu,<br>ne "
+"pienoiskuvitetaan.<br><br>Ponnahduksia luotaessa et voi nähdä yhtään kuvaa "
+"Fotossa.<br>Toivon voivani muuttaa tämän joskus :)"

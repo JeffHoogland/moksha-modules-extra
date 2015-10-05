@@ -1,0 +1,36 @@
+make install CFLAGS="-g -Wall -DDEBUG -DDEBUG_MAIN -DDEBUG_CONFIG -DDEBUG_ITEM -DDEBUG_PICTURE -DDEBUG_PICTURE_LOCAL -DDEBUG_PICTURE_NET -DDEBUG_POPUP_WARN -DDEBUG_POPUP_INFO"
+
+----------------------------------------------------
+BUGS
+----------------------------------------------------
+
+* sometimes the histo menu seems not to show the popup info
+
+
+----------------------------------------------------
+NEEDED
+----------------------------------------------------
+
+* fix the "Set as wallpaper", using E code, like slideshow module
+
+* option to set the thumb size, and no thumb mode
+
+* find a way to have the path of a generated thumb, to load it direcly
+  instead of always using e_thumb (delay)
+  the other solution would be a cache, and its not a good one =)
+
+* add some borders between different item categories
+  in config panels
+* change item action setbg with
+  e patch edj_gen to e_utils
+* border around the pictures
+  need to create an object that will contain my edje object
+  so the object with the theme is able to be an oblong
+* ability to add a dir without reloading all
+* rethink local load idler to be less heavy
+
+----------------------------------------------------
+FUTUR
+----------------------------------------------------
+
+* picture net (get from devian's TODO)

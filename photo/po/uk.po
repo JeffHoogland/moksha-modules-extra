@@ -1,0 +1,405 @@
+# This file is put in the public domain.
+# Daniel Korostil <ted.korostiled@gmail.com>, 2009.
+# Korostil Daniel <ted.korostiled@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: photo.HEAD\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2010-09-09 08:01-0700\n"
+"PO-Revision-Date: 2011-02-06 09:43+0300\n"
+"Last-Translator: Korostil Daniel <ted.korostiled@gmail.com>\n"
+"Language-Team: translation@linux.org.ua\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.6.1\n"
+
+#: ../src/e_mod_main.c:53 ../src/e_mod_main.c:60 ../src/e_mod_main.c:67
+#: ../src/e_mod_main.c:74 ../src/e_mod_main.c:81 ../src/e_mod_main.c:88
+msgid "Photo Module"
+msgstr "Світлина"
+
+#: ../src/e_mod_main.c:53
+msgid "E Canvas init failed !"
+msgstr "Не вдалось запустити полотно !"
+
+#: ../src/e_mod_main.c:60
+msgid "Theme init failed !"
+msgstr "Не вдалось запустити тему !"
+
+#: ../src/e_mod_main.c:67
+msgid "Config init failed"
+msgstr "Не вдалось запустити налаштування"
+
+#: ../src/e_mod_main.c:74
+msgid "Picture subsystem init failed"
+msgstr "Не вдалось запустити підсистему малюнків"
+
+#: ../src/e_mod_main.c:81
+msgid "Popup warn subsystem init failed"
+msgstr "Не вдалось запустити підсистему виринань застережень"
+
+#: ../src/e_mod_main.c:88
+msgid "Popup info subsystem init failed"
+msgstr "Не вдалось запустити підсистему виринань інформації"
+
+#: ../src/e_mod_main.c:181
+msgid "Photo"
+msgstr "Світлина"
+
+#: ../src/photo_config.c:65
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Світлина : налаштування оновлено</hilight><br><br>Ваші налаштування "
+"світлини<br>оновлено<br>Ваші налаштування вилучено<br>Вибачте за "
+"незручності<br><br>(%d -> %d)"
+
+#: ../src/photo_config.c:71 ../src/photo_config.c:85
+msgid "Photo Module version "
+msgstr "Версія світлини"
+
+#: ../src/photo_config.c:79
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Світлина : налаштування понижено версією</hilight><br><br>Ваші "
+"налаштування світлини<br>понижено версією<br>Ваші налаштування "
+"вилучено<br>Вибачте за незручність<br><br>(%d ->%d)"
+
+#: ../src/photo_config_dialog.c:64
+msgid "Photo Configuration"
+msgstr "Налаштуванння світлини"
+
+#: ../src/photo_config_dialog.c:220
+msgid "Picture directories"
+msgstr "Фототеки"
+
+#: ../src/photo_config_dialog.c:235
+msgid "Add"
+msgstr "Створити"
+
+#: ../src/photo_config_dialog.c:237
+msgid "Delete"
+msgstr "Вилучити"
+
+#: ../src/photo_config_dialog.c:239
+msgid "Configure"
+msgstr "Налаштувати"
+
+#: ../src/photo_config_dialog.c:242
+msgid "Reload picture directories"
+msgstr "Оновити фототеки"
+
+#: ../src/photo_config_dialog.c:245
+msgid "Stop loading"
+msgstr "Зупинити оновлення"
+
+#: ../src/photo_config_dialog.c:252 ../src/photo_config_dialog_item.c:127
+msgid "Appearance"
+msgstr "Вигляд"
+
+#: ../src/photo_config_dialog.c:254 ../src/photo_config_dialog_item.c:136
+msgid "Always show label"
+msgstr "Постійно показувати мітки"
+
+#: ../src/photo_config_dialog.c:256
+msgid "Nice transitions"
+msgstr "Успішне переміщення"
+
+#: ../src/photo_config_dialog.c:262
+msgid "Default Mouse actions"
+msgstr "Типові дії миші"
+
+#: ../src/photo_config_dialog.c:264 ../src/photo_config_dialog_item.c:191
+msgid "Over"
+msgstr "Правий"
+
+#: ../src/photo_config_dialog.c:268 ../src/photo_config_dialog_item.c:195
+msgid "Left"
+msgstr "Лівий"
+
+#: ../src/photo_config_dialog.c:270 ../src/photo_config_dialog.c:276
+#: ../src/photo_config_dialog_item.c:197 ../src/photo_config_dialog_item.c:203
+msgid "click"
+msgstr "клац"
+
+#: ../src/photo_config_dialog.c:274 ../src/photo_config_dialog_item.c:201
+msgid "Middle"
+msgstr "Середній"
+
+#: ../src/photo_config_dialog.c:279 ../src/photo_config_dialog_item.c:142
+msgid "No"
+msgstr "Нема"
+
+#: ../src/photo_config_dialog.c:318
+msgid "Popups"
+msgstr "Виринання"
+
+#: ../src/photo_config_dialog.c:320
+msgid "Picture loader popup"
+msgstr "Завантажувач виринань малюнків "
+
+#: ../src/photo_config_dialog.c:323
+msgid "Never"
+msgstr "Ніколи"
+
+#: ../src/photo_config_dialog.c:325
+msgid "Summary"
+msgstr "Підсумок"
+
+#: ../src/photo_config_dialog.c:327
+msgid "Verbose"
+msgstr "Багатослівний"
+
+#: ../src/photo_config_dialog.c:332
+msgid "Miscellaneous"
+msgstr "Різноманітний"
+
+#: ../src/photo_config_dialog.c:334
+msgid "Remove generated backgrounds"
+msgstr "Вилучити стоворені фонові елементи"
+
+#: ../src/photo_config_dialog.c:338
+msgid "Pictures viewer"
+msgstr "Переглядач малюнків"
+
+#: ../src/photo_config_dialog.c:344
+msgid "Images Quality"
+msgstr "Якість малюнків"
+
+#: ../src/photo_config_dialog.c:346
+#, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f пікселів"
+
+#: ../src/photo_config_dialog.c:353
+msgid "Automaticly reload directories"
+msgstr "Автоматично оновлювати теки"
+
+#: ../src/photo_config_dialog.c:356
+msgid "when add / modify directory list"
+msgstr "коли створюють/змінюють список теки"
+
+#: ../src/photo_config_dialog.h:36
+msgid "Show label"
+msgstr "Показати мітки"
+
+#: ../src/photo_config_dialog.h:38
+msgid "Show informations"
+msgstr "Показати інформацію"
+
+#: ../src/photo_config_dialog.h:40 ../src/photo_menu.c:45
+msgid "Previous picture"
+msgstr "Попередній малюнок"
+
+#: ../src/photo_config_dialog.h:42 ../src/photo_menu.c:41
+msgid "Next picture"
+msgstr "Наступний малюнок"
+
+#: ../src/photo_config_dialog.h:44
+msgid "Pause"
+msgstr "Призупинити"
+
+#: ../src/photo_config_dialog.h:46 ../src/photo_menu.c:59
+msgid "Set as background"
+msgstr "Встановинити як тло"
+
+#: ../src/photo_config_dialog.h:48
+msgid "Open viewer"
+msgstr "Відкрити переглядач"
+
+#: ../src/photo_config_dialog.h:50
+msgid "Show menu"
+msgstr "Показати меню"
+
+#: ../src/photo_config_dialog_dir.c:38
+msgid "Photo Directory Configuration"
+msgstr "Налаштування фототеки"
+
+#: ../src/photo_config_dialog_dir.c:118
+msgid "Directory"
+msgstr "Тека"
+
+#: ../src/photo_config_dialog_dir.c:127
+msgid "Loading options"
+msgstr "Варіанти завантаження"
+
+#: ../src/photo_config_dialog_dir.c:129
+msgid "Recursive"
+msgstr "Рекурсивний"
+
+#: ../src/photo_config_dialog_dir.c:131
+msgid "Read hidden files"
+msgstr "Прочитати приховані файли"
+
+#: ../src/photo_config_dialog_dir.c:158
+msgid "Photo Module Warning"
+msgstr "Застереження світлини"
+
+#: ../src/photo_config_dialog_item.c:48
+msgid "Photo Item Configuration"
+msgstr "Налаштування фотопунктів"
+
+#: ../src/photo_config_dialog_item.c:112
+msgid "Timer between pictures change"
+msgstr "Таймер між малюнками змінює"
+
+#: ../src/photo_config_dialog_item.c:114
+msgid "Activate"
+msgstr "Увімкнути"
+
+#: ../src/photo_config_dialog_item.c:117
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f секунд"
+
+#: ../src/photo_config_dialog_item.c:129
+msgid "Alpha"
+msgstr "Альфа"
+
+#: ../src/photo_config_dialog_item.c:132
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/photo_config_dialog_item.c:140
+msgid "Yes"
+msgstr "Так"
+
+#: ../src/photo_config_dialog_item.c:144 ../src/photo_config_dialog_item.c:206
+msgid "Default setting"
+msgstr "Типові налаштування"
+
+#: ../src/photo_config_dialog_item.c:189
+msgid "Mouse actions"
+msgstr "Дії миші"
+
+#: ../src/photo_item.c:389
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists.</hilight><br><br>This file is in Photo "
+"module picture list, but it seems you removed it from the disk<br>It cant be "
+"set as background, sorry."
+msgstr ""
+"<hilight>Файл %s не існує.</hilight><br><br>Цей файл є в списку малюнків "
+"світлини, але схоже на те, що ви вилучили його з диска<br>Тому неможливо "
+"його встановити як тло, вибачте."
+
+#: ../src/photo_item.c:392 ../src/photo_item.c:417 ../src/photo_item.c:455
+#: ../src/photo_item.c:475 ../src/photo_picture_local.c:259
+msgid "Photo Module Error"
+msgstr "Помилка світлини"
+
+#: ../src/photo_item.c:413
+#, c-format
+msgid ""
+"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file !"
+"<br>Photo module needs e17setroot util from e_utils package to set you're "
+"picture as backgroundPlease install it and try again"
+msgstr ""
+"<hilight>Потрібно e17setroot</hilight><br><br>%s — це не файл edje "
+"!<br>Світлині потрібно e17setroot, допоки Ви не встановите з пакету e_utils "
+"ваш малюнок як тло. Будь ласка, встановіть його та спробуйте знову."
+
+#: ../src/photo_item.c:452
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's "
+"module picture list, but it seems you removed it from the disk.<br>It cant "
+"be set opened in a viewer, sorry."
+msgstr ""
+"<hilight>Файл %s не існує !</hilight><br><br>Цей файл є в списку малюнків "
+"світлини, але схоже на те, що ви його вилучити з диска.<br>Тому малюнок не "
+"можливо відкрити переглядачем, вибачте."
+
+#: ../src/photo_item.c:472
+#, c-format
+msgid ""
+"<hilight>Viewer %s not found !</hilight><br><br>You can change the viewer "
+"for images in Photo module configuration panel (Advanced view)"
+msgstr ""
+"<hilight>Переглядача %s не знайдено !</hilight><br><br>Ви можете змінити "
+"переглядач зображень у панелі налаштування світлини (Розширений перегляд)."
+
+#: ../src/photo_menu.c:31
+msgid "Pause slideshow"
+msgstr "Зупинити показ слайдів"
+
+#: ../src/photo_menu.c:36
+msgid "Resume slideshow"
+msgstr "Продовжити показ слайдів"
+
+#: ../src/photo_menu.c:55
+msgid "Picture informations"
+msgstr "Інформація про малюнок"
+
+#: ../src/photo_menu.c:63
+msgid "Open in"
+msgstr "Відкрити в"
+
+#: ../src/photo_menu.c:71
+#| msgid "Mouse actions"
+msgid "Module Settings"
+msgstr "Налаштування"
+
+#: ../src/photo_menu.c:77
+msgid "Settings"
+msgstr "Налаштування"
+
+#: ../src/photo_picture_histo.c:121
+msgid "Historic"
+msgstr "Історичний"
+
+#: ../src/photo_picture_local.c:253
+#, c-format
+msgid ""
+"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr ""
+"<hilight>Тека %s не існує.</hilight><br><br>Ви можете змінити фототеку в "
+"головній панелі налаштувань<br>Вони можуть бути у форматі jpeg або "
+"png<br><br>Після імпортування, якщо можете вилучити ті файли і малюнки, то "
+"їх однаково можна буде <br>переглядати, однак ви не зможете встановити їх як "
+"тло<br><br>"
+
+#: ../src/photo_picture_local.c:591
+msgid "Photo Module Information"
+msgstr "Інформація про світлину"
+
+#: ../src/photo_picture_local.c:592
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time wou will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr ""
+"<hilight>Створення ескізів</hilight><br><br>Деякі малюнки працюють "
+"<hilight>фоново</hilight>.<br>Це може забрати трохи часу, але згодом "
+"завантаження буде швидшим і світлішим :)<br><br>Кожного разу малюнки, що не "
+"були завантажені в світлину раніше,<br>будуть "
+"завантажуватись.<br><br>Упродовж створення виринань ви не зможете бачити "
+"які-небудь малюнки в світлині<br>Сподіваюсь, я це виправлю :)"
+
+#~ msgid "Configure Photo module"
+#~ msgstr "Налаштування світлини"
+
+#~ msgid "Configure this Photo gadget"
+#~ msgstr "Налаштувати цей фотоґаджет"
+
+#~ msgid "Configure Gadget and Shelf"
+#~ msgstr "Налаштування ґаджета і полиці"

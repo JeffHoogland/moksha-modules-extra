@@ -1,0 +1,5 @@
+To install Enlightenment Photo module, just do
+
+./autogen.sh
+make
+make install

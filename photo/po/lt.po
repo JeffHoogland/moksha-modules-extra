@@ -1,0 +1,402 @@
+# Lithuanian translation for enlightenment
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"PO-Revision-Date: 2010-01-31 14:02+0000\n"
+"Last-Translator: Joshas <Unknown>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-02-01 04:45+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_main.c:53 ../src/e_mod_main.c:60 ../src/e_mod_main.c:67
+#: ../src/e_mod_main.c:74 ../src/e_mod_main.c:81 ../src/e_mod_main.c:88
+msgid "Photo Module"
+msgstr "Nuotraukų modulis"
+
+#: ../src/e_mod_main.c:53
+msgid "E Canvas init failed !"
+msgstr "Nepavyko inicijuoti E Canvas !"
+
+#: ../src/e_mod_main.c:60
+msgid "Theme init failed !"
+msgstr "Nepavyko inicijuoti temos !"
+
+#: ../src/e_mod_main.c:67
+msgid "Config init failed"
+msgstr "Nepavyko inicijuoti konfigūracijos"
+
+#: ../src/e_mod_main.c:74
+msgid "Picture subsystem init failed"
+msgstr "Nepavyko inicijuoti paveikslų posistemės"
+
+#: ../src/e_mod_main.c:81
+msgid "Popup warn subsystem init failed"
+msgstr "Nepavyko inicijuoti įspėjimų iššokančio lango posistemės"
+
+#: ../src/e_mod_main.c:88
+msgid "Popup info subsystem init failed"
+msgstr "Nepavyko inicijuoti informacijos iššokančio lango posistemės"
+
+#: ../src/e_mod_main.c:181
+msgid "Photo"
+msgstr "Nuotrauka"
+
+#: ../src/photo_config.c:65
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Nuotraukų modulis : Konfigūracija atnaujinta</hilight><br><br>Jūsų "
+"nuotraukų modulio konfigūracija buvo atnaujinta<br>Jūsų nustatymai "
+"pašalinti<br>Atsiprašome už nepatogumus<br><br>(%d -> %d)"
+
+#: ../src/photo_config.c:71 ../src/photo_config.c:85
+msgid "Photo Module version "
+msgstr "Nuotraukų modulio versija "
+
+#: ../src/photo_config.c:79
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Nuotraukų modulis : Konfigūracija atstatyta</hilight><br><br>Jūsų "
+"nuotraukų modulio konfigūracija buvo atstatyta<br>Jūsų nustatymai "
+"pašalinti<br>Atsiprašome už nepatogumus<br><br>(%d -> %d)"
+
+#: ../src/photo_config_dialog.c:64
+msgid "Photo Configuration"
+msgstr "Nuotraukų konfigūracija"
+
+#: ../src/photo_config_dialog.c:220
+msgid "Picture directories"
+msgstr "Paveikslų katalogai"
+
+#: ../src/photo_config_dialog.c:235
+msgid "Add"
+msgstr "Pridėti"
+
+#: ../src/photo_config_dialog.c:237
+msgid "Delete"
+msgstr "Pašalinti"
+
+#: ../src/photo_config_dialog.c:239
+msgid "Configure"
+msgstr "Konfigūruoti"
+
+#: ../src/photo_config_dialog.c:242
+msgid "Reload picture directories"
+msgstr "Pakartotinai įkelti paveikslų katalogus"
+
+#: ../src/photo_config_dialog.c:245
+msgid "Stop loading"
+msgstr "Sustabdyti įkėlimą"
+
+#: ../src/photo_config_dialog.c:252 ../src/photo_config_dialog_item.c:127
+msgid "Appearance"
+msgstr "Išvaizda"
+
+#: ../src/photo_config_dialog.c:254 ../src/photo_config_dialog_item.c:136
+msgid "Always show label"
+msgstr "Visada rodyti žymę"
+
+#: ../src/photo_config_dialog.c:256
+msgid "Nice transitions"
+msgstr "Gražūs pakeitimai"
+
+#: ../src/photo_config_dialog.c:262
+msgid "Default Mouse actions"
+msgstr "Numatytieji pelės veiksmai"
+
+#: ../src/photo_config_dialog.c:264 ../src/photo_config_dialog_item.c:191
+msgid "Over"
+msgstr "Virš"
+
+#: ../src/photo_config_dialog.c:268 ../src/photo_config_dialog_item.c:195
+msgid "Left"
+msgstr "Kairė"
+
+#: ../src/photo_config_dialog.c:270 ../src/photo_config_dialog.c:276
+#: ../src/photo_config_dialog_item.c:197 ../src/photo_config_dialog_item.c:203
+msgid "click"
+msgstr "spragtelėti"
+
+#: ../src/photo_config_dialog.c:274 ../src/photo_config_dialog_item.c:201
+msgid "Middle"
+msgstr "Viduryje"
+
+#: ../src/photo_config_dialog.c:279 ../src/photo_config_dialog_item.c:142
+msgid "No"
+msgstr "Ne"
+
+#: ../src/photo_config_dialog.c:318
+msgid "Popups"
+msgstr "Iškylantieji langai"
+
+#: ../src/photo_config_dialog.c:320
+msgid "Picture loader popup"
+msgstr "Paveikslėlio įkėlyklės iššokantysis langas"
+
+#: ../src/photo_config_dialog.c:323
+msgid "Never"
+msgstr "Niekada"
+
+#: ../src/photo_config_dialog.c:325
+msgid "Summary"
+msgstr "Santrauka"
+
+#: ../src/photo_config_dialog.c:327
+msgid "Verbose"
+msgstr "Išsamus"
+
+#: ../src/photo_config_dialog.c:332
+msgid "Miscellaneous"
+msgstr "Įvairūs"
+
+#: ../src/photo_config_dialog.c:334
+msgid "Remove generated backgrounds"
+msgstr "Pašalinti sugeneruotus fonus"
+
+#: ../src/photo_config_dialog.c:338
+msgid "Pictures viewer"
+msgstr "Paveikslų žiūryklė"
+
+#: ../src/photo_config_dialog.c:344
+msgid "Images Quality"
+msgstr "Paveikslų kokybė"
+
+#: ../src/photo_config_dialog.c:346
+#, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f pix"
+
+#: ../src/photo_config_dialog.c:353
+msgid "Automaticly reload directories"
+msgstr "Automatiškai įkelti iš naujo katalogus"
+
+#: ../src/photo_config_dialog.c:356
+msgid "when add / modify directory list"
+msgstr "kai papildomas / keičiamas katalogų sąrašas"
+
+#: ../src/photo_config_dialog.h:36
+msgid "Show label"
+msgstr "Rodyti žymą"
+
+#: ../src/photo_config_dialog.h:38
+msgid "Show informations"
+msgstr "Rodyti informaciją"
+
+#: ../src/photo_config_dialog.h:40 ../src/photo_menu.c:44
+msgid "Previous picture"
+msgstr "Ankstesnis paveikslas"
+
+#: ../src/photo_config_dialog.h:42 ../src/photo_menu.c:40
+msgid "Next picture"
+msgstr "Kitas paveikslas"
+
+#: ../src/photo_config_dialog.h:44
+msgid "Pause"
+msgstr "Pristabdyti"
+
+#: ../src/photo_config_dialog.h:46 ../src/photo_menu.c:58
+msgid "Set as background"
+msgstr "Parinkti ekrano fonu"
+
+#: ../src/photo_config_dialog.h:48
+msgid "Open viewer"
+msgstr "Atverti žiūryklę"
+
+#: ../src/photo_config_dialog.h:50
+msgid "Show menu"
+msgstr "Rodyti meniu"
+
+#: ../src/photo_config_dialog_dir.c:38
+msgid "Photo Directory Configuration"
+msgstr "Nuotraukų katalogo konfigūracija"
+
+#: ../src/photo_config_dialog_dir.c:118
+msgid "Directory"
+msgstr "Katalogas"
+
+#: ../src/photo_config_dialog_dir.c:127
+msgid "Loading options"
+msgstr "Įkėlimo parinktys"
+
+#: ../src/photo_config_dialog_dir.c:129
+msgid "Recursive"
+msgstr "Rekursinis"
+
+#: ../src/photo_config_dialog_dir.c:131
+msgid "Read hidden files"
+msgstr "Skaityti paslėptus failus"
+
+#: ../src/photo_config_dialog_dir.c:158
+msgid "Photo Module Warning"
+msgstr "Nuotraukų modulio įspėjimas"
+
+#: ../src/photo_config_dialog_item.c:48
+msgid "Photo Item Configuration"
+msgstr "Nuotraukų elemento konfigūracija"
+
+#: ../src/photo_config_dialog_item.c:112
+msgid "Timer between pictures change"
+msgstr "Laikmatis tarp paveikslų pasikeitmo"
+
+#: ../src/photo_config_dialog_item.c:114
+msgid "Activate"
+msgstr "Atyvinti"
+
+#: ../src/photo_config_dialog_item.c:117
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f sekundės"
+
+#: ../src/photo_config_dialog_item.c:129
+msgid "Alpha"
+msgstr "Alfa"
+
+#: ../src/photo_config_dialog_item.c:132
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/photo_config_dialog_item.c:140
+msgid "Yes"
+msgstr "Taip"
+
+#: ../src/photo_config_dialog_item.c:144 ../src/photo_config_dialog_item.c:206
+msgid "Default setting"
+msgstr "Numatytoji nuostata"
+
+#: ../src/photo_config_dialog_item.c:189
+msgid "Mouse actions"
+msgstr "Pelės veiksmai"
+
+#: ../src/photo_item.c:389
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists.</hilight><br><br>This file is in Photo "
+"module picture list, but it seems you removed it from the disk<br>It cant be "
+"set as background, sorry."
+msgstr ""
+"<hilight>Failas %s nerastas.</hilight><br><br>Šis failas yra nuotraukų "
+"modulio paveikslų sąraše, bet panašu, kad jis buvo pašalintas iš "
+"disko<br>Atsiprašome, bet jo negalima parinkti fono paveikslėliu."
+
+#: ../src/photo_item.c:392 ../src/photo_item.c:417 ../src/photo_item.c:455
+#: ../src/photo_item.c:475 ../src/photo_picture_local.c:259
+msgid "Photo Module Error"
+msgstr "Nuotraukų modulio klaida"
+
+#: ../src/photo_item.c:413
+#, c-format
+msgid ""
+"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file "
+"!<br>Photo module needs e17setroot util from e_utils package to set you're "
+"picture as backgroundPlease install it and try again"
+msgstr ""
+"<hilight>Reikalingas e17setroot</hilight><br><br>%s nėra edje failas "
+"!<br>Nuotraukų moduliui reikalinga e17setroot programa iš e_utils paketo, "
+"kad nustatyti Jūsų paveikslą kaip foną. Prašome ją įdiegti ir bandyti dar "
+"kartą."
+
+#: ../src/photo_item.c:452
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's "
+"module picture list, but it seems you removed it from the disk.<br>It cant "
+"be set opened in a viewer, sorry."
+msgstr ""
+"<hilight>Failas %s nerastas!</hilight><br><br>Šis failas yra nuotraukų "
+"modulio paveikslų sąraše, bet panašu, kad jis buvo pašalintas iš "
+"disko<br>Atsiprašome, bet jo negalima atidaryti žiūrykle."
+
+#: ../src/photo_item.c:472
+#, c-format
+msgid ""
+"<hilight>Viewer %s not found !</hilight><br><br>You can change the viewer "
+"for images in Photo module configuration panel (Advanced view)"
+msgstr ""
+"<hilight>Žiūryklė %s nerasta !</hilight><br><br>Jūsgalite pakeisti "
+"paveikslėlių žiūryklę nuotraukų modulio konfigūracijos skydelyje "
+"(Išplėstiniame vaizde)"
+
+#: ../src/photo_menu.c:30
+msgid "Pause slideshow"
+msgstr "Pristabdyti prezentaciją"
+
+#: ../src/photo_menu.c:35
+msgid "Resume slideshow"
+msgstr "Tęsti prezentaciją"
+
+#: ../src/photo_menu.c:54
+msgid "Picture informations"
+msgstr "Informacija apie paveikslą"
+
+#: ../src/photo_menu.c:62
+msgid "Open in"
+msgstr "Atverti"
+
+#: ../src/photo_menu.c:71
+msgid "Configure Photo module"
+msgstr "Konfigūruoti nuotraukų modulį"
+
+#: ../src/photo_menu.c:75
+msgid "Configure this Photo gadget"
+msgstr "Konfigūruoti šį nuotraukos įtaisą"
+
+#: ../src/photo_menu.c:82
+msgid "Configure Gadget and Shelf"
+msgstr "Konfigūruoti įtaisą ir lentyną"
+
+#: ../src/photo_picture_histo.c:121
+msgid "Historic"
+msgstr "Istorinis"
+
+#: ../src/photo_picture_local.c:253
+#, c-format
+msgid ""
+"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr ""
+"<hilight>Katalogas %s nerastas.</hilight><br><br>Jūs galite pakeisti "
+"paveikslų katalogus pagrindiniame konfigūracijos skydelyje<br>Jie gali būti "
+"jpeg arba png<br><br>Po įkėlimo Jūs galite pašalinti šiuos failus, o "
+"paveikslėlius bus galima peržiūrėti<br>, bet jų nebus galima priskirti "
+"ekrano fonui.<br><br>"
+
+#: ../src/photo_picture_local.c:593
+msgid "Photo Module Information"
+msgstr "Nuotraukų modulio informacija"
+
+#: ../src/photo_picture_local.c:594
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time wou will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr ""
+"<hilight>Kuriamos miniatiūros</hilight><br><br>Kai kuriem paveikslam "
+"<hilight>fono užduotis</hilight> kuria miniatiūras.<br>Tai gali šiek tiek "
+"užtrukti, bet vėliau įkrova vyks greičiau ir lengviau :)<br><br>Kiekvieną "
+"kartą įkėlus paveikslus, kurių nėra nuotraukų modulyje,<br>jiems bus "
+"sukurtos miniatiūros.<br><br>Kol kuriami iššokantys langai, Jūs nematysite "
+"nei vieno paveikslėlio nuotraukų modulyje.<br>Tikiuosi, kad sugebėsiu tai "
+"pakeisti :)"

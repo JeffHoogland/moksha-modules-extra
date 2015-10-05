@@ -1,0 +1,171 @@
+/* Init */
+
+program
+{
+	name:	"init";
+	signal:	"load";
+	source:	"";
+	script
+	{
+		/* Init id and name */
+                set_int(label_always, 0);
+                /* Init photo parts */
+                set_state(PART:"picture0_clip", "visible", 0.0);
+        }
+}
+
+/* Mouse in/out */
+
+program
+{
+	name:	"mouse_in";
+	signal:	"mouse,in";
+	source:	"inout";
+        action: SIGNAL_EMIT "mouseover" "item";
+}
+program
+{
+	name:	"mouse_out";
+	signal:	"mouse,out";
+	source:	"inout";
+	script
+	{
+                if (!get_int(label_always))
+                {
+                        run_program(PROGRAM:"label_hide_go");
+                }
+	}
+}
+
+/* Label */
+
+program
+{
+        name: "label_show_go";
+        source: "program";
+        signal: "label_show";
+        action: STATE_SET "visible" 0.0;
+        transition: LINEAR 0.7;
+        target: "label";
+}
+program
+{
+        name: "label_hide_go";
+        action: STATE_SET "default" 0.0;
+        transition: LINEAR 0.7;
+        target: "label";
+}
+
+/* Picture transitions */
+
+/* Transition 0 to 1 */
+program
+{
+	name: "picture_transition_0_1";
+	signal: "picture_transition_0_1_go";
+        script
+        {
+                run_program(PROGRAM:"picture_transition_0_1_a");
+                run_program(PROGRAM:"picture_transition_0_1_b");
+        }
+}
+program
+{
+	name: "picture_transition_0_1_a";
+	action:	STATE_SET "visible" 0.0;
+	transition: LINEAR 1;
+	target:	"picture1_clip";
+}
+program
+{
+        name: "picture_transition_0_1_b";
+	action:	STATE_SET "default" 0.0;
+	transition: LINEAR 1;
+	target:	"picture0_clip";
+	after: "picture_transition_0_1_end";
+}
+program
+{
+	name: "picture_transition_q_0_1";
+	signal: "picture_transition_q_0_1_go";
+        script
+        {
+                run_program(PROGRAM:"picture_transition_q_0_1_a");
+                run_program(PROGRAM:"picture_transition_q_0_1_b");
+        }
+}
+program
+{
+	name: "picture_transition_q_0_1_a";
+	action:	STATE_SET "visible" 0.0;
+	target:	"picture1_clip";
+}
+program
+{
+        name: "picture_transition_q_0_1_b";
+	action:	STATE_SET "default" 0.0;
+	target:	"picture0_clip";
+	after: "picture_transition_0_1_end";
+}
+
+/* Transition 1 to 0 */
+program
+{
+	name: "picture_transition_1_0";
+	signal: "picture_transition_1_0_go";
+        script
+        {
+                run_program(PROGRAM:"picture_transition_1_0_a");
+                run_program(PROGRAM:"picture_transition_1_0_b");
+        }
+}
+program
+{
+	name: "picture_transition_1_0_a";
+	action:	STATE_SET "visible" 0.0;
+	transition: LINEAR 1;
+	target:	"picture0_clip";
+}
+program
+{
+        name: "picture_transition_1_0_b";
+	action:	STATE_SET "default" 0.0;
+	transition: LINEAR 1;
+	target:	"picture1_clip";
+	after: "picture_transition_1_0_end";
+}
+program
+{
+	name: "picture_transition_q_1_0";
+	signal: "picture_transition_q_1_0_go";
+        script
+        {
+                run_program(PROGRAM:"picture_transition_q_1_0_a");
+                run_program(PROGRAM:"picture_transition_q_1_0_b");
+        }
+}
+program
+{
+	name: "picture_transition_q_1_0_a";
+	action:	STATE_SET "visible" 0.0;
+	target:	"picture0_clip";
+}
+program
+{
+        name: "picture_transition_q_1_0_b";
+	action:	STATE_SET "default" 0.0;
+	target:	"picture1_clip";
+	after: "picture_transition_1_0_end";
+}
+
+/* End transitions */
+program
+{
+	name:	"picture_transition_0_1_end";
+	action: SIGNAL_EMIT "picture_transition_0_1_end" "picture";
+}
+program
+{
+	name:	"picture_transition_1_0_end";
+	action: SIGNAL_EMIT "picture_transition_1_0_end" "picture";
+}

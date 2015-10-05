@@ -1,0 +1,389 @@
+# Polish translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Stanislaw Gackowski <launchpad@soeb.eu>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-08-26 08:56+0000\n"
+"Last-Translator: Andrzej MoST (Marcin Ostajewski) <Unknown>\n"
+"Language-Team: Polish <pl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-08-27 10:01+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_main.c:53 ../src/e_mod_main.c:60 ../src/e_mod_main.c:67
+#: ../src/e_mod_main.c:74 ../src/e_mod_main.c:81 ../src/e_mod_main.c:88
+msgid "Photo Module"
+msgstr "Moduł zdjęć"
+
+#: ../src/e_mod_main.c:53
+msgid "E Canvas init failed !"
+msgstr "Inicializacja E Canvas nie powiodła się!"
+
+#: ../src/e_mod_main.c:60
+msgid "Theme init failed !"
+msgstr "Inicializacja motywu zawiodła!"
+
+#: ../src/e_mod_main.c:67
+msgid "Config init failed"
+msgstr "Inicializacja konfiguracji zawiodła!"
+
+#: ../src/e_mod_main.c:74
+msgid "Picture subsystem init failed"
+msgstr "Inicializacja podsystemu obrazków nie powiodła się!"
+
+#: ../src/e_mod_main.c:81
+msgid "Popup warn subsystem init failed"
+msgstr "Inicializacja podsystemu ostrzerzeń zawiodła"
+
+#: ../src/e_mod_main.c:88
+msgid "Popup info subsystem init failed"
+msgstr "Inicializacja podsystemu informowania nie powiodła się"
+
+#: ../src/e_mod_main.c:181
+msgid "Photo"
+msgstr "Zdjęcie"
+
+#: ../src/photo_config.c:65
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Moduł zdjęć : konfiguracja zaktualizowana</hilight><br><br>Twoja "
+"konfiguracja modułu zdjęć<br>była zaktualizowana<br>Twoja ustawienia były "
+"usunięte<br>Przepraszamy ze niedogodności<br><br>(%d -> %d)"
+
+#: ../src/photo_config.c:71 ../src/photo_config.c:85
+msgid "Photo Module version "
+msgstr "Wersja modułu zdjęć "
+
+#: ../src/photo_config.c:79
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Moduł zdjęć : konfiguracja dezaktualizowana</hilight><br><br>Twoja "
+"konfiguracja modułu zdjęć<br>była dezaktualizowana<br>Twoja ustawienia były "
+"usunięte<br>Przepraszamy ze niedogodności<br><br>(%d -> %d)"
+
+#: ../src/photo_config_dialog.c:64
+msgid "Photo Configuration"
+msgstr "Konfiguracja zdjęcia"
+
+#: ../src/photo_config_dialog.c:220
+msgid "Picture directories"
+msgstr "Foldery obrazków"
+
+#: ../src/photo_config_dialog.c:235
+msgid "Add"
+msgstr "Dodaj"
+
+#: ../src/photo_config_dialog.c:237
+msgid "Delete"
+msgstr "Usuń"
+
+#: ../src/photo_config_dialog.c:239
+msgid "Configure"
+msgstr "Konfiguruj"
+
+#: ../src/photo_config_dialog.c:242
+msgid "Reload picture directories"
+msgstr "Odśwież foldery obrazków"
+
+#: ../src/photo_config_dialog.c:245
+msgid "Stop loading"
+msgstr "Przestań ładować"
+
+#: ../src/photo_config_dialog.c:252 ../src/photo_config_dialog_item.c:127
+msgid "Appearance"
+msgstr "Wygląd"
+
+#: ../src/photo_config_dialog.c:254 ../src/photo_config_dialog_item.c:136
+msgid "Always show label"
+msgstr "Zawsze pokazuj etykiete"
+
+#: ../src/photo_config_dialog.c:256
+msgid "Nice transitions"
+msgstr "Ładne przejścia"
+
+#: ../src/photo_config_dialog.c:262
+msgid "Default Mouse actions"
+msgstr "Domyślne akcje myszy"
+
+#: ../src/photo_config_dialog.c:264 ../src/photo_config_dialog_item.c:191
+msgid "Over"
+msgstr "Nad"
+
+#: ../src/photo_config_dialog.c:268 ../src/photo_config_dialog_item.c:195
+msgid "Left"
+msgstr "W lewo"
+
+#: ../src/photo_config_dialog.c:270 ../src/photo_config_dialog.c:276
+#: ../src/photo_config_dialog_item.c:197 ../src/photo_config_dialog_item.c:203
+msgid "click"
+msgstr "klik"
+
+#: ../src/photo_config_dialog.c:274 ../src/photo_config_dialog_item.c:201
+msgid "Middle"
+msgstr "Środek"
+
+#: ../src/photo_config_dialog.c:279 ../src/photo_config_dialog_item.c:142
+msgid "No"
+msgstr "Nie"
+
+#: ../src/photo_config_dialog.c:318
+msgid "Popups"
+msgstr "Okienka"
+
+#: ../src/photo_config_dialog.c:320
+msgid "Picture loader popup"
+msgstr "Okienko ładowania obrazka"
+
+#: ../src/photo_config_dialog.c:323
+msgid "Never"
+msgstr "Nigdy"
+
+#: ../src/photo_config_dialog.c:325
+msgid "Summary"
+msgstr "Podsumowanie"
+
+#: ../src/photo_config_dialog.c:327
+msgid "Verbose"
+msgstr "Dokłady opis"
+
+#: ../src/photo_config_dialog.c:332
+msgid "Miscellaneous"
+msgstr "Różne"
+
+#: ../src/photo_config_dialog.c:334
+msgid "Remove generated backgrounds"
+msgstr "Usuń wygenerowane tła"
+
+#: ../src/photo_config_dialog.c:338
+msgid "Pictures viewer"
+msgstr "Przeglądarka obrazków"
+
+#: ../src/photo_config_dialog.c:344
+msgid "Images Quality"
+msgstr "Jakość zdjęć"
+
+#: ../src/photo_config_dialog.c:346
+#, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f pikseli"
+
+#: ../src/photo_config_dialog.c:353
+msgid "Automaticly reload directories"
+msgstr "Automatycznie odświeżaj foldery"
+
+#: ../src/photo_config_dialog.c:356
+msgid "when add / modify directory list"
+msgstr "przy dodaniu / modyfikacji listy folderów"
+
+#: ../src/photo_config_dialog.h:36
+msgid "Show label"
+msgstr "Pokaż etykiete"
+
+#: ../src/photo_config_dialog.h:38
+msgid "Show informations"
+msgstr "Pokaż informacje"
+
+#: ../src/photo_config_dialog.h:40 ../src/photo_menu.c:44
+msgid "Previous picture"
+msgstr "Poprzedni obrazek"
+
+#: ../src/photo_config_dialog.h:42 ../src/photo_menu.c:40
+msgid "Next picture"
+msgstr "Następny obrazek"
+
+#: ../src/photo_config_dialog.h:44
+msgid "Pause"
+msgstr "Wstrzymaj"
+
+#: ../src/photo_config_dialog.h:46 ../src/photo_menu.c:58
+msgid "Set as background"
+msgstr "Ustaw jako tło"
+
+#: ../src/photo_config_dialog.h:48
+msgid "Open viewer"
+msgstr "Otwórz przeglądarkę"
+
+#: ../src/photo_config_dialog.h:50
+msgid "Show menu"
+msgstr "Pokaż menu"
+
+#: ../src/photo_config_dialog_dir.c:38
+msgid "Photo Directory Configuration"
+msgstr "Konfiguracja folderu zdjęcia"
+
+#: ../src/photo_config_dialog_dir.c:118
+msgid "Directory"
+msgstr "Folder"
+
+#: ../src/photo_config_dialog_dir.c:127
+msgid "Loading options"
+msgstr "Opcje ładowania"
+
+#: ../src/photo_config_dialog_dir.c:129
+msgid "Recursive"
+msgstr "Rekursywny"
+
+#: ../src/photo_config_dialog_dir.c:131
+msgid "Read hidden files"
+msgstr "Otwórz ukryte pliki"
+
+#: ../src/photo_config_dialog_dir.c:158
+msgid "Photo Module Warning"
+msgstr "Ostrzeżenie modułu zdjęć"
+
+#: ../src/photo_config_dialog_item.c:48
+msgid "Photo Item Configuration"
+msgstr "Konfiguracja przedmiotu zdjęcia"
+
+#: ../src/photo_config_dialog_item.c:112
+msgid "Timer between pictures change"
+msgstr "Czas przejścia zdjęcia"
+
+#: ../src/photo_config_dialog_item.c:114
+msgid "Activate"
+msgstr "Aktywuj"
+
+#: ../src/photo_config_dialog_item.c:117
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f sekund"
+
+#: ../src/photo_config_dialog_item.c:129
+msgid "Alpha"
+msgstr "Alfa"
+
+#: ../src/photo_config_dialog_item.c:132
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/photo_config_dialog_item.c:140
+msgid "Yes"
+msgstr "Tak"
+
+#: ../src/photo_config_dialog_item.c:144 ../src/photo_config_dialog_item.c:206
+msgid "Default setting"
+msgstr "Domyślne ustawienie"
+
+#: ../src/photo_config_dialog_item.c:189
+msgid "Mouse actions"
+msgstr "Akcje myszy"
+
+#: ../src/photo_item.c:389
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists.</hilight><br><br>This file is in Photo "
+"module picture list, but it seems you removed it from the disk<br>It cant be "
+"set as background, sorry."
+msgstr ""
+"<hilight>Plik %s nie istnieje.</hilight><br><br>Ten plik jest w liście "
+"obrazków modułu zdjęć, ale wygląda na to że był usunięty<br>Przepraszamy, "
+"ale nie można go ustawić jako tło."
+
+#: ../src/photo_item.c:392 ../src/photo_item.c:417 ../src/photo_item.c:455
+#: ../src/photo_item.c:475 ../src/photo_picture_local.c:259
+msgid "Photo Module Error"
+msgstr "Błąd modułu zdjęć"
+
+#: ../src/photo_item.c:413
+#, c-format
+msgid ""
+"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file "
+"!<br>Photo module needs e17setroot util from e_utils package to set you're "
+"picture as backgroundPlease install it and try again"
+msgstr ""
+
+#: ../src/photo_item.c:452
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's "
+"module picture list, but it seems you removed it from the disk.<br>It cant "
+"be set opened in a viewer, sorry."
+msgstr ""
+"<hilight>Plik %s nie istnieje.</hilight><br><br>Ten plik jest w liście "
+"obrazków modułu zdjęć, ale wygląda na to że był usunięty<br>Przepraszamy, "
+"ale nie można go otworzyć w przeglądarce."
+
+#: ../src/photo_item.c:472
+#, c-format
+msgid ""
+"<hilight>Viewer %s not found !</hilight><br><br>You can change the viewer "
+"for images in Photo module configuration panel (Advanced view)"
+msgstr ""
+"<hilight>Przeglądarka %s nieznaleziona!</hilight><br><br>Możesz zmienić "
+"przeglądarkę dla obrazów w panelu konfiguracyjnym modułu zdjęć (zaawansowany "
+"wygląd)"
+
+#: ../src/photo_menu.c:30
+msgid "Pause slideshow"
+msgstr "Wsztrzymaj pokaz slajdów"
+
+#: ../src/photo_menu.c:35
+msgid "Resume slideshow"
+msgstr "Obnów pokaz slajdów"
+
+#: ../src/photo_menu.c:54
+msgid "Picture informations"
+msgstr "Informacje o obrazku"
+
+#: ../src/photo_menu.c:62
+msgid "Open in"
+msgstr "Otwórz w"
+
+#: ../src/photo_menu.c:71
+msgid "Configure Photo module"
+msgstr "Skonfiguruj moduł zdjęć"
+
+#: ../src/photo_menu.c:75
+msgid "Configure this Photo gadget"
+msgstr "Skonfiguruj gadżet zdjęc"
+
+#: ../src/photo_menu.c:82
+msgid "Configure Gadget and Shelf"
+msgstr "Skonfiguruj gadżet i półkę"
+
+#: ../src/photo_picture_histo.c:121
+msgid "Historic"
+msgstr "Historyczne"
+
+#: ../src/photo_picture_local.c:253
+#, c-format
+msgid ""
+"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr ""
+"<hilight>Folder %s nie istnieje.</hilight><br><br>Możesz zmienić foldery "
+"obrazka w głównym panelu konfiguracyjnym<br>Mogą być jpeg lub png<br><br>Po "
+"importowaniu, możesz usunąć te pliki a obrazki będzie stale "
+"można<br>przeglądać, ale nie będzie można je ustawić jako tapetę<br><br>"
+
+#: ../src/photo_picture_local.c:593
+msgid "Photo Module Information"
+msgstr "Informacje o modułu zdjęć"
+
+#: ../src/photo_picture_local.c:594
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time wou will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr ""

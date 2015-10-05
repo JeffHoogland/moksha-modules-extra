@@ -1,0 +1,395 @@
+# Photo module (e17), Simplified Chinese translation
+# Copyright (C) 2008-2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the e17 photo module.
+#
+# Aron Xu <aronmalache@163.com>, 2008.
+# Careone <zzbusagain@yahoo.com.cn>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Photo module (e17)\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-12-22 06:12+0800\n"
+"PO-Revision-Date: 2012-12-22 06:13+0800\n"
+"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_main.c:53 ../src/e_mod_main.c:60 ../src/e_mod_main.c:67
+#: ../src/e_mod_main.c:74 ../src/e_mod_main.c:81 ../src/e_mod_main.c:88
+msgid "Photo Module"
+msgstr "Photo 模块"
+
+#: ../src/e_mod_main.c:53
+msgid "E Canvas init failed !"
+msgstr "画布初始化失败！"
+
+#: ../src/e_mod_main.c:60
+msgid "Theme init failed !"
+msgstr "主题初始化失败！"
+
+#: ../src/e_mod_main.c:67
+msgid "Config init failed"
+msgstr "配置初始化失败！"
+
+#: ../src/e_mod_main.c:74
+msgid "Picture subsystem init failed"
+msgstr "图像子系统初始化失败！"
+
+#: ../src/e_mod_main.c:81
+msgid "Popup warn subsystem init failed"
+msgstr "弹出警告子系统初始化失败！"
+
+#: ../src/e_mod_main.c:88
+msgid "Popup info subsystem init failed"
+msgstr "弹出信息子系统初始化失败！"
+
+#: ../src/e_mod_main.c:181
+msgid "Photo"
+msgstr "照片"
+
+#: ../src/photo_config.c:65
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>图像模块：配置已升级</hilight><br><br>你的图像模块配置<br>已升级<br>"
+"你的设置已被清除<br>非常抱歉给您带来不便<br><br>(%d -> %d)"
+
+#: ../src/photo_config.c:71 ../src/photo_config.c:85
+msgid "Photo Module version "
+msgstr "图像模块版本 "
+
+#: ../src/photo_config.c:79
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>图像模块：配置已降级</hilight><br><br>你的图像模块配置<br>已降级<br>"
+"你的设置已被清除<br>非常抱歉给您带来不便<br><br>(%d ->%d)"
+
+#: ../src/photo_config_dialog.c:64
+msgid "Photo Configuration"
+msgstr "图像配置"
+
+#: ../src/photo_config_dialog.c:220
+msgid "Picture directories"
+msgstr "图片目录"
+
+#: ../src/photo_config_dialog.c:235
+msgid "Add"
+msgstr "添加"
+
+#: ../src/photo_config_dialog.c:237
+msgid "Delete"
+msgstr "删除"
+
+#: ../src/photo_config_dialog.c:239
+msgid "Configure"
+msgstr "配置"
+
+#: ../src/photo_config_dialog.c:242
+msgid "Reload picture directories"
+msgstr "重新载入图片目录"
+
+#: ../src/photo_config_dialog.c:245
+msgid "Stop loading"
+msgstr "停止载入"
+
+#: ../src/photo_config_dialog.c:252 ../src/photo_config_dialog_item.c:127
+msgid "Appearance"
+msgstr "外观"
+
+#: ../src/photo_config_dialog.c:254 ../src/photo_config_dialog_item.c:136
+msgid "Always show label"
+msgstr "总是显示标签"
+
+#: ../src/photo_config_dialog.c:256
+msgid "Nice transitions"
+msgstr "渐变"
+
+#: ../src/photo_config_dialog.c:262
+msgid "Default Mouse actions"
+msgstr "默认鼠标动作"
+
+#: ../src/photo_config_dialog.c:264 ../src/photo_config_dialog_item.c:191
+msgid "Over"
+msgstr "上"
+
+#: ../src/photo_config_dialog.c:268 ../src/photo_config_dialog_item.c:195
+msgid "Left"
+msgstr "左"
+
+#: ../src/photo_config_dialog.c:270 ../src/photo_config_dialog.c:276
+#: ../src/photo_config_dialog_item.c:197 ../src/photo_config_dialog_item.c:203
+msgid "click"
+msgstr "点击"
+
+#: ../src/photo_config_dialog.c:274 ../src/photo_config_dialog_item.c:201
+msgid "Middle"
+msgstr "中"
+
+#: ../src/photo_config_dialog.c:279 ../src/photo_config_dialog_item.c:142
+msgid "No"
+msgstr "否"
+
+#: ../src/photo_config_dialog.c:318
+msgid "Popups"
+msgstr "弹出框"
+
+#: ../src/photo_config_dialog.c:320
+msgid "Picture loader popup"
+msgstr "图片装载器弹出框"
+
+#: ../src/photo_config_dialog.c:323
+msgid "Never"
+msgstr "从不"
+
+#: ../src/photo_config_dialog.c:325
+msgid "Summary"
+msgstr "摘要"
+
+#: ../src/photo_config_dialog.c:327
+msgid "Verbose"
+msgstr "详细"
+
+#: ../src/photo_config_dialog.c:332
+msgid "Miscellaneous"
+msgstr "杂项"
+
+#: ../src/photo_config_dialog.c:334
+msgid "Remove generated backgrounds"
+msgstr "删除生成的背景"
+
+#: ../src/photo_config_dialog.c:338
+msgid "Pictures viewer"
+msgstr "图片查看器"
+
+#: ../src/photo_config_dialog.c:344
+msgid "Images Quality"
+msgstr "图像质量"
+
+#: ../src/photo_config_dialog.c:346
+#, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f 像素"
+
+#: ../src/photo_config_dialog.c:353
+msgid "Automaticly reload directories"
+msgstr "自动重装载目录"
+
+#: ../src/photo_config_dialog.c:356
+msgid "when add / modify directory list"
+msgstr "优先添加/修改目录"
+
+#: ../src/photo_config_dialog.h:36
+msgid "Show label"
+msgstr "显示标签"
+
+#: ../src/photo_config_dialog.h:38
+msgid "Show informations"
+msgstr "显示信息"
+
+#: ../src/photo_config_dialog.h:40 ../src/photo_menu.c:72
+msgid "Previous picture"
+msgstr "上一张图像"
+
+#: ../src/photo_config_dialog.h:42 ../src/photo_menu.c:68
+msgid "Next picture"
+msgstr "下一张图像"
+
+#: ../src/photo_config_dialog.h:44
+msgid "Pause"
+msgstr "暂停"
+
+#: ../src/photo_config_dialog.h:46 ../src/photo_menu.c:92
+msgid "Set as background"
+msgstr "设为背景"
+
+#: ../src/photo_config_dialog.h:48
+msgid "Open viewer"
+msgstr "打开查看器"
+
+#: ../src/photo_config_dialog.h:50
+msgid "Show menu"
+msgstr "显示菜单"
+
+#: ../src/photo_config_dialog_dir.c:38
+msgid "Photo Directory Configuration"
+msgstr "图片目录配置"
+
+#: ../src/photo_config_dialog_dir.c:118
+msgid "Directory"
+msgstr "目录"
+
+#: ../src/photo_config_dialog_dir.c:127
+msgid "Loading options"
+msgstr "载入选项"
+
+#: ../src/photo_config_dialog_dir.c:129
+msgid "Recursive"
+msgstr "递归操作"
+
+#: ../src/photo_config_dialog_dir.c:131
+msgid "Read hidden files"
+msgstr "读取隐藏文件"
+
+#: ../src/photo_config_dialog_dir.c:158
+msgid "Photo Module Warning"
+msgstr "图像模块警告"
+
+#: ../src/photo_config_dialog_item.c:48
+msgid "Photo Item Configuration"
+msgstr "图像项目配置"
+
+#: ../src/photo_config_dialog_item.c:112
+msgid "Timer between pictures change"
+msgstr "图像修改计时器"
+
+#: ../src/photo_config_dialog_item.c:114
+msgid "Activate"
+msgstr "激活"
+
+#: ../src/photo_config_dialog_item.c:117
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f 秒"
+
+#: ../src/photo_config_dialog_item.c:129
+msgid "Alpha"
+msgstr "Alpha"
+
+#: ../src/photo_config_dialog_item.c:132
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/photo_config_dialog_item.c:140
+msgid "Yes"
+msgstr "是"
+
+#: ../src/photo_config_dialog_item.c:144 ../src/photo_config_dialog_item.c:206
+msgid "Default setting"
+msgstr "默认设置"
+
+#: ../src/photo_config_dialog_item.c:189
+msgid "Mouse actions"
+msgstr "鼠标动作"
+
+#: ../src/photo_item.c:389 ../src/photo_item.c:452
+#, c-format
+msgid ""
+"<hilight>File %s doesn't exist.</hilight><br><br>This file is in the picture "
+"list, but it seems you removed<br>it from disk. It can't be set as "
+"background, sorry."
+msgstr ""
+"<hilight>文件 %s 不存在！</hilight><br><br>文件在图像列表中存在，但可能你已经"
+"从磁盘上删除了文件。<br>它不能设为背景。很抱歉。"
+
+#: ../src/photo_item.c:392 ../src/photo_item.c:417 ../src/photo_item.c:455
+#: ../src/photo_item.c:475 ../src/photo_picture_local.c:259
+msgid "Photo Module Error"
+msgstr "图像模板错误"
+
+#: ../src/photo_item.c:413
+#, c-format
+msgid ""
+"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file!<br>Photo "
+"module needs e17setroot util from e_utils package to set your picture as "
+"background. Please install it and try again."
+msgstr ""
+"<hilight>需要 e17setroot </hilight><br><br>%s 不是有效的 edje 格式文件！<br>"
+"图像模块需要e_utils 软件包中 e17setroot 程序来把图像设为背景。请先安装后再尝"
+"试"
+
+#: ../src/photo_item.c:472
+#, c-format
+msgid ""
+"<hilight>Viewer %s not found !</hilight><br><br>You can change the viewer "
+"for images in the Photo module configuration panel (Advanced view)"
+msgstr ""
+"<hilight>找不到查看器 %s ！</hilight><br><br>你可以在图像模块配置面板(高级查"
+"看)里，修改查看图片使用的看图软件"
+
+#: ../src/photo_menu.c:41
+msgid "Module Settings"
+msgstr "模块设置"
+
+#: ../src/photo_menu.c:47
+msgid "Settings"
+msgstr "设置"
+
+#: ../src/photo_menu.c:58
+msgid "Pause slideshow"
+msgstr "暂停幻灯片播放"
+
+#: ../src/photo_menu.c:63
+msgid "Resume slideshow"
+msgstr "继续幻灯片播放"
+
+#: ../src/photo_menu.c:78
+msgid "Historic"
+msgstr "历史记录"
+
+#: ../src/photo_menu.c:88
+msgid "Picture informations"
+msgstr "图片信息"
+
+#: ../src/photo_menu.c:96
+msgid "Open in"
+msgstr "打开方式"
+
+#: ../src/photo_picture_local.c:253
+#, c-format
+msgid ""
+"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr ""
+"<hilight>目录 %s 不存在</hilight><br><br>你可以在主配置面板里，改变图片文件夹"
+"<br>图片可以是 jpeg 或 png 格式。<br><br>导入图片后，你可以删除这些查看过的文"
+"件和图片<br>但是删除后不能再把图片设为墙纸<br><br>"
+
+#: ../src/photo_picture_local.c:591
+msgid "Photo Module Information"
+msgstr "图像模块信息"
+
+#: ../src/photo_picture_local.c:592
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time wou will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr ""
+"<hilight>生成缩略图</hilight><br><br>一些图片生成缩略图， <hilight>以后台方式"
+"运行</hilight>。<br>这可能需要一点时间，但是之后查看就会快很多 :)<br><br>每次"
+"你打开图片时，除非是查看原始文件，否则都会显示<br>缩略图。<br><br>在生成弹出"
+"消息时，不会显示任何图片。<br>我希望这一点能够有所改善 :)"
+
+#~ msgid ""
+#~ "<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's "
+#~ "module picture list, but it seems you removed it from the disk.<br>It "
+#~ "cant be set opened in a viewer, sorry."
+#~ msgstr ""
+#~ "<hilight>文件 %s 不存在！</hilight><br><br>文件在图像列表中存在，但可能你"
+#~ "已经从电脑上删除了文件。<br>它不能在查看器中打开。很抱歉。"
+
+#~ msgid "Configure Photo module"
+#~ msgstr "配置图像模块"
+
+#~ msgid "Configure this Photo gadget"
+#~ msgstr "配置图像小工具"
+
+#~ msgid "Configure Gadget and Shelf"
+#~ msgstr "配置小工具和架子"

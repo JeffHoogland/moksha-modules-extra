@@ -1,0 +1,395 @@
+# Slovak translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-08-05 11:11+0000\n"
+"Last-Translator: milboy <Unknown>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:51+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_main.c:53 ../src/e_mod_main.c:60 ../src/e_mod_main.c:67
+#: ../src/e_mod_main.c:74 ../src/e_mod_main.c:81 ../src/e_mod_main.c:88
+msgid "Photo Module"
+msgstr "Foto modul"
+
+#: ../src/e_mod_main.c:53
+msgid "E Canvas init failed !"
+msgstr "Načítanie E plátna zlyhalo !"
+
+#: ../src/e_mod_main.c:60
+msgid "Theme init failed !"
+msgstr "Načítanie témy zlyhalo !"
+
+#: ../src/e_mod_main.c:67
+msgid "Config init failed"
+msgstr "Načítanie konfigurácie zlyhalo"
+
+#: ../src/e_mod_main.c:74
+msgid "Picture subsystem init failed"
+msgstr "Načítanie podsystému obrázkov zlyhalo"
+
+#: ../src/e_mod_main.c:81
+msgid "Popup warn subsystem init failed"
+msgstr "Načítanie podsystému varovania zlyhalo"
+
+#: ../src/e_mod_main.c:88
+msgid "Popup info subsystem init failed"
+msgstr "Načítanie informačného podsystému zlyhalo"
+
+#: ../src/e_mod_main.c:181
+msgid "Photo"
+msgstr "Fotografie"
+
+#: ../src/photo_config.c:65
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Foto modul : Konfigurácia aktualizovaná</hilight><br><br>Vaša "
+"konfigurácia modulu<br>bola aktualizovaná.<br>Vaše nastavenie bolo "
+"vymazané.<br>Ospravedlnujeme sa za vzniknuté problémy<br><br>(%d -> %d)"
+
+#: ../src/photo_config.c:71 ../src/photo_config.c:85
+msgid "Photo Module version "
+msgstr "Verzia foto modulu "
+
+#: ../src/photo_config.c:79
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Foto modul : Konfigurácia degradovaná</hilight><br><br>Vaša "
+"konfigurácia Foto modulu<br>bola degradovaná.<br>Vaše nastavenie bolo "
+"vymazané.<br>Ospravedlňujeme sa za vzniknuté problémy<br><br>(%d ->%d)"
+
+#: ../src/photo_config_dialog.c:64
+msgid "Photo Configuration"
+msgstr "Konfigurácia Foto"
+
+#: ../src/photo_config_dialog.c:220
+msgid "Picture directories"
+msgstr "Adresár s obrázkami"
+
+#: ../src/photo_config_dialog.c:235
+msgid "Add"
+msgstr "Pridať"
+
+#: ../src/photo_config_dialog.c:237
+msgid "Delete"
+msgstr "Odstrániť"
+
+#: ../src/photo_config_dialog.c:239
+msgid "Configure"
+msgstr "Konfigurovať"
+
+#: ../src/photo_config_dialog.c:242
+msgid "Reload picture directories"
+msgstr "Znova načítať adresáre s obrázkami"
+
+#: ../src/photo_config_dialog.c:245
+msgid "Stop loading"
+msgstr "Zastaviť načítanie"
+
+#: ../src/photo_config_dialog.c:252 ../src/photo_config_dialog_item.c:127
+msgid "Appearance"
+msgstr "Vzhľad"
+
+#: ../src/photo_config_dialog.c:254 ../src/photo_config_dialog_item.c:136
+msgid "Always show label"
+msgstr "Vždy zobraziť popis"
+
+#: ../src/photo_config_dialog.c:256
+msgid "Nice transitions"
+msgstr "Elegantné prechody"
+
+#: ../src/photo_config_dialog.c:262
+msgid "Default Mouse actions"
+msgstr "Predvolené akcie myši"
+
+#: ../src/photo_config_dialog.c:264 ../src/photo_config_dialog_item.c:191
+msgid "Over"
+msgstr "Cez"
+
+#: ../src/photo_config_dialog.c:268 ../src/photo_config_dialog_item.c:195
+msgid "Left"
+msgstr "Vľavo"
+
+#: ../src/photo_config_dialog.c:270 ../src/photo_config_dialog.c:276
+#: ../src/photo_config_dialog_item.c:197 ../src/photo_config_dialog_item.c:203
+msgid "click"
+msgstr "kliknúť"
+
+#: ../src/photo_config_dialog.c:274 ../src/photo_config_dialog_item.c:201
+msgid "Middle"
+msgstr "Stred"
+
+#: ../src/photo_config_dialog.c:279 ../src/photo_config_dialog_item.c:142
+msgid "No"
+msgstr "Nie"
+
+#: ../src/photo_config_dialog.c:318
+msgid "Popups"
+msgstr "Okná s upozornením"
+
+#: ../src/photo_config_dialog.c:320
+msgid "Picture loader popup"
+msgstr ""
+
+#: ../src/photo_config_dialog.c:323
+msgid "Never"
+msgstr "Nikdy"
+
+#: ../src/photo_config_dialog.c:325
+msgid "Summary"
+msgstr "Súhrn"
+
+#: ../src/photo_config_dialog.c:327
+msgid "Verbose"
+msgstr "Slovný"
+
+#: ../src/photo_config_dialog.c:332
+msgid "Miscellaneous"
+msgstr "Rôzne"
+
+#: ../src/photo_config_dialog.c:334
+msgid "Remove generated backgrounds"
+msgstr "Odstrániť generované pozadia"
+
+#: ../src/photo_config_dialog.c:338
+msgid "Pictures viewer"
+msgstr "Prehliadač obrázkov"
+
+#: ../src/photo_config_dialog.c:344
+msgid "Images Quality"
+msgstr "Kvalita obrázkov"
+
+#: ../src/photo_config_dialog.c:346
+#, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f pix"
+
+#: ../src/photo_config_dialog.c:353
+msgid "Automaticly reload directories"
+msgstr "Automatické obnovenie adresárov"
+
+#: ../src/photo_config_dialog.c:356
+msgid "when add / modify directory list"
+msgstr "ak sa pridáva / zmeniť zoznam adresára"
+
+#: ../src/photo_config_dialog.h:36
+msgid "Show label"
+msgstr "Zobraziť označenie"
+
+#: ../src/photo_config_dialog.h:38
+msgid "Show informations"
+msgstr "Zobraziť informácie"
+
+#: ../src/photo_config_dialog.h:40 ../src/photo_menu.c:44
+msgid "Previous picture"
+msgstr "Predchádzajúci obrázok"
+
+#: ../src/photo_config_dialog.h:42 ../src/photo_menu.c:40
+msgid "Next picture"
+msgstr "Ďalší obrázok"
+
+#: ../src/photo_config_dialog.h:44
+msgid "Pause"
+msgstr "Pozastaviť"
+
+#: ../src/photo_config_dialog.h:46 ../src/photo_menu.c:58
+msgid "Set as background"
+msgstr "Nastaviť ako pozadie"
+
+#: ../src/photo_config_dialog.h:48
+msgid "Open viewer"
+msgstr "Otvoriť prehliadač"
+
+#: ../src/photo_config_dialog.h:50
+msgid "Show menu"
+msgstr "Zobraziť menu"
+
+#: ../src/photo_config_dialog_dir.c:38
+msgid "Photo Directory Configuration"
+msgstr "Konfigurácia adresára Photo"
+
+#: ../src/photo_config_dialog_dir.c:118
+msgid "Directory"
+msgstr "Adresár"
+
+#: ../src/photo_config_dialog_dir.c:127
+msgid "Loading options"
+msgstr "Nahrať nastavenia"
+
+#: ../src/photo_config_dialog_dir.c:129
+msgid "Recursive"
+msgstr "Rekurzívne"
+
+#: ../src/photo_config_dialog_dir.c:131
+msgid "Read hidden files"
+msgstr "Čítať skryté súbory"
+
+#: ../src/photo_config_dialog_dir.c:158
+msgid "Photo Module Warning"
+msgstr "Varovanie Photo modulu"
+
+#: ../src/photo_config_dialog_item.c:48
+msgid "Photo Item Configuration"
+msgstr "Konfigurácia položky Photo"
+
+#: ../src/photo_config_dialog_item.c:112
+msgid "Timer between pictures change"
+msgstr "Časovač medzi zmenou obrázkov"
+
+#: ../src/photo_config_dialog_item.c:114
+msgid "Activate"
+msgstr "Aktivovať"
+
+#: ../src/photo_config_dialog_item.c:117
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f sekúnd"
+
+#: ../src/photo_config_dialog_item.c:129
+msgid "Alpha"
+msgstr "Alfa"
+
+#: ../src/photo_config_dialog_item.c:132
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/photo_config_dialog_item.c:140
+msgid "Yes"
+msgstr "Áno"
+
+#: ../src/photo_config_dialog_item.c:144 ../src/photo_config_dialog_item.c:206
+msgid "Default setting"
+msgstr "Východzie nastavenia"
+
+#: ../src/photo_config_dialog_item.c:189
+msgid "Mouse actions"
+msgstr "Akcie myši"
+
+#: ../src/photo_item.c:389
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists.</hilight><br><br>This file is in Photo "
+"module picture list, but it seems you removed it from the disk<br>It cant be "
+"set as background, sorry."
+msgstr ""
+"<hilight>Súbor %s neexistuje.</hilight><br><br>Tento súbor je v zozname "
+"Photo, ale pravdepodobne bol zmazaný z disku.<br>Nemôže byť nastavený ako "
+"pozadie, prepáčte."
+
+#: ../src/photo_item.c:392 ../src/photo_item.c:417 ../src/photo_item.c:455
+#: ../src/photo_item.c:475 ../src/photo_picture_local.c:259
+msgid "Photo Module Error"
+msgstr "Chyba Photo modulu"
+
+#: ../src/photo_item.c:413
+#, c-format
+msgid ""
+"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file "
+"!<br>Photo module needs e17setroot util from e_utils package to set you're "
+"picture as backgroundPlease install it and try again"
+msgstr ""
+"<hilight>potrebný e17setroot</hilight><br><br>%s nie je edje súbor "
+"!<br>Modul Photo potrebuje e17setroot utilitu z eutils balíčku k nastaveniu "
+"obrázku ako pozadia! Prosím nainštalujte ho a zkúste opäť."
+
+#: ../src/photo_item.c:452
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's "
+"module picture list, but it seems you removed it from the disk.<br>It cant "
+"be set opened in a viewer, sorry."
+msgstr ""
+"<hilight>Súbor %s neexistuje !</hilight><br><br>Súbor je v zozname, ale "
+"pravdepodobne bol zmazaný.<br>Nemôže byť aplikovaný ako pozadie, prepáčte."
+
+#: ../src/photo_item.c:472
+#, c-format
+msgid ""
+"<hilight>Viewer %s not found !</hilight><br><br>You can change the viewer "
+"for images in Photo module configuration panel (Advanced view)"
+msgstr ""
+"<hilight>Prohliadač %s nebol nájdený !</hilight><br><br>Môžete to zmeniť v "
+"nastavení modulu (Pokročilý pohľad)"
+
+#: ../src/photo_menu.c:30
+msgid "Pause slideshow"
+msgstr "Pozastaviť slideshow"
+
+#: ../src/photo_menu.c:35
+msgid "Resume slideshow"
+msgstr "Pokračovať v slideshow"
+
+#: ../src/photo_menu.c:54
+msgid "Picture informations"
+msgstr "Informácie o obrázku"
+
+#: ../src/photo_menu.c:62
+msgid "Open in"
+msgstr "Otvoriť v"
+
+#: ../src/photo_menu.c:71
+msgid "Configure Photo module"
+msgstr "Konfigurovať Photo modul"
+
+#: ../src/photo_menu.c:75
+msgid "Configure this Photo gadget"
+msgstr "Konfigurovať tento Photo gadget"
+
+#: ../src/photo_menu.c:82
+msgid "Configure Gadget and Shelf"
+msgstr "Konfigurovať gadget a shelf"
+
+#: ../src/photo_picture_histo.c:121
+msgid "Historic"
+msgstr "Historický"
+
+#: ../src/photo_picture_local.c:253
+#, c-format
+msgid ""
+"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr ""
+"<hilight>Adresár %s nenájdený.</hilight><br><br>Môžete zmeniť adresáre v "
+"konfiguračnom paneli.<br>Môžu byť jpeg alebo png.<br><br>Po importe môžete "
+"dalej prohliadať<br>súbory, ale nebude možné ich použiť ako pozadie.<br><br>"
+
+#: ../src/photo_picture_local.c:593
+msgid "Photo Module Information"
+msgstr "Informácia o Photo module"
+
+#: ../src/photo_picture_local.c:594
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time wou will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr ""
+"<hilight>Vytváram náhľady</hilight><br><br>Z niektorých obrázkov budú "
+"vytvorené náhľady v <hilight>úloha na pozadí</hilight>.<br>Môže to chvíľu "
+"trvať, ale potom bude nahrávánie rychlejšie a ľahšie :)<br><br>Vždy, keď "
+"nahráte nové obrázky,<br>budú vytvorené náhľady.<br><br>Pri vytváraní "
+"nebudete môcť prehliadať žiadne obrázky v module.<br>Dúfam, že to bude možné "
+"zmeniť :)"

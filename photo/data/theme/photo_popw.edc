@@ -1,0 +1,61 @@
+/* Popup warn group */
+
+#define POPUP_WARN_TYPE_INFO 0
+#define POPUP_WARN_TYPE_ERROR 1
+
+#define MSG_RECV_POPUP_WARN_SHOW_DISABLE 0
+#define MSG_RECV_POPUP_WARN_TYPE 1
+
+group
+{
+        name: "modules/photo/popw";
+
+	script
+	{
+		public show_disabled;
+                public popup_type;
+                public popup_in_update;
+
+		/* Message from C code */
+		public message(Msg_Type: type, id, msg)
+		{
+			if (id == MSG_RECV_POPUP_WARN_SHOW_DISABLE)
+			{
+				if (type == MSG_INT)
+				{
+					set_int(show_disabled, getarg(2));
+					set_state(PART:"disable", "visible", 0.0);
+				}
+			}
+        		if (id == MSG_RECV_POPUP_WARN_TYPE){
+        			if (type == MSG_INT){
+        				set_int(popup_type, getarg(2));
+                                        if (get_int(popup_type) == POPUP_WARN_TYPE_INFO)
+                                        {
+                                                if (get_int(popup_in_update))
+                                                        run_program(PROGRAM:"update_anim_info");
+                                                else
+                        				set_state(PART:"logo", "default", 0.0);
+                                        }
+                                        if (get_int(popup_type) == POPUP_WARN_TYPE_ERROR)
+                                        {
+                                                if (get_int(popup_in_update))
+                                                        run_program(PROGRAM:"update_anim_error");
+                                                else
+                        				set_state(PART:"logo", "error", 0.0);
+                                        }
+        	      		}
+        		}
+        	}
+        }
+
+        parts
+        {
+		#include "photo_popw_parts.edc"
+        }
+
+        programs
+        {
+		#include "photo_popw_programs.edc"
+        }
+}

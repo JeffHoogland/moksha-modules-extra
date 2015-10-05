@@ -1,0 +1,220 @@
+part
+{
+	name: "background";
+	type: IMAGE;
+	mouse_events: 1;
+	description
+	{
+		state: "default" 0.0;
+		min: 60 120;
+		rel1
+		{
+			relative: 0.0 0.0;
+		}
+		rel2
+		{
+			relative: 1.0 1.0;
+		}
+		image
+		{
+			normal: "popup_warn_background.png";
+			border: 5 5 5 5;
+		}
+	}
+}
+
+part
+{
+	name: "logo";
+	type: IMAGE;
+	mouse_events: 0;
+	description
+	{
+		state: "default" 0.0;
+		color:  255 255 255 255;
+		aspect: 1 1;
+	        aspect_preference: BOTH;
+		rel1
+		{
+			relative: 0.1 0.0;
+			to_x: "background";
+			offset: 0 18;
+		}
+		rel2
+		{
+			relative: 0.9 0.0;
+			to_x: "background";
+			offset: 0 78;
+		}
+		image
+		{
+			normal: "popup_warn_logo_info.png";
+		}
+	}
+        description{
+                state: "error" 0.0;
+                inherit: "default" 0.0;
+       		image{
+			normal: "popup_warn_logo_error.png";
+		}
+        }
+	description{
+		state: "info_hidden" 0.0;
+	       	inherit: "default" 0.0;
+		color: 255 255 255 0;
+       		image{
+			normal: "popup_warn_logo_info.png";
+		}
+	}
+	description{
+		state: "error_hidden" 0.0;
+	       	inherit: "default" 0.0;
+		color: 255 255 255 0;
+       		image{
+			normal: "popup_warn_logo_error.png";
+		}
+	}
+}
+
+part
+{
+	name: "name";
+	type: TEXT;
+	mouse_events: 0;
+	description
+	{
+		state: "default" 0.0;
+		rel1
+		{
+			relative: 0.0 1.0;
+			to_x: "background";
+			to_y: "logo";
+			offset: 6 0;
+		}
+		color: 0 0 0 255;
+		color2: 0 0 0 255;
+		color3: 255 255 255 255;
+		text
+		{
+			text: "Photo module";
+			font: "Sans";
+			size: 11;
+			align: 0.5 0.0;
+		}
+	}
+}
+
+part
+{
+	name: "text";
+	type: TEXT;
+	mouse_events: 0;
+	description
+	{
+		state: "default" 0.0;
+		rel1
+		{
+			relative: 0.0 0.8;
+			to: "background";
+			offset: 0 10;
+		}
+		rel2
+		{
+			relative: 1.0 0.8;
+			to: "background";
+			offset: 0 10;
+		}
+		color: 0 0 0 255;
+		color2: 0 0 0 255;
+		color3: 255 255 255 255;
+		text
+		{
+			text: "ooOoOo";
+			font: "Sans:style=Bold";
+			size: 11;
+			min: 1 1;
+			align: 0.5 0.0;
+		}
+	}
+}
+
+part
+{
+	name: "text_border";
+	type: RECT;
+	mouse_events: 0;
+	description
+	{
+		state: "default" 0.0;
+		color: 255 255 255 0;
+		rel1
+		{
+			relative: 0.0 0.0;
+			to: "text";
+			offset: -10 0;
+		}
+		rel2
+		{
+			relative: 1.0 1.0;
+			to: "text";
+			offset: 10 0;
+		}
+	}
+}
+
+part
+{
+	name: "disable";
+	type: IMAGE;
+	mouse_events: 1;
+	description
+	{
+		state: "default" 0.0;
+		visible: 0;
+		image
+		{
+			normal: "popup_warn_disable.png";
+		}
+	}
+	description
+	{
+		state: "visible" 0.0;
+		inherit: "default" 0.0;
+		color:  255 255 255 255;
+		visible: 1;
+		aspect: 1 1;
+		aspect_preference: BOTH;
+		rel1
+		{
+			relative: 1.0 0.0;
+			to: "background";
+			offset: -32 8;
+		}
+		rel2
+		{
+			relative: 1.0 0.0;
+			to: "background";
+			offset:  -12 28;
+		}
+	}
+	description
+	{
+		state: "clicked" 0.0;
+		inherit: "visible" 0.0;
+		visible: 1;
+		rel1
+		{
+			relative: 0.0 0.0;
+			offset: 10 10;
+		}
+		rel2
+		{
+			relative: 1.0 1.0;
+			offset: 0 0;
+		}
+		image
+		{
+			normal: "popup_warn_disable_clicked.png";
+		}
+	}
+}

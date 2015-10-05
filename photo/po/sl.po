@@ -1,0 +1,374 @@
+# translation of photo.po to Slovenian
+# Slovenian translation of Photo_sl.
+# This file is put in the public domain.
+#
+# r1to <renato.rener@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: photo\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2011-02-17 15:00-0800\n"
+"PO-Revision-Date: 2011-02-22 09:21+0100\n"
+"Last-Translator: r1to <renato.rener@gmail.com>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#: ../src/e_mod_main.c:53 ../src/e_mod_main.c:60 ../src/e_mod_main.c:67
+#: ../src/e_mod_main.c:74 ../src/e_mod_main.c:81 ../src/e_mod_main.c:88
+msgid "Photo Module"
+msgstr "Modul Slika"
+
+#: ../src/e_mod_main.c:53
+msgid "E Canvas init failed !"
+msgstr "Spodletel zagon E Platna !"
+
+#: ../src/e_mod_main.c:60
+msgid "Theme init failed !"
+msgstr "Spodletel zagon teme !"
+
+#: ../src/e_mod_main.c:67
+msgid "Config init failed"
+msgstr "Spodletel zagon Nastavitev !"
+
+#: ../src/e_mod_main.c:74
+msgid "Picture subsystem init failed"
+msgstr "Spodletel zagon slikovnega podsistema !"
+
+#: ../src/e_mod_main.c:81
+msgid "Popup warn subsystem init failed"
+msgstr "Spodletel zagon podsistema opozarjanja s pojavnim oknom !"
+
+#: ../src/e_mod_main.c:88
+msgid "Popup info subsystem init failed"
+msgstr "Spodletel zagon podsistema obveščanja s pojavnim oknom !"
+
+#: ../src/e_mod_main.c:181
+msgid "Photo"
+msgstr "Slika"
+
+#: ../src/photo_config.c:65
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr "<hilight>Modul Slika·:·Nastavitve posodobljene</hilight><br><br>Vaše nastavitve modula Slika<br>so bile posodobljene<br>Vaše nastavitve so bile odstranjene<br>Opravičujemo·se·za·neprijetnosti.<br><br>(%d·->·%d)"
+
+#: ../src/photo_config.c:71 ../src/photo_config.c:85
+msgid "Photo Module version "
+msgstr "Različica modula Slika"
+
+#: ../src/photo_config.c:79
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr "<hilight>Modul Slika·:·Nastavitve postarane</hilight><br><br>Vaše nastavitve modula Slika<br>so bile postarane<br>Vaše nastavitve so bile odstranjene<br>Opravičujemo se za neprijetnosti<br><br>(%d·->%d)"
+
+#: ../src/photo_config_dialog.c:64
+msgid "Photo Configuration"
+msgstr "Nastavitev Slike"
+
+#: ../src/photo_config_dialog.c:220
+msgid "Picture directories"
+msgstr "Mape slik"
+
+#: ../src/photo_config_dialog.c:235
+msgid "Add"
+msgstr "Dodaj"
+
+#: ../src/photo_config_dialog.c:237
+msgid "Delete"
+msgstr "Izbriši"
+
+#: ../src/photo_config_dialog.c:239
+msgid "Configure"
+msgstr "Nastavi"
+
+#: ../src/photo_config_dialog.c:242
+msgid "Reload picture directories"
+msgstr "Ponovno naloži mape slik"
+
+#: ../src/photo_config_dialog.c:245
+msgid "Stop loading"
+msgstr "Ustavi nalaganje"
+
+#: ../src/photo_config_dialog.c:252 ../src/photo_config_dialog_item.c:127
+msgid "Appearance"
+msgstr "Izgled"
+
+#: ../src/photo_config_dialog.c:254 ../src/photo_config_dialog_item.c:136
+msgid "Always show label"
+msgstr "Vedno prikaži oznako"
+
+#: ../src/photo_config_dialog.c:256
+msgid "Nice transitions"
+msgstr "Lepi prehodi"
+
+#: ../src/photo_config_dialog.c:262
+msgid "Default Mouse actions"
+msgstr "Privzeta dejanja miške"
+
+#: ../src/photo_config_dialog.c:264 ../src/photo_config_dialog_item.c:191
+msgid "Over"
+msgstr "Prek"
+
+#: ../src/photo_config_dialog.c:268 ../src/photo_config_dialog_item.c:195
+msgid "Left"
+msgstr "Levo"
+
+#: ../src/photo_config_dialog.c:270 ../src/photo_config_dialog.c:276
+#: ../src/photo_config_dialog_item.c:197 ../src/photo_config_dialog_item.c:203
+msgid "click"
+msgstr "klik"
+
+#: ../src/photo_config_dialog.c:274 ../src/photo_config_dialog_item.c:201
+msgid "Middle"
+msgstr "Sredina"
+
+#: ../src/photo_config_dialog.c:279 ../src/photo_config_dialog_item.c:142
+msgid "No"
+msgstr "Ne"
+
+#: ../src/photo_config_dialog.c:318
+msgid "Popups"
+msgstr "Pojavna okna"
+
+#: ../src/photo_config_dialog.c:320
+msgid "Picture loader popup"
+msgstr "Pojavno okno nalagalca slik"
+
+#: ../src/photo_config_dialog.c:323
+msgid "Never"
+msgstr "Nikoli"
+
+#: ../src/photo_config_dialog.c:325
+msgid "Summary"
+msgstr "Povzetek"
+
+#: ../src/photo_config_dialog.c:327
+msgid "Verbose"
+msgstr "Zgovorno"
+
+#: ../src/photo_config_dialog.c:332
+msgid "Miscellaneous"
+msgstr "Mešano"
+
+#: ../src/photo_config_dialog.c:334
+msgid "Remove generated backgrounds"
+msgstr "Odstrani ustvarjena ozadja"
+
+#: ../src/photo_config_dialog.c:338
+msgid "Pictures viewer"
+msgstr "Pregledovalnik slik"
+
+#: ../src/photo_config_dialog.c:344
+msgid "Images Quality"
+msgstr "Kakovost slik"
+
+#: ../src/photo_config_dialog.c:346
+#, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f·pik."
+
+#: ../src/photo_config_dialog.c:353
+msgid "Automaticly reload directories"
+msgstr "Samodejno ponovno naloži mape"
+
+#: ../src/photo_config_dialog.c:356
+msgid "when add / modify directory list"
+msgstr "kdaj·dodaj·/·spremeni·seznam map"
+
+#: ../src/photo_config_dialog.h:36
+msgid "Show label"
+msgstr "Prikaži nalepko"
+
+#: ../src/photo_config_dialog.h:38
+msgid "Show informations"
+msgstr "Prikaži podatke"
+
+#: ../src/photo_config_dialog.h:40 ../src/photo_menu.c:45
+msgid "Previous picture"
+msgstr "Prejšnja slika"
+
+#: ../src/photo_config_dialog.h:42 ../src/photo_menu.c:41
+msgid "Next picture"
+msgstr "Naslednja slika"
+
+#: ../src/photo_config_dialog.h:44
+msgid "Pause"
+msgstr "Premor"
+
+#: ../src/photo_config_dialog.h:46 ../src/photo_menu.c:59
+msgid "Set as background"
+msgstr "Nastavi za ozadje"
+
+#: ../src/photo_config_dialog.h:48
+msgid "Open viewer"
+msgstr "Odpri pregledovalnik"
+
+#: ../src/photo_config_dialog.h:50
+msgid "Show menu"
+msgstr "Prikaži meni"
+
+#: ../src/photo_config_dialog_dir.c:38
+msgid "Photo Directory Configuration"
+msgstr "Nastavitev map modula Slike"
+
+#: ../src/photo_config_dialog_dir.c:118
+msgid "Directory"
+msgstr "Mapa"
+
+#: ../src/photo_config_dialog_dir.c:127
+msgid "Loading options"
+msgstr "Nalaganje možnosti"
+
+#: ../src/photo_config_dialog_dir.c:129
+msgid "Recursive"
+msgstr "Po strukturi map"
+
+#: ../src/photo_config_dialog_dir.c:131
+msgid "Read hidden files"
+msgstr "Beri skrite datoteke"
+
+#: ../src/photo_config_dialog_dir.c:158
+msgid "Photo Module Warning"
+msgstr "Opozorilo modula Slika"
+
+#: ../src/photo_config_dialog_item.c:48
+msgid "Photo Item Configuration"
+msgstr "Nastavitev predmetov modula Slike"
+
+#: ../src/photo_config_dialog_item.c:112
+msgid "Timer between pictures change"
+msgstr "Premor med zamenjavami slik"
+
+#: ../src/photo_config_dialog_item.c:114
+msgid "Activate"
+msgstr "Vključi"
+
+#: ../src/photo_config_dialog_item.c:117
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f·sek."
+
+#: ../src/photo_config_dialog_item.c:129
+msgid "Alpha"
+msgstr "Alfa"
+
+#: ../src/photo_config_dialog_item.c:132
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/photo_config_dialog_item.c:140
+msgid "Yes"
+msgstr "Da"
+
+#: ../src/photo_config_dialog_item.c:144 ../src/photo_config_dialog_item.c:206
+msgid "Default setting"
+msgstr "Privzeta nastavitev"
+
+#: ../src/photo_config_dialog_item.c:189
+msgid "Mouse actions"
+msgstr "Dejanja miške"
+
+#: ../src/photo_item.c:389
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists.</hilight><br><br>This file is in Photo "
+"module picture list, but it seems you removed it from the disk<br>It cant be "
+"set as background, sorry."
+msgstr ""
+"<hilight>Datoteka·%s·ne obstaja.</hilight><br><br>Ta datoteka je na seznamu slik·"
+"modula Slika,·a se zdi, da ste jo odstranili z diska<br>Oprostite, ne da se je nastaviti za ozadje."
+
+#: ../src/photo_item.c:392 ../src/photo_item.c:417 ../src/photo_item.c:455
+#: ../src/photo_item.c:475 ../src/photo_picture_local.c:259
+msgid "Photo Module Error"
+msgstr "Napaka modula Slika"
+
+#: ../src/photo_item.c:413
+#, c-format
+msgid ""
+"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file !"
+"<br>Photo module needs e17setroot util from e_utils package to set you're "
+"picture as backgroundPlease install it and try again"
+msgstr ""
+"<hilight>Potrebujem e17setroot·</hilight><br><br>%s·ni·edje·datoteka·!"
+"<br>Modul·Slika potrebuje·e17setroot·pripomoček·iz paketa·e_utils, da bi uspešno nastavil vašo sliko za ozadje·. Prosimo namestite ga in poskusite znova."
+
+#: ../src/photo_item.c:452
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's "
+"module picture list, but it seems you removed it from the disk.<br>It cant "
+"be set opened in a viewer, sorry."
+msgstr ""
+"<hilight>Datoteka·%s·ne obstaja·!</hilight><br><br>Ta·datoteka·je·na·seznamu·slik "
+"modula Slika, a·se·zdi,·da·ste·jo·odstranili·z diska<br>Oprostite,·ne·da·se·je odpreti v pregledovalniku."
+
+#: ../src/photo_item.c:472
+#, c-format
+msgid ""
+"<hilight>Viewer %s not found !</hilight><br><br>You can change the viewer "
+"for images in Photo module configuration panel (Advanced view)"
+msgstr "<hilight>Pregledovalnik·%s·ni bil najden·!</hilight><br><br>Pregledovalnik lahko izberete v nastavitveni plošči·modula Slika·(Napredni pogled)"
+
+#: ../src/photo_menu.c:31
+msgid "Pause slideshow"
+msgstr "Premor predstavitve"
+
+#: ../src/photo_menu.c:36
+msgid "Resume slideshow"
+msgstr "Nadaljevanje predstavitve"
+
+#: ../src/photo_menu.c:55
+msgid "Picture informations"
+msgstr "Podatki slike"
+
+#: ../src/photo_menu.c:63
+msgid "Open in"
+msgstr "Odpri z"
+
+#: ../src/photo_menu.c:71
+msgid "Module Settings"
+msgstr "Nastavitve modula"
+
+#: ../src/photo_menu.c:77
+msgid "Settings"
+msgstr "Nastavitve"
+
+#: ../src/photo_picture_histo.c:121
+msgid "Historic"
+msgstr "Zgodovina"
+
+#: ../src/photo_picture_local.c:253
+#, c-format
+msgid ""
+"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr "<hilight>Mapa·%s·ne obstaja.</hilight><br><br>Mape s slikami lahko nastavite v glavni nastavitveni plošči<br>Lahko so v formatu·jpeg·ali png<br><br>Po uvozu,·bodo tukaj vidne, četudi jih izbrišete<br>ne boste pa jih mogli več nastaviti kot ozadje<br><br>"
+
+#: ../src/photo_picture_local.c:591
+msgid "Photo Module Information"
+msgstr "Podatki modula Slika"
+
+#: ../src/photo_picture_local.c:592
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time wou will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr "<hilight>Ustvarjanje sličic</hilight><br><br>Ustvarjam slilčice za nekatere slike·<hilight>s procesom ki teče v ozadju</hilight>.<br>Lahko traja nekaj časa, a bo po tem nalaganje hitrejše in lažje·:)<br><br>Vsakič, ko boste odprli slike, ki še niso bile naložene v modul Slika,<br>bodo iz njih narejene sličice.<br><br>Med tem ne boste mogli videti nobene slike v modulu Slika.<br>Upamo, da nam bo uspelo kdaj to spremeniti:)"
+

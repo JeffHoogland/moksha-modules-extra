@@ -1,0 +1,22 @@
+/* Popup info group */
+
+group
+{
+        name: "modules/photo/popi";
+
+	data
+	{
+		// this tells e the border is shaped
+		item: "shaped" "1";
+	}
+
+        parts
+        {
+                #include "photo_popi_parts.edc"
+        }
+
+        programs
+        {
+                #include "photo_popi_programs.edc"
+        }
+}

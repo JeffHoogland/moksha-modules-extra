@@ -1,0 +1,10 @@
+program
+{
+	name: "close_click";
+	signal: "mouse,up,1";
+	source: "background";
+	script
+	{
+		emit("close", "popup");
+	}
+}

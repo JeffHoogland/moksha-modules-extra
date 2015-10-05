@@ -1,0 +1,42 @@
+/* Enlightenment Photo Module theme */
+
+images
+{
+        //image: "item_border.png" COMP;
+
+	image: "popup_warn_background.png" COMP;
+	image: "popup_warn_disable_clicked.png" COMP;
+	image: "popup_warn_disable.png" COMP;
+	image: "popup_warn_logo_error.png" COMP;
+	image: "popup_warn_logo_info.png" COMP;
+
+	image: "popup_info_background.png" COMP;
+
+        image: "icon_infos.png" COMP;
+        image: "icon_next.png" COMP;
+        image: "icon_previous.png" COMP;
+        image: "icon_pause.png" COMP;
+        image: "icon_resume.png" COMP;
+        image: "icon_setbg.png" COMP;
+        image: "icon_viewer.png" COMP;
+        image: "icon_dir_not_loaded.png" COMP;
+        image: "icon_dir_loading.png" COMP;
+        image: "icon_dir_loaded.png" COMP;
+}
+
+data
+{
+        item: "name" "Default Photo Theme";
+        item: "author" "Laurent Ghigonis";
+	item: "version" "1";
+}
+
+collections
+{
+        /* Groups */
+
+        #include "photo_item.edc"
+        #include "photo_popi.edc"
+        #include "photo_popw.edc"
+        #include "photo_icon.edc"
+}
