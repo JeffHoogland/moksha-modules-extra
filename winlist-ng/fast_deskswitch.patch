@@ -1,0 +1,208 @@
+Index: e_border.h
+===================================================================
+RCS file: /var/cvs/e/e17/apps/e/src/bin/e_border.h,v
+retrieving revision 1.159
+diff -u -r1.159 e_border.h
+--- e_border.h	5 Jun 2007 13:58:05 -0000	1.159
++++ e_border.h	6 Jun 2007 18:31:59 -0000
+@@ -323,6 +323,8 @@
+    E_Container_Shape *shape;
+    
+    unsigned int    visible : 1;
++   unsigned int    just_hidden : 1;
++  
+    unsigned int    await_hide_event;
+    unsigned int    moving : 1;
+    unsigned int    focused : 1;
+Index: e_border.c
+===================================================================
+RCS file: /var/cvs/e/e17/apps/e/src/bin/e_border.c,v
+retrieving revision 1.592
+diff -u -r1.592 e_border.c
+--- e_border.c	5 Jun 2007 13:58:04 -0000	1.592
++++ e_border.c	6 Jun 2007 18:32:08 -0000
+@@ -479,6 +479,9 @@
+    focus_stack = eina_list_append(focus_stack, bd);
+    
+    bd->pointer = e_pointer_window_new(bd->win, 0);
++
++   bd->just_hidden = 0;
++   
+    return bd;
+ }
+ 
+@@ -674,28 +677,39 @@
+ EAPI void
+ e_border_show(E_Border *bd)
+ {
+-   E_Event_Border_Show *ev;
+-   unsigned int visible;
+-
+-   E_OBJECT_CHECK(bd);
+-   E_OBJECT_TYPE_CHECK(bd, E_BORDER_TYPE);
+-   if (bd->visible) return;
+-   e_container_shape_show(bd->shape);
+-   if (!bd->need_reparent)
+-     ecore_x_window_show(bd->client.win);
+-   e_hints_window_visible_set(bd);
+-   bd->visible = 1;
+-   bd->changes.visible = 1;
+-
+-   visible = 1;
+-   ecore_x_window_prop_card32_set(bd->client.win, E_ATOM_MAPPED, &visible, 1);
+-   ecore_x_window_prop_card32_set(bd->client.win, E_ATOM_MANAGED, &visible, 1);
++  E_Event_Border_Show *ev;
++  unsigned int visible;
+ 
+-   ev = calloc(1, sizeof(E_Event_Border_Show));
+-   ev->border = bd;
+-   e_object_ref(E_OBJECT(bd));
+-//   e_object_breadcrumb_add(E_OBJECT(bd), "border_show_event");
+-   ecore_event_add(E_EVENT_BORDER_SHOW, ev, _e_border_event_border_show_free, NULL);
++  E_OBJECT_CHECK(bd);
++  E_OBJECT_TYPE_CHECK(bd, E_BORDER_TYPE);
++  if (bd->visible) return;
++  e_container_shape_show(bd->shape);
++  if (!bd->need_reparent)
++    ecore_x_window_show(bd->client.win);
++  e_hints_window_visible_set(bd);
++  bd->visible = 1;
++  bd->changes.visible = 1;
++
++  if(bd->just_hidden)
++    {
++      ecore_x_window_configure(bd->win,
++			       ECORE_X_WINDOW_CONFIGURE_MASK_SIBLING |
++			       ECORE_X_WINDOW_CONFIGURE_MASK_STACK_MODE,		
++			       0, 0, 0, 0, 0, bd->zone->container->bg_win, ECORE_X_WINDOW_STACK_ABOVE);   
++      bd->just_hidden = 0;
++    }
++  else
++    {
++      visible = 1;
++      ecore_x_window_prop_card32_set(bd->client.win, E_ATOM_MAPPED, &visible, 1);
++      ecore_x_window_prop_card32_set(bd->client.win, E_ATOM_MANAGED, &visible, 1);
++    }
++   
++  ev = calloc(1, sizeof(E_Event_Border_Show));
++  ev->border = bd;
++  e_object_ref(E_OBJECT(bd));
++  //   e_object_breadcrumb_add(E_OBJECT(bd), "border_show_event");
++  ecore_event_add(E_EVENT_BORDER_SHOW, ev, _e_border_event_border_show_free, NULL);
+ }
+ 
+ EAPI void
+@@ -744,6 +758,18 @@
+      }
+    
+    visible = 0;
++   if(manage == 2)
++     {  
++       bd->changes.visible = 0;
++       
++       ecore_x_window_configure(bd->win,
++				ECORE_X_WINDOW_CONFIGURE_MASK_SIBLING |
++				ECORE_X_WINDOW_CONFIGURE_MASK_STACK_MODE,
++				0, 0, 0, 0, 0,
++				bd->zone->container->bg_win, ECORE_X_WINDOW_STACK_BELOW);
++       bd->just_hidden = 1;
++     }
++   else
+    ecore_x_window_prop_card32_set(bd->client.win, E_ATOM_MAPPED, &visible, 1);
+    if (!manage)
+      ecore_x_window_prop_card32_set(bd->client.win, E_ATOM_MANAGED, &visible, 1);
+Index: e_desk.c
+===================================================================
+RCS file: /var/cvs/e/e17/apps/e/src/bin/e_desk.c,v
+retrieving revision 1.66
+diff -u -r1.66 e_desk.c
+--- e_desk.c	25 Apr 2007 11:28:35 -0000	1.66
++++ e_desk.c	6 Jun 2007 18:32:09 -0000
+@@ -234,8 +234,8 @@
+    if (desk->zone->bg_object) was_zone = 1;
+    if (e_config->desk_flip_animate_mode == 0)
+      {
+-	bl = e_container_border_list_first(desk->zone->container);
+-	while ((bd = e_container_border_list_next(bl)))
++	bl = e_container_border_list_last(desk->zone->container);
++	while ((bd = e_container_border_list_prev(bl)))
+ 	  {
+ 	     if ((bd->desk->zone == desk->zone) && (!bd->iconic))
+ 	       {
+@@ -289,8 +289,8 @@
+    E_OBJECT_TYPE_CHECK(zone, E_ZONE_TYPE);
+ 
+    desk = e_desk_current_get(zone);
+-   bl = e_container_border_list_first(zone->container);
+-   while ((bd = e_container_border_list_next(bl))) 
++   bl = e_container_border_list_last(zone->container);
++   while ((bd = e_container_border_list_prev(bl))) 
+      {
+ 	if (bd->desk == desk)
+ 	  {
+@@ -504,8 +504,8 @@
+    double t;
+ 
+    t = ecore_time_get();
+-   bl = e_container_border_list_first(desk->zone->container);
+-   while ((bd = e_container_border_list_next(bl)))
++   bl = e_container_border_list_last(desk->zone->container);
++   while ((bd = e_container_border_list_prev(bl)))
+      {
+ 	if ((bd->desk->zone == desk->zone) && (!bd->iconic))
+ 	  {
+@@ -580,8 +580,8 @@
+    E_Border_List *bl;
+    E_Border *bd;
+ 
+-   bl = e_container_border_list_first(desk->zone->container);
+-   while ((bd = e_container_border_list_next(bl)))
++   bl = e_container_border_list_last(desk->zone->container);
++   while ((bd = e_container_border_list_prev(bl)))
+      {
+ 	if ((bd->desk->zone == desk->zone) && (!bd->iconic))
+ 	  {
+@@ -606,8 +606,8 @@
+    t = ecore_time_get();
+    dt = -1.0;
+    spd = e_config->desk_flip_animate_time;
+-   bl = e_container_border_list_first(desk->zone->container);
+-   while ((bd = e_container_border_list_next(bl)))
++   bl = e_container_border_list_last(desk->zone->container);
++   while ((bd = e_container_border_list_prev(bl)))
+      {
+ 	if ((bd->desk->zone == desk->zone) && (!bd->iconic))
+ 	  {
+@@ -644,8 +644,8 @@
+    double t;
+ 
+    t = ecore_time_get();
+-   bl = e_container_border_list_first(desk->zone->container);
+-   while ((bd = e_container_border_list_next(bl)))
++   bl = e_container_border_list_last(desk->zone->container);
++   while ((bd = e_container_border_list_prev(bl)))
+      {
+ 	if ((bd->desk->zone == desk->zone) && (!bd->iconic))
+ 	  {
+@@ -717,8 +717,8 @@
+    E_Border_List *bl;
+    E_Border      *bd;
+ 
+-   bl = e_container_border_list_first(desk->zone->container);
+-   while ((bd = e_container_border_list_next(bl)))
++   bl = e_container_border_list_last(desk->zone->container);
++   while ((bd = e_container_border_list_prev(bl)))
+      {
+ 	if ((bd->desk->zone == desk->zone) && (!bd->iconic))
+ 	  {
+@@ -747,8 +747,8 @@
+    t = ecore_time_get();
+    dt = -1.0;
+    spd = e_config->desk_flip_animate_time;
+-   bl = e_container_border_list_first(desk->zone->container);
+-   while ((bd = e_container_border_list_next(bl)))
++   bl = e_container_border_list_last(desk->zone->container);
++   while ((bd = e_container_border_list_prev(bl)))
+      {
+ 	if ((bd->desk->zone == desk->zone) && (!bd->iconic))
+ 	  {

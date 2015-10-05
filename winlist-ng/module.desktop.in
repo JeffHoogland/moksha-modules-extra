@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Link
+Name=Winlist NG
+Icon=e-module-ng
+Comment=<hilight>Winlist Switcher Module</hilight><br>Configure it with: <br> Config Panel > Extensions > Winlist NG
+Comment[ru]=<hilight>Модуль переключения окон</hilight><br>Конфигурация через: Панель параметров → Расширения → Winlist NG
+Comment[es]=<hilight>Módulo alternador de ventanas</hilight><br>Configúrelo desde: <br> Panel de configuración > Extensiones > Winlist NG
+Comment[gl]=<hilight>Módulo para alternar as xanelas</hilight><br>Configúreo dende: <br> Panel de configuración > Extensións > Winlist NG
+Comment[it]=Modulo commutazione finestre<br>Per configurarlo: Pannello di configurazione → Estensioni → Winlist NG
+Comment[fr]=Module de commutation Winlist.<br>Configuration : Panneau de contrôle → Extensions → Winlist NG
+Comment[pt]=<hilight>Módulo para alternar as janelas</hilight><br>Configure-o via: <br> Painel de configuração > Extensões > Winlist NG
+X-Enlightenment-ModuleType=core

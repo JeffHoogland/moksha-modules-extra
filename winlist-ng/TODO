@@ -1,0 +1,18 @@
+- Make it fully configurable for 
+ - icon size
+ - scaling
+ 
+- make it fully themeable
+
+- add app-launcher functionality
+  - add drop handler for .desktop files and border icons
+
+- make multiple zones work (xinerama)  
+
+FIXMES:
+update box->pos if item gets removed/added 
+if one tries to bring a some dialogs to the current desk, 
+one still jumps to the desk of that dialog
+
+BUGS:
+sometimes the wrong border gets selected for the menu acions

@@ -1,0 +1,93 @@
+# German translations for winlist-ng package
+# German messages for winlist-ng.
+# Copyright (C) 2011 Hannes Janetzek <jeff@tzi.de>
+# This file is distributed under the same license as the winlist-ng package.
+# Fabian Nowak <timystery@arcor.de>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: winlist-ng 0.1.0\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-01-06 23:35+0100\n"
+"PO-Revision-Date: 2011-01-06 23:35+0100\n"
+"Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/e_mod_keybindings.c:4
+msgid "NG Winlist"
+msgstr "NG Fensterliste"
+
+#: src/e_mod_keybindings.c:5
+msgid "Switch To Next Window"
+msgstr "Zum nächsten Fenster wechseln"
+
+#: src/e_mod_keybindings.c:6
+msgid "Switch To Previous Window"
+msgstr "Zum vorherigen Fenster wechseln"
+
+#: src/e_mod_keybindings.c:7
+msgid "Show Windows From All Desks"
+msgstr "Fenster aller Arbeitsflächen zeigen"
+
+#: src/e_mod_keybindings.c:8
+msgid "Show Windows From Other Zones"
+msgstr "Fenster anderer Zonen zeigen"
+
+#: src/e_mod_main.c:179
+msgid "Winlist NG"
+msgstr "NG Fensterliste"
+
+#: src/e_mod_main.c:216
+msgid "Winlist NG Module"
+msgstr "Modul \"NG Fensterliste\""
+
+#: src/e_mod_main.c:217
+msgid "a replacement for the standard winlist"
+msgstr "Eine Alternative zur normalen Fensterliste"
+
+#: src/ng_config.c:47
+msgid "Winlist NG Configuration"
+msgstr "Einstellugen für NG Fensterliste"
+
+#: src/ng_config.c:105
+msgid "Fade Animation"
+msgstr "Animation beim Ausblenden"
+
+#: src/ng_config.c:116
+msgid "Size"
+msgstr "Größe"
+
+#: src/ng_config.c:117
+msgid "Icon Size:"
+msgstr "Symbolgröße:"
+
+#: src/ng_config.c:119
+#, c-format
+msgid "%1.0f px"
+msgstr "%1.0f px"
+
+#: src/ng_config.c:124
+msgid "Zooming"
+msgstr "Größenänderung"
+
+#: src/ng_config.c:125
+msgid "Zoomfactor:"
+msgstr "Vergrößerungsfaktor:"
+
+#: src/ng_config.c:127 src/ng_config.c:132
+#, c-format
+msgid "%0.1f"
+msgstr "%0.1f"
+
+#: src/ng_config.c:130
+msgid "Zoom Range:"
+msgstr "Bereich:"
+
+#: src/ng_winlist.c:730
+msgid "No name!"
+msgstr "Kein Name!"
