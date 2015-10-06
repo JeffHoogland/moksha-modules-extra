@@ -20,7 +20,7 @@
 #include "Efreet.h"
 #include "Efreet_Trash.h"
 
-#define FILE_MANAGER "thunar"
+#define FILE_MANAGER "pcmanfm"
 // #define FILE_MANAGER "konqueror"
 // #define FILE_MANAGER "nautilus --no-desktop"
 
@@ -166,7 +166,8 @@ _gc_id_new(E_Gadcon_Client_Class *client_class)
 static Eina_Bool
 _gc_in_site(E_Gadcon_Site site)
 {
-   return (site != E_GADCON_SITE_DESKTOP);
+   //return (site != E_GADCON_SITE_DESKTOP);
+   return EINA_TRUE;
 }
 
 
@@ -332,10 +333,13 @@ _trash_cb_menu_empty_ok(void *data)
 static void
 _trash_cb_menu_show(void *data, E_Menu *m, E_Menu_Item *mi)
 {
-   char buf[PATH_MAX];
-
-   snprintf(buf, sizeof(buf), "%s trash:///", FILE_MANAGER);
-   e_exec(NULL, NULL, buf, NULL, NULL);
+   char buf[4096];
+   E_Zone *zone;
+  
+   zone = e_util_zone_current_get (e_manager_current_get ());
+   
+   snprintf(buf, sizeof(buf), "%s -n trash:///", FILE_MANAGER);
+   e_exec(zone, NULL, buf, NULL, NULL);
 }
 
 static void
