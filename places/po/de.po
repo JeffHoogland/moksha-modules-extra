@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Places (e17)\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-04-03 22:12+0000\n"
+"POT-Creation-Date: 2011-01-09 18:22+0100\n"
 "PO-Revision-Date: 2010-02-28 12:13+0100\n"
 "Last-Translator: Fabian Nowak <timtystery@arcor.de>\n"
 "Language-Team:  <enlightenment-devel@lists.sourceforge.net>\n"
@@ -17,115 +17,93 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_config.c:54
+#: src/e_mod_config.c:51
 msgid "Places Settings"
 msgstr "Einstellungen für das Orte-Modul"
 
-#: src/e_mod_config.c:136
+#: src/e_mod_config.c:118
 msgid "General"
 msgstr "Allgemein"
 
-#: src/e_mod_config.c:139
+#: src/e_mod_config.c:121
 msgid "Show in main menu"
 msgstr "Im Hauptmenü zeigen"
 
-#: src/e_mod_config.c:143
-msgid "Hide the gadget header"
-msgstr ""
-
-#: src/e_mod_config.c:147
-#, fuzzy
-msgid "Mount volumes at boot"
-msgstr "Laufwerke beim Einlegen einbinden"
-
-#: src/e_mod_config.c:151
+#: src/e_mod_config.c:125
 msgid "Mount volumes on insert"
 msgstr "Laufwerke beim Einlegen einbinden"
 
-#: src/e_mod_config.c:155
+#: src/e_mod_config.c:129
 msgid "Open filemanager on insert"
 msgstr "Dateimanager automatisch starten"
 
-#: src/e_mod_config.c:162
+#: src/e_mod_config.c:133
 msgid "Use a custom file manager"
 msgstr "Benutzerdefinierten Dateimanager verwenden"
 
-#: src/e_mod_config.c:175
+#: src/e_mod_config.c:146
 msgid "Show in menu"
 msgstr "Im Menü zeigen"
 
-#: src/e_mod_config.c:178 src/e_mod_places.c:812
+#: src/e_mod_config.c:149 src/e_mod_places.c:408
 msgid "Home"
 msgstr "Persönlicher Ordner"
 
-#: src/e_mod_config.c:181 src/e_mod_places.c:821
+#: src/e_mod_config.c:152 src/e_mod_places.c:417
 msgid "Desktop"
 msgstr "Desktop"
 
-#: src/e_mod_config.c:184 src/e_mod_places.c:831
+#: src/e_mod_config.c:155 src/e_mod_places.c:427
 msgid "Trash"
 msgstr "Mülleimer"
 
-#: src/e_mod_config.c:187 src/e_mod_places.c:651 src/e_mod_places.c:840
+#: src/e_mod_config.c:158 src/e_mod_places.c:207 src/e_mod_places.c:436
 msgid "Filesystem"
 msgstr "Dateisystem"
 
-#: src/e_mod_config.c:190 src/e_mod_places.c:849
+#: src/e_mod_config.c:161 src/e_mod_places.c:445
 msgid "Temp"
 msgstr "Temporäre Daten"
 
-#: src/e_mod_config.c:193
+#: src/e_mod_config.c:164
 msgid "Favorites"
 msgstr "Favoriten"
 
-#: src/e_mod_main.c:59
+#: src/e_mod_main.c:58
 msgid "Files"
 msgstr "Dateien"
 
-#: src/e_mod_main.c:61 src/e_mod_main.c:301 src/e_mod_places.c:273
-#: src/e_mod_places.c:906
+#: src/e_mod_main.c:60 src/e_mod_places.c:502
 msgid "Places"
 msgstr "Orte"
 
-#: src/e_mod_main.c:397
-#, fuzzy
-msgid "Places Configuration Updated"
-msgstr "Konfiguration der Orte"
-
-#: src/e_mod_main.c:507
+#: src/e_mod_main.c:430
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: src/e_mod_places.c:632
-msgid "Warning"
-msgstr ""
-
-#: src/e_mod_places.c:633
-msgid ""
-"<b>Cannot run the Enlightenment FileManager.</b><br>Please choose a custom "
-"file manager in<br>the gadget configuration."
-msgstr ""
-
-#: src/e_mod_places.c:655
+#: src/e_mod_places.c:212
 msgid "No Name"
 msgstr "Kein Name"
 
-#: src/e_mod_places.c:662
+#: src/e_mod_places.c:693
 msgid "free of"
 msgstr "frei von"
 
-#: src/e_mod_places.c:668
+#: src/e_mod_places.c:699
 #, c-format
 msgid "%s Not Mounted"
 msgstr "%s nicht eingehängt"
 
-#: src/e_mod_places.c:695
+#: src/e_mod_places.c:716
 msgid "unmount"
 msgstr "Aushängen"
 
-#: src/e_mod_places.c:700
+#: src/e_mod_places.c:722
 msgid "eject"
 msgstr "Auswerfen"
+
+#~ msgid "Places Configuration"
+#~ msgstr "Konfiguration der Orte"
 
 #~ msgid "Configuration"
 #~ msgstr "Konfiguration"

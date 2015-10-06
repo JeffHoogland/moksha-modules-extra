@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: places\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-04-03 22:12+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-13 00:56+0100\n"
 "PO-Revision-Date: 2012-09-13 01:15+0100\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: Portuguese <>\n"
@@ -56,23 +56,29 @@ msgstr "Utilizar um gestor de ficheiros personalizado"
 msgid "Show in menu"
 msgstr "Mostrar no menu"
 
-#: src/e_mod_config.c:178 src/e_mod_places.c:812
+#: src/e_mod_config.c:178
+#: src/e_mod_places.c:774
 msgid "Home"
 msgstr "Pasta pessoal"
 
-#: src/e_mod_config.c:181 src/e_mod_places.c:821
+#: src/e_mod_config.c:181
+#: src/e_mod_places.c:783
 msgid "Desktop"
 msgstr "Área de trabalho"
 
-#: src/e_mod_config.c:184 src/e_mod_places.c:831
+#: src/e_mod_config.c:184
+#: src/e_mod_places.c:793
 msgid "Trash"
 msgstr "Lixo"
 
-#: src/e_mod_config.c:187 src/e_mod_places.c:651 src/e_mod_places.c:840
+#: src/e_mod_config.c:187
+#: src/e_mod_places.c:618
+#: src/e_mod_places.c:802
 msgid "Filesystem"
 msgstr "Sistema de ficheiros"
 
-#: src/e_mod_config.c:190 src/e_mod_places.c:849
+#: src/e_mod_config.c:190
+#: src/e_mod_places.c:811
 msgid "Temp"
 msgstr "Temporários"
 
@@ -84,49 +90,46 @@ msgstr "Favoritos"
 msgid "Files"
 msgstr "Ficheiros"
 
-#: src/e_mod_main.c:61 src/e_mod_main.c:301 src/e_mod_places.c:273
-#: src/e_mod_places.c:906
+#: src/e_mod_main.c:61
+#: src/e_mod_places.c:236
+#: src/e_mod_places.c:868
 msgid "Places"
 msgstr "Locais"
 
-#: src/e_mod_main.c:397
+#: src/e_mod_main.c:394
 msgid "Places Configuration Updated"
 msgstr "Configuração atualizada"
 
-#: src/e_mod_main.c:507
+#: src/e_mod_main.c:434
 msgid "Settings"
 msgstr "Definições"
 
-#: src/e_mod_places.c:632
+#: src/e_mod_places.c:599
 msgid "Warning"
 msgstr "Aviso"
 
-#: src/e_mod_places.c:633
-msgid ""
-"<b>Cannot run the Enlightenment FileManager.</b><br>Please choose a custom "
-"file manager in<br>the gadget configuration."
-msgstr ""
-"<b>Não foi possível executar o EFM.</b><br>Escolha o gestor de ficheiros na "
-"configuração do gadget."
+#: src/e_mod_places.c:600
+msgid "<b>Cannot run the Enlightenment FileManager.</b><br>Please choose a custom file manager in<br>the gadget configuration."
+msgstr "<b>Não foi possível executar o EFM.</b><br>Escolha o gestor de ficheiros na configuração do gadget."
 
-#: src/e_mod_places.c:655
+#: src/e_mod_places.c:622
 msgid "No Name"
 msgstr "Sem nome"
 
-#: src/e_mod_places.c:662
+#: src/e_mod_places.c:629
 msgid "free of"
 msgstr "livres de"
 
-#: src/e_mod_places.c:668
+#: src/e_mod_places.c:635
 #, c-format
 msgid "%s Not Mounted"
 msgstr "%s não está montado"
 
-#: src/e_mod_places.c:695
+#: src/e_mod_places.c:662
 msgid "unmount"
 msgstr "desmontar"
 
-#: src/e_mod_places.c:700
+#: src/e_mod_places.c:667
 msgid "eject"
 msgstr "ejetar"
 

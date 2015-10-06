@@ -11,15 +11,14 @@
 #ifdef HAVE_EEZE
 # include "e_mod_eeze.h"
 #endif
-#ifdef HAVE_EDBUS2
-# include "e_mod_udisks_edbus2.h"
-#endif
 
 /* Local Function Prototypes */
 static Eina_Bool _places_poller(void *data);
 static const char *_places_human_size_get(unsigned long long size);
 static void _places_volume_object_update(Volume *vol, Evas_Object *obj);
 static void _places_run_fm(void *data, E_Menu *m, E_Menu_Item *mi);
+
+
 
 /* Edje callbacks */
 void _places_icon_activated_cb(void *data, Evas_Object *o, const char *emission, const char *source);
@@ -47,9 +46,6 @@ places_init(void)
 #ifdef HAVE_EEZE
    places_eeze_init();
 #endif
-#ifdef HAVE_EDBUS2
-   places_udisks_edbus2_init();
-#endif
 
    snprintf(theme_file, PATH_MAX, "%s/e-module-places.edj",
             places_conf->module->dir);
@@ -61,29 +57,15 @@ places_shutdown(void)
 {
    if (poller) ecore_timer_del(poller);
 
-   while (volumes)
-     places_volume_del((Volume*)volumes->data);
-
 #ifdef HAVE_UDISKS
    places_udisks_shutdown();
 #endif
 #ifdef HAVE_EEZE
    places_eeze_shutdown();
 #endif
-#ifdef HAVE_EDBUS2
-   places_udisks_edbus2_shutdown();
-#endif
-}
 
-Evas_Object *
-places_main_obj_create(Evas *canvas)
-{
-   Evas_Object *o;
-
-   o = edje_object_add(canvas);
-   edje_object_file_set(o, theme_file, "modules/places/main");
-
-   return o;
+   while (volumes)
+     places_volume_del((Volume*)volumes->data);
 }
 
 Eina_List *
@@ -105,18 +87,13 @@ places_volume_add(const char *id, Eina_Bool first_time)
    v->id = eina_stringshare_add(id);
    v->valid = EINA_FALSE;
    v->objs = NULL;
-   v->icon = eina_stringshare_add("");
-   v->device = eina_stringshare_add("");
-   v->label = eina_stringshare_add("");
-   v->mount_point = eina_stringshare_add("");
-   v->fstype = eina_stringshare_add("");
+   v->icon = NULL;
+   v->device = NULL;
    v->to_mount = EINA_FALSE;
    v->force_open = EINA_FALSE;
-   v->drive_type = eina_stringshare_add("");
-   v->model = eina_stringshare_add("");
-   v->serial = eina_stringshare_add("");
-   v->vendor = eina_stringshare_add("");
-   v->bus = eina_stringshare_add("");
+   v->drive_type = "";
+   v->model = "";
+   v->bus = "";
    v->to_mount = ((places_conf->auto_mount && !first_time) ||
                   (first_time && places_conf->boot_mount));
    v->force_open = (places_conf->auto_open && !first_time);
@@ -131,11 +108,6 @@ places_volume_del(Volume *v)
 {
    Evas_Object *o;
    Evas_Object *swal;
-   Eina_List *l;
-   Instance *inst;
-
-   if (v->free_func)
-      v->free_func(v);
 
    volumes = eina_list_remove(volumes, v);
    EINA_LIST_FREE(v->objs, o)
@@ -147,12 +119,10 @@ places_volume_del(Volume *v)
              evas_object_del(swal);
           }
 
-        EINA_LIST_FOREACH(instances, l, inst)
-          edje_object_part_box_remove(inst->o_main, "box", o);
-
+        e_box_unpack(o);
         evas_object_del(o);
      }
-   if (v->id)          eina_stringshare_del(v->id);
+   if (v->id)         eina_stringshare_del(v->id);
    if (v->label)       eina_stringshare_del(v->label);
    if (v->icon)        eina_stringshare_del(v->icon);
    if (v->mount_point) eina_stringshare_del(v->mount_point);
@@ -163,7 +133,8 @@ places_volume_del(Volume *v)
    if (v->model)       eina_stringshare_del(v->model);
    if (v->vendor)      eina_stringshare_del(v->vendor);
    if (v->serial)      eina_stringshare_del(v->serial);
-   E_FREE(v);
+   
+   free(v);
 }
 
 Volume *
@@ -205,7 +176,7 @@ places_update_all_gadgets(void)
 
    volumes = eina_list_sort(volumes, 0, _places_volume_sort_cb);
    EINA_LIST_FOREACH(instances, l, inst)
-     places_fill_box(inst->o_main, inst->horiz);
+     places_fill_box(inst->o_box);
 }
 
 void
@@ -233,7 +204,7 @@ places_volume_update(Volume *vol)
 }
 
 void
-places_fill_box(Evas_Object *main, Eina_Bool horiz)
+places_fill_box(Evas_Object *box)
 {
    Eina_List *l;
    int min_w, min_h, max_w, max_h, found;
@@ -241,9 +212,7 @@ places_fill_box(Evas_Object *main, Eina_Bool horiz)
    char *f1, *f2, *f3;
    char buf[128];
 
-   if (!main) return;
-
-   places_empty_box(main);
+   places_empty_box(box);
 
    /*if (places_conf->show_home)
       _places_custom_volume(box, D_("Home"), "e/icons/fileman/home", "/home/dave");
@@ -257,35 +226,32 @@ places_fill_box(Evas_Object *main, Eina_Bool horiz)
       _places_custom_volume(box, D_("Temp"), "e/icons/fileman/tmp", "/tmp");
    */
 
-   // orient the edje box
-   if (horiz)
-      edje_object_signal_emit(main, "box,set,horiz", "places");
-   else
-      edje_object_signal_emit(main, "box,set,vert", "places");
 
-   // header (or just a separator if header is not wanted)
-   o = edje_object_add(evas_object_evas_get(main));
+   o = edje_object_add(evas_object_evas_get(box));
    if (places_conf->hide_header)
      edje_object_file_set(o, theme_file, "modules/places/separator");
    else
      edje_object_file_set(o, theme_file, "modules/places/header");
 
    edje_object_part_text_set(o, "label", D_("Places"));
-   if (horiz)
-      edje_object_signal_emit(o, "separator,set,vert", "places");
-   else
+   if (!e_box_orientation_get(box))
       edje_object_signal_emit(o, "separator,set,horiz", "places");
-
+   else
+      edje_object_signal_emit(o, "separator,set,vert", "places");
    edje_object_size_min_get(o, &min_w, &min_h);
    edje_object_size_max_get(o, &max_w, &max_h);
-   evas_object_size_hint_min_set(o, min_w, min_h);
-   evas_object_size_hint_max_set(o, max_w, max_h);
-   // evas_object_size_hint_align_set(o, EVAS_HINT_FILL, 0.0);
-   edje_object_part_box_append(main, "box", o);
    evas_object_show(o);
-
+   e_box_pack_end(box, o);
+   e_box_pack_options_set(o,
+                        1, 0, /* fill */
+                        0, 0, /* expand */
+                        0.5, 0.0, /* align */
+                        min_w, min_h, /* min */
+                        max_w, max_h /* max */
+                        );
    edje_object_signal_callback_add(o, "header,activated", "places",
                                    _places_header_activated_cb, NULL);
+
 
    // volume objects
    for (l = volumes; l; l = l->next)
@@ -295,12 +261,12 @@ places_fill_box(Evas_Object *main, Eina_Bool horiz)
         if (!vol->valid) continue;
 
         //volume object
-        o = edje_object_add(evas_object_evas_get(main));
-        edje_object_file_set(o, theme_file, "modules/places/volume");
+        o = edje_object_add(evas_object_evas_get(box));
+        edje_object_file_set(o, theme_file, "modules/places/main");
         vol->objs = eina_list_append(vol->objs, o);
 
         //choose the right icon
-        icon = e_icon_add(evas_object_evas_get(main));
+        icon = e_icon_add(evas_object_evas_get(box));
         f1 = f2 = f3 = NULL;
         /* optical discs */
         if (!strcmp(vol->drive_type, "cdrom") ||
@@ -372,10 +338,10 @@ places_fill_box(Evas_Object *main, Eina_Bool horiz)
         _places_volume_object_update(vol, o);
 
         // orient the separator
-        if (horiz)
-          edje_object_signal_emit(o, "separator,set,vert", "places");
-        else
+        if (!e_box_orientation_get(box))
           edje_object_signal_emit(o, "separator,set,horiz", "places");
+        else
+          edje_object_signal_emit(o, "separator,set,vert", "places");
 
         // connect signals from edje
         edje_object_signal_callback_add(o, "icon,activated", "places",
@@ -384,45 +350,46 @@ places_fill_box(Evas_Object *main, Eina_Bool horiz)
                                         _places_eject_activated_cb, vol);
 
         // pack the volume in the box
+        evas_object_show(o);
         edje_object_size_min_get(o, &min_w, &min_h);
         edje_object_size_max_get(o, &max_w, &max_h);
-        evas_object_size_hint_min_set(o, min_w, min_h);
-        evas_object_size_hint_max_set(o, max_w, max_h);
-        // evas_object_size_hint_align_set(o, EVAS_HINT_FILL, 0.0);
-        // evas_object_size_hint_weight_set(o, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-        edje_object_part_box_append(main, "box", o);
-        evas_object_show(o);
+        e_box_pack_end(box, o);
+        e_box_pack_options_set(o,
+                               1, 0, /* fill */
+                               1, 0, /* expand */
+                               0.5, 0.0, /* align */
+                               min_w, min_h, /* min */
+                               max_w, max_h /* max */
+                              );
      }
-
-   edje_object_calc_force(main);
-   edje_object_size_min_restricted_calc(main, &min_w, &min_h, 99, 1);
-   // printf("PLACES: SIZE: %d %d\n", min_w, min_h);
-   evas_object_size_hint_min_set(main, min_w, min_h);
 }
 
 void
-places_empty_box(Evas_Object *main)
+places_empty_box(Evas_Object *box)
 {
-   Evas_Object *o;
+   int count;
 
-   while ((o = edje_object_part_box_remove_at(main, "box", 0)))
-   {
-      Volume *vol;
-      Evas_Object *swal;
-      Eina_List *l;
+   e_box_freeze(box);
+   count = e_box_pack_count_get(box);
+   while (count >= 0)
+     {
+        Evas_Object *o;
+        Evas_Object *swal;
 
-      swal = edje_object_part_swallow_get(o, "icon");
-      if (swal)
-      {
-         edje_object_part_unswallow(o, swal);
-         evas_object_del(swal);
-      }
+        o = e_box_pack_object_nth(box, count);
+        swal = edje_object_part_swallow_get(o, "icon");
+        if (swal)
+          {
+             edje_object_part_unswallow(o, swal);
+             evas_object_del(swal);
+          }
 
-      EINA_LIST_FOREACH(volumes, l, vol)
-         vol->objs = eina_list_remove(vol->objs, o);
+        e_box_unpack(o);
+        evas_object_del(o);
 
-      evas_object_del(o);
-   }
+        count--;
+     }
+   e_box_thaw(box);
 }
 
 void
@@ -465,7 +432,7 @@ places_print_volume(Volume *v)
 {
    const char *size, *free;
 
-   printf("Got volume %s (totals: %d)\n", v->id, eina_list_count(volumes));
+   printf("Got volume %s\n", v->id);
    printf("  label: %s\n",v->label);
    printf("  mounted: %d\n", v->mounted);
    printf("  m_point: %s\n", v->mount_point);
@@ -495,7 +462,7 @@ _places_custom_volume(Evas_Object *box, const char *label, const char *icon, con
 
    /* volume object */
    o = edje_object_add(evas_object_evas_get(box));
-   edje_object_file_set(o, theme_file, "modules/places/volume");
+   edje_object_file_set(o, theme_file, "modules/places/main");
 
    /* icon */
    i = edje_object_add(evas_object_evas_get(box));
@@ -649,7 +616,7 @@ _places_volume_object_update(Volume *vol, Evas_Object *obj)
    // the volume label
    if (vol->mount_point && !strcmp(vol->mount_point, "/"))
      edje_object_part_text_set(obj, "volume_label", D_("Filesystem"));
-   else if (vol->label && vol->label[0])
+   else if (vol->label && strlen(vol->label))
      edje_object_part_text_set(obj, "volume_label", vol->label);
    else
      edje_object_part_text_set(obj, "volume_label", D_("No Name"));
@@ -755,13 +722,8 @@ _places_bookmarks_parse(E_Menu *em)
    char *alias;
    FILE* fp;
 
-   snprintf(buf, sizeof(buf), "%s/gtk-3.0/bookmarks", efreet_config_home_get());
+   snprintf(buf, sizeof(buf), "%s/.gtk-bookmarks", e_user_homedir_get());
    fp = fopen(buf, "r");
-   if (!fp)
-     {
-        snprintf(buf, sizeof(buf), "%s/.gtk-bookmarks", e_user_homedir_get());
-        fp = fopen(buf, "r");
-     }
    if (fp)
      {
         while(fgets(line, sizeof(line), fp))

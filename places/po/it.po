@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Places\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-04-03 22:12+0000\n"
+"POT-Creation-Date: 2012-09-15 17:28+0200\n"
 "PO-Revision-Date: 2012-09-15 17:29+0200\n"
 "Last-Translator: DaveMDS <dave@gurumeditation.it>\n"
 "Language-Team: none\n"
@@ -51,23 +51,23 @@ msgstr "Usa filemanager personalizzato"
 msgid "Show in menu"
 msgstr "Mostra nel menù"
 
-#: src/e_mod_config.c:178 src/e_mod_places.c:812
+#: src/e_mod_config.c:178 src/e_mod_places.c:774
 msgid "Home"
 msgstr "Home"
 
-#: src/e_mod_config.c:181 src/e_mod_places.c:821
+#: src/e_mod_config.c:181 src/e_mod_places.c:783
 msgid "Desktop"
 msgstr "Desktop"
 
-#: src/e_mod_config.c:184 src/e_mod_places.c:831
+#: src/e_mod_config.c:184 src/e_mod_places.c:793
 msgid "Trash"
 msgstr "Cestino"
 
-#: src/e_mod_config.c:187 src/e_mod_places.c:651 src/e_mod_places.c:840
+#: src/e_mod_config.c:187 src/e_mod_places.c:618 src/e_mod_places.c:802
 msgid "Filesystem"
 msgstr "Filesystem"
 
-#: src/e_mod_config.c:190 src/e_mod_places.c:849
+#: src/e_mod_config.c:190 src/e_mod_places.c:811
 msgid "Temp"
 msgstr "Temporanei"
 
@@ -79,24 +79,23 @@ msgstr "Preferiti"
 msgid "Files"
 msgstr "File"
 
-#: src/e_mod_main.c:61 src/e_mod_main.c:301 src/e_mod_places.c:273
-#: src/e_mod_places.c:906
+#: src/e_mod_main.c:61 src/e_mod_places.c:236 src/e_mod_places.c:868
 msgid "Places"
 msgstr "Risorse"
 
-#: src/e_mod_main.c:397
+#: src/e_mod_main.c:394
 msgid "Places Configuration Updated"
 msgstr "La configurazione di Places è aggiornata"
 
-#: src/e_mod_main.c:507
+#: src/e_mod_main.c:434
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: src/e_mod_places.c:632
+#: src/e_mod_places.c:599
 msgid "Warning"
 msgstr "Avviso"
 
-#: src/e_mod_places.c:633
+#: src/e_mod_places.c:600
 msgid ""
 "<b>Cannot run the Enlightenment FileManager.</b><br>Please choose a custom "
 "file manager in<br>the gadget configuration."
@@ -104,23 +103,23 @@ msgstr ""
 "<b>Impossibile eseguire il file manager di Enlightenment.</b><br>Si prega di "
 "impostare un altro file manager<br>nella configurazione del gadget."
 
-#: src/e_mod_places.c:655
+#: src/e_mod_places.c:622
 msgid "No Name"
 msgstr "Senza nome"
 
-#: src/e_mod_places.c:662
+#: src/e_mod_places.c:629
 msgid "free of"
 msgstr "liberi di"
 
-#: src/e_mod_places.c:668
+#: src/e_mod_places.c:635
 #, c-format
 msgid "%s Not Mounted"
 msgstr "%s non è montato"
 
-#: src/e_mod_places.c:695
+#: src/e_mod_places.c:662
 msgid "unmount"
 msgstr "smonta"
 
-#: src/e_mod_places.c:700
+#: src/e_mod_places.c:667
 msgid "eject"
 msgstr "espelli"

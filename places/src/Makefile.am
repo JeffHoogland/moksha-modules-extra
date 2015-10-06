@@ -14,8 +14,6 @@ module_la_SOURCES = e_mod_main.h \
                     e_mod_places.c \
                     e_mod_udisks.h \
                     e_mod_udisks.c \
-                    e_mod_udisks_edbus2.h \
-                    e_mod_udisks_edbus2.c \
                     e_mod_eeze.h \
                     e_mod_eeze.c
 

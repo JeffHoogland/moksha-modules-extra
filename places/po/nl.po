@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Places\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-04-03 22:12+0000\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2011-09-02 15:01-0700\n"
 "PO-Revision-Date: 2011-09-03 15:37+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@gmail.com>\n"
 "Language-Team:  <vistausss@gmail.com>\n"
@@ -17,111 +17,99 @@ msgstr ""
 "X-Poedit-Language: NL\n"
 "X-Poedit-Country: Nederland\n"
 
-#: src/e_mod_config.c:54
+#. create new config dialog
+#: ../src/e_mod_config.c:52
 msgid "Places Settings"
 msgstr "Plaatsen-instellingen"
 
-#: src/e_mod_config.c:136
+#. General frame
+#: ../src/e_mod_config.c:119
 msgid "General"
 msgstr "Algemeen"
 
-#: src/e_mod_config.c:139
+#: ../src/e_mod_config.c:122
 msgid "Show in main menu"
 msgstr "Toon in hoofdmenu"
 
-#: src/e_mod_config.c:143
-msgid "Hide the gadget header"
-msgstr ""
-
-#: src/e_mod_config.c:147
-#, fuzzy
-msgid "Mount volumes at boot"
-msgstr "Koppel volumes aan bij invoeren"
-
-#: src/e_mod_config.c:151
+#: ../src/e_mod_config.c:126
 msgid "Mount volumes on insert"
 msgstr "Koppel volumes aan bij invoeren"
 
-#: src/e_mod_config.c:155
+#: ../src/e_mod_config.c:130
 msgid "Open filemanager on insert"
 msgstr "Open bestandsbeheerder bij invoeren"
 
-#: src/e_mod_config.c:162
+#: ../src/e_mod_config.c:134
 msgid "Use a custom file manager"
 msgstr "Gebruik een aangepaste bestandsbeheerder"
 
-#: src/e_mod_config.c:175
+#. Display frame
+#: ../src/e_mod_config.c:147
 msgid "Show in menu"
 msgstr "Toon in menu"
 
-#: src/e_mod_config.c:178 src/e_mod_places.c:812
+#: ../src/e_mod_config.c:150
+#: ../src/e_mod_places.c:470
 msgid "Home"
 msgstr "Persoonlijke map"
 
-#: src/e_mod_config.c:181 src/e_mod_places.c:821
+#: ../src/e_mod_config.c:153
+#: ../src/e_mod_places.c:479
 msgid "Desktop"
 msgstr "Bureaublad"
 
-#: src/e_mod_config.c:184 src/e_mod_places.c:831
+#: ../src/e_mod_config.c:156
+#: ../src/e_mod_places.c:489
 msgid "Trash"
 msgstr "Prullenbak"
 
-#: src/e_mod_config.c:187 src/e_mod_places.c:651 src/e_mod_places.c:840
+#: ../src/e_mod_config.c:159
+#: ../src/e_mod_places.c:268
+#: ../src/e_mod_places.c:498
 msgid "Filesystem"
 msgstr "Bestandssysteem"
 
-#: src/e_mod_config.c:190 src/e_mod_places.c:849
+#: ../src/e_mod_config.c:162
+#: ../src/e_mod_places.c:507
 msgid "Temp"
 msgstr "Temp"
 
-#: src/e_mod_config.c:193
+#: ../src/e_mod_config.c:165
 msgid "Favorites"
 msgstr "Favorieten"
 
-#: src/e_mod_main.c:59
+#. Display this Modules config info in the main Config Panel
+#: ../src/e_mod_main.c:59
 msgid "Files"
 msgstr "Bestanden"
 
-#: src/e_mod_main.c:61 src/e_mod_main.c:301 src/e_mod_places.c:273
-#: src/e_mod_places.c:906
+#: ../src/e_mod_main.c:61
+#: ../src/e_mod_places.c:564
 msgid "Places"
 msgstr "Plaatsen"
 
-#: src/e_mod_main.c:397
-msgid "Places Configuration Updated"
-msgstr ""
-
-#: src/e_mod_main.c:507
+#: ../src/e_mod_main.c:427
 msgid "Settings"
 msgstr "Instellingen"
 
-#: src/e_mod_places.c:632
-msgid "Warning"
-msgstr ""
-
-#: src/e_mod_places.c:633
-msgid ""
-"<b>Cannot run the Enlightenment FileManager.</b><br>Please choose a custom "
-"file manager in<br>the gadget configuration."
-msgstr ""
-
-#: src/e_mod_places.c:655
+#: ../src/e_mod_places.c:273
 msgid "No Name"
 msgstr "Geen naam"
 
-#: src/e_mod_places.c:662
+#: ../src/e_mod_places.c:779
 msgid "free of"
 msgstr "vrij van"
 
-#: src/e_mod_places.c:668
+#: ../src/e_mod_places.c:785
 #, c-format
 msgid "%s Not Mounted"
 msgstr "%s Niet aangekoppeld"
 
-#: src/e_mod_places.c:695
+#: ../src/e_mod_places.c:802
 msgid "unmount"
 msgstr "koppel af"
 
-#: src/e_mod_places.c:700
+#: ../src/e_mod_places.c:808
 msgid "eject"
 msgstr "werp uit"
+

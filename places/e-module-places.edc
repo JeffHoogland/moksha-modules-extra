@@ -33,55 +33,11 @@ collections
       }
    }
 /****************************************************/
-/**  GADGET MAIN BOX  *******************************/
-/****************************************************/
-   group { name: "modules/places/main";
-      parts {
-         // part { name: "DEBUG";
-            // type: RECT;
-            // description { state: "default" 0.0;
-               // color: 200 0 0 100;
-            // }
-         // }
-         part { name: "box";
-            type: BOX;
-            description { state: "default" 0.0;
-               box {
-                  layout: "vertical";
-                  align: 0.5 0.0;
-                  min: 1 1;
-               }
-            }
-            description { state: "horiz" 0.0;
-               box {
-                  layout: "orizontal";
-                  align: 0.5 0.5;
-                  min: 1 1;
-               }
-            }
-         }
-      }
-      programs {
-         program { name: "set_box_horiz";
-            signal: "box,set,horiz";
-            source: "places";
-            action: STATE_SET "horiz" 0.0;
-            target: "box";
-         }
-         program { name: "set_box_vert";
-            signal: "box,set,vert";
-            source: "places";
-            action: STATE_SET "default" 0.0;
-            target: "box";
-         }
-      }
-   }
-/****************************************************/
 /**  GADGET HEADER  *********************************/
 /****************************************************/
    group { name: "modules/places/header";
-      min: 200 35;
-      max: 384 35;
+      min: 120 35;
+      max: 384 60;
       parts {
          part { name: "bg";
             mouse_events: 1;
@@ -143,9 +99,8 @@ collections
             }
             description { state: "vert" 0.0;
                rel1.relative: 1.0 0.0;
-               rel2.relative: 1.0 1.0;
-               rel2.offset: 0 0;
-               color: 0 0 0 100;
+               rel2.relative: 1.0 0.0;
+               rel2.offset: 0 50;
                color: 0 0 0 100;
             }
          }
@@ -255,7 +210,7 @@ collections
             description { state: "vert" 0.0;
                rel1.relative: 1.0 0.0;
                rel2.relative: 1.0 1.0;
-               rel2.offset: 0 0;
+               rel2.offset: 0 47;
                color: 0 0 0 100;
             }
          }
@@ -285,8 +240,8 @@ collections
 /****************************************************/
 /**  GADGET VOLUME  *********************************/
 /****************************************************/
-   group { name: "modules/places/volume";
-      min: 200 50;
+   group { name: "modules/places/main";
+      min: 90 50;
       max: 384 50;
       script { /* this set the gauge value */
          public message(Msg_Type:type, id, ...) {
@@ -385,28 +340,28 @@ collections
                color: 255 255 255 0;
             }
             description { state: "ext3" 0.0;
-               inherit: "default" 0.0;
                image.normal: "tag_ext3.png";
+               inherit: "default" 0.0;
                color: 255 255 255 240;
             }
             description { state: "fat" 0.0;
-               inherit: "default" 0.0;
                image.normal: "tag_fat.png";
+               inherit: "default" 0.0;
                color: 255 255 255 240;
             }
             description { state: "hfs" 0.0;
-               inherit: "default" 0.0;
                image.normal: "tag_hfs.png";
+               inherit: "default" 0.0;
                color: 255 255 255 240;
             }
             description { state: "ufs" 0.0;
-               inherit: "default" 0.0;
                image.normal: "tag_ufs.png";
+               inherit: "default" 0.0;
                color: 255 255 255 240;
             }
             description { state: "dvd" 0.0;
-               inherit: "default" 0.0;
                image.normal: "tag_dvd.png";
+               inherit: "default" 0.0;
                rel1.relative: 0.0 0.0;
                rel2.relative: 1.0 0.5;
                color: 255 255 255 240;

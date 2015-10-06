@@ -3,7 +3,7 @@ dnl Process this file with autoconf to produce a configure script.
 # get rid of that stupid cache mechanism
 rm -f config.cache
 
-AC_INIT(places, 0.5.0, dave@gurumeditation.it)
+AC_INIT(places, 0.2.0, dave@gurumeditation.it)
 AC_PREREQ(2.52)
 AC_CONFIG_SRCDIR(configure.ac)
 AC_CANONICAL_BUILD
@@ -12,9 +12,10 @@ AC_ISC_POSIX
 
 AM_INIT_AUTOMAKE(1.8)
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
-AC_CONFIG_HEADERS(config.h)
+AM_CONFIG_HEADER(config.h)
 
 AC_PROG_CC
+AM_PROG_CC_STDC
 AC_HEADER_STDC
 AC_C_CONST
 AC_C___ATTRIBUTE__
@@ -37,7 +38,7 @@ AM_CONDITIONAL([HAVE_PO], [false])
 AC_SUBST(LTLIBINTL)
 
 # check for Enlightenment
-PKG_CHECK_MODULES(E, [enlightenment < 0.17.99])
+PKG_CHECK_MODULES(E, [enlightenment])
 release=$(pkg-config --variable=release enlightenment)
 MODULE_ARCH="$host_os-$host_cpu-$release"
 AC_SUBST(MODULE_ARCH)
@@ -59,7 +60,7 @@ AC_MSG_CHECKING([Which edje_cc to use])
 AC_MSG_RESULT(${EDJE_CC})
 
 
-# check for udisks, using e_dbus v1 (default enabled) (DEPRECATED)
+# check for udisks (default enabled)
 PKG_CHECK_MODULES([E_UDISKS], [dbus-1 edbus eukit >= 1.0.999],
                   [have_udisks="yes"], [have_udisks="no"])
 want_udisks=yes
@@ -70,16 +71,8 @@ if test "x$want_udisks" = "xno";then
    have_udisks=no
 fi
 
-# check for edbus v2 (default enabled)
-PKG_CHECK_MODULES([EDBUS2], [edbus2 >= 1.7.99],
-                  [have_edbus2="yes"], [have_edbus2="no"])
-want_edbus2=yes
-AC_ARG_ENABLE([edbus2],
-   AS_HELP_STRING([--enable-edbus2],[enable UDisks with edbus2 support @<:@default=enabled@:>@]), 
-   [want_edbus2=$enableval])
-if test "x$want_edbus2" = "xno";then
-   have_edbus2=no
-fi
+AM_CONDITIONAL([HAVE_UDISKS], [test "x$have_udisks" = "xyes"])
+test "x$have_udisks" = "xyes" && AC_DEFINE_UNQUOTED([HAVE_UDISKS], [1], [enable Udisks support])
 
 # check for eeze (default disabled)
 PKG_CHECK_MODULES([EEZE], [eeze >= 1.1.99],
@@ -91,17 +84,6 @@ AC_ARG_ENABLE([eeze],
 if test "x$want_eeze" != "xyes";then
    have_eeze=no
 fi
-
-# do not use both e_dbus and eldbus
-if test "x$have_edbus2" = "xyes";then
-   have_udisks=no
-fi
-
-AM_CONDITIONAL([HAVE_EDBUS2], [test "x$have_edbus2" = "xyes"])
-test "x$have_edbus2" = "xyes" && AC_DEFINE_UNQUOTED([HAVE_EDBUS2], [1], [enable edbus2 support])
-
-AM_CONDITIONAL([HAVE_UDISKS], [test "x$have_udisks" = "xyes"])
-test "x$have_udisks" = "xyes" && AC_DEFINE_UNQUOTED([HAVE_UDISKS], [1], [enable Udisks support])
 
 AM_CONDITIONAL([HAVE_EEZE], [test "x$have_eeze" = "xyes"])
 test "x$have_eeze" = "xyes" && AC_DEFINE_UNQUOTED([HAVE_EEZE], [1], [enable eeze support])
@@ -141,8 +123,7 @@ SUMMARY_EOF
 echo
 cat << DEVICE_EOF
 Device Backends:
- * build udisks (e_dbus v1)....: $have_udisks (deprecated)
- * build udisks (edbus  v2)....: $have_edbus2 (suggested)
- * build eeze..................: $have_eeze (experimental)
+ * build udisks....: $have_udisks
+ * build eeze......: $have_eeze (TO BE DONE)
 DEVICE_EOF
 echo

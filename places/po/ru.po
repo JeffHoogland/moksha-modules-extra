@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the enlightenment package.
 # Serguey G Basalaev <SBasalaev@gmail.com>, 2009.
 # Black Raven, 2009.
-# Igor Murzov <e-mail@date.by>, 2012, 2013.
+# Igor Murzov <e-mail@date.by>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-04-03 22:12+0000\n"
-"PO-Revision-Date: 2013-01-08 02:39+0400\n"
+"POT-Creation-Date: 2012-12-28 01:39+0400\n"
+"PO-Revision-Date: 2012-12-28 01:39+0400\n"
 "Last-Translator: Igor Murzov <e-mail@date.by>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "Language: ru\n"
@@ -54,23 +54,23 @@ msgstr "Использовать пользовательский файловы
 msgid "Show in menu"
 msgstr "Показывать в меню"
 
-#: src/e_mod_config.c:178 src/e_mod_places.c:812
+#: src/e_mod_config.c:178 src/e_mod_places.c:774
 msgid "Home"
 msgstr "Домашний каталог"
 
-#: src/e_mod_config.c:181 src/e_mod_places.c:821
+#: src/e_mod_config.c:181 src/e_mod_places.c:783
 msgid "Desktop"
 msgstr "Рабочий стол"
 
-#: src/e_mod_config.c:184 src/e_mod_places.c:831
+#: src/e_mod_config.c:184 src/e_mod_places.c:793
 msgid "Trash"
 msgstr "Корзина"
 
-#: src/e_mod_config.c:187 src/e_mod_places.c:651 src/e_mod_places.c:840
+#: src/e_mod_config.c:187 src/e_mod_places.c:618 src/e_mod_places.c:802
 msgid "Filesystem"
 msgstr "Файловая система"
 
-#: src/e_mod_config.c:190 src/e_mod_places.c:849
+#: src/e_mod_config.c:190 src/e_mod_places.c:811
 msgid "Temp"
 msgstr "Временные файлы"
 
@@ -82,24 +82,24 @@ msgstr "Избранное"
 msgid "Files"
 msgstr "Файлы"
 
-#: src/e_mod_main.c:61 src/e_mod_main.c:301 src/e_mod_places.c:273
-#: src/e_mod_places.c:906
+#: src/e_mod_main.c:61 src/e_mod_main.c:298 src/e_mod_places.c:236
+#: src/e_mod_places.c:868
 msgid "Places"
 msgstr "Места"
 
-#: src/e_mod_main.c:397
+#: src/e_mod_main.c:394
 msgid "Places Configuration Updated"
 msgstr "Настройки Мест обновлены"
 
-#: src/e_mod_main.c:507
+#: src/e_mod_main.c:434
 msgid "Settings"
 msgstr "Настройки"
 
-#: src/e_mod_places.c:632
+#: src/e_mod_places.c:599
 msgid "Warning"
 msgstr "Предупреждение"
 
-#: src/e_mod_places.c:633
+#: src/e_mod_places.c:600
 msgid ""
 "<b>Cannot run the Enlightenment FileManager.</b><br>Please choose a custom "
 "file manager in<br>the gadget configuration."
@@ -107,23 +107,23 @@ msgstr ""
 "<b>Не удалось запустить EFM.</b><br>Пожалуйста, выберите другой файловый "
 "менеджер<br>в настройках гаджета."
 
-#: src/e_mod_places.c:655
+#: src/e_mod_places.c:622
 msgid "No Name"
 msgstr "Без имени"
 
-#: src/e_mod_places.c:662
+#: src/e_mod_places.c:629
 msgid "free of"
-msgstr "свободно из"
+msgstr "свободно на"
 
-#: src/e_mod_places.c:668
+#: src/e_mod_places.c:635
 #, c-format
 msgid "%s Not Mounted"
 msgstr "%s Не подключен"
 
-#: src/e_mod_places.c:695
+#: src/e_mod_places.c:662
 msgid "unmount"
 msgstr "отключить"
 
-#: src/e_mod_places.c:700
+#: src/e_mod_places.c:667
 msgid "eject"
 msgstr "извлечь"

@@ -1,127 +1,103 @@
 # Lithuanian translation for enlightenment
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
 # This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-04-03 22:12+0000\n"
-"PO-Revision-Date: 2013-12-30 11:20+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2010-02-28 12:14+0100\n"
+"PO-Revision-Date: 2010-01-17 18:40+0000\n"
+"Last-Translator: Joshas <Unknown>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
-"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-11 06:35+0000\n"
-"X-Generator: Launchpad (build 16890)\n"
+"X-Launchpad-Export-Date: 2010-01-18 04:44+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: src/e_mod_config.c:54
-msgid "Places Settings"
-msgstr ""
+#: src/e_mod_config.c:51
+msgid "Places Configuration"
+msgstr "Vietų konfigūracija"
 
-#: src/e_mod_config.c:136
+#: src/e_mod_config.c:118
 msgid "General"
-msgstr ""
+msgstr "Bendri"
 
-#: src/e_mod_config.c:139
+#: src/e_mod_config.c:121
 msgid "Show in main menu"
-msgstr ""
+msgstr "Rodyti pagrindiniame meniu"
 
-#: src/e_mod_config.c:143
-msgid "Hide the gadget header"
-msgstr ""
-
-#: src/e_mod_config.c:147
-msgid "Mount volumes at boot"
-msgstr ""
-
-#: src/e_mod_config.c:151
+#: src/e_mod_config.c:125
 msgid "Mount volumes on insert"
-msgstr ""
+msgstr "Įrengti laikmenas prijungus"
 
-#: src/e_mod_config.c:155
+#: src/e_mod_config.c:129
 msgid "Open filemanager on insert"
-msgstr ""
+msgstr "Atverti failų tvarkyklę prijungus"
 
-#: src/e_mod_config.c:162
+#: src/e_mod_config.c:133
 msgid "Use a custom file manager"
-msgstr ""
+msgstr "Naudoti savą failų tvarkyklę"
 
-#: src/e_mod_config.c:175
+#: src/e_mod_config.c:146
 msgid "Show in menu"
-msgstr ""
+msgstr "Rodyti meniu"
 
-#: src/e_mod_config.c:178 src/e_mod_places.c:812
+#: src/e_mod_config.c:149 src/e_mod_places.c:402
 msgid "Home"
-msgstr ""
+msgstr "Namai"
 
-#: src/e_mod_config.c:181 src/e_mod_places.c:821
+#: src/e_mod_config.c:152 src/e_mod_places.c:411
 msgid "Desktop"
-msgstr ""
+msgstr "Darbalaukis"
 
-#: src/e_mod_config.c:184 src/e_mod_places.c:831
+#: src/e_mod_config.c:155 src/e_mod_places.c:421
 msgid "Trash"
-msgstr ""
+msgstr "Šiukšlinė"
 
-#: src/e_mod_config.c:187 src/e_mod_places.c:651 src/e_mod_places.c:840
+#: src/e_mod_config.c:158 src/e_mod_places.c:232 src/e_mod_places.c:430
 msgid "Filesystem"
-msgstr ""
+msgstr "Failų sistema"
 
-#: src/e_mod_config.c:190 src/e_mod_places.c:849
+#: src/e_mod_config.c:161 src/e_mod_places.c:439
 msgid "Temp"
-msgstr ""
+msgstr "Laikini"
 
-#: src/e_mod_config.c:193
+#: src/e_mod_config.c:164
 msgid "Favorites"
-msgstr ""
+msgstr "Mėgiamiausi"
 
-#: src/e_mod_main.c:59
+#: src/e_mod_main.c:75
 msgid "Files"
-msgstr ""
+msgstr "Failai"
 
-#: src/e_mod_main.c:61 src/e_mod_main.c:301 src/e_mod_places.c:273
-#: src/e_mod_places.c:906
+#: src/e_mod_main.c:77 src/e_mod_places.c:502
 msgid "Places"
-msgstr ""
+msgstr "Vietos"
 
-#: src/e_mod_main.c:397
-msgid "Places Configuration Updated"
-msgstr ""
+#: src/e_mod_main.c:443
+msgid "Configuration"
+msgstr "Konfigūracija"
 
-#: src/e_mod_main.c:507
-msgid "Settings"
-msgstr "Nustatymai"
-
-#: src/e_mod_places.c:632
-msgid "Warning"
-msgstr ""
-
-#: src/e_mod_places.c:633
-msgid ""
-"<b>Cannot run the Enlightenment FileManager.</b><br>Please choose a custom "
-"file manager in<br>the gadget configuration."
-msgstr ""
-
-#: src/e_mod_places.c:655
+#: src/e_mod_places.c:237
 msgid "No Name"
-msgstr ""
+msgstr "Be pavadinimo"
 
-#: src/e_mod_places.c:662
+#: src/e_mod_places.c:692
 msgid "free of"
-msgstr ""
+msgstr "laisva iš"
 
-#: src/e_mod_places.c:668
+#: src/e_mod_places.c:698
 #, c-format
 msgid "%s Not Mounted"
-msgstr ""
+msgstr "%s neįrengtas"
 
-#: src/e_mod_places.c:695
+#: src/e_mod_places.c:715
 msgid "unmount"
-msgstr ""
+msgstr "išimti"
 
-#: src/e_mod_places.c:700
+#: src/e_mod_places.c:721
 msgid "eject"
-msgstr ""
+msgstr "išstumti"
