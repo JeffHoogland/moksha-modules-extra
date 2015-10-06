@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Link
+Name=Trash
+Icon=e-module-trash
+X-Enlightenment-ModuleType=files
+Comment=<hilight>Trash</hilight><br><br>A freedesktop compliant trash module.
