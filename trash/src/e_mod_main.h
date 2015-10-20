@@ -1,32 +1,57 @@
-/*  Copyright (C) 2008-2011 Davide Andreoli (see AUTHORS)
- *
- *  This file is part of trash.
- *  trash is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Lesser General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  trash is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public License
- *  along with trash.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-
 #ifndef E_MOD_MAIN_H
 #define E_MOD_MAIN_H
 
-#undef  D_
-#define D_(str) dgettext(PACKAGE, str)
+#ifdef ENABLE_NLS
+# include <libintl.h>
+# define D_(string) dgettext(PACKAGE, string)
+#else
+# define bindtextdomain(domain,dir)
+# define bind_textdomain_codeset(domain,codeset)
+# define D_(string) (string)
+#endif
 
-EAPI extern E_Module_Api e_modapi;
+/* Macros used for config file versioning */
+/* You can increment the EPOCH value if the old configuration is not
+ * compatible anymore, it creates an entire new one.
+ * You need to increment GENERATION when you add new values to the
+ * configuration file but is not needed to delete the existing conf  */
+#define MOD_CONFIG_FILE_EPOCH 0x0001
+#define MOD_CONFIG_FILE_GENERATION 0x008d
+#define MOD_CONFIG_FILE_VERSION \
+   ((MOD_CONFIG_FILE_EPOCH << 16) | MOD_CONFIG_FILE_GENERATION)
 
-EAPI void *e_modapi_init     (E_Module *m);
-EAPI int   e_modapi_shutdown (E_Module *m);
-EAPI int   e_modapi_save     (E_Module *m);
+/* More mac/def; Define your own. What do you need ? */
+#define CONN_DEVICE_ETHERNET 0
 
+/* We create a structure config for our module, and also a config structure
+ * for every item element (you can have multiple gadgets for the same module) */
+
+typedef struct _Config Config;
+typedef struct _Config_Item Config_Item;
+
+struct _Config 
+{
+   E_Module *module;
+   E_Config_Dialog *cfd;
+   Eina_List *conf_items;
+   int version;
+   int switch1;
+   const char *fileman;
+};
+
+struct _Config_Item 
+{
+   const char *id;
+   int switch2;   
+};
+
+EAPI void *e_modapi_init(E_Module *m);
+EAPI int e_modapi_shutdown(E_Module *m);
+EAPI int e_modapi_save(E_Module *m);
+
+/* Function for calling the module's Configuration Dialog */
+E_Config_Dialog *e_int_config_skel_module(E_Container *con, const char *params);
+
+extern Config *skel_conf;
 
 #endif
