@@ -100,7 +100,7 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
    ob = e_widget_label_add(evas, D_("Consult strftime(3) for format syntax"));
    e_widget_frametable_object_append(of, ob, 0, 2, 1, 1, 1, 0, 1, 0);
    
-   ob = e_widget_label_add(evas, _("Add time offset (e.g.+2)"));
+   ob = e_widget_label_add(evas, D_("Add time offset (e.g.+2)"));
    e_widget_frametable_object_append(of, ob, 0, 3, 1, 1, 1, 0, 1, 0);
    
    offset_entry = e_widget_entry_add(evas, &cfdata->time_offset, NULL, NULL, NULL);
