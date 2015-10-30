@@ -33,6 +33,7 @@ struct _Config_Item
    const char *time_format;
    const char *date_format;
    const char *tip_format;
+   const char *time_offset;
 };
 
 EAPI extern E_Module_Api e_modapi;

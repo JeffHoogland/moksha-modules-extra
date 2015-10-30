@@ -32,7 +32,7 @@ collections
 		       text {
 			  text: "";
 			  font: "Sans:style=Mono";
-			  size: 10;
+			  size: 12;
 			  min: 1 1;
 			  align: 0.5 0.5;
 			  text_class: "module_large";			  

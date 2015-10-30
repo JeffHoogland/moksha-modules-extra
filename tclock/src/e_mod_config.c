@@ -4,13 +4,13 @@
 struct _E_Config_Dialog_Data
 {
   int show_date, show_time, show_tip;
-  char *time_format, *date_format, *tip_format;
+  char *time_format, *date_format, *tip_format, *time_offset;
 };
 
 /* Protos */
 static void *_create_data(E_Config_Dialog *cfd);
-static void _free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata);
-static Evas_Object *_basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata);
+static void _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
+static Evas_Object *_basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata);
 static int _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
 static void _cb_time_check(void *data, Evas_Object *obj);
 static void _cb_date_check(void *data, Evas_Object *obj);
@@ -48,6 +48,8 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
    cfdata->show_date = ci->show_date;
    cfdata->show_tip = ci->show_tip;
    if (ci->time_format) cfdata->time_format = strdup(ci->time_format);
+   if (ci->time_offset) cfdata->time_offset = strdup(ci->time_offset);
+   printf("Offset je %s ",cfdata->time_offset);
    if (ci->date_format) cfdata->date_format = strdup(ci->date_format);
    if (ci->tip_format) cfdata->tip_format = strdup(ci->tip_format);
 }
@@ -65,38 +67,49 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
+_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 {
    if (!tclock_config) return;
    tclock_config->config_dialog = NULL;
    free(cfdata->time_format);
+   free(cfdata->time_offset);
    free(cfdata->date_format);
    free(cfdata->tip_format);
    E_FREE(cfdata);
 }
 
 static Evas_Object *
-_basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
+_basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o = NULL, *of = NULL, *ob = NULL;
    Evas_Object *time_entry = NULL, *time_check = NULL;
    Evas_Object *date_entry = NULL, *date_check = NULL;
+   Evas_Object *offset_entry = NULL;
    Evas_Object *tooltip_entry = NULL, *tooltip_check = NULL;
 
    o = e_widget_list_add(evas, 0, 0);
 
    of = e_widget_frametable_add(evas, D_("Top"), 1);
-   time_check =
-     e_widget_check_add(evas, D_("Show Top Line"), &(cfdata->show_time));
+   time_check = e_widget_check_add(evas, D_("Show Top Line"), &(cfdata->show_time));
    e_widget_frametable_object_append(of, time_check, 0, 0, 1, 1, 1, 0, 1, 0);
    time_entry = e_widget_entry_add(evas, &cfdata->time_format, NULL, NULL, NULL);
    e_widget_on_change_hook_set(time_check, _cb_time_check, time_entry);
    e_widget_disabled_set(time_entry, !cfdata->show_time);
    e_widget_size_min_set(time_entry, 150, 20);
    e_widget_frametable_object_append(of, time_entry, 0, 1, 1, 1, 1, 0, 1, 0);
-   ob =
-     e_widget_label_add(evas, D_("Consult strftime(3) for format syntax"));
+   ob = e_widget_label_add(evas, D_("Consult strftime(3) for format syntax"));
    e_widget_frametable_object_append(of, ob, 0, 2, 1, 1, 1, 0, 1, 0);
+   
+   ob = e_widget_label_add(evas, _("Add time offset (e.g.+2)"));
+   e_widget_frametable_object_append(of, ob, 0, 3, 1, 1, 1, 0, 1, 0);
+   
+   offset_entry = e_widget_entry_add(evas, &cfdata->time_offset, NULL, NULL, NULL);
+   //~ e_widget_on_change_hook_set(time_check, _cb_time_check, time_entry);
+   e_widget_disabled_set(time_entry, !cfdata->show_time);
+   e_widget_size_min_set(time_entry, 150, 20);
+   e_widget_frametable_object_append(of, offset_entry, 0, 4, 1, 1, 1, 0, 1, 0);
+   
+   
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
    of = e_widget_frametable_add (evas, D_ ("Bottom"), 1);
@@ -144,6 +157,8 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    ci->show_tip = cfdata->show_tip;
    if (ci->time_format) eina_stringshare_del(ci->time_format);
    ci->time_format = eina_stringshare_add(cfdata->time_format);
+   if (ci->time_offset) eina_stringshare_del(ci->time_offset);
+   ci->time_offset = eina_stringshare_add(cfdata->time_offset);
    if (ci->date_format) eina_stringshare_del(ci->date_format);
    ci->date_format = eina_stringshare_add(cfdata->date_format);
    if (ci->tip_format) eina_stringshare_del(ci->tip_format);
