@@ -1,0 +1,62 @@
+# Norwegian Bokmal translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-03-21 15:16+0000\n"
+"Last-Translator: Kenneth Langdalen <Unknown>\n"
+"Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:39
+msgid "Tclock Settings"
+msgstr ""
+
+#: ../src/e_mod_config.c:88
+msgid "Top"
+msgstr "Øverst"
+
+#: ../src/e_mod_config.c:90
+msgid "Show Top Line"
+msgstr "Vis topplinje"
+
+#: ../src/e_mod_config.c:98 ../src/e_mod_config.c:113
+#: ../src/e_mod_config.c:129
+msgid "Consult strftime(3) for format syntax"
+msgstr ""
+
+#: ../src/e_mod_config.c:102
+msgid "Bottom"
+msgstr "Nederst"
+
+#: ../src/e_mod_config.c:104
+msgid "Show Bottom Line"
+msgstr "Vis bunnlinje"
+
+#: ../src/e_mod_config.c:117
+msgid "Tool Tip"
+msgstr ""
+
+#: ../src/e_mod_config.c:119
+msgid "Show Tooltip"
+msgstr ""
+
+#: ../src/e_mod_main.c:140
+msgid "TClock"
+msgstr "TClock"
+
+#: ../src/e_mod_main.c:184
+msgid "Settings"
+msgstr ""
+
+#~ msgid "Tclock Configuration"
+#~ msgstr "Konfigurasjon av Tclock"
+
+#~ msgid "Configuration"
+#~ msgstr "Konfigurasjon"

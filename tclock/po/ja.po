@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Yasufumi Haga <yasufumi.haga@nifty.com>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tclock\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-03-20 21:07+0900\n"
+"Last-Translator: Yasufumi Haga <yasufumi.haga@nifty.com>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:39
+msgid "Tclock Settings"
+msgstr ""
+
+#: ../src/e_mod_config.c:88
+msgid "Top"
+msgstr "上段"
+
+#: ../src/e_mod_config.c:90
+msgid "Show Top Line"
+msgstr "上段を表示する"
+
+#: ../src/e_mod_config.c:98 ../src/e_mod_config.c:113
+#: ../src/e_mod_config.c:129
+msgid "Consult strftime(3) for format syntax"
+msgstr "書式の指定方法は strftime(3) 参照のこと"
+
+#: ../src/e_mod_config.c:102
+msgid "Bottom"
+msgstr "下段"
+
+#: ../src/e_mod_config.c:104
+msgid "Show Bottom Line"
+msgstr "下段を表示する"
+
+#: ../src/e_mod_config.c:117
+msgid "Tool Tip"
+msgstr "ツールチップ"
+
+#: ../src/e_mod_config.c:119
+msgid "Show Tooltip"
+msgstr "ツールチップを表示する"
+
+#: ../src/e_mod_main.c:140
+msgid "TClock"
+msgstr ""
+
+#: ../src/e_mod_main.c:184
+msgid "Settings"
+msgstr ""
+
+#~ msgid "Tclock Configuration"
+#~ msgstr "tclock の設定"
+
+#~ msgid "Configuration"
+#~ msgstr "設定"
+
+#~ msgid "Resolution"
+#~ msgstr "間隔"
+
+#~ msgid "1 Minute"
+#~ msgstr "1分ごと"
+
+#~ msgid "1 Second"
+#~ msgstr "1秒ごと"
+
+#~ msgid "Date"
+#~ msgstr "日付"
+
+#~ msgid "Show Date"
+#~ msgstr "日付を表示する"
+
+#~ msgid "Time"
+#~ msgstr "時刻"
+
+#~ msgid "Simple Digital Clock"
+#~ msgstr "簡単なデジタル時計"
+
+#~ msgid "Displays a digital clock on the desktop"
+#~ msgstr "デスクトップのデジタル時計を表示します."
+
+#~ msgid "Time Format"
+#~ msgstr "時刻の書式"
+
+#~ msgid "User format String"
+#~ msgstr "ユーザー指定の書式を使う"

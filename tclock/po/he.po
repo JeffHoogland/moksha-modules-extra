@@ -1,0 +1,64 @@
+# Hebrew translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Yaron <sh.yaron@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-09-11 08:37+0000\n"
+"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:52+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:39
+msgid "Tclock Settings"
+msgstr "הגדרות Tclock"
+
+#: ../src/e_mod_config.c:88
+msgid "Top"
+msgstr "עליון"
+
+#: ../src/e_mod_config.c:90
+msgid "Show Top Line"
+msgstr "הצג את השורה העליונה"
+
+#: ../src/e_mod_config.c:98 ../src/e_mod_config.c:113
+#: ../src/e_mod_config.c:129
+msgid "Consult strftime(3) for format syntax"
+msgstr "הוועץ ב־strftime(3) להכרזת המבנה"
+
+#: ../src/e_mod_config.c:102
+msgid "Bottom"
+msgstr "תחתון"
+
+#: ../src/e_mod_config.c:104
+msgid "Show Bottom Line"
+msgstr "הצג את השורה התחתונה"
+
+#: ../src/e_mod_config.c:117
+msgid "Tool Tip"
+msgstr "חלונית תיאור"
+
+#: ../src/e_mod_config.c:119
+msgid "Show Tooltip"
+msgstr "הצג את חלונית התיאור"
+
+#: ../src/e_mod_main.c:141
+msgid "TClock"
+msgstr "שעון־T"
+
+#: ../src/e_mod_main.c:184
+msgid "Settings"
+msgstr "הגדרות"
+
+#~ msgid "Configuration"
+#~ msgstr "תצורה"
+
+#~ msgid "Tclock Configuration"
+#~ msgstr "תצורת שעון־T"

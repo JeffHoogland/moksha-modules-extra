@@ -1,0 +1,88 @@
+# Bulgarian translations for tclock package.
+# This file is put in the public domain.
+# Luchezar P. Petkov <>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tclock 0.3.2\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-09-11 07:39+0000\n"
+"Last-Translator: vlood <vlood.vassilev@gmail.com>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:52+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:39
+msgid "Tclock Settings"
+msgstr "Настройки на Tclock"
+
+#: ../src/e_mod_config.c:88
+msgid "Top"
+msgstr "Най-горе"
+
+#: ../src/e_mod_config.c:90
+msgid "Show Top Line"
+msgstr "Покажи най-горния ред"
+
+#: ../src/e_mod_config.c:98 ../src/e_mod_config.c:113
+#: ../src/e_mod_config.c:129
+msgid "Consult strftime(3) for format syntax"
+msgstr "Консултирайте се със strftime(3) за синтаксиса на формата"
+
+#: ../src/e_mod_config.c:102
+msgid "Bottom"
+msgstr "Най-долу"
+
+#: ../src/e_mod_config.c:104
+msgid "Show Bottom Line"
+msgstr "Покажи най-долния ред"
+
+#: ../src/e_mod_config.c:117
+msgid "Tool Tip"
+msgstr "Подсказка"
+
+#: ../src/e_mod_config.c:119
+msgid "Show Tooltip"
+msgstr "Покажи подсказка"
+
+#: ../src/e_mod_main.c:141
+msgid "TClock"
+msgstr "TClock"
+
+#: ../src/e_mod_main.c:184
+msgid "Settings"
+msgstr "Настройки"
+
+#~ msgid "Tclock Configuration"
+#~ msgstr "Конфигурация на Tclock"
+
+#~ msgid "Configuration"
+#~ msgstr "Конфигурация"
+
+#~ msgid "Resolution"
+#~ msgstr "Разделителна способност"
+
+#~ msgid "1 Minute"
+#~ msgstr "1 Минута"
+
+#~ msgid "1 Second"
+#~ msgstr "1 Секунда"
+
+#~ msgid "Date"
+#~ msgstr "Дата"
+
+#~ msgid "Show Date"
+#~ msgstr "Показване на датата"
+
+#~ msgid "Time"
+#~ msgstr "Време"
+
+#~ msgid "Displays a digital clock on the desktop"
+#~ msgstr "Показва часа в цифров вид"
+
+#~ msgid "Simple Digital Clock"
+#~ msgstr "Прост електронен часовник"

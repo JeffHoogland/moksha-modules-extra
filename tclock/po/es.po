@@ -1,0 +1,65 @@
+# Spanish translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Paco Molinero <paco@byasl.com>, 2008.
+# DiegoJ <diegojromerolopez@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-08-27 18:39+0000\n"
+"Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:52+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:39
+msgid "Tclock Settings"
+msgstr "Preferencias de Tclock"
+
+#: ../src/e_mod_config.c:88
+msgid "Top"
+msgstr "Arriba"
+
+#: ../src/e_mod_config.c:90
+msgid "Show Top Line"
+msgstr "Mostra línea superior"
+
+#: ../src/e_mod_config.c:98 ../src/e_mod_config.c:113
+#: ../src/e_mod_config.c:129
+msgid "Consult strftime(3) for format syntax"
+msgstr "Consulta strftime(3) para el formato de sintaxis"
+
+#: ../src/e_mod_config.c:102
+msgid "Bottom"
+msgstr "Abajo"
+
+#: ../src/e_mod_config.c:104
+msgid "Show Bottom Line"
+msgstr "Mostrar línea inferior"
+
+#: ../src/e_mod_config.c:117
+msgid "Tool Tip"
+msgstr "Consejo"
+
+#: ../src/e_mod_config.c:119
+msgid "Show Tooltip"
+msgstr "Mostrar consejo"
+
+#: ../src/e_mod_main.c:141
+msgid "TClock"
+msgstr "TClock"
+
+#: ../src/e_mod_main.c:184
+msgid "Settings"
+msgstr "Preferencias"
+
+#~ msgid "Configuration"
+#~ msgstr "Configuración"
+
+#~ msgid "Tclock Configuration"
+#~ msgstr "Configuración Tclock"

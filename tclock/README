@@ -1,0 +1,31 @@
+Simple TEXT Clock module for e17 v0.2
+... it suck less (from you computer resouces)
+------------------------------------------------
+made by adi roiban for e17 community
+
+=========================================================
+many thanks to Michael Jennings for making this package
+========================================================
+
+now let's go
+---
+to modify the clock format read the documentation from stftime
+and modify the tclock_format part from tclock.edc file then recompile tclock.edc
+
+so just look for something like /usr/lib/e_modules/tclock
+and there you should file an tclock.edc file
+hack that file and after that compile it with
+edje_cc tclock.edc
+
+for example you can change the background, just replace the background.png
+file and recompile tclock.edc
+
+restart e17 and you should see the changes
+
+if you had problems using this module
+please write me at adiroiban@gmail.com
+
+---------------------------------------------------
+now you must restart(reload the module, don't press that button)
+ when you chose the time resolution.... i do not master e_core_timers
+ so i can not say it the times work corectly or not.
