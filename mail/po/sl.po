@@ -1,0 +1,164 @@
+# translation of mail.po to Slovenian
+# Slovenian translation of Mail_sl.
+# This file is put in the public domain.
+#
+# r1to <renato.rener@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: mail\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2011-02-17 15:00-0800\n"
+"PO-Revision-Date: 2011-02-22 17:44+0100\n"
+"Last-Translator: r1to <renato.rener@gmail.com>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#: ../src/e_mod_config_box.c:68
+msgid "Mailbox Configuration"
+msgstr "Nastavitev Poštnega predala"
+
+#: ../src/e_mod_config_box.c:160 ../src/e_mod_config.c:94
+msgid "General Settings"
+msgstr "Splošne nastavitve"
+
+#: ../src/e_mod_config_box.c:162
+msgid "Start Program When New Mail Arrives"
+msgstr "Zaženi program, ko prispe nova pošta"
+
+#: ../src/e_mod_config_box.c:167
+msgid "Program:"
+msgstr "Program:"
+
+#: ../src/e_mod_config_box.c:179
+msgid "Mailbox Type"
+msgstr "Vrsta poštnega predala"
+
+#: ../src/e_mod_config_box.c:181
+msgid "Pop3"
+msgstr "Pop3"
+
+#: ../src/e_mod_config_box.c:184
+msgid "Imap"
+msgstr "Imap"
+
+#: ../src/e_mod_config_box.c:187
+msgid "Maildir"
+msgstr "Maildir"
+
+#: ../src/e_mod_config_box.c:190
+msgid "Mbox"
+msgstr "Mbox"
+
+#: ../src/e_mod_config_box.c:193
+msgid "Monitor Mbox file permanently"
+msgstr "Trajno opazuj Mbox datoteko"
+
+#: ../src/e_mod_config_box.c:210
+msgid "Port Settings"
+msgstr "Nastavitve vrat"
+
+#: ../src/e_mod_config_box.c:212
+msgid "Use SSL:"
+msgstr "Uporabi SSL:"
+
+#: ../src/e_mod_config_box.c:219
+msgid "v2"
+msgstr "v2"
+
+#: ../src/e_mod_config_box.c:222
+msgid "v3"
+msgstr "v3"
+
+#: ../src/e_mod_config_box.c:226
+msgid "Port:"
+msgstr "Vrata:"
+
+#: ../src/e_mod_config_box.c:232
+msgid "Local:"
+msgstr "Krajevno:"
+
+#: ../src/e_mod_config_box.c:238
+msgid "Mailbox Settings"
+msgstr "Nastavitve Poštnega predala"
+
+#: ../src/e_mod_config_box.c:239
+msgid "Name:"
+msgstr "Ime:"
+
+#: ../src/e_mod_config_box.c:244
+msgid "Mail Host:"
+msgstr "Gostitelj pošte:"
+
+#: ../src/e_mod_config_box.c:249
+msgid "Username:"
+msgstr "Uporabniško ime:"
+
+#: ../src/e_mod_config_box.c:254
+msgid "Password:"
+msgstr "Geslo:"
+
+#: ../src/e_mod_config_box.c:260
+msgid "New Mail Path:"
+msgstr "Pot za novo pošto:"
+
+#: ../src/e_mod_config_box.c:272
+msgid "Current Mail Path:"
+msgstr "Trenutna pot za pošto:"
+
+#: ../src/e_mod_config_box.c:430
+msgid "Inbox"
+msgstr "Prejeto"
+
+#: ../src/e_mod_config.c:53
+msgid "Mail Settings"
+msgstr "Nastavitve modula Mail"
+
+#: ../src/e_mod_config.c:96
+msgid "Always Show Labels"
+msgstr "Vedno prikaži oznake"
+
+#: ../src/e_mod_config.c:99
+msgid "Show Mailbox Popup"
+msgstr "Prikaži pojavno okno poštnega predala"
+
+#: ../src/e_mod_config.c:102
+msgid "Show All Boxes In Popup"
+msgstr "Prikaži vse poštne predale v pojavnem oknu"
+
+#: ../src/e_mod_config.c:104
+msgid "Check Interval"
+msgstr "Premor med preverjanji"
+
+#: ../src/e_mod_config.c:107
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f·min."
+
+#: ../src/e_mod_config.c:112
+msgid "Mail Boxes"
+msgstr "Poštni predali"
+
+#: ../src/e_mod_config.c:122
+msgid "Add"
+msgstr "Dodaj"
+
+#: ../src/e_mod_config.c:126
+msgid "Delete"
+msgstr "Izbriši"
+
+#: ../src/e_mod_config.c:132
+msgid "Configure..."
+msgstr "Nastavi..."
+
+#: ../src/e_mod_main.c:186
+msgid "Mail"
+msgstr "Pošta"
+
+#: ../src/e_mod_main.c:258
+msgid "Settings"
+msgstr "Nastavitve"
+

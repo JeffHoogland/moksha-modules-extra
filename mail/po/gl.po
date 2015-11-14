@@ -1,0 +1,163 @@
+# Galician translation of mail
+# This file is put in the public domain.
+# Aníbal Garrido <khany@member.trisquel.info>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mail\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-08-30 19:32+0200\n"
+"PO-Revision-Date: 2012-09-17 12:30+0200\n"
+"Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
+"Language-Team: http://trasno.net/ <proxecto@trasno.net>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_config_box.c:68
+msgid "Mailbox Configuration"
+msgstr "Configuración da Caixa de Correo"
+
+#: src/e_mod_config_box.c:160
+#: src/e_mod_config.c:94
+msgid "General Settings"
+msgstr "Configuración xeral"
+
+#: src/e_mod_config_box.c:162
+msgid "Start Program When New Mail Arrives"
+msgstr "Iniciar o programa cando chegue un novo correo"
+
+#: src/e_mod_config_box.c:167
+msgid "Program:"
+msgstr "Programa:"
+
+#: src/e_mod_config_box.c:179
+msgid "Mailbox Type"
+msgstr "Tipo de Caixa de Correo"
+
+#: src/e_mod_config_box.c:181
+msgid "Pop3"
+msgstr "Pop3"
+
+#: src/e_mod_config_box.c:184
+msgid "Imap"
+msgstr "Imap"
+
+#: src/e_mod_config_box.c:187
+msgid "Maildir"
+msgstr "Directorio do correo"
+
+#: src/e_mod_config_box.c:190
+msgid "Mbox"
+msgstr "Mbox"
+
+#: src/e_mod_config_box.c:193
+msgid "Monitor Mbox file permanently"
+msgstr "Verificar o ficheiro Mbox constantemente"
+
+#: src/e_mod_config_box.c:210
+msgid "Port Settings"
+msgstr "Configuración do Porto"
+
+#: src/e_mod_config_box.c:212
+msgid "Use SSL:"
+msgstr "Empregar SSL:"
+
+#: src/e_mod_config_box.c:219
+msgid "v2"
+msgstr "v2"
+
+#: src/e_mod_config_box.c:222
+msgid "v3"
+msgstr "v3"
+
+#: src/e_mod_config_box.c:226
+msgid "Port:"
+msgstr "Porto:"
+
+#: src/e_mod_config_box.c:232
+msgid "Local:"
+msgstr "Local:"
+
+#: src/e_mod_config_box.c:238
+msgid "Mailbox Settings"
+msgstr "Preferencias da Caixa de Correo"
+
+#: src/e_mod_config_box.c:239
+msgid "Name:"
+msgstr "Nome:"
+
+#: src/e_mod_config_box.c:244
+msgid "Mail Host:"
+msgstr "Servidor de correo:"
+
+#: src/e_mod_config_box.c:249
+msgid "Username:"
+msgstr "Nome de usuario:"
+
+#: src/e_mod_config_box.c:254
+msgid "Password:"
+msgstr "Contrasinal:"
+
+#: src/e_mod_config_box.c:260
+msgid "New Mail Path:"
+msgstr "Nova ruta de correo:"
+
+#: src/e_mod_config_box.c:272
+msgid "Current Mail Path:"
+msgstr "Ruta actual de correo:"
+
+#: src/e_mod_config_box.c:430
+msgid "Inbox"
+msgstr "Caixa de entrada"
+
+#: src/e_mod_main.c:186
+msgid "Mail"
+msgstr "Correo"
+
+#: src/e_mod_main.c:230
+msgid "Settings"
+msgstr "Preferencias"
+
+#: src/e_mod_config.c:53
+msgid "Mail Settings"
+msgstr "Preferencias do correo"
+
+#: src/e_mod_config.c:96
+msgid "Always Show Labels"
+msgstr "Amosar sempre as etiquetas"
+
+#: src/e_mod_config.c:99
+msgid "Show Mailbox Popup"
+msgstr "Amosar a Caixa de correo en xanelas emerxentes"
+
+#: src/e_mod_config.c:102
+msgid "Show All Boxes In Popup"
+msgstr "Amosar todas as caixas en xanelas emerxentes"
+
+#: src/e_mod_config.c:104
+msgid "Check Interval"
+msgstr "Intervalo de comprobación"
+
+#: src/e_mod_config.c:107
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minutos"
+
+#: src/e_mod_config.c:112
+msgid "Mail Boxes"
+msgstr "Caixas de correo"
+
+#: src/e_mod_config.c:122
+msgid "Add"
+msgstr "Engadir"
+
+#: src/e_mod_config.c:126
+msgid "Delete"
+msgstr "Borrar"
+
+#: src/e_mod_config.c:132
+msgid "Configure..."
+msgstr "Configurar..."
+

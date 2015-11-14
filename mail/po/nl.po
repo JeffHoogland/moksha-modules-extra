@@ -1,0 +1,171 @@
+# Dutch translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2011-09-04 07:02-0700\n"
+"PO-Revision-Date: 2011-09-04 16:11+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@gmail.com>\n"
+"Language-Team: Dutch <nl@li.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config_box.c:68
+msgid "Mailbox Configuration"
+msgstr "Mailbox-configuratie"
+
+#: ../src/e_mod_config_box.c:160
+#: ../src/e_mod_config.c:94
+msgid "General Settings"
+msgstr "Algemene instellingen"
+
+#: ../src/e_mod_config_box.c:162
+msgid "Start Program When New Mail Arrives"
+msgstr "Start programma wanneer nieuwe mail binnenkomt"
+
+#: ../src/e_mod_config_box.c:167
+msgid "Program:"
+msgstr "Programma:"
+
+#: ../src/e_mod_config_box.c:179
+msgid "Mailbox Type"
+msgstr "Mailbox-type"
+
+#: ../src/e_mod_config_box.c:181
+msgid "Pop3"
+msgstr "POP3"
+
+#: ../src/e_mod_config_box.c:184
+msgid "Imap"
+msgstr "IMAP"
+
+#: ../src/e_mod_config_box.c:187
+msgid "Maildir"
+msgstr "Maildir"
+
+#: ../src/e_mod_config_box.c:190
+msgid "Mbox"
+msgstr "Mbox"
+
+#: ../src/e_mod_config_box.c:193
+msgid "Monitor Mbox file permanently"
+msgstr "Houdt Mbox-bestand permanent in de gaten"
+
+#: ../src/e_mod_config_box.c:210
+msgid "Port Settings"
+msgstr "Poortinstellingen"
+
+#: ../src/e_mod_config_box.c:212
+msgid "Use SSL:"
+msgstr "SSL gebruiken:"
+
+#: ../src/e_mod_config_box.c:219
+msgid "v2"
+msgstr "v2"
+
+#: ../src/e_mod_config_box.c:222
+msgid "v3"
+msgstr "v3"
+
+#: ../src/e_mod_config_box.c:226
+msgid "Port:"
+msgstr "Poort:"
+
+#: ../src/e_mod_config_box.c:232
+msgid "Local:"
+msgstr "Lokaal:"
+
+#: ../src/e_mod_config_box.c:238
+msgid "Mailbox Settings"
+msgstr "Mailbox-instellingen:"
+
+#: ../src/e_mod_config_box.c:239
+msgid "Name:"
+msgstr "Naam:"
+
+#: ../src/e_mod_config_box.c:244
+msgid "Mail Host:"
+msgstr "Mail-host:"
+
+#: ../src/e_mod_config_box.c:249
+msgid "Username:"
+msgstr "Gebruikersnaam:"
+
+#: ../src/e_mod_config_box.c:254
+msgid "Password:"
+msgstr "Wachtwoord:"
+
+#: ../src/e_mod_config_box.c:260
+msgid "New Mail Path:"
+msgstr "Nieuw mail-pad:"
+
+#: ../src/e_mod_config_box.c:272
+msgid "Current Mail Path:"
+msgstr "Huidig mail-pad:"
+
+#: ../src/e_mod_config_box.c:430
+msgid "Inbox"
+msgstr "Postvak IN"
+
+#: ../src/e_mod_config.c:53
+msgid "Mail Settings"
+msgstr "Mail-instellingen:"
+
+#: ../src/e_mod_config.c:96
+msgid "Always Show Labels"
+msgstr "Toon altijd labels"
+
+#: ../src/e_mod_config.c:99
+msgid "Show Mailbox Popup"
+msgstr "Toon mailbox-popup"
+
+#: ../src/e_mod_config.c:102
+msgid "Show All Boxes In Popup"
+msgstr "Toon alle mailboxen in popup"
+
+#: ../src/e_mod_config.c:104
+msgid "Check Interval"
+msgstr "Controle-interval"
+
+#: ../src/e_mod_config.c:107
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minuten"
+
+#: ../src/e_mod_config.c:112
+msgid "Mail Boxes"
+msgstr "Mailboxen"
+
+#: ../src/e_mod_config.c:122
+msgid "Add"
+msgstr "Voeg toe"
+
+#: ../src/e_mod_config.c:126
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: ../src/e_mod_config.c:132
+msgid "Configure..."
+msgstr "Instellen..."
+
+#: ../src/e_mod_main.c:186
+msgid "Mail"
+msgstr "Mail"
+
+#: ../src/e_mod_main.c:230
+msgid "Settings"
+msgstr "Instellingen"
+
+#~ msgid "Mail Configuration"
+#~ msgstr "Mail configuratie"
+
+#~ msgid "Mailboxes"
+#~ msgstr "Mailboxen"
+
+#~ msgid "Configuration"
+#~ msgstr "Configuratie"

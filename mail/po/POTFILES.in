@@ -1,0 +1,15 @@
+src/e_mod_config_box.c
+src/e_mod_config_box.h
+src/e_mod_config.c
+src/e_mod_main.c
+src/e_mod_main.h
+src/imap2.c
+src/imap2.h
+src/imap.c
+src/imap.h
+src/mbox.c
+src/mbox.h
+src/mdir.c
+src/mdir.h
+src/pop.c
+src/pop.h

@@ -1,0 +1,164 @@
+# Swedish translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Daniel Nylander <yeager@ubuntu.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2009-01-10 12:21+0000\n"
+"Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config_box.c:71
+msgid "Mailbox Configuration"
+msgstr "Konfiguration av postlåda"
+
+#: ../src/e_mod_config_box.c:163 ../src/e_mod_config.c:94
+msgid "General Settings"
+msgstr "Allmänna inställningar"
+
+#: ../src/e_mod_config_box.c:165
+msgid "Start Program When New Mail Arrives"
+msgstr "Starta program när ny e-post anländer"
+
+#: ../src/e_mod_config_box.c:170
+msgid "Program:"
+msgstr "Program:"
+
+#: ../src/e_mod_config_box.c:182
+msgid "Mailbox Type"
+msgstr "Typ av postlåda"
+
+#: ../src/e_mod_config_box.c:184
+msgid "Pop3"
+msgstr "Pop3"
+
+#: ../src/e_mod_config_box.c:187
+msgid "Imap"
+msgstr "Imap"
+
+#: ../src/e_mod_config_box.c:190
+msgid "Maildir"
+msgstr "Maildir"
+
+#: ../src/e_mod_config_box.c:193
+msgid "Mbox"
+msgstr "Mbox"
+
+#: ../src/e_mod_config_box.c:196
+msgid "Monitor Mbox file permanently"
+msgstr "Övervaka Mbox-fil permanent"
+
+#: ../src/e_mod_config_box.c:213
+msgid "Port Settings"
+msgstr "Portinställningar"
+
+#: ../src/e_mod_config_box.c:215
+msgid "Use SSL:"
+msgstr "Använd SSL:"
+
+#: ../src/e_mod_config_box.c:222
+msgid "v2"
+msgstr "v2"
+
+#: ../src/e_mod_config_box.c:225
+msgid "v3"
+msgstr "v3"
+
+#: ../src/e_mod_config_box.c:229
+msgid "Port:"
+msgstr "Port:"
+
+#: ../src/e_mod_config_box.c:235
+msgid "Local:"
+msgstr "Lokal:"
+
+#: ../src/e_mod_config_box.c:241
+msgid "Mailbox Settings"
+msgstr "Postlådeinställningar"
+
+#: ../src/e_mod_config_box.c:242
+msgid "Name:"
+msgstr "Namn:"
+
+#: ../src/e_mod_config_box.c:247
+msgid "Mail Host:"
+msgstr "E-postvärd:"
+
+#: ../src/e_mod_config_box.c:252
+msgid "Username:"
+msgstr "Användarnamn:"
+
+#: ../src/e_mod_config_box.c:257
+msgid "Password:"
+msgstr "Lösenord:"
+
+#: ../src/e_mod_config_box.c:263
+msgid "New Mail Path:"
+msgstr "Sökväg för ny e-post:"
+
+#: ../src/e_mod_config_box.c:275
+msgid "Current Mail Path:"
+msgstr "Sökväg för nuvarande e-post:"
+
+#: ../src/e_mod_config_box.c:433
+msgid "Inbox"
+msgstr "Inkorgen"
+
+#: ../src/e_mod_config.c:53
+msgid "Mail Configuration"
+msgstr "Konfiguration av e-post"
+
+#: ../src/e_mod_config.c:96
+msgid "Always Show Labels"
+msgstr "Visa alltid etiketter"
+
+#: ../src/e_mod_config.c:99
+msgid "Show Mailbox Popup"
+msgstr "Visa popup för postlåda"
+
+#: ../src/e_mod_config.c:102
+msgid "Show All Boxes In Popup"
+msgstr "Visa alla postlådor i popup"
+
+#: ../src/e_mod_config.c:104
+msgid "Check Interval"
+msgstr "Uppdateringsintervall"
+
+#: ../src/e_mod_config.c:107
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minuter"
+
+#: ../src/e_mod_config.c:112
+msgid "Mail Boxes"
+msgstr "Postlådor"
+
+#: ../src/e_mod_config.c:122
+msgid "Add"
+msgstr "Lägg till"
+
+#: ../src/e_mod_config.c:126
+msgid "Delete"
+msgstr "Ta bort"
+
+#: ../src/e_mod_config.c:132
+msgid "Configure..."
+msgstr "Konfigurera..."
+
+#: ../src/e_mod_main.c:189
+msgid "Mail"
+msgstr "E-post"
+
+#: ../src/e_mod_main.c:242
+msgid "Mailboxes"
+msgstr "Postlådor"
+
+#: ../src/e_mod_main.c:266
+msgid "Configuration"
+msgstr "Konfiguration"

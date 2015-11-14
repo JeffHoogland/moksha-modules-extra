@@ -1,0 +1,174 @@
+# German translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+# MixCool <lars.thoms@mixcool.de>, 2009.
+# Fabian Nowak <timystery@arcor.de>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2010-11-23 23:43+0100\n"
+"PO-Revision-Date: 2009-11-07 18:13+0000\n"
+"Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:52+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/e_mod_config_box.c:68
+msgid "Mailbox Configuration"
+msgstr "Postfach-Einstellungen"
+
+#: src/e_mod_config_box.c:160 src/e_mod_config.c:94
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: src/e_mod_config_box.c:162
+msgid "Start Program When New Mail Arrives"
+msgstr "Programm bei neuen Nachrichten ausführen"
+
+#: src/e_mod_config_box.c:167
+msgid "Program:"
+msgstr "Programm:"
+
+#: src/e_mod_config_box.c:179
+msgid "Mailbox Type"
+msgstr "Postfach-Typ"
+
+#: src/e_mod_config_box.c:181
+msgid "Pop3"
+msgstr "POP3"
+
+#: src/e_mod_config_box.c:184
+msgid "Imap"
+msgstr "IMAP"
+
+#: src/e_mod_config_box.c:187
+msgid "Maildir"
+msgstr "Maildir"
+
+#: src/e_mod_config_box.c:190
+msgid "Mbox"
+msgstr "Mbox"
+
+#: src/e_mod_config_box.c:193
+msgid "Monitor Mbox file permanently"
+msgstr "Mbox-Datei ständig beobachten"
+
+#: src/e_mod_config_box.c:210
+msgid "Port Settings"
+msgstr "Port-Einstellungen"
+
+#: src/e_mod_config_box.c:212
+msgid "Use SSL:"
+msgstr "SSL verwenden:"
+
+#: src/e_mod_config_box.c:219
+msgid "v2"
+msgstr "v2"
+
+#: src/e_mod_config_box.c:222
+msgid "v3"
+msgstr "v3"
+
+#: src/e_mod_config_box.c:226
+msgid "Port:"
+msgstr "Port:"
+
+#: src/e_mod_config_box.c:232
+msgid "Local:"
+msgstr "Lokal:"
+
+#: src/e_mod_config_box.c:238
+msgid "Mailbox Settings"
+msgstr "Mailbox-Einstellungen"
+
+#: src/e_mod_config_box.c:239
+msgid "Name:"
+msgstr "Name:"
+
+#: src/e_mod_config_box.c:244
+msgid "Mail Host:"
+msgstr "E-Mail-Host:"
+
+#: src/e_mod_config_box.c:249
+msgid "Username:"
+msgstr "Benutzername:"
+
+#: src/e_mod_config_box.c:254
+msgid "Password:"
+msgstr "Passwort:"
+
+#: src/e_mod_config_box.c:260
+msgid "New Mail Path:"
+msgstr "Pfad für neue E-Mails:"
+
+#: src/e_mod_config_box.c:272
+msgid "Current Mail Path:"
+msgstr "Pfad für vorhandene E-Mails:"
+
+#: src/e_mod_config_box.c:430
+msgid "Inbox"
+msgstr "Posteingang"
+
+#: src/e_mod_config.c:53
+msgid "Mail Settings"
+msgstr "E-Mail-Einstellungen"
+
+#: src/e_mod_config.c:96
+msgid "Always Show Labels"
+msgstr "Bezeichner immer anzeigen"
+
+#: src/e_mod_config.c:99
+msgid "Show Mailbox Popup"
+msgstr "Postfach-Popup anzeigen"
+
+#: src/e_mod_config.c:102
+msgid "Show All Boxes In Popup"
+msgstr "Alle Postfächer im Popup anzeigen"
+
+#: src/e_mod_config.c:104
+msgid "Check Interval"
+msgstr "Abfrageintervall"
+
+#: src/e_mod_config.c:107
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f Minuten"
+
+#: src/e_mod_config.c:112
+msgid "Mail Boxes"
+msgstr "Postfächer"
+
+#: src/e_mod_config.c:122
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: src/e_mod_config.c:126
+msgid "Delete"
+msgstr "Löschen"
+
+#: src/e_mod_config.c:132
+msgid "Configure..."
+msgstr "Einrichten …"
+
+#: src/e_mod_main.c:186
+msgid "Mail"
+msgstr "E-Mail"
+
+#: src/e_mod_main.c:258
+msgid "Settings"
+msgstr "Einstellungen"
+
+#~ msgid "Mail Configuration"
+#~ msgstr "E-Mail-Konfiguration"
+
+#~ msgid "Mailboxes"
+#~ msgstr "Postfächer"
+
+#~ msgid "Configuration"
+#~ msgstr "Einstellungen"

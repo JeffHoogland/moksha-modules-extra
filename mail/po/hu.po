@@ -1,0 +1,167 @@
+# translation of hu.po to hungarian
+# Copyright (C) YEAR Enlightenment development team
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Lisovszki  <lisovszki@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: hu\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-28 16:31+0800\n"
+"PO-Revision-Date: 2008-03-10 16:44+0100\n"
+"Last-Translator: Lisovszki  <lisovszki@gmail.com>\n"
+"Language-Team: hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../src/e_mod_config_box.c:71
+msgid "Mailbox Configuration"
+msgstr "Postafiók beállítások"
+
+#: ../src/e_mod_config_box.c:163 ../src/e_mod_config.c:94
+msgid "General Settings"
+msgstr "Általános beállítások"
+
+#: ../src/e_mod_config_box.c:165
+msgid "Start Program When New Mail Arrives"
+msgstr "Indítsd a programot, ha új levél érkezik"
+
+#: ../src/e_mod_config_box.c:170
+msgid "Program:"
+msgstr "Program:"
+
+#: ../src/e_mod_config_box.c:182
+msgid "Mailbox Type"
+msgstr "Postafiók típus"
+
+#: ../src/e_mod_config_box.c:184
+msgid "Pop3"
+msgstr "Pop3"
+
+#: ../src/e_mod_config_box.c:187
+msgid "Imap"
+msgstr "Imap"
+
+#: ../src/e_mod_config_box.c:190
+msgid "Maildir"
+msgstr "Mail könyvtár"
+
+#: ../src/e_mod_config_box.c:193
+msgid "Mbox"
+msgstr "Postafiók"
+
+#: ../src/e_mod_config_box.c:196
+msgid "Monitor Mbox file permanently"
+msgstr "Postafiók fájl monitorozása folyamatosan"
+
+#: ../src/e_mod_config_box.c:213
+msgid "Port Settings"
+msgstr "Port beállítások"
+
+#: ../src/e_mod_config_box.c:215
+msgid "Use SSL:"
+msgstr "SSL használata:"
+
+#: ../src/e_mod_config_box.c:222
+msgid "v2"
+msgstr "v2"
+
+#: ../src/e_mod_config_box.c:225
+msgid "v3"
+msgstr "v3"
+
+#: ../src/e_mod_config_box.c:229
+msgid "Port:"
+msgstr "Port:"
+
+#: ../src/e_mod_config_box.c:235
+msgid "Local:"
+msgstr "Helyi:"
+
+#: ../src/e_mod_config_box.c:241
+msgid "Mailbox Settings"
+msgstr "Postafiók beállítások"
+
+#: ../src/e_mod_config_box.c:242
+msgid "Name:"
+msgstr "Név:"
+
+#: ../src/e_mod_config_box.c:247
+msgid "Mail Host:"
+msgstr "Levelezést kiszolgáló:"
+
+#: ../src/e_mod_config_box.c:252
+msgid "Username:"
+msgstr "Felhasználónév:"
+
+#: ../src/e_mod_config_box.c:257
+msgid "Password:"
+msgstr "Jelszó:"
+
+#: ../src/e_mod_config_box.c:263
+msgid "New Mail Path:"
+msgstr "Új levelezési útvonal:"
+
+#: ../src/e_mod_config_box.c:275
+msgid "Current Mail Path:"
+msgstr "Jelenlegi levelezési útvonal:"
+
+#: ../src/e_mod_config_box.c:433
+msgid "Inbox"
+msgstr "Beérkezett levelek"
+
+#: ../src/e_mod_config.c:53
+msgid "Mail Configuration"
+msgstr "Levelezés beállítása"
+
+#: ../src/e_mod_config.c:96
+msgid "Always Show Labels"
+msgstr "Cimkék jelenjenek meg mindig"
+
+#: ../src/e_mod_config.c:99
+msgid "Show Mailbox Popup"
+msgstr "Postaláda felbukkanó ablak engedélyezése"
+
+#: ../src/e_mod_config.c:102
+msgid "Show All Boxes In Popup"
+msgstr "Minden postafiók megjelenhet egy felugró ablakban"
+
+#: ../src/e_mod_config.c:104
+msgid "Check Interval"
+msgstr "Ellenőrzési időköz"
+
+#: ../src/e_mod_config.c:107
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f perc"
+
+#: ../src/e_mod_config.c:112
+msgid "Mail Boxes"
+msgstr "Postaládák"
+
+#: ../src/e_mod_config.c:122
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: ../src/e_mod_config.c:126
+msgid "Delete"
+msgstr "Törlés"
+
+#: ../src/e_mod_config.c:132
+msgid "Configure..."
+msgstr "Beállítás..."
+
+#: ../src/e_mod_main.c:189
+msgid "Mail"
+msgstr "Levelezés"
+
+#: ../src/e_mod_main.c:242
+msgid "Mailboxes"
+msgstr "Posatfiókok"
+
+#: ../src/e_mod_main.c:266
+msgid "Configuration"
+msgstr "Beállítás"

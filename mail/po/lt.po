@@ -1,0 +1,167 @@
+# Lithuanian translation for enlightenment
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"PO-Revision-Date: 2010-01-27 17:44+0000\n"
+"Last-Translator: Joshas <Unknown>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-28 04:35+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config_box.c:71
+msgid "Mailbox Configuration"
+msgstr "Pašto dėžutės konfigūracija"
+
+#: ../src/e_mod_config_box.c:163 ../src/e_mod_config.c:94
+msgid "General Settings"
+msgstr "Bendros nuostatos"
+
+#: ../src/e_mod_config_box.c:165
+msgid "Start Program When New Mail Arrives"
+msgstr "Gavus naujų laiškų paleisti programą"
+
+#: ../src/e_mod_config_box.c:170
+msgid "Program:"
+msgstr "Programa:"
+
+#: ../src/e_mod_config_box.c:182
+msgid "Mailbox Type"
+msgstr "Pašto dėžutės tipas"
+
+#: ../src/e_mod_config_box.c:184
+msgid "Pop3"
+msgstr "Pop3"
+
+#: ../src/e_mod_config_box.c:187
+msgid "Imap"
+msgstr "Imap"
+
+#: ../src/e_mod_config_box.c:190
+msgid "Maildir"
+msgstr "Maildir"
+
+#: ../src/e_mod_config_box.c:193
+msgid "Mbox"
+msgstr "Mbox"
+
+#: ../src/e_mod_config_box.c:196
+msgid "Monitor Mbox file permanently"
+msgstr "Negrįžtamai stebėti Mbox failą"
+
+#: ../src/e_mod_config_box.c:213
+msgid "Port Settings"
+msgstr "Prievado nuostatos"
+
+#: ../src/e_mod_config_box.c:215
+msgid "Use SSL:"
+msgstr "Naudoti SSL:"
+
+#: ../src/e_mod_config_box.c:222
+msgid "v2"
+msgstr "v2"
+
+#: ../src/e_mod_config_box.c:225
+msgid "v3"
+msgstr "v3"
+
+#: ../src/e_mod_config_box.c:229
+msgid "Port:"
+msgstr "Prievadas:"
+
+#: ../src/e_mod_config_box.c:235
+msgid "Local:"
+msgstr "Vietinis:"
+
+#: ../src/e_mod_config_box.c:241
+msgid "Mailbox Settings"
+msgstr "Pašto dėžutės nuostatos"
+
+#: ../src/e_mod_config_box.c:242
+msgid "Name:"
+msgstr "Pavadinimas:"
+
+#: ../src/e_mod_config_box.c:247
+msgid "Mail Host:"
+msgstr "Pašto serveris:"
+
+#: ../src/e_mod_config_box.c:252
+msgid "Username:"
+msgstr "Vartotojo vardas:"
+
+#: ../src/e_mod_config_box.c:257
+msgid "Password:"
+msgstr "Slaptažodis:"
+
+#: ../src/e_mod_config_box.c:263
+msgid "New Mail Path:"
+msgstr "Naujas pašto kelias:"
+
+#: ../src/e_mod_config_box.c:275
+msgid "Current Mail Path:"
+msgstr "Dabartinis pašto kelias:"
+
+#: ../src/e_mod_config_box.c:433
+msgid "Inbox"
+msgstr "Gauti laiškai"
+
+#: ../src/e_mod_config.c:53
+msgid "Mail Configuration"
+msgstr "Pašto konfigūracija"
+
+#: ../src/e_mod_config.c:96
+msgid "Always Show Labels"
+msgstr "Visada rodyti žymes"
+
+#: ../src/e_mod_config.c:99
+msgid "Show Mailbox Popup"
+msgstr "Rodyti pašto dėžutės iškylantyjį langą"
+
+#: ../src/e_mod_config.c:102
+msgid "Show All Boxes In Popup"
+msgstr "Rodyti visus langelius iškylančiuose languose"
+
+#: ../src/e_mod_config.c:104
+msgid "Check Interval"
+msgstr "Tikrinimo intervalas"
+
+#: ../src/e_mod_config.c:107
+#, c-format
+msgid "%2.0f minutes"
+msgstr "%2.0f minutės"
+
+#: ../src/e_mod_config.c:112
+msgid "Mail Boxes"
+msgstr "Pašto dėžutės"
+
+#: ../src/e_mod_config.c:122
+msgid "Add"
+msgstr "Pridėti"
+
+#: ../src/e_mod_config.c:126
+msgid "Delete"
+msgstr "Pašalinti"
+
+#: ../src/e_mod_config.c:132
+msgid "Configure..."
+msgstr "Konfigūruoti..."
+
+#: ../src/e_mod_main.c:189
+msgid "Mail"
+msgstr "Paštas"
+
+#: ../src/e_mod_main.c:242
+msgid "Mailboxes"
+msgstr "Pašto dėžutės"
+
+#: ../src/e_mod_main.c:266
+msgid "Configuration"
+msgstr "Konfigūracija"
