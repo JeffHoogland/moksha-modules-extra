@@ -28,6 +28,8 @@
 #include "mdir.h"
 #include "mbox.h"
 
+int count_show = 0;
+
 /* Func Protos for Gadcon */
 static E_Gadcon_Client *_gc_init (E_Gadcon * gc, const char *name,
 				  const char *id, const char *style);
@@ -641,8 +643,11 @@ _mail_set_text (void *data)
 {
   Instance *inst = data;
   Eina_List *l;
+  char *icon;
   char buf[1024];
   int count = 0;
+  char cmd[200];
+  
 
   if (!inst)
     return;
@@ -657,17 +662,30 @@ _mail_set_text (void *data)
        count += cb->num_new;
     }
  
+  if (count > count_show) 
+    {
+		icon = "mail-unread";
+      //Name was taken from FDO icon naming scheme
+      snprintf(cmd, 200, "notify-send --expire-time=5000 --icon=%s 'You have got a mail!' '  Number of mails: %d!'", icon, count);
+      system("aplay /usr/local/share/moksha-mail/Camera.wav");
+      ecore_init();
+      ecore_exe_run(cmd, NULL);
+      ecore_shutdown();
+    } 
+    
   if (count > 0)
     {
       snprintf (buf, sizeof (buf), "%d", count);
       edje_object_part_text_set (inst->mail->mail_obj, "new_label", buf);
       edje_object_signal_emit (inst->mail->mail_obj, "new_mail", "");
+      
     }
   else
     {
        edje_object_part_text_set (inst->mail->mail_obj, "new_label", "");
        edje_object_signal_emit (inst->mail->mail_obj, "no_mail", "");
     }
+  count_show=count;
 }
 
 void
