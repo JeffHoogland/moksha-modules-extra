@@ -667,7 +667,7 @@ _mail_set_text (void *data)
 		icon = "mail-unread";
       //Name was taken from FDO icon naming scheme
       snprintf(cmd, 200, "notify-send --expire-time=5000 --icon=%s 'You have got a mail!' '  Number of mails: %d!'", icon, count);
-      system("aplay /usr/local/share/moksha-mail/Camera.wav");
+      //~ system("aplay /usr/local/share/moksha-mail/Camera.wav");
       ecore_init();
       ecore_exe_run(cmd, NULL);
       ecore_shutdown();
