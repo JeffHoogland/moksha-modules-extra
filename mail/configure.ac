@@ -57,11 +57,18 @@ AC_SUBST(EDJE_CC)
 AC_MSG_CHECKING([Which edje_cc to use])
 AC_MSG_RESULT(${EDJE_CC})
 
+if test "x${prefix}" = "xNONE"; then
+  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${ac_default_prefix}/share/${PACKAGE}", [PACKAGE_DATA_DIR])
+else
+  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${prefix}/share/${PACKAGE}", [PACKAGE_DATA_DIR])
+fi
+
 datadir=$(pkg-config --variable=modules enlightenment)/${PACKAGE}
 AC_ARG_ENABLE(homedir-install,
   AS_HELP_STRING([--enable-homedir-install], [Install module in homedir]),
   [ datadir="${HOME}/.e/e/modules/${PACKAGE}" ]
 )
+
 
 # uncomment this for new imap code
 AM_CONDITIONAL(IMAP2, true)
@@ -70,6 +77,7 @@ AM_CONDITIONAL(IMAP2, true)
 AC_OUTPUT([
 Makefile
 src/Makefile
+images/Makefile
 e_modules-mail.spec
 module.desktop
 $po_makefile_in

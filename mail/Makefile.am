@@ -3,7 +3,7 @@ MAINTAINERCLEANFILES = Makefile.in aclocal.m4 config.guess config.h.in \
 		       config.sub configure depcomp install-sh ltmain.sh \
 		       missing module.desktop config.rpath mkinstalldirs
 
-SUBDIRS = src
+SUBDIRS = src images
 
 if HAVE_PO
 
@@ -23,7 +23,7 @@ EXTRA_DIST = module.desktop.in \
 	     mail.edc \
 	     images/checking.png \
 	     images/newmail.png \
-	     images/module_icon.png
+	     images/module_icon.png 
 
 %.edj:  %.edc
 	$(EDJE_CC) $(EDJE_FLAGS) $< $@
@@ -33,3 +33,4 @@ clean-local:
 
 uninstall:
 	rm -rf $(DESTDIR)$(datadir)
+	rm -rf /usr/local/share/mail/

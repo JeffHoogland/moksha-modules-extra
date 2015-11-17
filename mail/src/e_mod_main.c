@@ -28,6 +28,7 @@
 #include "mdir.h"
 #include "mbox.h"
 
+
 int count_show = 0;
 
 /* Func Protos for Gadcon */
@@ -399,6 +400,7 @@ _mail_config_item_get (const char *id)
    ci->show_label = 1;
    ci->check_time = 15.0;
    ci->show_popup = 1;
+   ci->play_sound = 1;
    ci->show_popup_empty = 0;
    ci->boxes = NULL;
 
@@ -448,6 +450,7 @@ e_modapi_init (E_Module * m)
   E_CONFIG_VAL (D, T, show_label, UCHAR);
   E_CONFIG_VAL (D, T, check_time, DOUBLE);
   E_CONFIG_VAL (D, T, show_popup, UCHAR);
+  E_CONFIG_VAL (D, T, play_sound, UCHAR);
   E_CONFIG_VAL (D, T, show_popup_empty, UCHAR);
   E_CONFIG_LIST (D, T, boxes, conf_box_edd);
 
@@ -667,10 +670,11 @@ _mail_set_text (void *data)
 		icon = "mail-unread";
       //Name was taken from FDO icon naming scheme
       snprintf(cmd, 200, "notify-send --expire-time=5000 --icon=%s 'You have got a mail!' '  Number of mails: %d!'", icon, count);
-      //~ system("aplay /usr/local/share/moksha-mail/Camera.wav");
+          
       ecore_init();
       ecore_exe_run(cmd, NULL);
       ecore_shutdown();
+      if (inst->ci->play_sound) system("aplay /usr/local/share/mail/mail_sound.wav"); 
     } 
     
   if (count > 0)

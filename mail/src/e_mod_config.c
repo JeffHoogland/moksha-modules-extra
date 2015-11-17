@@ -8,6 +8,7 @@ struct _E_Config_Dialog_Data
   double check_time;
   int show_popup;
   int show_popup_empty;
+  int play_sound;
   Eina_List *boxes;
 
   /* Evas Object References */
@@ -60,6 +61,7 @@ _fill_data (Config_Item * ci, E_Config_Dialog_Data * cfdata)
   cfdata->show_label = ci->show_label;
   cfdata->check_time = ci->check_time;
   cfdata->show_popup = ci->show_popup;
+  cfdata->play_sound = ci->play_sound;
   cfdata->show_popup_empty = ci->show_popup_empty;
   cfdata->boxes = ci->boxes;
 }
@@ -92,14 +94,13 @@ _basic_create_widgets (E_Config_Dialog * cfd, Evas * evas,
 
   o = e_widget_list_add (evas, 0, 0);
   of = e_widget_framelist_add (evas, D_("General Settings"), 0);
-  ob =
-    e_widget_check_add (evas, D_("Always Show Labels"), &(cfdata->show_label));
+  ob = e_widget_check_add (evas, D_("Always Show Labels"), &(cfdata->show_label));
   e_widget_framelist_object_append (of, ob);
-  ob =
-    e_widget_check_add (evas, D_("Show Mailbox Popup"), &(cfdata->show_popup));
+  ob = e_widget_check_add (evas, D_("Show Mailbox Popup"), &(cfdata->show_popup));
   e_widget_framelist_object_append (of, ob);
-  ob =
-    e_widget_check_add (evas, D_("Show All Boxes In Popup"), &(cfdata->show_popup_empty));
+  ob = e_widget_check_add (evas, D_("Show All Boxes In Popup"), &(cfdata->show_popup_empty));
+  e_widget_framelist_object_append (of, ob);
+  ob = e_widget_check_add (evas, D_("Play sound when mail arrives"), &(cfdata->play_sound));
   e_widget_framelist_object_append (of, ob);
   ob = e_widget_label_add (evas, D_("Check Interval"));
   e_widget_framelist_object_append (of, ob);
@@ -150,6 +151,7 @@ _basic_apply_data (E_Config_Dialog * cfd, E_Config_Dialog_Data * cfdata)
   ci->show_label = cfdata->show_label;
   ci->check_time = cfdata->check_time;
   ci->show_popup = cfdata->show_popup;
+  ci->play_sound = cfdata->play_sound;
   ci->show_popup_empty = cfdata->show_popup_empty;
   e_config_save_queue ();
   _mail_config_updated (ci);

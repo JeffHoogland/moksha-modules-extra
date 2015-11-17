@@ -57,13 +57,11 @@ struct _Config
 struct _Config_Item 
 {
    const char *id;
-
    unsigned char show_label;
    double check_time;
-
    unsigned char show_popup;
    unsigned char show_popup_empty;
-
+   unsigned char play_sound;
    Eina_List *boxes;
 };
 
