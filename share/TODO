@@ -1,0 +1,6 @@
+- Store and restore old links for every instance
+- Enable HTTPS
+
+Future:
+- Share files
+- Extend to more services (1Click hosters and local p2p)
