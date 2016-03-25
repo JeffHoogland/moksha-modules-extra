@@ -1,0 +1,477 @@
+# Russian translation of News module
+# This file is distributed under the same license as the enlightenment package.
+# Peter Belyaev <kapone2002@yandex.ru>, 2009.
+# Igor Murzov <e-mail@date.by>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-11-14 02:47+0400\n"
+"PO-Revision-Date: 2012-11-14 02:47+0400\n"
+"Last-Translator: Igor Murzov <e-mail@date.by>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:52
+msgid "Config init failed"
+msgstr "Ошибка конфигурации"
+
+#: src/e_mod_main.c:53
+msgid "Parser init failed"
+msgstr "Ошибка инициализации парсера"
+
+#: src/e_mod_main.c:54
+msgid "Feeds init failed"
+msgstr "Ошибка загрузки новостей"
+
+#: src/e_mod_main.c:55
+msgid "Viewer init failed"
+msgstr "Ошибка инициализации просмотрщика"
+
+#: src/e_mod_main.c:56
+msgid "Popup subsystem init failed"
+msgstr "Ошибка инициализации подсистемы всплывающих окон"
+
+#: src/e_mod_main.c:219
+msgid "News"
+msgstr "Новости"
+
+#: src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+
+#: src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+
+#: src/news_config_dialog.c:90
+msgid "News Main Configuration"
+msgstr "Основные настройки новостей"
+
+#: src/news_config_dialog.c:208 src/news_config_dialog.c:246
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:153
+msgid "Feeds"
+msgstr "Ленты новостей"
+
+#: src/news_config_dialog.c:210 src/news_config_dialog.c:254
+msgid "Sort lists by name (disable Move action)"
+msgstr "Сортировать списки по имени (отключает Перемещение)"
+
+#: src/news_config_dialog.c:215 src/news_config_dialog.c:323
+#: src/news_viewer.c:307
+msgid "News Viewer"
+msgstr "Просмотр новостей"
+
+#: src/news_config_dialog.c:217
+msgid "Font size"
+msgstr "Размер шрифта:"
+
+#: src/news_config_dialog.c:220 src/news_config_dialog.c:334
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/news_config_dialog.c:223
+msgid "Font color"
+msgstr "Цвет текста"
+
+#: src/news_config_dialog.c:248 src/news_config_dialog.c:288
+#: src/news_config_dialog.c:308
+msgid "Timer"
+msgstr "Таймер"
+
+#: src/news_config_dialog.c:250
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f мин"
+
+#: src/news_config_dialog.c:259
+msgid "Browser"
+msgstr "Браузер"
+
+#: src/news_config_dialog.c:261
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "Используется сценарий xdg-open от freedesktop.org"
+
+#: src/news_config_dialog.c:266
+msgid "Popup On News"
+msgstr "Отображать уведомление о новостях"
+
+#: src/news_config_dialog.c:269
+msgid "Never"
+msgstr "Никогда"
+
+#: src/news_config_dialog.c:275
+msgid "Only on urgent feeds"
+msgstr "Только для срочных лент"
+
+#: src/news_config_dialog.c:281
+msgid "On all feeds"
+msgstr "Для всех лент"
+
+#: src/news_config_dialog.c:290 src/news_config_dialog.c:310
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f с"
+
+#: src/news_config_dialog.c:298
+msgid "Popup On Warning / Error"
+msgstr "Показывать уведомления при ошибках"
+
+#: src/news_config_dialog.c:303
+msgid "Show on timeout ?"
+msgstr "Показывать по тайм-ауту?"
+
+#: src/news_config_dialog.c:325
+msgid "Unread feeds first"
+msgstr "Непрочитанные ленты в начале"
+
+#: src/news_config_dialog.c:327
+msgid "Unread articles first"
+msgstr "Непрочитанные статьи в начале"
+
+#: src/news_config_dialog.c:329
+msgid "Sort articles by date"
+msgstr "Сортировать по дате"
+
+#: src/news_config_dialog.c:332
+msgid "Font"
+msgstr "Шрифт"
+
+#: src/news_config_dialog.c:342
+msgid "Font Shadow"
+msgstr "Тень от шрифта"
+
+#: src/news_config_dialog.c:354
+msgid "Proxy"
+msgstr "Прокси"
+
+#: src/news_config_dialog.c:356
+msgid "Enable"
+msgstr "Включить"
+
+#: src/news_config_dialog.c:358
+msgid "Host"
+msgstr "Адрес хоста"
+
+#: src/news_config_dialog.c:362
+msgid "Port"
+msgstr "Порт"
+
+#: src/news_config_dialog_category.c:50
+msgid "News Category Configuration"
+msgstr "Настройка категорий новостей"
+
+#: src/news_config_dialog_category.c:135
+msgid "Icon"
+msgstr "Значок"
+
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+msgid "Name"
+msgstr "Имя"
+
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+msgid "Select an Icon"
+msgstr "Выберете значок"
+
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+msgid "OK"
+msgstr "Ок"
+
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+msgid "Cancel"
+msgstr "Отмена"
+
+#: src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "Необходимо сначала <hilight>создать категорию</hilight>"
+
+#: src/news_config_dialog_feed.c:77
+msgid "News Feed Configuration"
+msgstr "Настройка новостной ленты"
+
+#: src/news_config_dialog_feed.c:329
+msgid "Basic informations"
+msgstr "Основная информация"
+
+#: src/news_config_dialog_feed.c:345
+msgid "Name :"
+msgstr "Имя :"
+
+#: src/news_config_dialog_feed.c:349
+msgid "Feed url :"
+msgstr "URL ленты :"
+
+#: src/news_config_dialog_feed.c:353
+msgid "Mark as important feed"
+msgstr "Отметить ленту как важную"
+
+#: src/news_config_dialog_feed.c:358
+msgid "Category"
+msgstr "Категория"
+
+#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+msgid "Language"
+msgstr "Язык"
+
+#: src/news_config_dialog_feed.c:391
+msgid "Advanced informations"
+msgstr "Дополнительная информация"
+
+#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+msgid "Description"
+msgstr "Описание"
+
+#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+msgid "Home url"
+msgstr "Домашний url"
+
+#: src/news_config_dialog_feed.c:405
+msgid "Server informations"
+msgstr "Данные сервера"
+
+#: src/news_config_dialog_feed.c:407
+msgid "Do allow the server to overwrite the informations you entered ?"
+msgstr "Разрешить серверу переписывать введённую информацию?"
+
+#: src/news_config_dialog_feeds.c:82
+msgid "News Feeds Configuration"
+msgstr "Настройка новостных лент"
+
+#: src/news_config_dialog_feeds.c:290
+msgid "Categories"
+msgstr "Категории"
+
+#: src/news_config_dialog_feeds.c:301 src/news_config_dialog_feeds.c:375
+#: src/news_config_dialog_item_content.c:283
+msgid "Move Up"
+msgstr "Вверх"
+
+#: src/news_config_dialog_feeds.c:304 src/news_config_dialog_feeds.c:378
+#: src/news_config_dialog_item_content.c:287
+msgid "Move Down"
+msgstr "Вниз"
+
+#: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
+msgid "Add"
+msgstr "Добавить"
+
+#: src/news_config_dialog_feeds.c:316 src/news_config_dialog_feeds.c:390
+msgid "Delete"
+msgstr "Удалить"
+
+#: src/news_config_dialog_feeds.c:319 src/news_config_dialog_feeds.c:393
+msgid "Configure"
+msgstr "Настроить"
+
+#: src/news_config_dialog_feeds.c:331 src/news_config_dialog_langs.c:133
+msgid "Languages"
+msgstr "Языки"
+
+#: src/news_config_dialog_feeds.c:333
+msgid "All"
+msgstr "Все"
+
+#: src/news_config_dialog_feeds.c:336
+msgid "Select"
+msgstr "Выбрать"
+
+#: src/news_config_dialog_feeds.c:346
+msgid "Empty the lists"
+msgstr "Очистить списки"
+
+#: src/news_config_dialog_feeds.c:349
+msgid "Restore default lists"
+msgstr "Восстановить умолчания"
+
+#: src/news_config_dialog_feeds.c:686
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+"В этой категории есть <hilight>ленты</hilight>.<br>Необходимо "
+"<hilight>сначала удалить их</hilight>"
+
+#: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
+msgid "News Module - Are you sure ?"
+msgstr "Новостной модуль - вы уверены?"
+
+#: src/news_config_dialog_item.c:40
+msgid "News Gadget Configuration"
+msgstr "Настройка новостного гаджета"
+
+#: src/news_config_dialog_item.c:104
+msgid "View Mode"
+msgstr "Режим просмотра"
+
+#: src/news_config_dialog_item.c:107
+msgid "Show one icon for all feeds"
+msgstr "Показывать один значок для всех лент"
+
+#: src/news_config_dialog_item.c:109
+msgid "Show all feeds"
+msgstr "Показывать все ленты"
+
+#: src/news_config_dialog_item.c:111
+msgid "Show unread feeds"
+msgstr "Показывать непрочитанные ленты"
+
+#: src/news_config_dialog_item.c:113
+msgid "Show all feeds marked as important"
+msgstr "Показывать все ленты отмеченные как важные"
+
+#: src/news_config_dialog_item.c:115
+msgid "Show unread feeds marked as important"
+msgstr "Показывать непрочитанные ленты отмеченные как важные"
+
+#: src/news_config_dialog_item.c:120
+msgid "Feed open in"
+msgstr "Открывать ленты в"
+
+#: src/news_config_dialog_item.c:123
+msgid "the feed viewer"
+msgstr "просмотрщике лент"
+
+#: src/news_config_dialog_item.c:125
+msgid "my favorite browser"
+msgstr "в любимом браузере"
+
+#: src/news_config_dialog_item.c:127
+msgid "Browser opens home url"
+msgstr "Открывать в браузере домашний url вместо url ленты"
+
+#: src/news_config_dialog_item.c:129
+msgid "instead of feed url"
+msgstr " "
+
+#: src/news_config_dialog_item.c:136
+msgid "Apply this to all News gadgets"
+msgstr "Применить это ко всем новостным гаджетам"
+
+#: src/news_config_dialog_item_content.c:53
+msgid "News Gadget Content Configuration"
+msgstr "Настройка содержимого новостного гаджета"
+
+#: src/news_config_dialog_item_content.c:258
+msgid "Available Feeds"
+msgstr "Доступные ленты"
+
+#: src/news_config_dialog_item_content.c:267
+msgid "Add this Feed"
+msgstr "Добавить эту ленту"
+
+#: src/news_config_dialog_item_content.c:274
+msgid "Selected Feeds"
+msgstr "Выбранные ленты"
+
+#: src/news_config_dialog_item_content.c:292
+msgid "Remove this Feed"
+msgstr "Удалить эту ленту"
+
+#: src/news_config_dialog_langs.c:45
+msgid "News Feeds Language Configuration"
+msgstr "Настройка языка новостных лент"
+
+#: src/news_config_dialog_langs.c:123
+msgid "Welcome to News Module !"
+msgstr "Добро пожаловать в новостной модуль!"
+
+#: src/news_config_dialog_langs.c:125
+msgid "Please select the languages that you are able to read"
+msgstr "Пожалуйста, выберите языки, которые вы умеете читать"
+
+#: src/news_feed.c:291
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "Введённое <hilight>имя</hilight> некорректно"
+
+#: src/news_feed.c:296
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "Необходимо <hilight>выбрать категорию</hilight>"
+
+#: src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+"Лента с <hilight>именем</hilight> %s <hilight>уже существует</hilight><br>в "
+"категории %s<br><br>Нельзя иметь ленты с одинаковым именем в одной категории."
+
+#: src/news_feed.c:311
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "Необходимо выбрать <hilight>язык</hilight>"
+
+#: src/news_feed.c:318
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "Указанный <hilight>url</hilight> некорректен"
+
+#: src/news_feed.c:880
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr "Необходимо ввести <hilight>имя</hilight>!"
+
+#: src/news_feed.c:888
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr "Введённое <hilight>имя уже используется</hilight> в другой категории"
+
+#: src/news_menu.c:131
+msgid "Set all as read"
+msgstr "Отметить все как прочитанные"
+
+#: src/news_menu.c:137 src/news_viewer.c:380
+msgid "Update"
+msgstr "Обновить"
+
+#: src/news_menu.c:148
+msgid "Gadget"
+msgstr "Гаджет"
+
+#: src/news_menu.c:158
+msgid "Main"
+msgstr "Основные"
+
+#: src/news_menu.c:163
+msgid "Settings"
+msgstr "Настройки"
+
+#: src/news_menu.c:168
+msgid "Gadget Contents"
+msgstr "Содержимое гаджета"
+
+#: src/news_utils.h:13
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr ""
+
+#: src/news_utils.h:20
+msgid "News Module"
+msgstr "Новостной модуль"
+
+#: src/news_utils.h:27
+msgid "News Module Error"
+msgstr "Ошибка новостного модуля"
+
+#: src/news_viewer.c:372
+msgid "Feeds in this gadget"
+msgstr "Ленты в этом гаджете"
+
+#: src/news_viewer.c:388
+msgid "Set as read"
+msgstr "Прочитано"
+
+#: src/news_viewer.c:438
+msgid "Articles in selected feed"
+msgstr "Статьи в выбранной ленте"

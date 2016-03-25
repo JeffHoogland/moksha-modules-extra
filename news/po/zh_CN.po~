@@ -1,0 +1,494 @@
+# News module (e17), Simplified Chinese translation
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the e17 news module.
+#
+# Aron Xu <aronmalache@163.com>, 2008, 2009.
+# Careone <zzbusagain@yahoo.com.cn>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: News module (e17)\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-12-22 06:02+0800\n"
+"PO-Revision-Date: 2012-12-22 06:10+0800\n"
+"Last-Translator: Careone <zzbusagain@yahoo.com.cn>\n"
+"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_main.c:52
+msgid "Config init failed"
+msgstr "配置初始化失败！"
+
+#: ../src/e_mod_main.c:53
+msgid "Parser init failed"
+msgstr "解析初始化失败！"
+
+#: ../src/e_mod_main.c:54
+msgid "Feeds init failed"
+msgstr "Feeds 初始化失败！"
+
+#: ../src/e_mod_main.c:55
+msgid "Viewer init failed"
+msgstr "查看器初始化失败！"
+
+#: ../src/e_mod_main.c:56
+msgid "Popup subsystem init failed"
+msgstr "弹出子系统初始化失败！"
+
+#: ../src/e_mod_main.c:219
+msgid "News"
+msgstr "新闻"
+
+#: ../src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+
+#: ../src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+
+#: ../src/news_config_dialog.c:90
+msgid "News Main Configuration"
+msgstr "新闻主配置"
+
+#: ../src/news_config_dialog.c:190 ../src/news_config_dialog.c:228
+#: ../src/news_config_dialog_feeds.c:358 ../src/news_menu.c:153
+msgid "Feeds"
+msgstr "Feeds"
+
+#: ../src/news_config_dialog.c:192 ../src/news_config_dialog.c:236
+msgid "Sort lists by name (disable Move action)"
+msgstr "按名称排序(禁用移动)"
+
+#: ../src/news_config_dialog.c:197 ../src/news_config_dialog.c:305
+#: ../src/news_viewer.c:307
+msgid "News Viewer"
+msgstr "新闻查看器"
+
+#: ../src/news_config_dialog.c:199
+msgid "Font size"
+msgstr "字体大小"
+
+#: ../src/news_config_dialog.c:202 ../src/news_config_dialog.c:316
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/news_config_dialog.c:205
+msgid "Font color"
+msgstr "文字颜色"
+
+#: ../src/news_config_dialog.c:230 ../src/news_config_dialog.c:270
+#: ../src/news_config_dialog.c:290
+msgid "Timer"
+msgstr "定时器"
+
+#: ../src/news_config_dialog.c:232
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f 分钟"
+
+#: ../src/news_config_dialog.c:241
+msgid "Browser"
+msgstr "浏览器"
+
+#: ../src/news_config_dialog.c:243
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "使用 freedesktop.org 的 xdg-open 脚本"
+
+#: ../src/news_config_dialog.c:248
+msgid "Popup On News"
+msgstr "弹出新闻"
+
+#: ../src/news_config_dialog.c:251
+msgid "Never"
+msgstr "从不"
+
+#: ../src/news_config_dialog.c:257
+msgid "Only on urgent feeds"
+msgstr "适合紧急 Feeds"
+
+#: ../src/news_config_dialog.c:263
+msgid "On all feeds"
+msgstr "适合全部 Feeds"
+
+#: ../src/news_config_dialog.c:272 ../src/news_config_dialog.c:292
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f 秒"
+
+#: ../src/news_config_dialog.c:280
+msgid "Popup On Warning / Error"
+msgstr "弹出警告/错误"
+
+#: ../src/news_config_dialog.c:285
+msgid "Show on timeout ?"
+msgstr "超时时显示？"
+
+#: ../src/news_config_dialog.c:307
+msgid "Unread feeds first"
+msgstr "优先显示未读的 feed"
+
+#: ../src/news_config_dialog.c:309
+msgid "Unread articles first"
+msgstr "优先显示未读的文章"
+
+#: ../src/news_config_dialog.c:311
+msgid "Sort articles by date"
+msgstr "按日期对文章排序"
+
+#: ../src/news_config_dialog.c:314
+msgid "Font"
+msgstr "字体"
+
+#: ../src/news_config_dialog.c:324
+msgid "Font Shadow"
+msgstr "字体阴影"
+
+#: ../src/news_config_dialog.c:336
+msgid "Proxy"
+msgstr "代理"
+
+#: ../src/news_config_dialog.c:338
+msgid "Enable"
+msgstr "启用"
+
+#: ../src/news_config_dialog.c:340
+msgid "Host"
+msgstr "主机"
+
+#: ../src/news_config_dialog.c:344
+msgid "Port"
+msgstr "端口"
+
+#: ../src/news_config_dialog_category.c:50
+msgid "News Category Configuration"
+msgstr "新闻分类配置"
+
+#: ../src/news_config_dialog_category.c:135
+msgid "Icon"
+msgstr "图标"
+
+#: ../src/news_config_dialog_category.c:145
+#: ../src/news_config_dialog_feed.c:410
+msgid "Name"
+msgstr "名称"
+
+#: ../src/news_config_dialog_category.c:203
+#: ../src/news_config_dialog_feed.c:543
+msgid "Select an Icon"
+msgstr "选择一个图标"
+
+#. buttons at the bottom
+#: ../src/news_config_dialog_category.c:228
+#: ../src/news_config_dialog_feed.c:568
+msgid "OK"
+msgstr "确定"
+
+#: ../src/news_config_dialog_category.c:229
+#: ../src/news_config_dialog_feed.c:569
+msgid "Cancel"
+msgstr "取消"
+
+#: ../src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "你需要先<hilight>新建一个分类</hilight>"
+
+#: ../src/news_config_dialog_feed.c:77
+msgid "News Feed Configuration"
+msgstr "新闻 Feed 配置"
+
+#: ../src/news_config_dialog_feed.c:329
+msgid "Basic informations"
+msgstr "基本信息"
+
+#. ob = e_widget_check_add(evas, D_("Get from the server"), &(cfdata->icon_ovrw));
+#. TODO: NOT IMPLEMENTED YET
+#. e_widget_check_checked_set(ob, 0);
+#. e_widget_disabled_set(ob, 1);
+#. e_widget_list_object_append(o2, of, 1, 1, 0.5);
+#: ../src/news_config_dialog_feed.c:345
+msgid "Name :"
+msgstr "名称："
+
+#: ../src/news_config_dialog_feed.c:349
+msgid "Feed url :"
+msgstr "Feed url:"
+
+#: ../src/news_config_dialog_feed.c:353
+msgid "Mark as important feed"
+msgstr "标记为重要 Feed"
+
+#: ../src/news_config_dialog_feed.c:358
+msgid "Category"
+msgstr "类别"
+
+#: ../src/news_config_dialog_feed.c:368 ../src/news_config_dialog_feed.c:412
+msgid "Language"
+msgstr "语言"
+
+#: ../src/news_config_dialog_feed.c:391
+msgid "Advanced informations"
+msgstr "高级信息"
+
+#: ../src/news_config_dialog_feed.c:393 ../src/news_config_dialog_feed.c:414
+msgid "Description"
+msgstr "描述"
+
+#: ../src/news_config_dialog_feed.c:397 ../src/news_config_dialog_feed.c:416
+msgid "Home url"
+msgstr "主目录url"
+
+#: ../src/news_config_dialog_feed.c:405
+msgid "Server informations"
+msgstr "服务器信息"
+
+#: ../src/news_config_dialog_feed.c:407
+msgid "Do allow the server to overwrite the informations you entered ?"
+msgstr ""
+
+#: ../src/news_config_dialog_feeds.c:82
+msgid "News Feeds Configuration"
+msgstr "新闻 Feed 配置"
+
+#: ../src/news_config_dialog_feeds.c:290
+msgid "Categories"
+msgstr "类别"
+
+#: ../src/news_config_dialog_feeds.c:301 ../src/news_config_dialog_feeds.c:375
+#: ../src/news_config_dialog_item_content.c:283
+msgid "Move Up"
+msgstr "上移"
+
+#: ../src/news_config_dialog_feeds.c:304 ../src/news_config_dialog_feeds.c:378
+#: ../src/news_config_dialog_item_content.c:287
+msgid "Move Down"
+msgstr "下移"
+
+#: ../src/news_config_dialog_feeds.c:314 ../src/news_config_dialog_feeds.c:388
+msgid "Add"
+msgstr "添加"
+
+#: ../src/news_config_dialog_feeds.c:316 ../src/news_config_dialog_feeds.c:390
+msgid "Delete"
+msgstr "删除"
+
+#: ../src/news_config_dialog_feeds.c:319 ../src/news_config_dialog_feeds.c:393
+msgid "Configure"
+msgstr "配置"
+
+#: ../src/news_config_dialog_feeds.c:331 ../src/news_config_dialog_langs.c:133
+msgid "Languages"
+msgstr "语言"
+
+#: ../src/news_config_dialog_feeds.c:333
+msgid "All"
+msgstr "全部"
+
+#: ../src/news_config_dialog_feeds.c:336
+msgid "Select"
+msgstr "选择"
+
+#: ../src/news_config_dialog_feeds.c:346
+msgid "Empty the lists"
+msgstr "清空列表"
+
+#: ../src/news_config_dialog_feeds.c:349
+msgid "Restore default lists"
+msgstr "恢复默认列表"
+
+#: ../src/news_config_dialog_feeds.c:686
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+
+#: ../src/news_config_dialog_feeds.c:754 ../src/news_config_dialog_feeds.c:779
+msgid "News Module - Are you sure ?"
+msgstr "新闻模块 - 您确定吗？"
+
+#: ../src/news_config_dialog_item.c:40
+msgid "News Gadget Configuration"
+msgstr "新组件配置"
+
+#: ../src/news_config_dialog_item.c:104
+msgid "View Mode"
+msgstr "查看模式"
+
+#: ../src/news_config_dialog_item.c:107
+msgid "Show one icon for all feeds"
+msgstr "将所有订阅显示为一个图标"
+
+#: ../src/news_config_dialog_item.c:109
+msgid "Show all feeds"
+msgstr "显示所有订阅"
+
+#: ../src/news_config_dialog_item.c:111
+msgid "Show unread feeds"
+msgstr "显示未阅读订阅"
+
+#: ../src/news_config_dialog_item.c:113
+msgid "Show all feeds marked as important"
+msgstr "显示所有标记为重要的订阅"
+
+#: ../src/news_config_dialog_item.c:115
+msgid "Show unread feeds marked as important"
+msgstr "显示所有未读且标记为重要的订阅"
+
+#: ../src/news_config_dialog_item.c:120
+msgid "Feed open in"
+msgstr ""
+
+#: ../src/news_config_dialog_item.c:123
+msgid "the feed viewer"
+msgstr ""
+
+#: ../src/news_config_dialog_item.c:125
+msgid "my favorite browser"
+msgstr ""
+
+#: ../src/news_config_dialog_item.c:127
+msgid "Browser opens home url"
+msgstr ""
+
+#: ../src/news_config_dialog_item.c:129
+msgid "instead of feed url"
+msgstr ""
+
+#: ../src/news_config_dialog_item.c:136
+msgid "Apply this to all News gadgets"
+msgstr ""
+
+#: ../src/news_config_dialog_item_content.c:53
+msgid "News Gadget Content Configuration"
+msgstr ""
+
+#: ../src/news_config_dialog_item_content.c:258
+msgid "Available Feeds"
+msgstr "可用订阅"
+
+#: ../src/news_config_dialog_item_content.c:267
+msgid "Add this Feed"
+msgstr "添加此订阅"
+
+#: ../src/news_config_dialog_item_content.c:274
+msgid "Selected Feeds"
+msgstr "已选择的订阅"
+
+#: ../src/news_config_dialog_item_content.c:292
+msgid "Remove this Feed"
+msgstr "删除此订阅"
+
+#: ../src/news_config_dialog_langs.c:45
+msgid "News Feeds Language Configuration"
+msgstr "News 订阅语言设置"
+
+#: ../src/news_config_dialog_langs.c:123
+msgid "Welcome to News Module !"
+msgstr "欢迎使用 News 模块！"
+
+#: ../src/news_config_dialog_langs.c:125
+msgid "Please select the languages that you are able to read"
+msgstr "请选择您能阅读的语言"
+
+#: ../src/news_feed.c:291
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "您输入的 <hilight>名称</hilight> 不正确"
+
+#: ../src/news_feed.c:296
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "您需要选择一个 <hilight>类别</hilight>。"
+
+#: ../src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+
+#: ../src/news_feed.c:311
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "您需要选择一个 <hilight>语言</hilight>。"
+
+#: ../src/news_feed.c:318
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "您指定的地址不争取"
+
+#: ../src/news_feed.c:880
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr ""
+
+#: ../src/news_feed.c:888
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr ""
+
+#: ../src/news_menu.c:131
+msgid "Set all as read"
+msgstr "全部标记为已读"
+
+#: ../src/news_menu.c:137 ../src/news_viewer.c:380
+msgid "Update"
+msgstr "更新"
+
+#: ../src/news_menu.c:148
+msgid "Gadget"
+msgstr "组件"
+
+#: ../src/news_menu.c:158
+msgid "Main"
+msgstr "主要"
+
+#: ../src/news_menu.c:163
+msgid "Settings"
+msgstr "设置"
+
+#: ../src/news_menu.c:168
+msgid "Gadget Contents"
+msgstr "组件内容"
+
+#: ../src/news_utils.h:13
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr "News 模块调试"
+
+#: ../src/news_utils.h:20
+msgid "News Module"
+msgstr "News 模块"
+
+#: ../src/news_utils.h:27
+msgid "News Module Error"
+msgstr "News 模块出错"
+
+#: ../src/news_viewer.c:372
+msgid "Feeds in this gadget"
+msgstr "此组件内的订阅"
+
+#: ../src/news_viewer.c:388
+msgid "Set as read"
+msgstr "标记为已读"
+
+#: ../src/news_viewer.c:438
+msgid "Articles in selected feed"
+msgstr ""
+
+#~ msgid "Update all feeds"
+#~ msgstr "更新所有 feed"
+
+#~ msgid "Main Configuration"
+#~ msgstr "主配置"
+
+#~ msgid "Configuration"
+#~ msgstr "配置"

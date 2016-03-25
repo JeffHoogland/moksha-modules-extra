@@ -1,0 +1,1434 @@
+news_item.lo: news_item.c /usr/include/stdc-predef.h News.h ../config.h \
+ /usr/include/enlightenment/e.h /usr/include/stdlib.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/stdio.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h /usr/include/string.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
+ /usr/include/x86_64-linux-gnu/sys/param.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h /usr/include/signal.h \
+ /usr/include/x86_64-linux-gnu/bits/signum.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo.h \
+ /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+ /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+ /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+ /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
+ /usr/include/x86_64-linux-gnu/asm/param.h \
+ /usr/include/asm-generic/param.h \
+ /usr/include/x86_64-linux-gnu/sys/resource.h \
+ /usr/include/x86_64-linux-gnu/bits/resource.h /usr/include/utime.h \
+ /usr/include/dlfcn.h /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/huge_val.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
+ /usr/include/x86_64-linux-gnu/bits/inf.h \
+ /usr/include/x86_64-linux-gnu/bits/nan.h \
+ /usr/include/x86_64-linux-gnu/bits/mathdef.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathinline.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h /usr/include/fnmatch.h \
+ /usr/include/ctype.h /usr/include/dirent.h \
+ /usr/include/x86_64-linux-gnu/bits/dirent.h /usr/include/pwd.h \
+ /usr/include/grp.h /usr/include/glob.h /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/libintl.h \
+ /usr/include/setjmp.h /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /usr/include/x86_64-linux-gnu/bits/setjmp2.h /usr/include/eina-1/Eina.h \
+ /usr/include/eina-1/eina_config.h /usr/include/eina-1/eina/eina_types.h \
+ /usr/include/eina-1/eina/eina_alloca.h \
+ /usr/include/eina-1/eina/eina_main.h /usr/include/efl-1/Efl_Config.h \
+ /usr/include/eina-1/eina/eina_types.h /usr/include/eina-1/eina/eina_fp.h \
+ /usr/include/eina-1/eina/eina_inline_f32p32.x \
+ /usr/include/eina-1/eina/eina_inline_f16p16.x \
+ /usr/include/eina-1/eina/eina_inline_f8p24.x \
+ /usr/include/eina-1/eina/eina_inline_fp.x \
+ /usr/include/eina-1/eina/eina_rectangle.h \
+ /usr/include/eina-1/eina/eina_inline_rectangle.x \
+ /usr/include/eina-1/eina/eina_clist.h \
+ /usr/include/eina-1/eina/eina_inline_clist.x \
+ /usr/include/eina-1/eina/eina_inlist.h \
+ /usr/include/eina-1/eina/eina_iterator.h \
+ /usr/include/eina-1/eina/eina_magic.h \
+ /usr/include/eina-1/eina/eina_error.h \
+ /usr/include/eina-1/eina/eina_accessor.h \
+ /usr/include/eina-1/eina/eina_inline_inlist.x \
+ /usr/include/eina-1/eina/eina_file.h \
+ /usr/include/eina-1/eina/eina_array.h \
+ /usr/include/eina-1/eina/eina_inline_array.x \
+ /usr/include/eina-1/eina/eina_tmpstr.h \
+ /usr/include/eina-1/eina/eina_list.h \
+ /usr/include/eina-1/eina/eina_inline_list.x \
+ /usr/include/eina-1/eina/eina_hash.h \
+ /usr/include/eina-1/eina/eina_inline_hash.x \
+ /usr/include/eina-1/eina/eina_crc.h \
+ /usr/include/eina-1/eina/eina_inline_crc.x \
+ /usr/include/eina-1/eina/eina_trash.h \
+ /usr/include/eina-1/eina/eina_inline_trash.x \
+ /usr/include/eina-1/eina/eina_lalloc.h \
+ /usr/include/eina-1/eina/eina_module.h \
+ /usr/include/eina-1/eina/eina_mempool.h \
+ /usr/include/eina-1/eina/eina_module.h \
+ /usr/include/eina-1/eina/eina_inline_mempool.x \
+ /usr/include/eina-1/eina/eina_error.h \
+ /usr/include/eina-1/eina/eina_log.h \
+ /usr/include/eina-1/eina/eina_inline_log.x \
+ /usr/include/eina-1/eina/eina_inarray.h \
+ /usr/include/eina-1/eina/eina_array.h \
+ /usr/include/eina-1/eina/eina_binshare.h \
+ /usr/include/eina-1/eina/eina_stringshare.h \
+ /usr/include/eina-1/eina/eina_inline_stringshare.x \
+ /usr/include/eina-1/eina/eina_stringshare.h \
+ /usr/include/eina-1/eina/eina_ustringshare.h \
+ /usr/include/eina-1/eina/eina_unicode.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h \
+ /usr/include/eina-1/eina/eina_inline_unicode.x \
+ /usr/include/eina-1/eina/eina_inline_ustringshare.x \
+ /usr/include/eina-1/eina/eina_ustringshare.h \
+ /usr/include/eina-1/eina/eina_magic.h \
+ /usr/include/eina-1/eina/eina_counter.h \
+ /usr/include/eina-1/eina/eina_rbtree.h \
+ /usr/include/eina-1/eina/eina_inline_rbtree.x \
+ /usr/include/eina-1/eina/eina_accessor.h \
+ /usr/include/eina-1/eina/eina_iterator.h \
+ /usr/include/eina-1/eina/eina_benchmark.h \
+ /usr/include/eina-1/eina/eina_convert.h \
+ /usr/include/eina-1/eina/eina_fp.h /usr/include/eina-1/eina/eina_cpu.h \
+ /usr/include/eina-1/eina/eina_inline_cpu.x /usr/include/byteswap.h \
+ /usr/include/eina-1/eina/eina_sched.h \
+ /usr/include/eina-1/eina/eina_tiler.h \
+ /usr/include/eina-1/eina/eina_rectangle.h \
+ /usr/include/eina-1/eina/eina_inline_tiler.x \
+ /usr/include/eina-1/eina/eina_safety_checks.h \
+ /usr/include/eina-1/eina/eina_log.h \
+ /usr/include/eina-1/eina/eina_thread.h \
+ /usr/include/eina-1/eina/eina_hamster.h \
+ /usr/include/eina-1/eina/eina_matrixsparse.h \
+ /usr/include/eina-1/eina/eina_str.h \
+ /usr/include/eina-1/eina/eina_inline_str.x \
+ /usr/include/eina-1/eina/eina_strbuf.h \
+ /usr/include/eina-1/eina/eina_binbuf.h \
+ /usr/include/eina-1/eina/eina_ustrbuf.h \
+ /usr/include/eina-1/eina/eina_unicode.h \
+ /usr/include/eina-1/eina/eina_quadtree.h \
+ /usr/include/eina-1/eina/eina_inlist.h \
+ /usr/include/eina-1/eina/eina_simple_xml_parser.h \
+ /usr/include/eina-1/eina/eina_lock.h \
+ /usr/include/eina-1/eina/eina_main.h \
+ /usr/include/eina-1/eina/eina_inline_lock_posix.x /usr/include/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/sched.h /usr/include/pthread.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/eina-1/eina/eina_prefix.h \
+ /usr/include/eina-1/eina/eina_refcount.h \
+ /usr/include/eina-1/eina/eina_mmap.h \
+ /usr/include/eina-1/eina/eina_xattr.h \
+ /usr/include/eina-1/eina/eina_value.h \
+ /usr/include/eina-1/eina/eina_inarray.h \
+ /usr/include/eina-1/eina/eina_list.h \
+ /usr/include/eina-1/eina/eina_hash.h \
+ /usr/include/eina-1/eina/eina_inline_value.x \
+ /usr/include/eina-1/eina/eina_value_util.h \
+ /usr/include/eina-1/eina/eina_value.h \
+ /usr/include/eina-1/eina/eina_inline_value_util.x \
+ /usr/include/eina-1/eina/eina_cow.h \
+ /usr/include/eina-1/eina/eina_thread_queue.h \
+ /usr/include/eina-1/eina/eina_matrix.h \
+ /usr/include/eina-1/eina/eina_quad.h /usr/include/eina-1/eina/eina_crc.h \
+ /usr/include/eina-1/eina/eina_evlog.h \
+ /usr/include/eina-1/eina/eina_util.h \
+ /usr/include/eina-1/eina/eina_quaternion.h /usr/include/eet-1/Eet.h \
+ /usr/include/emile-1/Emile.h /usr/include/emile-1/emile_cipher.h \
+ /usr/include/emile-1/emile_compress.h /usr/include/emile-1/emile_image.h \
+ /usr/include/evas-1/Evas.h /usr/include/eo-1/Eo.h \
+ /usr/include/eo-1/eo_base.eo.h /usr/include/eo-1/eo_abstract_class.eo.h \
+ /usr/include/efl-1/Efl.h /usr/include/evas-1/Evas_Loader.h \
+ /usr/include/evas-1/Evas_Common.h \
+ /usr/include/evas-1/canvas/evas_types.eot.h \
+ /usr/include/evas-1/Evas_Legacy.h \
+ /usr/include/evas-1/canvas/evas_canvas.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_common_interface.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_object.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_rectangle.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_image.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_text.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_textblock.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_textgrid.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_line.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_polygon.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_object_smart.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_smart_clipped.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_box.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_table.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_grid.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_out.eo.legacy.h \
+ /usr/include/evas-1/Evas_Engine_Buffer.h /usr/include/ecore-1/Ecore.h \
+ /usr/include/ecore-1/Ecore_Common.h /usr/include/ecore-1/Ecore_Legacy.h \
+ /usr/include/ecore-1/ecore_poller.eo.legacy.h \
+ /usr/include/ecore-1/ecore_animator.eo.legacy.h \
+ /usr/include/ecore-1/ecore_timer.eo.legacy.h \
+ /usr/include/ecore-1/ecore_idler.eo.legacy.h \
+ /usr/include/ecore-1/ecore_exe.eo.legacy.h \
+ /usr/include/ecore-1/ecore_job.eo.legacy.h \
+ /usr/include/ecore-x-1/Ecore_X.h \
+ /usr/include/ecore-x-1/ecore_x_version.h \
+ /usr/include/ecore-x-1/Ecore_X_Atoms.h \
+ /usr/include/ecore-x-1/Ecore_X_Cursor.h \
+ /usr/include/ecore-evas-1/Ecore_Evas.h \
+ /usr/include/ecore-evas-1/Ecore_Evas_Types.h \
+ /usr/include/ecore-input-1/Ecore_Input.h \
+ /usr/include/ecore-input-evas-1/Ecore_Input_Evas.h \
+ /usr/include/ecore-con-1/Ecore_Con.h /usr/include/libgen.h \
+ /usr/include/netdb.h /usr/include/netinet/in.h \
+ /usr/include/x86_64-linux-gnu/sys/socket.h \
+ /usr/include/x86_64-linux-gnu/sys/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+ /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+ /usr/include/x86_64-linux-gnu/asm/socket.h \
+ /usr/include/asm-generic/socket.h \
+ /usr/include/x86_64-linux-gnu/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
+ /usr/include/x86_64-linux-gnu/bits/socket2.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/rpc/netdb.h \
+ /usr/include/x86_64-linux-gnu/bits/netdb.h \
+ /usr/include/ecore-con-1/Ecore_Con_Legacy.h \
+ /usr/include/ecore-con-1/ecore_con_base.eo.legacy.h \
+ /usr/include/ecore-con-1/ecore_con_server.eo.legacy.h \
+ /usr/include/ecore-con-1/ecore_con_connector.eo.legacy.h \
+ /usr/include/ecore-con-1/ecore_con_client.eo.legacy.h \
+ /usr/include/ecore-ipc-1/Ecore_Ipc.h \
+ /usr/include/ecore-file-1/Ecore_File.h /usr/include/efreet-1/Efreet.h \
+ /usr/include/efreet-1/efreet_base.h /usr/include/efreet-1/efreet_ini.h \
+ /usr/include/efreet-1/efreet_icon.h \
+ /usr/include/efreet-1/efreet_desktop.h \
+ /usr/include/efreet-1/efreet_menu.h /usr/include/efreet-1/efreet_utils.h \
+ /usr/include/efreet-1/efreet_uri.h /usr/include/efreet-1/Efreet_Mime.h \
+ /usr/include/edje-1/Edje.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/float.h \
+ /usr/include/edje-1/Edje_Common.h /usr/include/edje-1/edje_types.eot.h \
+ /usr/include/edje-1/Edje_Legacy.h \
+ /usr/include/edje-1/edje_object.eo.legacy.h \
+ /usr/include/edje-1/edje_edit.eo.legacy.h /usr/include/e_dbus-1/E_DBus.h \
+ /usr/include/dbus-1.0/dbus/dbus.h \
+ /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
+ /usr/include/dbus-1.0/dbus/dbus-macros.h \
+ /usr/include/dbus-1.0/dbus/dbus-address.h \
+ /usr/include/dbus-1.0/dbus/dbus-types.h \
+ /usr/include/dbus-1.0/dbus/dbus-errors.h \
+ /usr/include/dbus-1.0/dbus/dbus-protocol.h \
+ /usr/include/dbus-1.0/dbus/dbus-bus.h \
+ /usr/include/dbus-1.0/dbus/dbus-connection.h \
+ /usr/include/dbus-1.0/dbus/dbus-memory.h \
+ /usr/include/dbus-1.0/dbus/dbus-message.h \
+ /usr/include/dbus-1.0/dbus/dbus-shared.h \
+ /usr/include/dbus-1.0/dbus/dbus-misc.h \
+ /usr/include/dbus-1.0/dbus/dbus-pending-call.h \
+ /usr/include/dbus-1.0/dbus/dbus-server.h \
+ /usr/include/dbus-1.0/dbus/dbus-signature.h \
+ /usr/include/dbus-1.0/dbus/dbus-syntax.h \
+ /usr/include/dbus-1.0/dbus/dbus-threads.h /usr/include/eio-1/Eio.h \
+ /usr/include/eio-1/eio_inline_helper.x \
+ /usr/include/enlightenment/e_includes.h \
+ /usr/include/enlightenment/e_mmx.h /usr/include/enlightenment/e_object.h \
+ /usr/include/enlightenment/e_user.h \
+ /usr/include/enlightenment/e_manager.h \
+ /usr/include/enlightenment/e_path.h /usr/include/enlightenment/e_ipc.h \
+ /usr/include/enlightenment/e_error.h \
+ /usr/include/enlightenment/e_container.h \
+ /usr/include/enlightenment/e_zone.h /usr/include/enlightenment/e_desk.h \
+ /usr/include/enlightenment/e_border.h \
+ /usr/include/enlightenment/e_pointer.h \
+ /usr/include/enlightenment/e_config.h \
+ /usr/include/enlightenment/e_config_data.h \
+ /usr/include/enlightenment/e_menu.h /usr/include/enlightenment/e_icon.h \
+ /usr/include/enlightenment/e_box.h \
+ /usr/include/enlightenment/e_flowlayout.h \
+ /usr/include/enlightenment/e_entry.h /usr/include/enlightenment/e_init.h \
+ /usr/include/enlightenment/e_int_menus.h \
+ /usr/include/enlightenment/e_module.h \
+ /usr/include/enlightenment/e_atoms.h \
+ /usr/include/enlightenment/e_utils.h \
+ /usr/include/enlightenment/e_canvas.h \
+ /usr/include/enlightenment/e_focus.h \
+ /usr/include/enlightenment/e_place.h \
+ /usr/include/enlightenment/e_resist.h \
+ /usr/include/enlightenment/e_startup.h \
+ /usr/include/enlightenment/e_hints.h \
+ /usr/include/enlightenment/e_signals.h \
+ /usr/include/enlightenment/e_xinerama.h \
+ /usr/include/enlightenment/e_randr.h \
+ /usr/include/enlightenment/e_table.h \
+ /usr/include/enlightenment/e_layout.h \
+ /usr/include/enlightenment/e_font.h /usr/include/enlightenment/e_intl.h \
+ /usr/include/enlightenment/e_intl_data.h \
+ /usr/include/enlightenment/e_theme.h /usr/include/enlightenment/e_dnd.h \
+ /usr/include/enlightenment/e_bindings.h \
+ /usr/include/enlightenment/e_moveresize.h \
+ /usr/include/enlightenment/e_actions.h \
+ /usr/include/enlightenment/e_popup.h \
+ /usr/include/enlightenment/e_gadcon_popup.h \
+ /usr/include/enlightenment/e_ipc_codec.h \
+ /usr/include/enlightenment/e_test.h \
+ /usr/include/enlightenment/e_prefix.h \
+ /usr/include/enlightenment/e_datastore.h \
+ /usr/include/enlightenment/e_msg.h /usr/include/enlightenment/e_alert.h \
+ /usr/include/enlightenment/e_maximize.h \
+ /usr/include/enlightenment/e_grabinput.h \
+ /usr/include/enlightenment/e_bg.h \
+ /usr/include/enlightenment/e_remember.h \
+ /usr/include/enlightenment/e_win.h /usr/include/enlightenment/e_pan.h \
+ /usr/include/enlightenment/e_dialog.h \
+ /usr/include/enlightenment/e_configure.h \
+ /usr/include/enlightenment/e_about.h \
+ /usr/include/enlightenment/e_theme_about.h \
+ /usr/include/enlightenment/e_widget.h \
+ /usr/include/enlightenment/e_widget_check.h \
+ /usr/include/enlightenment/e_widget_radio.h \
+ /usr/include/enlightenment/e_widget_framelist.h \
+ /usr/include/enlightenment/e_widget_list.h \
+ /usr/include/enlightenment/e_widget_button.h \
+ /usr/include/enlightenment/e_widget_label.h \
+ /usr/include/enlightenment/e_widget_frametable.h \
+ /usr/include/enlightenment/e_widget_table.h \
+ /usr/include/enlightenment/e_widget_entry.h \
+ /usr/include/enlightenment/e_widget_image.h \
+ /usr/include/enlightenment/e_config_dialog.h \
+ /usr/include/enlightenment/e_int_border_locks.h \
+ /usr/include/enlightenment/e_thumb.h \
+ /usr/include/enlightenment/e_int_border_remember.h \
+ /usr/include/enlightenment/e_eap_editor.h \
+ /usr/include/enlightenment/e_scrollframe.h \
+ /usr/include/enlightenment/e_int_border_menu.h \
+ /usr/include/enlightenment/e_ilist.h \
+ /usr/include/enlightenment/e_livethumb.h \
+ /usr/include/enlightenment/e_widget_ilist.h \
+ /usr/include/enlightenment/e_widget_config_list.h \
+ /usr/include/enlightenment/e_slider.h \
+ /usr/include/enlightenment/e_widget_slider.h \
+ /usr/include/enlightenment/e_desklock.h \
+ /usr/include/enlightenment/e_screensaver.h \
+ /usr/include/enlightenment/e_dpms.h \
+ /usr/include/enlightenment/e_int_config_modules.h \
+ /usr/include/enlightenment/e_exehist.h \
+ /usr/include/enlightenment/e_color_class.h \
+ /usr/include/enlightenment/e_widget_textblock.h \
+ /usr/include/enlightenment/e_stolen.h \
+ /usr/include/enlightenment/e_gadcon.h \
+ /usr/include/enlightenment/e_shelf.h \
+ /usr/include/enlightenment/e_widget_preview.h \
+ /usr/include/enlightenment/e_int_shelf_config.h \
+ /usr/include/enlightenment/e_int_gadcon_config.h \
+ /usr/include/enlightenment/e_confirm_dialog.h \
+ /usr/include/enlightenment/e_int_border_prop.h \
+ /usr/include/enlightenment/e_entry_dialog.h \
+ /usr/include/enlightenment/e_fm.h \
+ /usr/include/enlightenment/e_fm_shared_types.h \
+ /usr/include/enlightenment/e_fm_op_registry.h \
+ /usr/include/enlightenment/e_widget_scrollframe.h \
+ /usr/include/enlightenment/e_sha1.h \
+ /usr/include/enlightenment/e_widget_fsel.h \
+ /usr/include/enlightenment/e_fm_mime.h \
+ /usr/include/enlightenment/e_color.h \
+ /usr/include/enlightenment/e_spectrum.h \
+ /usr/include/enlightenment/e_widget_spectrum.h \
+ /usr/include/enlightenment/e_widget_cslider.h \
+ /usr/include/enlightenment/e_widget_color_well.h \
+ /usr/include/enlightenment/e_widget_csel.h \
+ /usr/include/enlightenment/e_color_dialog.h \
+ /usr/include/enlightenment/e_sys.h \
+ /usr/include/enlightenment/e_obj_dialog.h \
+ /usr/include/enlightenment/e_filereg.h \
+ /usr/include/enlightenment/e_widget_aspect.h \
+ /usr/include/enlightenment/e_widget_deskpreview.h \
+ /usr/include/enlightenment/e_fm_prop.h \
+ /usr/include/enlightenment/e_mouse.h \
+ /usr/include/enlightenment/e_order.h /usr/include/enlightenment/e_exec.h \
+ /usr/include/enlightenment/e_widget_font_preview.h \
+ /usr/include/enlightenment/e_fm_custom.h \
+ /usr/include/enlightenment/e_msgbus.h \
+ /usr/include/enlightenment/e_toolbar.h \
+ /usr/include/enlightenment/e_int_toolbar_config.h \
+ /usr/include/enlightenment/e_powersave.h \
+ /usr/include/enlightenment/e_slidesel.h \
+ /usr/include/enlightenment/e_slidecore.h \
+ /usr/include/enlightenment/e_widget_flist.h \
+ /usr/include/enlightenment/e_fm_op.h \
+ /usr/include/enlightenment/e_scale.h \
+ /usr/include/enlightenment/e_widget_toolbar.h \
+ /usr/include/enlightenment/e_widget_toolbook.h \
+ /usr/include/enlightenment/e_acpi.h /usr/include/enlightenment/e_env.h \
+ /usr/include/enlightenment/e_backlight.h \
+ /usr/include/enlightenment/e_deskenv.h \
+ /usr/include/enlightenment/e_xsettings.h \
+ /usr/include/enlightenment/e_update.h /usr/include/enlightenment/e_xkb.h \
+ /usr/include/enlightenment/e_log.h \
+ /usr/include/enlightenment/e_import_dialog.h \
+ /usr/include/enlightenment/e_import_config_dialog.h \
+ /usr/include/enlightenment/e_grab_dialog.h \
+ /usr/include/enlightenment/e_widget_filepreview.h News_includes.h \
+ e_mod_main.h news_item.h news_feed.h news_parse.h news_viewer.h \
+ news_popup.h news_menu.h news_config.h news_config_dialog.h \
+ news_config_dialog_feeds.h news_config_dialog_item.h \
+ news_config_dialog_item_content.h news_config_dialog_feed.h \
+ news_config_dialog_category.h news_config_dialog_langs.h news_theme.h \
+ news_utils.h
+
+/usr/include/stdc-predef.h:
+
+News.h:
+
+../config.h:
+
+/usr/include/enlightenment/e.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigset.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
+
+/usr/include/string.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/x86_64-linux-gnu/bits/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string2.h:
+
+/usr/include/x86_64-linux-gnu/bits/string3.h:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
+/usr/include/x86_64-linux-gnu/sys/param.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/signal.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+
+/usr/include/x86_64-linux-gnu/bits/param.h:
+
+/usr/include/linux/param.h:
+
+/usr/include/x86_64-linux-gnu/asm/param.h:
+
+/usr/include/asm-generic/param.h:
+
+/usr/include/x86_64-linux-gnu/sys/resource.h:
+
+/usr/include/x86_64-linux-gnu/bits/resource.h:
+
+/usr/include/utime.h:
+
+/usr/include/dlfcn.h:
+
+/usr/include/x86_64-linux-gnu/bits/dlfcn.h:
+
+/usr/include/math.h:
+
+/usr/include/x86_64-linux-gnu/bits/huge_val.h:
+
+/usr/include/x86_64-linux-gnu/bits/huge_valf.h:
+
+/usr/include/x86_64-linux-gnu/bits/huge_vall.h:
+
+/usr/include/x86_64-linux-gnu/bits/inf.h:
+
+/usr/include/x86_64-linux-gnu/bits/nan.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathdef.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl2.h:
+
+/usr/include/fnmatch.h:
+
+/usr/include/ctype.h:
+
+/usr/include/dirent.h:
+
+/usr/include/x86_64-linux-gnu/bits/dirent.h:
+
+/usr/include/pwd.h:
+
+/usr/include/grp.h:
+
+/usr/include/glob.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/inttypes.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/libintl.h:
+
+/usr/include/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp2.h:
+
+/usr/include/eina-1/Eina.h:
+
+/usr/include/eina-1/eina_config.h:
+
+/usr/include/eina-1/eina/eina_types.h:
+
+/usr/include/eina-1/eina/eina_alloca.h:
+
+/usr/include/eina-1/eina/eina_main.h:
+
+/usr/include/efl-1/Efl_Config.h:
+
+/usr/include/eina-1/eina/eina_types.h:
+
+/usr/include/eina-1/eina/eina_fp.h:
+
+/usr/include/eina-1/eina/eina_inline_f32p32.x:
+
+/usr/include/eina-1/eina/eina_inline_f16p16.x:
+
+/usr/include/eina-1/eina/eina_inline_f8p24.x:
+
+/usr/include/eina-1/eina/eina_inline_fp.x:
+
+/usr/include/eina-1/eina/eina_rectangle.h:
+
+/usr/include/eina-1/eina/eina_inline_rectangle.x:
+
+/usr/include/eina-1/eina/eina_clist.h:
+
+/usr/include/eina-1/eina/eina_inline_clist.x:
+
+/usr/include/eina-1/eina/eina_inlist.h:
+
+/usr/include/eina-1/eina/eina_iterator.h:
+
+/usr/include/eina-1/eina/eina_magic.h:
+
+/usr/include/eina-1/eina/eina_error.h:
+
+/usr/include/eina-1/eina/eina_accessor.h:
+
+/usr/include/eina-1/eina/eina_inline_inlist.x:
+
+/usr/include/eina-1/eina/eina_file.h:
+
+/usr/include/eina-1/eina/eina_array.h:
+
+/usr/include/eina-1/eina/eina_inline_array.x:
+
+/usr/include/eina-1/eina/eina_tmpstr.h:
+
+/usr/include/eina-1/eina/eina_list.h:
+
+/usr/include/eina-1/eina/eina_inline_list.x:
+
+/usr/include/eina-1/eina/eina_hash.h:
+
+/usr/include/eina-1/eina/eina_inline_hash.x:
+
+/usr/include/eina-1/eina/eina_crc.h:
+
+/usr/include/eina-1/eina/eina_inline_crc.x:
+
+/usr/include/eina-1/eina/eina_trash.h:
+
+/usr/include/eina-1/eina/eina_inline_trash.x:
+
+/usr/include/eina-1/eina/eina_lalloc.h:
+
+/usr/include/eina-1/eina/eina_module.h:
+
+/usr/include/eina-1/eina/eina_mempool.h:
+
+/usr/include/eina-1/eina/eina_module.h:
+
+/usr/include/eina-1/eina/eina_inline_mempool.x:
+
+/usr/include/eina-1/eina/eina_error.h:
+
+/usr/include/eina-1/eina/eina_log.h:
+
+/usr/include/eina-1/eina/eina_inline_log.x:
+
+/usr/include/eina-1/eina/eina_inarray.h:
+
+/usr/include/eina-1/eina/eina_array.h:
+
+/usr/include/eina-1/eina/eina_binshare.h:
+
+/usr/include/eina-1/eina/eina_stringshare.h:
+
+/usr/include/eina-1/eina/eina_inline_stringshare.x:
+
+/usr/include/eina-1/eina/eina_stringshare.h:
+
+/usr/include/eina-1/eina/eina_ustringshare.h:
+
+/usr/include/eina-1/eina/eina_unicode.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
+
+/usr/include/eina-1/eina/eina_inline_unicode.x:
+
+/usr/include/eina-1/eina/eina_inline_ustringshare.x:
+
+/usr/include/eina-1/eina/eina_ustringshare.h:
+
+/usr/include/eina-1/eina/eina_magic.h:
+
+/usr/include/eina-1/eina/eina_counter.h:
+
+/usr/include/eina-1/eina/eina_rbtree.h:
+
+/usr/include/eina-1/eina/eina_inline_rbtree.x:
+
+/usr/include/eina-1/eina/eina_accessor.h:
+
+/usr/include/eina-1/eina/eina_iterator.h:
+
+/usr/include/eina-1/eina/eina_benchmark.h:
+
+/usr/include/eina-1/eina/eina_convert.h:
+
+/usr/include/eina-1/eina/eina_fp.h:
+
+/usr/include/eina-1/eina/eina_cpu.h:
+
+/usr/include/eina-1/eina/eina_inline_cpu.x:
+
+/usr/include/byteswap.h:
+
+/usr/include/eina-1/eina/eina_sched.h:
+
+/usr/include/eina-1/eina/eina_tiler.h:
+
+/usr/include/eina-1/eina/eina_rectangle.h:
+
+/usr/include/eina-1/eina/eina_inline_tiler.x:
+
+/usr/include/eina-1/eina/eina_safety_checks.h:
+
+/usr/include/eina-1/eina/eina_log.h:
+
+/usr/include/eina-1/eina/eina_thread.h:
+
+/usr/include/eina-1/eina/eina_hamster.h:
+
+/usr/include/eina-1/eina/eina_matrixsparse.h:
+
+/usr/include/eina-1/eina/eina_str.h:
+
+/usr/include/eina-1/eina/eina_inline_str.x:
+
+/usr/include/eina-1/eina/eina_strbuf.h:
+
+/usr/include/eina-1/eina/eina_binbuf.h:
+
+/usr/include/eina-1/eina/eina_ustrbuf.h:
+
+/usr/include/eina-1/eina/eina_unicode.h:
+
+/usr/include/eina-1/eina/eina_quadtree.h:
+
+/usr/include/eina-1/eina/eina_inlist.h:
+
+/usr/include/eina-1/eina/eina_simple_xml_parser.h:
+
+/usr/include/eina-1/eina/eina_lock.h:
+
+/usr/include/eina-1/eina/eina_main.h:
+
+/usr/include/eina-1/eina/eina_inline_lock_posix.x:
+
+/usr/include/sched.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/pthread.h:
+
+/usr/include/semaphore.h:
+
+/usr/include/x86_64-linux-gnu/bits/semaphore.h:
+
+/usr/include/eina-1/eina/eina_prefix.h:
+
+/usr/include/eina-1/eina/eina_refcount.h:
+
+/usr/include/eina-1/eina/eina_mmap.h:
+
+/usr/include/eina-1/eina/eina_xattr.h:
+
+/usr/include/eina-1/eina/eina_value.h:
+
+/usr/include/eina-1/eina/eina_inarray.h:
+
+/usr/include/eina-1/eina/eina_list.h:
+
+/usr/include/eina-1/eina/eina_hash.h:
+
+/usr/include/eina-1/eina/eina_inline_value.x:
+
+/usr/include/eina-1/eina/eina_value_util.h:
+
+/usr/include/eina-1/eina/eina_value.h:
+
+/usr/include/eina-1/eina/eina_inline_value_util.x:
+
+/usr/include/eina-1/eina/eina_cow.h:
+
+/usr/include/eina-1/eina/eina_thread_queue.h:
+
+/usr/include/eina-1/eina/eina_matrix.h:
+
+/usr/include/eina-1/eina/eina_quad.h:
+
+/usr/include/eina-1/eina/eina_crc.h:
+
+/usr/include/eina-1/eina/eina_evlog.h:
+
+/usr/include/eina-1/eina/eina_util.h:
+
+/usr/include/eina-1/eina/eina_quaternion.h:
+
+/usr/include/eet-1/Eet.h:
+
+/usr/include/emile-1/Emile.h:
+
+/usr/include/emile-1/emile_cipher.h:
+
+/usr/include/emile-1/emile_compress.h:
+
+/usr/include/emile-1/emile_image.h:
+
+/usr/include/evas-1/Evas.h:
+
+/usr/include/eo-1/Eo.h:
+
+/usr/include/eo-1/eo_base.eo.h:
+
+/usr/include/eo-1/eo_abstract_class.eo.h:
+
+/usr/include/efl-1/Efl.h:
+
+/usr/include/evas-1/Evas_Loader.h:
+
+/usr/include/evas-1/Evas_Common.h:
+
+/usr/include/evas-1/canvas/evas_types.eot.h:
+
+/usr/include/evas-1/Evas_Legacy.h:
+
+/usr/include/evas-1/canvas/evas_canvas.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_common_interface.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_object.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_rectangle.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_image.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_text.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_textblock.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_textgrid.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_line.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_polygon.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_object_smart.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_smart_clipped.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_box.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_table.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_grid.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_out.eo.legacy.h:
+
+/usr/include/evas-1/Evas_Engine_Buffer.h:
+
+/usr/include/ecore-1/Ecore.h:
+
+/usr/include/ecore-1/Ecore_Common.h:
+
+/usr/include/ecore-1/Ecore_Legacy.h:
+
+/usr/include/ecore-1/ecore_poller.eo.legacy.h:
+
+/usr/include/ecore-1/ecore_animator.eo.legacy.h:
+
+/usr/include/ecore-1/ecore_timer.eo.legacy.h:
+
+/usr/include/ecore-1/ecore_idler.eo.legacy.h:
+
+/usr/include/ecore-1/ecore_exe.eo.legacy.h:
+
+/usr/include/ecore-1/ecore_job.eo.legacy.h:
+
+/usr/include/ecore-x-1/Ecore_X.h:
+
+/usr/include/ecore-x-1/ecore_x_version.h:
+
+/usr/include/ecore-x-1/Ecore_X_Atoms.h:
+
+/usr/include/ecore-x-1/Ecore_X_Cursor.h:
+
+/usr/include/ecore-evas-1/Ecore_Evas.h:
+
+/usr/include/ecore-evas-1/Ecore_Evas_Types.h:
+
+/usr/include/ecore-input-1/Ecore_Input.h:
+
+/usr/include/ecore-input-evas-1/Ecore_Input_Evas.h:
+
+/usr/include/ecore-con-1/Ecore_Con.h:
+
+/usr/include/libgen.h:
+
+/usr/include/netdb.h:
+
+/usr/include/netinet/in.h:
+
+/usr/include/x86_64-linux-gnu/sys/socket.h:
+
+/usr/include/x86_64-linux-gnu/sys/uio.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket_type.h:
+
+/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
+
+/usr/include/x86_64-linux-gnu/asm/socket.h:
+
+/usr/include/asm-generic/socket.h:
+
+/usr/include/x86_64-linux-gnu/asm/sockios.h:
+
+/usr/include/asm-generic/sockios.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket2.h:
+
+/usr/include/x86_64-linux-gnu/bits/in.h:
+
+/usr/include/rpc/netdb.h:
+
+/usr/include/x86_64-linux-gnu/bits/netdb.h:
+
+/usr/include/ecore-con-1/Ecore_Con_Legacy.h:
+
+/usr/include/ecore-con-1/ecore_con_base.eo.legacy.h:
+
+/usr/include/ecore-con-1/ecore_con_server.eo.legacy.h:
+
+/usr/include/ecore-con-1/ecore_con_connector.eo.legacy.h:
+
+/usr/include/ecore-con-1/ecore_con_client.eo.legacy.h:
+
+/usr/include/ecore-ipc-1/Ecore_Ipc.h:
+
+/usr/include/ecore-file-1/Ecore_File.h:
+
+/usr/include/efreet-1/Efreet.h:
+
+/usr/include/efreet-1/efreet_base.h:
+
+/usr/include/efreet-1/efreet_ini.h:
+
+/usr/include/efreet-1/efreet_icon.h:
+
+/usr/include/efreet-1/efreet_desktop.h:
+
+/usr/include/efreet-1/efreet_menu.h:
+
+/usr/include/efreet-1/efreet_utils.h:
+
+/usr/include/efreet-1/efreet_uri.h:
+
+/usr/include/efreet-1/Efreet_Mime.h:
+
+/usr/include/edje-1/Edje.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/float.h:
+
+/usr/include/edje-1/Edje_Common.h:
+
+/usr/include/edje-1/edje_types.eot.h:
+
+/usr/include/edje-1/Edje_Legacy.h:
+
+/usr/include/edje-1/edje_object.eo.legacy.h:
+
+/usr/include/edje-1/edje_edit.eo.legacy.h:
+
+/usr/include/e_dbus-1/E_DBus.h:
+
+/usr/include/dbus-1.0/dbus/dbus.h:
+
+/usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h:
+
+/usr/include/dbus-1.0/dbus/dbus-macros.h:
+
+/usr/include/dbus-1.0/dbus/dbus-address.h:
+
+/usr/include/dbus-1.0/dbus/dbus-types.h:
+
+/usr/include/dbus-1.0/dbus/dbus-errors.h:
+
+/usr/include/dbus-1.0/dbus/dbus-protocol.h:
+
+/usr/include/dbus-1.0/dbus/dbus-bus.h:
+
+/usr/include/dbus-1.0/dbus/dbus-connection.h:
+
+/usr/include/dbus-1.0/dbus/dbus-memory.h:
+
+/usr/include/dbus-1.0/dbus/dbus-message.h:
+
+/usr/include/dbus-1.0/dbus/dbus-shared.h:
+
+/usr/include/dbus-1.0/dbus/dbus-misc.h:
+
+/usr/include/dbus-1.0/dbus/dbus-pending-call.h:
+
+/usr/include/dbus-1.0/dbus/dbus-server.h:
+
+/usr/include/dbus-1.0/dbus/dbus-signature.h:
+
+/usr/include/dbus-1.0/dbus/dbus-syntax.h:
+
+/usr/include/dbus-1.0/dbus/dbus-threads.h:
+
+/usr/include/eio-1/Eio.h:
+
+/usr/include/eio-1/eio_inline_helper.x:
+
+/usr/include/enlightenment/e_includes.h:
+
+/usr/include/enlightenment/e_mmx.h:
+
+/usr/include/enlightenment/e_object.h:
+
+/usr/include/enlightenment/e_user.h:
+
+/usr/include/enlightenment/e_manager.h:
+
+/usr/include/enlightenment/e_path.h:
+
+/usr/include/enlightenment/e_ipc.h:
+
+/usr/include/enlightenment/e_error.h:
+
+/usr/include/enlightenment/e_container.h:
+
+/usr/include/enlightenment/e_zone.h:
+
+/usr/include/enlightenment/e_desk.h:
+
+/usr/include/enlightenment/e_border.h:
+
+/usr/include/enlightenment/e_pointer.h:
+
+/usr/include/enlightenment/e_config.h:
+
+/usr/include/enlightenment/e_config_data.h:
+
+/usr/include/enlightenment/e_menu.h:
+
+/usr/include/enlightenment/e_icon.h:
+
+/usr/include/enlightenment/e_box.h:
+
+/usr/include/enlightenment/e_flowlayout.h:
+
+/usr/include/enlightenment/e_entry.h:
+
+/usr/include/enlightenment/e_init.h:
+
+/usr/include/enlightenment/e_int_menus.h:
+
+/usr/include/enlightenment/e_module.h:
+
+/usr/include/enlightenment/e_atoms.h:
+
+/usr/include/enlightenment/e_utils.h:
+
+/usr/include/enlightenment/e_canvas.h:
+
+/usr/include/enlightenment/e_focus.h:
+
+/usr/include/enlightenment/e_place.h:
+
+/usr/include/enlightenment/e_resist.h:
+
+/usr/include/enlightenment/e_startup.h:
+
+/usr/include/enlightenment/e_hints.h:
+
+/usr/include/enlightenment/e_signals.h:
+
+/usr/include/enlightenment/e_xinerama.h:
+
+/usr/include/enlightenment/e_randr.h:
+
+/usr/include/enlightenment/e_table.h:
+
+/usr/include/enlightenment/e_layout.h:
+
+/usr/include/enlightenment/e_font.h:
+
+/usr/include/enlightenment/e_intl.h:
+
+/usr/include/enlightenment/e_intl_data.h:
+
+/usr/include/enlightenment/e_theme.h:
+
+/usr/include/enlightenment/e_dnd.h:
+
+/usr/include/enlightenment/e_bindings.h:
+
+/usr/include/enlightenment/e_moveresize.h:
+
+/usr/include/enlightenment/e_actions.h:
+
+/usr/include/enlightenment/e_popup.h:
+
+/usr/include/enlightenment/e_gadcon_popup.h:
+
+/usr/include/enlightenment/e_ipc_codec.h:
+
+/usr/include/enlightenment/e_test.h:
+
+/usr/include/enlightenment/e_prefix.h:
+
+/usr/include/enlightenment/e_datastore.h:
+
+/usr/include/enlightenment/e_msg.h:
+
+/usr/include/enlightenment/e_alert.h:
+
+/usr/include/enlightenment/e_maximize.h:
+
+/usr/include/enlightenment/e_grabinput.h:
+
+/usr/include/enlightenment/e_bg.h:
+
+/usr/include/enlightenment/e_remember.h:
+
+/usr/include/enlightenment/e_win.h:
+
+/usr/include/enlightenment/e_pan.h:
+
+/usr/include/enlightenment/e_dialog.h:
+
+/usr/include/enlightenment/e_configure.h:
+
+/usr/include/enlightenment/e_about.h:
+
+/usr/include/enlightenment/e_theme_about.h:
+
+/usr/include/enlightenment/e_widget.h:
+
+/usr/include/enlightenment/e_widget_check.h:
+
+/usr/include/enlightenment/e_widget_radio.h:
+
+/usr/include/enlightenment/e_widget_framelist.h:
+
+/usr/include/enlightenment/e_widget_list.h:
+
+/usr/include/enlightenment/e_widget_button.h:
+
+/usr/include/enlightenment/e_widget_label.h:
+
+/usr/include/enlightenment/e_widget_frametable.h:
+
+/usr/include/enlightenment/e_widget_table.h:
+
+/usr/include/enlightenment/e_widget_entry.h:
+
+/usr/include/enlightenment/e_widget_image.h:
+
+/usr/include/enlightenment/e_config_dialog.h:
+
+/usr/include/enlightenment/e_int_border_locks.h:
+
+/usr/include/enlightenment/e_thumb.h:
+
+/usr/include/enlightenment/e_int_border_remember.h:
+
+/usr/include/enlightenment/e_eap_editor.h:
+
+/usr/include/enlightenment/e_scrollframe.h:
+
+/usr/include/enlightenment/e_int_border_menu.h:
+
+/usr/include/enlightenment/e_ilist.h:
+
+/usr/include/enlightenment/e_livethumb.h:
+
+/usr/include/enlightenment/e_widget_ilist.h:
+
+/usr/include/enlightenment/e_widget_config_list.h:
+
+/usr/include/enlightenment/e_slider.h:
+
+/usr/include/enlightenment/e_widget_slider.h:
+
+/usr/include/enlightenment/e_desklock.h:
+
+/usr/include/enlightenment/e_screensaver.h:
+
+/usr/include/enlightenment/e_dpms.h:
+
+/usr/include/enlightenment/e_int_config_modules.h:
+
+/usr/include/enlightenment/e_exehist.h:
+
+/usr/include/enlightenment/e_color_class.h:
+
+/usr/include/enlightenment/e_widget_textblock.h:
+
+/usr/include/enlightenment/e_stolen.h:
+
+/usr/include/enlightenment/e_gadcon.h:
+
+/usr/include/enlightenment/e_shelf.h:
+
+/usr/include/enlightenment/e_widget_preview.h:
+
+/usr/include/enlightenment/e_int_shelf_config.h:
+
+/usr/include/enlightenment/e_int_gadcon_config.h:
+
+/usr/include/enlightenment/e_confirm_dialog.h:
+
+/usr/include/enlightenment/e_int_border_prop.h:
+
+/usr/include/enlightenment/e_entry_dialog.h:
+
+/usr/include/enlightenment/e_fm.h:
+
+/usr/include/enlightenment/e_fm_shared_types.h:
+
+/usr/include/enlightenment/e_fm_op_registry.h:
+
+/usr/include/enlightenment/e_widget_scrollframe.h:
+
+/usr/include/enlightenment/e_sha1.h:
+
+/usr/include/enlightenment/e_widget_fsel.h:
+
+/usr/include/enlightenment/e_fm_mime.h:
+
+/usr/include/enlightenment/e_color.h:
+
+/usr/include/enlightenment/e_spectrum.h:
+
+/usr/include/enlightenment/e_widget_spectrum.h:
+
+/usr/include/enlightenment/e_widget_cslider.h:
+
+/usr/include/enlightenment/e_widget_color_well.h:
+
+/usr/include/enlightenment/e_widget_csel.h:
+
+/usr/include/enlightenment/e_color_dialog.h:
+
+/usr/include/enlightenment/e_sys.h:
+
+/usr/include/enlightenment/e_obj_dialog.h:
+
+/usr/include/enlightenment/e_filereg.h:
+
+/usr/include/enlightenment/e_widget_aspect.h:
+
+/usr/include/enlightenment/e_widget_deskpreview.h:
+
+/usr/include/enlightenment/e_fm_prop.h:
+
+/usr/include/enlightenment/e_mouse.h:
+
+/usr/include/enlightenment/e_order.h:
+
+/usr/include/enlightenment/e_exec.h:
+
+/usr/include/enlightenment/e_widget_font_preview.h:
+
+/usr/include/enlightenment/e_fm_custom.h:
+
+/usr/include/enlightenment/e_msgbus.h:
+
+/usr/include/enlightenment/e_toolbar.h:
+
+/usr/include/enlightenment/e_int_toolbar_config.h:
+
+/usr/include/enlightenment/e_powersave.h:
+
+/usr/include/enlightenment/e_slidesel.h:
+
+/usr/include/enlightenment/e_slidecore.h:
+
+/usr/include/enlightenment/e_widget_flist.h:
+
+/usr/include/enlightenment/e_fm_op.h:
+
+/usr/include/enlightenment/e_scale.h:
+
+/usr/include/enlightenment/e_widget_toolbar.h:
+
+/usr/include/enlightenment/e_widget_toolbook.h:
+
+/usr/include/enlightenment/e_acpi.h:
+
+/usr/include/enlightenment/e_env.h:
+
+/usr/include/enlightenment/e_backlight.h:
+
+/usr/include/enlightenment/e_deskenv.h:
+
+/usr/include/enlightenment/e_xsettings.h:
+
+/usr/include/enlightenment/e_update.h:
+
+/usr/include/enlightenment/e_xkb.h:
+
+/usr/include/enlightenment/e_log.h:
+
+/usr/include/enlightenment/e_import_dialog.h:
+
+/usr/include/enlightenment/e_import_config_dialog.h:
+
+/usr/include/enlightenment/e_grab_dialog.h:
+
+/usr/include/enlightenment/e_widget_filepreview.h:
+
+News_includes.h:
+
+e_mod_main.h:
+
+news_item.h:
+
+news_feed.h:
+
+news_parse.h:
+
+news_viewer.h:
+
+news_popup.h:
+
+news_menu.h:
+
+news_config.h:
+
+news_config_dialog.h:
+
+news_config_dialog_feeds.h:
+
+news_config_dialog_item.h:
+
+news_config_dialog_item_content.h:
+
+news_config_dialog_feed.h:
+
+news_config_dialog_category.h:
+
+news_config_dialog_langs.h:
+
+news_theme.h:
+
+news_utils.h:

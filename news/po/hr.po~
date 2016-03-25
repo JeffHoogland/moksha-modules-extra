@@ -1,0 +1,490 @@
+# Croatian translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Miro Glavic <glavicmiro@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-02-16 22:50+0100\n"
+"PO-Revision-Date: 2009-02-18 02:58+0000\n"
+"Last-Translator: Miro Glavic <glavicmiro@gmail.com>\n"
+"Language-Team: Croatian <hr@li.org>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:52
+msgid "Config init failed"
+msgstr "Config init neuspješan"
+
+#: src/e_mod_main.c:53
+msgid "Parser init failed"
+msgstr "Analizator init neuspješan"
+
+#: src/e_mod_main.c:54
+msgid "Feeds init failed"
+msgstr "Izvori init neuspješan"
+
+#: src/e_mod_main.c:55
+msgid "Viewer init failed"
+msgstr "Preglednik init neuspješan"
+
+#: src/e_mod_main.c:56
+msgid "Popup subsystem init failed"
+msgstr "Pop-up podsustav init neuspješan"
+
+#: src/e_mod_main.c:219
+msgid "News"
+msgstr "Vijesti"
+
+#: src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Modul Vijesti : Konfiguracija Unaprijeđena</hilight><br><br>Vaša "
+"konfiguracija modula vijesti<br>je unaprijeđena.<br>Vaše postavke su "
+"uklonjene.<br>Žalimo zbog neugodnosti.<br><br>(%d -> %d)"
+
+#: src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Modul Vijesti : Konfiguracija Unazađena</hilight><br><br>Vaša "
+"konfiguracija Modula Vijesti<br>je unazađena.<br>Vaše postavke su uklonjene."
+"<br>Žalimo zbog neugodnosti.<br><br>(%d ->%d)"
+
+#: src/news_config_dialog.c:90
+msgid "News Main Configuration"
+msgstr "Konfiguracija Glavnih Vijesti"
+
+#: src/news_config_dialog.c:190 src/news_config_dialog.c:228
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:156
+msgid "Feeds"
+msgstr "Izvori"
+
+#: src/news_config_dialog.c:192 src/news_config_dialog.c:236
+msgid "Sort lists by name (disable Move action)"
+msgstr "Svrstaj liste po imenu (onemogući Move akciju)"
+
+#: src/news_config_dialog.c:197 src/news_config_dialog.c:305
+msgid "News Viewer"
+msgstr "Preglednik Vijesti"
+
+#: src/news_config_dialog.c:199
+msgid "Font size"
+msgstr "Veličina pisma"
+
+#: src/news_config_dialog.c:202 src/news_config_dialog.c:316
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/news_config_dialog.c:205
+msgid "Font color"
+msgstr "Boja pisma"
+
+#: src/news_config_dialog.c:230 src/news_config_dialog.c:270
+#: src/news_config_dialog.c:290
+msgid "Timer"
+msgstr "Brojač vremena"
+
+#: src/news_config_dialog.c:232
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f min"
+
+#: src/news_config_dialog.c:241
+msgid "Browser"
+msgstr "Preglednik"
+
+#: src/news_config_dialog.c:243
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "Koristi xdg-open script, od freedesktop.org"
+
+#: src/news_config_dialog.c:248
+msgid "Popup On News"
+msgstr "Pop-up na Vijestima"
+
+#: src/news_config_dialog.c:251
+msgid "Never"
+msgstr "Nikad"
+
+#: src/news_config_dialog.c:257
+msgid "Only on urgent feeds"
+msgstr "Samo na hitnim izvorima"
+
+#: src/news_config_dialog.c:263
+msgid "On all feeds"
+msgstr "Na svim izvorima"
+
+#: src/news_config_dialog.c:272 src/news_config_dialog.c:292
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f s"
+
+#: src/news_config_dialog.c:280
+msgid "Popup On Warning / Error"
+msgstr "Pop-up Na Upozorenje / Greška"
+
+#: src/news_config_dialog.c:285
+msgid "Show on timeout ?"
+msgstr "Prikaži na pauzi ?"
+
+#: src/news_config_dialog.c:307
+msgid "Unread feeds first"
+msgstr "Prvo nepročitani Izvori"
+
+#: src/news_config_dialog.c:309
+msgid "Unread articles first"
+msgstr "Prvo nepročitani artikli"
+
+#: src/news_config_dialog.c:311
+msgid "Sort articles by date"
+msgstr "Svrstaj artikle po datumima"
+
+#: src/news_config_dialog.c:314
+msgid "Font"
+msgstr "Pismo"
+
+#: src/news_config_dialog.c:324
+msgid "Font Shadow"
+msgstr "Sjenčenje Pisma"
+
+#: src/news_config_dialog.c:336
+msgid "Proxy"
+msgstr "Proksi"
+
+#: src/news_config_dialog.c:338
+msgid "Enable"
+msgstr "Omogući"
+
+#: src/news_config_dialog.c:340
+msgid "Host"
+msgstr "Domaćin"
+
+#: src/news_config_dialog.c:344
+msgid "Port"
+msgstr "Ulaz"
+
+#: src/news_config_dialog_category.c:50
+msgid "News Category Configuration"
+msgstr "Konfiguracija Kategorija Vijesti"
+
+#: src/news_config_dialog_category.c:135
+msgid "Icon"
+msgstr "Ikona"
+
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+msgid "Name"
+msgstr "Ime"
+
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+msgid "Select an Icon"
+msgstr "Odaberi ikonu"
+
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+msgid "OK"
+msgstr "U redu"
+
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+msgid "Cancel"
+msgstr "Poništi"
+
+#: src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "Morate <hilight>kreirati kategoriju</hilight>prije svega."
+
+#: src/news_config_dialog_feed.c:77
+msgid "News Feed Configuration"
+msgstr "Konfiguracija Izvora Vijesti"
+
+#: src/news_config_dialog_feed.c:329
+msgid "Basic informations"
+msgstr "Osnovne informacije"
+
+#: src/news_config_dialog_feed.c:345
+msgid "Name :"
+msgstr "Naziv :"
+
+#: src/news_config_dialog_feed.c:349
+msgid "Feed url :"
+msgstr "Url Izvora :"
+
+#: src/news_config_dialog_feed.c:353
+msgid "Mark as important feed"
+msgstr "Označi kao važan izvor"
+
+#: src/news_config_dialog_feed.c:358
+msgid "Category"
+msgstr "Kategorija"
+
+#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+msgid "Language"
+msgstr "Jezik"
+
+#: src/news_config_dialog_feed.c:391
+msgid "Advanced informations"
+msgstr "Napredne informacije"
+
+#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+msgid "Description"
+msgstr "Opis"
+
+#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+msgid "Home url"
+msgstr "Glavni url"
+
+#: src/news_config_dialog_feed.c:405
+msgid "Server informations"
+msgstr "Informacije o poslužitelju"
+
+#: src/news_config_dialog_feed.c:407
+msgid "Do allow the server to overwrite the informations you entered ?"
+msgstr "Dozvoli poslužitelju da prepiše preko informacija koje ste unijeli ?"
+
+#: src/news_config_dialog_feeds.c:82
+msgid "News Feeds Configuration"
+msgstr "Konfiguration Izvora Vijesti"
+
+#: src/news_config_dialog_feeds.c:290
+msgid "Categories"
+msgstr "Kategorije"
+
+#: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
+msgid "Add"
+msgstr "Dodaj"
+
+#: src/news_config_dialog_feeds.c:316 src/news_config_dialog_feeds.c:390
+msgid "Delete"
+msgstr "Izbriši"
+
+#: src/news_config_dialog_feeds.c:319 src/news_config_dialog_feeds.c:393
+msgid "Configure"
+msgstr "Konfiguriraj"
+
+#: src/news_config_dialog_feeds.c:331 src/news_config_dialog_langs.c:133
+msgid "Languages"
+msgstr "Jezici"
+
+#: src/news_config_dialog_feeds.c:333
+msgid "All"
+msgstr "Sve"
+
+#: src/news_config_dialog_feeds.c:336
+msgid "Select"
+msgstr "Odaberi"
+
+#: src/news_config_dialog_feeds.c:346
+msgid "Empty the lists"
+msgstr "Isprazni liste"
+
+#: src/news_config_dialog_feeds.c:349
+msgid "Restore default lists"
+msgstr "Obnovi zadane liste"
+
+#: src/news_config_dialog_feeds.c:686
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+"U ovoj kategoriji se nalaze <hilight>izvori.</hilight><br>Morate ih "
+"<hilight>prvo ukloniti</hilight>"
+
+#: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
+msgid "News Module - Are you sure ?"
+msgstr "Modul Vijesti - Jeste li sigurni ?"
+
+#: src/news_config_dialog_item.c:40
+msgid "News Gadget Configuration"
+msgstr "Konfiguracija Naprave za Vijesti"
+
+#: src/news_config_dialog_item.c:104
+msgid "View Mode"
+msgstr "Pregled"
+
+#: src/news_config_dialog_item.c:107
+msgid "Show one icon for all feeds"
+msgstr "Prikaži jednu ikonu za sve izvore"
+
+#: src/news_config_dialog_item.c:109
+msgid "Show all feeds"
+msgstr "Prikaži sve izvore"
+
+#: src/news_config_dialog_item.c:111
+msgid "Show unread feeds"
+msgstr "Prikaži nepročitane izvore"
+
+#: src/news_config_dialog_item.c:113
+msgid "Show all feeds marked as important"
+msgstr "Prikaži sve izvore označene kao važne"
+
+#: src/news_config_dialog_item.c:115
+msgid "Show unread feeds marked as important"
+msgstr "Prikaži nepročitane izvore označene kao važne"
+
+#: src/news_config_dialog_item.c:120
+msgid "Feed open in"
+msgstr "Izvor otvoren u"
+
+#: src/news_config_dialog_item.c:123
+msgid "the feed viewer"
+msgstr "preglednik izvora"
+
+#: src/news_config_dialog_item.c:125
+msgid "my favorite browser"
+msgstr "moj omiljeni pretraživač"
+
+#: src/news_config_dialog_item.c:127
+msgid "Browser opens home url"
+msgstr "Pretraživač otvara glavni url"
+
+#: src/news_config_dialog_item.c:129
+msgid "instead of feed url"
+msgstr "umjesto url izvora"
+
+#: src/news_config_dialog_item.c:136
+msgid "Apply this to all News gadgets"
+msgstr "Primijeni ovo na sve aparate Vijesti"
+
+#: src/news_config_dialog_item_content.c:53
+msgid "News Gadget Content Configuration"
+msgstr "Konfiguracija Sadržaja Aparata Vijesti"
+
+#: src/news_config_dialog_item_content.c:258
+msgid "Avalaible Feeds"
+msgstr "Raspoloživi Izvori"
+
+#: src/news_config_dialog_item_content.c:267
+msgid "Add this Feed"
+msgstr "dodaj ovaj Izvor"
+
+#: src/news_config_dialog_item_content.c:274
+msgid "Selected Feeds"
+msgstr "Odabrani Izvori"
+
+#: src/news_config_dialog_item_content.c:292
+msgid "Remove this Feed"
+msgstr "Ukloni ovaj Izvor"
+
+#: src/news_config_dialog_langs.c:45
+msgid "News Feeds Language Configuration"
+msgstr "Konfiguracija Jezika Izvora Vijesti"
+
+#: src/news_config_dialog_langs.c:123
+msgid "Welcome to News Module !"
+msgstr "Dobrodošli u Modul Vijesti"
+
+#: src/news_config_dialog_langs.c:125
+msgid "Please select the languages that you are able to read"
+msgstr "Molimo odaberite jezik koji možete čitati"
+
+#: src/news_feed.c:291
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "Unešeni <hilight>naziv</hilight> je neispravan."
+
+#: src/news_feed.c:296
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "Treba <hilight>odabrati kategoriju</hilight>."
+
+#: src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+"Izvor sa <hilight>nazivom</hilight> %s <hilight>već postoji</hilight><br>u "
+"%s kategoriji<br><br>Nije moguće imati izvore sa istim nazivom<br>u jednoj "
+"kategoriji."
+
+#: src/news_feed.c:311
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "Trebate odabrati <hilight>jezik</hilight>."
+
+#: src/news_feed.c:318
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "Specificirani<hilight>url</hilight> je neisrpavan"
+
+#: src/news_feed.c:880
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr "Morate unijeti <hilight>naziv</hilight> !"
+
+#: src/news_feed.c:888
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr ""
+"Unešeni <hilight>naziv</hilight> je <hilight> već u upotrebi </hilight><br>u "
+"drugoj kategoriji"
+
+#: src/news_menu.c:129
+#, fuzzy
+msgid "Set all as read"
+msgstr "Postavi sve izvore kao pročitane"
+
+#: src/news_menu.c:135
+msgid "Update"
+msgstr ""
+
+#: src/news_menu.c:141
+#, fuzzy
+msgid "Gadget Contents"
+msgstr "Konfiguriraj sadržaj aparata"
+
+#: src/news_menu.c:151
+msgid "Gadget"
+msgstr ""
+
+#: src/news_menu.c:161
+msgid "Main"
+msgstr ""
+
+#: src/news_menu.c:166
+msgid "Settings"
+msgstr ""
+
+#: src/news_utils.h:13
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr "Modul Vijesti DEBUG DEBUG DEBUG DEBUG"
+
+#: src/news_utils.h:20
+msgid "News Module"
+msgstr "Modul Vijesti"
+
+#: src/news_utils.h:27
+msgid "News Module Error"
+msgstr "Greška u Modulu Vijesti"
+
+#: src/news_viewer.c:372
+msgid "Feeds in this gadget"
+msgstr "Izvori u ovom aparatu"
+
+#: src/news_viewer.c:438
+msgid "Articles in selected feed"
+msgstr "Artikli u odabranom izvoru"
+
+#~ msgid "Configure this feed"
+#~ msgstr "Konfiguriraj ovaj izvor"
+
+#~ msgid "Update all feeds"
+#~ msgstr "Osvježi sve izvore"
+
+#~ msgid "Configure gadget"
+#~ msgstr "Konfiguriraj aparat"
+
+#~ msgid "Main Configuration"
+#~ msgstr "Konfiguracija Glavnog"
+
+#~ msgid "Feeds Configuration"
+#~ msgstr "Konfiguracija Izvora"
+
+#~ msgid "Configuration"
+#~ msgstr "Konfiguracija"

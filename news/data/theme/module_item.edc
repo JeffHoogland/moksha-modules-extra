@@ -1,0 +1,15 @@
+/* Item group */
+
+group
+{
+        name: "modules/news/item";
+
+        parts
+        {
+                #include "module_item_parts.edc"
+        }
+
+        programs
+        {
+        }
+}

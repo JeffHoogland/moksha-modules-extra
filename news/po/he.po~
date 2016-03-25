@@ -1,0 +1,488 @@
+# Hebrew translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Yaron <sh.yaron@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-02-16 22:50+0100\n"
+"PO-Revision-Date: 2008-11-29 23:08+0000\n"
+"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:52
+msgid "Config init failed"
+msgstr "התחלת התצורה נכשלה"
+
+#: src/e_mod_main.c:53
+msgid "Parser init failed"
+msgstr "התחלת המפענח נכשלה"
+
+#: src/e_mod_main.c:54
+msgid "Feeds init failed"
+msgstr "התחלת ההזנות נכשלה"
+
+#: src/e_mod_main.c:55
+msgid "Viewer init failed"
+msgstr "התחלת המציג נכשלה"
+
+#: src/e_mod_main.c:56
+msgid "Popup subsystem init failed"
+msgstr "התחלת תת־המערכת נכשלה"
+
+#: src/e_mod_main.c:219
+msgid "News"
+msgstr "חדשות"
+
+#: src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>מודול החדשות : התצורה שודרגה</hilight><br><br>תצורת מודול החדשות "
+"שלך<br>שודרגה<br>ההגדרות שלך הוסרו<br>סליחה על אי הנעימות<br><br>(%d -> %d)"
+
+#: src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>מודול החדשות : גירסת התצורה נסוגה</hilight><br><br>גירסת תצורת "
+"מודול החדשות שלך<br>נסוגה<br>ההגדרות שלך הוסרו<br>סליחה על אי הנעימות<br><br>"
+"(%d -> %d)"
+
+#: src/news_config_dialog.c:90
+msgid "News Main Configuration"
+msgstr "תצורת החדשות הראשית"
+
+#: src/news_config_dialog.c:190 src/news_config_dialog.c:228
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:156
+msgid "Feeds"
+msgstr "הזנות"
+
+#: src/news_config_dialog.c:192 src/news_config_dialog.c:236
+msgid "Sort lists by name (disable Move action)"
+msgstr "סדר את הרשימות לפי שם (ביטול פעולת ההעברה)"
+
+#: src/news_config_dialog.c:197 src/news_config_dialog.c:305
+msgid "News Viewer"
+msgstr "מציג החדשות"
+
+#: src/news_config_dialog.c:199
+msgid "Font size"
+msgstr "גודל הגופן"
+
+#: src/news_config_dialog.c:202 src/news_config_dialog.c:316
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/news_config_dialog.c:205
+msgid "Font color"
+msgstr "צבע הגופן"
+
+#: src/news_config_dialog.c:230 src/news_config_dialog.c:270
+#: src/news_config_dialog.c:290
+msgid "Timer"
+msgstr "קוצב זמן"
+
+#: src/news_config_dialog.c:232
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f דק'"
+
+#: src/news_config_dialog.c:241
+msgid "Browser"
+msgstr "דפדפן"
+
+#: src/news_config_dialog.c:243
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "עושה שימוש בסקריפט xdg-open, מ־freedesktop.org"
+
+#: src/news_config_dialog.c:248
+msgid "Popup On News"
+msgstr "הקפץ חלונית לדיווחים"
+
+#: src/news_config_dialog.c:251
+msgid "Never"
+msgstr "לעולם לא"
+
+#: src/news_config_dialog.c:257
+msgid "Only on urgent feeds"
+msgstr "רק עבור הזנות דחופות"
+
+#: src/news_config_dialog.c:263
+msgid "On all feeds"
+msgstr "עבור כל ההזנות"
+
+#: src/news_config_dialog.c:272 src/news_config_dialog.c:292
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f שנ'"
+
+#: src/news_config_dialog.c:280
+msgid "Popup On Warning / Error"
+msgstr "הקפץ בעת אזהרה / שגיאה"
+
+#: src/news_config_dialog.c:285
+msgid "Show on timeout ?"
+msgstr "הצג עם תפוגת זמן"
+
+#: src/news_config_dialog.c:307
+msgid "Unread feeds first"
+msgstr "הזנות שלא נקראו תחילה"
+
+#: src/news_config_dialog.c:309
+msgid "Unread articles first"
+msgstr "כתבות שלא נקראו תחילה"
+
+#: src/news_config_dialog.c:311
+msgid "Sort articles by date"
+msgstr "סדר כתבות לפי תאריך"
+
+#: src/news_config_dialog.c:314
+msgid "Font"
+msgstr "גופן"
+
+#: src/news_config_dialog.c:324
+msgid "Font Shadow"
+msgstr "הצללת הגופן"
+
+#: src/news_config_dialog.c:336
+msgid "Proxy"
+msgstr "מתווך"
+
+#: src/news_config_dialog.c:338
+msgid "Enable"
+msgstr "הפעל"
+
+#: src/news_config_dialog.c:340
+msgid "Host"
+msgstr "מארח"
+
+#: src/news_config_dialog.c:344
+msgid "Port"
+msgstr "פתחה"
+
+#: src/news_config_dialog_category.c:50
+msgid "News Category Configuration"
+msgstr "תצורת קטגוריית החדשות"
+
+#: src/news_config_dialog_category.c:135
+msgid "Icon"
+msgstr "סמל"
+
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+msgid "Name"
+msgstr "שם"
+
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+msgid "Select an Icon"
+msgstr "בחר סמל"
+
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+msgid "OK"
+msgstr "אישור"
+
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+msgid "Cancel"
+msgstr "ביטול"
+
+#: src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "עליך <hilight>ליצור קטגוריה</hilight> תחילה"
+
+#: src/news_config_dialog_feed.c:77
+msgid "News Feed Configuration"
+msgstr "תצורת הזנת החדשות"
+
+#: src/news_config_dialog_feed.c:329
+msgid "Basic informations"
+msgstr "פריטי מידע בסיסי"
+
+#: src/news_config_dialog_feed.c:345
+msgid "Name :"
+msgstr "שם :"
+
+#: src/news_config_dialog_feed.c:349
+msgid "Feed url :"
+msgstr "כתובת ההזנה :"
+
+#: src/news_config_dialog_feed.c:353
+msgid "Mark as important feed"
+msgstr "סמן כהזנה חשובה"
+
+#: src/news_config_dialog_feed.c:358
+msgid "Category"
+msgstr "קטגוריה"
+
+#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+msgid "Language"
+msgstr "שפה"
+
+#: src/news_config_dialog_feed.c:391
+msgid "Advanced informations"
+msgstr "פריטי מידע מתקדם"
+
+#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+msgid "Description"
+msgstr "תיאור"
+
+#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+msgid "Home url"
+msgstr "כתובת הבית"
+
+#: src/news_config_dialog_feed.c:405
+msgid "Server informations"
+msgstr "פריטי מידע השרת"
+
+#: src/news_config_dialog_feed.c:407
+msgid "Do allow the server to overwrite the informations you entered ?"
+msgstr "אפשר לשרת לשכתב על פריטי המידע שהזנת ?"
+
+#: src/news_config_dialog_feeds.c:82
+msgid "News Feeds Configuration"
+msgstr "תצורת הזנות החדשות"
+
+#: src/news_config_dialog_feeds.c:290
+msgid "Categories"
+msgstr "קטגוריות"
+
+#: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
+msgid "Add"
+msgstr "הוסף"
+
+#: src/news_config_dialog_feeds.c:316 src/news_config_dialog_feeds.c:390
+msgid "Delete"
+msgstr "מחק"
+
+#: src/news_config_dialog_feeds.c:319 src/news_config_dialog_feeds.c:393
+msgid "Configure"
+msgstr "הגדר"
+
+#: src/news_config_dialog_feeds.c:331 src/news_config_dialog_langs.c:133
+msgid "Languages"
+msgstr "שפות"
+
+#: src/news_config_dialog_feeds.c:333
+msgid "All"
+msgstr "הכול"
+
+#: src/news_config_dialog_feeds.c:336
+msgid "Select"
+msgstr "בחר"
+
+#: src/news_config_dialog_feeds.c:346
+msgid "Empty the lists"
+msgstr "רוקן את הרשימות"
+
+#: src/news_config_dialog_feeds.c:349
+msgid "Restore default lists"
+msgstr "שחזר את רשימות ברירת המחדל"
+
+#: src/news_config_dialog_feeds.c:686
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+"ישנן <hilight>הזנות</hilight> בקטגוריה זו.<br>עליך <hilight>להסיר אותן "
+"תחילה</hilight>"
+
+#: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
+msgid "News Module - Are you sure ?"
+msgstr "מודול החדשות - האם אתה בטוח ?"
+
+#: src/news_config_dialog_item.c:40
+msgid "News Gadget Configuration"
+msgstr "תצורת יישומון החדשות"
+
+#: src/news_config_dialog_item.c:104
+msgid "View Mode"
+msgstr "מצב הצגה"
+
+#: src/news_config_dialog_item.c:107
+msgid "Show one icon for all feeds"
+msgstr "הצג סמל אחד עבור כול ההזנות"
+
+#: src/news_config_dialog_item.c:109
+msgid "Show all feeds"
+msgstr "הצג את כול ההזנות"
+
+#: src/news_config_dialog_item.c:111
+msgid "Show unread feeds"
+msgstr "הצג הזנות שלא נקראו"
+
+#: src/news_config_dialog_item.c:113
+msgid "Show all feeds marked as important"
+msgstr "הצג את כול ההזנות שסומנו כחשובות"
+
+#: src/news_config_dialog_item.c:115
+msgid "Show unread feeds marked as important"
+msgstr "הצג הזנות שלא נקראו המסומנות כחשובות"
+
+#: src/news_config_dialog_item.c:120
+msgid "Feed open in"
+msgstr "פתיחת ההזנה באמצעות"
+
+#: src/news_config_dialog_item.c:123
+msgid "the feed viewer"
+msgstr "מציג ההזנות"
+
+#: src/news_config_dialog_item.c:125
+msgid "my favorite browser"
+msgstr "הדפדפן המועדף עלי"
+
+#: src/news_config_dialog_item.c:127
+msgid "Browser opens home url"
+msgstr "הדפדפן פותח את כתובת הבית"
+
+#: src/news_config_dialog_item.c:129
+msgid "instead of feed url"
+msgstr "במקום את כתובת ההזנה"
+
+#: src/news_config_dialog_item.c:136
+msgid "Apply this to all News gadgets"
+msgstr "החל זאת על כול יישומוני החדשות"
+
+#: src/news_config_dialog_item_content.c:53
+msgid "News Gadget Content Configuration"
+msgstr "תצורת תוכן יישומון החדשות"
+
+#: src/news_config_dialog_item_content.c:258
+msgid "Avalaible Feeds"
+msgstr "הזנות זמינות"
+
+#: src/news_config_dialog_item_content.c:267
+msgid "Add this Feed"
+msgstr "הוסף הזנה זו"
+
+#: src/news_config_dialog_item_content.c:274
+msgid "Selected Feeds"
+msgstr "הזנות נבחרות"
+
+#: src/news_config_dialog_item_content.c:292
+msgid "Remove this Feed"
+msgstr "הסר הזנה זו"
+
+#: src/news_config_dialog_langs.c:45
+msgid "News Feeds Language Configuration"
+msgstr "תצורת שפת הזנות החדשות"
+
+#: src/news_config_dialog_langs.c:123
+msgid "Welcome to News Module !"
+msgstr "ברוך הבא למודול החדשות !"
+
+#: src/news_config_dialog_langs.c:125
+msgid "Please select the languages that you are able to read"
+msgstr "אנא בחר את השפות שהינך מבין"
+
+#: src/news_feed.c:291
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "ה<hilight>שם</hilight> שהזנת אינו נכון"
+
+#: src/news_feed.c:296
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "הצורך ב<hilight>בחירת קטגוריה</hilight>."
+
+#: src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+"הזנה בעלת <hilight>השם</hilight> %s <hilight>כבר קיימת</hilight><br>תחת "
+"הקטגוריה %s<br><br>לא תתכנה שתי הזנות בעלות אותו השם<br>באותה הקטגוריה."
+
+#: src/news_feed.c:311
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "עליך לבחור <hilight>שפה</hilight>."
+
+#: src/news_feed.c:318
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "ה<hilight>כתובת</hilight> שציינת אינה נכונה"
+
+#: src/news_feed.c:880
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr "עליך להזין <hilight>שם</hilight> !"
+
+#: src/news_feed.c:888
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr ""
+"ה<hilight>שם</hilight> שהזנת <hilight>כבר נמצא בשימוש</hilight><br>על ידי "
+"קטגוריה אחרת"
+
+#: src/news_menu.c:129
+#, fuzzy
+msgid "Set all as read"
+msgstr "הגדר את כול ההזנות כנקראו"
+
+#: src/news_menu.c:135
+msgid "Update"
+msgstr ""
+
+#: src/news_menu.c:141
+#, fuzzy
+msgid "Gadget Contents"
+msgstr "הגדר את תוכן היישומון"
+
+#: src/news_menu.c:151
+msgid "Gadget"
+msgstr ""
+
+#: src/news_menu.c:161
+msgid "Main"
+msgstr ""
+
+#: src/news_menu.c:166
+msgid "Settings"
+msgstr ""
+
+#: src/news_utils.h:13
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr "מודול החדשות ניפוי ניפוי ניפוי"
+
+#: src/news_utils.h:20
+msgid "News Module"
+msgstr "מודול החדשות"
+
+#: src/news_utils.h:27
+msgid "News Module Error"
+msgstr "שגיאת מודול החדשות"
+
+#: src/news_viewer.c:372
+msgid "Feeds in this gadget"
+msgstr "הזנות ביישומון זה"
+
+#: src/news_viewer.c:438
+msgid "Articles in selected feed"
+msgstr "כתבות בהזנה הנבחרת"
+
+#~ msgid "Configure this feed"
+#~ msgstr "הגדר הזנה זו"
+
+#~ msgid "Update all feeds"
+#~ msgstr "עדכן את כול ההזנות"
+
+#~ msgid "Configure gadget"
+#~ msgstr "הגדר את היישומון"
+
+#~ msgid "Main Configuration"
+#~ msgstr "התצורה הראשית"
+
+#~ msgid "Feeds Configuration"
+#~ msgstr "תצורת ההזנות"
+
+#~ msgid "Configuration"
+#~ msgstr "תצורה"

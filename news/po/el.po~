@@ -1,0 +1,496 @@
+# translation of el.po to Greek
+# News module (e17), French translation
+# This file is put in the public domain.
+#
+#
+# Giorgos Koutsikos <ragecryx@yahoo.gr>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: el\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-02-16 22:50+0100\n"
+"PO-Revision-Date: 2009-03-05 04:20+0200\n"
+"Last-Translator: Giorgos Koutsikos <ragecryx@yahoo.gr>\n"
+"Language-Team: Greek <enlightenment-intl@lists.sourceforge.net>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/e_mod_main.c:52
+msgid "Config init failed"
+msgstr "απέτυχε"
+
+#: src/e_mod_main.c:53
+msgid "Parser init failed"
+msgstr "απέτυχε"
+
+#: src/e_mod_main.c:54
+msgid "Feeds init failed"
+msgstr "απέτυχε"
+
+#: src/e_mod_main.c:55
+msgid "Viewer init failed"
+msgstr "απέτυχε"
+
+#: src/e_mod_main.c:56
+msgid "Popup subsystem init failed"
+msgstr "απέτυχε"
+
+#: src/e_mod_main.c:219
+msgid "News"
+msgstr "Ειδήσεις"
+
+#: src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Άρθρωμα Ειδήσεων: Ρύθμιση Αναβαθμίστηκε</hilight><br><br>Η ρύθμιση "
+"του αρθρώματος Ειδήσεων σας<br>έχει αναβαθμιστεί<br><br>Οι ρυθμίσεις σας "
+"αφαιρέθηκαν<br>Συγγνώμη για την αναστάτωση<br><br>(%d -> %d)"
+
+#: src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Άρθρωμα Ειδήσεων: Ρύθμιση Υποβαθμίστηκε</hilight><br><br>Η ρύθμιση "
+"του αρθρώματος Ειδήσεων σας<br>έχει υποβαθμιστεί<br>Οι ρυθμίσεις σας "
+"αφαιρέθηκαν<br>Συγγνώμη για την αναστάτωση<br><br>(%d ->%d)"
+
+#: src/news_config_dialog.c:90
+msgid "News Main Configuration"
+msgstr "Κεντρική Ρύθμιση Ειδήσεων"
+
+#: src/news_config_dialog.c:190 src/news_config_dialog.c:228
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:156
+msgid "Feeds"
+msgstr "Ροές"
+
+#: src/news_config_dialog.c:192 src/news_config_dialog.c:236
+msgid "Sort lists by name (disable Move action)"
+msgstr "Ταξινόμηση λίστας κατά όνομα (απενεργοποίηση ενέργειας Μετακίνησης)"
+
+#: src/news_config_dialog.c:197 src/news_config_dialog.c:305
+msgid "News Viewer"
+msgstr "Προβολέας Ειδήσεων"
+
+#: src/news_config_dialog.c:199
+msgid "Font size"
+msgstr "Μέγεθος Γραμματοσειράς"
+
+#: src/news_config_dialog.c:202 src/news_config_dialog.c:316
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/news_config_dialog.c:205
+msgid "Font color"
+msgstr "Χρώμα Γραμματοσειράς"
+
+#: src/news_config_dialog.c:230 src/news_config_dialog.c:270
+#: src/news_config_dialog.c:290
+msgid "Timer"
+msgstr "Χρονόμετρο"
+
+#: src/news_config_dialog.c:232
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f λεπτά"
+
+#: src/news_config_dialog.c:241
+msgid "Browser"
+msgstr "Περιηγητής Ιστού"
+
+#: src/news_config_dialog.c:243
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "Χρησημοποιεί το ανοιχό σενάριο xdg, από το freedesktop.org"
+
+#: src/news_config_dialog.c:248
+msgid "Popup On News"
+msgstr "Γρήγορη Ειδοποίηση στις Ειδήσεις"
+
+#: src/news_config_dialog.c:251
+msgid "Never"
+msgstr "Ποτέ"
+
+#: src/news_config_dialog.c:257
+msgid "Only on urgent feeds"
+msgstr "Μόνο στις επείγουσες ροές"
+
+#: src/news_config_dialog.c:263
+msgid "On all feeds"
+msgstr "Σε όλες τις ροές"
+
+#: src/news_config_dialog.c:272 src/news_config_dialog.c:292
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f s"
+
+#: src/news_config_dialog.c:280
+msgid "Popup On Warning / Error"
+msgstr "Γρήγορη Ειδοποίηση σε Προειδοποίηση/Σφάλμα"
+
+#: src/news_config_dialog.c:285
+msgid "Show on timeout ?"
+msgstr "Εμφάνιση με τη λήξη του χρονικού ορίου"
+
+#: src/news_config_dialog.c:307
+msgid "Unread feeds first"
+msgstr "Μη-αναγνωσμένες ροές πρώτες"
+
+#: src/news_config_dialog.c:309
+msgid "Unread articles first"
+msgstr "Μη-αναγνωσμένα άρθρα πρώτα"
+
+#: src/news_config_dialog.c:311
+msgid "Sort articles by date"
+msgstr "Ταξινόμηση άρθρων κατά ημερομηνία"
+
+#: src/news_config_dialog.c:314
+msgid "Font"
+msgstr "Γραμματοσειρά"
+
+#: src/news_config_dialog.c:324
+msgid "Font Shadow"
+msgstr "Σκιά Γραμματοσειράς"
+
+#: src/news_config_dialog.c:336
+msgid "Proxy"
+msgstr "Διαμεσολαβητής"
+
+#: src/news_config_dialog.c:338
+msgid "Enable"
+msgstr "Ενεργοποίηση"
+
+#: src/news_config_dialog.c:340
+msgid "Host"
+msgstr "Υπολογηστής"
+
+#: src/news_config_dialog.c:344
+msgid "Port"
+msgstr "Πόρτα"
+
+#: src/news_config_dialog_category.c:50
+msgid "News Category Configuration"
+msgstr "Ρύθμιση Κατηγορίας Ειδήσεων"
+
+#: src/news_config_dialog_category.c:135
+msgid "Icon"
+msgstr "Εικονίδιο"
+
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+msgid "Name"
+msgstr "Όνομα"
+
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+msgid "Select an Icon"
+msgstr "Επιλογή ενός Εικονιδίου"
+
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+msgid "OK"
+msgstr "Οκ"
+
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+msgid "Cancel"
+msgstr "Άκυρο"
+
+#: src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "Πρέπει να <hilight>δημιουργήσεις μια κατηγορία</hilight> πρώτα"
+
+#: src/news_config_dialog_feed.c:77
+msgid "News Feed Configuration"
+msgstr "Ρύθμιση Ροής Ειδήσεων"
+
+#: src/news_config_dialog_feed.c:329
+msgid "Basic informations"
+msgstr "Βασικές πληροφορίες"
+
+#: src/news_config_dialog_feed.c:345
+msgid "Name :"
+msgstr "Όνομα:"
+
+#: src/news_config_dialog_feed.c:349
+msgid "Feed url :"
+msgstr "Σελίδα Ροής:"
+
+#: src/news_config_dialog_feed.c:353
+msgid "Mark as important feed"
+msgstr "Σημείωση ως σημαντική ροή"
+
+#: src/news_config_dialog_feed.c:358
+msgid "Category"
+msgstr "Κατηγορία"
+
+#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+msgid "Language"
+msgstr "Γλώσσα"
+
+#: src/news_config_dialog_feed.c:391
+msgid "Advanced informations"
+msgstr "Προχωρημένες πληροφορίες"
+
+#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+msgid "Home url"
+msgstr "Αρχική Σελίδα"
+
+#: src/news_config_dialog_feed.c:405
+msgid "Server informations"
+msgstr "Πληροφορίες εξυπηρετητή"
+
+#: src/news_config_dialog_feed.c:407
+msgid "Do allow the server to overwrite the informations you entered ?"
+msgstr ""
+"Να επιτρέψεις στον Εξυπηρετητή να κάνει αντικατάσταση των πληροφοριών που "
+"εισάγατε ?"
+
+#: src/news_config_dialog_feeds.c:82
+msgid "News Feeds Configuration"
+msgstr "Ρύθμιση Ροών Ειδήσεων"
+
+#: src/news_config_dialog_feeds.c:290
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+#: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
+msgid "Add"
+msgstr "Προσθήκη"
+
+#: src/news_config_dialog_feeds.c:316 src/news_config_dialog_feeds.c:390
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: src/news_config_dialog_feeds.c:319 src/news_config_dialog_feeds.c:393
+msgid "Configure"
+msgstr "Ρύθμιση"
+
+#: src/news_config_dialog_feeds.c:331 src/news_config_dialog_langs.c:133
+msgid "Languages"
+msgstr "Γλώσσες"
+
+#: src/news_config_dialog_feeds.c:333
+msgid "All"
+msgstr "Όλα"
+
+#: src/news_config_dialog_feeds.c:336
+msgid "Select"
+msgstr "Επιλογή"
+
+#: src/news_config_dialog_feeds.c:346
+msgid "Empty the lists"
+msgstr "Άδειασε τις λίστες"
+
+#: src/news_config_dialog_feeds.c:349
+msgid "Restore default lists"
+msgstr "Επανέφερε τις προκαθορισμένες λίστες"
+
+#: src/news_config_dialog_feeds.c:686
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+"Υπάρχουν <hilight>ροές</hilight> σε αυτή την κατηγορία.<br>Πρέπει να "
+"<hilight>τις αφαιρέσετε πρώτα</hilight>"
+
+#: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
+msgid "News Module - Are you sure ?"
+msgstr "Άρθρωμα Ειδήσεων - Είστε σίγουροι ?"
+
+#: src/news_config_dialog_item.c:40
+msgid "News Gadget Configuration"
+msgstr "Ρύθμιση Συστατικού Ειδήσεων"
+
+#: src/news_config_dialog_item.c:104
+msgid "View Mode"
+msgstr "Λειτουργία Προβολής"
+
+#: src/news_config_dialog_item.c:107
+msgid "Show one icon for all feeds"
+msgstr "Εμφάνιση ενός εικονιδίου για όλες τις ροές"
+
+#: src/news_config_dialog_item.c:109
+msgid "Show all feeds"
+msgstr "Εμφάνιση όλων των ροών"
+
+#: src/news_config_dialog_item.c:111
+msgid "Show unread feeds"
+msgstr "Εμφάνιση μη-αναγνωσμένων ροών"
+
+#: src/news_config_dialog_item.c:113
+msgid "Show all feeds marked as important"
+msgstr "Εμφάνιση όλων των ροών που είναι σημειωμένες ως σημαντικές"
+
+#: src/news_config_dialog_item.c:115
+msgid "Show unread feeds marked as important"
+msgstr "Εμφάνιση μη-αναγνωσμένων ροών που είναι σημειωμένες ως σημαντικές"
+
+#: src/news_config_dialog_item.c:120
+msgid "Feed open in"
+msgstr "Ροή ανοίγει σε"
+
+#: src/news_config_dialog_item.c:123
+msgid "the feed viewer"
+msgstr "ο προβολέας ροών"
+
+#: src/news_config_dialog_item.c:125
+msgid "my favorite browser"
+msgstr "ο αγαπημένος μου περιηγητής ιστού"
+
+#: src/news_config_dialog_item.c:127
+msgid "Browser opens home url"
+msgstr "Ο Περιηγητής Ιστού ανοίγει την Αρχική σελίδα"
+
+#: src/news_config_dialog_item.c:129
+msgid "instead of feed url"
+msgstr "αντί για τη σελίδα ροών"
+
+#: src/news_config_dialog_item.c:136
+msgid "Apply this to all News gadgets"
+msgstr "Εφαρμογή αυτού σε όλα τα Συστατικά Ειδήσεων"
+
+#: src/news_config_dialog_item_content.c:53
+msgid "News Gadget Content Configuration"
+msgstr "Ρύθμιση Περιεχομένου Συστατικού Ειδήσεων"
+
+#: src/news_config_dialog_item_content.c:258
+msgid "Avalaible Feeds"
+msgstr "Διαθέσιμες Ροές"
+
+#: src/news_config_dialog_item_content.c:267
+msgid "Add this Feed"
+msgstr "Προσθήκη αυτής της Ροής"
+
+#: src/news_config_dialog_item_content.c:274
+msgid "Selected Feeds"
+msgstr "Επιλεγμένες Ροές"
+
+#: src/news_config_dialog_item_content.c:292
+msgid "Remove this Feed"
+msgstr "Αφαίρεση αυτής της Ροής"
+
+#: src/news_config_dialog_langs.c:45
+msgid "News Feeds Language Configuration"
+msgstr "Ρύθμιση Γλώσσας Ροών Ειδήσεων"
+
+#: src/news_config_dialog_langs.c:123
+msgid "Welcome to News Module !"
+msgstr "Καλώς ορίσατε στο Άρθρωμα Ειδήσεων"
+
+#: src/news_config_dialog_langs.c:125
+msgid "Please select the languages that you are able to read"
+msgstr "Παρακαλώ επιλέξτε τις γλώσσες που μπορείτε να διαβάσετε"
+
+#: src/news_feed.c:291
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "Το <hilight>όνομα</hilight> που δώσατε δεν είναι σωστό"
+
+#: src/news_feed.c:296
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "Ανάγκη επιλογής μιας<hilight>κατηγορίας</hilight>."
+
+#: src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+"Η ροή με <hilight>όνομα</hilight> %s <hilight>υπάρχει ήδη</hilight><br>στην "
+"%s κατηγορία<br><br>Δεν γίνεται να υπάρχουν ροές με το ίδιο όνομα<br>στην "
+"ίδια κατηγορία."
+
+#: src/news_feed.c:311
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "Πρέπει να επιλέξετε μια <hilight>γλώσσα</hilight>."
+
+#: src/news_feed.c:318
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "Η <hilight>σελίδα</hilight> που καθορίσατε δεν είναι σωστή"
+
+#: src/news_feed.c:880
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr "Πρέπει να εισάγετε ένα <hilight>όνομα</hilight> !"
+
+#: src/news_feed.c:888
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr ""
+"Το <hilight>όνομα</hilight> που δώσατε <hilight>χρησιμοποιείται ήδη</"
+"hilight><br>από μια άλλη κατηγορία"
+
+#: src/news_menu.c:129
+#, fuzzy
+msgid "Set all as read"
+msgstr "Ορισμός όλων των ροών ως αναγνωσμένες"
+
+#: src/news_menu.c:135
+msgid "Update"
+msgstr ""
+
+#: src/news_menu.c:141
+#, fuzzy
+msgid "Gadget Contents"
+msgstr "Ρύθμιση περιεχομένου συστατικού"
+
+#: src/news_menu.c:151
+msgid "Gadget"
+msgstr ""
+
+#: src/news_menu.c:161
+msgid "Main"
+msgstr ""
+
+#: src/news_menu.c:166
+msgid "Settings"
+msgstr ""
+
+#: src/news_utils.h:13
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr ""
+
+#: src/news_utils.h:20
+msgid "News Module"
+msgstr "Άρθρωμα Ειδήσεων"
+
+#: src/news_utils.h:27
+msgid "News Module Error"
+msgstr "Σφάλμα Άρθρωματος Ειδήσεων"
+
+#: src/news_viewer.c:372
+msgid "Feeds in this gadget"
+msgstr "Ροές σε αυτό το συστατικό"
+
+#: src/news_viewer.c:438
+msgid "Articles in selected feed"
+msgstr "Άρθρα στην επιλεγμένη ροή"
+
+#~ msgid "Configure this feed"
+#~ msgstr "Ρύθμιση αυτής της ροής"
+
+#~ msgid "Update all feeds"
+#~ msgstr "Ανανέωση όλων των ροών"
+
+#~ msgid "Configure gadget"
+#~ msgstr "Ρύθμιση συστατικού"
+
+#~ msgid "Main Configuration"
+#~ msgstr "Κεντρική Ρύθμιση"
+
+#~ msgid "Feeds Configuration"
+#~ msgstr "Ρύθμιση Ροών"
+
+#~ msgid "Configuration"
+#~ msgstr "Ρύθμιση"

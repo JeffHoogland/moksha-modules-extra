@@ -1,0 +1,16 @@
+/* Feed group */
+
+group
+{
+        name: "modules/news/feed";
+
+        parts
+        {
+                #include "module_feed_parts.edc"
+        }
+
+        programs
+        {
+                #include "module_feed_programs.edc"
+        }
+}
