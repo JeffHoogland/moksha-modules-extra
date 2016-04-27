@@ -7,6 +7,8 @@
 
 #define GOLDEN_RATIO 1.618033989
 
+#define DEFAULT_LOCATION "839722"
+
 #define ENABLE_DEBUG 0
 #define DEBUG(f, ...) if (ENABLE_DEBUG) \
     printf("[forecasts] "f "\n", __VA_ARGS__)
@@ -372,8 +374,9 @@ _forecasts_config_item_get(const char *id)
    ci->poll_time = 60.0;
    ci->days = 15.0;
    ci->degrees = DEGREES_C;
-   ci->host = eina_stringshare_add("xml.weather.yahoo.com");
-   ci->code = eina_stringshare_add("BUXX0005");
+   ci->host = eina_stringshare_add("query.yahooapis.com");
+   //ci->host = eina_stringshare_add("xml.weather.yahoo.com");
+   ci->code = eina_stringshare_add(DEFAULT_LOCATION);
    ci->show_text = 1;
    ci->popup_on_hover = 1;
 
@@ -428,8 +431,9 @@ e_modapi_init(E_Module *m)
         ci->poll_time = 60.0;
         ci->days = 15.0;
         ci->degrees = DEGREES_C;
-        ci->host = eina_stringshare_add("xml.weather.yahoo.com");
-        ci->code = eina_stringshare_add("BUXX0005");
+        //ci->host = eina_stringshare_add("xml.weather.yahoo.com");
+        ci->host = eina_stringshare_add("query.yahooapis.com");
+        ci->code = eina_stringshare_add(DEFAULT_LOCATION);
         ci->id = eina_stringshare_add("0");
         ci->show_text = 1;
         ci->popup_on_hover = 1;
@@ -586,6 +590,7 @@ _forecasts_server_add(void *data, int type, void *event)
    char buf[1024];
    char forecast[1024];
    char degrees;
+   int err_server;
 
    inst = data;
    if (!inst)
@@ -600,13 +605,20 @@ _forecasts_server_add(void *data, int type, void *event)
    else
      degrees = 'c';
 
-   snprintf(forecast, sizeof(forecast), "/forecastrss?p=%s&u=%c", inst->ci->code, degrees);
+   
+   //snprintf(forecast, sizeof(forecast), "/forecastrss?p=%s&u=%c", inst->ci->code, degrees);
+    
+   //~ url to choose city without WOEID:
+   //~ snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%20in%%20%%28select%%20woeid%%20from%%20geo.places%%281%%29%%20where%%20text=\"%s\"%%20%%29%%20and%%20u='%c'", inst->ci->code, degrees);
+   
+   snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%3D%s%%20and%%20u%%3D%%27%c%%27", inst->ci->code, degrees);
    snprintf(buf, sizeof(buf), "GET http://%s%s HTTP/1.1\r\n"
                               "Host: %s\r\n"
                               "Connection: close\r\n\r\n",
             inst->ci->host, forecast, inst->ci->host);
    DEBUG("Server: %s", buf);
-   ecore_con_server_send(inst->server, buf, strlen(buf));
+   err_server=ecore_con_server_send(inst->server, buf, strlen(buf));
+   DEBUG("Server error: %d", err_server);
    return EINA_FALSE;
 }
 
@@ -668,8 +680,16 @@ _forecasts_parse(void *data)
      return 0;
 
    /* Location */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:location city=");
-   if (!needle) goto error;
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:location xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" city=");
+   //DEBUG("Needle: %s", needle);
+
+   if (!needle)
+   {
+      DEBUG("Parse: %s","Location");
+      goto error;
+  }
+   needle = strstr(needle, "city=\"");
+   DEBUG("Needle: %s", needle);
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%255[^\"]\"", city);
 
@@ -682,122 +702,237 @@ _forecasts_parse(void *data)
      snprintf(location, 512, "%s, %s", city, region);
    else
      snprintf(location, 512, "%s", city);
-
+   DEBUG("Parse Location: %s", location);
    eina_stringshare_replace(&inst->location, location);
 
    /* Units */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:units temperature=");
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:units xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" distance=");
    if (!needle)
-     goto error;
-   needle = strstr(needle, "\"");
-   sscanf(needle, "\"%c\"", &inst->units.temp);
+   {
+      DEBUG("Parse: %s", "Units");
+      goto error;
+   }
    needle = strstr(needle, "distance=\"");
-   if (!needle) goto error;
+   if (!needle)
+   {
+       DEBUG("Parse: %s", "Distance");
+       goto error;
+    }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%2[^\"]\"", inst->units.distance);
+
    needle = strstr(needle, "pressure=\"");
-   if (!needle) goto error;
+   if (!needle)
+   {   DEBUG("Parse: %s","Pressure");
+       goto error;
+    }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%2[^\"]\"", inst->units.pressure);
+
    needle = strstr(needle, "speed=\"");
-   if (!needle) goto error;
+   if (!needle)
+   {   DEBUG("Parse: %s", "Speed");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%3[^\"]\"", inst->units.speed);
 
-   /* Current conditions */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:condition  text=");
-   if (!needle) goto error;
+   needle = strstr(needle, "temperature=\"");
+    if (!needle)
+   {   DEBUG("Parse: %s", "Temp");
+       goto error;
+   }
    needle = strstr(needle, "\"");
-   sscanf(needle, "\"%255[^\"]\"", inst->condition.desc);
+   sscanf(needle, "\"%c\"", &inst->units.temp);
+
+   DEBUG("Parse Units: %s, %s, %s, %c", inst->units.distance, inst->units.pressure, inst->units.speed, inst->units.temp);
+
+   /* Current conditions */
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:condition xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" code=");
+   if (!needle)
+   {
+      DEBUG("Parse: %s", "Conditions");
+      goto error;
+   }
+
    needle = strstr(needle, "code=\"");
-   if (!needle) goto error;
+   if (!needle)
+   {   DEBUG("Parse: %s", "Code");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%d\"", &inst->condition.code);
-   needle = strstr(needle, "temp=\"");
-   if (!needle) goto error;
-   needle = strstr(needle, "\"");
-   sscanf(needle, "\"%d\"", &inst->condition.temp);
+
    needle = strstr(needle, "date=\"");
-   if (!needle) goto error;
+   if (!needle)
+   {   DEBUG("Parse: %s", "Date");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%51[^\"]\"", inst->condition.update);
 
+   needle = strstr(needle, "temp=\"");
+   if (!needle)
+   {   DEBUG("Parse: %s", "Temp");
+       goto error;
+   }
+   needle = strstr(needle, "\"");
+   sscanf(needle, "\"%d\"", &inst->condition.temp);
+
+   needle = strstr(needle, "text=\"");
+   if (!needle)
+   {   DEBUG("Parse: %s", "Text");
+       goto error;
+   }
+   needle = strstr(needle, "\"");
+   sscanf(needle, "\"%255[^\"]\"", inst->condition.desc);
+
+   DEBUG("Parse condition: %d, %s, %d, %s", inst->condition.code, inst->condition.update, inst->condition.temp,  inst->condition.desc);
+
    /* Details */
    /* Wind */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:wind chill=");
-   if (!needle) goto error;
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:wind xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" chill=");
+
+   needle = strstr(needle, "chill=\"");
+   if (!needle)
+   {   DEBUG("Parse: %s", "Wind");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%d\"", &inst->details.wind.chill);
+
    needle = strstr(needle, "direction=\"");
-   if (!needle) goto error;
+   if (!needle)
+   {   DEBUG("Parse: %s", "Wind direction");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%d\"", &inst->details.wind.direction);
+
    needle = strstr(needle, "speed=\"");
-   if (!needle) goto error;
+   if (!needle)
+   {   DEBUG("Parse: %s", "Wind speed");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%d\"", &inst->details.wind.speed);
 
+   DEBUG("Parse Wind: %d, %d, %d",inst->details.wind.chill, inst->details.wind.direction, inst->details.wind.speed);
+
    /* Atmosphere */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:atmosphere humidity=");
-   if (!needle) goto error;
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:atmosphere xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" humidity=");
+
+   needle = strstr(needle, "humidity=\"");
+   if (!needle)
+   {   DEBUG("Parse: %s", "Humidity");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%d\"", &inst->details.atmosphere.humidity);
-   needle = strstr(needle, "visibility=\"");
-   if (!needle) goto error;
-   needle = strstr(needle, "\"");
-   sscanf(needle, "\"%f\"", &visibility);
-   inst->details.atmosphere.visibility = visibility;
-   needle = strstr(needle, "pressure=\"");
-   if (!needle) goto error;
+
+    needle = strstr(needle, "pressure=\"");
+   if (!needle)
+   {   DEBUG("Parse: %s", "Pressure");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%f\"", &inst->details.atmosphere.pressure);
+
    needle = strstr(needle, "rising=\"");
-   if (!needle) goto error;
+   if (!needle)
+   {   DEBUG("Parse: %s", "Rising");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%d\"", &inst->details.atmosphere.rising);
 
+   needle = strstr(needle, "visibility=\"");
+   if (!needle)
+   {   DEBUG("Parse: %s", "Visibility");
+       goto error;
+   }
+   needle = strstr(needle, "\"");
+   sscanf(needle, "\"%f\"", &visibility);
+   inst->details.atmosphere.visibility = visibility;
+
+   DEBUG("Parse Atmosphere: %d, %f, %d, %f", inst->details.atmosphere.humidity, inst->details.atmosphere.pressure, inst->details.atmosphere.rising, inst->details.atmosphere.visibility);
+
    /* Astronomy */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:astronomy sunrise=");
-   if (!needle) goto error;
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:astronomy xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" sunrise=");
+   needle = strstr(needle, "sunrise=\"");
+   if (!needle)
+   {   DEBUG("Parse: %s", "Sunrise");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%8[^\"]\"", inst->details.astronomy.sunrise);
+
    needle = strstr(needle, "sunset=\"");
-   if (!needle) goto error;
+   if (!needle)
+   {   DEBUG("Parse: %s", "Sunset");
+       goto error;
+   }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%8[^\"]\"", inst->details.astronomy.sunset);
+
+   DEBUG("Parse Astronomy: %s %s", inst->details.astronomy.sunrise, inst->details.astronomy.sunset);
 
    /* Forecasts */
    for (i = 0; i < inst->ci->days / 5; i++)
      {
-        needle = strstr(needle, "<yweather:forecast day=");
-        if (!needle) goto error;
-        needle = strstr(needle, "\"");
-        sscanf(needle, "\"%4[^\"]\"", inst->forecast[i].day);
-        needle = strstr(needle, "date=\"");
-        if (!needle) goto error;
-        needle = strstr(needle, "\"");
-        sscanf(needle, "\"%12[^\"]\"", inst->forecast[i].date);
-        needle = strstr(needle, "low=\"");
-        if (!needle) goto error;
-        needle = strstr(needle, "\"");
-        sscanf(needle, "\"%d\"", &inst->forecast[i].low);
-        needle = strstr(needle, "high=\"");
-        if (!needle) goto error;
-        needle = strstr(needle, "\"");
-        sscanf(needle, "\"%d\"", &inst->forecast[i].high);
-        needle = strstr(needle, "text=\"");
-        if (!needle) goto error;
-        needle = strstr(needle, "\"");
-        sscanf(needle, "\"%255[^\"]\"", inst->forecast[i].desc);
+        needle = strstr(needle, "<yweather:forecast xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" code=");
         needle = strstr(needle, "code=\"");
-        if (!needle) goto error;
+        if (!needle)
+        {   DEBUG("Parse Forecast: %d %s", i, "code");
+            goto error;
+        }
         needle = strstr(needle, "\"");
         sscanf(needle, "\"%d\"", &inst->forecast[i].code);
-     }
+
+        needle = strstr(needle, "date=\"");
+        if (!needle)
+        {   DEBUG("Parse Forecast: %d %s", i, "date");
+            goto error;
+        }
+        needle = strstr(needle, "\"");
+        sscanf(needle, "\"%12[^\"]\"", inst->forecast[i].date);
+
+        needle = strstr(needle, "day=\"");
+        if (!needle)
+        {   DEBUG("Parse Forecast: %d %s", i, "day");
+            goto error;
+        }
+        needle = strstr(needle, "\"");
+        sscanf(needle, "\"%4[^\"]\"", inst->forecast[i].day);
+
+        needle = strstr(needle, "high=\"");
+        if (!needle)
+        {   DEBUG("Parse Forecast: %d %s", i, "high");
+            goto error;
+        }
+        needle = strstr(needle, "\"");
+        sscanf(needle, "\"%d\"", &inst->forecast[i].high);
+
+        needle = strstr(needle, "low=\"");
+        if (!needle)
+        {   DEBUG("Parse Forecast: %d %s", i, "low");
+            goto error;
+        }
+        needle = strstr(needle, "\"");
+        sscanf(needle, "\"%d\"", &inst->forecast[i].low);
+
+        needle = strstr(needle, "text=\"");
+        if (!needle)
+        {   DEBUG("Parse Forecast: %d %s", i, "text");
+            goto error;
+        }
+        needle = strstr(needle, "\"");
+        sscanf(needle, "\"%255[^\"]\"", inst->forecast[i].desc);
+   }
    return 1;
 
 error:
-   fprintf(stderr, "ERROR: Couldn't parse info from xml.weather.yahoo.com\n");
+   fprintf(stderr, "ERROR: Couldn't parse xml file.\n");
    return 0;
 }
 
@@ -972,13 +1107,13 @@ _forecasts_config_updated(Config_Item *ci)
 
         if (area_changed)
           _forecasts_cb_check(inst);
-          
+
         if (!inst->check_timer)
           inst->check_timer = ecore_timer_add(inst->ci->poll_time, _forecasts_cb_check, inst);
         else
           ecore_timer_interval_set(inst->check_timer, inst->ci->poll_time);
-          
-          
+
+
      }
 }
 
@@ -1176,4 +1311,3 @@ _cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_info)
    if (inst->popup->pinned) return;
    e_gadcon_popup_hide(inst->popup);
 }
-
