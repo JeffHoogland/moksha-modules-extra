@@ -1,0 +1,16 @@
+/* Feedone group */
+
+group
+{
+        name: "modules/news/feedone";
+
+        parts
+        {
+                #include "module_feedone_parts.edc"
+        }
+
+        programs
+        {
+                #include "module_feedone_programs.edc"
+        }
+}

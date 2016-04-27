@@ -1,0 +1,494 @@
+# translation of hu.po to hungarian
+# Copyright (C) YEAR Enlightenment development team
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Lisovszki  <lisovszki@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: hu\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-02-16 22:50+0100\n"
+"PO-Revision-Date: 2008-02-02 22:15+0100\n"
+"Last-Translator: Lisovszki  <lisovszki@gmail.com>\n"
+"Language-Team: hungarian <hu@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: src/e_mod_main.c:52
+msgid "Config init failed"
+msgstr "Konfiguráció nem sikerült"
+
+#: src/e_mod_main.c:53
+msgid "Parser init failed"
+msgstr "Értelmező indítás nem sikerült"
+
+#: src/e_mod_main.c:54
+msgid "Feeds init failed"
+msgstr "Csatorna indítás nem sikerült"
+
+#: src/e_mod_main.c:55
+msgid "Viewer init failed"
+msgstr "Nézegető indítás nem sikerült"
+
+#: src/e_mod_main.c:56
+msgid "Popup subsystem init failed"
+msgstr "Felbukkanó alrendszer indítás nem sikerült"
+
+#: src/e_mod_main.c:219
+msgid "News"
+msgstr "Hírek"
+
+#: src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Hírek modul: Beállítás frissítve</hilight><br><br> A Hírek modul "
+"konfigurációja <br>frissítve,<br> korábbi beállítások törölve. Elnézést."
+"<br><br>(%d -> %d)"
+
+#: src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Hírek modul: Beállítás visszaállítva</hilight><br><br> A Hírek "
+"modul konfigurációja <br>visszaállítva,<br> korábbi beállítások törölve. "
+"Elnézést.<br><br>(%d -> %d)"
+
+#: src/news_config_dialog.c:90
+msgid "News Main Configuration"
+msgstr "Hírek fő beállításai"
+
+#: src/news_config_dialog.c:190 src/news_config_dialog.c:228
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:156
+msgid "Feeds"
+msgstr "Csatornák"
+
+#: src/news_config_dialog.c:192 src/news_config_dialog.c:236
+msgid "Sort lists by name (disable Move action)"
+msgstr "Lista rendezés név szerint (mozgás letiltva)"
+
+#: src/news_config_dialog.c:197 src/news_config_dialog.c:305
+msgid "News Viewer"
+msgstr "Hírolvasó"
+
+#: src/news_config_dialog.c:199
+msgid "Font size"
+msgstr "Betűméret"
+
+#: src/news_config_dialog.c:202 src/news_config_dialog.c:316
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/news_config_dialog.c:205
+msgid "Font color"
+msgstr "Szövegszín"
+
+#: src/news_config_dialog.c:230 src/news_config_dialog.c:270
+#: src/news_config_dialog.c:290
+msgid "Timer"
+msgstr "Időmérő"
+
+#: src/news_config_dialog.c:232
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f perc"
+
+#: src/news_config_dialog.c:241
+msgid "Browser"
+msgstr "Böngésző"
+
+#: src/news_config_dialog.c:243
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "Használd az xdg-open parancsot, a freedasktop.org-ról"
+
+#: src/news_config_dialog.c:248
+msgid "Popup On News"
+msgstr "Felugró ablak a hírekben"
+
+#: src/news_config_dialog.c:251
+msgid "Never"
+msgstr "Soha"
+
+#: src/news_config_dialog.c:257
+msgid "Only on urgent feeds"
+msgstr "Csak fontos hír esetén"
+
+#: src/news_config_dialog.c:263
+msgid "On all feeds"
+msgstr "Minden hírnél"
+
+#: src/news_config_dialog.c:272 src/news_config_dialog.c:292
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f s"
+
+#: src/news_config_dialog.c:280
+msgid "Popup On Warning / Error"
+msgstr "felugró be figyelmeztetés / hiba esetén"
+
+#: src/news_config_dialog.c:285
+msgid "Show on timeout ?"
+msgstr "Időtullépés esetén mutasd?"
+
+#: src/news_config_dialog.c:307
+msgid "Unread feeds first"
+msgstr "Olvasatlan hírek előre"
+
+#: src/news_config_dialog.c:309
+msgid "Unread articles first"
+msgstr "Olvasatlan bekezdése előre"
+
+#: src/news_config_dialog.c:311
+msgid "Sort articles by date"
+msgstr "Rendezés dátum szerint"
+
+#: src/news_config_dialog.c:314
+msgid "Font"
+msgstr "Betűkészlet"
+
+#: src/news_config_dialog.c:324
+msgid "Font Shadow"
+msgstr "Betű árnyék"
+
+#: src/news_config_dialog.c:336
+msgid "Proxy"
+msgstr "Proxy"
+
+#: src/news_config_dialog.c:338
+msgid "Enable"
+msgstr "Engedélyezés"
+
+#: src/news_config_dialog.c:340
+msgid "Host"
+msgstr "Kiszolgáló"
+
+#: src/news_config_dialog.c:344
+msgid "Port"
+msgstr "Port"
+
+#: src/news_config_dialog_category.c:50
+msgid "News Category Configuration"
+msgstr "Hír kategória beállítások"
+
+#: src/news_config_dialog_category.c:135
+msgid "Icon"
+msgstr "Ikon"
+
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+msgid "Name"
+msgstr "Név"
+
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+msgid "Select an Icon"
+msgstr "Válassz egy ikont"
+
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+msgid "OK"
+msgstr "OK"
+
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "Először <hilight>létre kell hoznod egy kategóriát.</hilight>"
+
+#: src/news_config_dialog_feed.c:77
+msgid "News Feed Configuration"
+msgstr "Hír csatorna beállítások"
+
+#: src/news_config_dialog_feed.c:329
+msgid "Basic informations"
+msgstr "Alap információk"
+
+#: src/news_config_dialog_feed.c:345
+msgid "Name :"
+msgstr "Név:"
+
+#: src/news_config_dialog_feed.c:349
+msgid "Feed url :"
+msgstr "Csatorna url:"
+
+#: src/news_config_dialog_feed.c:353
+msgid "Mark as important feed"
+msgstr "Megjelölés fontos csatornaként"
+
+#: src/news_config_dialog_feed.c:358
+msgid "Category"
+msgstr "Kategória"
+
+#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+msgid "Language"
+msgstr "Nyelv"
+
+#: src/news_config_dialog_feed.c:391
+msgid "Advanced informations"
+msgstr "Speciális információk"
+
+#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+msgid "Description"
+msgstr "Leírás"
+
+#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+msgid "Home url"
+msgstr "Saját könyvtár url"
+
+#: src/news_config_dialog_feed.c:405
+msgid "Server informations"
+msgstr "Kiszolgáló információk"
+
+#: src/news_config_dialog_feed.c:407
+msgid "Do allow the server to overwrite the informations you entered ?"
+msgstr ""
+"Engedélyezed a szerverne, hogy felülírja az információkat, amiket megadtál?"
+
+#: src/news_config_dialog_feeds.c:82
+msgid "News Feeds Configuration"
+msgstr "Hír csatornák beállítása"
+
+#: src/news_config_dialog_feeds.c:290
+msgid "Categories"
+msgstr "Kategóriák"
+
+#: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: src/news_config_dialog_feeds.c:316 src/news_config_dialog_feeds.c:390
+msgid "Delete"
+msgstr "Törlés"
+
+#: src/news_config_dialog_feeds.c:319 src/news_config_dialog_feeds.c:393
+msgid "Configure"
+msgstr "Beállítás"
+
+#: src/news_config_dialog_feeds.c:331 src/news_config_dialog_langs.c:133
+msgid "Languages"
+msgstr "Nyelvek"
+
+#: src/news_config_dialog_feeds.c:333
+msgid "All"
+msgstr "Mind"
+
+#: src/news_config_dialog_feeds.c:336
+msgid "Select"
+msgstr "Kijelölés"
+
+#: src/news_config_dialog_feeds.c:346
+msgid "Empty the lists"
+msgstr "Lista ürítése"
+
+#: src/news_config_dialog_feeds.c:349
+msgid "Restore default lists"
+msgstr "Alapértelmezett listák helyreállítása"
+
+#: src/news_config_dialog_feeds.c:686
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+"Már vannak <hilight>csatornák</hilight> ebben a kategóriában.<br> Először "
+"<hilight>ezeket kell eltávolítanod</hilight>"
+
+#: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
+msgid "News Module - Are you sure ?"
+msgstr "Hírek Modul - Biztos vagy benne"
+
+#: src/news_config_dialog_item.c:40
+msgid "News Gadget Configuration"
+msgstr "Hírek modul beállítások"
+
+#: src/news_config_dialog_item.c:104
+msgid "View Mode"
+msgstr "Nézetmód"
+
+#: src/news_config_dialog_item.c:107
+msgid "Show one icon for all feeds"
+msgstr "Egy ikon minden csatornánál"
+
+#: src/news_config_dialog_item.c:109
+msgid "Show all feeds"
+msgstr "Összes csatorna megjelenítése"
+
+#: src/news_config_dialog_item.c:111
+msgid "Show unread feeds"
+msgstr "Olvasatlan csatornák megjelenítése"
+
+#: src/news_config_dialog_item.c:113
+msgid "Show all feeds marked as important"
+msgstr "Minden fontosnak megjelölt csatorna mutatása"
+
+#: src/news_config_dialog_item.c:115
+msgid "Show unread feeds marked as important"
+msgstr "A fontos, olvasatlan csatornák mutatása"
+
+#: src/news_config_dialog_item.c:120
+msgid "Feed open in"
+msgstr "Csatorna megnyitás"
+
+#: src/news_config_dialog_item.c:123
+msgid "the feed viewer"
+msgstr "a csatorna áttekintő"
+
+#: src/news_config_dialog_item.c:125
+msgid "my favorite browser"
+msgstr "a kedvenc böngészőm"
+
+#: src/news_config_dialog_item.c:127
+msgid "Browser opens home url"
+msgstr "Böngésző saját könyvtár url-eket nyit meg"
+
+#: src/news_config_dialog_item.c:129
+msgid "instead of feed url"
+msgstr "a csatorna url helyett"
+
+#: src/news_config_dialog_item.c:136
+msgid "Apply this to all News gadgets"
+msgstr "Alkalmazd minden új modulra"
+
+#: src/news_config_dialog_item_content.c:53
+msgid "News Gadget Content Configuration"
+msgstr "Hírek modul tartalmi beállításai"
+
+#: src/news_config_dialog_item_content.c:258
+msgid "Avalaible Feeds"
+msgstr "Elérhető csatornák"
+
+#: src/news_config_dialog_item_content.c:267
+msgid "Add this Feed"
+msgstr "Csatorna hozzáadása"
+
+#: src/news_config_dialog_item_content.c:274
+msgid "Selected Feeds"
+msgstr "Kijelölt csatornák"
+
+#: src/news_config_dialog_item_content.c:292
+msgid "Remove this Feed"
+msgstr "Csatorna eltávolítása"
+
+#: src/news_config_dialog_langs.c:45
+msgid "News Feeds Language Configuration"
+msgstr "Hír csatornák nyelvi beállításai"
+
+#: src/news_config_dialog_langs.c:123
+msgid "Welcome to News Module !"
+msgstr "A Hírek modul üdvözöl!"
+
+#: src/news_config_dialog_langs.c:125
+msgid "Please select the languages that you are able to read"
+msgstr "Kérlek válaszd ki azt a nyelvet, amelyiket érted"
+
+#: src/news_feed.c:291
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "A <hilight>név</hilight> amit megadtál, nem helyes"
+
+#: src/news_feed.c:296
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "Szükséges <hilight>egy kategória kiválasztása</hilight>"
+
+#: src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+"A csatorna a megadott <hilight>névvel</hilight> %s <hilight>már létezik</"
+"hilight><br> ebben a kategóriában: %s.<br><br>Ez nem lehetséges, kérlek "
+"válassz másik nevet.<br>"
+
+#: src/news_feed.c:311
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "Ki kell választanod egy <hilight>nyelvet</hilight>."
+
+#: src/news_feed.c:318
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "A megadott <hilight>url</hilight> nem jó"
+
+#: src/news_feed.c:880
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr "Meg kell adnod egy <hilight>nevet</hilight>!"
+
+#: src/news_feed.c:888
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr ""
+"A <hilight>név</hilight>, amit megadtál, <hilight>már egy másik kategóriában "
+"használva van.</hilight><br>"
+
+#: src/news_menu.c:129
+#, fuzzy
+msgid "Set all as read"
+msgstr "Minden csatorna beállítva olvasásra"
+
+#: src/news_menu.c:135
+msgid "Update"
+msgstr ""
+
+#: src/news_menu.c:141
+#, fuzzy
+msgid "Gadget Contents"
+msgstr "Tartalom beállítása"
+
+#: src/news_menu.c:151
+msgid "Gadget"
+msgstr ""
+
+#: src/news_menu.c:161
+msgid "Main"
+msgstr ""
+
+#: src/news_menu.c:166
+msgid "Settings"
+msgstr ""
+
+#: src/news_utils.h:13
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr "Hírek modul NYOMKÖVETÉS NYOMKÖVETÉS"
+
+#: src/news_utils.h:20
+msgid "News Module"
+msgstr "Hírek modul"
+
+#: src/news_utils.h:27
+msgid "News Module Error"
+msgstr "Hírek modul hiba"
+
+#: src/news_viewer.c:372
+msgid "Feeds in this gadget"
+msgstr "Csatornák a modulban"
+
+#: src/news_viewer.c:438
+msgid "Articles in selected feed"
+msgstr "Hírek a kijelölt csatornában"
+
+#~ msgid "Configure this feed"
+#~ msgstr "Csatorna beállítása"
+
+#~ msgid "Update all feeds"
+#~ msgstr "Összes csatorna frissítése"
+
+#~ msgid "Configure gadget"
+#~ msgstr "Modul beállítása"
+
+#~ msgid "Main Configuration"
+#~ msgstr "Fő beállítás"
+
+#~ msgid "Feeds Configuration"
+#~ msgstr "Csatornák beállítása"
+
+#~ msgid "Configuration"
+#~ msgstr "Beállítás"

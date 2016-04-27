@@ -1,0 +1,161 @@
+gmake install CFLAGS="-g -Wall -Werror -DDEBUG -DDEBUG_MAIN -DDEBUG_CONFIG -DDEBUG_ITEM -DDEBUG_FEED -DDEBUG_PARSE -DDEBUG_BROWSER -DDEBUG_POPUP_WARN -DDEBUG_VIEWER"
+
+----------------------------------------------------
+BUGS
+----------------------------------------------------
+
+ - X - ? rarely, on viewer open, it crashes in news_viewer_refresh, on e_icon_file_set (in evas engine loader func)
+the evas object seems ok, the string passed to the loader too ...
+
+ - X - ? proxy works SoMeTiMeS only ?
+
+ - M - sometimes there are false parse errors returned
+
+ - M - maybe a BUG with add / remove feeds in an item (MODE_FEED)
+   it has hang on time, in while(o = e_box_..._first(box)) { unpack }
+   ... needs testing
+
+----------------------------------------------------
+FEEDS TO ADD
+----------------------------------------------------
+
+<skyghis> sinon pur les feeds humour : http://www.lelombrik.net/  http://www.bashfr.org/
+<skyghis> pour les feeds info tech: clubic pcimpact
+
+mails juan
+mails ludger
+
+politic : http://alibaba0.free.fr/blog/rss.php
+? : http://www.kozlika.org/kozeries/feed/rss2
+science : http://www.eurekalert.org/rss.xml
+
+
+----------------------------------------------------
+NEEDED (to do more or less in this order)
+----------------------------------------------------
+
+ - debug html chars parse with test.rss
+  -> add support for & alone in evas_textblock
+
+ - atom feeds
+
+ - save unread articles on shutdown
+
+ - if the shelf is hidden, show it on news (configurable)
+
+ - viewer: a way to set vcontent bg color ?
+
+ - clean config_dialog_data (use sub structs ...)
+
+ - item: view mode: show a picture after each radio button, like for shelf position
+ - ? item: instead of "important modes", add a checkbox ?
+or another things to have a better wayt to show important feeds & unread state
+
+ - feeds option "icon glint on news"
+ - news_feed_ilist_get(News_Item *item)
+ + news_feed_category_ilist_get()
+ + news_item_feeds_ilist_get()
+   if item is not NULL, get the selected feeds (= feeds of the item)
+           is NULL, get the whole feeds list (with categories ...)
+              (implement multi sel everywhere in main dialog, feeds list; usefull for delete feeds)
+   news_category_ilist_get
+
+ - news_viewer_feed_refresh -> refresh label and icon of a feed
+news_config_dialog_refresh_feed
+news_config_dialog_item_refresh_feed
+  items_get
+  while { nth_data_get() == feed }
+  nth_icon_set
+  nth_label_set
+to avoid refresh the ilist
+
+[Viewer]
+ - ? item: open feeds in menu ?
+each menu item would be an article of the feed you clicked on
+it would open the article in the viewer (viewer-article_set)
+news_menu_viewer, in news_menu :
+going over a menu item would fire up a viewer near the menu
+the position of this small viewer is fixed, next to the menu. side to side. the same way that a submenu sticks to the menu. we are always on the side of the menu where there is the most much space
+maybe that could replace the normal viewer ? smaller are easier to use, more quick to get to the info ... but normal viewer is maybe better when you want to look at all the feeds, reading here and there, doing other sings at the same time ...
+the menu has a title, the feeds name
+the viewer near the menu gets its content by the same function than the full viewer
+ - ? viewer: instead of having 'own lists', get the pos of feeds/articles via going through ilist items (e_widget_ilist_items_get && e_widget_ilist_nth_data_get), counting and looking data field ?
+ - appear with sliding animation in option ?
+ - dont reselect current feed in viewer when a feed has updated with changes
+ - when an article goes to "as read" and "feeds first" option, refresh the feeds list but don't reselect the feed, go on top of the list
+ - use a "changed" attribute to things, to detect what has to be refresh when refresh() is called. to avoid refresh things for nothing, so avoid user ilists changer for nothing
+
+[Parse]
+ - reparse infos every time, if changes ... ?
+ - handle the fact that sometimes we loose feeds (connection timeout ...) so sometimes, keep feeds that are READ, to avoid having feeds marked as unread, but wich where read before
+detect when there are less articles then the time before ? if its the case, keep read articles ?
+   -> compare description of feed just parsed with suspect precedent one
+its not that slow (use memcmp, keep description_size)
+
+[Item]
+ - mouse over -> bump icon a bit
+ - unread feeds : glint every /10s ? on a global beat ?
+   
+ - unread feeds : put the red color on top (if icon alpha = 0, cant see the red color ...)
+or a square around the icon (like a border) ?
+ - item actions on mouse over / left click / wheel, like in photo
+ - option to have label on each feed icon
+ - wheel on an item makes the viewer go to next/prev unread article
+ - loading state
+
+[Config_Dialog]
+ - ? main/item: show language flag in ilist
+e patch : add ability to have a 2nd image on the right of ilist items (we can show module activation in modules list. (raster adreed, go!, and send to ml) ?
+is it really usefull ? language offen appears in the name, and we have a language selector ...
+ - e patch for ilist : e_widget_ilist_selected_set, when there are labels, selects the good feed but the view goes at the end of the ilist
+ - e patch for ilist : (dialog_item/viewer when refresh and dont selected_set after, the view goes up of one item
+ - e patch for config dialogs : e_config_dialog_find for all config dialogs ...
+ - when changing order / modify feeds / categories
+in the main config panel, make the state of the 
+config panel as INCHANGED
+= dont enable "ok" and "apply"
+
+[Popup_Warn]
+ - everything
+
+[Feed]
+ - patch to ecore_con to avoid segv when ecore_con_server_del on a server wich has not astablished connection yet
+ - popup an error if the feed doesnt want to refresh
+(with a timeout timer on waiting reply ...)
+ - save articles on unload ?
+ - DIDNT FIND BETTER ... :
+   rethink the stupid system that _detach, but not really.
+   linked with the Feed_Ref thing
+   -> ??? detach feeds, feed refs
+ when shutdown the module, specify if whe want a real delete (done)
+ but why is it unsur ? we should be able to know is the shutdown call
+ comes from my code (->detach) or outside ???
+
+[*]
+ - move some things from .h to .c (private things ...)
+ - help dialog (button icon in advanced config dialog ?)
+ - fix all TODO and FIXME in the code
+ - > add default feeds <
+
+[Parse]
+ - ? charset ? already ok ?
+ - images
+	for items :
+		<enclosure url="..">, look if its an image
+	for channels :
+		<image> -> <url>
+		<rss:image> for <= 1.0
+		favicon.ico
+ - get the favicon.ico for the feed icon, or set a genereric icon if not
+
+[Viewer]
+ - capacitee de suivre des flux d'images, et de sav les images
+pour que Photo par exemple les reprenne derriere ds le repertoire où on a save la photo
+"mode images" genre entice, pour voir toutes les images d'un coup (cf <lok>) ?
+
+----------------------------------------------------
+FUTUR
+----------------------------------------------------
+
+ - think about a new way of interacting with E
+ - search info about getting feeds where youre need to be logged

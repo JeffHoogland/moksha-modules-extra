@@ -1,0 +1,491 @@
+# Dutch translation for enlightenment
+# Copyright (c) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-02-16 22:50+0100\n"
+"PO-Revision-Date: 2009-07-17 17:29+0000\n"
+"Last-Translator: Yentl <y.v.t@scarlet.be>\n"
+"Language-Team: Dutch <nl@li.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:52
+msgid "Config init failed"
+msgstr "Configuratie initiatie mislukt !"
+
+#: src/e_mod_main.c:53
+msgid "Parser init failed"
+msgstr "Parser initiatie mislukt"
+
+#: src/e_mod_main.c:54
+msgid "Feeds init failed"
+msgstr "Feeds initiatie mislukt"
+
+#: src/e_mod_main.c:55
+msgid "Viewer init failed"
+msgstr "Viewer initiatie mislukt"
+
+#: src/e_mod_main.c:56
+msgid "Popup subsystem init failed"
+msgstr "Popup subsysteem initiatie mislukt"
+
+#: src/e_mod_main.c:219
+msgid "News"
+msgstr "Nieuws"
+
+#: src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>News module: Configuratie geupdate</hilight><br><br>Jouw "
+"configuratie van News Module<br>is geupdate<br>Jouw instellingen werden "
+"verwijderd<br>Sorry voor het ongemak<br><br>(%d -> %d)"
+
+#: src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>News module: Configuratie gedowngrade</hilight><br><br>Jouw "
+"configuratie van News Module<br>is gedowngrade<br>Jouw instellingen werden "
+"verwijderd<br>Sorry voor het ongemak<br><br>(%d -> %d)"
+
+#: src/news_config_dialog.c:90
+msgid "News Main Configuration"
+msgstr "News Hoofdconfiguratie"
+
+#: src/news_config_dialog.c:190 src/news_config_dialog.c:228
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:156
+msgid "Feeds"
+msgstr "Feeds"
+
+#: src/news_config_dialog.c:192 src/news_config_dialog.c:236
+msgid "Sort lists by name (disable Move action)"
+msgstr "Sorteer lijst bij naam (Schakel Verplaats actie uit)"
+
+#: src/news_config_dialog.c:197 src/news_config_dialog.c:305
+msgid "News Viewer"
+msgstr "Nieuws Viewer"
+
+#: src/news_config_dialog.c:199
+msgid "Font size"
+msgstr "Lettergrootte"
+
+#: src/news_config_dialog.c:202 src/news_config_dialog.c:316
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/news_config_dialog.c:205
+msgid "Font color"
+msgstr "Kleur lettertype"
+
+#: src/news_config_dialog.c:230 src/news_config_dialog.c:270
+#: src/news_config_dialog.c:290
+msgid "Timer"
+msgstr "Timer"
+
+#: src/news_config_dialog.c:232
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f min"
+
+#: src/news_config_dialog.c:241
+msgid "Browser"
+msgstr "Browser"
+
+#: src/news_config_dialog.c:243
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "Gebruikt xdg-open script, van freedesktop.org"
+
+#: src/news_config_dialog.c:248
+msgid "Popup On News"
+msgstr "Popup bij Nieuws"
+
+#: src/news_config_dialog.c:251
+msgid "Never"
+msgstr "Nooit"
+
+#: src/news_config_dialog.c:257
+msgid "Only on urgent feeds"
+msgstr "Enkel bij dringende feeds"
+
+#: src/news_config_dialog.c:263
+msgid "On all feeds"
+msgstr "Bij alle feeds"
+
+#: src/news_config_dialog.c:272 src/news_config_dialog.c:292
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f s"
+
+#: src/news_config_dialog.c:280
+msgid "Popup On Warning / Error"
+msgstr "Popup bij Waarschuwing / Fout"
+
+#: src/news_config_dialog.c:285
+msgid "Show on timeout ?"
+msgstr "Weergeven na timeout ?"
+
+#: src/news_config_dialog.c:307
+msgid "Unread feeds first"
+msgstr "Ongelezen feeds eerst"
+
+#: src/news_config_dialog.c:309
+msgid "Unread articles first"
+msgstr "Ongelezen artikels eerst"
+
+#: src/news_config_dialog.c:311
+msgid "Sort articles by date"
+msgstr "Sorteer artikels bij datum"
+
+#: src/news_config_dialog.c:314
+msgid "Font"
+msgstr "Lettertype"
+
+#: src/news_config_dialog.c:324
+msgid "Font Shadow"
+msgstr "Lettertype Schaduw"
+
+#: src/news_config_dialog.c:336
+msgid "Proxy"
+msgstr "Proxy"
+
+#: src/news_config_dialog.c:338
+msgid "Enable"
+msgstr "Inschakelen"
+
+#: src/news_config_dialog.c:340
+msgid "Host"
+msgstr "Host"
+
+#: src/news_config_dialog.c:344
+msgid "Port"
+msgstr "Poort"
+
+#: src/news_config_dialog_category.c:50
+msgid "News Category Configuration"
+msgstr "News categorie configuratie"
+
+#: src/news_config_dialog_category.c:135
+msgid "Icon"
+msgstr "Icoon"
+
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+msgid "Name"
+msgstr "Naam"
+
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+msgid "Select an Icon"
+msgstr "Selecteer een Icoon"
+
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+msgid "OK"
+msgstr "OK"
+
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "Je moet eerst <hilight>een categorie aanmaken</hilight>"
+
+#: src/news_config_dialog_feed.c:77
+msgid "News Feed Configuration"
+msgstr "News Feed configuratie"
+
+#: src/news_config_dialog_feed.c:329
+msgid "Basic informations"
+msgstr "Basisinformatie"
+
+#: src/news_config_dialog_feed.c:345
+msgid "Name :"
+msgstr "Naam :"
+
+#: src/news_config_dialog_feed.c:349
+msgid "Feed url :"
+msgstr "Feed url :"
+
+#: src/news_config_dialog_feed.c:353
+msgid "Mark as important feed"
+msgstr "Markeer als belangrijke feed"
+
+#: src/news_config_dialog_feed.c:358
+msgid "Category"
+msgstr "Categorie"
+
+#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+msgid "Language"
+msgstr "Taal"
+
+#: src/news_config_dialog_feed.c:391
+msgid "Advanced informations"
+msgstr "Geavanceerde informatie"
+
+#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+msgid "Description"
+msgstr "Beschrijving"
+
+#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+msgid "Home url"
+msgstr "Home url"
+
+#: src/news_config_dialog_feed.c:405
+msgid "Server informations"
+msgstr "Server informatie"
+
+#: src/news_config_dialog_feed.c:407
+msgid "Do allow the server to overwrite the informations you entered ?"
+msgstr "Server toestaan om informatie door jou ingegeven te overschrijven?"
+
+#: src/news_config_dialog_feeds.c:82
+msgid "News Feeds Configuration"
+msgstr "News Feeds configuratie"
+
+#: src/news_config_dialog_feeds.c:290
+msgid "Categories"
+msgstr "Categorieën"
+
+#: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
+msgid "Add"
+msgstr "Toevoegen"
+
+#: src/news_config_dialog_feeds.c:316 src/news_config_dialog_feeds.c:390
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: src/news_config_dialog_feeds.c:319 src/news_config_dialog_feeds.c:393
+msgid "Configure"
+msgstr "Configureren"
+
+#: src/news_config_dialog_feeds.c:331 src/news_config_dialog_langs.c:133
+msgid "Languages"
+msgstr "Talen"
+
+#: src/news_config_dialog_feeds.c:333
+msgid "All"
+msgstr "Alles"
+
+#: src/news_config_dialog_feeds.c:336
+msgid "Select"
+msgstr "Selecteren"
+
+#: src/news_config_dialog_feeds.c:346
+msgid "Empty the lists"
+msgstr "Lijst leegmaken"
+
+#: src/news_config_dialog_feeds.c:349
+msgid "Restore default lists"
+msgstr "Standaardlijst herstellen"
+
+#: src/news_config_dialog_feeds.c:686
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+"Er zijn <hilight>feeds</hilight> in deze categorie.<br>Je met deze "
+"<hilight>eerst verwijderen</hilight>"
+
+#: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
+msgid "News Module - Are you sure ?"
+msgstr "News Module - Ben je zeker?"
+
+#: src/news_config_dialog_item.c:40
+msgid "News Gadget Configuration"
+msgstr "News Gadget configuratie"
+
+#: src/news_config_dialog_item.c:104
+msgid "View Mode"
+msgstr "Weergavemodus"
+
+#: src/news_config_dialog_item.c:107
+msgid "Show one icon for all feeds"
+msgstr "Geef één icoon voor alle feeds weer"
+
+#: src/news_config_dialog_item.c:109
+msgid "Show all feeds"
+msgstr "Alle feeds weergeven"
+
+#: src/news_config_dialog_item.c:111
+msgid "Show unread feeds"
+msgstr "Ongelezen feeds weergeven"
+
+#: src/news_config_dialog_item.c:113
+msgid "Show all feeds marked as important"
+msgstr "Geef alle feeds weer die gemarkeerd zijn als belangrijk"
+
+#: src/news_config_dialog_item.c:115
+msgid "Show unread feeds marked as important"
+msgstr "Geef ongelezen feeds weer die gemarkeerd zijn als belangrijk"
+
+#: src/news_config_dialog_item.c:120
+msgid "Feed open in"
+msgstr "Open feed in"
+
+#: src/news_config_dialog_item.c:123
+msgid "the feed viewer"
+msgstr "de feed viewer"
+
+#: src/news_config_dialog_item.c:125
+msgid "my favorite browser"
+msgstr "mijn favoriete browser"
+
+#: src/news_config_dialog_item.c:127
+msgid "Browser opens home url"
+msgstr "Browser opent home url"
+
+#: src/news_config_dialog_item.c:129
+msgid "instead of feed url"
+msgstr "in plaats van de feed url"
+
+#: src/news_config_dialog_item.c:136
+msgid "Apply this to all News gadgets"
+msgstr "Dit toepassen op alle News gadgets"
+
+#: src/news_config_dialog_item_content.c:53
+msgid "News Gadget Content Configuration"
+msgstr "News Gadget inhoud configuratie"
+
+#: src/news_config_dialog_item_content.c:258
+msgid "Avalaible Feeds"
+msgstr "Beschikbare feeds"
+
+#: src/news_config_dialog_item_content.c:267
+msgid "Add this Feed"
+msgstr "Deze feed toevoegen"
+
+#: src/news_config_dialog_item_content.c:274
+msgid "Selected Feeds"
+msgstr "Geselecteerde feeds"
+
+#: src/news_config_dialog_item_content.c:292
+msgid "Remove this Feed"
+msgstr "Verwijder deze feed"
+
+#: src/news_config_dialog_langs.c:45
+msgid "News Feeds Language Configuration"
+msgstr "News Feed Taal configuratie"
+
+#: src/news_config_dialog_langs.c:123
+msgid "Welcome to News Module !"
+msgstr "Welkom bij de News Module !"
+
+#: src/news_config_dialog_langs.c:125
+msgid "Please select the languages that you are able to read"
+msgstr "Selecteer aub de talen die je kan lezen"
+
+#: src/news_feed.c:291
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "de <hilight>naam</hilight> die je ingaf is incorrect"
+
+#: src/news_feed.c:296
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "De nood een <hilight>categorie te selecteren</hilight>."
+
+#: src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+"Een feed met de <hilight>naam</hilight> %s <hilight>bestaat reeds</"
+"hilight><br>in de %s categorie<br><br>Het is niet mogelijk om een feed te "
+"hebben met dezelfde naam<br>in eenzelfde categorie."
+
+#: src/news_feed.c:311
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "Je moet een <hilight>taal</hilight> selecteren."
+
+#: src/news_feed.c:318
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "De <hilight>url</hilight> die je hebt opgegeven is niet correct"
+
+#: src/news_feed.c:880
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr "Je moet een <hilight>naam</hilight> ingeven !"
+
+#: src/news_feed.c:888
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr ""
+"De <hilight>naam</hilight> die je hebt ingegeven is <hilight>reeds gebruikt</"
+"hilight><br>door een andere categorie"
+
+#: src/news_menu.c:129
+#, fuzzy
+msgid "Set all as read"
+msgstr "Markeer alle feeds als gelezen"
+
+#: src/news_menu.c:135
+msgid "Update"
+msgstr ""
+
+#: src/news_menu.c:141
+#, fuzzy
+msgid "Gadget Contents"
+msgstr "Configureer gadgets inhoud"
+
+#: src/news_menu.c:151
+msgid "Gadget"
+msgstr ""
+
+#: src/news_menu.c:161
+msgid "Main"
+msgstr ""
+
+#: src/news_menu.c:166
+msgid "Settings"
+msgstr ""
+
+#: src/news_utils.h:13
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr "News Module DEBUG DEBUG DEBUG DEBUG"
+
+#: src/news_utils.h:20
+msgid "News Module"
+msgstr "News Module"
+
+#: src/news_utils.h:27
+msgid "News Module Error"
+msgstr "News Module Fout"
+
+#: src/news_viewer.c:372
+msgid "Feeds in this gadget"
+msgstr "Feeds in deze gadget"
+
+#: src/news_viewer.c:438
+msgid "Articles in selected feed"
+msgstr "Artikels in geselecteerde feed"
+
+#~ msgid "Configure this feed"
+#~ msgstr "Configureer deze feed"
+
+#~ msgid "Update all feeds"
+#~ msgstr "Update alle feeds"
+
+#~ msgid "Configure gadget"
+#~ msgstr "Configureer gadgets"
+
+#~ msgid "Main Configuration"
+#~ msgstr "Hoofdconfiguratie"
+
+#~ msgid "Feeds Configuration"
+#~ msgstr "Feeds Configuratie"
+
+#~ msgid "Configuration"
+#~ msgstr "Configuratie"

@@ -1,0 +1,121 @@
+/* Icon group */
+
+group
+{
+        name: "icon";
+
+        parts
+        {
+                part
+                {
+                	name: "icon";
+                	type: IMAGE;
+                	mouse_events: 0;
+                	description
+                	{
+                		state: "default" 0.0;
+                		aspect: 1.0 1.0;
+                		image
+                		{
+                			normal: "icon_logo.png";
+                		}
+                	}
+                }
+        }
+}
+
+group
+{
+        name: "modules/news/icon/article_read";
+
+        parts
+        {
+                part
+                {
+                	name: "icon";
+                	type: IMAGE;
+                	mouse_events: 0;
+                	description
+                	{
+                		state: "default" 0.0;
+                		aspect: 1.0 1.0;
+                		image
+                		{
+                			normal: "icon_article_read.png";
+                		}
+                	}
+                }
+        }
+}
+
+group
+{
+        name: "modules/news/icon/article_unread";
+
+        parts
+        {
+                part
+                {
+                	name: "icon";
+                	type: IMAGE;
+                	mouse_events: 0;
+                	description
+                	{
+                		state: "default" 0.0;
+                		aspect: 1.0 1.0;
+                		image
+                		{
+                			normal: "icon_article_unread.png";
+                		}
+                	}
+                }
+        }
+}
+
+group
+{
+        name: "modules/news/icon/update";
+
+        parts
+        {
+                part
+                {
+                	name: "icon";
+                	type: IMAGE;
+                	mouse_events: 0;
+                	description
+                	{
+                		state: "default" 0.0;
+                		aspect: 1.0 1.0;
+                		image
+                		{
+                			normal: "icon_update.png";
+                		}
+                	}
+                }
+        }
+}
+
+group
+{
+        name: "modules/news/icon/setasread";
+
+        parts
+        {
+                part
+                {
+                	name: "icon";
+                	type: IMAGE;
+                	mouse_events: 0;
+                	description
+                	{
+                		state: "default" 0.0;
+                		aspect: 1.0 1.0;
+                		image
+                		{
+                			normal: "icon_setasread.png";
+                		}
+                	}
+                }
+        }
+}

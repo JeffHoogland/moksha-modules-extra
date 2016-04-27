@@ -1,0 +1,30 @@
+/* Enlightenment News Module theme */
+
+images
+{
+	image: "feed_background_new.png" COMP;
+        image: "feed_border.png" COMP;
+
+	image: "popup_warn_background.png" COMP;
+	image: "popup_warn_disable_clicked.png" COMP;
+	image: "popup_warn_disable.png" COMP;
+	image: "popup_warn_logo_error.png" COMP;
+	image: "popup_warn_logo_info.png" COMP;
+
+        image: "icon_logo.png" COMP;
+        image: "icon_article_read.png" COMP;
+        image: "icon_article_unread.png" COMP;
+        image: "icon_update.png" COMP;
+        image: "icon_setasread.png" COMP;
+}
+
+collections
+{
+        /* Groups */
+
+        #include "module_item.edc"
+        #include "module_feed.edc"
+        #include "module_feedone.edc"
+        #include "module_popw.edc"
+        #include "module_icon.edc"
+}

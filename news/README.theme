@@ -1,0 +1,18 @@
+------------------------------
+EDJE Specification
+------------------------------
+
+ * Signals accepted by module :
+Name            Source    Description
+e,action,open   e         open the feed
+
+ * Signals sent by module :
+Name              Source  Description
+e,state,new,set   e       set the feed as unread
+e,state_new,unset e       set the feed a read
+
+------------------------------
+Notes
+------------------------------
+
+ * the "modules/news/popw" is not used for the moment

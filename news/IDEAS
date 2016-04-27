@@ -1,0 +1,39 @@
+ * Main *
+
+- take from MacOS X spirit
+- take from dEvian
+
+- fix charset bugs (look at tmsnc)
+- fix proxy bugs (config dialog)
+
+- multiples rss in one rss item, like tabs
+  general view of all rss feeds wich are inside one item
+
+ * Rss general view *
+
+- when one has a news, it goes red
+  when you click/over one, it switches to it
+- autoscroll under mouse option
+- view mode : icons, icons and text, text
+
+ * Rss headlines view *
+
+- when youre mouse go over one rss, it set all rss of the source as red
+- autoscroll under mouse option
+- you can configure the font and font size
+- view mode : date, date and text, text
+
+ * Rss content view *
+
+- popup under the shelf or centered at the middle of the screen
+- autoscroll under mouse option
+- you can configure the font and font size
+
+ * Rss List *
+
+- sort by categories
+  the user can add his feeds in one category
+- the user can move up and down a feed in the list, within a category
+- he select the category of a feed in the feed config dialog
+- many rss already here by default
+- display language for each feed

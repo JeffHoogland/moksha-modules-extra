@@ -1,0 +1,487 @@
+# Italian translation for E17 news module.
+# This file is put in the public domain.
+# Massimo Maiurana <maiurana@gmail.com>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: News\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-11-14 22:30+0100\n"
+"PO-Revision-Date: 2012-11-14 22:31+0100\n"
+"Last-Translator: Massimo Maiurana <maiurana@gmail.com>\n"
+"Language-Team: none\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:52
+msgid "Config init failed"
+msgstr "Inizializzazione configurazione fallita"
+
+#: src/e_mod_main.c:53
+msgid "Parser init failed"
+msgstr "Inizializzazione parser fallita"
+
+#: src/e_mod_main.c:54
+msgid "Feeds init failed"
+msgstr "Inizializzazione feed fallita"
+
+#: src/e_mod_main.c:55
+msgid "Viewer init failed"
+msgstr "Inizializzazione visualizzatore fallita"
+
+#: src/e_mod_main.c:56
+msgid "Popup subsystem init failed"
+msgstr "Inizializzazione sottosistema popup fallita"
+
+#: src/e_mod_main.c:219
+msgid "News"
+msgstr "News"
+
+#: src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Modulo News: aggiornamento configurazione</hilight><br><br>La "
+"vostra configurazione del modulo News è stata<br>aggiornata. Le vostre "
+"impostazioni sono state<br>cancellate. Ci scusiamo per "
+"l'inconveniente<br><br>(%d -> %d)"
+
+#: src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Modulo News: ripristino configurazione</hilight><br><br>La vostra "
+"configurazione del modulo News è stata<br>ripristinata. Le vostre "
+"impostazioni sono state<br>cancellate. Ci scusiamo per "
+"l'inconveniente<br><br>(%d -> %d)"
+
+#: src/news_config_dialog.c:90
+msgid "News Main Configuration"
+msgstr "Configurazione principale di News"
+
+#: src/news_config_dialog.c:190 src/news_config_dialog.c:228
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:153
+msgid "Feeds"
+msgstr "Feed"
+
+#: src/news_config_dialog.c:192 src/news_config_dialog.c:236
+msgid "Sort lists by name (disable Move action)"
+msgstr "Ordina lista per nome (disabilita spostamento)"
+
+#: src/news_config_dialog.c:197 src/news_config_dialog.c:305
+#: src/news_viewer.c:307
+msgid "News Viewer"
+msgstr "Visualizzatore di News"
+
+#: src/news_config_dialog.c:199
+msgid "Font size"
+msgstr "Dimensione font"
+
+#: src/news_config_dialog.c:202 src/news_config_dialog.c:316
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/news_config_dialog.c:205
+msgid "Font color"
+msgstr "Colore font"
+
+#: src/news_config_dialog.c:230 src/news_config_dialog.c:270
+#: src/news_config_dialog.c:290
+msgid "Timer"
+msgstr "Timer"
+
+#: src/news_config_dialog.c:232
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f min"
+
+#: src/news_config_dialog.c:241
+msgid "Browser"
+msgstr "Browser"
+
+#: src/news_config_dialog.c:243
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "Usa script xdg-open da freedesktop.org"
+
+#: src/news_config_dialog.c:248
+msgid "Popup On News"
+msgstr "Popup al ricevimento"
+
+#: src/news_config_dialog.c:251
+msgid "Never"
+msgstr "Mai"
+
+#: src/news_config_dialog.c:257
+msgid "Only on urgent feeds"
+msgstr "Solo per feed urgenti"
+
+#: src/news_config_dialog.c:263
+msgid "On all feeds"
+msgstr "Per tutti i feed"
+
+#: src/news_config_dialog.c:272 src/news_config_dialog.c:292
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f s"
+
+#: src/news_config_dialog.c:280
+msgid "Popup On Warning / Error"
+msgstr "Popup per avvertimenti/errori"
+
+#: src/news_config_dialog.c:285
+msgid "Show on timeout ?"
+msgstr "Mostrare al timeout?"
+
+#: src/news_config_dialog.c:307
+msgid "Unread feeds first"
+msgstr "Prima i feed non letti"
+
+#: src/news_config_dialog.c:309
+msgid "Unread articles first"
+msgstr "Prima gli articoli non letti"
+
+#: src/news_config_dialog.c:311
+msgid "Sort articles by date"
+msgstr "Ordina articoli per data"
+
+#: src/news_config_dialog.c:314
+msgid "Font"
+msgstr "Font"
+
+#: src/news_config_dialog.c:324
+msgid "Font Shadow"
+msgstr "Ombreggiatura font"
+
+#: src/news_config_dialog.c:336
+msgid "Proxy"
+msgstr "Proxy"
+
+#: src/news_config_dialog.c:338
+msgid "Enable"
+msgstr "Abilita"
+
+#: src/news_config_dialog.c:340
+msgid "Host"
+msgstr "Host"
+
+#: src/news_config_dialog.c:344
+msgid "Port"
+msgstr "Porta"
+
+#: src/news_config_dialog_category.c:50
+msgid "News Category Configuration"
+msgstr "Configurazione categorie di News"
+
+#: src/news_config_dialog_category.c:135
+msgid "Icon"
+msgstr "Icona"
+
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+msgid "Name"
+msgstr "Nome"
+
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+msgid "Select an Icon"
+msgstr "Seleziona un'icona"
+
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+msgid "OK"
+msgstr "OK"
+
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+msgid "Cancel"
+msgstr "Annulla"
+
+#: src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "Occorre prima <hilight>creare una categoria</hilight>"
+
+#: src/news_config_dialog_feed.c:77
+msgid "News Feed Configuration"
+msgstr "Configurazione feed di News"
+
+#: src/news_config_dialog_feed.c:329
+msgid "Basic informations"
+msgstr "Informazioni di base"
+
+#: src/news_config_dialog_feed.c:345
+msgid "Name :"
+msgstr "Nome:"
+
+#: src/news_config_dialog_feed.c:349
+msgid "Feed url :"
+msgstr "Url del feed:"
+
+#: src/news_config_dialog_feed.c:353
+msgid "Mark as important feed"
+msgstr "Segna come feed importante"
+
+#: src/news_config_dialog_feed.c:358
+msgid "Category"
+msgstr "Categoria"
+
+#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+msgid "Language"
+msgstr "Lingua"
+
+#: src/news_config_dialog_feed.c:391
+msgid "Advanced informations"
+msgstr "Informazioni avanzate"
+
+#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+msgid "Description"
+msgstr "Descrizione"
+
+#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+msgid "Home url"
+msgstr "Url di partenza"
+
+#: src/news_config_dialog_feed.c:405
+msgid "Server informations"
+msgstr "Informazioni server"
+
+#: src/news_config_dialog_feed.c:407
+msgid "Do allow the server to overwrite the informations you entered ?"
+msgstr "Consentire al server di sovrascrivere le informazioni inserite?"
+
+#: src/news_config_dialog_feeds.c:82
+msgid "News Feeds Configuration"
+msgstr "Configurazione feed di News"
+
+#: src/news_config_dialog_feeds.c:290
+msgid "Categories"
+msgstr "Categorie"
+
+#: src/news_config_dialog_feeds.c:301 src/news_config_dialog_feeds.c:375
+#: src/news_config_dialog_item_content.c:283
+msgid "Move Up"
+msgstr "Sposta su"
+
+#: src/news_config_dialog_feeds.c:304 src/news_config_dialog_feeds.c:378
+#: src/news_config_dialog_item_content.c:287
+msgid "Move Down"
+msgstr "Sposta giù"
+
+#: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
+msgid "Add"
+msgstr "Aggiungi"
+
+#: src/news_config_dialog_feeds.c:316 src/news_config_dialog_feeds.c:390
+msgid "Delete"
+msgstr "Rimuovi"
+
+#: src/news_config_dialog_feeds.c:319 src/news_config_dialog_feeds.c:393
+msgid "Configure"
+msgstr "Configura"
+
+#: src/news_config_dialog_feeds.c:331 src/news_config_dialog_langs.c:133
+msgid "Languages"
+msgstr "Lingue"
+
+#: src/news_config_dialog_feeds.c:333
+msgid "All"
+msgstr "Tutto"
+
+#: src/news_config_dialog_feeds.c:336
+msgid "Select"
+msgstr "Seleziona"
+
+#: src/news_config_dialog_feeds.c:346
+msgid "Empty the lists"
+msgstr "Svuota le liste"
+
+#: src/news_config_dialog_feeds.c:349
+msgid "Restore default lists"
+msgstr "Ripristina liste predefinite"
+
+#: src/news_config_dialog_feeds.c:686
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+"Ci sono dei <hilight>feed</hilight> in questa categoria.<br>Dovrete "
+"<hilight>prima rimuoverli</hilight>."
+
+#: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
+msgid "News Module - Are you sure ?"
+msgstr "Modulo News - Siete sicuri?"
+
+#: src/news_config_dialog_item.c:40
+msgid "News Gadget Configuration"
+msgstr "Configurazione modulo News"
+
+#: src/news_config_dialog_item.c:104
+msgid "View Mode"
+msgstr "Modalità vista"
+
+#: src/news_config_dialog_item.c:107
+msgid "Show one icon for all feeds"
+msgstr "Mostra un'icona per tutti i feed"
+
+#: src/news_config_dialog_item.c:109
+msgid "Show all feeds"
+msgstr "Mostra tutti i feed"
+
+#: src/news_config_dialog_item.c:111
+msgid "Show unread feeds"
+msgstr "Mostra feed non letti"
+
+#: src/news_config_dialog_item.c:113
+msgid "Show all feeds marked as important"
+msgstr "Mostra tutti i feed importanti"
+
+#: src/news_config_dialog_item.c:115
+msgid "Show unread feeds marked as important"
+msgstr "Mostra i feed importanti non letti"
+
+#: src/news_config_dialog_item.c:120
+msgid "Feed open in"
+msgstr "Apri i feed in"
+
+#: src/news_config_dialog_item.c:123
+msgid "the feed viewer"
+msgstr "visualizzatore feed"
+
+#: src/news_config_dialog_item.c:125
+msgid "my favorite browser"
+msgstr "browser preferito"
+
+#: src/news_config_dialog_item.c:127
+msgid "Browser opens home url"
+msgstr "Il browser apre la url di partenza"
+
+#: src/news_config_dialog_item.c:129
+msgid "instead of feed url"
+msgstr "invece della url del feed"
+
+#: src/news_config_dialog_item.c:136
+msgid "Apply this to all News gadgets"
+msgstr "Applica a tutti i moduli News"
+
+#: src/news_config_dialog_item_content.c:53
+msgid "News Gadget Content Configuration"
+msgstr "Configurazione contenuto modulo News"
+
+#: src/news_config_dialog_item_content.c:258
+msgid "Available Feeds"
+msgstr "Feed disponibili"
+
+#: src/news_config_dialog_item_content.c:267
+msgid "Add this Feed"
+msgstr "Aggiungi questo feed"
+
+#: src/news_config_dialog_item_content.c:274
+msgid "Selected Feeds"
+msgstr "Feed selezionati"
+
+#: src/news_config_dialog_item_content.c:292
+msgid "Remove this Feed"
+msgstr "Elimina questo feed"
+
+#: src/news_config_dialog_langs.c:45
+msgid "News Feeds Language Configuration"
+msgstr "Configurazione lingua feed di News"
+
+#: src/news_config_dialog_langs.c:123
+msgid "Welcome to News Module !"
+msgstr "Benvenuti nel modulo News!"
+
+#: src/news_config_dialog_langs.c:125
+msgid "Please select the languages that you are able to read"
+msgstr "Selezionate la lingua che volete leggere"
+
+#: src/news_feed.c:291
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "Il <hilight>nome</hilight> inserito non è corretto"
+
+#: src/news_feed.c:296
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "Occorre <hilight>selezionare una categoria</hilight>."
+
+#: src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+"<hilight>Esiste già</hilight> un feed di <hilight>nome</hilight> %s<br>nella "
+"categoria %s<br><br>Non è possibile avere feed con lo stesso<br>nome nella "
+"stessa categoria."
+
+#: src/news_feed.c:311
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "Occorre selezionare una <hilight>lingua</hilight>!"
+
+#: src/news_feed.c:318
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "La <hilight>url</hilight> specificata non è corretta"
+
+#: src/news_feed.c:880
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr "Occorre inserire un <hilight>nome</hilight>!"
+
+#: src/news_feed.c:888
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr ""
+"Il <hilight>nome</hilight> inserito è <hilight>già usato<hilight><br>da "
+"un'altra categoria"
+
+#: src/news_menu.c:131
+msgid "Set all as read"
+msgstr "Segna tutti come letti"
+
+#: src/news_menu.c:137 src/news_viewer.c:380
+msgid "Update"
+msgstr "Aggiorna"
+
+#: src/news_menu.c:148
+msgid "Gadget"
+msgstr "Gadget"
+
+#: src/news_menu.c:158
+msgid "Main"
+msgstr "Principale"
+
+#: src/news_menu.c:163
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: src/news_menu.c:168
+msgid "Gadget Contents"
+msgstr "Contenuti del gadget"
+
+#: src/news_utils.h:13
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr "Modulo News DEBUG DEBUG DEBUG DEBUG"
+
+#: src/news_utils.h:20
+msgid "News Module"
+msgstr "Modulo News"
+
+#: src/news_utils.h:27
+msgid "News Module Error"
+msgstr "Errore del modulo News"
+
+#: src/news_viewer.c:372
+msgid "Feeds in this gadget"
+msgstr "Feed in questo modulo"
+
+#: src/news_viewer.c:388
+msgid "Set as read"
+msgstr "Segna come letti"
+
+#: src/news_viewer.c:438
+msgid "Articles in selected feed"
+msgstr "Articoli nel feed selezionato"

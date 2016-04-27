@@ -1,0 +1,490 @@
+# Slovak translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-02-16 22:50+0100\n"
+"PO-Revision-Date: 2009-06-13 18:16+0000\n"
+"Last-Translator: milboy <Unknown>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:52
+msgid "Config init failed"
+msgstr "Načítanie konfigurácie zlyhalo"
+
+#: src/e_mod_main.c:53
+msgid "Parser init failed"
+msgstr "Načítanie parseru zlyhalo"
+
+#: src/e_mod_main.c:54
+msgid "Feeds init failed"
+msgstr "Načítanie čítačiek zlyhalo"
+
+#: src/e_mod_main.c:55
+msgid "Viewer init failed"
+msgstr "Načítanie prehliadača zlyhalo"
+
+#: src/e_mod_main.c:56
+msgid "Popup subsystem init failed"
+msgstr "Spustenie okna s upozornením zlyhalo"
+
+#: src/e_mod_main.c:219
+msgid "News"
+msgstr "Novinky"
+
+#: src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Modul noviniek : Konfigurácia aktualizovaná</hilight><br><br>Vaša "
+"konfigurácia modulu noviniek<br>bola aktualizovaná<br>Vaše nastavenia boli "
+"odstránené<br>Ospravedlňujeme sa za nepríjemnosti<br><br>(%d -> %d)"
+
+#: src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Modul noviniek : Konfigurácia degradovaná</hilight><br><br>Vaša "
+"konfigurácia modulu noviniek<br>bola degradovaná<br>Vaše nastavenia boli "
+"odstránené<br>Ospravedlňujeme sa za nepríjemnosti<br><br>(%d -> %d)"
+
+#: src/news_config_dialog.c:90
+msgid "News Main Configuration"
+msgstr "Novinky hlavnej konfigurácie"
+
+#: src/news_config_dialog.c:190 src/news_config_dialog.c:228
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:156
+msgid "Feeds"
+msgstr "Čítačky"
+
+#: src/news_config_dialog.c:192 src/news_config_dialog.c:236
+msgid "Sort lists by name (disable Move action)"
+msgstr "Zoradiť zoznam podla názvu (zakázať premiestnenie)"
+
+#: src/news_config_dialog.c:197 src/news_config_dialog.c:305
+msgid "News Viewer"
+msgstr "Zobrazovač noviniek"
+
+#: src/news_config_dialog.c:199
+msgid "Font size"
+msgstr "Veľkosť písma"
+
+#: src/news_config_dialog.c:202 src/news_config_dialog.c:316
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/news_config_dialog.c:205
+msgid "Font color"
+msgstr "Farba písma"
+
+#: src/news_config_dialog.c:230 src/news_config_dialog.c:270
+#: src/news_config_dialog.c:290
+msgid "Timer"
+msgstr "Časovač"
+
+#: src/news_config_dialog.c:232
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f min"
+
+#: src/news_config_dialog.c:241
+msgid "Browser"
+msgstr "Prehliadač"
+
+#: src/news_config_dialog.c:243
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "Používa xdg-open skript, z freedesktop.org"
+
+#: src/news_config_dialog.c:248
+msgid "Popup On News"
+msgstr "Upozorniť na novú správu"
+
+#: src/news_config_dialog.c:251
+msgid "Never"
+msgstr "Nikdy"
+
+#: src/news_config_dialog.c:257
+msgid "Only on urgent feeds"
+msgstr "Iba pri  naliehavých čítačkách"
+
+#: src/news_config_dialog.c:263
+msgid "On all feeds"
+msgstr "Na všetkých čítačkách"
+
+#: src/news_config_dialog.c:272 src/news_config_dialog.c:292
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f s"
+
+#: src/news_config_dialog.c:280
+msgid "Popup On Warning / Error"
+msgstr "Zobraziť okno s varovaním / Chyba"
+
+#: src/news_config_dialog.c:285
+msgid "Show on timeout ?"
+msgstr "Zobraziť pri uplynutí času"
+
+#: src/news_config_dialog.c:307
+msgid "Unread feeds first"
+msgstr "Neprečítané čítačky ako pvé"
+
+#: src/news_config_dialog.c:309
+msgid "Unread articles first"
+msgstr "Neprečítané články prvé"
+
+#: src/news_config_dialog.c:311
+msgid "Sort articles by date"
+msgstr "Zoradiť články podľa dátumu"
+
+#: src/news_config_dialog.c:314
+msgid "Font"
+msgstr "Písmo"
+
+#: src/news_config_dialog.c:324
+msgid "Font Shadow"
+msgstr "Tieň písma"
+
+#: src/news_config_dialog.c:336
+msgid "Proxy"
+msgstr "Proxy"
+
+#: src/news_config_dialog.c:338
+msgid "Enable"
+msgstr "Povoliť"
+
+#: src/news_config_dialog.c:340
+msgid "Host"
+msgstr "Host"
+
+#: src/news_config_dialog.c:344
+msgid "Port"
+msgstr "Port"
+
+#: src/news_config_dialog_category.c:50
+msgid "News Category Configuration"
+msgstr "Konfigurácia novej kategórie"
+
+#: src/news_config_dialog_category.c:135
+msgid "Icon"
+msgstr "Ikona"
+
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+msgid "Name"
+msgstr "Názov"
+
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+msgid "Select an Icon"
+msgstr "Vybrať ikonu"
+
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+msgid "OK"
+msgstr "OK"
+
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "Je potrebné <hilight>vytvoriť kategóriu</hilight> najskôr"
+
+#: src/news_config_dialog_feed.c:77
+msgid "News Feed Configuration"
+msgstr "Konfigurácia noviniek čítačky"
+
+#: src/news_config_dialog_feed.c:329
+msgid "Basic informations"
+msgstr "Základné informácie"
+
+#: src/news_config_dialog_feed.c:345
+msgid "Name :"
+msgstr "Názov:"
+
+#: src/news_config_dialog_feed.c:349
+msgid "Feed url :"
+msgstr "URL čítačky:"
+
+#: src/news_config_dialog_feed.c:353
+msgid "Mark as important feed"
+msgstr "Označiť čítačku ako dôležitú"
+
+#: src/news_config_dialog_feed.c:358
+msgid "Category"
+msgstr "Kategória"
+
+#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+msgid "Language"
+msgstr "Jazyk"
+
+#: src/news_config_dialog_feed.c:391
+msgid "Advanced informations"
+msgstr "Pokročilé informácie"
+
+#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+msgid "Description"
+msgstr "Opis"
+
+#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+msgid "Home url"
+msgstr "Domáca url"
+
+#: src/news_config_dialog_feed.c:405
+msgid "Server informations"
+msgstr "Serverové informácie"
+
+#: src/news_config_dialog_feed.c:407
+msgid "Do allow the server to overwrite the informations you entered ?"
+msgstr "Povoliť serveru prepísanie informácií ktoré ste zadali?"
+
+#: src/news_config_dialog_feeds.c:82
+msgid "News Feeds Configuration"
+msgstr "Nový konfigurácia čítačiek"
+
+#: src/news_config_dialog_feeds.c:290
+msgid "Categories"
+msgstr "Kategórie"
+
+#: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
+msgid "Add"
+msgstr "Pridať"
+
+#: src/news_config_dialog_feeds.c:316 src/news_config_dialog_feeds.c:390
+msgid "Delete"
+msgstr "Odstrániť"
+
+#: src/news_config_dialog_feeds.c:319 src/news_config_dialog_feeds.c:393
+msgid "Configure"
+msgstr "Konfigurovať"
+
+#: src/news_config_dialog_feeds.c:331 src/news_config_dialog_langs.c:133
+msgid "Languages"
+msgstr "Jazyky"
+
+#: src/news_config_dialog_feeds.c:333
+msgid "All"
+msgstr "Všetko"
+
+#: src/news_config_dialog_feeds.c:336
+msgid "Select"
+msgstr "Vybrať"
+
+#: src/news_config_dialog_feeds.c:346
+msgid "Empty the lists"
+msgstr "Prázdny zoznam"
+
+#: src/news_config_dialog_feeds.c:349
+msgid "Restore default lists"
+msgstr "Obnoviť predvolený zoznam"
+
+#: src/news_config_dialog_feeds.c:686
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+"Existujú <hilight> kanály </hilight> v tejto kategórii. <br> Musíte "
+"<hilight> odstrániť prvý </hilight>"
+
+#: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
+msgid "News Module - Are you sure ?"
+msgstr "Nový modul - Ste si istý ?"
+
+#: src/news_config_dialog_item.c:40
+msgid "News Gadget Configuration"
+msgstr "Konfigurácia nového gadgetu"
+
+#: src/news_config_dialog_item.c:104
+msgid "View Mode"
+msgstr "Zobraziť režim"
+
+#: src/news_config_dialog_item.c:107
+msgid "Show one icon for all feeds"
+msgstr "Zobraziť ikonu pre všetky čítačky"
+
+#: src/news_config_dialog_item.c:109
+msgid "Show all feeds"
+msgstr "Zobraziť všetky čítačky"
+
+#: src/news_config_dialog_item.c:111
+msgid "Show unread feeds"
+msgstr "Zobraziť neprečítané čítačky"
+
+#: src/news_config_dialog_item.c:113
+msgid "Show all feeds marked as important"
+msgstr "Zobraziť všetky čítačky ako dôležité"
+
+#: src/news_config_dialog_item.c:115
+msgid "Show unread feeds marked as important"
+msgstr "Zobraziť neprečítané čítačky ako dôležité"
+
+#: src/news_config_dialog_item.c:120
+msgid "Feed open in"
+msgstr "Čítačka otvorená v"
+
+#: src/news_config_dialog_item.c:123
+msgid "the feed viewer"
+msgstr "prehliadač čítačiek"
+
+#: src/news_config_dialog_item.c:125
+msgid "my favorite browser"
+msgstr "môj obľúbený prehliadač"
+
+#: src/news_config_dialog_item.c:127
+msgid "Browser opens home url"
+msgstr "Prehliadač otvorí domácu url"
+
+#: src/news_config_dialog_item.c:129
+msgid "instead of feed url"
+msgstr "miesto url čítačky"
+
+#: src/news_config_dialog_item.c:136
+msgid "Apply this to all News gadgets"
+msgstr "Použiť na všetky nové gadgety"
+
+#: src/news_config_dialog_item_content.c:53
+msgid "News Gadget Content Configuration"
+msgstr "Nastavenie obsahu nového gadgetu"
+
+#: src/news_config_dialog_item_content.c:258
+msgid "Avalaible Feeds"
+msgstr "Dostupné čítačky"
+
+#: src/news_config_dialog_item_content.c:267
+msgid "Add this Feed"
+msgstr "Pridať túto číatačku"
+
+#: src/news_config_dialog_item_content.c:274
+msgid "Selected Feeds"
+msgstr "Vybrané čítačky"
+
+#: src/news_config_dialog_item_content.c:292
+msgid "Remove this Feed"
+msgstr "Odstrániť túto čítačku"
+
+#: src/news_config_dialog_langs.c:45
+msgid "News Feeds Language Configuration"
+msgstr "Nastavenie jazyka čítačky noviniek"
+
+#: src/news_config_dialog_langs.c:123
+msgid "Welcome to News Module !"
+msgstr "Vitajte v modeli novinky !"
+
+#: src/news_config_dialog_langs.c:125
+msgid "Please select the languages that you are able to read"
+msgstr "Prosím vyberte jazyky, ktoré ovládate"
+
+#: src/news_feed.c:291
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "Zadaný <hilight>názov</hilight> nie je správny"
+
+#: src/news_feed.c:296
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "Je potrebné <hilight>vybrať kategóriu</hilight>."
+
+#: src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+"Čítačka s <hilight>názvom</hilight> %s <hilight>už existuje</hilight><br>v "
+"%s kategórii<br><br>Nie je možné mať kanály s rovnakým názvom<br>v jednej "
+"kategórii."
+
+#: src/news_feed.c:311
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "Musíte vybrať <hilight>jazyk</hilight>."
+
+#: src/news_feed.c:318
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "Zadaná <hilight>url</hilight> nie je správna"
+
+#: src/news_feed.c:880
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr "Je potrebné zadať <hilight>názov</hilight> !"
+
+#: src/news_feed.c:888
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr ""
+"Zadaný <hilight>názov</hilight> je <hilight>už pouzívaný</hilight><br>inou "
+"kategóriou"
+
+#: src/news_menu.c:129
+#, fuzzy
+msgid "Set all as read"
+msgstr "Označiť všetky čítačky ako prečítané"
+
+#: src/news_menu.c:135
+msgid "Update"
+msgstr ""
+
+#: src/news_menu.c:141
+#, fuzzy
+msgid "Gadget Contents"
+msgstr "Konfigurovať obsah gadgetu"
+
+#: src/news_menu.c:151
+msgid "Gadget"
+msgstr ""
+
+#: src/news_menu.c:161
+msgid "Main"
+msgstr ""
+
+#: src/news_menu.c:166
+msgid "Settings"
+msgstr ""
+
+#: src/news_utils.h:13
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr "Modul noviniek DEBUG DEBUG DEBUG DEBUG"
+
+#: src/news_utils.h:20
+msgid "News Module"
+msgstr "Modul noviniek"
+
+#: src/news_utils.h:27
+msgid "News Module Error"
+msgstr "Chyba modulu noviniek"
+
+#: src/news_viewer.c:372
+msgid "Feeds in this gadget"
+msgstr "Čítačky v tomto gadgete"
+
+#: src/news_viewer.c:438
+msgid "Articles in selected feed"
+msgstr "Články vo vybranej čítačke"
+
+#~ msgid "Configure this feed"
+#~ msgstr "KOnfigurovať čítačku"
+
+#~ msgid "Update all feeds"
+#~ msgstr "Aktualizovať všetky čítačky"
+
+#~ msgid "Configure gadget"
+#~ msgstr "Konfigurovať gadget"
+
+#~ msgid "Main Configuration"
+#~ msgstr "Hlavné nastavenie"
+
+#~ msgid "Feeds Configuration"
+#~ msgstr "Nastavenie čítačiek"
+
+#~ msgid "Configuration"
+#~ msgstr "Onfigurácia"

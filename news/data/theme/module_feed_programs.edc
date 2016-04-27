@@ -1,0 +1,50 @@
+/* Signals for new state */
+
+program
+{
+	name: "new_set";
+	signal: "e,state,new,set";
+	source: "e";
+	action: STATE_SET "active" 0.0;
+	transition: SINUSOIDAL 0.7;
+	target: "unread_clip";
+}
+program
+{
+	name: "new_unset";
+	signal: "e,state,new,unset";
+	source: "e";
+	action: STATE_SET "default" 0.0;
+	transition: SINUSOIDAL 0.5;
+	target: "unread_clip";
+}
+
+/* Mouse in/out */
+
+program
+{
+	name:	"mouse_in";
+	signal:	"mouse,in";
+	source:	"inout";
+        action: STATE_SET "active" 0.0;
+	transition: SINUSOIDAL 0.1;
+        target: "border_clip";
+}
+
+program
+{
+	name:	"mouse_out";
+	signal:	"mouse,out";
+	source:	"inout";
+        action: STATE_SET "default" 0.0;
+	transition: SINUSOIDAL 0.5;
+        target: "border_clip";
+}
+
+program
+{
+	name:	"mouse_down";
+	signal:	"mouse,down,1";
+	source:	"inout";
+        action: SIGNAL_EMIT "e,action,open" "e";
+}

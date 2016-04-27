@@ -1,0 +1,481 @@
+# Japanese translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-02-16 22:50+0100\n"
+"PO-Revision-Date: 2009-03-14 11:46+0000\n"
+"Last-Translator: Yuki Kodama <Unknown>\n"
+"Language-Team: Japanese <ja@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:52
+msgid "Config init failed"
+msgstr "設定の初期化に失敗しました"
+
+#: src/e_mod_main.c:53
+msgid "Parser init failed"
+msgstr "パーサの初期化に失敗しました"
+
+#: src/e_mod_main.c:54
+msgid "Feeds init failed"
+msgstr "フィードの初期化に失敗しました"
+
+#: src/e_mod_main.c:55
+msgid "Viewer init failed"
+msgstr "ビューアの初期化に失敗しました"
+
+#: src/e_mod_main.c:56
+msgid "Popup subsystem init failed"
+msgstr "ポップアップサブシステムの初期化に失敗しました"
+
+#: src/e_mod_main.c:219
+msgid "News"
+msgstr "News"
+
+#: src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+
+#: src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+
+#: src/news_config_dialog.c:90
+msgid "News Main Configuration"
+msgstr "Newsメイン設定"
+
+#: src/news_config_dialog.c:190 src/news_config_dialog.c:228
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:156
+msgid "Feeds"
+msgstr "フィード"
+
+#: src/news_config_dialog.c:192 src/news_config_dialog.c:236
+msgid "Sort lists by name (disable Move action)"
+msgstr "名前順にソート (Moveアクションは無効)"
+
+#: src/news_config_dialog.c:197 src/news_config_dialog.c:305
+msgid "News Viewer"
+msgstr "Newsビューア"
+
+#: src/news_config_dialog.c:199
+msgid "Font size"
+msgstr "フォントサイズ"
+
+#: src/news_config_dialog.c:202 src/news_config_dialog.c:316
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/news_config_dialog.c:205
+msgid "Font color"
+msgstr "文字色"
+
+#: src/news_config_dialog.c:230 src/news_config_dialog.c:270
+#: src/news_config_dialog.c:290
+msgid "Timer"
+msgstr "タイマ"
+
+#: src/news_config_dialog.c:232
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f分"
+
+#: src/news_config_dialog.c:241
+msgid "Browser"
+msgstr "ブラウザ"
+
+#: src/news_config_dialog.c:243
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "freedesktop.org からの xdg-open スクリプトを使う"
+
+#: src/news_config_dialog.c:248
+msgid "Popup On News"
+msgstr "Newsが届いたらポップアップする"
+
+#: src/news_config_dialog.c:251
+msgid "Never"
+msgstr "無効"
+
+#: src/news_config_dialog.c:257
+msgid "Only on urgent feeds"
+msgstr "緊急のフィードのみ"
+
+#: src/news_config_dialog.c:263
+msgid "On all feeds"
+msgstr "すべてのフィード"
+
+#: src/news_config_dialog.c:272 src/news_config_dialog.c:292
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f秒"
+
+#: src/news_config_dialog.c:280
+msgid "Popup On Warning / Error"
+msgstr "警告またはエラーのときにポップアップする"
+
+#: src/news_config_dialog.c:285
+msgid "Show on timeout ?"
+msgstr "タイムアウトしたら表示しますか？"
+
+#: src/news_config_dialog.c:307
+msgid "Unread feeds first"
+msgstr "未読フィードを最初にする"
+
+#: src/news_config_dialog.c:309
+msgid "Unread articles first"
+msgstr "未読記事を最初にする"
+
+#: src/news_config_dialog.c:311
+msgid "Sort articles by date"
+msgstr "記事を日付順にソートする"
+
+#: src/news_config_dialog.c:314
+msgid "Font"
+msgstr "フォント"
+
+#: src/news_config_dialog.c:324
+msgid "Font Shadow"
+msgstr "文字の影"
+
+#: src/news_config_dialog.c:336
+msgid "Proxy"
+msgstr "プロキシ"
+
+#: src/news_config_dialog.c:338
+msgid "Enable"
+msgstr "有効"
+
+#: src/news_config_dialog.c:340
+msgid "Host"
+msgstr "ホスト"
+
+#: src/news_config_dialog.c:344
+msgid "Port"
+msgstr "ポート番号"
+
+#: src/news_config_dialog_category.c:50
+msgid "News Category Configuration"
+msgstr "ニュースカテゴリ設定"
+
+#: src/news_config_dialog_category.c:135
+msgid "Icon"
+msgstr "アイコン"
+
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+msgid "Name"
+msgstr "名前"
+
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+msgid "Select an Icon"
+msgstr "アイコンを選択"
+
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+msgid "OK"
+msgstr "OK"
+
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "最初に<hilight>カテゴリを作成</hilight>する必要があります"
+
+#: src/news_config_dialog_feed.c:77
+msgid "News Feed Configuration"
+msgstr "ニュースフィード設定"
+
+#: src/news_config_dialog_feed.c:329
+msgid "Basic informations"
+msgstr "情報"
+
+#: src/news_config_dialog_feed.c:345
+msgid "Name :"
+msgstr "名前 :"
+
+#: src/news_config_dialog_feed.c:349
+msgid "Feed url :"
+msgstr "フィードURL :"
+
+#: src/news_config_dialog_feed.c:353
+msgid "Mark as important feed"
+msgstr "重要なフィードに指定"
+
+#: src/news_config_dialog_feed.c:358
+msgid "Category"
+msgstr "カテゴリ"
+
+#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+msgid "Language"
+msgstr "言語"
+
+#: src/news_config_dialog_feed.c:391
+msgid "Advanced informations"
+msgstr "詳細な情報"
+
+#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+msgid "Description"
+msgstr "説明"
+
+#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+msgid "Home url"
+msgstr "ホームURL"
+
+#: src/news_config_dialog_feed.c:405
+msgid "Server informations"
+msgstr "サーバ情報"
+
+#: src/news_config_dialog_feed.c:407
+msgid "Do allow the server to overwrite the informations you entered ?"
+msgstr "設定情報をサーバが上書きしてもよろしいですか？"
+
+#: src/news_config_dialog_feeds.c:82
+msgid "News Feeds Configuration"
+msgstr "ニュースフィード設定"
+
+#: src/news_config_dialog_feeds.c:290
+msgid "Categories"
+msgstr "カテゴリ"
+
+#: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
+msgid "Add"
+msgstr "追加"
+
+#: src/news_config_dialog_feeds.c:316 src/news_config_dialog_feeds.c:390
+msgid "Delete"
+msgstr "削除"
+
+#: src/news_config_dialog_feeds.c:319 src/news_config_dialog_feeds.c:393
+msgid "Configure"
+msgstr "設定"
+
+#: src/news_config_dialog_feeds.c:331 src/news_config_dialog_langs.c:133
+msgid "Languages"
+msgstr "言語"
+
+#: src/news_config_dialog_feeds.c:333
+msgid "All"
+msgstr "全て"
+
+#: src/news_config_dialog_feeds.c:336
+msgid "Select"
+msgstr "選択"
+
+#: src/news_config_dialog_feeds.c:346
+msgid "Empty the lists"
+msgstr "リストは空です"
+
+#: src/news_config_dialog_feeds.c:349
+msgid "Restore default lists"
+msgstr "デフォルトのリストに戻す"
+
+#: src/news_config_dialog_feeds.c:686
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+"このカテゴリには<hilight>フィード</hilight>があります。<br>先にそれらを"
+"<hilight>削除</hilight>しておく必要があります。"
+
+#: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
+msgid "News Module - Are you sure ?"
+msgstr "Newsモジュール - よろしいですか？"
+
+#: src/news_config_dialog_item.c:40
+msgid "News Gadget Configuration"
+msgstr "ニュースガジェット設定"
+
+#: src/news_config_dialog_item.c:104
+msgid "View Mode"
+msgstr "表示モード"
+
+#: src/news_config_dialog_item.c:107
+msgid "Show one icon for all feeds"
+msgstr "すべてのフィードに対して1つのアイコンを表示"
+
+#: src/news_config_dialog_item.c:109
+msgid "Show all feeds"
+msgstr "すべてのフィードを表示"
+
+#: src/news_config_dialog_item.c:111
+msgid "Show unread feeds"
+msgstr "未読フィードの表示"
+
+#: src/news_config_dialog_item.c:113
+msgid "Show all feeds marked as important"
+msgstr "重要なフィードをすべて表示"
+
+#: src/news_config_dialog_item.c:115
+msgid "Show unread feeds marked as important"
+msgstr "重要な未読フィードを表示"
+
+#: src/news_config_dialog_item.c:120
+msgid "Feed open in"
+msgstr "フィードを開く"
+
+#: src/news_config_dialog_item.c:123
+msgid "the feed viewer"
+msgstr "フィードビューア"
+
+#: src/news_config_dialog_item.c:125
+msgid "my favorite browser"
+msgstr "お気に入りのブラウザ"
+
+#: src/news_config_dialog_item.c:127
+msgid "Browser opens home url"
+msgstr "ブラウザでホームURLを開く"
+
+#: src/news_config_dialog_item.c:129
+msgid "instead of feed url"
+msgstr "フィードURLの代わりに"
+
+#: src/news_config_dialog_item.c:136
+msgid "Apply this to all News gadgets"
+msgstr "これをすべてのニュースガジェットに適用する"
+
+#: src/news_config_dialog_item_content.c:53
+msgid "News Gadget Content Configuration"
+msgstr "ニュースガジェット内容設定"
+
+#: src/news_config_dialog_item_content.c:258
+msgid "Avalaible Feeds"
+msgstr "利用可能なフィード"
+
+#: src/news_config_dialog_item_content.c:267
+msgid "Add this Feed"
+msgstr "これをフィードに追加"
+
+#: src/news_config_dialog_item_content.c:274
+msgid "Selected Feeds"
+msgstr "選択されたフィード"
+
+#: src/news_config_dialog_item_content.c:292
+msgid "Remove this Feed"
+msgstr "このフィードを削除"
+
+#: src/news_config_dialog_langs.c:45
+msgid "News Feeds Language Configuration"
+msgstr "ニュースフィード言語設定"
+
+#: src/news_config_dialog_langs.c:123
+msgid "Welcome to News Module !"
+msgstr "Newsモジュールへようこそ！"
+
+#: src/news_config_dialog_langs.c:125
+msgid "Please select the languages that you are able to read"
+msgstr "使用したい言語を選んでください"
+
+#: src/news_feed.c:291
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "入力された<hilight>名前</hilight>が正しくありません"
+
+#: src/news_feed.c:296
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "カテゴリを<hilight>選択</hilight>する必要があります"
+
+#: src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+"%sという名前のフィードは既に%sカテゴリに存在しています。<br><br>1つのカテゴリ"
+"に同じ名前フィードを含めることはできません。"
+
+#: src/news_feed.c:311
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "<hilight>言語</hilight>を選択する必要があります"
+
+#: src/news_feed.c:318
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "入力された<hilight>URL</hilight>は正しくありません"
+
+#: src/news_feed.c:880
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr "<hilight>名前</hilight>を入力してください！"
+
+#: src/news_feed.c:888
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr "入力された名前は既に別のカテゴリによって使用されています"
+
+#: src/news_menu.c:129
+#, fuzzy
+msgid "Set all as read"
+msgstr "すべてのフィードを既読にする"
+
+#: src/news_menu.c:135
+msgid "Update"
+msgstr ""
+
+#: src/news_menu.c:141
+#, fuzzy
+msgid "Gadget Contents"
+msgstr "ガジェットの内容を設定する"
+
+#: src/news_menu.c:151
+msgid "Gadget"
+msgstr ""
+
+#: src/news_menu.c:161
+msgid "Main"
+msgstr ""
+
+#: src/news_menu.c:166
+msgid "Settings"
+msgstr ""
+
+#: src/news_utils.h:13
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr "Newsモジュール デバッグ デバッグ デバッグ デバッグ"
+
+#: src/news_utils.h:20
+msgid "News Module"
+msgstr "Newsモジュール"
+
+#: src/news_utils.h:27
+msgid "News Module Error"
+msgstr "Newsモジュールエラー"
+
+#: src/news_viewer.c:372
+msgid "Feeds in this gadget"
+msgstr "このガジェットのフィード"
+
+#: src/news_viewer.c:438
+msgid "Articles in selected feed"
+msgstr "選択されたフィードの記事"
+
+#~ msgid "Configure this feed"
+#~ msgstr "このフィードを設定する"
+
+#~ msgid "Update all feeds"
+#~ msgstr "すべてのフィードを更新"
+
+#~ msgid "Configure gadget"
+#~ msgstr "ガジェットを設定する"
+
+#~ msgid "Main Configuration"
+#~ msgstr "メイン設定"
+
+#~ msgid "Feeds Configuration"
+#~ msgstr "フィード設定"
+
+#~ msgid "Configuration"
+#~ msgstr "設定"
