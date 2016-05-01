@@ -226,7 +226,8 @@ _gc_shutdown(E_Gadcon_Client *gcc)
    evas_object_event_callback_del(w->forecasts_obj, EVAS_CALLBACK_MOUSE_DOWN,
                                   _forecasts_cb_mouse_down);
 
-   _forecasts_free(w);
+   //~ _forecasts_free(w);
+   E_FREE(w);
    E_FREE(inst);
 }
 
@@ -379,6 +380,7 @@ _forecasts_config_item_get(const char *id)
    ci->code = eina_stringshare_add(DEFAULT_LOCATION);
    ci->show_text = 1;
    ci->popup_on_hover = 1;
+   ci->by_code = 1;
 
    forecasts_config->items = eina_list_append(forecasts_config->items, ci);
    return ci;
@@ -412,6 +414,7 @@ e_modapi_init(E_Module *m)
    E_CONFIG_VAL(D, T, code, STR);
    E_CONFIG_VAL(D, T, show_text, INT);
    E_CONFIG_VAL(D, T, popup_on_hover, INT);
+   E_CONFIG_VAL(D, T, by_code, INT);
 
    conf_edd = E_CONFIG_DD_NEW("Forecasts_Config", Config);
 #undef T
@@ -609,9 +612,12 @@ _forecasts_server_add(void *data, int type, void *event)
    //snprintf(forecast, sizeof(forecast), "/forecastrss?p=%s&u=%c", inst->ci->code, degrees);
     
    //~ url to choose city without WOEID:
-   //~ snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%20in%%20%%28select%%20woeid%%20from%%20geo.places%%281%%29%%20where%%20text=\"%s\"%%20%%29%%20and%%20u='%c'", inst->ci->code, degrees);
    
-   snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%3D%s%%20and%%20u%%3D%%27%c%%27", inst->ci->code, degrees);
+   if (inst->ci->by_code == WOEID_CITY)
+      snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%20in%%20%%28select%%20woeid%%20from%%20geo.places%%281%%29%%20where%%20text=\"%s\"%%20%%29%%20and%%20u='%c'", inst->ci->code, degrees);
+   else 
+      snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%3D%s%%20and%%20u%%3D%%27%c%%27", inst->ci->code, degrees);
+   
    snprintf(buf, sizeof(buf), "GET http://%s%s HTTP/1.1\r\n"
                               "Host: %s\r\n"
                               "Connection: close\r\n\r\n",

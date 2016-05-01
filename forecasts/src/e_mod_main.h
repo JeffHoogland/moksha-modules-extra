@@ -13,6 +13,8 @@
 #define DEGREES_F 0
 #define DEGREES_C 1
 
+#define WOEID_CODE 1
+#define WOEID_CITY 0
 
 
 typedef struct _Config Config;
@@ -38,6 +40,7 @@ struct _Config_Item
    const char *host, *code;
    int show_text;
    int popup_on_hover;
+   int by_code;
 };
 
 EAPI extern E_Module_Api e_modapi;

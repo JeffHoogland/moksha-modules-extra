@@ -9,6 +9,7 @@ struct _E_Config_Dialog_Data
    int    degrees;
    char  *code;
    int    show_text;
+   int    by_code;
    int    popup_on_hover;
 };
 
@@ -54,7 +55,9 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
      cfdata->code = strdup(ci->code);
    cfdata->show_text = ci->show_text;
    cfdata->popup_on_hover = ci->popup_on_hover;
+   cfdata->by_code = ci->by_code;
 }
+
 
 static void *
 _create_data(E_Config_Dialog *cfd)
@@ -87,6 +90,8 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas,
    Evas_Object *o, *of, *ob;
    E_Radio_Group *dg;
    char buf[4096];
+   //~ char *ss;
+   //~ ss="zourbuth.com/tools/woeid";
 
    o = e_widget_list_add(evas, 0, 0);
    of = e_widget_framelist_add(evas, D_("Display Settings"), 0);
@@ -113,19 +118,32 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas,
    ob = e_widget_radio_add(evas, D_("English"), DEGREES_F, dg);
    e_widget_framelist_object_append(of, ob);
    e_widget_list_object_append(o, of, 1, 1, 0.5);
+   
 
    of = e_widget_frametable_add(evas, D_("GeoPlanet WOEID (Where on Earth Identifier)"), 0);
-   ob = e_widget_label_add(evas, D_("Forecasts WOEID Code"));
-   e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 0, 1, 0);
+   
+   dg = e_widget_radio_group_new(&(cfdata->by_code));
+   ob = e_widget_radio_add(evas, D_("Code"), WOEID_CODE, dg);
+   e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 0, 1, 0);
+   ob = e_widget_radio_add(evas, D_("City name"), WOEID_CITY, dg);
+   e_widget_frametable_object_append(of, ob, 1, 1, 1, 1, 1, 0, 1, 0);
+   
+   ob = e_widget_label_add(evas, D_("Forecasts WOEID Code or city name: "));
+   e_widget_frametable_object_append(of, ob, 0, 3, 1, 1, 1, 0, 1, 0);
    ob = e_widget_entry_add(evas, &cfdata->code, NULL, NULL, NULL);
    e_widget_size_min_set(ob, 120, 28);
-   e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 0, 1, 0);
-   ob = e_widget_label_add(evas, D_("To find the code for your area, go to:"));
-   e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 0, 1, 0);
+   e_widget_frametable_object_append(of, ob, 1, 3, 1, 1, 1, 0, 1, 0);
+   ob = e_widget_label_add(evas, D_("To find the code, go to:"));
+   e_widget_frametable_object_append(of, ob, 0, 4, 1, 1, 1, 0, 1, 0);
+   
+   //~ ob = e_widget_entry_add(evas, &ss, NULL, NULL, NULL);
+   //~ e_widget_size_min_set(ob, 150, 28);
+   //~ e_widget_frametable_object_append(of, ob, 1, 2, 1, 1, 1, 0, 1, 0);
+   
    snprintf(buf, sizeof(buf), D_("%s, find your area, and look at the URL"), "http://zourbuth.com/tools/woeid");
    ob = e_widget_label_add(evas, buf);
-   e_widget_frametable_object_append(of, ob, 0, 2, 2, 1, 1, 0, 1, 0);
-   e_widget_list_object_append(o, of, 1, 1, 0.5);
+   e_widget_frametable_object_append(of, ob, 0, 5, 3, 1, 1, 0, 1, 0);
+   e_widget_list_object_append(o, of, 1, 7, 0.5);
 
    return o;
 }
@@ -155,6 +173,7 @@ _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    ci->code = eina_stringshare_add(t);
    ci->show_text = cfdata->show_text;
    ci->popup_on_hover = cfdata->popup_on_hover;
+   ci->by_code = cfdata->by_code;
 
    e_config_save_queue();
    _forecasts_config_updated(ci);
