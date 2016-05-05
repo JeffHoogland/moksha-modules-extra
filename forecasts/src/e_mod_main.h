@@ -16,7 +16,6 @@
 #define WOEID_CODE 1
 #define WOEID_CITY 0
 
-
 typedef struct _Config Config;
 typedef struct _Config_Item Config_Item;
 typedef struct _Popup Popup;

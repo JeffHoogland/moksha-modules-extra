@@ -9,6 +9,7 @@
 
 #define DEFAULT_LOCATION "839722"
 
+
 #define ENABLE_DEBUG 0
 #define DEBUG(f, ...) if (ENABLE_DEBUG) \
     printf("[forecasts] "f "\n", __VA_ARGS__)
