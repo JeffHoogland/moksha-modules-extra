@@ -524,6 +524,18 @@ _forecasts_new(Evas *evas)
 static void
 _forecasts_free(Forecasts *w)
 {
+   char name[60];
+   int i;
+
+   for (i = 0; i < 2; i++)
+     {
+        Evas_Object *swallow;
+
+        snprintf(name, sizeof(name), "e.swallow.day%d.icon", i);
+        swallow = edje_object_part_swallow_get(w->forecasts_obj, name);
+        if (swallow)
+          evas_object_del(swallow);
+     }
    evas_object_del(w->forecasts_obj);
    evas_object_del(w->icon_obj);
    free(w);
