@@ -227,8 +227,7 @@ _gc_shutdown(E_Gadcon_Client *gcc)
    evas_object_event_callback_del(w->forecasts_obj, EVAS_CALLBACK_MOUSE_DOWN,
                                   _forecasts_cb_mouse_down);
 
-   //~ _forecasts_free(w);
-   E_FREE(w);
+   _forecasts_free(w);
    E_FREE(inst);
 }
 
