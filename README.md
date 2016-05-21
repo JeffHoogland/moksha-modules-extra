@@ -3,6 +3,7 @@ Optional additional modules for the [Moksha desktop](https://github.com/JeffHoog
 
 Module List:
 
+- Alarm
 - Cpu
 - Deskshow
 - Engage
