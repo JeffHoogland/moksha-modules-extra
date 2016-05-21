@@ -291,7 +291,7 @@ _forecasts_cb_mouse_down(void *data, Evas *e, Evas_Object *obj,
 
    inst = data;
    ev = event_info;
-   if ((ev->button == 3)); // && (!forecasts_config->menu))  Segfault issue removal
+   if ((ev->button == 3)) // && (!forecasts_config->menu))  Segfault issue removal
      {
         E_Menu *m;
         E_Menu_Item *mi;
@@ -332,7 +332,10 @@ static void
 _forecasts_menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi)
 {
    Instance *inst;
-
+ 
+   if (!forecasts_config) return;
+   if (forecasts_config->config_dialog) return;
+ 
    inst = data;
    _config_forecasts_module(inst->ci);
 }
