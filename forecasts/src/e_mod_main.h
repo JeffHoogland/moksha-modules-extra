@@ -26,7 +26,7 @@ struct _Config
    E_Config_Dialog *config_dialog;
    Eina_List *instances;
    Eina_List *items;
-   E_Menu *menu;
+   // E_Menu *menu; Segfault issue removal
 };
 
 struct _Config_Item
