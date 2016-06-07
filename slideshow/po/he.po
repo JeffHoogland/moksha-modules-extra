@@ -1,0 +1,72 @@
+# Hebrew translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# Yaron <sh.yaron@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"PO-Revision-Date: 2008-11-29 23:45+0000\n"
+"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:37
+msgid "Slideshow Configuration"
+msgstr "תצורת המצגת"
+
+#: ../src/e_mod_config.c:90
+msgid "Cycle Time"
+msgstr "זמן ההחלפה"
+
+#: ../src/e_mod_config.c:92
+msgid "Disable Timer"
+msgstr "ביטול קוצב הזמן"
+
+#: ../src/e_mod_config.c:95
+#, c-format
+msgid "%3.0f seconds"
+msgstr "%3.0f שניות"
+
+#: ../src/e_mod_config.c:100
+msgid "Directory"
+msgstr "תיקייה"
+
+#: ../src/e_mod_config.c:102
+msgid "Sub-directory to use for backgrounds"
+msgstr "תת־התיקייה לשימוש עבור הרקעים"
+
+#: ../src/e_mod_config.c:109
+msgid "Extra"
+msgstr "נוספים"
+
+#: ../src/e_mod_config.c:110
+msgid "Randomize order"
+msgstr "רצף אקראי"
+
+#: ../src/e_mod_config.c:113
+msgid "Set wallpaper on all desktops"
+msgstr "הגדר רקע עבור כול שולחנות העבודה"
+
+#: ../src/e_mod_config.c:115
+msgid "Set wallpaper on current desktop"
+msgstr "הגדר רקע עבור שולחן העבודה הנוכחי"
+
+#: ../src/e_mod_config.c:117
+msgid "Set wallpaper on current screen"
+msgstr "הגדר רקע עבור הצג הנוכחי"
+
+#: ../src/e_mod_config.c:121
+msgid "Set wallpaper on current monitor (Xinerama support)"
+msgstr "הגדר רקע עבור הצג הנוכחי (תמיכה ב־Xinerama)"
+
+#: ../src/e_mod_main.c:136
+msgid "Slideshow"
+msgstr "מצגת"
+
+#: ../src/e_mod_main.c:180
+msgid "Configuration"
+msgstr "תצורה"
