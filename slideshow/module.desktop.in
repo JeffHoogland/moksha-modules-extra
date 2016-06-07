@@ -1,0 +1,26 @@
+[Desktop Entry]
+Type=Link
+Name=Slideshow
+Name[ru]=Слайдоскоп
+Name[de]=Diaschau
+Name[eo]=Bildoprezentado
+Name[es]=Diapositivas
+Name[gl]=Diapositivas
+Name[hu]=Diavetítés
+Name[fr]=Diaporama
+Name[el]=Προβολή Σλάιντ
+Name[pt]=Apresentação
+Icon=e-module-slideshow
+X-Enlightenment-ModuleType=look
+Comment=Turns your desktop background into a slideshow.
+Comment[ru]=Превращает фон рабочего стола в слайдоскоп.
+Comment[cs]=Přemění pozadí plochy na slideshow.
+Comment[de]=Verwandelt den Desktop-Hintergrund in eine Diaschau.
+Comment[eo]=Aliformi la labortablan tapeton en bildoprezentado.
+Comment[es]=Transforma su fondo de escritorio en una presentación de diapositivas.
+Comment[gl]=Transforma o seu fondo de escritorio nunha presentación de diapositivas.
+Comment[hu]=A munkaasztal háttérképeit váltogatja, megadott időközönként, mint egy diavetítő.
+Comment[it]=Trasforma lo sfondo del vostro desktop in uno slideshow.
+Comment[fr]=Transforme votre fond d'écran en diaporama.
+Comment[el]=Μετατρέπει την ταπετσαρία σας σε μια προβολή σλάιντ.
+Comment[pt]=Módulo que altera as imagens de fundo tal como numa apresentação

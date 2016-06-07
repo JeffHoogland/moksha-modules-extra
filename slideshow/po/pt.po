@@ -1,0 +1,79 @@
+# Portuguese translation for slideshow
+# This file is distributed under the same license as the enlightenment package.
+# Adaptado ao acordo ortográfico de 1990
+# Sérgio Marques <smarquespt@gmail.com>, 2010.
+# Sérgio Marques <sarquespt@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
+"POT-Creation-Date: 2010-09-26 05:00-0700\n"
+"PO-Revision-Date: 2010-12-05 12:10+0000\n"
+"Last-Translator: Sérgio Marques <sarquespt@gmail.com>\n"
+"Language-Team: Portuguese <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: Portugal\n"
+"X-Generator: Lokalize 1.1\n"
+
+#: ../src/e_mod_config.c:37
+msgid "Slideshow Settings"
+msgstr "Definições do módulo"
+
+#: ../src/e_mod_config.c:90
+msgid "Cycle Time"
+msgstr "Duração do ciclo"
+
+#: ../src/e_mod_config.c:92
+msgid "Disable Timer"
+msgstr "Desativar temporizador"
+
+#: ../src/e_mod_config.c:95
+#, c-format
+msgid "%3.0f seconds"
+msgstr "%3.0f segundos"
+
+#: ../src/e_mod_config.c:100
+msgid "Directory"
+msgstr "Diretório"
+
+#: ../src/e_mod_config.c:102
+msgid "Sub-directory to use for backgrounds"
+msgstr "Subdiretório a utilizar para as imagens de fundo"
+
+#: ../src/e_mod_config.c:109
+msgid "Extra"
+msgstr "Extra"
+
+#: ../src/e_mod_config.c:110
+msgid "Randomize order"
+msgstr "Aleatória"
+
+#: ../src/e_mod_config.c:113
+msgid "Set wallpaper on all desktops"
+msgstr "Definir papel de parede de todas as áreas de trabalho"
+
+#: ../src/e_mod_config.c:115
+msgid "Set wallpaper on current desktop"
+msgstr "Definir papel de parede da área de trabalho atual"
+
+#: ../src/e_mod_config.c:117
+msgid "Set wallpaper on current screen"
+msgstr "Definir papel de parede do ecrã atual"
+
+#: ../src/e_mod_config.c:121
+msgid "Set wallpaper on current monitor (Xinerama support)"
+msgstr "Definir papel de parede no monitor atual (xinerama)"
+
+#: ../src/e_mod_main.c:139
+msgid "Slideshow"
+msgstr "Apresentação"
+
+#: ../src/e_mod_main.c:185
+msgid "Settings"
+msgstr "Definições"
+
+

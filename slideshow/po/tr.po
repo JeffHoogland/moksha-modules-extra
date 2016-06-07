@@ -1,0 +1,75 @@
+# Turkish translation for enlightenment
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"PO-Revision-Date: 2009-11-15 09:02+0000\n"
+"Last-Translator: Mustafa Yılmaz <apshalasha@gmail.com>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-16 04:45+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:37
+msgid "Slideshow Configuration"
+msgstr "Slayt Gösterisi Yapılandırması"
+
+#: ../src/e_mod_config.c:90
+msgid "Cycle Time"
+msgstr "Değişim Zamanı"
+
+#: ../src/e_mod_config.c:92
+msgid "Disable Timer"
+msgstr "Zaman Sayacını Kapat"
+
+#: ../src/e_mod_config.c:95
+#, c-format
+msgid "%3.0f seconds"
+msgstr "%3.0f saniye"
+
+#: ../src/e_mod_config.c:100
+msgid "Directory"
+msgstr "Dizin"
+
+#: ../src/e_mod_config.c:102
+msgid "Sub-directory to use for backgrounds"
+msgstr "Arkaplanlar için kullanılacak alt-dizin"
+
+#: ../src/e_mod_config.c:109
+msgid "Extra"
+msgstr "Ekstra"
+
+#: ../src/e_mod_config.c:110
+msgid "Randomize order"
+msgstr "Sırayı rastgele karıştır"
+
+#: ../src/e_mod_config.c:113
+msgid "Set wallpaper on all desktops"
+msgstr "Tüm masaüstlerine duvarkağıdı yap"
+
+#: ../src/e_mod_config.c:115
+msgid "Set wallpaper on current desktop"
+msgstr "Şimdiki masaüstüne duvarkağıdı yap"
+
+#: ../src/e_mod_config.c:117
+msgid "Set wallpaper on current screen"
+msgstr "Şimdiki ekrana duvarkağıdı yap"
+
+#: ../src/e_mod_config.c:121
+msgid "Set wallpaper on current monitor (Xinerama support)"
+msgstr "Şimdiki monitöre (Xinrama desteği) duvarkaıdı yap"
+
+#: ../src/e_mod_main.c:136
+msgid "Slideshow"
+msgstr "Slayt gösterisi"
+
+#: ../src/e_mod_main.c:180
+msgid "Configuration"
+msgstr "Yapılandırma"

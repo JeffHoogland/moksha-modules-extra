@@ -1,0 +1,75 @@
+# Lithuanian translation for enlightenment
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"PO-Revision-Date: 2010-01-17 14:53+0000\n"
+"Last-Translator: Joshas <Unknown>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-01-18 04:44+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../src/e_mod_config.c:37
+msgid "Slideshow Configuration"
+msgstr "Prezentacijos konfigūracija"
+
+#: ../src/e_mod_config.c:90
+msgid "Cycle Time"
+msgstr "Periodo laikas"
+
+#: ../src/e_mod_config.c:92
+msgid "Disable Timer"
+msgstr "Išjungti laikmatį"
+
+#: ../src/e_mod_config.c:95
+#, c-format
+msgid "%3.0f seconds"
+msgstr "%3.0f sekundės"
+
+#: ../src/e_mod_config.c:100
+msgid "Directory"
+msgstr "Katalogas"
+
+#: ../src/e_mod_config.c:102
+msgid "Sub-directory to use for backgrounds"
+msgstr "Pokatalogis naudojamas fonams"
+
+#: ../src/e_mod_config.c:109
+msgid "Extra"
+msgstr "Papildomi"
+
+#: ../src/e_mod_config.c:110
+msgid "Randomize order"
+msgstr "Atsitiktinė tvarka"
+
+#: ../src/e_mod_config.c:113
+msgid "Set wallpaper on all desktops"
+msgstr "Nustatyti foną visiems darbalaukiams"
+
+#: ../src/e_mod_config.c:115
+msgid "Set wallpaper on current desktop"
+msgstr "Nustatyti foną dabartiniam darbalaukiui"
+
+#: ../src/e_mod_config.c:117
+msgid "Set wallpaper on current screen"
+msgstr "Nustatyti foną dabartiniam ekranui"
+
+#: ../src/e_mod_config.c:121
+msgid "Set wallpaper on current monitor (Xinerama support)"
+msgstr "Nustatyti foną dabartiniam monitoriui (Xinerama palaikymas)"
+
+#: ../src/e_mod_main.c:136
+msgid "Slideshow"
+msgstr "Prezentacija"
+
+#: ../src/e_mod_main.c:180
+msgid "Configuration"
+msgstr "Konfigūracija"
