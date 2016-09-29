@@ -64,6 +64,7 @@ static void
 _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
 {
    trash_conf->cfd = NULL;
+   E_FREE(cfdata->fileman);
    E_FREE(cfdata);
 }
 
@@ -72,7 +73,7 @@ _fill_data(E_Config_Dialog_Data *cfdata)
 {
    /* load a temp copy of the config variables */
   
-   cfdata->fileman = strdup(trash_conf->fileman);
+   if (trash_conf->fileman) cfdata->fileman = strdup(trash_conf->fileman);
 }
 
 static Evas_Object *
