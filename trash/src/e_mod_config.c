@@ -20,7 +20,7 @@ static int _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
 
 /* Function for calling our personal dialog menu */
 E_Config_Dialog *
-e_int_config_skel_module(E_Container *con, const char *params) 
+e_int_config_trash_module(E_Container *con, const char *params) 
 {
    E_Config_Dialog *cfd = NULL;
    E_Config_Dialog_View *v = NULL;
@@ -38,14 +38,14 @@ e_int_config_skel_module(E_Container *con, const char *params)
    v->basic.apply_cfdata = _basic_apply;
 
    /* Icon in the theme */
-   snprintf(buf, sizeof(buf), "%s/e-module-trash.edj", skel_conf->module->dir);
+   snprintf(buf, sizeof(buf), "%s/e-module-trash.edj", trash_conf->module->dir);
 
    /* create our config dialog */
    cfd = e_config_dialog_new(con, D_("Trash module"), "Trash", 
                              "advanced/trash", buf, 0, v, NULL);
 
-   e_dialog_resizable_set(cfd->dia, 1);
-   skel_conf->cfd = cfd;
+   e_dialog_resizable_set(cfd->dia, 0);
+   trash_conf->cfd = cfd;
    return cfd;
 }
 
@@ -63,7 +63,7 @@ _create_data(E_Config_Dialog *cfd)
 static void 
 _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
 {
-   skel_conf->cfd = NULL;
+   trash_conf->cfd = NULL;
    E_FREE(cfdata);
 }
 
@@ -72,7 +72,7 @@ _fill_data(E_Config_Dialog_Data *cfdata)
 {
    /* load a temp copy of the config variables */
   
-   cfdata->fileman = strdup(skel_conf->fileman);
+   cfdata->fileman = strdup(trash_conf->fileman);
 }
 
 static Evas_Object *
@@ -104,7 +104,11 @@ static int
 _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
 {
   
-   skel_conf->fileman = cfdata->fileman;
+   if (trash_conf->fileman) eina_stringshare_del(trash_conf->fileman);
+   if (cfdata->fileman)
+       trash_conf->fileman = eina_stringshare_add(cfdata->fileman);
+   
+   
    e_config_save_queue();
    
    return 1;

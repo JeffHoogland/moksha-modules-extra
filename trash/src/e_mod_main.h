@@ -50,8 +50,8 @@ EAPI int e_modapi_shutdown(E_Module *m);
 EAPI int e_modapi_save(E_Module *m);
 
 /* Function for calling the module's Configuration Dialog */
-E_Config_Dialog *e_int_config_skel_module(E_Container *con, const char *params);
+E_Config_Dialog *e_int_config_trash_module(E_Container *con, const char *params);
 
-extern Config *skel_conf;
+extern Config *trash_conf;
 
 #endif

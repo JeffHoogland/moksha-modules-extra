@@ -39,10 +39,10 @@ static void _trash_monitor_cb(void *data, Ecore_File_Monitor *em, Ecore_File_Eve
 static void _trash_cb_menu_empty(void *data, E_Menu *m, E_Menu_Item *mi);
 static void _trash_cb_menu_show(void *data, E_Menu *m, E_Menu_Item *mi);
 static void _trash_cb_menu_empty_ok(void *data);
-static void _skel_cb_menu_configure(void *data, E_Menu *mn, E_Menu_Item *mi);
-static void _skel_conf_new(void);
-static Config_Item *_skel_conf_item_get(const char *id);
-static void _skel_conf_free(void);
+static void _trash_cb_menu_configure(void *data, E_Menu *mn, E_Menu_Item *mi);
+static void _trash_conf_new(void);
+static Config_Item *_trash_conf_item_get(const char *id);
+static void _trash_conf_free(void);
 
 /* gadcon requirements */
 static E_Gadcon_Client *_gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style);
@@ -69,14 +69,13 @@ static Ecore_File_Monitor *monitor;
 static Eina_List *instances;
 static E_Config_DD *conf_edd = NULL;
 static E_Config_DD *conf_item_edd = NULL;
-Config *skel_conf = NULL;
+Config *trash_conf = NULL;
 
 
 /* and actually define the gadcon class that this module provides (just 1) */
 static const E_Gadcon_Client_Class _gadcon_class =
 {
-   GADCON_CLIENT_CLASS_VERSION,
-     "trash",
+   GADCON_CLIENT_CLASS_VERSION,"trash",
      {
         _gc_init, _gc_shutdown, _gc_orient, _gc_label, _gc_icon,
         _gc_id_new, NULL, _gc_in_site
@@ -198,7 +197,7 @@ e_modapi_init(E_Module *m)
                                      NULL, "preferences-advanced");
                                      
     e_configure_registry_item_add("advanced/trash", 110, D_("Trash"), 
-                                 NULL, buf, e_int_config_skel_module);
+                                 NULL, buf, e_int_config_trash_module);
                                  
    conf_item_edd = E_CONFIG_DD_NEW("Config_Item", Config_Item);
    #undef T
@@ -219,32 +218,31 @@ e_modapi_init(E_Module *m)
    E_CONFIG_VAL(D, T, fileman, STR); /* our var from header */
    E_CONFIG_LIST(D, T, conf_items, conf_item_edd); /* the list */
 
-   skel_conf = e_config_domain_load("module.trash", conf_edd);
-   if (skel_conf) 
+   trash_conf = e_config_domain_load("module.trash", conf_edd);
+   if (trash_conf) 
      {
         /* Check config version */
-        if ((skel_conf->version >> 16) < MOD_CONFIG_FILE_EPOCH) 
+        if ((trash_conf->version >> 16) < MOD_CONFIG_FILE_EPOCH) 
           {
              /* config too old */
-	    _skel_conf_free();
+	    _trash_conf_free();
 	    
           }
 
         /* Ardvarks */
-        else if (skel_conf->version > MOD_CONFIG_FILE_VERSION) 
+        else if (trash_conf->version > MOD_CONFIG_FILE_VERSION) 
           {
              /* config too new...wtf ? */
-             _skel_conf_free();
+             _trash_conf_free();
 	     
           }
      }
 
 
-   if (!skel_conf) _skel_conf_new();
-   skel_conf->module = m;
-   
-   e_gadcon_provider_register(&_gadcon_class);
+   if (!trash_conf) _trash_conf_new();
+   trash_conf->module = m;
 
+   e_gadcon_provider_register(&_gadcon_class);
    snprintf(buf, sizeof(buf), "%s/files", efreet_trash_dir_get(NULL));
    monitor = ecore_file_monitor_add(buf, _trash_monitor_cb, NULL);
    
@@ -255,23 +253,23 @@ EAPI int
 e_modapi_shutdown(E_Module *m)
 {
    Instance *inst;
-	 e_configure_registry_item_del("advanced/skel");
+	 e_configure_registry_item_del("advanced/trash");
 	  e_configure_registry_category_del("advanced");
-	   if (skel_conf->cfd) e_object_del(E_OBJECT(skel_conf->cfd));
-   skel_conf->cfd = NULL;
-   skel_conf->module = NULL;
+	   if (trash_conf->cfd) e_object_del(E_OBJECT(trash_conf->cfd));
+   trash_conf->cfd = NULL;
+   trash_conf->module = NULL;
    
-    while (skel_conf->conf_items) 
+    while (trash_conf->conf_items) 
      {
         Config_Item *ci = NULL;
 
         /* Grab an item from the list */
-        ci = skel_conf->conf_items->data;
+        ci = trash_conf->conf_items->data;
 
         /* remove it */
-        skel_conf->conf_items = 
-          eina_list_remove_list(skel_conf->conf_items, 
-                                skel_conf->conf_items);
+        trash_conf->conf_items = 
+          eina_list_remove_list(trash_conf->conf_items, 
+                                trash_conf->conf_items);
 
         /* cleanup stringshares */
         if (ci->id) eina_stringshare_del(ci->id);
@@ -285,7 +283,7 @@ e_modapi_shutdown(E_Module *m)
    if (icon) eina_stringshare_del(icon);
    if (!instances) return 1;
   
-  E_FREE(skel_conf);
+  E_FREE(trash_conf);
    E_CONFIG_DD_FREE(conf_item_edd);
    E_CONFIG_DD_FREE(conf_edd);
   
@@ -301,7 +299,7 @@ e_modapi_shutdown(E_Module *m)
 EAPI int
 e_modapi_save(E_Module *m)
 {
-    e_config_domain_save("module.trash", conf_edd, skel_conf);
+    e_config_domain_save("module.trash", conf_edd, trash_conf);
    return 1;
 }
 
@@ -366,7 +364,7 @@ _trash_button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_i
         mi = e_menu_item_new(m);
         e_menu_item_label_set(mi, D_("Settings"));
         e_util_menu_item_theme_icon_set(mi, "preferences-system");
-        e_menu_item_callback_set(mi, _skel_cb_menu_configure, NULL);
+        e_menu_item_callback_set(mi, _trash_cb_menu_configure, NULL);
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
         e_menu_post_deactivate_callback_set(m, _trash_cb_menu_post, inst);
@@ -431,9 +429,9 @@ _trash_cb_menu_show(void *data, E_Menu *m, E_Menu_Item *mi)
   
    zone = e_util_zone_current_get (e_manager_current_get ());
    
-   //~ if (skel_conf->fileman = "pcmanfm")  skel_conf->fileman = "pcmanfm -n";
+   //~ if (trash_conf->fileman = "pcmanfm")  trash_conf->fileman = "pcmanfm -n";
   
-	snprintf(buf, sizeof(buf), "%s trash:///", skel_conf->fileman);
+	snprintf(buf, sizeof(buf), "%s trash:///", trash_conf->fileman);
 	
    e_exec(zone, NULL, buf, NULL, NULL);
 }
@@ -556,66 +554,66 @@ _trash_dialog_cb_cancel(void *data)
 }
 
 static void 
-_skel_cb_menu_configure(void *data, E_Menu *mn, E_Menu_Item *mi) 
+_trash_cb_menu_configure(void *data, E_Menu *mn, E_Menu_Item *mi) 
 {
-   if (!skel_conf) return;
-   if (skel_conf->cfd) return;
-   e_int_config_skel_module(mn->zone->container, NULL);
+   if (!trash_conf) return;
+   if (trash_conf->cfd) return;
+   e_int_config_trash_module(mn->zone->container, NULL);
 }
 
 static void 
-_skel_conf_new(void) 
+_trash_conf_new(void) 
 {
    Config_Item *ci = NULL;
    char buf[128];
 
-   skel_conf = E_NEW(Config, 1);
-   skel_conf->version = (MOD_CONFIG_FILE_EPOCH << 16);
+   trash_conf = E_NEW(Config, 1);
+   trash_conf->version = (MOD_CONFIG_FILE_EPOCH << 16);
 
-#define IFMODCFG(v) if ((skel_conf->version & 0xffff) < v) {
+#define IFMODCFG(v) if ((trash_conf->version & 0xffff) < v) {
 #define IFMODCFGEND }
 
    /* setup defaults */
    IFMODCFG(0x008d);
-   //~ skel_conf->switch1 = 1;
-   skel_conf->fileman = eina_stringshare_add("pcmanfm -n");
+   //~ trash_conf->switch1 = 1;
+   trash_conf->fileman = eina_stringshare_add("pcmanfm -n");
    
-   _skel_conf_item_get(NULL);
+   _trash_conf_item_get(NULL);
    IFMODCFGEND;
-   skel_conf->version = MOD_CONFIG_FILE_VERSION;
+   trash_conf->version = MOD_CONFIG_FILE_VERSION;
    e_config_save_queue();
 }
 
 static Config_Item *
-_skel_conf_item_get(const char *id) 
+_trash_conf_item_get(const char *id) 
 {
    Config_Item *ci;
 
-   //GADCON_CLIENT_CONFIG_GET(Config_Item, skel_conf->conf_items, _gc_class, id);
+   //GADCON_CLIENT_CONFIG_GET(Config_Item, trash_conf->conf_items, _gc_class, id);
 
    ci = E_NEW(Config_Item, 1);
    ci->id = eina_stringshare_add(id);
    ci->switch2 = 0;
-   skel_conf->conf_items = eina_list_append(skel_conf->conf_items, ci);
+   trash_conf->conf_items = eina_list_append(trash_conf->conf_items, ci);
    return ci;
 }
 
 static void 
-_skel_conf_free(void) 
+_trash_conf_free(void) 
 {
    /* cleanup any stringshares here */
-   while (skel_conf->conf_items) 
+   while (trash_conf->conf_items) 
      {
         Config_Item *ci = NULL;
 
-        ci = skel_conf->conf_items->data;
-        skel_conf->conf_items = 
-          eina_list_remove_list(skel_conf->conf_items, 
-                                skel_conf->conf_items);
+        ci = trash_conf->conf_items->data;
+        trash_conf->conf_items = 
+          eina_list_remove_list(trash_conf->conf_items, 
+                                trash_conf->conf_items);
         /* EPA */
         if (ci->id) eina_stringshare_del(ci->id);
         E_FREE(ci);
      }
 
-   E_FREE(skel_conf);
+   E_FREE(trash_conf);
 }
