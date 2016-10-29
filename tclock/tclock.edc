@@ -35,7 +35,8 @@ collections
 			  size: 12;
 			  min: 1 1;
 			  align: 0.5 0.5;
-			  text_class: "module_large";			  
+			  text_class: "module_large";		
+			  ellipsis: -1;	  
 		       }
 		    }
 		  description 
@@ -79,6 +80,7 @@ collections
 			  min: 1 1;
 			  align: 0.5 0.5;
 			  text_class: "module_small";
+			  ellipsis: -1;
 		       }
 		    }
 		  description 
