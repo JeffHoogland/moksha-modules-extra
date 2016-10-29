@@ -248,6 +248,7 @@ collections
 			    min: 1 1;
 			    align: 0.5 1.0;
 			    text_class: "module_small";
+			    ellipsis: -1;
 			 }
 		    }
 		  description 
@@ -406,6 +407,7 @@ collections
 			    min: 1 1;
 			    align: 0.5 1.0;
 			    text_class: "module_small";
+			    ellipsis: -1;
 			 }
 		    }
 		  description 
