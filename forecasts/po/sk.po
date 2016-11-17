@@ -33,9 +33,8 @@ msgid "%2.0f minutes"
 msgstr "%2.0f minút"
 
 #: src/e_mod_config.c:104
-#, fuzzy
 msgid "Forecasts days"
-msgstr "Predpovede"
+msgstr "Počet dní predpovede"
 
 #: src/e_mod_config.c:106
 #, c-format
