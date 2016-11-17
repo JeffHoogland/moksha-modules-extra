@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Forecasts module\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-09-22 06:11+0400\n"
+"POT-Creation-Date: 2016-11-17 21:28+0100\n"
 "PO-Revision-Date: 2010-09-22 11:14+0400\n"
 "Last-Translator: batden <batden@orange.fr>\n"
 "Language-Team: French <pourunmondesansgourou@gmail.com>\n"
@@ -19,127 +19,150 @@ msgstr ""
 "X-Poedit-Country: FRANCE\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: src/e_mod_config.c:42
+#: src/e_mod_config.c:44
 msgid "Forecasts Settings"
 msgstr "Paramètrage des prévisions"
 
-#: src/e_mod_config.c:90
+#: src/e_mod_config.c:98
 msgid "Display Settings"
 msgstr "Paramètres d'affichage"
 
-#: src/e_mod_config.c:91
+#: src/e_mod_config.c:99
 msgid "Poll Time"
 msgstr "Intervalle d'interrogation"
 
-#: src/e_mod_config.c:94
+#: src/e_mod_config.c:101
 #, c-format
 msgid "%2.0f minutes"
 msgstr "%2.0f minutes"
 
-#: src/e_mod_config.c:97
+#: src/e_mod_config.c:104
+#, fuzzy
+msgid "Forecasts days"
+msgstr "Prévisions"
+
+#: src/e_mod_config.c:106
+#, c-format
+msgid "%2.0f"
+msgstr ""
+
+#: src/e_mod_config.c:109
 msgid "Show Description"
 msgstr "Afficher la description"
 
-#: src/e_mod_config.c:99
+#: src/e_mod_config.c:111
 msgid "Popup on mouse over"
 msgstr "Montrer le pop-up au survol"
 
-#: src/e_mod_config.c:103
+#: src/e_mod_config.c:115
 msgid "Unit Settings"
 msgstr "Système de mesure"
 
-#: src/e_mod_config.c:105
+#: src/e_mod_config.c:117
 msgid "Metric"
 msgstr "Métrique"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:119
 msgid "English"
 msgstr "Anglais"
 
-#: src/e_mod_config.c:111
-msgid "Weather.com Forecasts Code"
-msgstr "Code des prévisions weather.com"
+#: src/e_mod_config.c:124
+msgid "GeoPlanet WOEID (Where on Earth Identifier)"
+msgstr ""
 
-#: src/e_mod_config.c:112
-msgid "Forecasts Code/US Zip Code"
-msgstr "Code des prévisions/Code ZIP USA"
+#: src/e_mod_config.c:127
+msgid "Code"
+msgstr ""
 
-#: src/e_mod_config.c:117
-msgid "To find the code for your area, go to:"
+#: src/e_mod_config.c:129
+msgid "City name"
+msgstr ""
+
+#: src/e_mod_config.c:132
+msgid "Forecasts WOEID Code or city name: "
+msgstr ""
+
+#: src/e_mod_config.c:137
+#, fuzzy
+msgid "To find the code, go to:"
 msgstr "Pour trouver le code de votre région, visitez :"
 
-#: src/e_mod_config.c:119
-#, c-format
-msgid "%s, find your area, and look at the URL"
-msgstr "%s, trouvez votre région, et regardez l'URL"
-
-#: src/e_mod_main.c:254
+#: src/e_mod_main.c:260
 msgid "Forecasts"
 msgstr "Prévisions"
 
-#: src/e_mod_main.c:301
+#: src/e_mod_main.c:302
 msgid "Settings"
 msgstr "Configuration"
 
-#: src/e_mod_main.c:993
+#: src/e_mod_main.c:1158
 #, c-format
 msgid "%s: Current Conditions"
 msgstr "%s : conditions actuelles"
 
-#: src/e_mod_main.c:1009
+#: src/e_mod_main.c:1173
 msgid "Wind Chill"
 msgstr "Température ressentie"
 
-#: src/e_mod_main.c:1015
+#: src/e_mod_main.c:1179
 msgid "Wind Speed"
 msgstr "Vitesse du vent"
 
-#: src/e_mod_main.c:1021
+#: src/e_mod_main.c:1185
 msgid "Humidity"
 msgstr "Humidité"
 
-#: src/e_mod_main.c:1027
+#: src/e_mod_main.c:1191
 msgid "Visibility"
 msgstr "Visibilité"
 
-#: src/e_mod_main.c:1033
+#: src/e_mod_main.c:1197
 msgid "Pressure"
 msgstr "Pression"
 
-#: src/e_mod_main.c:1040
+#: src/e_mod_main.c:1204
 msgid "Rising"
 msgstr "En hausse"
 
-#: src/e_mod_main.c:1042
+#: src/e_mod_main.c:1206
 msgid "Falling"
 msgstr "En baisse"
 
-#: src/e_mod_main.c:1044
+#: src/e_mod_main.c:1208
 msgid "Steady"
 msgstr "Stable"
 
-#: src/e_mod_main.c:1048
+#: src/e_mod_main.c:1212
 msgid "Sunrise / Sunset"
 msgstr "Lever / Coucher"
 
-#: src/e_mod_main.c:1066
+#: src/e_mod_main.c:1230
 msgid "Today"
 msgstr "Aujourd'hui"
 
-#: src/e_mod_main.c:1068
+#: src/e_mod_main.c:1232
 msgid "Tomorrow"
 msgstr "Demain"
 
-#: src/e_mod_main.c:1076
+#: src/e_mod_main.c:1240
 msgid "High"
 msgstr "Maximum"
 
-#: src/e_mod_main.c:1087
+#: src/e_mod_main.c:1249
 msgid "Low"
 msgstr "Minimum"
 
+#~ msgid "Weather.com Forecasts Code"
+#~ msgstr "Code des prévisions weather.com"
+
+#~ msgid "Forecasts Code/US Zip Code"
+#~ msgstr "Code des prévisions/Code ZIP USA"
+
+#~ msgid "%s, find your area, and look at the URL"
+#~ msgstr "%s, trouvez votre région, et regardez l'URL"
+
 #~ msgid "Forecasts Configuration"
 #~ msgstr "Configuration des prévisions"
+
 #~ msgid "Configuration"
 #~ msgstr "Configuration"
-

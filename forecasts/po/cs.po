@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Weather\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2011-10-16 14:36+0200\n"
+"POT-Creation-Date: 2016-11-17 21:28+0100\n"
 "PO-Revision-Date: 2011-10-09 13:56+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,124 +17,147 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: ../src/e_mod_config.c:42
+#: src/e_mod_config.c:44
 msgid "Forecasts Settings"
 msgstr "Předpověď počasí - Nastavení"
 
-#: ../src/e_mod_config.c:90
+#: src/e_mod_config.c:98
 msgid "Display Settings"
 msgstr "Nastavení zobrazení"
 
-#: ../src/e_mod_config.c:91
+#: src/e_mod_config.c:99
 msgid "Poll Time"
 msgstr "Aktualizace počasí každých.."
 
-#: ../src/e_mod_config.c:94
+#: src/e_mod_config.c:101
 #, c-format
 msgid "%2.0f minutes"
 msgstr "%2.0f minut"
 
-#: ../src/e_mod_config.c:97
+#: src/e_mod_config.c:104
+#, fuzzy
+msgid "Forecasts days"
+msgstr "Předpověď počasí"
+
+#: src/e_mod_config.c:106
+#, c-format
+msgid "%2.0f"
+msgstr ""
+
+#: src/e_mod_config.c:109
 msgid "Show Description"
 msgstr "Zobrazit popis"
 
-#: ../src/e_mod_config.c:99
+#: src/e_mod_config.c:111
 msgid "Popup on mouse over"
 msgstr "Zobrazit více, když je kurzor nad gadgetem"
 
-#: ../src/e_mod_config.c:103
+#: src/e_mod_config.c:115
 msgid "Unit Settings"
 msgstr "Nastavení jednotek"
 
-#: ../src/e_mod_config.c:105
+#: src/e_mod_config.c:117
 msgid "Metric"
 msgstr "Metrické"
 
-#: ../src/e_mod_config.c:107
+#: src/e_mod_config.c:119
 msgid "English"
 msgstr "Anglické"
 
-#: ../src/e_mod_config.c:111
-msgid "Weather.com Forecasts Code"
-msgstr "Kód předpovědi Weather.com"
+#: src/e_mod_config.c:124
+msgid "GeoPlanet WOEID (Where on Earth Identifier)"
+msgstr ""
 
-#: ../src/e_mod_config.c:112
-msgid "Forecasts Code/US Zip Code"
-msgstr "Kód předpovědi / US Zip kód"
+#: src/e_mod_config.c:127
+msgid "Code"
+msgstr ""
 
-#: ../src/e_mod_config.c:117
-msgid "To find the code for your area, go to:"
+#: src/e_mod_config.c:129
+msgid "City name"
+msgstr ""
+
+#: src/e_mod_config.c:132
+msgid "Forecasts WOEID Code or city name: "
+msgstr ""
+
+#: src/e_mod_config.c:137
+#, fuzzy
+msgid "To find the code, go to:"
 msgstr "Pokud chcete kód vaší oblasti, jděte na:"
 
-#: ../src/e_mod_config.c:119
-#, c-format
-msgid "%s, find your area, and look at the URL"
-msgstr "%s, najděte vaši oblast a podívejte se na URL"
-
-#: ../src/e_mod_main.c:249
+#: src/e_mod_main.c:260
 msgid "Forecasts"
 msgstr "Předpověď počasí"
 
-#: ../src/e_mod_main.c:291
+#: src/e_mod_main.c:302
 msgid "Settings"
 msgstr "Nastavení"
 
-#: ../src/e_mod_main.c:989
+#: src/e_mod_main.c:1158
 #, c-format
 msgid "%s: Current Conditions"
 msgstr "%s: Aktuální podmínky"
 
-#: ../src/e_mod_main.c:1005
+#: src/e_mod_main.c:1173
 msgid "Wind Chill"
 msgstr ""
 
-#: ../src/e_mod_main.c:1011
+#: src/e_mod_main.c:1179
 msgid "Wind Speed"
 msgstr "Rychlost větru"
 
-#: ../src/e_mod_main.c:1017
+#: src/e_mod_main.c:1185
 msgid "Humidity"
 msgstr "Vlhkost"
 
-#: ../src/e_mod_main.c:1023
+#: src/e_mod_main.c:1191
 msgid "Visibility"
 msgstr "Viditelnost"
 
-#: ../src/e_mod_main.c:1029
+#: src/e_mod_main.c:1197
 msgid "Pressure"
 msgstr "Tlak"
 
-#: ../src/e_mod_main.c:1036
+#: src/e_mod_main.c:1204
 msgid "Rising"
 msgstr "Východ slunce"
 
-#: ../src/e_mod_main.c:1038
+#: src/e_mod_main.c:1206
 msgid "Falling"
 msgstr "Západ slunce"
 
-#: ../src/e_mod_main.c:1040
+#: src/e_mod_main.c:1208
 msgid "Steady"
 msgstr "Vyrovnaný"
 
-#: ../src/e_mod_main.c:1044
+#: src/e_mod_main.c:1212
 msgid "Sunrise / Sunset"
 msgstr "Východ / Západ"
 
-#: ../src/e_mod_main.c:1062
+#: src/e_mod_main.c:1230
 msgid "Today"
 msgstr "Dnes"
 
-#: ../src/e_mod_main.c:1064
+#: src/e_mod_main.c:1232
 msgid "Tomorrow"
 msgstr "Zítra"
 
-#: ../src/e_mod_main.c:1072
+#: src/e_mod_main.c:1240
 msgid "High"
 msgstr "Nejvyšší"
 
-#: ../src/e_mod_main.c:1083
+#: src/e_mod_main.c:1249
 msgid "Low"
 msgstr "Nejnižší"
+
+#~ msgid "Weather.com Forecasts Code"
+#~ msgstr "Kód předpovědi Weather.com"
+
+#~ msgid "Forecasts Code/US Zip Code"
+#~ msgstr "Kód předpovědi / US Zip kód"
+
+#~ msgid "%s, find your area, and look at the URL"
+#~ msgstr "%s, najděte vaši oblast a podívejte se na URL"
 
 #~ msgid "Forecasts Configuration"
 #~ msgstr "Nastavení předpovědi počasí"

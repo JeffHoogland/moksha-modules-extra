@@ -103,7 +103,7 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas,
    
    ob = e_widget_label_add(evas, D_("Forecasts days"));
    e_widget_framelist_object_append(of, ob);
-   ob = e_widget_slider_add(evas, 1, 0, D_("%2.0f days       "), 2.0, 5.0, 1.0, 0, &(cfdata->days), NULL, 40);
+   ob = e_widget_slider_add(evas, 1, 0, D_("%2.0f"), 2.0, 5.0, 1.0, 0, &(cfdata->days), NULL, 40);
    e_widget_framelist_object_append(of, ob);
    
    ob = e_widget_check_add(evas, D_("Show Description"), &(cfdata->show_text));

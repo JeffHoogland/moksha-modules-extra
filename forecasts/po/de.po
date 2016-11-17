@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-11-23 23:42+0100\n"
+"POT-Creation-Date: 2016-11-17 21:28+0100\n"
 "PO-Revision-Date: 2010-07-16 11:19+0100\n"
 "Last-Translator: AlexAnteMachina <alexander-jung@t-online.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -17,128 +17,151 @@ msgstr ""
 "X-Launchpad-Export-Date: 2009-11-12 04:51+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: src/e_mod_config.c:42
+#: src/e_mod_config.c:44
 #, fuzzy
 msgid "Forecasts Settings"
 msgstr "Wettervorhersagen"
 
-#: src/e_mod_config.c:90
+#: src/e_mod_config.c:98
 msgid "Display Settings"
 msgstr "Anzeige-Einstellungen"
 
-#: src/e_mod_config.c:91
+#: src/e_mod_config.c:99
 msgid "Poll Time"
 msgstr "Aktualisierungsintervall"
 
-#: src/e_mod_config.c:94
+#: src/e_mod_config.c:101
 #, c-format
 msgid "%2.0f minutes"
 msgstr "%2.0f Minuten"
 
-#: src/e_mod_config.c:97
+#: src/e_mod_config.c:104
+#, fuzzy
+msgid "Forecasts days"
+msgstr "Wettervorhersagen"
+
+#: src/e_mod_config.c:106
+#, c-format
+msgid "%2.0f"
+msgstr ""
+
+#: src/e_mod_config.c:109
 msgid "Show Description"
 msgstr "Beschreibung anzeigen"
 
-#: src/e_mod_config.c:99
+#: src/e_mod_config.c:111
 msgid "Popup on mouse over"
 msgstr "Beim Überfahren mit dem Mauszeiger ein Popup öffnen"
 
-#: src/e_mod_config.c:103
+#: src/e_mod_config.c:115
 msgid "Unit Settings"
 msgstr "Einheiteneinstellungen"
 
-#: src/e_mod_config.c:105
+#: src/e_mod_config.c:117
 msgid "Metric"
 msgstr "Metrisch"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:119
 msgid "English"
 msgstr "Englisch"
 
-#: src/e_mod_config.c:111
-#, fuzzy
-msgid "Weather.com Forecasts Code"
-msgstr "Yahoo Wettervorhersage Code"
+#: src/e_mod_config.c:124
+msgid "GeoPlanet WOEID (Where on Earth Identifier)"
+msgstr ""
 
-#: src/e_mod_config.c:112
-#, fuzzy
-msgid "Forecasts Code/US Zip Code"
-msgstr "Yahoo Wettervorhersage Code/US Zip Code"
+#: src/e_mod_config.c:127
+msgid "Code"
+msgstr ""
 
-#: src/e_mod_config.c:117
-msgid "To find the code for your area, go to:"
+#: src/e_mod_config.c:129
+msgid "City name"
+msgstr ""
+
+#: src/e_mod_config.c:132
+msgid "Forecasts WOEID Code or city name: "
+msgstr ""
+
+#: src/e_mod_config.c:137
+#, fuzzy
+msgid "To find the code, go to:"
 msgstr "Um den Code für Ihre Region zu finden, gehen Sie auf"
 
-#: src/e_mod_config.c:119
-#, c-format
-msgid "%s, find your area, and look at the URL"
-msgstr "%s, suchen Sie Ihre Region und entnehmen den Code der URL"
-
-#: src/e_mod_main.c:249
+#: src/e_mod_main.c:260
 msgid "Forecasts"
 msgstr "Wettervorhersagen"
 
-#: src/e_mod_main.c:296
+#: src/e_mod_main.c:302
 #, fuzzy
 msgid "Settings"
 msgstr "Einheiteneinstellungen"
 
-#: src/e_mod_main.c:991
+#: src/e_mod_main.c:1158
 #, c-format
 msgid "%s: Current Conditions"
 msgstr ""
 
-#: src/e_mod_main.c:1007
+#: src/e_mod_main.c:1173
 msgid "Wind Chill"
 msgstr "Gefühlte Temperatur (Windchill)"
 
-#: src/e_mod_main.c:1013
+#: src/e_mod_main.c:1179
 msgid "Wind Speed"
 msgstr "Windgeschwindigkeit"
 
-#: src/e_mod_main.c:1019
+#: src/e_mod_main.c:1185
 msgid "Humidity"
 msgstr "Luftfeuchtigkeit"
 
-#: src/e_mod_main.c:1025
+#: src/e_mod_main.c:1191
 msgid "Visibility"
 msgstr "Sicht"
 
-#: src/e_mod_main.c:1031
+#: src/e_mod_main.c:1197
 msgid "Pressure"
 msgstr "Luftdruck"
 
-#: src/e_mod_main.c:1038
+#: src/e_mod_main.c:1204
 msgid "Rising"
 msgstr "Steigend"
 
-#: src/e_mod_main.c:1040
+#: src/e_mod_main.c:1206
 msgid "Falling"
 msgstr "Fallend"
 
-#: src/e_mod_main.c:1042
+#: src/e_mod_main.c:1208
 msgid "Steady"
 msgstr "beständig"
 
-#: src/e_mod_main.c:1046
+#: src/e_mod_main.c:1212
 msgid "Sunrise / Sunset"
 msgstr "Sonnenaufgang / Sonnenuntergang"
 
-#: src/e_mod_main.c:1064
+#: src/e_mod_main.c:1230
 msgid "Today"
 msgstr ""
 
-#: src/e_mod_main.c:1066
+#: src/e_mod_main.c:1232
 msgid "Tomorrow"
 msgstr ""
 
-#: src/e_mod_main.c:1074
+#: src/e_mod_main.c:1240
 msgid "High"
 msgstr "Hoch"
 
-#: src/e_mod_main.c:1085
+#: src/e_mod_main.c:1249
 msgid "Low"
 msgstr "Niedrig"
+
+#, fuzzy
+#~ msgid "Weather.com Forecasts Code"
+#~ msgstr "Yahoo Wettervorhersage Code"
+
+#, fuzzy
+#~ msgid "Forecasts Code/US Zip Code"
+#~ msgstr "Yahoo Wettervorhersage Code/US Zip Code"
+
+#~ msgid "%s, find your area, and look at the URL"
+#~ msgstr "%s, suchen Sie Ihre Region und entnehmen den Code der URL"
 
 #~ msgid "Forecasts Configuration"
 #~ msgstr "Vorhersageeinstellungen"
