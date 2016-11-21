@@ -1,0 +1,88 @@
+# Slovak translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: trash\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2016-11-21 22:23+0100\n"
+"PO-Revision-Date: 2016-11-21 22:19+0100\n"
+"Last-Translator: Stefan Uram <uram@szm.sk>\n"
+"Language-Team: slovak <stefan@bodhi.sk>\n"
+"Language: slovencina\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;D_\n"
+"X-Poedit-Basepath: .\n"
+
+#: src/e_mod_config.c:44
+msgid "Trash module"
+msgstr "Modul pre kôš"
+
+#: src/e_mod_config.c:86
+msgid "Setting"
+msgstr "Nastavenie"
+
+#: src/e_mod_config.c:88
+msgid "File manager to open the trash:"
+msgstr "Súborový manažér pre otvorenie koša"
+
+#: src/e_mod_config.c:95
+msgid "Use pcmanfm -n for opening a new instance on the current desktop"
+msgstr "Použi pcmanfm -n pre otvorenie novej inštancie v aktuálnom desktope"
+
+#: src/e_mod_main.c:153 src/e_mod_main.c:203
+msgid "Trash"
+msgstr "Kôš"
+
+#: src/e_mod_main.c:200
+msgid "Advanced"
+msgstr "Pokročilé"
+
+#: src/e_mod_main.c:359
+msgid "Empty Trash"
+msgstr "Vyprázdniť kôš"
+
+#: src/e_mod_main.c:364
+msgid "Show trash"
+msgstr "Zobraz obsah koša"
+
+#: src/e_mod_main.c:369
+msgid "Settings"
+msgstr "Nastavenie"
+
+#: src/e_mod_main.c:416
+#, fuzzy
+msgid ""
+"<b>Remove all the files and folders from the trash?</><br>All the elements "
+"currently in the trash will be irreparably lost!!!"
+msgstr ""
+"<b>Odstrániť všetky súbory a zložky z koša?</><br>Všetky položky v koši budú "
+"nenávratne vymazané!!!"
+
+#: src/e_mod_main.c:418 src/e_mod_main.c:514
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: src/e_mod_main.c:418
+msgid "Empty trash"
+msgstr "Vysypať"
+
+#: src/e_mod_main.c:510
+msgid "Alert"
+msgstr "Pozor"
+
+#: src/e_mod_main.c:511
+msgid ""
+"Some files can't be moved to trash <br>because they are not on the local "
+"filesystem.<br><br>The files will be deleted FOREVER!!!"
+msgstr ""
+"Niektoré súbory nemôžu byť presunuté do koša <br>pretože nie sú uložené v "
+"lokálnom súborovom systéme. <br><br>Tieto súbory budú nevávratne vymazané!!!"
+
+#: src/e_mod_main.c:514
+msgid "Delete Files"
+msgstr "Vymazať súbory"

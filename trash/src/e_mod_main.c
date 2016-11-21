@@ -188,6 +188,10 @@ EAPI void *
 e_modapi_init(E_Module *m)
 {
    char buf[4096];
+   
+   snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
+   bindtextdomain(PACKAGE, buf);
+   bind_textdomain_codeset(PACKAGE, "UTF-8");
 
    snprintf(buf, sizeof(buf), "%s/e-module-trash.edj", e_module_dir_get(m));
    icon = eina_stringshare_add(buf);
@@ -409,9 +413,9 @@ _trash_cb_menu_empty(void *data, E_Menu *m, E_Menu_Item *mi)
 
    E_Confirm_Dialog *dialog;
    dialog = e_confirm_dialog_show("", NULL,
-                     "<b>Remove all the files and folders from the trash?</><br>"
-                     "All the elements currently in the trash will be irreparably lost",
-                     "Cancel", "Empty trash", 
+                     D_("<b>Remove all the files and folders from the trash?</><br>"
+                     "All the elements currently in the trash will be irreparably lost!!!"),
+                     D_("Cancel"), D_("Empty trash"), 
                      NULL, _trash_cb_menu_empty_ok, NULL, NULL, NULL, NULL);
 }
 
@@ -503,11 +507,11 @@ _trash_dnd_cb_drop(void *data, const char *type, void *event_info)
      {
         printf("ALERT [%d]!!\n", eina_list_count(nonlocals));
         E_Confirm_Dialog *dialog;
-        dialog = e_confirm_dialog_show("Alert", NULL, 
-                     "Some files can't be moved to trash <br>"
+        dialog = e_confirm_dialog_show(D_("Alert"), NULL, 
+                     D_("Some files can't be moved to trash <br>"
                      "because they are not on the local filesystem.<br><br>"
-                     "The files will be deleted FOREVER!!!",
-                     "Cancel", "Delete Files", 
+                     "The files will be deleted FOREVER!!!"),
+                     D_("Cancel"), D_("Delete Files"), 
                      NULL, //void (*bt1_func)(void *data)
                      _trash_dialog_cb_ok,     //void (*bt2_func)(void *data)
                      NULL, //void *data
