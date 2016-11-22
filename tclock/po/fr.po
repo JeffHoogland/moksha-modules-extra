@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tclock module\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2011-11-30 11:16+0100\n"
+"POT-Creation-Date: 2016-11-21 22:31+0100\n"
 "PO-Revision-Date: 2011-11-30 14:48+0100\n"
 "Last-Translator: dazibao <dazibao@sfr.fr>\n"
 "Language-Team: français <sansgourou@gmail.com>\n"
@@ -24,39 +24,43 @@ msgstr ""
 msgid "Tclock Settings"
 msgstr "Paramétrage de Tclock"
 
-#: src/e_mod_config.c:88
+#: src/e_mod_config.c:92
 msgid "Top"
 msgstr "Haut"
 
-#: src/e_mod_config.c:90
+#: src/e_mod_config.c:93
 msgid "Show Top Line"
 msgstr "Afficher la ligne supérieure"
 
-#: src/e_mod_config.c:98 src/e_mod_config.c:113 src/e_mod_config.c:129
+#: src/e_mod_config.c:100 src/e_mod_config.c:126 src/e_mod_config.c:142
 msgid "Consult strftime(3) for format syntax"
 msgstr "Consulter strftime(3) [p. man de dev] pour la syntaxe"
 
-#: src/e_mod_config.c:102
+#: src/e_mod_config.c:103
+msgid "Add time offset (e.g.+2)"
+msgstr ""
+
+#: src/e_mod_config.c:115
 msgid "Bottom"
 msgstr "Bas"
 
-#: src/e_mod_config.c:104
+#: src/e_mod_config.c:117
 msgid "Show Bottom Line"
 msgstr "Afficher la ligne inférieure"
 
-#: src/e_mod_config.c:117
+#: src/e_mod_config.c:130
 msgid "Tool Tip"
 msgstr "Infobulle"
 
-#: src/e_mod_config.c:119
+#: src/e_mod_config.c:132
 msgid "Show Tooltip"
 msgstr "Afficher l'infobulle"
 
-#: src/e_mod_main.c:141
+#: src/e_mod_main.c:142
 msgid "TClock"
 msgstr "TClock"
 
-#: src/e_mod_main.c:181
+#: src/e_mod_main.c:182
 msgid "Settings"
 msgstr "Configuration"
 

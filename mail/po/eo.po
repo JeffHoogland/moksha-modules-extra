@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mail\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-12-04 13:32+0100\n"
+"POT-Creation-Date: 2016-11-22 20:51+0100\n"
 "PO-Revision-Date: 2012-12-05 16:51+0000\n"
 "Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +22,7 @@ msgstr ""
 msgid "Mailbox Configuration"
 msgstr "Agordoj pri retpoŝtkesto"
 
-#: src/e_mod_config_box.c:160 src/e_mod_config.c:94
+#: src/e_mod_config_box.c:160 src/e_mod_config.c:96
 msgid "General Settings"
 msgstr "Ĝeneralaj agordoj"
 
@@ -113,11 +114,11 @@ msgstr "Nuna vojo de retmesaĝoj:"
 msgid "Inbox"
 msgstr "Enirkesto"
 
-#: src/e_mod_config.c:53
+#: src/e_mod_config.c:54
 msgid "Mail Settings"
 msgstr "Agordoj pri retpoŝto"
 
-#: src/e_mod_config.c:96
+#: src/e_mod_config.c:97
 msgid "Always Show Labels"
 msgstr "Ĉiam montri etikedojn"
 
@@ -125,39 +126,43 @@ msgstr "Ĉiam montri etikedojn"
 msgid "Show Mailbox Popup"
 msgstr "Montri spruĉfenetron de retpoŝtkesto"
 
-#: src/e_mod_config.c:102
+#: src/e_mod_config.c:101
 msgid "Show All Boxes In Popup"
 msgstr "Montri ĉiujn kestojn en spruĉfenestro"
 
-#: src/e_mod_config.c:104
+#: src/e_mod_config.c:103
+msgid "Play sound when mail arrives"
+msgstr ""
+
+#: src/e_mod_config.c:105
 msgid "Check Interval"
 msgstr "Intervalo de kontrolo"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:108
 #, c-format
 msgid "%2.0f minutes"
 msgstr "%2.0f minutoj"
 
-#: src/e_mod_config.c:112
+#: src/e_mod_config.c:113
 msgid "Mail Boxes"
 msgstr "Retpoŝtkestoj"
 
-#: src/e_mod_config.c:122
+#: src/e_mod_config.c:123
 msgid "Add"
 msgstr "Aldoni"
 
-#: src/e_mod_config.c:126
+#: src/e_mod_config.c:127
 msgid "Delete"
 msgstr "Forigi"
 
-#: src/e_mod_config.c:132
+#: src/e_mod_config.c:133
 msgid "Configure..."
 msgstr "Agordi..."
 
-#: src/e_mod_main.c:186
+#: src/e_mod_main.c:189
 msgid "Mail"
 msgstr "Retpoŝto"
 
-#: src/e_mod_main.c:230
+#: src/e_mod_main.c:233
 msgid "Settings"
 msgstr "Agordoj"

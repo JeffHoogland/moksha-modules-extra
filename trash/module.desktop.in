@@ -1,6 +1,8 @@
 [Desktop Entry]
 Type=Link
 Name=Trash
+Name[sk]=Kôš
 Icon=e-module-trash
 X-Enlightenment-ModuleType=files
-Comment=<hilight>Trash</hilight><br><br>A freedesktop compliant trash module.
+Comment=A freedesktop compliant trash module.
+Comment[sk]=Modul koša pre Moksha/Enlightenment desktop.

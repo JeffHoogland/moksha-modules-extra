@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tclock 0.3.2\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-11-23 23:50+0100\n"
+"POT-Creation-Date: 2016-11-21 22:31+0100\n"
 "PO-Revision-Date: 2009-11-07 18:19+0000\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German\n"
@@ -25,39 +25,43 @@ msgstr ""
 msgid "Tclock Settings"
 msgstr "Tclock-Einstellungen"
 
-#: src/e_mod_config.c:88
+#: src/e_mod_config.c:92
 msgid "Top"
 msgstr "Obere Zeile"
 
-#: src/e_mod_config.c:90
+#: src/e_mod_config.c:93
 msgid "Show Top Line"
 msgstr "Obere Zeile zeigen"
 
-#: src/e_mod_config.c:98 src/e_mod_config.c:113 src/e_mod_config.c:129
+#: src/e_mod_config.c:100 src/e_mod_config.c:126 src/e_mod_config.c:142
 msgid "Consult strftime(3) for format syntax"
 msgstr "Siehe strftime(3) für Formatierung"
 
-#: src/e_mod_config.c:102
+#: src/e_mod_config.c:103
+msgid "Add time offset (e.g.+2)"
+msgstr ""
+
+#: src/e_mod_config.c:115
 msgid "Bottom"
 msgstr "Untere Zeile"
 
-#: src/e_mod_config.c:104
+#: src/e_mod_config.c:117
 msgid "Show Bottom Line"
 msgstr "Untere Zeile zeigen"
 
-#: src/e_mod_config.c:117
+#: src/e_mod_config.c:130
 msgid "Tool Tip"
 msgstr "Tooltip"
 
-#: src/e_mod_config.c:119
+#: src/e_mod_config.c:132
 msgid "Show Tooltip"
 msgstr "Tooltip anzeigen"
 
-#: src/e_mod_main.c:141
+#: src/e_mod_main.c:142
 msgid "TClock"
 msgstr "TClock"
 
-#: src/e_mod_main.c:186
+#: src/e_mod_main.c:182
 msgid "Settings"
 msgstr "Einstellungen"
 
