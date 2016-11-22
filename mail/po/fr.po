@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mail module\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-09-10 06:31+0400\n"
+"POT-Creation-Date: 2016-11-22 20:51+0100\n"
 "PO-Revision-Date: 2010-09-10 08:53+0400\n"
 "Last-Translator: batden <batden@orange.fr>\n"
 "Language-Team: French <pourunmondesansgourou@gmail.com>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Mailbox Configuration"
 msgstr "Configuration de la boîte aux lettres"
 
-#: src/e_mod_config_box.c:160 src/e_mod_config.c:94
+#: src/e_mod_config_box.c:160 src/e_mod_config.c:96
 msgid "General Settings"
 msgstr "Paramètres généraux"
 
@@ -115,11 +115,11 @@ msgstr "Chemin de courrier actuel :"
 msgid "Inbox"
 msgstr "Boîte de réception"
 
-#: src/e_mod_config.c:53
+#: src/e_mod_config.c:54
 msgid "Mail Settings"
 msgstr "Paramétrage de Courriel"
 
-#: src/e_mod_config.c:96
+#: src/e_mod_config.c:97
 msgid "Always Show Labels"
 msgstr "Toujours afficher les étiquettes"
 
@@ -127,40 +127,44 @@ msgstr "Toujours afficher les étiquettes"
 msgid "Show Mailbox Popup"
 msgstr "Afficher le pop-up de la boîte aux lettres"
 
-#: src/e_mod_config.c:102
+#: src/e_mod_config.c:101
 msgid "Show All Boxes In Popup"
 msgstr "Afficher toutes les boîtes dans le pop-up"
 
-#: src/e_mod_config.c:104
+#: src/e_mod_config.c:103
+msgid "Play sound when mail arrives"
+msgstr ""
+
+#: src/e_mod_config.c:105
 msgid "Check Interval"
 msgstr "Intervalle des vérifications"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:108
 #, c-format
 msgid "%2.0f minutes"
 msgstr "%2.0f minutes"
 
-#: src/e_mod_config.c:112
+#: src/e_mod_config.c:113
 msgid "Mail Boxes"
 msgstr "Boîtes aux lettres"
 
-#: src/e_mod_config.c:122
+#: src/e_mod_config.c:123
 msgid "Add"
 msgstr "Ajouter"
 
-#: src/e_mod_config.c:126
+#: src/e_mod_config.c:127
 msgid "Delete"
 msgstr "Supprimer"
 
-#: src/e_mod_config.c:132
+#: src/e_mod_config.c:133
 msgid "Configure..."
 msgstr "Configurer..."
 
-#: src/e_mod_main.c:186
+#: src/e_mod_main.c:189
 msgid "Mail"
 msgstr "Courriel"
 
-#: src/e_mod_main.c:258
+#: src/e_mod_main.c:233
 msgid "Settings"
 msgstr "Configuration"
 

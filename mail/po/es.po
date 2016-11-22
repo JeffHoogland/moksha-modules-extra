@@ -4,12 +4,11 @@
 # Francisco Perez Lopez, 2008.
 # DiegoJ <diegojromerolopez@gmail.com>, 2009.
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: mail\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-11-08 02:06+0100\n"
+"POT-Creation-Date: 2016-11-22 20:51+0100\n"
 "PO-Revision-Date: 2012-11-08 02:06+0100\n"
 "Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
 "Language-Team: Enlightenment Team\n"
@@ -22,8 +21,7 @@ msgstr ""
 msgid "Mailbox Configuration"
 msgstr "Configuración de buzón"
 
-#: src/e_mod_config_box.c:160
-#: src/e_mod_config.c:94
+#: src/e_mod_config_box.c:160 src/e_mod_config.c:96
 msgid "General Settings"
 msgstr "Preferencias generales"
 
@@ -115,19 +113,11 @@ msgstr "Ruta actual de correo:"
 msgid "Inbox"
 msgstr "Bandeja de entrada"
 
-#: src/e_mod_main.c:186
-msgid "Mail"
-msgstr "Correo"
-
-#: src/e_mod_main.c:230
-msgid "Settings"
-msgstr "Preferencias"
-
-#: src/e_mod_config.c:53
+#: src/e_mod_config.c:54
 msgid "Mail Settings"
 msgstr "Preferencias del correo"
 
-#: src/e_mod_config.c:96
+#: src/e_mod_config.c:97
 msgid "Always Show Labels"
 msgstr "Siempre mostrar etiquetas"
 
@@ -135,34 +125,46 @@ msgstr "Siempre mostrar etiquetas"
 msgid "Show Mailbox Popup"
 msgstr "Mostrar buzones en ventanas emergentes"
 
-#: src/e_mod_config.c:102
+#: src/e_mod_config.c:101
 msgid "Show All Boxes In Popup"
 msgstr "Mostrar todos los buzones en ventanas emergentes"
 
-#: src/e_mod_config.c:104
+#: src/e_mod_config.c:103
+msgid "Play sound when mail arrives"
+msgstr ""
+
+#: src/e_mod_config.c:105
 msgid "Check Interval"
 msgstr "Tasa de comprobación"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:108
 #, c-format
 msgid "%2.0f minutes"
 msgstr "%2.0f minutos"
 
-#: src/e_mod_config.c:112
+#: src/e_mod_config.c:113
 msgid "Mail Boxes"
 msgstr "Buzones"
 
-#: src/e_mod_config.c:122
+#: src/e_mod_config.c:123
 msgid "Add"
 msgstr "Añadir"
 
-#: src/e_mod_config.c:126
+#: src/e_mod_config.c:127
 msgid "Delete"
 msgstr "Eliminar"
 
-#: src/e_mod_config.c:132
+#: src/e_mod_config.c:133
 msgid "Configure..."
 msgstr "Configurar..."
+
+#: src/e_mod_main.c:189
+msgid "Mail"
+msgstr "Correo"
+
+#: src/e_mod_main.c:233
+msgid "Settings"
+msgstr "Preferencias"
 
 #~ msgid "Mail Configuration"
 #~ msgstr "Configuración de correo"

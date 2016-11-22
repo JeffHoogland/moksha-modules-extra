@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-11-23 23:43+0100\n"
+"POT-Creation-Date: 2016-11-22 20:51+0100\n"
 "PO-Revision-Date: 2009-11-07 18:13+0000\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Mailbox Configuration"
 msgstr "Postfach-Einstellungen"
 
-#: src/e_mod_config_box.c:160 src/e_mod_config.c:94
+#: src/e_mod_config_box.c:160 src/e_mod_config.c:96
 msgid "General Settings"
 msgstr "Allgemeine Einstellungen"
 
@@ -115,11 +115,11 @@ msgstr "Pfad für vorhandene E-Mails:"
 msgid "Inbox"
 msgstr "Posteingang"
 
-#: src/e_mod_config.c:53
+#: src/e_mod_config.c:54
 msgid "Mail Settings"
 msgstr "E-Mail-Einstellungen"
 
-#: src/e_mod_config.c:96
+#: src/e_mod_config.c:97
 msgid "Always Show Labels"
 msgstr "Bezeichner immer anzeigen"
 
@@ -127,40 +127,44 @@ msgstr "Bezeichner immer anzeigen"
 msgid "Show Mailbox Popup"
 msgstr "Postfach-Popup anzeigen"
 
-#: src/e_mod_config.c:102
+#: src/e_mod_config.c:101
 msgid "Show All Boxes In Popup"
 msgstr "Alle Postfächer im Popup anzeigen"
 
-#: src/e_mod_config.c:104
+#: src/e_mod_config.c:103
+msgid "Play sound when mail arrives"
+msgstr ""
+
+#: src/e_mod_config.c:105
 msgid "Check Interval"
 msgstr "Abfrageintervall"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:108
 #, c-format
 msgid "%2.0f minutes"
 msgstr "%2.0f Minuten"
 
-#: src/e_mod_config.c:112
+#: src/e_mod_config.c:113
 msgid "Mail Boxes"
 msgstr "Postfächer"
 
-#: src/e_mod_config.c:122
+#: src/e_mod_config.c:123
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: src/e_mod_config.c:126
+#: src/e_mod_config.c:127
 msgid "Delete"
 msgstr "Löschen"
 
-#: src/e_mod_config.c:132
+#: src/e_mod_config.c:133
 msgid "Configure..."
 msgstr "Einrichten …"
 
-#: src/e_mod_main.c:186
+#: src/e_mod_main.c:189
 msgid "Mail"
 msgstr "E-Mail"
 
-#: src/e_mod_main.c:258
+#: src/e_mod_main.c:233
 msgid "Settings"
 msgstr "Einstellungen"
 
