@@ -3,7 +3,7 @@
 
 //#define FORECASTS    5
 #define KM_TO_MI     1.609344
-#define MB_TO_IN     68.946497518
+#define MB_TO_IN     33.863886667
 
 #define GOLDEN_RATIO 1.618033989
 
@@ -860,6 +860,11 @@ _forecasts_parse(void *data)
    }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%f\"", &inst->details.atmosphere.pressure);
+   /* Yahoo API is returning weird values here everything scaled by MB_TO_IN 
+    *   This is a known issue, for example see:
+    *      https://github.com/monkeecreate/jquery.simpleWeather/issues/227
+    * May change in the future: the below line may need removed or modified.*/
+   inst->details.atmosphere.pressure /= MB_TO_IN;
 
    needle = strstr(needle, "rising=\"");
    if (!needle)
