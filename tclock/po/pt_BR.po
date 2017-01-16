@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-21 22:31+0100\n"
+"POT-Creation-Date: 2017-01-16 21:04+0100\n"
 "PO-Revision-Date: 2009-09-12 15:27+0000\n"
 "Last-Translator: André Gondim <andregondim@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -17,41 +17,55 @@ msgstr ""
 "X-Launchpad-Export-Date: 2009-11-12 04:52+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: src/e_mod_config.c:39
+#: src/e_mod_config.c:40
 msgid "Tclock Settings"
 msgstr ""
 
-#: src/e_mod_config.c:92
+#: src/e_mod_config.c:95
 msgid "Top"
 msgstr "Superior"
 
-#: src/e_mod_config.c:93
+#: src/e_mod_config.c:96
 msgid "Show Top Line"
 msgstr "Mostrar linha superior"
 
-#: src/e_mod_config.c:100 src/e_mod_config.c:126 src/e_mod_config.c:142
+#: src/e_mod_config.c:103 src/e_mod_config.c:129 src/e_mod_config.c:145
 msgid "Consult strftime(3) for format syntax"
 msgstr "Consulte strftime(3) para formato de sintaxe"
 
-#: src/e_mod_config.c:103
+#: src/e_mod_config.c:106
 msgid "Add time offset (e.g.+2)"
 msgstr ""
 
-#: src/e_mod_config.c:115
+#: src/e_mod_config.c:118
 msgid "Bottom"
 msgstr "Inferior"
 
-#: src/e_mod_config.c:117
+#: src/e_mod_config.c:120
 msgid "Show Bottom Line"
 msgstr "Mostrar linha inferior"
 
-#: src/e_mod_config.c:130
+#: src/e_mod_config.c:133
 msgid "Tool Tip"
 msgstr "Dica"
 
-#: src/e_mod_config.c:132
+#: src/e_mod_config.c:135
 msgid "Show Tooltip"
 msgstr "Mostrar dica"
+
+#: src/e_mod_config.c:149
+msgid "Font size"
+msgstr ""
+
+#: src/e_mod_config.c:151
+#, fuzzy
+msgid "Top line"
+msgstr "Mostrar linha superior"
+
+#: src/e_mod_config.c:156
+#, fuzzy
+msgid "Bottom line"
+msgstr "Mostrar linha inferior"
 
 #: src/e_mod_main.c:142
 msgid "TClock"

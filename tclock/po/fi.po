@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tclock module (e17)\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-21 22:31+0100\n"
+"POT-Creation-Date: 2017-01-16 21:04+0100\n"
 "PO-Revision-Date: 2008-01-23 01:50+0200\n"
 "Last-Translator: Jani väyrynen <janivayrynen@gmail.com>\n"
 "Language-Team: Finnish <janivayrynen@gmail.com>\n"
@@ -15,41 +15,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_config.c:39
+#: src/e_mod_config.c:40
 msgid "Tclock Settings"
 msgstr ""
 
-#: src/e_mod_config.c:92
+#: src/e_mod_config.c:95
 msgid "Top"
 msgstr "Ylärivi"
 
-#: src/e_mod_config.c:93
+#: src/e_mod_config.c:96
 msgid "Show Top Line"
 msgstr "Näytä ylärivi"
 
-#: src/e_mod_config.c:100 src/e_mod_config.c:126 src/e_mod_config.c:142
+#: src/e_mod_config.c:103 src/e_mod_config.c:129 src/e_mod_config.c:145
 msgid "Consult strftime(3) for format syntax"
 msgstr "Katso strftime(3) oikealle aikaformaatille"
 
-#: src/e_mod_config.c:103
+#: src/e_mod_config.c:106
 msgid "Add time offset (e.g.+2)"
 msgstr ""
 
-#: src/e_mod_config.c:115
+#: src/e_mod_config.c:118
 msgid "Bottom"
 msgstr "Alarivi"
 
-#: src/e_mod_config.c:117
+#: src/e_mod_config.c:120
 msgid "Show Bottom Line"
 msgstr "Näytä alarivi"
 
-#: src/e_mod_config.c:130
+#: src/e_mod_config.c:133
 msgid "Tool Tip"
 msgstr "Työkaluvihje"
 
-#: src/e_mod_config.c:132
+#: src/e_mod_config.c:135
 msgid "Show Tooltip"
 msgstr "Näytä työkaluvihje"
+
+#: src/e_mod_config.c:149
+msgid "Font size"
+msgstr ""
+
+#: src/e_mod_config.c:151
+#, fuzzy
+msgid "Top line"
+msgstr "Näytä ylärivi"
+
+#: src/e_mod_config.c:156
+#, fuzzy
+msgid "Bottom line"
+msgstr "Näytä alarivi"
 
 #: src/e_mod_main.c:142
 msgid "TClock"

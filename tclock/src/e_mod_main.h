@@ -27,8 +27,7 @@ struct _Config
 struct _Config_Item
 {
    const char *id;
-   int resolution;
-   double poll_time;
+   double font_size_up, font_size_down;
    int show_time, show_date, show_tip;
    const char *time_format;
    const char *date_format;
