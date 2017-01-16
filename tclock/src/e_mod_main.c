@@ -289,7 +289,7 @@ _tclock_cb_check(void *data)
    struct tm *local_time;
    char buf[1024];
    int offset_int;
-      
+        
    for (l = tclock_config->instances; l; l = l->next) 
      {
 	inst = l->data;
@@ -330,6 +330,9 @@ _tclock_cb_check(void *data)
 	     e_widget_label_text_set(inst->o_tip, buf);
 	  }
      }
+
+   edje_object_text_class_set(inst->tclock, "module_large", "Sans:style=Mono", inst->ci->font_size_up);
+   edje_object_text_class_set(inst->tclock, "module_small", "Sans:style=Mono", inst->ci->font_size_down);
 
    return EINA_TRUE;
 }
@@ -377,7 +380,8 @@ _tclock_config_item_get(const char *id)
    
    ci->date_format = eina_stringshare_add("%d/%m/%y");
    ci->tip_format = eina_stringshare_add("%A, %B %d, %Y");
-
+   ci->font_size_up = 12;
+   ci->font_size_down = 10;
    tclock_config->items = eina_list_append(tclock_config->items, ci);
    return ci;
 }
@@ -409,6 +413,8 @@ e_modapi_init(E_Module *m)
    E_CONFIG_VAL(D, T, time_format, STR);
    E_CONFIG_VAL(D, T, time_offset, STR);
    E_CONFIG_VAL(D, T, tip_format, STR);
+   E_CONFIG_VAL(D, T, font_size_up, DOUBLE);
+   E_CONFIG_VAL(D, T, font_size_down, DOUBLE);
 
    conf_edd = E_CONFIG_DD_NEW("TClock_Config", Config);
 #undef T
@@ -433,7 +439,8 @@ e_modapi_init(E_Module *m)
         ci->time_offset = eina_stringshare_add("0");
         ci->date_format = eina_stringshare_add("%d/%m/%y");
         ci->tip_format = eina_stringshare_add("%d");
-
+        ci->font_size_up = 12;
+        ci->font_size_down = 10;
         tclock_config->items = eina_list_append(tclock_config->items, ci);
      }
    tclock_config->mod_dir = eina_stringshare_add(m->dir);
