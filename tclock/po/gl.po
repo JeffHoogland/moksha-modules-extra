@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tclock\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2017-01-16 21:04+0100\n"
+"POT-Creation-Date: 2017-01-20 21:44+0100\n"
 "PO-Revision-Date: 2012-09-17 12:30+0200\n"
 "Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
 "Language-Team: http://trasno.net/ <proxecto@trasno.net>\n"
@@ -19,51 +19,71 @@ msgstr ""
 msgid "Tclock Settings"
 msgstr "Preferencias de Tclock"
 
-#: src/e_mod_config.c:95
+#: src/e_mod_config.c:99
 msgid "Top"
 msgstr "Superior"
 
-#: src/e_mod_config.c:96
+#: src/e_mod_config.c:100
 msgid "Show Top Line"
 msgstr "Amosa-la liña superior"
 
-#: src/e_mod_config.c:103 src/e_mod_config.c:129 src/e_mod_config.c:145
+#: src/e_mod_config.c:107
 msgid "Consult strftime(3) for format syntax"
 msgstr "Consultar strftime(3) para o formato da sintaxe"
 
-#: src/e_mod_config.c:106
+#: src/e_mod_config.c:110
 msgid "Add time offset (e.g.+2)"
 msgstr ""
 
-#: src/e_mod_config.c:118
+#: src/e_mod_config.c:122
 msgid "Bottom"
 msgstr "Inferior"
 
-#: src/e_mod_config.c:120
+#: src/e_mod_config.c:124
 msgid "Show Bottom Line"
 msgstr "Amosa-la liña inferior"
 
-#: src/e_mod_config.c:133
+#: src/e_mod_config.c:134
 msgid "Tool Tip"
 msgstr "Consello"
 
-#: src/e_mod_config.c:135
+#: src/e_mod_config.c:136
 msgid "Show Tooltip"
 msgstr "Amosar consello"
 
-#: src/e_mod_config.c:149
+#: src/e_mod_config.c:147
 msgid "Font size"
 msgstr ""
 
-#: src/e_mod_config.c:151
+#: src/e_mod_config.c:149
 #, fuzzy
 msgid "Top line"
 msgstr "Amosa-la liña superior"
 
-#: src/e_mod_config.c:156
+#: src/e_mod_config.c:154
 #, fuzzy
 msgid "Bottom line"
 msgstr "Amosa-la liña inferior"
+
+#: src/e_mod_config.c:161
+msgid "Label color"
+msgstr ""
+
+#: src/e_mod_config.c:163
+msgid "Red"
+msgstr ""
+
+#: src/e_mod_config.c:168
+msgid "Green"
+msgstr ""
+
+#: src/e_mod_config.c:173
+msgid "Blue"
+msgstr ""
+
+#: src/e_mod_config.c:178
+msgid "Alpha"
+msgstr ""
 
 #: src/e_mod_main.c:142
 msgid "TClock"
