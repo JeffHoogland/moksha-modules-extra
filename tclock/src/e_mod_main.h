@@ -27,7 +27,7 @@ struct _Config
 struct _Config_Item
 {
    const char *id;
-   double font_size_up, font_size_down;
+   double font_size_up, font_size_down, color_r, color_g, color_b, color_alpha;
    int show_time, show_date, show_tip;
    const char *time_format;
    const char *date_format;
