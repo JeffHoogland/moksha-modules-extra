@@ -289,6 +289,7 @@ _tclock_cb_check(void *data)
    struct tm *local_time;
    char buf[1024];
    int offset_int;
+  
         
    for (l = tclock_config->instances; l; l = l->next) 
      {
@@ -333,6 +334,9 @@ _tclock_cb_check(void *data)
 
    edje_object_text_class_set(inst->tclock, "module_large", "Sans:style=Mono", inst->ci->font_size_up);
    edje_object_text_class_set(inst->tclock, "module_small", "Sans:style=Mono", inst->ci->font_size_down);
+   edje_object_color_class_set
+          (inst->tclock, "module_label", inst->ci->color_r, inst->ci->color_g, inst->ci->color_b, 
+           inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
 
    return EINA_TRUE;
 }
@@ -382,6 +386,10 @@ _tclock_config_item_get(const char *id)
    ci->tip_format = eina_stringshare_add("%A, %B %d, %Y");
    ci->font_size_up = 12;
    ci->font_size_down = 10;
+   ci->color_r = 255;
+   ci->color_g = 255;
+   ci->color_b = 255;
+   ci->color_alpha = 255;
    tclock_config->items = eina_list_append(tclock_config->items, ci);
    return ci;
 }
@@ -415,6 +423,10 @@ e_modapi_init(E_Module *m)
    E_CONFIG_VAL(D, T, tip_format, STR);
    E_CONFIG_VAL(D, T, font_size_up, DOUBLE);
    E_CONFIG_VAL(D, T, font_size_down, DOUBLE);
+   E_CONFIG_VAL(D, T, color_r, DOUBLE);
+   E_CONFIG_VAL(D, T, color_g, DOUBLE);
+   E_CONFIG_VAL(D, T, color_b, DOUBLE);
+   E_CONFIG_VAL(D, T, color_alpha, DOUBLE);
 
    conf_edd = E_CONFIG_DD_NEW("TClock_Config", Config);
 #undef T
@@ -441,6 +453,10 @@ e_modapi_init(E_Module *m)
         ci->tip_format = eina_stringshare_add("%d");
         ci->font_size_up = 12;
         ci->font_size_down = 10;
+        ci->color_r = 255;
+        ci->color_g = 255;
+        ci->color_b = 255;
+        ci->color_alpha = 255;
         tclock_config->items = eina_list_append(tclock_config->items, ci);
      }
    tclock_config->mod_dir = eina_stringshare_add(m->dir);
