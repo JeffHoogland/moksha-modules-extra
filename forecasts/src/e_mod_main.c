@@ -332,10 +332,10 @@ static void
 _forecasts_menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi)
 {
    Instance *inst;
- 
+
    if (!forecasts_config) return;
    if (forecasts_config->config_dialog) return;
- 
+
    inst = data;
    _config_forecasts_module(inst->ci);
 }
@@ -380,7 +380,6 @@ _forecasts_config_item_get(const char *id)
    ci->days = 15.0;
    ci->degrees = DEGREES_C;
    ci->host = eina_stringshare_add("query.yahooapis.com");
-   //ci->host = eina_stringshare_add("xml.weather.yahoo.com");
    ci->code = eina_stringshare_add(DEFAULT_LOCATION);
    ci->show_text = 1;
    ci->popup_on_hover = 1;
@@ -438,7 +437,6 @@ e_modapi_init(E_Module *m)
         ci->poll_time = 60.0;
         ci->days = 15.0;
         ci->degrees = DEGREES_C;
-        //ci->host = eina_stringshare_add("xml.weather.yahoo.com");
         ci->host = eina_stringshare_add("query.yahooapis.com");
         ci->code = eina_stringshare_add(DEFAULT_LOCATION);
         ci->id = eina_stringshare_add("0");
@@ -625,16 +623,11 @@ _forecasts_server_add(void *data, int type, void *event)
    else
      degrees = 'c';
 
-   
-   //snprintf(forecast, sizeof(forecast), "/forecastrss?p=%s&u=%c", inst->ci->code, degrees);
-    
-   //~ url to choose city without WOEID:
-   
    if (inst->ci->by_code == WOEID_CITY)
       snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%20in%%20%%28select%%20woeid%%20from%%20geo.places%%281%%29%%20where%%20text=\"%s\"%%20%%29%%20and%%20u='%c'", inst->ci->code, degrees);
-   else 
+   else
       snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%3D%s%%20and%%20u%%3D%%27%c%%27", inst->ci->code, degrees);
-   
+
    snprintf(buf, sizeof(buf), "GET http://%s%s HTTP/1.1\r\n"
                               "Host: %s\r\n"
                               "Connection: close\r\n\r\n",
@@ -692,6 +685,7 @@ _forecasts_parse(void *data)
    char *needle;
    char city[256];
    char region[256];
+   char *region_ptr;
    char location[512];
    float visibility;
    int i;
@@ -703,7 +697,7 @@ _forecasts_parse(void *data)
      return 0;
 
    /* Location */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:location xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" city=");
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:location ");
    //DEBUG("Needle: %s", needle);
 
    if (!needle)
@@ -718,18 +712,23 @@ _forecasts_parse(void *data)
 
    region[0] = '\0';
    needle = strstr(needle, "region=\"");
+   if (!needle) goto error;
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%255[^\"]\"", region);
+   region_ptr = region;
+   //get rid of leading white space
+   if (region[0] = ' ')
+     region_ptr++;
 
-   if (strlen(region))
-     snprintf(location, 512, "%s, %s", city, region);
+   if (strlen(region_ptr))
+     snprintf(location, 512, "%s, %s", city, region_ptr);
    else
      snprintf(location, 512, "%s", city);
-   DEBUG("Parse Location: %s", location);
+
    eina_stringshare_replace(&inst->location, location);
 
    /* Units */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:units xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" distance=");
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:units ");
    if (!needle)
    {
       DEBUG("Parse: %s", "Units");
@@ -771,7 +770,7 @@ _forecasts_parse(void *data)
    DEBUG("Parse Units: %s, %s, %s, %c", inst->units.distance, inst->units.pressure, inst->units.speed, inst->units.temp);
 
    /* Current conditions */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:condition xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" code=");
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:condition ");
    if (!needle)
    {
       DEBUG("Parse: %s", "Conditions");
@@ -814,7 +813,7 @@ _forecasts_parse(void *data)
 
    /* Details */
    /* Wind */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:wind xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" chill=");
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:wind ");
 
    needle = strstr(needle, "chill=\"");
    if (!needle)
@@ -843,7 +842,7 @@ _forecasts_parse(void *data)
    DEBUG("Parse Wind: %d, %d, %d",inst->details.wind.chill, inst->details.wind.direction, inst->details.wind.speed);
 
    /* Atmosphere */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:atmosphere xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" humidity=");
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:atmosphere ");
 
    needle = strstr(needle, "humidity=\"");
    if (!needle)
@@ -860,7 +859,7 @@ _forecasts_parse(void *data)
    }
    needle = strstr(needle, "\"");
    sscanf(needle, "\"%f\"", &inst->details.atmosphere.pressure);
-   /* Yahoo API is returning weird values here everything scaled by MB_TO_IN 
+   /* Yahoo API is returning weird values here everything scaled by MB_TO_IN
     *   This is a known issue, for example see:
     *      https://github.com/monkeecreate/jquery.simpleWeather/issues/227
     * May change in the future: the below line may need removed or modified.*/
@@ -886,7 +885,7 @@ _forecasts_parse(void *data)
    DEBUG("Parse Atmosphere: %d, %f, %d, %f", inst->details.atmosphere.humidity, inst->details.atmosphere.pressure, inst->details.atmosphere.rising, inst->details.atmosphere.visibility);
 
    /* Astronomy */
-   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:astronomy xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" sunrise=");
+   needle = strstr(eina_strbuf_string_get(inst->buffer), "<yweather:astronomy ");
    needle = strstr(needle, "sunrise=\"");
    if (!needle)
    {   DEBUG("Parse: %s", "Sunrise");
@@ -908,7 +907,7 @@ _forecasts_parse(void *data)
    /* Forecasts */
    for (i = 0; i < inst->ci->days / 5; i++)
      {
-        needle = strstr(needle, "<yweather:forecast xmlns:yweather=\"http://xml.weather.yahoo.com/ns/rss/1.0\" code=");
+        needle = strstr(needle, "<yweather:forecast ");
         needle = strstr(needle, "code=\"");
         if (!needle)
         {   DEBUG("Parse Forecast: %d %s", i, "code");
@@ -960,7 +959,7 @@ _forecasts_parse(void *data)
    return 1;
 
 error:
-   fprintf(stderr, "ERROR: Couldn't parse xml file.\n");
+   fprintf(stderr, "(Forecast Module): ERROR **: Couldn't parse info from %s\n", inst->ci->host);
    return 0;
 }
 
@@ -975,7 +974,7 @@ _forecasts_converter(Instance *inst)
         inst->units.temp = 'C';
         snprintf(inst->units.distance, 3, "km");
         snprintf(inst->units.pressure, 3, "mb");
-        snprintf(inst->units.speed, 4, "kph");
+        snprintf(inst->units.speed, 5, "km/h");
      }
    else if ((inst->units.temp == 'C') && (inst->ci->degrees == DEGREES_F))
      {
@@ -988,11 +987,11 @@ _forecasts_converter(Instance *inst)
    if (dir == -1) return;
 
    _forecasts_convert_degrees(&inst->condition.temp, dir);
-
    _forecasts_convert_degrees(&inst->details.wind.chill, dir);
    _forecasts_convert_distances(&inst->details.wind.speed, dir);
    _forecasts_convert_distances_float(&inst->details.atmosphere.visibility, dir);
    _forecasts_convert_pressures(&inst->details.atmosphere.pressure, dir);
+   
    for (i = 0; i < inst->ci->days / 5; i++)
      {
         _forecasts_convert_degrees(&inst->forecast[i].low, dir);
@@ -1060,7 +1059,8 @@ _forecasts_display_set(Instance *inst, int ok)
 
    snprintf(buf, sizeof(buf), "%d°%c", inst->condition.temp, inst->units.temp);
    edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.temp", buf);
-   edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.description", inst->condition.desc);
+   edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.description",
+                             inst->condition.desc);
    edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.location", inst->location);
 
    if (inst->gcc->gadcon->orient == E_GADCON_ORIENT_FLOAT)
@@ -1137,10 +1137,12 @@ _forecasts_config_updated(Config_Item *ci)
           _forecasts_cb_check(inst);
 
         if (!inst->check_timer)
-          inst->check_timer = ecore_timer_add(inst->ci->poll_time, _forecasts_cb_check, inst);
+          inst->check_timer =
+            ecore_timer_add(inst->ci->poll_time, _forecasts_cb_check,
+                            inst);
         else
-          ecore_timer_interval_set(inst->check_timer, inst->ci->poll_time);
-
+          ecore_timer_interval_set(inst->check_timer,
+                                   inst->ci->poll_time);
 
      }
 }
@@ -1248,7 +1250,9 @@ _forecasts_popup_content_create(Instance *inst)
         ob = e_widget_label_add(evas, buf);
         e_widget_frametable_object_append(of, ob, 1, row, 1, 1, 1, 0, 1, 0);
 
-        ob = e_widget_image_add_from_object(evas,_forecasts_popup_icon_create(inst->popup->win->evas,inst->forecast[i].code), 0, 0);
+        ob = e_widget_image_add_from_object(evas,
+                                            _forecasts_popup_icon_create(inst->popup->win->evas,
+                                                                         inst->forecast[i].code), 0, 0);
         e_widget_frametable_object_append(of, ob, 2, row, 1, 2, 1, 1, 0, 0);
 
         ob = e_widget_label_add(evas, D_("Low"));
