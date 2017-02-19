@@ -59,7 +59,7 @@ struct _Instance
 
    struct
    {
-      char temp, distance[3], pressure[3], speed[4];
+      char temp, distance[3], pressure[3], speed[5];
    } units;
 
    struct
