@@ -140,7 +140,8 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas,
    //~ snprintf(buf, sizeof(buf), "%s"), "http://zourbuth.com/tools/woeid");
    
    ob = e_widget_entry_add(evas, &bufPtr, NULL, NULL, NULL);
-   e_widget_entry_readonly_set(ob, 1);
+   e_widget_disabled_set(ob, 1);
+   //e_widget_entry_readonly_set(ob, 1);
    e_widget_size_min_set(ob, 150, 28);
    e_widget_frametable_object_append(of, ob, 1, 4, 1, 1, 1, 0, 1, 0);
    
