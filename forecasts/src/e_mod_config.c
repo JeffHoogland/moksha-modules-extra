@@ -89,10 +89,10 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas,
 {
    Evas_Object *o, *of, *ob;
    E_Radio_Group *dg;
-   char buf[4096]="http://zourbuth.com/tools/woeid";
+   char buf[4096]="";
    char *bufPtr;
    
-   bufPtr="zourbuth.com/tools/woeid";
+   bufPtr="http://www.zazar.net/developers/jquery/zweatherfeed/example_location.html";
 
    o = e_widget_list_add(evas, 0, 0);
    of = e_widget_framelist_add(evas, D_("Display Settings"), 0);
