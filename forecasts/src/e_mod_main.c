@@ -15,8 +15,7 @@
     printf("[forecasts] "f "\n", __VA_ARGS__)
 
 /*Utility functions */
-size_t count_spaces(const char* str);
-char *url_normalize_str(const char* str);
+Eina_Strbuf *url_normalize_str(const char* str);
 
 /* Gadcon Function Protos */
 static E_Gadcon_Client *_gc_init(E_Gadcon *gc, const char *name,
@@ -612,11 +611,12 @@ _forecasts_server_add(void *data, int type, void *event)
    Instance *inst;
    Ecore_Con_Event_Server_Add *ev;
    char buf[1024];
-   char *city = NULL;
    char forecast[1024];
    char degrees;
    int err_server;
-
+   Eina_Strbuf *city;
+   city = eina_strbuf_new();
+   
    inst = data;
    if (!inst)
      return EINA_TRUE;
@@ -632,8 +632,8 @@ _forecasts_server_add(void *data, int type, void *event)
 
    if (inst->ci->by_code == WOEID_CITY)
    {  city = url_normalize_str(inst->ci->code);
-      snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%20in%%20%%28select%%20woeid%%20from%%20geo.places%%281%%29%%20where%%20text=\"%s\"%%20%%29%%20and%%20u='%c'", city, degrees);
-      free(city);
+      snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%20in%%20%%28select%%20woeid%%20from%%20geo.places%%281%%29%%20where%%20text=\"%s\"%%20%%29%%20and%%20u='%c'", eina_strbuf_string_get(city), degrees);
+      eina_strbuf_free(city);
   }
    else
       snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%3D%s%%20and%%20u%%3D%%27%c%%27", inst->ci->code, degrees);
@@ -1354,44 +1354,12 @@ _cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_info)
    e_gadcon_popup_hide(inst->popup);
 }
 
-size_t
-count_spaces(const char* str)
-{   EINA_SAFETY_ON_NULL_RETURN_VAL(str, 0);
-	char *temp = (char *) str;
-    size_t count = 0;
-    while(*temp) if (*temp++ == ' ') ++count;
-    return count;
-}
-
-char *
+Eina_Strbuf *
 url_normalize_str(const char *str)
 {
-
-  char *s;
-  size_t ns=0;
-  char *data;
-  // Sanity check 
-  // FIXME: Logic got complicated because str passed is really Eina_Stringshare
-  //        hence const char * and not char *
-  //        Find a better fix.
-  if (str)
-  {
-     ns = strlen(str) + count_spaces(str)*2;
-     // allocate memory long enough to hold str with %20 spaces added
-     data = (char *) malloc (ns * sizeof (char)+1);
-     strcpy(data,str);
-  }
-  else
-  { 
-     data = (char *) malloc (ns * sizeof (char)+1);
-     strcpy(data,"");
-  }
-
-  // replace the spaces in data
-  for(s=strchr(data,' '); s!=NULL; s=strchr(s+1,' ')) {
-    memmove(s+2,s,ns+data-s); // shift the rest of the string by 2
-    memcpy(s,"%20",3); // replace ' ' with '%20'
-  }
-  data[ns] = 0; // terminate string
-  return data;
+  Eina_Strbuf *buf;
+  buf = eina_strbuf_new();
+  eina_strbuf_append(buf, str);
+  eina_strbuf_replace_all(buf, " ", "%20");
+  return buf;
 }
