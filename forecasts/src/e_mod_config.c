@@ -1,6 +1,7 @@
 #include <e.h>
 #include "e_mod_main.h"
 
+
 struct _E_Config_Dialog_Data
 {
    double poll_time;
@@ -13,6 +14,7 @@ struct _E_Config_Dialog_Data
    int    popup_on_hover;
 };
 
+char *URL_woeid;
 static void        *_create_data(E_Config_Dialog *cfd);
 static void         _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
 static Evas_Object *_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas,
@@ -89,11 +91,9 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas,
 {
    Evas_Object *o, *of, *ob;
    E_Radio_Group *dg;
-   char buf[4096]="";
-   char *bufPtr;
+   URL_woeid = (char *) malloc (255 * sizeof (char)+1);
+   strcpy(URL_woeid, "http://www.zazar.net/developers/jquery/zweatherfeed/example_location.html");
    
-   bufPtr="http://www.zazar.net/developers/jquery/zweatherfeed/example_location.html";
-
    o = e_widget_list_add(evas, 0, 0);
    of = e_widget_framelist_add(evas, D_("Display Settings"), 0);
    ob = e_widget_label_add(evas, D_("Poll Time"));
@@ -137,17 +137,10 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas,
    ob = e_widget_label_add(evas, D_("To find the code, go to:"));
    e_widget_frametable_object_append(of, ob, 0, 4, 1, 1, 1, 0, 1, 0);
    
-   //~ snprintf(buf, sizeof(buf), "%s"), "http://zourbuth.com/tools/woeid");
-   
-   ob = e_widget_entry_add(evas, &bufPtr, NULL, NULL, NULL);
-   e_widget_disabled_set(ob, 1);
-   //e_widget_entry_readonly_set(ob, 1);
+   ob = e_widget_entry_add(evas, &URL_woeid, NULL, NULL, NULL);
    e_widget_size_min_set(ob, 150, 28);
    e_widget_frametable_object_append(of, ob, 1, 4, 1, 1, 1, 0, 1, 0);
    
-   //~ snprintf(buf, sizeof(buf), D_("%s, find your area, and look at the URL"), "http://zourbuth.com/tools/woeid");
-   //~ ob = e_widget_label_add(evas, buf);
-   //~ e_widget_frametable_object_append(of, ob, 0, 5, 3, 1, 1, 0, 1, 0);
    e_widget_list_object_append(o, of, 1, 7, 0.5);
 
    return o;
