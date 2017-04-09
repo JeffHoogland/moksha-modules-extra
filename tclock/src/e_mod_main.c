@@ -293,50 +293,51 @@ _tclock_cb_check(void *data)
         
    for (l = tclock_config->instances; l; l = l->next) 
      {
-	inst = l->data;
-	
-	if (!inst->ci->show_time)
-	  edje_object_signal_emit(inst->tclock, "time_hidden", "");
-	else
-	  edje_object_signal_emit(inst->tclock, "time_visible", "");
-	edje_object_message_signal_process(inst->tclock);
-	
-	if (!inst->ci->show_date)
-	  edje_object_signal_emit(inst->tclock, "date_hidden", "");
-	else
-	  edje_object_signal_emit(inst->tclock, "date_visible", "");
-	edje_object_message_signal_process(inst->tclock);
+		inst = l->data;
+		
+		if (!inst->ci->show_time)
+		  edje_object_signal_emit(inst->tclock, "time_hidden", "");
+		else
+		  edje_object_signal_emit(inst->tclock, "time_visible", "");
+		edje_object_message_signal_process(inst->tclock);
+		
+		if (!inst->ci->show_date)
+		  edje_object_signal_emit(inst->tclock, "date_hidden", "");
+		else
+		  edje_object_signal_emit(inst->tclock, "date_visible", "");
+		edje_object_message_signal_process(inst->tclock);
 
-	memset(buf, 0, sizeof(buf));
+		memset(buf, 0, sizeof(buf));
 
-    offset_int=atoi(inst->ci->time_offset); 
-  
-    current_time = time(NULL)+offset_int*3600;
-    local_time = localtime(&current_time);
-	
-	if (inst->ci->time_format)
-	  {
-             strftime(buf, 1024, inst->ci->time_format, local_time);
-             edje_object_part_text_set(inst->tclock, "tclock_time", buf);
-	  }
-	
-	if (inst->ci->date_format)
-	  {
-             strftime(buf, 1024, inst->ci->date_format, local_time);
-             edje_object_part_text_set(inst->tclock, "tclock_date", buf);
-	  }
-	if ((inst->ci->tip_format) && (inst->o_tip))
-	  {
-             strftime(buf, 1024, inst->ci->tip_format, local_time);
-	     e_widget_label_text_set(inst->o_tip, buf);
-	  }
+		offset_int=atoi(inst->ci->time_offset); 
+	  
+		current_time = time(NULL)+offset_int*3600;
+		local_time = localtime(&current_time);
+		
+		if (inst->ci->time_format)
+		  {
+				 strftime(buf, 1024, inst->ci->time_format, local_time);
+				 edje_object_part_text_set(inst->tclock, "tclock_time", buf);
+		  }
+		
+		if (inst->ci->date_format)
+		  {
+				 strftime(buf, 1024, inst->ci->date_format, local_time);
+				 edje_object_part_text_set(inst->tclock, "tclock_date", buf);
+		  }
+		if ((inst->ci->tip_format) && (inst->o_tip))
+		  {
+				 strftime(buf, 1024, inst->ci->tip_format, local_time);
+			 e_widget_label_text_set(inst->o_tip, buf);
+		  }
+		 
+		edje_object_text_class_set(inst->tclock, "module_large", "Sans:style=Mono", inst->ci->font_size_up);
+		edje_object_text_class_set(inst->tclock, "module_small", "Sans:style=Mono", inst->ci->font_size_down);
+		edje_object_color_class_set
+			  (inst->tclock, "module_label", inst->ci->color_r, inst->ci->color_g, inst->ci->color_b, 
+			   inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
      }
 
-   edje_object_text_class_set(inst->tclock, "module_large", "Sans:style=Mono", inst->ci->font_size_up);
-   edje_object_text_class_set(inst->tclock, "module_small", "Sans:style=Mono", inst->ci->font_size_down);
-   edje_object_color_class_set
-          (inst->tclock, "module_label", inst->ci->color_r, inst->ci->color_g, inst->ci->color_b, 
-           inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
 
    return EINA_TRUE;
 }
