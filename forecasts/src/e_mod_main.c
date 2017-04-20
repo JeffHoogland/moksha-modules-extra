@@ -144,6 +144,7 @@ static void         _cb_mouse_in(void *data, Evas *e, Evas_Object *obj, void *ev
 static void         _cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static Evas_Object *_forecasts_popup_icon_create(Evas *evas, int code);
 static void         _forecasts_popup_destroy(Instance *inst);
+static void         _right_values_update(Instance *inst);
 
 /* Gadcon Functions */
 static E_Gadcon_Client *
@@ -631,10 +632,11 @@ _forecasts_server_add(void *data, int type, void *event)
      degrees = 'c';
 
    if (inst->ci->by_code == WOEID_CITY)
-   {  city = url_normalize_str(inst->ci->code);
+   {  
+	  city = url_normalize_str(inst->ci->code);
       snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%20in%%20%%28select%%20woeid%%20from%%20geo.places%%281%%29%%20where%%20text=\"%s\"%%20%%29%%20and%%20u='%c'", eina_strbuf_string_get(city), degrees);
       eina_strbuf_free(city);
-  }
+   }
    else
       snprintf(forecast, sizeof(forecast), "/v1/public/yql?q=select%%20*%%20from%%20weather.forecast%%20where%%20woeid%%3D%s%%20and%%20u%%3D%%27%c%%27", inst->ci->code, degrees);
 
@@ -1046,6 +1048,39 @@ _forecasts_convert_pressures(float *value, int dir)
 }
 
 static void
+_right_values_update(Instance *inst)
+{
+ char buf[4096], name[60];
+        int i;
+        for (i = 0; i < 2; i++)
+          {
+             Evas_Object *swallow;
+
+             snprintf(name, sizeof(name), "e.text.day%d.date", i);
+             edje_object_part_text_set(inst->forecasts->forecasts_obj, name, inst->forecast[i].date);
+
+             snprintf(name, sizeof(name), "e.text.day%d.description", i);
+             edje_object_part_text_set(inst->forecasts->forecasts_obj, name, inst->forecast[i].desc);
+
+             snprintf(name, sizeof(name), "e.text.day%d.high", i);
+             snprintf(buf, sizeof(buf), "%d°%c", inst->forecast[i].high, inst->units.temp);
+             edje_object_part_text_set(inst->forecasts->forecasts_obj, name, buf);
+
+             snprintf(name, sizeof(name), "e.text.day%d.low", i);
+             snprintf(buf, sizeof(buf), "%d°%c", inst->forecast[i].low, inst->units.temp);
+             edje_object_part_text_set(inst->forecasts->forecasts_obj, name, buf);
+
+             snprintf(name, sizeof(name), "e.swallow.day%d.icon", i);
+             swallow = edje_object_part_swallow_get(inst->forecasts->forecasts_obj, name);
+             if (swallow)
+               evas_object_del(swallow);
+             edje_object_part_swallow(inst->forecasts->forecasts_obj, name,
+                                      _forecasts_popup_icon_create(inst->gcc->gadcon->evas, inst->forecast[i].code));
+          }
+}
+
+
+static void
 _forecasts_display_set(Instance *inst, int ok)
 {
    char buf[4096];
@@ -1074,36 +1109,7 @@ _forecasts_display_set(Instance *inst, int ok)
    edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.location", inst->location);
 
    if (inst->gcc->gadcon->orient == E_GADCON_ORIENT_FLOAT)
-     {
-        char buf[4096], name[60];
-        int i;
-
-        for (i = 0; i < inst->ci->days / 5; i++)
-          {
-             Evas_Object *swallow;
-
-             snprintf(name, sizeof(name), "e.text.day%d.date", i);
-             edje_object_part_text_set(inst->forecasts->forecasts_obj, name, inst->forecast[i].date);
-
-             snprintf(name, sizeof(name), "e.text.day%d.description", i);
-             edje_object_part_text_set(inst->forecasts->forecasts_obj, name, inst->forecast[i].desc);
-
-             snprintf(name, sizeof(name), "e.text.day%d.high", i);
-             snprintf(buf, sizeof(buf), "%d°%c", inst->forecast[i].high, inst->units.temp);
-             edje_object_part_text_set(inst->forecasts->forecasts_obj, name, buf);
-
-             snprintf(name, sizeof(name), "e.text.day%d.low", i);
-             snprintf(buf, sizeof(buf), "%d°%c", inst->forecast[i].low, inst->units.temp);
-             edje_object_part_text_set(inst->forecasts->forecasts_obj, name, buf);
-
-             snprintf(name, sizeof(name), "e.swallow.day%d.icon", i);
-             swallow = edje_object_part_swallow_get(inst->forecasts->forecasts_obj, name);
-             if (swallow)
-               evas_object_del(swallow);
-             edje_object_part_swallow(inst->forecasts->forecasts_obj, name,
-                                      _forecasts_popup_icon_create(inst->gcc->gadcon->evas, inst->forecast[i].code));
-          }
-     }
+      _right_values_update(inst); //Updating right two icons description
 
    if (inst->popup) _forecasts_popup_destroy(inst);
    inst->popup = NULL;
@@ -1142,6 +1148,10 @@ _forecasts_config_updated(Config_Item *ci)
           edje_object_signal_emit(inst->forecasts_obj, "e,state,description,hide", "e");
         else
           edje_object_signal_emit(inst->forecasts_obj, "e,state,description,show", "e");
+
+        //Updating right two icons description
+        _right_values_update(inst);
+        
 
         if (area_changed)
           _forecasts_cb_check(inst);
