@@ -220,7 +220,7 @@ _common_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *c
    e_widget_frametable_object_append(of2, ob, 0, 2, 1, 1, 1, 1, 1, 1);
    ob = e_widget_check_add(evas, D_("Tuesday"), &(cfdata->sched.day_tuesday));
    e_widget_frametable_object_append(of2, ob, 0, 3, 1, 1, 1, 1, 1, 1);
-   ob = e_widget_check_add(evas, D_("Wenesday"), &(cfdata->sched.day_wenesday));
+   ob = e_widget_check_add(evas, D_("Wednesday"), &(cfdata->sched.day_wenesday));
    e_widget_frametable_object_append(of2, ob, 0, 4, 1, 1, 1, 1, 1, 1);
    ob = e_widget_check_add(evas, D_("Thursday"), &(cfdata->sched.day_thursday));
    e_widget_frametable_object_append(of2, ob, 0, 5, 1, 1, 1, 1, 1, 1);
