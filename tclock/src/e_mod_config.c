@@ -148,12 +148,12 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
    
    ob = e_widget_label_add(evas, D_("Top line"));
    e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
-   ob = e_widget_slider_add(evas, 1, 0, "%2.0f", 10, 40, 1.0, 0, &(cfdata->font_size_up), NULL, 40);
+   ob = e_widget_slider_add(evas, 1, 0, "%2.0f", 8, 40, 1.0, 0, &(cfdata->font_size_up), NULL, 40);
    e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 1, 1, 1);
    
    ob = e_widget_label_add(evas, D_("Bottom line"));
    e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1); 
-   ob = e_widget_slider_add(evas, 1, 0, "%2.0f", 10, 40, 1.0, 0, &(cfdata->font_size_down), NULL, 40);
+   ob = e_widget_slider_add(evas, 1, 0, "%2.0f", 8, 40, 1.0, 0, &(cfdata->font_size_down), NULL, 40);
    e_widget_frametable_object_append(of, ob, 1, 1, 1, 1, 1, 1, 1, 1); 
 
    e_widget_list_object_append(o, of, 1, 1, 0.5);
