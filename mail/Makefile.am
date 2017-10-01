@@ -33,4 +33,3 @@ clean-local:
 
 uninstall:
 	rm -rf $(DESTDIR)$(datadir)
-	rm -rf /usr/local/share/mail/

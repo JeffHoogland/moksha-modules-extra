@@ -3,7 +3,7 @@ MAINTAINERCLEANFILES = Makefile.in aclocal.m4 config.guess config.h.in \
 		       missing INSTALL
 
 
-snddir = /usr/local/share/mail/
+snddir = $(datadir)
 snd_DATA = mail_sound.wav
 
 

@@ -68,6 +68,7 @@ AC_ARG_ENABLE(homedir-install,
   AS_HELP_STRING([--enable-homedir-install], [Install module in homedir]),
   [ datadir="${HOME}/.e/e/modules/${PACKAGE}" ]
 )
+AC_DEFINE_UNQUOTED(PACKAGE_MOD_DIR, [$datadir], [Module directory])
 
 
 # uncomment this for new imap code
