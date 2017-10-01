@@ -62,11 +62,6 @@ AC_SUBST(EDJE_CC)
 AC_MSG_CHECKING([Which edje_cc to use])
 AC_MSG_RESULT(${EDJE_CC})
 
-AC_PATH_PROG(EMPRINT, "emprint", "", $PATH)
-if test "$EMPRINT" = ""; then
-  AC_MSG_ERROR(emprint not found)
-fi
-
 datadir=$(pkg-config --variable=modules enlightenment)/${PACKAGE}
 AC_ARG_ENABLE(homedir-install,
   AS_HELP_STRING([--enable-homedir-install], [Install module in homedir]),
