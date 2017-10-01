@@ -674,7 +674,13 @@ _mail_set_text (void *data)
       ecore_init();
       ecore_exe_run(cmd, NULL);
       ecore_shutdown();
-      if (inst->ci->play_sound) system("aplay /usr/local/share/mail/mail_sound.wav"); 
+      
+      char buff[4096];
+
+      /* if user wanted a beep, then beep there shall be */
+      snprintf(buff, 4096, "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR); 
+      int ret=system(buff);
+      if (inst->ci->play_sound) ret;
     } 
     
   if (count > 0)
