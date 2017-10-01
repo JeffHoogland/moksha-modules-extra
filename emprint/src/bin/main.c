@@ -551,10 +551,12 @@ _em_take_shot(int x, int y, int w, int h)
    Ecore_X_Image *xim;
    Ecore_X_Window_Attributes att;
    unsigned int *pix;
-   char buff[1024];
+   char buf[4096];
 
    /* if user wanted a beep, then beep there shall be */
-    if (opts->beep) system("aplay /usr/local/share/emprint/images/Camera.wav");
+    snprintf(buf, 4096, "aplay %s/images/Camera.wav", PACKAGE_DATA_DIR); 
+    int ret=system(buf);
+    if (opts->beep) ret;
    //if (opts->beep) ecore_x_bell(0);
 
    memset(&att, 0, sizeof(Ecore_X_Window_Attributes));
