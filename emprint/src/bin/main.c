@@ -551,6 +551,7 @@ _em_take_shot(int x, int y, int w, int h)
    Ecore_X_Image *xim;
    Ecore_X_Window_Attributes att;
    unsigned int *pix;
+   char buff[1024];
    char buf[4096];
 
    /* if user wanted a beep, then beep there shall be */
