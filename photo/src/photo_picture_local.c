@@ -549,7 +549,9 @@ _load_cb_ev_fill(void *data, int type, void *event)
 
    ev->new--;
    if (!ev->new)
-     return EINA_FALSE;return EINA_TRUE;
+     return EINA_FALSE;
+   else  
+     return EINA_TRUE;
 }
 
 static void
