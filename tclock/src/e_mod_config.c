@@ -4,8 +4,9 @@
 struct _E_Config_Dialog_Data
 {
   int show_date, show_time, show_tip;
-  double font_size_up, font_size_down, color_r, color_g, color_b, color_alpha;
+  double font_size_up, font_size_down;
   char *time_format, *date_format, *tip_format, *time_offset;
+  E_Color    color[3]; 
 };
 
 /* Protos */
@@ -16,6 +17,8 @@ static int _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
 static void _cb_time_check(void *data, Evas_Object *obj);
 static void _cb_date_check(void *data, Evas_Object *obj);
 static void _cb_tooltip_check(void *data, Evas_Object *obj);
+static void _color_cb_change(void *data, Evas_Object *obj);
+
 
 void
 _config_tclock_module(Config_Item *ci)
@@ -50,15 +53,16 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
    cfdata->show_tip = ci->show_tip;
    cfdata->font_size_up = ci->font_size_up;
    cfdata->font_size_down = ci->font_size_down;
-   cfdata->color_r = ci->color_r;
-   cfdata->color_g = ci->color_g;
-   cfdata->color_b = ci->color_b;
-   cfdata->color_alpha = ci->color_alpha;
+   cfdata->color->r = ci->color_r;
+   cfdata->color->g = ci->color_g;
+   cfdata->color->b = ci->color_b;
+   cfdata->color->a = ci->color_alpha;
    if (ci->time_format) cfdata->time_format = strdup(ci->time_format);
    if (ci->time_offset) cfdata->time_offset = strdup(ci->time_offset);
    printf("Offset je %s ",cfdata->time_offset);
    if (ci->date_format) cfdata->date_format = strdup(ci->date_format);
    if (ci->tip_format) cfdata->tip_format = strdup(ci->tip_format);
+    _color_cb_change(cfdata, NULL);
 }
 
 static void *
@@ -158,32 +162,30 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
 
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
+   //~ Color dialog----------------------------------------
    of = e_widget_frametable_add(evas, D_("Label color"), 1);
    
-   ob = e_widget_label_add(evas, D_("Red"));
-   e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
-   ob = e_widget_slider_add(evas, 1, 0, "%2.0f", 0, 255, 1.0, 0, &(cfdata->color_r), NULL, 40);
-   e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1);
+   ob = e_widget_label_add(evas, D_("Click for the color selector"));
+   e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1); 
+  
+   ob = e_widget_color_well_add_full(evas, cfdata->color, 1, 1);
+   e_widget_on_change_hook_set(ob, _color_cb_change, cfdata);
+   e_widget_frametable_object_append_full(of, ob, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 45,25,45,25); 
+   //~ e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1); 
    
-   ob = e_widget_label_add(evas, D_("Green"));
-   e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 1, 1, 1); 
-   ob = e_widget_slider_add(evas, 1, 0, "%2.0f", 0, 255, 1.0, 0, &(cfdata->color_g), NULL, 40);
-   e_widget_frametable_object_append(of, ob, 1, 1, 1, 1, 1, 1, 1, 1); 
-   
-   ob = e_widget_label_add(evas, D_("Blue"));
-   e_widget_frametable_object_append(of, ob, 0, 2, 1, 1, 1, 1, 1, 1); 
-   ob = e_widget_slider_add(evas, 1, 0, "%2.0f", 0, 255, 1.0, 0, &(cfdata->color_b), NULL, 40);
-   e_widget_frametable_object_append(of, ob, 1, 2, 1, 1, 1, 1, 1, 1); 
-   
-   ob = e_widget_label_add(evas, D_("Alpha"));
-   e_widget_frametable_object_append(of, ob, 0, 3, 1, 1, 1, 1, 1, 1); 
-   ob = e_widget_slider_add(evas, 1, 0, "%2.0f", 1, 255, 1.0, 0, &(cfdata->color_alpha), NULL, 40);
-   e_widget_frametable_object_append(of, ob, 1, 3, 1, 1, 1, 1, 1, 1); 
-
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
-   
    return o;
+}
+
+static void
+_color_cb_change(void *data, Evas_Object *obj)
+{
+   E_Config_Dialog_Data *cfdata = data;
+   Ecore_X_Window root;
+   E_Color *col;
+    
+   col = cfdata->color;
 }
 
 static int
@@ -197,10 +199,10 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    ci->show_tip = cfdata->show_tip;
    ci->font_size_up = cfdata->font_size_up;
    ci->font_size_down = cfdata->font_size_down;
-   ci->color_r = cfdata->color_r;
-   ci->color_g = cfdata->color_g;
-   ci->color_b = cfdata->color_b;
-   ci->color_alpha = cfdata->color_alpha;
+   ci->color_r = cfdata->color->r;
+   ci->color_g = cfdata->color->g;
+   ci->color_b = cfdata->color->b;
+   ci->color_alpha = cfdata->color->a;
    
    if (ci->time_format) eina_stringshare_del(ci->time_format);
    ci->time_format = eina_stringshare_add(cfdata->time_format);
