@@ -26,7 +26,7 @@ msgstr "Všeobecné"
 
 #: src/e_mod_config.c:139
 msgid "Show in main menu"
-msgstr "Zobrazit v hlavnom menu"
+msgstr "Zobraziť v hlavnom menu"
 
 #: src/e_mod_config.c:143
 msgid "Hide the gadget header"
@@ -38,7 +38,7 @@ msgstr "Pripojiť zariadenie počas bootu"
 
 #: src/e_mod_config.c:151
 msgid "Mount volumes on insert"
-msgstr "Pripojit zariadenia pri vložení"
+msgstr "Pripojiť zariadenia pri vložení"
 
 #: src/e_mod_config.c:155
 msgid "Open filemanager on insert"
@@ -46,7 +46,7 @@ msgstr "Otvoriť správcu súborov pri vložení"
 
 #: src/e_mod_config.c:162
 msgid "Use a custom file manager"
-msgstr "Použiť vlastného správcu souborov"
+msgstr "Použiť vlastného správcu súborov"
 
 #: src/e_mod_config.c:175
 msgid "Show in menu"
