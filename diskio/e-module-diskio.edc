@@ -66,6 +66,7 @@ collections
 		       state: "on" 0.0;
 		       aspect: 1.0 1.0;
 		       aspect_preference: BOTH;
+		       image.normal: "module_icon_r.png";
 		       color: 255 255 255 255;
 		    }
 	       }
@@ -86,6 +87,7 @@ collections
 		       state: "on" 0.0;
 		       aspect: 1.0 1.0;
 		       aspect_preference: BOTH;
+		       image.normal: "module_icon_w.png";
 		       color: 255 255 255 255;
 		    }
 	       }
@@ -120,6 +122,7 @@ collections
 			    size:  8;
 			    min:   1 1;
 			    align: 0.5 0.5;
+			    elipsis: -1;
 			    text_class: "module_small";
 			 }
 		    }
@@ -133,7 +136,7 @@ collections
 		  name: "read_off";
 		  signal: "read,off";
 		  source: "";
-		  action: STATE_SET "off" 0.0;
+		  action: STATE_SET "default" 0.0;
 		  target: "read";
 	       }
 	     program
@@ -149,7 +152,7 @@ collections
 		  name: "write_off";
 		  signal: "write,off";
 		  source: "";
-		  action: STATE_SET "off" 0.0;
+		  action: STATE_SET "default" 0.0;
 		  target: "write";
 	       }
 	     program
