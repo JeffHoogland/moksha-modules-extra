@@ -246,7 +246,6 @@ _diskio_set(void *data)
    Instance *inst = NULL;
 
    char buffer[128];
-   char dummy[16];
    char path[128];
    unsigned long dummy0, dummy1, dummy2, dummy3, dummy4, dummy5,
 				 dummy6, dummy7, dummy8, bytes_r_new=0, bytes_w_new=0;
@@ -267,8 +266,8 @@ _diskio_set(void *data)
 		return EINA_TRUE;
 	 }
 
-   fgets(buffer, sizeof(buffer), statfile);
-   sscanf(buffer, "%lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu", &dummy0, &dummy1, &bytes_r_new, &dummy2, &dummy3, &dummy4, &bytes_w_new, &dummy5, &dummy6, &dummy7, &dummy8);
+   if (fgets(buffer, sizeof(buffer), statfile)!=NULL)
+       sscanf(buffer, "%lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu", &dummy0, &dummy1, &bytes_r_new, &dummy2, &dummy3, &dummy4, &bytes_w_new, &dummy5, &dummy6, &dummy7, &dummy8);
 
    fclose (statfile);
 
@@ -375,9 +374,6 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 static void 
 _diskio_conf_new(void) 
 {
-   Config_Item *ci = NULL;
-   char buf[128];
-
    diskio_conf = E_NEW(Config, 1);
    diskio_conf->version = (MOD_CONFIG_FILE_EPOCH << 16);
 
@@ -423,7 +419,7 @@ _diskio_conf_free(void)
 static Eina_Bool 
 _diskio_conf_timer(void *data) 
 {
-   e_util_dialog_show( D_("DiskIO Configuration Updated"), data);
+   e_util_dialog_internal( D_("DiskIO Configuration Updated"), data);
    return EINA_FALSE;
 }
 
