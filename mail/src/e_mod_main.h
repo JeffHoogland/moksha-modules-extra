@@ -79,9 +79,13 @@ struct _Config_Box
    const char *pass;
    const char *new_path;
    const char *cur_path;   
-
+   int parse;
+   int iterator;
+   int num;
    int num_new, num_total;
-
+   Eina_List *senders;
+   Eina_Strbuf *buf;
+   
    unsigned char use_exec;   
    const char *exec;
    Ecore_Exe *exe;

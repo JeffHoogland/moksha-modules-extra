@@ -17,18 +17,30 @@ _mail_pop_check_mail (void *data)
   Ecore_Con_Type type = ECORE_CON_REMOTE_NODELAY;
   Eina_List *l;
   Instance *inst;
-
+  void *list_data;
+  
   inst = data;
   if (!inst)
     return;
-
+  
   for (l = pclients; l; l = l->next)
     {
       PopClient *pc;
 
       pc = l->data;
       if (!pc)
-	continue;
+       continue;
+      
+      EINA_LIST_FREE(pc->config->senders, list_data)
+      eina_stringshare_del(list_data);
+       
+      pc->config->parse = 0;
+      pc->config->iterator = 1;
+      pc->config->num = 0;
+      pc->config->buf = eina_strbuf_new();
+      eina_strbuf_reset(pc->config->buf);
+      
+  
       pc->data = inst;
       if (!pc->server)
 	{
@@ -64,6 +76,7 @@ _mail_pop_add_mailbox (void *data)
   cb = data;
   if (!cb)
     return;
+    
   pc = _mail_pop_client_get (cb);
   pc->config->num_new = 0;
   pc->config->num_total = 0;
@@ -156,8 +169,9 @@ _mail_pop_server_data (void *data, int type, void *event)
 {
   Ecore_Con_Event_Server_Data *ev = event;
   PopClient *pc;
-  char in[2048], out[2048];
-  int len, num = 0, total = 0;
+  char in[4096], out[2048], parse_from[20]=""; 
+  int len, total = 0;
+  const char *heystack;
 
   pc = _mail_pop_client_get_from_server (ev->server);
   if (!pc) return EINA_TRUE;
@@ -167,48 +181,83 @@ _mail_pop_server_data (void *data, int type, void *event)
   len = (((len) > (ev->size)) ? ev->size : len);
   memcpy (in, ev->data, len);
   in[len] = 0;
+  eina_strbuf_append(pc->config->buf, in);
 
   if (!strncmp (in, "-ERR", 4))
     {
       printf ("ERROR: %s\n", in);
       _mail_pop_client_quit (pc);
       return EINA_FALSE;
-    }
+    }   
   else if (strncmp (in, "+OK", 3))
     {
       printf ("Unexpected reply: %s\n", in);
-      _mail_pop_client_quit (pc);
+      //~ _mail_pop_client_quit (pc);
       return EINA_FALSE;
     }
 
   pc->state++;
+  
   switch (pc->state)
     {
-    case POP_STATE_SERVER_READY:
+    case POP_STATE_SERVER_READY: //2
       len = snprintf (out, sizeof (out), "USER %s\r\n", pc->config->user);
       ecore_con_server_send (ev->server, out, len);
       break;
-    case POP_STATE_USER_OK:
+    case POP_STATE_USER_OK: //3
       len = snprintf (out, sizeof (out), "PASS %s\r\n", pc->config->pass);
       ecore_con_server_send (ev->server, out, len);
       break;
-    case POP_STATE_PASS_OK:
+    case POP_STATE_PASS_OK: //4 Find out the mail numbers
       len = snprintf (out, sizeof (out), "STAT\r\n");
       ecore_con_server_send (ev->server, out, len);
       break;
-    case POP_STATE_STATUS_OK:
-      if (sscanf (in, "+OK %i %i", &num, &total) == 2)
-	{
-	  pc->config->num_new = num;
-	  pc->config->num_total = num;
-	}
-      _mail_pop_client_quit (pc);
-      if ((num > 0) && (pc->config->use_exec) && (pc->config->exec))
-	_mail_start_exe (pc->config);
+    case POP_STATE_STATUS_OK: //5
+      if (pc->config->parse == 0) //Finding out the number of mails just once after STAT command
+      {
+        if (sscanf (in, "+OK %i %i", &pc->config->num, &total) == 2)
+        {
+          pc->config->num_new = pc->config->num;
+          pc->config->num_total = total;
+        }
+      }    
+      
+      if (pc->config->iterator <= pc->config->num ) //TOP command sends to server for each mail 
+      {
+        len = snprintf (out, sizeof (out), "TOP %d 0 \r\n", pc->config->iterator);
+        ecore_con_server_send (ev->server, out, len);
+        pc->config->iterator++;
+        pc->state=4;
+        pc->config->parse = 1;
+      }
+      else
+      {
+        const char *tmp;
+        heystack = eina_strbuf_string_get(pc->config->buf);
+        printf ("\n----------------HEYSTACK %s\n", heystack);
+        while ((heystack = strstr(heystack, "From: ")) != NULL)
+        {
+          tmp = heystack;
+          while (((heystack = strstr(heystack, " <")) != NULL) && ((heystack - tmp) < 50))
+          {
+            sscanf(heystack, " <%[^>\n]", parse_from);
+            pc->config->senders = eina_list_append(pc->config->senders, 
+                                  eina_stringshare_add(parse_from));
+            heystack ++;
+          }
+          heystack = tmp + 1;
+        } 
+        eina_strbuf_free(pc->config->buf);
+       _mail_pop_client_quit(pc); 
+       }
+       
+      if ((pc->config->num > 0) && (pc->config->use_exec) && (pc->config->exec))
+       _mail_start_exe (pc->config);
       break;
     default:
       break;
     }
+  
   return EINA_FALSE;
 }
 
@@ -304,14 +353,14 @@ _mail_pop_client_get_from_server (void *data)
   return NULL;
 }
 
-static void
+static void 
 _mail_pop_client_quit (void *data)
 {
-  PopClient *pc;
+  PopClient *pc=data;
   int len;
   char out[1024];
+  Eina_List *l;
 
-  pc = data;
   if (!pc)
     return;
   if (pc->state >= POP_STATE_CONNECTED)
@@ -322,6 +371,5 @@ _mail_pop_client_quit (void *data)
   ecore_con_server_del (pc->server);
   pc->server = NULL;
   pc->state = POP_STATE_DISCONNECTED;
-
-  _mail_set_text (pc->data);
+    _mail_set_text (pc->data);
 }

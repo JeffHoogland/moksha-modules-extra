@@ -239,40 +239,43 @@ _mail_cb_mouse_down (void *data, Evas * e, Evas_Object * obj,
       mail_config->menu = m;
 
       if ((inst->ci->boxes) && (eina_list_count (inst->ci->boxes) > 0))
-	{
-	   mi = NULL;
-	   snprintf (buf, sizeof (buf), "%s/module.edj",
-		     e_module_dir_get (mail_config->module));
+      {
+       mi = NULL;
+       snprintf (buf, sizeof (buf), "%s/module.edj",
+       e_module_dir_get (mail_config->module));
 
-	   for (l = inst->ci->boxes; l; l = l->next)
-	     {
-		Config_Box *cb;
+       for (l = inst->ci->boxes; l; l = l->next)
+       {
+        Config_Box *cb;
 
-		cb = l->data;
-		if (!cb)
-		  continue;
-		mi = e_menu_item_new_relative (m, mi);
-		snprintf (buf, sizeof (buf), "%s: %d/%d", cb->name, cb->num_new,
-			  cb->num_total);
-		e_menu_item_label_set (mi, buf);
-		if ((cb->exec) && (cb->use_exec))
-		  e_menu_item_callback_set (mi, _mail_menu_cb_exec, cb);
-	     }
-	   if (mi)
-	     {
-		mi = e_menu_item_new_relative(m, mi);
-		e_menu_item_separator_set(mi, 1); 
-	     }
-	}
+        cb = l->data;
+        if (!cb)
+        continue;
+        
+            mi = e_menu_item_new_relative (m, mi);
+            snprintf (buf, sizeof (buf), "%s: %d/%d", cb->name, cb->num_new,
+                      cb->num_total);
+            e_menu_item_label_set (mi, buf);
+
+            if ((cb->exec) && (cb->use_exec))
+            e_menu_item_callback_set (mi, _mail_menu_cb_exec, cb);
+       }
+
+       if (mi)
+       {
+         mi = e_menu_item_new_relative(m, mi);
+         e_menu_item_separator_set(mi, 1); 
+       }
+     }
 
       e_gadcon_canvas_zone_geometry_get (inst->gcc->gadcon, &x, &y, &w, &h);
       e_menu_activate_mouse (m,
-			     e_util_zone_current_get (e_manager_current_get
-						      ()), x + ev->output.x,
-			     y + ev->output.y, 1, 1,
-			     E_MENU_POP_DIRECTION_AUTO, ev->timestamp);
+                  e_util_zone_current_get (e_manager_current_get
+                  ()), x + ev->output.x,
+                  y + ev->output.y, 1, 1,
+                  E_MENU_POP_DIRECTION_AUTO, ev->timestamp);
       evas_event_feed_mouse_up (inst->gcc->gadcon->evas, ev->button,
-				EVAS_BUTTON_NONE, ev->timestamp, NULL);
+                  EVAS_BUTTON_NONE, ev->timestamp, NULL);
     }
   else if (ev->button == 1)
     _mail_cb_check (inst);
@@ -283,7 +286,7 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
 {
   Instance    *inst = data;
   Evas_Object *list;
-  Eina_List   *l;
+  Eina_List   *l, *k;
   char         buf[256];
   char path[PATH_MAX];
 
@@ -296,7 +299,7 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
 
   inst->popup = e_gadcon_popup_new (inst->gcc);
   snprintf (path, sizeof (path), "%s/mail.edj",
-	    e_module_dir_get (mail_config->module));
+         e_module_dir_get (mail_config->module));
   list = e_ilist_add (inst->popup->win->evas);
   for (l = inst->ci->boxes; l; l = l->next)
     {
@@ -305,9 +308,13 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
        cb = l->data;
        if (!cb) continue;
        if ((!inst->ci->show_popup_empty) && (!cb->num_new)) continue;
-       snprintf (buf, sizeof (buf), "%s: %d/%d", cb->name, cb->num_new,
-	         cb->num_total);
-       e_ilist_append (list, NULL, NULL, buf, 0, NULL, NULL, NULL, NULL);
+       
+       for (k = cb->senders; k; k = k->next)
+       {
+            snprintf(buf, sizeof (buf), "%s: %s",  cb->name, 
+              (char *)eina_list_data_get(k));
+              e_ilist_append (list, NULL, NULL, buf, 0, NULL, NULL, NULL, NULL);
+       }
     }
   if (e_ilist_count (list))
     {
@@ -667,7 +674,7 @@ _mail_set_text (void *data)
  
   if (count > count_show) 
     {
-		icon = "mail-unread";
+      icon = "mail-unread";
       //Name was taken from FDO icon naming scheme
       snprintf(cmd, 200, "notify-send --expire-time=5000 --icon=%s 'You have got a mail!' '  Number of mails: %d!'", icon, count);
           
@@ -678,9 +685,11 @@ _mail_set_text (void *data)
       char buff[4096];
 
       /* if user wanted a beep, then beep there shall be */
-      snprintf(buff, 4096, "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR); 
-      int ret=system(buff);
-      if (inst->ci->play_sound) ret;
+      if (inst->ci->play_sound)
+      {
+        snprintf(buff, 4096, "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR); 
+        int ret=system(buff);
+      }
     } 
     
   if (count > 0)
