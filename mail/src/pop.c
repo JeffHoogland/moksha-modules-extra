@@ -169,9 +169,10 @@ _mail_pop_server_data (void *data, int type, void *event)
 {
   Ecore_Con_Event_Server_Data *ev = event;
   PopClient *pc;
-  char in[4096], out[2048], parse_from[20]=""; 
+  char in[2048], out[2048], parse_from[20]=""; 
   int len, total = 0;
   const char *heystack;
+  const char *tmp;
 
   pc = _mail_pop_client_get_from_server (ev->server);
   if (!pc) return EINA_TRUE;
@@ -222,7 +223,7 @@ _mail_pop_server_data (void *data, int type, void *event)
         }
       }    
       
-      if (pc->config->iterator <= pc->config->num ) //TOP command sends to server for each mail 
+      if (pc->config->iterator <= pc->config->num) //TOP command sends to server for each mail 
       {
         len = snprintf (out, sizeof (out), "TOP %d 0 \r\n", pc->config->iterator);
         ecore_con_server_send (ev->server, out, len);
@@ -232,9 +233,13 @@ _mail_pop_server_data (void *data, int type, void *event)
       }
       else
       {
-        const char *tmp;
+        pc->state = 5;
+        len = snprintf (out, sizeof (out), "LIST \r\n");
+        ecore_con_server_send (ev->server, out, len);
+      }
+      break;
+    case POP_STATE_PARSE_OK: //Parsing the data. I am looking for "From: <name@mail>"
         heystack = eina_strbuf_string_get(pc->config->buf);
-        printf ("\n----------------HEYSTACK %s\n", heystack);
         while ((heystack = strstr(heystack, "From: ")) != NULL)
         {
           tmp = heystack;
@@ -242,17 +247,17 @@ _mail_pop_server_data (void *data, int type, void *event)
           {
             sscanf(heystack, " <%[^>\n]", parse_from);
             pc->config->senders = eina_list_append(pc->config->senders, 
-                                  eina_stringshare_add(parse_from));
+                                     eina_stringshare_add(parse_from));
             heystack ++;
           }
           heystack = tmp + 1;
         } 
-        eina_strbuf_free(pc->config->buf);
-       _mail_pop_client_quit(pc); 
-       }
-       
-      if ((pc->config->num > 0) && (pc->config->use_exec) && (pc->config->exec))
-       _mail_start_exe (pc->config);
+        
+         eina_strbuf_free(pc->config->buf);
+        _mail_pop_client_quit(pc); 
+         
+         if ((pc->config->num > 0) && (pc->config->use_exec) && (pc->config->exec))
+        _mail_start_exe (pc->config);
       break;
     default:
       break;

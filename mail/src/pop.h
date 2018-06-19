@@ -13,7 +13,8 @@ typedef enum
      POP_STATE_SERVER_READY,
      POP_STATE_USER_OK,
      POP_STATE_PASS_OK,
-     POP_STATE_STATUS_OK
+     POP_STATE_STATUS_OK,
+     POP_STATE_PARSE_OK
 } PopState;
 
 struct _PopClient 
