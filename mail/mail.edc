@@ -10,6 +10,7 @@ collections
    group
      {
 	name: "modules/mail/main";
+	min: 4 4;
 	max: 128 128;
 	parts
 	  {
@@ -74,7 +75,7 @@ collections
 		       visible: 0;
 		       rel1 
 			 {
-			    relative: 0.5 0.5;
+			    relative: 0.4 0.5;
 			    offset: 4 0;
 			    to: "logo";
 			 }
