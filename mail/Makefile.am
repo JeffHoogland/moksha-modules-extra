@@ -11,6 +11,14 @@ SUBDIRS += po
 
 endif
 
+src_module_module_la_CFLAGS= $(AM_CFLAGS)
+src_module_module_la_LDFLAGS = -module -avoid-version
+
+if HAVE_ENOTIFY
+src_module_module_la_CFLAGS += @ENOTIFY_CFLAGS@
+#//src_module_module_la_LIBADD += @ENOTIFY_LIBS@
+endif
+
 EDJE_FLAGS = -v \
 	     -id $(top_srcdir)/images
 

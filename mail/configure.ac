@@ -36,6 +36,29 @@ AM_CONDITIONAL([HAVE_PO], [false])
 ])
 AC_SUBST(LTLIBINTL)
 
+have_enotify=no
+AM_CONDITIONAL([HAVE_ENOTIFY], [false])
+AC_ARG_ENABLE([enotify],
+  AC_HELP_STRING([--disable-enotify], [disable Enotify support @<:@default=detect@:>@]),
+  [e_cv_want_enotify=$enableval],
+  AC_CACHE_VAL([e_cv_want_enotify], [e_cv_want_enotify=yes])
+)
+if test "x$e_cv_want_enotify" != "xno" ; then
+  PKG_CHECK_MODULES(ENOTIFY, [ edbus enotify],
+  [
+    AC_DEFINE_UNQUOTED([HAVE_ENOTIFY], [1], [enable enotify])
+  ],
+  [
+    AC_MSG_NOTICE([enotify disabled])
+    e_cv_want_enotify=no
+  ])
+else
+  AC_MSG_NOTICE([enotify disabled])
+    e_cv_want_enotify=no
+fi
+AC_SUBST([ENOTIFY_CFLAGS])
+AC_SUBST([ENOTIFY_LIBS])
+
 PKG_CHECK_MODULES(E, [enlightenment])
 release=$(pkg-config --variable=release enlightenment)
 MODULE_ARCH="$host_os-$host_cpu"

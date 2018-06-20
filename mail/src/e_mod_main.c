@@ -28,6 +28,9 @@
 #include "mdir.h"
 #include "mbox.h"
 
+#ifdef HAVE_ENOTIFY
+#include <E_Notify.h>
+#endif
 
 int count_show = 0;
 
@@ -491,7 +494,7 @@ e_modapi_init (E_Module * m)
 
   mail_config->module = m;
   e_gadcon_provider_register (&_gc_class);
-  e_module_delayed_set(m, 5);
+  e_module_delayed_set(m, 10);
   return m;
 }
 
@@ -656,6 +659,9 @@ void
 _mail_set_text (void *data)
 {
   Instance *inst = data;
+  #ifdef HAVE_ENOTIFY
+  static E_Notification *n;
+  #endif
   Eina_List *l, *k;
   char *icon;
   char buf[1024];
@@ -664,7 +670,6 @@ _mail_set_text (void *data)
   
   if (!inst)
     return;
-
 
   for (l = inst->ci->boxes; l; l = l->next)
     {
@@ -679,15 +684,19 @@ _mail_set_text (void *data)
       { 
         for (k = cb->senders; k; k = k->next)
         {
-          ecore_init();  
+          
           snprintf(buf, sizeof (buf), "%s:\n%s",  cb->name, 
                           (char *)eina_list_data_get(k));
-              
+          #ifdef HAVE_ENOTIFY
+          if (n) return;    
           icon = "mail-unread";
           //Name was taken from FDO icon naming scheme
-          snprintf(cmd, sizeof(cmd), "notify-send --expire-time=5000 --icon=%s 'A new mail!' '%s'", icon, buf);
-          ecore_exe_run(cmd, NULL);
-          ecore_shutdown();
+          n = e_notification_full_new("Mail", 0, icon, "A new mail!", buf, 5000);
+          e_notification_replaces_id_set(n, EINA_TRUE);
+          e_notification_send(n, NULL, NULL);
+          e_notification_unref(n);
+          n = NULL;
+          #endif
         }
       
        char buff[200];
