@@ -289,6 +289,7 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
   Eina_List   *l, *k;
   char         buf[256];
   char path[PATH_MAX];
+   Config_Box *cb;
 
   if (!inst)
     return;
@@ -303,7 +304,7 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
   list = e_ilist_add (inst->popup->win->evas);
   for (l = inst->ci->boxes; l; l = l->next)
     {
-       Config_Box *cb;
+      
 
        cb = l->data;
        if (!cb) continue;
@@ -316,6 +317,7 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
               e_ilist_append (list, NULL, NULL, buf, 0, NULL, NULL, NULL, NULL);
        }
     }
+    
   if (e_ilist_count (list))
     {
        Evas_Coord mw, mh;
@@ -329,6 +331,7 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
     {
        e_object_del (E_OBJECT (inst->popup));
        inst->popup = NULL;
+       eina_list_free(cb->senders);
     }
 }
 
@@ -488,6 +491,7 @@ e_modapi_init (E_Module * m)
 
   mail_config->module = m;
   e_gadcon_provider_register (&_gc_class);
+  e_module_delayed_set(m, 5);
   return m;
 }
 
@@ -652,15 +656,15 @@ void
 _mail_set_text (void *data)
 {
   Instance *inst = data;
-  Eina_List *l;
+  Eina_List *l, *k;
   char *icon;
   char buf[1024];
+  char cmd[2048];
   int count = 0;
-  char cmd[200];
   
-
   if (!inst)
     return;
+
 
   for (l = inst->ci->boxes; l; l = l->next)
     {
@@ -668,29 +672,34 @@ _mail_set_text (void *data)
 
        cb = l->data;
        if (!cb)
-	 continue;
+         continue;
        count += cb->num_new;
-    }
- 
-  if (count > count_show) 
-    {
-      icon = "mail-unread";
-      //Name was taken from FDO icon naming scheme
-      snprintf(cmd, 200, "notify-send --expire-time=5000 --icon=%s 'You have got a mail!' '  Number of mails: %d!'", icon, count);
-          
-      ecore_init();
-      ecore_exe_run(cmd, NULL);
-      ecore_shutdown();
+  
+      if (count > count_show)
+      { 
+        for (k = cb->senders; k; k = k->next)
+        {
+          ecore_init();  
+          snprintf(buf, sizeof (buf), "%s:\n%s",  cb->name, 
+                          (char *)eina_list_data_get(k));
+              
+          icon = "mail-unread";
+          //Name was taken from FDO icon naming scheme
+          snprintf(cmd, sizeof(cmd), "notify-send --expire-time=5000 --icon=%s 'A new mail!' '%s'", icon, buf);
+          ecore_exe_run(cmd, NULL);
+          ecore_shutdown();
+        }
       
-      char buff[4096];
+       char buff[200];
 
-      /* if user wanted a beep, then beep there shall be */
-      if (inst->ci->play_sound)
-      {
-        snprintf(buff, 4096, "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR); 
-        int ret=system(buff);
-      }
-    } 
+       /* if user wanted a beep, then beep there shall be */
+       if (inst->ci->play_sound)
+       {
+         snprintf(buff, sizeof(buff), "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR); 
+         int ret=system(buff);
+       }
+     } 
+   }  
     
   if (count > 0)
     {
@@ -704,6 +713,7 @@ _mail_set_text (void *data)
        edje_object_part_text_set (inst->mail->mail_obj, "new_label", "");
        edje_object_signal_emit (inst->mail->mail_obj, "no_mail", "");
     }
+    
   count_show=count;
 }
 
