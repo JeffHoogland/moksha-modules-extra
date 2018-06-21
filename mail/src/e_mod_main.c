@@ -293,7 +293,8 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
   char         buf[256];
   char path[PATH_MAX];
   Config_Box *cb;
-
+  int i=0;
+  
   if (!inst)
     return;
   edje_object_signal_emit (inst->mail_obj, "label_active", "");
@@ -306,17 +307,23 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
          e_module_dir_get (mail_config->module));
   list = e_ilist_add (inst->popup->win->evas);
   for (l = inst->ci->boxes; l; l = l->next)
-    {
+    {int counter=1;
        cb = l->data;
        if (!cb) continue;
        if ((!inst->ci->show_popup_empty) && (!cb->num_new)) continue;
+       snprintf(buf, sizeof (buf), "<Account: %s>", cb->name); 
+       
+       if (i < eina_list_count(l))
+           e_ilist_append (list, NULL, NULL, buf, 0, NULL, NULL, NULL, NULL);
        
        for (k = cb->senders; k; k = k->next)
        {
-         snprintf(buf, sizeof (buf), "%s: %s",  cb->name, 
+         snprintf(buf, sizeof (buf), "%d. %s", counter,  
                  (char *)eina_list_data_get(k));
          e_ilist_append (list, NULL, NULL, buf, 0, NULL, NULL, NULL, NULL);
+        counter++;
        }
+       i++;
     }
     
   if (e_ilist_count (list))
@@ -556,8 +563,6 @@ e_modapi_shutdown (E_Module * m)
 	  free (cb);
 	  cb = NULL;
 	}
-	
-	
       if (ci->id)
 	eina_stringshare_del (ci->id);
       mail_config->items =

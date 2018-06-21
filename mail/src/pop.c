@@ -240,12 +240,12 @@ _mail_pop_server_data (void *data, int type, void *event)
       break;
     case POP_STATE_PARSE_OK: //Parsing the data. I am looking for "From: <name@mail>"
         heystack = eina_strbuf_string_get(pc->config->buf);
-        while ((heystack = strstr(heystack, "From:")) != NULL)
+        //~ printf("\n------------NEWHeystack %s\n", heystack);
+        while ((heystack = strstr(heystack, "From: ")) != NULL)
         {
           tmp = heystack;
-          while (((heystack = strstr(heystack, "<")) != NULL) && ((heystack - tmp) < 50))
+          while (((heystack = strstr(heystack, "<")) != NULL) && ((heystack - tmp) < 45))
           {
-			   printf("\n------------NEWHeystack %s\n", heystack);
             sscanf(heystack, "<%[^>\n]", parse_from);
             pc->config->senders = eina_list_prepend(pc->config->senders, 
                                      eina_stringshare_add(parse_from));
