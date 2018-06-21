@@ -292,7 +292,7 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
   Eina_List   *l, *k;
   char         buf[256];
   char path[PATH_MAX];
-   Config_Box *cb;
+  Config_Box *cb;
 
   if (!inst)
     return;
@@ -307,17 +307,15 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
   list = e_ilist_add (inst->popup->win->evas);
   for (l = inst->ci->boxes; l; l = l->next)
     {
-      
-
        cb = l->data;
        if (!cb) continue;
        if ((!inst->ci->show_popup_empty) && (!cb->num_new)) continue;
        
        for (k = cb->senders; k; k = k->next)
        {
-            snprintf(buf, sizeof (buf), "%s: %s",  cb->name, 
-              (char *)eina_list_data_get(k));
-              e_ilist_append (list, NULL, NULL, buf, 0, NULL, NULL, NULL, NULL);
+         snprintf(buf, sizeof (buf), "%s: %s",  cb->name, 
+                 (char *)eina_list_data_get(k));
+         e_ilist_append (list, NULL, NULL, buf, 0, NULL, NULL, NULL, NULL);
        }
     }
     
@@ -558,6 +556,8 @@ e_modapi_shutdown (E_Module * m)
 	  free (cb);
 	  cb = NULL;
 	}
+	
+	
       if (ci->id)
 	eina_stringshare_del (ci->id);
       mail_config->items =
