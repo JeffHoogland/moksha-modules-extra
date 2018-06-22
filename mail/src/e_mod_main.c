@@ -32,8 +32,6 @@
 #include <E_Notify.h>
 #endif
 
-int count_show = 0;
-
 /* Func Protos for Gadcon */
 static E_Gadcon_Client *_gc_init (E_Gadcon * gc, const char *name,
 				  const char *id, const char *style);
@@ -663,38 +661,35 @@ void
 _mail_set_text (void *data)
 {
   Instance *inst = data;
+  
   #ifdef HAVE_ENOTIFY
   static E_Notification *n;
   #endif
-  Eina_List *l, *k;
+  Eina_List *l;
   char *icon;
   char buf[1024];
   char cmd[2048];
-  int count = 0;
+  int total_mails = 0;
   
   if (!inst)
     return;
 
   for (l = inst->ci->boxes; l; l = l->next)
     {
-       Config_Box *cb;
-
-       cb = l->data;
-       if (!cb)
-         continue;
-       count += cb->num_new;
-  
-      if (count > count_show)
-      { 
-        for (k = cb->senders; k; k = k->next)
-        {
+      Config_Box *cb;
+      cb = l->data;
+      if (!cb)
+         return;
+         
+      total_mails += cb->num_new;
           
+      if ((cb->num_new > cb->count_old) && (eina_list_count(cb->senders) > 0))
+      { 
           snprintf(buf, sizeof (buf), "%s:\n%s",  cb->name, 
-                          (char *)eina_list_data_get(k));
+                          (char *)eina_list_nth(cb->senders, eina_list_count(0)));
           #ifdef HAVE_ENOTIFY
           if (n) return;    
           icon = "mail-unread";
-          //Name was taken from FDO icon naming scheme
           n = e_notification_full_new("Mail", 0, icon, "A new mail!", buf, 5000);
           e_notification_replaces_id_set(n, EINA_TRUE);
           e_notification_send(n, NULL, NULL);
@@ -702,33 +697,30 @@ _mail_set_text (void *data)
           n = NULL;
           #endif
         }
+      cb->count_old = cb->num_new;
+    } 
+    
+  if (total_mails > 0)
+  {
+    snprintf (buf, sizeof (buf), "%d", total_mails);
+    edje_object_part_text_set (inst->mail->mail_obj, "new_label", buf);
+    edje_object_signal_emit (inst->mail->mail_obj, "new_mail", "");
+       
+    /* if user wanted a beep, then beep there shall be */
+    char buff[200];
+    if (inst->ci->play_sound)
+    {
+      snprintf(buff, sizeof(buff), "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR); 
+      int ret=system(buff);
+    }
       
-       char buff[200];
-
-       /* if user wanted a beep, then beep there shall be */
-       if (inst->ci->play_sound)
-       {
-         snprintf(buff, sizeof(buff), "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR); 
-         int ret=system(buff);
-       }
-     } 
+   }
+   else
+   {
+     edje_object_part_text_set (inst->mail->mail_obj, "new_label", "");
+     edje_object_signal_emit (inst->mail->mail_obj, "no_mail", "");
    }  
-    
-  if (count > 0)
-    {
-      snprintf (buf, sizeof (buf), "%d", count);
-      edje_object_part_text_set (inst->mail->mail_obj, "new_label", buf);
-      edje_object_signal_emit (inst->mail->mail_obj, "new_mail", "");
-      
-    }
-  else
-    {
-       edje_object_part_text_set (inst->mail->mail_obj, "new_label", "");
-       edje_object_signal_emit (inst->mail->mail_obj, "no_mail", "");
-    }
-    
-  count_show=count;
-}
+} 
 
 void
 _mail_start_exe (void *data)

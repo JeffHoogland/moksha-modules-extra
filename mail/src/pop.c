@@ -80,6 +80,7 @@ _mail_pop_add_mailbox (void *data)
   pc = _mail_pop_client_get (cb);
   pc->config->num_new = 0;
   pc->config->num_total = 0;
+  pc->config->count_old = 0;
   pclients = eina_list_append (pclients, pc);
 }
 
@@ -256,7 +257,6 @@ _mail_pop_server_data (void *data, int type, void *event)
             heystack++;
            }
           } 
-
          eina_strbuf_free(pc->config->buf);
         _mail_pop_client_quit(pc); 
          
@@ -368,10 +368,10 @@ _mail_pop_client_quit (void *data)
   PopClient *pc=data;
   int len;
   char out[1024];
-  Eina_List *l;
 
   if (!pc)
     return;
+
   if (pc->state >= POP_STATE_CONNECTED)
     {
       len = snprintf (out, sizeof (out), "QUIT\r\n");
