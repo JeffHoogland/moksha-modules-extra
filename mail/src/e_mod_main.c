@@ -662,7 +662,9 @@ _mail_set_text (void *data)
 {
   Instance *inst = data;
   
-  
+  #ifdef HAVE_ENOTIFY
+  static E_Notification *n;
+  #endif
   Eina_List *l;
   char *icon;
   char buf[1024];
@@ -685,9 +687,6 @@ _mail_set_text (void *data)
       { 
           snprintf(buf, sizeof (buf), "%s:\n%s",  cb->name, 
                           (char *)eina_list_nth(cb->senders, eina_list_count(0)));
-                          #ifdef HAVE_ENOTIFY
-  static E_Notification *n;
-  #endif
           #ifdef HAVE_ENOTIFY
           if (n) return;    
           icon = "mail-unread";
