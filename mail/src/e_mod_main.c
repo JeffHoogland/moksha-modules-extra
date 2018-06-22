@@ -311,7 +311,7 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
        cb = l->data;
        if (!cb) continue;
        if ((!inst->ci->show_popup_empty) && (!cb->num_new)) continue;
-       snprintf(buf, sizeof (buf), "<Account: %s>", cb->name); 
+       snprintf(buf, sizeof (buf), "<%s>", cb->name); 
        
        e_ilist_append (list, NULL, NULL, buf, 1, NULL, NULL, NULL, NULL);
        

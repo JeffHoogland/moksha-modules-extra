@@ -182,6 +182,7 @@ _mail_pop_server_data (void *data, int type, void *event)
   len = (((len) > (ev->size)) ? ev->size : len);
   memcpy (in, ev->data, len);
   in[len] = 0;
+
   eina_strbuf_append(pc->config->buf, in);
 
   if (!strncmp (in, "-ERR", 4))
@@ -243,17 +244,19 @@ _mail_pop_server_data (void *data, int type, void *event)
         //~ printf("\n------------NEWHeystack %s\n", heystack);
         while ((heystack = strstr(heystack, "From: ")) != NULL)
         {
-          tmp = heystack;
-          while (((heystack = strstr(heystack, "<")) != NULL) && ((heystack - tmp) < 45))
+          while(*heystack != '\n')
           {
-            sscanf(heystack, "<%[^>\n]", parse_from);
-            pc->config->senders = eina_list_prepend(pc->config->senders, 
+            if (*heystack == '<')
+              {
+                tmp = heystack;
+                sscanf(tmp, "<%[^>\n]", parse_from);
+                pc->config->senders = eina_list_prepend(pc->config->senders, 
                                      eina_stringshare_add(parse_from));
-            heystack ++;
-          }
-          heystack = tmp + 1;
-        } 
-        
+              }
+            heystack++;
+           }
+          } 
+
          eina_strbuf_free(pc->config->buf);
         _mail_pop_client_quit(pc); 
          
