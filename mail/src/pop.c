@@ -10,6 +10,8 @@ static PopClient *_mail_pop_client_get_from_server (void *data);
 static void _mail_pop_client_quit (void *data);
 
 static Eina_List *pclients;
+static int mail_retr;
+
 
 void
 _mail_pop_check_mail (void *data)
@@ -34,6 +36,7 @@ _mail_pop_check_mail (void *data)
       EINA_LIST_FREE(pc->config->senders, list_data)
       eina_stringshare_del(list_data);
        
+      mail_retr = 0; 
       pc->config->parse = 0;
       pc->config->iterator = 1;
       pc->config->num = 0;
@@ -368,6 +371,7 @@ _mail_pop_client_quit (void *data)
   PopClient *pc=data;
   int len;
   char out[1024];
+  char buf[10];
 
   if (!pc)
     return;
@@ -377,9 +381,10 @@ _mail_pop_client_quit (void *data)
       len = snprintf (out, sizeof (out), "QUIT\r\n");
       ecore_con_server_send (pc->server, out, len);
     }
+  mail_retr++;
   ecore_con_server_del (pc->server);
   pc->server = NULL;
   pc->state = POP_STATE_DISCONNECTED;
-  
+  if (mail_retr == eina_list_count(pclients))
     _mail_set_text (pc->data);
 }

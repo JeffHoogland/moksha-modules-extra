@@ -667,8 +667,7 @@ _mail_set_text (void *data)
   #endif
   Eina_List *l;
   char *icon;
-  char buf[1024];
-  char cmd[2048];
+  char buf[256], cmd[256];
   int total_mails = 0;
   
   if (!inst)
@@ -682,11 +681,11 @@ _mail_set_text (void *data)
          return;
          
       total_mails += cb->num_new;
-               
+      
       if ((cb->num_new > cb->count_old) && (eina_list_count(cb->senders) > 0))
       { 
           snprintf(buf, sizeof (buf), "%s:\n%s",  cb->name, 
-                          (char *)eina_list_nth(cb->senders, 0));
+                    (char *)eina_list_nth(cb->senders, 0));
           #ifdef HAVE_ENOTIFY
           if (n) return;    
           icon = "mail-unread";
@@ -707,11 +706,11 @@ _mail_set_text (void *data)
     edje_object_signal_emit (inst->mail->mail_obj, "new_mail", "");
        
     /* if user wanted a beep, then beep there shall be */
-    char buff[200];
+    
     if (inst->ci->play_sound)
     {
-      snprintf(buff, sizeof(buff), "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR); 
-      int ret=system(buff);
+      snprintf(cmd, sizeof(cmd), "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR); 
+      int ret=system(cmd);
     }
       
    }
