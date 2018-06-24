@@ -371,7 +371,6 @@ _mail_pop_client_quit (void *data)
   PopClient *pc=data;
   int len;
   char out[1024];
-  char buf[10];
 
   if (!pc)
     return;
