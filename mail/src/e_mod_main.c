@@ -682,11 +682,11 @@ _mail_set_text (void *data)
          return;
          
       total_mails += cb->num_new;
-          
+               
       if ((cb->num_new > cb->count_old) && (eina_list_count(cb->senders) > 0))
       { 
           snprintf(buf, sizeof (buf), "%s:\n%s",  cb->name, 
-                          (char *)eina_list_nth(cb->senders, eina_list_count(0)));
+                          (char *)eina_list_nth(cb->senders, 0));
           #ifdef HAVE_ENOTIFY
           if (n) return;    
           icon = "mail-unread";

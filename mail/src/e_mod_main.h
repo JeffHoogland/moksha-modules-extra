@@ -12,6 +12,8 @@
 
 #define PRINT_LOTS_OF_DEBUG 0
 
+int start;
+
 typedef enum 
 {
    MAIL_TYPE_POP,
@@ -82,7 +84,7 @@ struct _Config_Box
    int parse;
    int iterator;
    int num;
-   int num_new, num_total;
+   int num_new, num_total, count_old;
    Eina_List *senders;
    Eina_Strbuf *buf;
    
@@ -96,6 +98,7 @@ EAPI extern E_Module_Api e_modapi;
 EAPI void *e_modapi_init(E_Module *m);
 EAPI int   e_modapi_shutdown(E_Module *m);
 EAPI int   e_modapi_save(E_Module *m);
+
 
 void _config_mail_module(Config_Item *ci);
 void _mail_config_updated(Config_Item *ci);
