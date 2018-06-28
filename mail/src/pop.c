@@ -178,6 +178,7 @@ _mail_pop_server_data (void *data, int type, void *event)
   const char *heystack;
   const char *tmp;
   Eina_Strbuf *buffer;
+  buffer = eina_strbuf_new();
  
 
   pc = _mail_pop_client_get_from_server (ev->server);
@@ -247,43 +248,67 @@ _mail_pop_server_data (void *data, int type, void *event)
       break;
     case POP_STATE_PARSE_OK: //Parsing the data. I am looking for "From: <name@mail>"
         heystack = eina_strbuf_string_get(pc->config->buf);
+        //~ eina_strbuf_reset(buffer);
         
-        buffer = eina_strbuf_new();
         while ((heystack = strstr(heystack, "\nFrom: ")) != NULL)
         {
            heystack += 7;
            tmp = heystack;
+            
            counts = 0;
-           if (strncmp(heystack, "=?UTF-8?B?", 10) == 0)
+           //Decoding base64 text------------------------------------------------------------//
+           if ((!strncmp(heystack, "=?utf-8?B?", 10)) || (!strncmp(heystack, "=?utf-8?b?", 10)) 
+           || (!strncmp(heystack, "=?UTF-8?B?", 10)) || (!strncmp(heystack, "=?UTF-8?b?", 10)))
            {
+             eina_strbuf_reset(buffer);
              heystack = heystack + 10;
              sscanf(heystack, "%[^?=\n]", parse_from_decode);     //read until coded text
-             heystack = heystack + strlen(parse_from_decode) + 2; //pointer to the text after
+             heystack += strlen(parse_from_decode) + 2; //pointer to the text after
              sscanf(heystack, "%[^\n]", parse_from);              //read text until the EOL
              parse_from[strlen(parse_from) - 1] = '\0';
              snprintf(buf, sizeof(buf), "echo %s | base64 -d\n", parse_from_decode);
+             counts = 1;                              //=?UTF-8?B? occurence found
+           }
+           //Decoding Quoted-printable text--------------------------------------------------//
+           if ((!strncmp(heystack, "=?utf-8?Q?", 10)) || (!strncmp(heystack, "=?utf-8?q?", 10)) 
+           || (!strncmp(heystack, "=?UTF-8?Q?", 10)) || (!strncmp(heystack, "=?UTF-8?q?", 10)))
+           {
+             eina_strbuf_reset(buffer);
+             if (!strncmp(heystack, "=?iso-8859-2?Q?", 15))
+             heystack = heystack + 15;
+             else
+             heystack = heystack + 10;
+
+             sscanf(heystack, "%[^?]", parse_from_decode);     //read until coded text
+             parse_from_decode[strlen(parse_from_decode)] = '\0';
+             heystack += strlen(parse_from_decode) + 2; //pointer to the text after
+             sscanf(heystack, "%[^\n]", parse_from);              //read text until the EOL
+             parse_from[strlen(parse_from) - 1] = '\0';
+             snprintf(buf, sizeof(buf), "echo %s | qprint -d", parse_from_decode);
+             counts = 1;                              //=?UTF-8?Q? occurence found
+           }
+           if (counts)
+           {
              FILE *output;
              output = popen(buf, "r");
-             
              if (fgets(parse_from_decode, 256, output) != NULL)
              {
                eina_strbuf_append_printf(buffer, "%s%s", parse_from_decode, parse_from);
+               eina_strbuf_replace_all(buffer,"\n"," ");
                pc->config->senders = eina_list_prepend(pc->config->senders, 
                                      eina_stringshare_add(eina_strbuf_string_get(buffer)));
-             }   
-                                   
-             pclose(output);
-             counts = 1;                              //=?UTF-8?B? occurence found
-             
-           }
-           if (!counts)
+               pclose(output);
+             }
+           }     
+           else 
            {
              heystack = tmp; 
              sscanf(heystack, "%[^\n]", parse_from);
              parse_from[strlen(parse_from) - 1] = '\0';
              pc->config->senders = eina_list_prepend(pc->config->senders, 
                                    eina_stringshare_add(parse_from));
-           }         
+             counts = 0;
+           } 
          }
          
          eina_strbuf_free(pc->config->buf);
