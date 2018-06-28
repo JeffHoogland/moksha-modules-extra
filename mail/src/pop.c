@@ -177,6 +177,7 @@ _mail_pop_server_data (void *data, int type, void *event)
   int len, total = 0, counts;
   const char *heystack;
   const char *tmp;
+  Eina_Strbuf *buffer;
  
 
   pc = _mail_pop_client_get_from_server (ev->server);
@@ -246,8 +247,8 @@ _mail_pop_server_data (void *data, int type, void *event)
       break;
     case POP_STATE_PARSE_OK: //Parsing the data. I am looking for "From: <name@mail>"
         heystack = eina_strbuf_string_get(pc->config->buf);
-         Eina_Strbuf *buffer;
-         buffer = eina_strbuf_new();
+        
+        buffer = eina_strbuf_new();
         while ((heystack = strstr(heystack, "\nFrom: ")) != NULL)
         {
            heystack += 7;
@@ -273,7 +274,7 @@ _mail_pop_server_data (void *data, int type, void *event)
                                    
              pclose(output);
              counts = 1;                              //=?UTF-8?B? occurence found
-             eina_strbuf_free(buffer);
+             
            }
            if (!counts)
            {
@@ -286,6 +287,7 @@ _mail_pop_server_data (void *data, int type, void *event)
          }
          
          eina_strbuf_free(pc->config->buf);
+         eina_strbuf_free(buffer);
         _mail_pop_client_quit(pc); 
         
          
