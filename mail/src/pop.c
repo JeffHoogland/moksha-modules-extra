@@ -274,9 +274,6 @@ _mail_pop_server_data (void *data, int type, void *event)
            || (!strncmp(heystack, "=?UTF-8?Q?", 10)) || (!strncmp(heystack, "=?UTF-8?q?", 10)))
            {
              eina_strbuf_reset(buffer);
-             if (!strncmp(heystack, "=?iso-8859-2?Q?", 15))
-             heystack = heystack + 15;
-             else
              heystack = heystack + 10;
 
              sscanf(heystack, "%[^?]", parse_from_decode);     //read until coded text
