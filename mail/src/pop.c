@@ -177,10 +177,11 @@ _mail_pop_server_data (void *data, int type, void *event)
   int len, total = 0, counts;
   const char *heystack;
   const char *tmp;
+  char coding;
   Eina_Strbuf *buffer;
-  buffer = eina_strbuf_new();
- 
 
+ 
+  buffer = eina_strbuf_new();
   pc = _mail_pop_client_get_from_server (ev->server);
   if (!pc) return EINA_TRUE;
   if (pc->state == POP_STATE_DISCONNECTED) return EINA_TRUE;
@@ -246,43 +247,32 @@ _mail_pop_server_data (void *data, int type, void *event)
         ecore_con_server_send (ev->server, out, len);
       }
       break;
-    case POP_STATE_PARSE_OK: //Parsing the data. I am looking for "From: <name@mail>"
+    case POP_STATE_PARSE_OK: //Parsing the data. I am looking for "From:" line
         heystack = eina_strbuf_string_get(pc->config->buf);
-        //~ eina_strbuf_reset(buffer);
         
         while ((heystack = strstr(heystack, "\nFrom: ")) != NULL)
         {
            heystack += 7;
            tmp = heystack;
-            
            counts = 0;
-           //Decoding base64 text------------------------------------------------------------//
-           if ((!strncmp(heystack, "=?utf-8?B?", 10)) || (!strncmp(heystack, "=?utf-8?b?", 10)) 
-           || (!strncmp(heystack, "=?UTF-8?B?", 10)) || (!strncmp(heystack, "=?UTF-8?b?", 10)))
+           
+           //Decoding text:  base64 from coreutils package needs, or qprint for QP------//
+           if ((!strncmp(heystack, "=?utf-8?", 8)) || (!strncmp(heystack, "=?UTF-8?", 8)))
            {
+             counts = 1;                                     //=?UTF-8 occurence found  
              eina_strbuf_reset(buffer);
-             heystack = heystack + 10;
-             sscanf(heystack, "%[^?=\n]", parse_from_decode);     //read until coded text
-             heystack += strlen(parse_from_decode) + 2; //pointer to the text after
-             sscanf(heystack, "%[^\n]", parse_from);              //read text until the EOL
+             heystack += 8;
+             if ((!strncmp(heystack, "B?", 2)) || (!strncmp(heystack, "b?", 2))) coding = 'B'; 
+             if ((!strncmp(heystack, "Q?", 2)) || (!strncmp(heystack, "q?", 2))) coding = 'Q';
+             heystack += 2;
+             sscanf(heystack, "%[^?\n]", parse_from_decode); //read until coded text
+             heystack += strlen(parse_from_decode) + 2;      //pointer to the text after
+             sscanf(heystack, "%[^\n]", parse_from);         //read text until the EOL
              parse_from[strlen(parse_from) - 1] = '\0';
+             if (coding == 'B')
              snprintf(buf, sizeof(buf), "echo %s | base64 -d\n", parse_from_decode);
-             counts = 1;                              //=?UTF-8?B? occurence found
-           }
-           //Decoding Quoted-printable text--------------------------------------------------//
-           if ((!strncmp(heystack, "=?utf-8?Q?", 10)) || (!strncmp(heystack, "=?utf-8?q?", 10)) 
-           || (!strncmp(heystack, "=?UTF-8?Q?", 10)) || (!strncmp(heystack, "=?UTF-8?q?", 10)))
-           {
-             eina_strbuf_reset(buffer);
-             heystack = heystack + 10;
-
-             sscanf(heystack, "%[^?]", parse_from_decode);     //read until coded text
-             parse_from_decode[strlen(parse_from_decode)] = '\0';
-             heystack += strlen(parse_from_decode) + 2; //pointer to the text after
-             sscanf(heystack, "%[^\n]", parse_from);              //read text until the EOL
-             parse_from[strlen(parse_from) - 1] = '\0';
-             snprintf(buf, sizeof(buf), "echo %s | qprint -d", parse_from_decode);
-             counts = 1;                              //=?UTF-8?Q? occurence found
+             if (coding == 'Q')
+             snprintf(buf, sizeof(buf), "echo %s | qprint -d\n", parse_from_decode);
            }
            if (counts)
            {
@@ -293,9 +283,9 @@ _mail_pop_server_data (void *data, int type, void *event)
                eina_strbuf_append_printf(buffer, "%s%s", parse_from_decode, parse_from);
                eina_strbuf_replace_all(buffer,"\n"," ");
                pc->config->senders = eina_list_prepend(pc->config->senders, 
-                                     eina_stringshare_add(eina_strbuf_string_get(buffer)));
-               pclose(output);
+                           eina_stringshare_add(eina_strbuf_string_get(buffer)));
              }
+             pclose(output);
            }     
            else 
            {
@@ -303,8 +293,7 @@ _mail_pop_server_data (void *data, int type, void *event)
              sscanf(heystack, "%[^\n]", parse_from);
              parse_from[strlen(parse_from) - 1] = '\0';
              pc->config->senders = eina_list_prepend(pc->config->senders, 
-                                   eina_stringshare_add(parse_from));
-             counts = 0;
+                         eina_stringshare_add(parse_from));
            } 
          }
          
@@ -312,14 +301,12 @@ _mail_pop_server_data (void *data, int type, void *event)
          eina_strbuf_free(buffer);
         _mail_pop_client_quit(pc); 
         
-         
          if ((pc->config->num > 0) && (pc->config->use_exec) && (pc->config->exec))
         _mail_start_exe (pc->config);
       break;
     default:
       break;
     }
-  
   return EINA_FALSE;
 }
 
