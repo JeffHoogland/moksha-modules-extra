@@ -124,7 +124,7 @@ void photo_item_del(Photo_Item *pi)
      photo_menu_hide(pi);
 
    if (pi->timer)
-     ecore_timer_del(pi->timer);
+     E_FN_DEL(ecore_timer_del,pi->timer);
 
    if (pi->popw)
      photo_popup_warn_del(pi->popw);
@@ -132,7 +132,7 @@ void photo_item_del(Photo_Item *pi)
      photo_popup_info_del(pi->popi);
 
    if (pi->timer)
-     ecore_timer_del(pi->timer);
+     E_FN_DEL(ecore_timer_del,pi->timer);
 
    photo_picture_histo_shutdown(pi);
 
@@ -159,11 +159,7 @@ void photo_item_timer_set(Photo_Item *pi, int active, int time)
 
    if (!active)
      {
-        if (pi->timer)
-          {
-             ecore_timer_del(pi->timer);
-             pi->timer = NULL;
-          }
+        if (pi->timer) E_FN_DEL(ecore_timer_del,pi->timer);
         return;
      }
 
