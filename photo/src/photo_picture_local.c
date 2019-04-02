@@ -306,7 +306,7 @@ _load_idler(void *data)
    Picture_Local_Dir *d;
    Eina_List *l;
    char *file_tmp;
-   char file[200];
+   char file[PATH_MAX];
    struct dirent *fs;
    struct stat fs_stat;
 
