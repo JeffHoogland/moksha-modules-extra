@@ -44,8 +44,19 @@ else                                                             \
 }
 
 #define STRINGIFY(str) #str
+#define IMPORT_STRETCH          0
+#define IMPORT_TILE             1
+#define IMPORT_CENTER           2
+#define IMPORT_SCALE_ASPECT_IN  3
+#define IMPORT_SCALE_ASPECT_OUT 4
+#define IMPORT_PAN              5
 
-
+typedef struct _Photo_Exe_Data Photo_Exe_Data;
+struct _Photo_Exe_Data
+{   
+   Ecore_End_Cb          ok;
+};
+Ecore_Event_Handler  *exe_handler = NULL;
 static Picture *_picture_new_get(Photo_Item *pi);
 static void     _picture_detach(Photo_Item *pi, int part);
 
@@ -57,7 +68,9 @@ static void     _cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event
 static void     _cb_mouse_wheel(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static void     _cb_popi_close(void *data);
 
-
+static const char*    _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas *evas, Ecore_End_Cb ok);
+static void           _cb_import_ok(void *data, void *dia);
+static Eina_Bool      _cb_edje_cc_exit(void *data, int type, void *event);
 /*
  * Public functions
  */
@@ -360,7 +373,7 @@ int photo_item_action_pause_toggle(Photo_Item *pi)
 
 int  photo_item_action_setbg(Photo_Item *pi)
 {
-  Picture *p;
+   Picture *p;
    E_Zone *zone;
    Ecore_Exe *exe;
    const char *file;
@@ -391,33 +404,25 @@ int  photo_item_action_setbg(Photo_Item *pi)
 
    if (!strstr(file, ".edj"))
      {
-        if (ecore_file_app_installed("e17setroot"))
+        file = _edj_gen(file, 0, 100, IMPORT_SCALE_ASPECT_OUT, pi->gcc->gadcon->evas, (Ecore_End_Cb) _cb_import_ok);
+        sleep(1);
+        while (e_config->desktop_backgrounds)
           {
-             snprintf(buf, 4096, "e17setroot -s \"%s\"", file);
-             DITEM(("Set background with %s", buf));
-	     exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
-             if (exe > 0)
-               {
-                  ecore_exe_free(exe);
-                  if (photo->config->pictures_set_bg_purge)
-                    photo_picture_setbg_add(name);
-               }
-          }
-        else
-          {
-             snprintf(buf, sizeof(buf),
-                      D_("<hilight>e17setroot needed</hilight><br><br>"
-                        "%s is not an edje file!<br>"
-                        "Photo module needs e17setroot util from e_utils package to set your picture as background. "
-                        "Please install it and try again."), file);
-             e_module_dialog_show(photo->module, D_("Photo Module Error"), buf);
-             return 0;
-          }
-     }
-   else
-     {
-        DITEM(("Set edje background %s", file));
+             E_Config_Desktop_Background *cfbg;
 
+             cfbg = e_config->desktop_backgrounds->data;
+             e_bg_del(cfbg->container, cfbg->zone, cfbg->desk_x, cfbg->desk_y);
+          }
+        e_bg_default_set(file);
+
+        eina_stringshare_del(file);
+        return 1;
+     }
+   
+    DITEM(("Set edje background %s", file));
+    // FIX ME: This is broken below
+    // Uses an old version of e17 enlightenment_remote no longer has such an option
+    //   altho I have thought about adding it. regardless should use native e code here
 	snprintf(buf, 4096, "enlightenment_remote -default-bg-set \"%s\"", file);
 	exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
 	if (exe > 0)
@@ -426,7 +431,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
 	    if (photo->config->pictures_set_bg_purge)
 	      photo_picture_setbg_add(name);
 	  }
-     }
+     
 
    return 1;
 }
@@ -693,4 +698,318 @@ _cb_popi_close(void *data)
 
    pi = data;
    pi->popi = NULL;
+}
+
+static const char *
+_edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas* evas, Ecore_End_Cb ok)
+{
+   Evas_Object *img;
+   Eina_Bool anim = EINA_FALSE;
+   int fd, num = 1;
+   int w = 0, h = 0;
+   const char *file, *locale;
+   char buf[PATH_MAX], cmd[PATH_MAX], tmpn[PATH_MAX], ipart[PATH_MAX], enc[128];
+   char *imgdir = NULL, *fstrip;
+   int cr, cg, cb, ca;
+   FILE *f;
+   size_t len, off;
+   Ecore_Exe            *exe;
+   const char *ret;
+   Photo_Exe_Data *id;
+   
+   id = E_NEW(Photo_Exe_Data, 1);
+   if (!id) return NULL;
+   id->ok = ok;
+   
+   file = ecore_file_file_get(path);
+   fstrip = ecore_file_strip_ext(file);
+   if (!fstrip) return NULL;
+   len = e_user_dir_snprintf(buf, sizeof(buf), "backgrounds/%s.edj", fstrip);
+   if (len >= sizeof(buf))
+     {
+        free(fstrip);
+        return NULL;
+     }
+   off = len - (sizeof(".edj") - 1);
+   for (num = 1; ecore_file_exists(buf) && num < 100; num++)
+     snprintf(buf + off, sizeof(buf) - off, "-%d.edj", num);
+   free(fstrip);
+   cr = 0;
+   cg = 0;
+   cb = 0;
+   ca = 0;
+
+   if (num == 100)
+     {
+        printf("Couldn't come up with another filename for %s\n", buf);
+        return NULL;
+     }
+
+   strcpy(tmpn, "/tmp/e_bgdlg_new.edc-tmp-XXXXXX");
+   fd = mkstemp(tmpn);
+   if (fd < 0)
+     {
+        printf("Error Creating tmp file: %s\n", strerror(errno));
+        return NULL;
+     }
+
+   f = fdopen(fd, "w");
+   if (!f)
+     {
+        printf("Cannot open %s for writing\n", tmpn);
+        return NULL;
+     }
+
+   anim = eina_str_has_extension(path, "gif");
+   imgdir = ecore_file_dir_get(path);
+   if (!imgdir) ipart[0] = '\0';
+   else
+     {
+        snprintf(ipart, sizeof(ipart), "-id %s", e_util_filename_escape(imgdir));
+        free(imgdir);
+     }
+
+   img = evas_object_image_add(evas);
+   evas_object_image_file_set(img, path, NULL);
+   evas_object_image_size_get(img, &w, &h);
+   evas_object_del(img);
+
+   if (external)
+     {
+        fstrip = strdupa(e_util_filename_escape(path));
+        snprintf(enc, sizeof(enc), "USER");
+     }
+   else
+     {
+        fstrip = strdupa(e_util_filename_escape(file));
+        if (quality == 100)
+          snprintf(enc, sizeof(enc), "COMP");
+        else
+          snprintf(enc, sizeof(enc), "LOSSY %i", quality);
+     }
+   switch (method)
+     {
+      case IMPORT_STRETCH:
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "%s"
+                "data { item: \"style\" \"0\"; }\n"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "image { normal: \"%s\"; scale_hint: STATIC; }\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n", w, h, fstrip);
+        break;
+
+      case IMPORT_TILE:
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "data { item: \"style\" \"1\"; }\n"
+                "%s"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "image { normal: \"%s\"; }\n"
+                "fill { size {\n"
+                "relative: 0.0 0.0;\n"
+                "offset: %i %i;\n"
+                "} } } } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n", w, h, fstrip, w, h);
+        break;
+
+      case IMPORT_CENTER:
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "data { item: \"style\" \"2\"; }\n"
+                "%s"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"col\"; type: RECT; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "color: %i %i %i %i;\n"
+                "} }\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "min: %i %i; max: %i %i;\n"
+                "image { normal: \"%s\"; }\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n", w, h, cr, cg, cb, ca, w, h, w, h, fstrip);
+        break;
+
+      case IMPORT_SCALE_ASPECT_IN:
+        locale = e_intl_language_get();
+        setlocale(LC_NUMERIC, "C");
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "data { item: \"style\" \"3\"; }\n"
+                "%s"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"col\"; type: RECT; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "color: %i %i %i %i;\n"
+                "} }\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "aspect: %1.9f %1.9f; aspect_preference: BOTH;\n"
+                "image { normal: \"%s\";  scale_hint: STATIC; }\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n",
+                w, h, cr, cg, cb, ca, (double)w / (double)h, (double)w / (double)h, fstrip);
+        setlocale(LC_NUMERIC, locale);
+        break;
+
+      case IMPORT_SCALE_ASPECT_OUT:
+        locale = e_intl_language_get();
+        setlocale(LC_NUMERIC, "C");
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "data { item: \"style\" \"4\"; }\n"
+                "%s"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "aspect: %1.9f %1.9f; aspect_preference: NONE;\n"
+                "image { normal: \"%s\";  scale_hint: STATIC; }\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n",
+                w, h, (double)w / (double)h, (double)w / (double)h, fstrip);
+        setlocale(LC_NUMERIC, locale);
+        break;
+
+      case IMPORT_PAN:
+        locale = e_intl_language_get();
+        setlocale(LC_NUMERIC, "C");
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "data { item: \"style\" \"4\"; }\n"
+                "%s"
+                "max: %i %i;\n"
+                "script {\n"
+                "public cur_anim; public cur_x; public cur_y; public prev_x;\n"
+                "public prev_y; public total_x; public total_y; \n"
+                "public pan_bg(val, Float:v) {\n"
+                "new Float:x, Float:y, Float:px, Float: py;\n"
+
+                "px = get_float(prev_x); py = get_float(prev_y);\n"
+                "if (get_int(total_x) > 1) {\n"
+                "x = float(get_int(cur_x)) / (get_int(total_x) - 1);\n"
+                "x = px - (px - x) * v;\n"
+                "} else { x = 0.0; v = 1.0; }\n"
+                "if (get_int(total_y) > 1) {\n"
+                "y = float(get_int(cur_y)) / (get_int(total_y) - 1);\n"
+                "y = py - (py - y) * v;\n"
+                "} else { y = 0.0; v = 1.0; }\n"
+
+                "set_state_val(PART:\"bg\", STATE_ALIGNMENT, x, y);\n"
+
+                "if (v >= 1.0) {\n"
+                "set_int(cur_anim, 0); set_float(prev_x, x);\n"
+                "set_float(prev_y, y); return 0;\n"
+                "}\n"
+                "return 1;\n"
+                "}\n"
+                "public message(Msg_Type:type, id, ...) {\n"
+                "if ((type == MSG_FLOAT_SET) && (id == 0)) {\n"
+                "new ani;\n"
+
+                "get_state_val(PART:\"bg\", STATE_ALIGNMENT, prev_x, prev_y);\n"
+                "set_int(cur_x, round(getfarg(3))); set_int(total_x, round(getfarg(4)));\n"
+                "set_int(cur_y, round(getfarg(5))); set_int(total_y, round(getfarg(6)));\n"
+
+                "ani = get_int(cur_anim); if (ani > 0) cancel_anim(ani);\n"
+                "ani = anim(getfarg(2), \"pan_bg\", 0); set_int(cur_anim, ani);\n"
+                "} } }\n"
+                "parts {\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "aspect: %1.9f %1.9f; aspect_preference: NONE;\n"
+                "image { normal: \"%s\";  scale_hint: STATIC; }\n"
+                "} } }\n"
+                "programs { program {\n"
+                " name: \"init\";\n"
+                " signal: \"load\";\n"
+                " source: \"\";\n"
+                " script { custom_state(PART:\"bg\", \"default\", 0.0);\n"
+                " set_state(PART:\"bg\", \"custom\", 0.0);\n"
+                " set_float(prev_x, 0.0); set_float(prev_y, 0.0);\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n",
+                w, h, (double)w / (double)h, (double)w / (double)h, fstrip);
+        setlocale(LC_NUMERIC, locale);
+        break;
+
+      default:
+        /* won't happen */
+        break;
+     }
+
+   fclose(f);
+
+   snprintf(cmd, sizeof(cmd), "edje_cc -v %s %s %s",
+            ipart, tmpn, e_util_filename_escape(buf));
+
+   if (exe_handler) ecore_event_handler_del(exe_handler);
+   exe_handler = ecore_event_handler_add(ECORE_EXE_EVENT_DEL,
+                             _cb_edje_cc_exit, id);
+   exe = ecore_exe_run(cmd, id);
+   ret = eina_stringshare_add(buf);
+   return ret;
+}
+
+static void
+_cb_import_ok(void *data, void *dia)
+{
+   if (exe_handler)
+     {
+       ecore_event_handler_del(exe_handler);
+       exe_handler = NULL;
+     }
+   e_bg_update();
+   e_config_save_queue();
+}
+
+static Eina_Bool
+_cb_edje_cc_exit(void *data, int type, void *event)
+{
+   Photo_Exe_Data *import;
+   Ecore_Exe_Event_Del *ev;
+   int r = 1;
+
+   ev = event;
+   import = data;
+   if (ecore_exe_data_get(ev->exe) != import) return ECORE_CALLBACK_PASS_ON;
+
+   if (ev->exit_code != 0)
+     {
+        e_util_dialog_show(D_("Picture Import Error"),
+                           D_("Moksha was unable to import the picture<br>"
+                             "due to conversion errors."));
+        r = 0;
+     }
+
+   if (r && import->ok)
+     {
+        import->ok(NULL, import);
+        E_FREE(import);
+     }
+   else
+     E_FREE(import);
+   return ECORE_CALLBACK_DONE;
 }
