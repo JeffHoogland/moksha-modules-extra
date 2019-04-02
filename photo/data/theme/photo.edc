@@ -2,7 +2,7 @@
 
 images
 {
-        //image: "item_border.png" COMP;
+	image: "item_border.png" COMP;
 
 	image: "popup_warn_background.png" COMP;
 	image: "popup_warn_disable_clicked.png" COMP;

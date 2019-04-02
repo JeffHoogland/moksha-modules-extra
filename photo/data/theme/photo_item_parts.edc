@@ -104,7 +104,7 @@ part
 
 /* Border */
 
-/*
+
 part
 {
         name: "border";
@@ -117,22 +117,22 @@ part
                 {
                         relative: 0.0 0.0;
                         to: "picture0";
-                        offset: -9 -9;
+                        offset: -20 -19;
                 }
                 rel2
                 {
                         relative: 1.0 1.0;
                         to: "picture0";
-                        offset: 9 9;
+                        offset: 20 19; 
                 }
                 image
                 {
                         normal: "item_border.png";
-			border: 9 10 9 10;
+                        border: 20 20 20 20;
                 }
         }
 }
-*/
+
 
 /* Label */
 
