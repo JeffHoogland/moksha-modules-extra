@@ -157,9 +157,10 @@ part
 		{
 			text: "Photo";
 			font: "Sans:style=Bold";
-		        size: 10;
-		        min:  1 1;
+			size: 10;
+			min:  1 1;
 			align: 0.5 1.0;
+			ellipsis: -1;
 			text_class: "module_normal";
 		}
 		color: 0 0 0 0;
