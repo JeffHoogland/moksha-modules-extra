@@ -425,7 +425,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
     //   altho I have thought about adding it. regardless should use native e code here
 	snprintf(buf, 4096, "enlightenment_remote -default-bg-set \"%s\"", file);
 	exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
-	if (exe > 0)
+	if (exe)
 	  {
 	    ecore_exe_free(exe);
 	    if (photo->config->pictures_set_bg_purge)
@@ -464,7 +464,7 @@ int photo_item_action_viewer(Photo_Item *pi)
         snprintf(buf, 4096, "%s \"%s\"", photo->config->pictures_viewer, file);
         DITEM(("Action viewer: %s", buf));
         exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
-        if (exe > 0)
+        if (exe)
           ecore_exe_free(exe);
      }
    else
