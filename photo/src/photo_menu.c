@@ -338,14 +338,14 @@ _cb_hist_menu_activate(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSE
 
    for (l=mn->items; l; l=eina_list_next(l))
      {
-	E_Menu_Item *mi;
+	E_Menu_Item *hmi;
 
-	mi = eina_list_data_get(l);
-	if (!mi || mi->separator) continue;
-	evas_object_event_callback_add(mi->event_object, EVAS_CALLBACK_MOUSE_IN,
-				       _cb_hist_menu_pre_select, mi);
-	evas_object_event_callback_add(mi->event_object, EVAS_CALLBACK_MOUSE_OUT,
-				       _cb_hist_menu_post_select, mi);
+	hmi = eina_list_data_get(l);
+	if (!hmi || hmi->separator) continue;
+	evas_object_event_callback_add(hmi->event_object, EVAS_CALLBACK_MOUSE_IN,
+				       _cb_hist_menu_pre_select, hmi);
+	evas_object_event_callback_add(hmi->event_object, EVAS_CALLBACK_MOUSE_OUT,
+				       _cb_hist_menu_post_select, hmi);
      }
 }
 
