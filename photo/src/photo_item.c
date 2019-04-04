@@ -53,7 +53,8 @@ else                                                             \
 
 typedef struct _Photo_Exe_Data Photo_Exe_Data;
 struct _Photo_Exe_Data
-{   
+{
+   Ecore_Exe            *exe;
    Ecore_End_Cb          ok;
 };
 Ecore_Event_Handler  *exe_handler = NULL;
@@ -713,7 +714,6 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas* ev
    int cr, cg, cb, ca;
    FILE *f;
    size_t len, off;
-   Ecore_Exe            *exe;
    const char *ret;
    Photo_Exe_Data *id;
    
@@ -968,7 +968,8 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas* ev
    if (exe_handler) ecore_event_handler_del(exe_handler);
    exe_handler = ecore_event_handler_add(ECORE_EXE_EVENT_DEL,
                              _cb_edje_cc_exit, id);
-   exe = ecore_exe_run(cmd, id);
+   id->exe = ecore_exe_run(cmd, id);
+
    ret = eina_stringshare_add(buf);
    return ret;
 }
