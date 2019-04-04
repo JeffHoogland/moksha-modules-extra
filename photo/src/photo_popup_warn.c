@@ -6,8 +6,8 @@ static void _check_overlap(int *px, int *py, int *pw, int *ph, int tries, int or
 static void _try_close(Popup_Warn *popw);
 
 static Eina_Bool  _cb_timer(void *data);
-static void _cb_edje_close(void *data, Evas_Object *obj, const char *emission, const char *source);
-static void _cb_edje_desactivate(void *data, Evas_Object *obj, const char *emission, const char *source);
+static void _cb_edje_close(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__);
+static void _cb_edje_desactivate(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__);
 /*
  * Public functions
  */
@@ -211,7 +211,7 @@ _cb_timer(void *data)
 }
 
 static void
-_cb_edje_close(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_edje_close(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    Popup_Warn *popw;
 
@@ -220,7 +220,7 @@ _cb_edje_close(void *data, Evas_Object *obj, const char *emission, const char *s
 }
 
 static void
-_cb_edje_desactivate(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_edje_desactivate(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    Popup_Warn *popw;
 

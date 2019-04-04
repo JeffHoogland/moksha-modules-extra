@@ -29,7 +29,7 @@ static Eina_List *_popups_info;
 static void _placement(Photo_Item *pi, int placement, int popi_w, int popi_h, int *popi_x, int *popi_y);
 static void _close(Popup_Info *popi);
 static Eina_Bool  _cb_timer(void *data);;
-static void _cb_edje_close(void *data, Evas_Object *obj, const char *emission, const char *source);
+static void _cb_edje_close(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__);
 
 /*
  * Public functions
@@ -282,7 +282,7 @@ _cb_timer(void *data)
 }
 
 static void
-_cb_edje_close(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_edje_close(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    Popup_Info *popi;
 

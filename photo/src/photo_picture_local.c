@@ -62,18 +62,18 @@ static Picture_Local_List *pictures_local;
 
 static void _pictures_old_del(int force, int force_now);
 
-static Eina_Bool  _load_idler(void *data);
-static Eina_Bool  _load_timer(void *data);
+static Eina_Bool  _load_idler(void *data __UNUSED__);
+static Eina_Bool  _load_timer(void *data __UNUSED__);
 static void _load_idler_stop(void);
-static Eina_Bool  _load_cb_ev_fill(void *data, int type, void *event);
+static Eina_Bool  _load_cb_ev_fill(void *data, int type __UNUSED__, void *event);
 
-static void _thumb_generate_cb(void *data, Evas_Object *obj, void *event_info);
+static void _thumb_generate_cb(void *data, Evas_Object *obj, void *event_info __UNUSED__);
 static void _thumb_generate_stop(void);
 
-static int  _popup_loader_close(Popup_Warn *popw, void *data);
-static void _popup_loader_desactivate(Popup_Warn *popw, void *data);
-static int  _popup_thumb_close(Popup_Warn *popw, void *data);
-static void _popup_thumb_desactivate(Popup_Warn *popw, void *data);
+static int  _popup_loader_close(Popup_Warn *popw __UNUSED__, void *data __UNUSED__);
+static void _popup_loader_desactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__);
+static int  _popup_thumb_close(Popup_Warn *popw __UNUSED__, void *data __UNUSED__);
+static void _popup_thumb_desactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__);
 
 
 /*
@@ -300,7 +300,7 @@ _pictures_old_del(int force, int force_now)
 }
 
 static Eina_Bool
-_load_idler(void *data)
+_load_idler(void *data __UNUSED__)
 {
    Picture_Local_List *pl;
    Picture_Local_Dir *d;
@@ -422,7 +422,7 @@ _load_idler(void *data)
 }
 
 static Eina_Bool
-_load_timer(void *data)
+_load_timer(void *data __UNUSED__)
 {
    Picture_Local_List *pl;
    Picture *picture;
@@ -529,7 +529,7 @@ _load_idler_stop(void)
 }
 
 static Eina_Bool
-_load_cb_ev_fill(void *data, int type, void *event)
+_load_cb_ev_fill(void *data, int type __UNUSED__, void *event)
 {
    Photo_Item *pi;
    Picture_Event_Fill *ev;
@@ -555,7 +555,7 @@ _load_cb_ev_fill(void *data, int type, void *event)
 }
 
 static void
-_thumb_generate_cb(void *data, Evas_Object *obj, void *event_info)
+_thumb_generate_cb(void *data, Evas_Object *obj, void *event_info __UNUSED__)
 {
    Picture *picture;
    Picture_Local_List *pl;
@@ -687,14 +687,14 @@ _thumb_generate_stop(void)
 }
 
 static int
-_popup_loader_close(Popup_Warn *popw, void *data)
+_popup_loader_close(Popup_Warn *popw __UNUSED__, void *data __UNUSED__)
 {
    pictures_local->loader.popup = NULL;
    return 1;
 }
 
 static void
-_popup_loader_desactivate(Popup_Warn *popw, void *data)
+_popup_loader_desactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__)
 {
    if (photo->config->local.popup != PICTURE_LOCAL_POPUP_NEVER)
      photo->config->local.popup--;
@@ -702,14 +702,14 @@ _popup_loader_desactivate(Popup_Warn *popw, void *data)
 }
 
 static int
-_popup_thumb_close(Popup_Warn *popw, void *data)
+_popup_thumb_close(Popup_Warn *popw __UNUSED__, void *data __UNUSED__)
 {
    pictures_local->thumb.popup = NULL;
    return 1;
 }
 
 static void
-_popup_thumb_desactivate(Popup_Warn *popw, void *data)
+_popup_thumb_desactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__)
 {
    if (photo->config->local.popup != PICTURE_LOCAL_POPUP_NEVER)
      photo->config->local.popup--;

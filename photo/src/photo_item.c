@@ -61,16 +61,16 @@ static Picture *_picture_new_get(Photo_Item *pi);
 static void     _picture_detach(Photo_Item *pi, int part);
 
 static Eina_Bool      _cb_timer_change(void *data);
-static void     _cb_edje_change(void *data, Evas_Object *obj, const char *emission, const char *source);
-static void     _cb_edje_mouseover(void *data, Evas_Object *obj, const char *emission, const char *source);
-static void     _cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info);
-static void     _cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_info);
-static void     _cb_mouse_wheel(void *data, Evas *e, Evas_Object *obj, void *event_info);
+static void     _cb_edje_change(void *data, Evas_Object *obj __UNUSED__, const char *emission, const char *source __UNUSED__);
+static void     _cb_edje_mouseover(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__);
+static void     _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info);
+static void     _cb_mouse_out(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__);
+static void     _cb_mouse_wheel(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info);
 static void     _cb_popi_close(void *data);
 
 static const char*    _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas *evas, Ecore_End_Cb ok);
-static void           _cb_import_ok(void *data, void *dia);
-static Eina_Bool      _cb_edje_cc_exit(void *data, int type, void *event);
+static void           _cb_import_ok(void *data __UNUSED__, void *dia __UNUSED__);
+static Eina_Bool      _cb_edje_cc_exit(void *data, int type __UNUSED__, void *event);
 /*
  * Public functions
  */
@@ -605,7 +605,7 @@ _cb_timer_change(void *data)
 }
 
 static void
-_cb_edje_change(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_edje_change(void *data, Evas_Object *obj __UNUSED__ , const char *emission, const char *source __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -628,7 +628,7 @@ _cb_edje_change(void *data, Evas_Object *obj, const char *emission, const char *
 }
 
 static void
-_cb_edje_mouseover(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_edje_mouseover(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -639,7 +639,7 @@ _cb_edje_mouseover(void *data, Evas_Object *obj, const char *emission, const cha
                     photo->config->action_mouse_over);
 }
 
-void _cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
+void _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
    Photo_Item *pi;
    Evas_Event_Mouse_Down *ev;
@@ -667,7 +667,7 @@ void _cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
      }
 }
 
-static void _cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_info)
+static void _cb_mouse_out(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -679,7 +679,7 @@ static void _cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_inf
 }
 
 static void
-_cb_mouse_wheel(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_cb_mouse_wheel(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
    Evas_Event_Mouse_Wheel *ev;
    Photo_Item *pi;
@@ -974,7 +974,7 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas* ev
 }
 
 static void
-_cb_import_ok(void *data, void *dia)
+_cb_import_ok(void *data __UNUSED__, void *dia __UNUSED__)
 {
    if (exe_handler)
      {
@@ -986,7 +986,7 @@ _cb_import_ok(void *data, void *dia)
 }
 
 static Eina_Bool
-_cb_edje_cc_exit(void *data, int type, void *event)
+_cb_edje_cc_exit(void *data, int type __UNUSED__, void *event)
 {
    Photo_Exe_Data *import;
    Ecore_Exe_Event_Del *ev;

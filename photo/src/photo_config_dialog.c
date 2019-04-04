@@ -26,19 +26,19 @@ struct _E_Config_Dialog_Data
 };
 
 static void        *_create_data(E_Config_Dialog *cfd);
-static void         _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
+static void         _free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata);
 static void         _fill_data(E_Config_Dialog_Data *cfdata);
-static Evas_Object *_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata);
-static int          _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
-static Evas_Object *_advanced_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata);
-static int          _advanced_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
+static Evas_Object *_basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata);
+static int          _basic_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata);
+static Evas_Object *_advanced_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata);
+static int          _advanced_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata);
 
 static void         _cb_dir_list(void *data);
-static void         _cb_dir_add(void *data, void *data2);
-static void         _cb_dir_del(void *data, void *data2);
-static void         _cb_dir_config(void *data, void *data2);
-static void         _cb_dir_reload(void *data, void *data2);
-static void         _cb_dir_stopload(void *data, void *data2);
+static void         _cb_dir_add(void *data __UNUSED__, void *data2 __UNUSED__);
+static void         _cb_dir_del(void *data, void *data2 __UNUSED__);
+static void         _cb_dir_config(void *data, void *data2 __UNUSED__);
+static void         _cb_dir_reload(void *data __UNUSED__, void *data2 __UNUSED__);
+static void         _cb_dir_stopload(void *data __UNUSED__, void *data2 __UNUSED__);
 
 /*
  * Public functions
@@ -183,7 +183,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
    free(cfdata->pictures_viewer);
    photo->config_dialog = NULL;
@@ -209,7 +209,7 @@ _fill_data(E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata) 
 {
    Evas_Object *o, *of, *ob;
    E_Radio_Group *rg;
@@ -285,7 +285,7 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cf
 }
 
 static int
-_basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_basic_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
    if ( (photo->config->show_label != cfdata->show_label ) ||
         (photo->config->action_mouse_over != cfdata->action_mouse_over) ||
@@ -308,7 +308,7 @@ _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_advanced_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_advanced_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata) 
 {
    Evas_Object *o, *of, *ob;
    E_Radio_Group *rg;
@@ -363,7 +363,7 @@ _advanced_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data 
 }
 
 static int
-_advanced_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_advanced_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
    photo->config->pictures_set_bg_purge = cfdata->pictures_set_bg_purge;
    if (photo->config->pictures_viewer)
@@ -389,7 +389,7 @@ _cb_dir_list(void *data)
 }
 
 static void
-_cb_dir_add(void *data, void *data2)
+_cb_dir_add(void *data __UNUSED__, void *data2 __UNUSED__)
 {
    if (photo->config_dialog_adddir) return;
 
@@ -397,7 +397,7 @@ _cb_dir_add(void *data, void *data2)
 }
 
 static void
-_cb_dir_del(void *data, void *data2)
+_cb_dir_del(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    Picture_Local_Dir *dir;
@@ -420,7 +420,7 @@ _cb_dir_del(void *data, void *data2)
 }
 
 static void
-_cb_dir_config(void *data, void *data2)
+_cb_dir_config(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    Picture_Local_Dir *dir;
@@ -438,13 +438,13 @@ _cb_dir_config(void *data, void *data2)
 }
 
 static void
-_cb_dir_reload(void *data, void *data2)
+_cb_dir_reload(void *data __UNUSED__, void *data2 __UNUSED__)
 {
    photo_picture_local_load_start();
 }
 
 static void
-_cb_dir_stopload(void *data, void *data2)
+_cb_dir_stopload(void *data __UNUSED__, void *data2 __UNUSED__)
 {
    photo_picture_local_load_stop();
 }

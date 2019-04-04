@@ -1,29 +1,23 @@
 #include "Photo.h"
 
-static void _cb_deactivate_post(void *data, E_Menu *m);
-static void _cb_picture_info(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_picture_next(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_picture_prev(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_picture_setbg(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_picture_viewer(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_pause_toggle(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_configure_item(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_configure_general(void *data, E_Menu *m, E_Menu_Item *mi);
+static void _cb_deactivate_post(void *data, E_Menu *m __UNUSED__);
+static void _cb_picture_info(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
+static void _cb_picture_next(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
+static void _cb_picture_prev(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
+static void _cb_picture_setbg(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
+static void _cb_picture_viewer(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
+static void _cb_pause_toggle(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
+static void _cb_configure_item(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
+static void _cb_configure_general(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
 static void _cb_hist_menu_populate(void *data, E_Menu *m, E_Menu_Item *mi);
+static void _cb_hist_menu_activate(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
+static void _cb_hist_menu_populate(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi);
 static void _cb_hist_menu_activate(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_hist_menu_populate(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_hist_menu_activate(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_hist_menu_select(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _cb_hist_menu_pre_select(void *data, Evas *evas, Evas_Object *obj, void *event_info);
-static void _cb_hist_menu_post_select(void *data, Evas *evas, Evas_Object *obj, void *event_info);
+static void _cb_hist_menu_select(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi);
+static void _cb_hist_menu_pre_select(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__);
+static void _cb_hist_menu_post_select(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__);
 static void _cb_hist_menu_deactivate_post(void *data, E_Menu *m);
 static void _cb_popi_close(void *data);
-
-void photo_picture_histo_menu_append(Photo_Item *pi, E_Menu *mn_main)
-{
-   E_Menu_Item *mi;
-
-}
 
 /*
  * Public functions
@@ -115,7 +109,7 @@ void photo_menu_hide(Photo_Item *pi)
  */
 
 static void
-_cb_deactivate_post(void *data, E_Menu *m)
+_cb_deactivate_post(void *data, E_Menu *m __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -128,7 +122,7 @@ _cb_deactivate_post(void *data, E_Menu *m)
 }
 
 static void
-_cb_picture_info(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_picture_info(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -139,7 +133,7 @@ _cb_picture_info(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_picture_next(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_picture_next(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -151,7 +145,7 @@ _cb_picture_next(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_picture_prev(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_picture_prev(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -163,7 +157,7 @@ _cb_picture_prev(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_picture_setbg(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_picture_setbg(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -174,7 +168,7 @@ _cb_picture_setbg(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_picture_viewer(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_picture_viewer(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -184,7 +178,7 @@ _cb_picture_viewer(void *data, E_Menu *m, E_Menu_Item *mi)
    photo_item_action_viewer(pi);
 }
 
-static void _cb_pause_toggle(void *data, E_Menu *m, E_Menu_Item *mi)
+static void _cb_pause_toggle(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -195,7 +189,7 @@ static void _cb_pause_toggle(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_configure_item(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_configure_item(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Photo_Item *pi;
 
@@ -207,7 +201,7 @@ _cb_configure_item(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_configure_general(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_configure_general(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    if (!photo) return;
    if (photo->config_dialog) return;
@@ -216,7 +210,7 @@ _cb_configure_general(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_hist_menu_select(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_hist_menu_select(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi)
 {
    Photo_Item *pi;
    int no;
@@ -231,7 +225,7 @@ _cb_hist_menu_select(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_hist_menu_pre_select(void *data, Evas *evas, Evas_Object *obj, void *event_info)
+_cb_hist_menu_pre_select(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
 {
    E_Menu_Item *mi;
    Photo_Item *pi;
@@ -265,7 +259,7 @@ _cb_hist_menu_pre_select(void *data, Evas *evas, Evas_Object *obj, void *event_i
 }
 
 static void
-_cb_hist_menu_post_select(void *data, Evas *evas, Evas_Object *obj, void *event_info)
+_cb_hist_menu_post_select(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
 {
    E_Menu_Item *mi;
    Photo_Item *pi;
@@ -296,7 +290,7 @@ _cb_hist_menu_deactivate_post(void *data, E_Menu *m)
 }
 
 static void
-_cb_hist_menu_populate(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_hist_menu_populate(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi)
 {
    Photo_Item *pi;
    E_Menu *mn;
@@ -331,7 +325,7 @@ _cb_hist_menu_populate(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_hist_menu_activate(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_hist_menu_activate(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Photo_Item *pi;
    E_Menu *mn;
