@@ -8,7 +8,7 @@ typedef struct _Picture_Event_Fill Picture_Event_Fill;
 #ifndef PHOTO_PICTURE_H_INCLUDED
 #define PHOTO_PICTURE_H_INCLUDED
 
-#define PICTURE_VIEWER_DEFAULT "exhibit"
+#define PICTURE_VIEWER_DEFAULT "ephoto"
 
 #define PICTURE_FROM_DEFAULT 1
 #define PICTURE_BOTH 0
