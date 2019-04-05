@@ -30,11 +30,13 @@ void photo_picture_shutdown(void)
 Picture *photo_picture_new(char *path, int thumb_it, void (*func_done) (void *data, Evas_Object *obj, void *event_info))
 {
    Picture *picture;
-   int th_w, th_h;
    char *ext;
 
+#ifdef DEBUG
+   int th_w, th_h;
    th_w = photo->config->pictures_thumb_size;
    th_h = photo->config->pictures_thumb_size;
+#endif
       
    ext = strrchr(path, '.');
    if (!ext)

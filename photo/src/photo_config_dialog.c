@@ -33,7 +33,7 @@ static int          _basic_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_
 static Evas_Object *_advanced_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata);
 static int          _advanced_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata);
 
-static void         _cb_dir_list(void *data);
+static void         _cb_dir_list(void *data __UNUSED__);
 static void         _cb_dir_add(void *data __UNUSED__, void *data2 __UNUSED__);
 static void         _cb_dir_del(void *data, void *data2 __UNUSED__);
 static void         _cb_dir_config(void *data, void *data2 __UNUSED__);
@@ -46,7 +46,6 @@ static void         _cb_dir_stopload(void *data __UNUSED__, void *data2 __UNUSED
 
 int  photo_config_dialog_show(void)
 {
-   E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
    char buf[4096];
 
@@ -60,9 +59,8 @@ int  photo_config_dialog_show(void)
    v->advanced.create_widgets = _advanced_create_widgets;
    
    snprintf(buf, sizeof(buf), "%s/e-module-photo.edj", e_module_dir_get(photo->module));
-   cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+   e_config_dialog_new(e_container_current_get(e_manager_current_get()),
 			     D_("Photo Configuration"), "Photo", "_e_modules_photo_config_dialog", buf, 0, v, NULL);
-
    return 1;
 }
 
@@ -173,9 +171,8 @@ static void *
 _create_data(E_Config_Dialog *cfd) 
 {
    E_Config_Dialog_Data *cfdata;
-
+   
    photo->config_dialog = cfd;
-
    cfdata = E_NEW(E_Config_Dialog_Data, 1);
    _fill_data(cfdata);
    cfd->cfdata = cfdata;
@@ -378,14 +375,14 @@ _advanced_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfda
    return 1;
 }
 
-
-
 static void
-_cb_dir_list(void *data)
+_cb_dir_list(void *data __UNUSED__)
 {
-   E_Config_Dialog_Data *cfdata;
+   /* What was this supposed to do?
+     E_Config_Dialog_Data *cfdata;
    
-   cfdata = data;
+     cfdata = data;*/
+   return;
 }
 
 static void
