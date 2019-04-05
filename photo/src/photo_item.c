@@ -439,9 +439,10 @@ int  photo_item_action_setbg(Photo_Item *pi)
 
 int photo_item_action_viewer(Photo_Item *pi)
 {
-  Picture *p;
+   Picture *p;
    const char *file = NULL;
    char buf[4096];
+   Ecore_Exe *exe;
 
    p = photo_item_picture_current_get(pi);
    if (!p) return 0;
@@ -460,22 +461,27 @@ int photo_item_action_viewer(Photo_Item *pi)
 
    if (ecore_file_app_installed(photo->config->pictures_viewer))
      {
-        Ecore_Exe *exe;
-
         snprintf(buf, 4096, "%s \"%s\"", photo->config->pictures_viewer, file);
         DITEM(("Action viewer: %s", buf));
         exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
         if (exe)
           ecore_exe_free(exe);
      }
+   else if (ecore_file_app_installed("xdg-open"))
+     {
+        snprintf(buf, 4096, "%s \"%s\"", "xdg-open", file);
+        DITEM(("Action viewer Fallback: %s", buf));
+        exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
+        if (exe)
+          ecore_exe_free(exe);
+     }
    else
      {
-        snprintf(buf, sizeof(buf),
-                 D_("<hilight>Viewer %s not found !</hilight><br><br>"
-                   "You can change the viewer for images in the Photo module configuration panel (Advanced view)"),
-                 photo->config->pictures_viewer);
-        e_module_dialog_show(photo->module, D_("Photo Module Error"), buf);
-        return 0;
+        snprintf(buf, 4096, "%s \"%s\"", "enlightenment_open", file);
+        DITEM(("Action viewer Fallback: %s", buf));
+        exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
+        if (exe)
+          ecore_exe_free(exe);
      }
 
    return 1;
