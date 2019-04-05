@@ -463,7 +463,7 @@ int photo_item_action_viewer(Photo_Item *pi)
      {
         snprintf(buf, 4096, "%s \"%s\"", photo->config->pictures_viewer, file);
         DITEM(("Action viewer: %s", buf));
-        exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
+        exe = e_util_exe_safe_run(buf, NULL);
         if (exe)
           ecore_exe_free(exe);
      }
@@ -471,15 +471,14 @@ int photo_item_action_viewer(Photo_Item *pi)
      {
         snprintf(buf, 4096, "%s \"%s\"", "xdg-open", file);
         DITEM(("Action viewer Fallback: %s", buf));
-        exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
+        exe = e_util_exe_safe_run(buf, NULL);
         if (exe)
           ecore_exe_free(exe);
      }
    else
      {
-        snprintf(buf, 4096, "%s \"%s\"", "enlightenment_open", file);
-        DITEM(("Action viewer Fallback: %s", buf));
-        exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
+        DITEM(("Action viewer Fallback: enlightenment_open"));
+        exe = e_util_open(file, buf);
         if (exe)
           ecore_exe_free(exe);
      }
