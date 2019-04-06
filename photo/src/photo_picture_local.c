@@ -169,6 +169,8 @@ Picture *photo_picture_local_get(int position)
 
    if (!(eina_list_count(pl->pictures) - pl->pictures_waiting_delete))
      return NULL;
+   else if (!(eina_list_count(pl->pictures)))
+     return NULL;
 
    if (position != PICTURE_LOCAL_GET_RANDOM)
      {
