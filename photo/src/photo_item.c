@@ -730,11 +730,16 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas* ev
    
    file = ecore_file_file_get(path);
    fstrip = ecore_file_strip_ext(file);
-   if (!fstrip) return NULL;
+   if (!fstrip)
+      {
+         E_FREE(id);
+         return NULL;
+      }
    len = e_user_dir_snprintf(buf, sizeof(buf), "backgrounds/%s.edj", fstrip);
    if (len >= sizeof(buf))
      {
         free(fstrip);
+        E_FREE(id);
         return NULL;
      }
    off = len - (sizeof(".edj") - 1);
@@ -749,6 +754,7 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas* ev
    if (num == 100)
      {
         printf("Couldn't come up with another filename for %s\n", buf);
+        E_FREE(id);
         return NULL;
      }
 
@@ -757,6 +763,7 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas* ev
    if (fd < 0)
      {
         printf("Error Creating tmp file: %s\n", strerror(errno));
+        E_FREE(id);
         return NULL;
      }
 
@@ -764,6 +771,7 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas* ev
    if (!f)
      {
         printf("Cannot open %s for writing\n", tmpn);
+        E_FREE(id);
         return NULL;
      }
 
