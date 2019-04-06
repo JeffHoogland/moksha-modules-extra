@@ -383,8 +383,11 @@ _load_idler(void *data __UNUSED__)
      {
         DD(("removing %s", (char *)eina_list_data_get(pl->loader.dirs)));
         /* go to next dir */
-        closedir(pl->loader.odir);
-	pl->loader.odir = NULL;
+        if (pl->loader.odir)
+          {
+             closedir(pl->loader.odir);
+             pl->loader.odir = NULL;
+          }
         free(eina_list_data_get(pl->loader.dirs));
         pl->loader.dirs = eina_list_remove_list(pl->loader.dirs,
                                                 pl->loader.dirs);
