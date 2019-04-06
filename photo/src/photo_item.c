@@ -82,19 +82,21 @@ Photo_Item *photo_item_add(E_Gadcon_Client *gcc, Evas_Object *obj, const char *i
    Photo_Config_Item *pic;
 
    pi = E_NEW(Photo_Item, 1);
+   if (!pi) return NULL;
 
    photo_util_edje_set(obj, PHOTO_THEME_ITEM);
 
    pic = photo_config_item_new(id);
-   pi->gcc = gcc;
-   pi->obj = obj;
-   pi->config = pic;
-
    if(!pic)
      {
         DD(("Item add : NULL config !!!"));
+        E_FREE(pi);
+        return NULL;
      }
 
+   pi->gcc = gcc;
+   pi->obj = obj;
+   pi->config = pic;
    evas_object_event_callback_add(obj, EVAS_CALLBACK_MOUSE_DOWN,
 				  _cb_mouse_down, pi);
    evas_object_event_callback_add(obj, EVAS_CALLBACK_MOUSE_OUT,
