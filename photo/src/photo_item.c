@@ -58,6 +58,9 @@ struct _Photo_Exe_Data
    Ecore_End_Cb          ok;
 };
 Ecore_Event_Handler  *exe_handler = NULL;
+const char *name = NULL;
+
+// Local Functions
 static Picture *_picture_new_get(Photo_Item *pi);
 static void     _picture_detach(Photo_Item *pi, int part);
 
@@ -70,12 +73,10 @@ static void     _cb_mouse_wheel(void *data, Evas *e __UNUSED__, Evas_Object *obj
 static void     _cb_popi_close(void *data);
 
 static const char*    _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas *evas, Ecore_End_Cb ok);
-static void           _cb_import_ok(void *data __UNUSED__, void *dia __UNUSED__);
+static void           _cb_import_ok(void *data, void *dia __UNUSED__);
 static Eina_Bool      _cb_edje_cc_exit(void *data, int type __UNUSED__, void *event);
-/*
- * Public functions
- */
 
+// Public functions
 Photo_Item *photo_item_add(E_Gadcon_Client *gcc, Evas_Object *obj, const char *id)
 {
    Photo_Item *pi;
@@ -380,7 +381,6 @@ int  photo_item_action_setbg(Photo_Item *pi)
    E_Zone *zone;
    Ecore_Exe *exe;
    const char *file;
-   const char *name;
    char buf[4096];
 
    zone = e_zone_current_get(e_container_current_get(e_manager_current_get()));
@@ -435,7 +435,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
 	    if (photo->config->pictures_set_bg_purge)
 	      photo_picture_setbg_add(name);
 	  }
-     
+    name = NULL;
 
    return 1;
 }
@@ -991,13 +991,16 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas* ev
 }
 
 static void
-_cb_import_ok(void *data __UNUSED__, void *dia __UNUSED__)
+_cb_import_ok(void *data, void *dia __UNUSED__)
 {
    if (exe_handler)
      {
        ecore_event_handler_del(exe_handler);
        exe_handler = NULL;
      }
+   if (photo->config->pictures_set_bg_purge)	
+      photo_picture_setbg_add((char*) data);
+   name = NULL;
    e_bg_update();
    e_config_save_queue();
 }
@@ -1023,7 +1026,7 @@ _cb_edje_cc_exit(void *data, int type __UNUSED__, void *event)
 
    if (r && import->ok)
      {
-        import->ok(NULL, import);
+        import->ok((void *) name, import);
         E_FREE(import);
      }
    else

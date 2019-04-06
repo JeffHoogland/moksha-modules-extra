@@ -227,9 +227,10 @@ char *photo_picture_infos_get(Picture *p)
 
 void photo_picture_setbg_add(const char *name)
 {
+   if (!name) return;
    char buf[4096];
    const char *home;
-
+ 
    home = e_user_homedir_get();
    snprintf(buf, sizeof(buf), "%s/.e/e/backgrounds/%s.edj", home, name);
 
