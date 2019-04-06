@@ -407,6 +407,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
 
    if (!strstr(file, ".edj"))
      {
+        DITEM(("Set background with image %s", file));
         file = _edj_gen(file, 0, 100, IMPORT_SCALE_ASPECT_OUT, pi->gcc->gadcon->evas, (Ecore_End_Cb) _cb_import_ok);
         sleep(1);
         while (e_config->desktop_backgrounds)
