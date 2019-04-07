@@ -6,6 +6,28 @@ BUGS
 
 * sometimes the histo menu seems not to show the popup info
 
+----------------------------------------------------
+Bodhi Wanted
+----------------------------------------------------
+
+* Use of 4096 in buffers esp in photo_picture_infos_get where in extreme
+  and unusual cases it would cause the output string to be truncated.
+  Perhaps shorten long paths somehow before display.
+  
+* Wondering what picture net was about. net struct was removed from 
+  Photo_Config but we still have two useless phot0_net files. Maybe variety
+  could be an inspiration here.
+  
+* Totaly unsure about the BUG listed above ?
+
+* Perhaps use notifcations for some of the 'dialogs'
+
+* Add support for import Settings dialog from e
+
+* add config options for fill center et al for background
+
+* case file is edj in photo_item_action_setbg needs fixed or removed
+  Can this case ever happen?
 
 ----------------------------------------------------
 NEEDED
@@ -30,7 +52,7 @@ NEEDED
 * rethink local load idler to be less heavy
 
 ----------------------------------------------------
-FUTUR
+FUTURE
 ----------------------------------------------------
 
 * picture net (get from devian's TODO)
