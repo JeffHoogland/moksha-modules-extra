@@ -196,6 +196,18 @@ char *photo_picture_infos_get(Picture *p)
 {
    char buf[4096];
    char buf_ext[4096];
+   Evas_Object *img;
+   Evas_Coord w = 0, h = 0;
+   int err;
+
+   img = evas_object_image_add(p->pi->gcc->gadcon->evas);
+   evas_object_image_file_set(img, p->path, NULL);
+   err = evas_object_image_load_error_get(img);
+   if (err == EVAS_LOAD_ERROR_NONE)
+      evas_object_image_size_get(img, &w, &h);
+   else
+      DPICL(("Picture load error: $d", err));
+   evas_object_del(img);
 
    if (ecore_file_exists(p->path))
      {
@@ -207,8 +219,9 @@ char *photo_picture_infos_get(Picture *p)
         date_ascii[strlen(date_ascii) - 1] = ' ';
         snprintf(buf_ext, sizeof(buf_ext),
                  "<underline=on underline_color=#000>Date :</> %s<br>"
-                 "<underline=on underline_color=#000>Size :</> %.2fMo",
-                 date_ascii, (float)ecore_file_size(p->path) / 1000000.0);
+                 "<underline=on underline_color=#000>Resolution :</> %dx%d  "
+                 "<underline=on underline_color=#000>Size :</> %.2fM",
+                 date_ascii, w, h, (float)ecore_file_size(p->path) / 1000000.0);
      }
    else
      {
