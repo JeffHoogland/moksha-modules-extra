@@ -28,11 +28,6 @@ struct _Photo_Config
       int popup;
       int thumb_msg;
    } local;
-   struct
-   {
-      
-   } net;
-
    int action_mouse_over;
    int action_mouse_left;
    int action_mouse_middle;
