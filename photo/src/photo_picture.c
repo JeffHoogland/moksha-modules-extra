@@ -196,18 +196,10 @@ char *photo_picture_infos_get(Picture *p)
 {
    char buf[4096];
    char buf_ext[4096];
-   Evas_Object *img;
-   Evas_Coord w = 0, h = 0;
-   int err;
+   int w = 0, h = 0;
 
-   img = evas_object_image_add(p->pi->gcc->gadcon->evas);
-   evas_object_image_file_set(img, p->path, NULL);
-   err = evas_object_image_load_error_get(img);
-   if (err == EVAS_LOAD_ERROR_NONE)
-      evas_object_image_size_get(img, &w, &h);
-   else
-      DPICL(("Picture load error: $d", err));
-   evas_object_del(img);
+   if (!photo_util_image_size(p->path, &w, &h))
+      DPICL(("Picture load error: $s", p->path));
 
    if (ecore_file_exists(p->path))
      {

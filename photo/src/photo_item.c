@@ -51,13 +51,21 @@ else                                                             \
 #define IMPORT_SCALE_ASPECT_OUT 4
 #define IMPORT_PAN              5
 
-typedef struct _Photo_Exe_Data Photo_Exe_Data;
-struct _Photo_Exe_Data
+typedef struct _Import Import;
+
+struct _Import
 {
-   Ecore_Exe            *exe;
-   Ecore_End_Cb          ok;
+  const char *file;
+  int method;
+  int external;
+  int quality;
+
+  Ecore_Exe *exe;
+  Ecore_Event_Handler *exe_handler;
+  Ecore_End_Cb ok;
+  char *tmpf;
+  char *fdest;
 };
-Ecore_Event_Handler  *exe_handler = NULL;
 const char *name = NULL;
 
 // Local Functions
@@ -72,10 +80,10 @@ static void     _cb_mouse_out(void *data, Evas *e __UNUSED__, Evas_Object *obj _
 static void     _cb_mouse_wheel(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info);
 static void     _cb_popi_close(void *data);
 
-static const char*    _edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_End_Cb ok);
+static const char*    _edj_gen(Import *import);
 static void           _cb_import_ok(void *data, void *dia __UNUSED__);
 static Eina_Bool      _cb_edje_cc_exit(void *data, int type __UNUSED__, void *event);
-
+static void           _import_free(Import *import);
 // Public functions
 Photo_Item *photo_item_add(E_Gadcon_Client *gcc, Evas_Object *obj, const char *id)
 {
@@ -382,6 +390,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
    Ecore_Exe *exe;
    const char *file;
    char buf[4096];
+   Import *import = NULL;
 
    zone = e_zone_current_get(e_container_current_get(e_manager_current_get()));
    if (!zone) return 0;
@@ -389,27 +398,33 @@ int  photo_item_action_setbg(Photo_Item *pi)
    p = photo_item_picture_current_get(pi);
    if (!p) return 0;
 
-   file = p->path;
    name = p->infos.name;
+   import = E_NEW(Import, 1);
+   if (!import)
+      return 0;
+   import->method = IMPORT_SCALE_ASPECT_OUT;
+   import->file = p->path;
+   import->quality = 100;
+   import->external = 0;
+   import->ok = _cb_import_ok;
 
    if (photo->config->pictures_set_bg_purge)
      photo_picture_setbg_purge(0);
 
-   if (!ecore_file_exists(file))
+   if (!ecore_file_exists(import->file))
      {
         snprintf(buf, sizeof(buf),
                  D_("<hilight>File %s doesn't exist.</hilight><br><br>"
                    "This file is in the picture list, but it seems you removed<br>"
-                   "it from disk. It can't be set as background, sorry."), file);
+                   "it from disk. It can't be set as background, sorry."), import->file);
         e_module_dialog_show(photo->module, D_("Photo Module Error"), buf);
         return 0;
      }
 
-   if (!strstr(file, ".edj"))
+   if (!strstr(import->file, ".edj"))
      {
-        DITEM(("Set background with image %s", file));
-        file = _edj_gen(file, 0, 100, IMPORT_SCALE_ASPECT_OUT, (Ecore_End_Cb) _cb_import_ok);
-        sleep(1);
+        DITEM(("Set background with image %s", import->file));
+        file = _edj_gen(import);
         while (e_config->desktop_backgrounds)
           {
              E_Config_Desktop_Background *cfbg;
@@ -423,7 +438,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
         return 1;
      }
    
-    DITEM(("Set edje background %s", file));
+    DITEM(("Set edje background %s", import->file));
     // FIX ME: This is broken below
     // Uses an old version of e17 enlightenment_remote no longer has such an option
     //   altho I have thought about adding it. regardless should use native e code here
@@ -710,11 +725,8 @@ _cb_popi_close(void *data)
 }
 
 static const char *
-_edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_End_Cb ok)
+_edj_gen(Import *import)
 {
-   Evas_Object *img;
-   Ecore_Evas *ee = ecore_evas_buffer_new(100, 100);
-   Evas *evas = ecore_evas_get(ee);
    Eina_Bool anim = EINA_FALSE;
    int fd, num = 1;
    int w = 0, h = 0;
@@ -725,24 +737,19 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_En
    FILE *f;
    size_t len, off;
    const char *ret;
-   Photo_Exe_Data *id;
    
-   id = E_NEW(Photo_Exe_Data, 1);
-   if (!id) return NULL;
-   id->ok = ok;
-   
-   file = ecore_file_file_get(path);
+   file = ecore_file_file_get(import->file);
    fstrip = ecore_file_strip_ext(file);
    if (!fstrip)
       {
-         E_FREE(id);
+         _import_free(import);
          return NULL;
       }
    len = e_user_dir_snprintf(buf, sizeof(buf), "backgrounds/%s.edj", fstrip);
    if (len >= sizeof(buf))
      {
         free(fstrip);
-        E_FREE(id);
+        _import_free(import);
         return NULL;
      }
    off = len - (sizeof(".edj") - 1);
@@ -757,7 +764,7 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_En
    if (num == 100)
      {
         printf("Couldn't come up with another filename for %s\n", buf);
-        E_FREE(id);
+        _import_free(import);
         return NULL;
      }
 
@@ -766,7 +773,7 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_En
    if (fd < 0)
      {
         printf("Error Creating tmp file: %s\n", strerror(errno));
-        E_FREE(id);
+        _import_free(import);
         return NULL;
      }
 
@@ -774,12 +781,12 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_En
    if (!f)
      {
         printf("Cannot open %s for writing\n", tmpn);
-        E_FREE(id);
+        _import_free(import);
         return NULL;
      }
 
-   anim = eina_str_has_extension(path, "gif");
-   imgdir = ecore_file_dir_get(path);
+   anim = eina_str_has_extension(import->file, "gif");
+   imgdir = ecore_file_dir_get(import->file);
    if (!imgdir) ipart[0] = '\0';
    else
      {
@@ -787,25 +794,26 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_En
         free(imgdir);
      }
 
-   img = evas_object_image_add(evas);
-   evas_object_image_file_set(img, path, NULL);
-   evas_object_image_size_get(img, &w, &h);
-   evas_object_del(img);
-
-   if (external)
+   if (!photo_util_image_size(import->file, &w, &h))
      {
-        fstrip = strdupa(e_util_filename_escape(path));
+        _import_free(import);
+        return NULL;
+     }
+
+   if (import->external)
+     {
+        fstrip = strdupa(e_util_filename_escape(import->file));
         snprintf(enc, sizeof(enc), "USER");
      }
    else
      {
         fstrip = strdupa(e_util_filename_escape(file));
-        if (quality == 100)
+        if (import->quality == 100)
           snprintf(enc, sizeof(enc), "COMP");
         else
-          snprintf(enc, sizeof(enc), "LOSSY %i", quality);
+          snprintf(enc, sizeof(enc), "LOSSY %i", import->quality);
      }
-   switch (method)
+   switch (import->method)
      {
       case IMPORT_STRETCH:
         fprintf(f,
@@ -983,10 +991,12 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_En
    snprintf(cmd, sizeof(cmd), "edje_cc -v %s %s %s",
             ipart, tmpn, e_util_filename_escape(buf));
 
-   if (exe_handler) ecore_event_handler_del(exe_handler);
-   exe_handler = ecore_event_handler_add(ECORE_EXE_EVENT_DEL,
-                             _cb_edje_cc_exit, id);
-   id->exe = ecore_exe_run(cmd, id);
+   import->tmpf = strdup(tmpn);
+   import->fdest = strdup(buf);
+   if (import->exe_handler) ecore_event_handler_del(import->exe_handler);
+   import->exe_handler = ecore_event_handler_add(ECORE_EXE_EVENT_DEL,
+                             _cb_edje_cc_exit, import);
+   import->exe = ecore_exe_run(cmd, import);
 
    ret = eina_stringshare_add(buf);
    return ret;
@@ -995,13 +1005,11 @@ _edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_En
 static void
 _cb_import_ok(void *data, void *dia __UNUSED__)
 {
-   if (exe_handler)
-     {
-       ecore_event_handler_del(exe_handler);
-       exe_handler = NULL;
-     }
+   Import *import;
+   import = data;
+
    if (photo->config->pictures_set_bg_purge)	
-      photo_picture_setbg_add((char*) data);
+      photo_picture_setbg_add(name);
    name = NULL;
    e_bg_update();
    e_config_save_queue();
@@ -1010,7 +1018,8 @@ _cb_import_ok(void *data, void *dia __UNUSED__)
 static Eina_Bool
 _cb_edje_cc_exit(void *data, int type __UNUSED__, void *event)
 {
-   Photo_Exe_Data *import;
+   EINA_SAFETY_ON_NULL_RETURN_VAL(data, ECORE_CALLBACK_DONE);
+   Import *import;
    Ecore_Exe_Event_Del *ev;
    int r = 1;
 
@@ -1026,12 +1035,19 @@ _cb_edje_cc_exit(void *data, int type __UNUSED__, void *event)
         r = 0;
      }
 
-   if (r && import->ok)
-     {
-        import->ok((void *) name, import);
-        E_FREE(import);
-     }
-   else
-     E_FREE(import);
+   if (r && import->ok) import->ok((void *) name, import);
+   _import_free(import);
+
    return ECORE_CALLBACK_DONE;
+}
+
+static void
+_import_free(Import *import)
+{
+   if (import->exe_handler)
+     {
+        ecore_event_handler_del(import->exe_handler);
+        import->exe_handler = NULL;
+     }
+     E_FREE(import);
 }

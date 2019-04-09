@@ -15,6 +15,6 @@
 void photo_util_edje_set(Evas_Object *obj, char *key);
 void photo_util_icon_set(Evas_Object *ic, char *key);
 void photo_util_menu_icon_set(E_Menu_Item *mi, char *key);
-
+Eina_Bool photo_util_image_size(const char *path, int *w, int *h);
 #endif
 #endif
