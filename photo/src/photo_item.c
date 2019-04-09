@@ -72,7 +72,7 @@ static void     _cb_mouse_out(void *data, Evas *e __UNUSED__, Evas_Object *obj _
 static void     _cb_mouse_wheel(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info);
 static void     _cb_popi_close(void *data);
 
-static const char*    _edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas *evas, Ecore_End_Cb ok);
+static const char*    _edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_End_Cb ok);
 static void           _cb_import_ok(void *data, void *dia __UNUSED__);
 static Eina_Bool      _cb_edje_cc_exit(void *data, int type __UNUSED__, void *event);
 
@@ -408,7 +408,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
    if (!strstr(file, ".edj"))
      {
         DITEM(("Set background with image %s", file));
-        file = _edj_gen(file, 0, 100, IMPORT_SCALE_ASPECT_OUT, pi->gcc->gadcon->evas, (Ecore_End_Cb) _cb_import_ok);
+        file = _edj_gen(file, 0, 100, IMPORT_SCALE_ASPECT_OUT, (Ecore_End_Cb) _cb_import_ok);
         sleep(1);
         while (e_config->desktop_backgrounds)
           {
@@ -710,9 +710,11 @@ _cb_popi_close(void *data)
 }
 
 static const char *
-_edj_gen(const char *path, Eina_Bool external, int quality, int method, Evas* evas, Ecore_End_Cb ok)
+_edj_gen(const char *path, Eina_Bool external, int quality, int method, Ecore_End_Cb ok)
 {
    Evas_Object *img;
+   Ecore_Evas *ee = ecore_evas_buffer_new(100, 100);
+   Evas *evas = ecore_evas_get(ee);
    Eina_Bool anim = EINA_FALSE;
    int fd, num = 1;
    int w = 0, h = 0;
