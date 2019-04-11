@@ -48,7 +48,7 @@ struct _Photo_Item
    Photo_Config_Item *config;
    E_Config_Dialog *config_dialog;
    E_Menu *menu;
-  E_Menu *menu_histo;
+   E_Menu *menu_histo;
 
    Ecore_Timer *timer;
 
@@ -70,7 +70,6 @@ struct _Photo_Item
    Ecore_Event_Handler *local_ev_fill_handler;
    Ecore_Event_Handler *net_ev_fill_handler;
 };
-
 
 Photo_Item  *photo_item_add(E_Gadcon_Client *gcc, Evas_Object *obj, const char *id);
 void         photo_item_del(Photo_Item *pi);

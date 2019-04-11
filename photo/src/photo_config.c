@@ -4,7 +4,6 @@ static E_Config_DD *_photo_edd = NULL;
 static E_Config_DD *_photo_dir_edd = NULL;
 static E_Config_DD *_photo_item_edd = NULL;
 
-
 /*
  * Public functions
  */
@@ -13,7 +12,7 @@ int photo_config_init(void)
 {
    Eina_List *l;
    char buf[4096];
-	
+
    _photo_dir_edd = E_CONFIG_DD_NEW("Photo_Local_Dir", Picture_Local_Dir);
 #undef T
 #undef D
@@ -47,6 +46,14 @@ int photo_config_init(void)
    E_CONFIG_VAL(D, T, pictures_set_bg_purge, SHORT);
    E_CONFIG_VAL(D, T, pictures_viewer, STR);
    E_CONFIG_VAL(D, T, pictures_thumb_size, SHORT);
+   E_CONFIG_VAL(D, T, bg_dialog, SHORT);
+   E_CONFIG_VAL(D, T, bg_method, SHORT);
+   E_CONFIG_VAL(D, T, bg_external, SHORT);
+   E_CONFIG_VAL(D, T, bg_quality, SHORT);
+   E_CONFIG_VAL(D, T, bg_color_r, SHORT);
+   E_CONFIG_VAL(D, T, bg_color_g, SHORT);
+   E_CONFIG_VAL(D, T, bg_color_b, SHORT);
+   E_CONFIG_VAL(D, T, bg_color_a, SHORT);
    E_CONFIG_LIST(D, T, local.dirs, _photo_dir_edd);
    E_CONFIG_VAL(D, T, local.auto_reload, SHORT);
    E_CONFIG_VAL(D, T, local.popup, SHORT);
@@ -99,7 +106,15 @@ int photo_config_init(void)
         c->pictures_set_bg_purge = PICTURE_SET_BG_PURGE_DEFAULT;
         c->pictures_viewer = eina_stringshare_add(PICTURE_VIEWER_DEFAULT);
         c->pictures_thumb_size = PICTURE_THUMB_SIZE_DEFAULT;
-        c->local.dirs = eina_list_append(c->local.dirs,
+        c->bg_dialog   = PHOTO_BG_DIALOG_DEFAULT;
+        c->bg_method   = PHOTO_BG_METHOD_DEFAULT;
+        c->bg_external = PHOTO_BG_EXTERNAL_DEFAULT;
+        c->bg_quality  = PHOTO_BG_QUALITY_DEFAULT;
+        c->bg_color_r  = PHOTO_BG_COLOR_R_DEFAULT;
+        c->bg_color_g  = PHOTO_BG_COLOR_G_DEFAULT;
+        c->bg_color_b  = PHOTO_BG_COLOR_B_DEFAULT;
+        c->bg_color_a  = PHOTO_BG_COLOR_A_DEFAULT;
+        c->local.dirs  = eina_list_append(c->local.dirs,
                                          photo_picture_local_dir_new((char *)e_module_dir_get(photo->module),
                                                                      1, 0));
         c->local.auto_reload = PICTURE_LOCAL_AUTO_RELOAD_DEFAULT;
@@ -114,6 +129,14 @@ int photo_config_init(void)
    E_CONFIG_LIMIT(photo->config->show_label, 0, 1);
    E_CONFIG_LIMIT(photo->config->nice_trans, 0, 1);
    E_CONFIG_LIMIT(photo->config->pictures_from, 0, 2);
+   E_CONFIG_LIMIT(photo->config->bg_dialog, 0, 1);
+   E_CONFIG_LIMIT(photo->config->bg_method, 0, 5);
+   E_CONFIG_LIMIT(photo->config->bg_external, 0, 1);
+   E_CONFIG_LIMIT(photo->config->bg_quality, 1, 100);
+   E_CONFIG_LIMIT(photo->config->bg_color_r, 0, 255);
+   E_CONFIG_LIMIT(photo->config->bg_color_g, 0, 255);
+   E_CONFIG_LIMIT(photo->config->bg_color_b, 0, 255);
+   E_CONFIG_LIMIT(photo->config->bg_color_a, 0, 255);
    E_CONFIG_LIMIT(photo->config->local.auto_reload, 0, 1);
    E_CONFIG_LIMIT(photo->config->local.popup, 0, 2);
    E_CONFIG_LIMIT(photo->config->local.thumb_msg, 0, 1);
@@ -143,7 +166,6 @@ int photo_config_init(void)
         E_CONFIG_LIMIT(pic->action_mouse_left, ITEM_ACTION_NO, ITEM_ACTION_PARENT);
         E_CONFIG_LIMIT(pic->action_mouse_middle, ITEM_ACTION_NO, ITEM_ACTION_PARENT);
      }
-
    return 1;
 }
 
@@ -213,9 +235,8 @@ Photo_Config_Item *photo_config_item_new(const char *id)
    pic->action_mouse_over = ITEM_ACTION_PARENT;
    pic->action_mouse_left = ITEM_ACTION_PARENT;
    pic->action_mouse_middle = ITEM_ACTION_PARENT;
-
+   
    photo->config->items = eina_list_append(photo->config->items, pic);
-
    return pic;
 }
 

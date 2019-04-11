@@ -8,7 +8,23 @@ typedef struct _Photo_Config_Item Photo_Config_Item;
 #ifndef PHOTO_CONFIG_H_INCLUDED
 #define PHOTO_CONFIG_H_INCLUDED
 
-#define CONFIG_VERSION 3
+#define CONFIG_VERSION 4
+
+#define IMPORT_STRETCH          0
+#define IMPORT_TILE             1
+#define IMPORT_CENTER           2
+#define IMPORT_SCALE_ASPECT_IN  3
+#define IMPORT_SCALE_ASPECT_OUT 4
+#define IMPORT_PAN              5
+
+#define PHOTO_BG_DIALOG_DEFAULT EINA_FALSE
+#define PHOTO_BG_METHOD_DEFAULT IMPORT_CENTER
+#define PHOTO_BG_EXTERNAL_DEFAULT EINA_FALSE
+#define PHOTO_BG_QUALITY_DEFAULT 100
+#define PHOTO_BG_COLOR_R_DEFAULT 0
+#define PHOTO_BG_COLOR_G_DEFAULT 0
+#define PHOTO_BG_COLOR_B_DEFAULT 0
+#define PHOTO_BG_COLOR_A_DEFAULT 255
 
 struct _Photo_Config
 {
@@ -21,6 +37,14 @@ struct _Photo_Config
    int pictures_set_bg_purge;
    const char *pictures_viewer;
    int pictures_thumb_size;
+   int bg_dialog;
+   int bg_method;
+   int bg_external;
+   int bg_quality;
+   int bg_color_r;
+   int bg_color_g;
+   int bg_color_b;
+   int bg_color_a;
    struct
    {
       Eina_List *dirs;

@@ -44,12 +44,6 @@ else                                                             \
 }
 
 #define STRINGIFY(str) #str
-#define IMPORT_STRETCH          0
-#define IMPORT_TILE             1
-#define IMPORT_CENTER           2
-#define IMPORT_SCALE_ASPECT_IN  3
-#define IMPORT_SCALE_ASPECT_OUT 4
-#define IMPORT_PAN              5
 
 typedef struct _Import Import;
 
@@ -59,6 +53,7 @@ struct _Import
   int method;
   int external;
   int quality;
+  E_Color color;
 
   Ecore_Exe *exe;
   Ecore_Event_Handler *exe_handler;
@@ -66,6 +61,7 @@ struct _Import
   char *tmpf;
   char *fdest;
 };
+
 const char *name = NULL;
 
 // Local Functions
@@ -84,6 +80,8 @@ static const char*    _edj_gen(Import *import);
 static void           _cb_import_ok(void *data, void *dia __UNUSED__);
 static Eina_Bool      _cb_edje_cc_exit(void *data, int type __UNUSED__, void *event);
 static void           _import_free(Import *import);
+static void           _apply_import_ok(const char *file, E_Import_Config_Dialog *import);
+static Import *       _init_import(void);
 // Public functions
 Photo_Item *photo_item_add(E_Gadcon_Client *gcc, Evas_Object *obj, const char *id)
 {
@@ -390,7 +388,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
    Ecore_Exe *exe;
    const char *file;
    char buf[4096];
-   Import *import = NULL;
+   Import *import;
 
    zone = e_zone_current_get(e_container_current_get(e_manager_current_get()));
    if (!zone) return 0;
@@ -399,15 +397,18 @@ int  photo_item_action_setbg(Photo_Item *pi)
    if (!p) return 0;
 
    name = p->infos.name;
-   import = E_NEW(Import, 1);
-   if (!import)
-      return 0;
-   import->method = IMPORT_SCALE_ASPECT_OUT;
-   import->file = p->path;
-   import->quality = 100;
-   import->external = 0;
-   import->ok = _cb_import_ok;
 
+   if (!(import = _init_import())) return 0;
+
+   import->file = p->path;
+
+   if (photo->config && photo->config->bg_dialog)
+      {
+          E_Import_Config_Dialog *import_cfg;
+          import_cfg = e_import_config_dialog_show(NULL, import->file, (Ecore_End_Cb) _apply_import_ok, NULL);
+          return 1;
+      }
+   import->ok = _cb_import_ok;
    if (photo->config->pictures_set_bg_purge)
      photo_picture_setbg_purge(0);
 
@@ -420,7 +421,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
         e_module_dialog_show(photo->module, D_("Photo Module Error"), buf);
         return 0;
      }
-
+   // use eina_str_has_extension here
    if (!strstr(import->file, ".edj"))
      {
         DITEM(("Set background with image %s", import->file));
@@ -724,6 +725,9 @@ _cb_popi_close(void *data)
    pi->popi = NULL;
 }
 
+/* Code duplicated more or less from _import_edj_gen in 
+ *   moksha/src/bin/e_import_config_dialog.c
+ * */
 static const char *
 _edj_gen(Import *import)
 {
@@ -756,10 +760,11 @@ _edj_gen(Import *import)
    for (num = 1; ecore_file_exists(buf) && num < 100; num++)
      snprintf(buf + off, sizeof(buf) - off, "-%d.edj", num);
    free(fstrip);
-   cr = 0;
-   cg = 0;
-   cb = 0;
-   ca = 0;
+
+   cr = import->color.r;
+   cg = import->color.g;
+   cb = import->color.b;
+   ca = import->color.a;
 
    if (num == 100)
      {
@@ -1050,4 +1055,47 @@ _import_free(Import *import)
         import->exe_handler = NULL;
      }
      E_FREE(import);
+}
+
+static void
+_apply_import_ok(const char *file, E_Import_Config_Dialog *import)
+{
+   e_bg_default_set(import->fdest);
+   if (photo->config->pictures_set_bg_purge)
+      photo_picture_setbg_add(name);
+   name = NULL;
+   e_bg_update();
+   e_config_save_queue();
+}
+
+static Import*
+_init_import(void)
+{
+   Import *import = E_NEW(Import, 1);
+   E_Color color;
+   EINA_SAFETY_ON_NULL_RETURN_VAL(import, NULL);
+   if (photo->config)
+     {
+         import->method   = photo->config->bg_method;
+         import->quality  = photo->config->bg_quality;
+         import->external = photo->config->bg_external;
+         color.r = photo->config->bg_color_r;
+         color.b = photo->config->bg_color_g;
+         color.g = photo->config->bg_color_b;
+         color.a = photo->config->bg_color_a;
+     }
+   else
+     {
+         // Should never happen
+         DITEM(("Error: No photo config"));
+         import->method   = PHOTO_BG_METHOD_DEFAULT;
+         import->quality  = PHOTO_BG_QUALITY_DEFAULT;
+         import->external = PHOTO_BG_EXTERNAL_DEFAULT;
+         color.r = PHOTO_BG_COLOR_R_DEFAULT;
+         color.b = PHOTO_BG_COLOR_B_DEFAULT;
+         color.g = PHOTO_BG_COLOR_G_DEFAULT;
+         color.a = PHOTO_BG_COLOR_A_DEFAULT;
+     }
+   import->color = color;
+   return import;
 }
