@@ -73,6 +73,11 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 					_net_cb_mouse_in);
 	edje_object_signal_callback_del(inst->o_net, "e,action,mouse,out", "",
 					_net_cb_mouse_out);
+   if (inst->popup)
+      {
+          e_object_del(E_OBJECT(inst->popup));
+          inst->popup = NULL;
+       }
 	evas_object_del(inst->o_net);
      }
    E_FREE(inst);
