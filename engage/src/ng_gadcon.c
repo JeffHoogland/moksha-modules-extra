@@ -518,7 +518,7 @@ static void
 _cb_add(void *data, void *data2)
 {
    E_Config_Dialog_Data *cfdata = NULL;
-   Eina_List *l, *ll;
+   Eina_List *l, *ll, *al;
    char *gadcon_name;
    Ngi_Box *box;
    E_Ilist_Item *item;
@@ -529,7 +529,9 @@ _cb_add(void *data, void *data2)
 
    box = cfdata->box;
 
-   EINA_LIST_FOREACH(e_widget_ilist_items_get(cfdata->o_avail), l, item)
+   al = eina_list_clone(e_widget_ilist_items_get(cfdata->o_avail));
+
+   EINA_LIST_FOREACH(al, l, item)
      {
 	Config_Gadcon *cg;
 	E_Config_Gadcon_Client *cgc;
@@ -567,6 +569,7 @@ _cb_add(void *data, void *data2)
              update = 1;
           }
      }
+   eina_list_free(al);
 
    if (update)
      {
@@ -583,14 +586,16 @@ static void
 _cb_del(void *data, void *data2)
 {
    E_Config_Dialog_Data *cfdata = NULL;
-   Eina_List *l = NULL, *g = NULL;
+   Eina_List *l = NULL, *g = NULL, *sl = NULL;
    int i = 0, update = 0;
    Ngi_Item_Gadcon *it;
 
    if (!(cfdata = data))
      return;
 
-   for (i = 0, l = e_widget_ilist_items_get(cfdata->o_sel); l; l = l->next, i++)
+   sl = eina_list_clone(e_widget_ilist_items_get(cfdata->o_sel));
+
+   for (i = 0, l = sl; l; l = l->next, i++)
      {
         E_Ilist_Item *item = NULL;
         E_Config_Gadcon_Client *cgc;
@@ -638,6 +643,7 @@ _cb_del(void *data, void *data2)
 	     update = 1;
 	  }
      }
+   eina_list_free(sl);
    if (update)
      {
         _load_sel_gadgets(cfdata);
