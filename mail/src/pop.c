@@ -253,6 +253,7 @@ _mail_pop_server_data (void *data, int type, void *event)
         while ((heystack = strstr(heystack, "\nFrom: ")) != NULL)
         {
            heystack += 7;
+           if (*heystack=='"') heystack++; 
            tmp = heystack;
            counts = 0;
            
