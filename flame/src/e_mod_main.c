@@ -388,7 +388,7 @@ _flame_palette_gold_set (Flame_Face * ff)
       r = gold_cmap[(i * 4) + 0];
       g = gold_cmap[(i * 4) + 1];
       b = gold_cmap[(i * 4) + 2];
-      evas_common_convert_color_argb_premul (a, &r, &g, &b);
+      evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
 	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
 	 (((unsigned char) g) << 8) | ((unsigned char) b));
@@ -419,7 +419,7 @@ _flame_palette_fire_set (Flame_Face * ff)
       if (b > 255)
 	b = 255;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
-      evas_common_convert_color_argb_premul (a, &r, &g, &b);
+      evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
 	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
 	 (((unsigned char) g) << 8) | ((unsigned char) b));
@@ -438,7 +438,7 @@ _flame_palette_plasma_set (Flame_Face * ff)
       g = 0;
       b = (i * 255) / 80;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
-      evas_common_convert_color_argb_premul (a, &r, &g, &b);
+      evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
 	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
 	 (((unsigned char) g) << 8) | ((unsigned char) b));
@@ -453,7 +453,7 @@ _flame_palette_plasma_set (Flame_Face * ff)
 	 a = (r * r + g * g + b * b);
       else
          a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
-      evas_common_convert_color_argb_premul (a, &r, &g, &b);
+      evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
 	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
 	 (((unsigned char) g) << 8) | ((unsigned char) b));
@@ -468,7 +468,7 @@ _flame_palette_plasma_set (Flame_Face * ff)
          a = r * r + g * g + b * b;
       else
          a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
-      evas_common_convert_color_argb_premul (a, &r, &g, &b);
+      evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
 	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
 	 (((unsigned char) g) << 8) | ((unsigned char) b));
@@ -499,7 +499,7 @@ _flame_palette_matrix_set (Flame_Face * ff)
       if (b > 255)
 	b = 255;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
-      evas_common_convert_color_argb_premul (a, &r, &g, &b);
+      evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
 	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
 	 (((unsigned char) g) << 8) | ((unsigned char) b));
@@ -530,7 +530,7 @@ _flame_palette_ice_set (Flame_Face * ff)
       if (b > 255)
 	b = 255;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
-      evas_common_convert_color_argb_premul (a, &r, &g, &b);
+      evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
 	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
 	 (((unsigned char) g) << 8) | ((unsigned char) b));
@@ -561,7 +561,7 @@ _flame_palette_white_set (Flame_Face * ff)
       if (b > 255)
 	b = 255;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
-      evas_common_convert_color_argb_premul (a, &r, &g, &b);
+      evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
 	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
 	 (((unsigned char) g) << 8) | ((unsigned char) b));
@@ -594,7 +594,7 @@ _flame_palette_custom_set (Flame_Face * ff)
       if (b > 255)
 	b = 255;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
-      evas_common_convert_color_argb_premul (a, &r, &g, &b);
+      evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
 	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
 	 (((unsigned char) g) << 8) | ((unsigned char) b));
