@@ -3,6 +3,10 @@
 #include "e_mod_main.h"
 #include "e_mod_config.h"
 
+#define SPEED_SLOW 6
+#define SPEED_MED 4
+#define SPEED_FAST 2
+static int MAX_FRAMES = SPEED_SLOW * SPEED_MED * SPEED_FAST;
 /* module private routines */
 static Snow *_snow_init(E_Module *m);
 static void _snow_shutdown(Snow *snow);
@@ -268,13 +272,13 @@ _snow_flakes_load(char type, Snow *snow)
         switch (type)
           {
           case 's':
-             flake->speed = 1;
+             flake->speed = SPEED_SLOW;
              break;
           case 'm':
-             flake->speed = 2;
+             flake->speed = SPEED_MED;
              break;
           case 'l':
-             flake->speed = 3;
+             flake->speed = SPEED_FAST;
              break;
           }
         snow->flakes = eina_list_append(snow->flakes, flake);
@@ -288,10 +292,11 @@ _snow_cb_animator(void *data)
    Snow *snow;
    Eina_List *next;
    Evas_Coord ww;
-   double d;
+   double time;
 
    snow = data;
    evas_output_viewport_get(snow->canvas, NULL, NULL, &ww, NULL);
+   time = ecore_time_get();
 
    next = snow->flakes;
    while (next)
@@ -301,28 +306,33 @@ _snow_cb_animator(void *data)
         int drift;
 
         flake = next->data;
-        d = ecore_time_get() - flake->start_time;
-        y = 30 * d * flake->speed;
-        switch (rand() % 22)
+        next = eina_list_next(next);
+        if (snow->frame % flake->speed != 0)
+          continue;
+
+        switch (rand() % 50)
           {
-           case 19:
+           case 0:
              drift = -1;
              break;
-           case 20:
-           case 21:
+           case 1:
+           case 2:
              drift = 1;
              break;
            default:
              drift = 0;
           }
-        evas_object_geometry_get(flake->flake, &x, NULL, NULL, NULL);
-        if (y > snow->height)
-           flake->start_time = ecore_time_get() + (double)(random() % 100) / (double)100;
+        evas_object_geometry_get(flake->flake, &x, &y, NULL, NULL);
+        if (++y > snow->height)
+           y = -1 * rand() % 100;
         if (x + drift >= ww)
           x = 0;
         evas_object_move(flake->flake, x + drift, y);
-        next = eina_list_next(next);
      }
+
+   snow->frame++;
+   if (snow->frame > MAX_FRAMES)
+     snow->frame = 0;
    return EINA_TRUE;
 }
 

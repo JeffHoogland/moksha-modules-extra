@@ -27,6 +27,7 @@ struct _Snow
    Eina_List *cons;
    Evas *canvas;
    Ecore_Animator *animator;
+   int frame;
    Eina_List *trees;
    Eina_List *flakes;
 
