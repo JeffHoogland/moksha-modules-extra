@@ -287,23 +287,40 @@ _snow_cb_animator(void *data)
 {
    Snow *snow;
    Eina_List *next;
+   Evas_Coord ww;
    double d;
 
    snow = data;
+   evas_output_viewport_get(snow->canvas, NULL, NULL, &ww, NULL);
+
    next = snow->flakes;
    while (next)
      {
         Snow_Flake *flake;
         Evas_Coord x, y;
+        int drift;
 
         flake = next->data;
         d = ecore_time_get() - flake->start_time;
         y = 30 * d * flake->speed;
+        switch (rand() % 22)
+          {
+           case 19:
+             drift = -1;
+             break;
+           case 20:
+           case 21:
+             drift = 1;
+             break;
+           default:
+             drift = 0;
+          }
         evas_object_geometry_get(flake->flake, &x, NULL, NULL, NULL);
         if (y > snow->height)
            flake->start_time = ecore_time_get() + (double)(random() % 100) / (double)100;
-        evas_object_move(flake->flake, x, y);
-
+        if (x + drift >= ww)
+          x = 0;
+        evas_object_move(flake->flake, x + drift, y);
         next = eina_list_next(next);
      }
    return EINA_TRUE;
