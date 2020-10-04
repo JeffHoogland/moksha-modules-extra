@@ -229,7 +229,7 @@ _set_cpu_load(void *data)
    while (i < cpu_count)
      {
 	snprintf(str_tmp, sizeof(str_tmp), "<br>%d%%", cpu_stats[i]);
-	strncat(str, str_tmp, sizeof(str));
+	strncat(str, str_tmp, sizeof(str)-1);
 	i++;
      }
    edje_object_part_text_set(cpu->o_icon, "load", str);
