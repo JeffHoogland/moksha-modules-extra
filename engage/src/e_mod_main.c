@@ -854,7 +854,7 @@ ngi_item_activate(Ng *ng)
 	     ng->item_active = it;
 	     _ngi_label_pos_set(ng);
 
-             if (it->label)
+             if (it->label && ng->cfg->show_label)
                {                  
                   evas_object_show(ng->o_label);
                   edje_object_signal_emit(ng->o_label, "e,state,label,show", "e");
