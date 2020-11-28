@@ -1,0 +1,5 @@
+moksha-module-engage (20201128bodhi1-1) focal; urgency=medium
+
+  * Engage show_label feature fix
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sat, 28 Nov 2020 09:40:15 +0400

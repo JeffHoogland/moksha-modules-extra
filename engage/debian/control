@@ -1,0 +1,14 @@
+Source: moksha-module-engage
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, moksha
+Standards-Version: 4.5.0
+Homepage: https://github.com/JeffHoogland/moksha-modules-extra
+Rules-Requires-Root: no
+
+Package: moksha-module-engage
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Engage Moksha Module
+ OSX style application launcher for the Moksha desktop

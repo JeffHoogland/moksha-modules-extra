@@ -1,0 +1,33 @@
+ng_gadcon.c:167:4: warning: ‘e_icon_object_set’ is deprecated [-Wdeprecated-declarations]
+    e_icon_object_set(it->o_proxy, o);
+    ^~~~~~~~~~~~~~~~~
+In file included from /usr/include/enlightenment/e_includes.h:16:0,
+                 from /usr/include/enlightenment/e.h:136,
+                 from e_mod_main.h:4,
+                 from ng_gadcon.c:1:
+/usr/include/enlightenment/e_icon.h:16:19: note: declared here
+ EAPI void         e_icon_object_set       (Evas_Object *obj, Evas_Object *o) EINA_DEPRECATED;
+
+
+In file included from /usr/include/enlightenment/e_includes.h:7,
+                 from /usr/include/enlightenment/e.h:134,
+                 from e_mod_main.h:4,
+                 from e_mod_main.c:1:
+e_mod_main.c: In function ‘e_modapi_init’:
+e_mod_main.c:1885:30: warning: ‘%s’ directive output may be truncated writing up to 4095 bytes into a region of size 4069 [-Wformat-truncation=]
+ 1885 |         e_error_message_show("Error creating directory:\n %s\n",buf);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~
+/usr/include/enlightenment/e_error.h:7:43: note: in definition of macro ‘e_error_message_show’
+    7 |    snprintf(__tmpbuf, sizeof(__tmpbuf), ##args); \
+      |                                           ^~~~
+e_mod_main.c:1885:59: note: format string is defined here
+ 1885 |         e_error_message_show("Error creating directory:\n %s\n",buf);
+      |                                                           ^~
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/enlightenment/e.h:57,
+                 from e_mod_main.h:4,
+                 from e_mod_main.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:67:10: note: ‘__builtin___snprintf_chk’ output between 29 and 4124 bytes into a destination of size 4096
+   67 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |        __bos (__s), __fmt, __va_arg_pack ());
