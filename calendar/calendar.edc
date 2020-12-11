@@ -46,7 +46,7 @@ images {
 collections {
    group {
       name: "modules/calendar/header";
-      min: 42 9;
+      min: 42 20;
       parts {	 
 	part {
  	    name: "base";
@@ -348,6 +348,7 @@ collections {
             name: "monthday";
             type: TEXT;
             mouse_events: 1;
+            scale: 1;
             description {
                state: "default" 0.0;
                rel1 {
@@ -368,6 +369,7 @@ collections {
                   size: 13;
                   min: 1 1;
                   fit: 1 1;
+                  align: 0.5 0.5; 
                   text_class: "module_large";
                   ellipsis: -1;
                }
@@ -377,6 +379,7 @@ collections {
             name: "weekday";
             type: TEXT;
             mouse_events: 1;
+            scale: 1;
             description {
                state: "default" 0.0;
                rel1 {
@@ -397,6 +400,7 @@ collections {
                   size: 9;
 		          min: 1 0;
                   fit: 1 1;
+                  align: 0.5 0.5;
                   text_class: "module_large";
                   ellipsis: -1;
                }
@@ -438,13 +442,13 @@ collections {
             scale: 1;
             description {
                state: "default" 0.0;
-               rel1.offset: 2 2;
-               rel2.offset: -2 -2;
+               rel1.offset: 2 0;
+               rel2.offset: -2 0;
                color: 25 50 25 255;
                color_class: "label_text";
                text {
                   font: "Sans:style=Bold";
-                  size: 9;
+                  size: 10;
                   min: 1 1;
                   align: 0.5 0.5;
                   text_class: "label";

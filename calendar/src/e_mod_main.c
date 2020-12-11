@@ -415,7 +415,7 @@ _calendar_popup_content_populate(Instance *inst, struct tm *time)
    for (col = 0; col < sizeof (days) / sizeof (char *); ++col)
      {
 	o = e_widget_label_add(evas, days[(col + inst->ci->firstweekday) % (sizeof (days) / sizeof (char *))]);
-	e_widget_table_object_append(table, o, col, 0, 1, 1, 1, 0, 0, 0);
+	e_widget_table_object_append(table, o, col, 0, 1, 1, 0, 0, 0, 0);
      }
 
    /* output days */
@@ -450,7 +450,7 @@ _calendar_popup_content_populate(Instance *inst, struct tm *time)
 	       }
 	     else
 	       o = e_widget_label_add(evas, buf);
-	     e_widget_table_object_append(table, o, col, row, 1, 1, 1, 0, 0, 0);
+	     e_widget_table_object_append(table, o, col, row, 1, 1, 0, 0, 0, 0);
 	}
 	if (day > maxdays+1) break;
      }
