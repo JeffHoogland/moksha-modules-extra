@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: engage\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2013-08-23 11:50+0200\n"
-"PO-Revision-Date: 2020-12-12 08:15+0100\n"
+"PO-Revision-Date: 2020-12-16 07:42+0100\n"
 "Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
 "Language-Team: French\n"
 "Language: fr\n"
@@ -120,7 +120,7 @@ msgstr "%1.0f \\%"
 
 #: src/ng_config.c:194
 msgid "Show Background Box"
-msgstr "Afficher la boîte du fond d'écran"
+msgstr "Afficher la boîte du fond"
 
 #: src/ng_config.c:197
 msgid "Show Mouse-Over Animation"
@@ -244,7 +244,7 @@ msgstr "Fonctionnalités Ecomorph"
 
 #: src/ng_config.c:320
 msgid "Show Icon Label"
-msgstr "Afficher l'étiquette de l'icône"
+msgstr "Afficher l'étiquette des icônes"
 
 #: src/ng_config.c:537
 msgid "Launcher Settings"
