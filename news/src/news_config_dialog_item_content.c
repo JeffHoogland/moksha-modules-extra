@@ -430,7 +430,8 @@ _cb_feed_change(void *data, Evas_Object *obj)
    E_Config_Dialog_Data *cfdata;
    E_Ilist_Item *item;
    News_Feed *feed;
-   Eina_List *sel, *items, *l;
+   Eina_List *sel;
+   const Eina_List *items, *l;
    int i;
 
    cfdata = data;
@@ -466,7 +467,8 @@ _cb_selected_feed_change(void *data, Evas_Object *obj)
    E_Config_Dialog_Data *cfdata;
    E_Ilist_Item *item;
    News_Feed *feed;
-   Eina_List *sel, *items, *l;
+   Eina_List *sel;
+   const Eina_List *items, *l;
    int i;
 
    cfdata = data;
