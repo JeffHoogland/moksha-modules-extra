@@ -31,6 +31,7 @@ collections
      {
 	name: "modules/mem/main";
 	min: 4 4;
+	scale: 1;
 	max: 128 128;
 	script 
 	  {
@@ -221,6 +222,7 @@ collections
 	       {
 		  name: "real_label";
 		  type: TEXT;
+		  scale: 1;
 		  effect: SOFT_SHADOW;
 		  description 
 		    {
@@ -380,6 +382,7 @@ collections
 	       {
 		  name: "swap_label";
 		  type: TEXT;
+		  scale: 1;
 		  effect: SOFT_SHADOW;
 		  description 
 		    {
