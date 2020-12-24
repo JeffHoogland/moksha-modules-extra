@@ -1878,14 +1878,25 @@ e_modapi_init(E_Module *m)
 
    snprintf(buf, sizeof(buf), "%s/engage.edj", e_module_dir_get(m));
    ngi_config->theme_path = strdup(buf);
-
-   snprintf(buf, sizeof(buf), "%s/.e/e/applications/bar/", e_user_homedir_get());
-   if (!ecore_file_mkdir(buf) && !ecore_file_is_dir(buf))
+   
+   int n = snprintf(0, 0, "%s/.e/e/applications/bar/", e_user_homedir_get());
+   if (n < 0)
      {
-        e_error_message_show("Error creating directory:\n %s\n",buf);
+        e_error_message_show("snprintf failed");
+        abort ();
+      }
+   
+   char *buff = (char *)malloc(n + 1);
+   
+   snprintf(buff, n + 1, "%s/.e/e/applications/bar/", e_user_homedir_get());
+   if (!ecore_file_mkdir(buff) && !ecore_file_is_dir(buff))
+     {
+        e_error_message_show("Error creating directory:\n %s\n",buff);
         return m;
      }
-
+     
+   free (buff);
+   
    e_configure_registry_item_add("extensions/engage", 40,
                                  D_("Engage"), NULL,
                                  "preferences-desktop-shelf",
