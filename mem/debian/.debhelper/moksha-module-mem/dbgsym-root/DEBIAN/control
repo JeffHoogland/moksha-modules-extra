@@ -1,0 +1,13 @@
+Package: moksha-module-mem-dbgsym
+Package-Type: ddeb
+Source: moksha-module-mem
+Version: 20201225bodhi1-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Installed-Size: 111
+Depends: moksha-module-mem (= 20201225bodhi1-1)
+Section: debug
+Priority: optional
+Description: debug symbols for moksha-module-mem
+Build-Ids: 3eebe0eca392b2a00452043db1ccb93e95905997
