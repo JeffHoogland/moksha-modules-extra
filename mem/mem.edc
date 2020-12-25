@@ -31,7 +31,6 @@ collections
      {
 	name: "modules/mem/main";
 	min: 4 4;
-	scale: 1;
 	max: 128 128;
 	script 
 	  {
