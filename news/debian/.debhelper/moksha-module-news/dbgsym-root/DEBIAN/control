@@ -1,0 +1,13 @@
+Package: moksha-module-news-dbgsym
+Package-Type: ddeb
+Source: moksha-module-news
+Version: 0.1.2-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Installed-Size: 543
+Depends: moksha-module-news (= 0.1.2-1)
+Section: debug
+Priority: optional
+Description: debug symbols for moksha-module-news
+Build-Ids: f2c93a0065c17d71bcd53397ecc9e269da84e4ff

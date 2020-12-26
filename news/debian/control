@@ -1,0 +1,14 @@
+Source: moksha-module-news
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, libc6 (>= 2.4), moksha
+Standards-Version: 4.5.0
+Homepage: https://github.com/JeffHoogland/moksha-modules-extra
+Rules-Requires-Root: no
+
+Package: moksha-module-news
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, moksha
+Description: News Module for Moksha
+ Moksha Gadget to monitor RSS feeds.
