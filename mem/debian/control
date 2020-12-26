@@ -1,0 +1,14 @@
+Source: moksha-module-mem
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, moksha
+Standards-Version: 4.5.0
+Homepage: https://git.moksha.org/moksha/modules/mem.git/
+Rules-Requires-Root: no
+
+Package: moksha-module-mem
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, moksha
+Description: Memory module for the Moksha desktop
+ Memory monitor for the Moksha desktop
