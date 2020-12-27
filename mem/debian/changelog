@@ -1,3 +1,9 @@
+moksha-module-mem (20201226bodhi1-1) bionic; urgency=medium
+
+  * Better visibility on shelf
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sat, 26 Dec 2020 17:46:31 +0004
+
 moksha-module-mem (20201225bodhi1-1) bionic; urgency=medium
 
   * Gcc warnings fix
