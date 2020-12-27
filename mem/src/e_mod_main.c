@@ -37,7 +37,6 @@ static void _mem_cb_mouse_out (void *data, Evas * e, Evas_Object * obj,
 			       void *event_info);
 static void _mem_menu_cb_configure (void *data, E_Menu * m, E_Menu_Item * mi);
 static void _mem_menu_cb_post (void *data, E_Menu * m);
-static void             _eval_instance_size(Instance *inst);
 static Config_Item *_mem_config_item_get (const char *id);
 static Mem *_mem_new (Evas * evas);
 static void _mem_free (Mem * mem);
