@@ -164,7 +164,8 @@ _ngi_gadcon_item_new(Ngi_Box *box, Config_Gadcon *cg, Ngi_Item *after)
    evas_object_image_source_set(o, it->base.obj);
    evas_object_resize(o, 128, 128);
    evas_object_image_fill_set(o, 0,0,128,128);
-   e_icon_image_object_set(it->o_proxy, o);
+   e_icon_object_set(it->o_proxy, o);           // Old API
+   // e_icon_image_object_set(it->o_proxy, o);     New API
 
    edje_object_part_swallow(it->base.over, "e.swallow.content", it->o_proxy);
    evas_object_pass_events_set(it->o_proxy, 1);

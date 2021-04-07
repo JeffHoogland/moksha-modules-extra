@@ -1810,7 +1810,7 @@ ngi_bar_config_new(int container_num, int zone_num)
 EAPI void *
 e_modapi_init(E_Module *m)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    ngi_config = NULL;
 
    /* Location of message catalogs for localization */
