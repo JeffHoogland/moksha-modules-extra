@@ -30,14 +30,14 @@ ngi_gadcon_init(void)
 
    EINA_LIST_FOREACH (ngi_config->items, l, ci)
      {
-	EINA_LIST_FOREACH (ci->boxes, ll, cb)
-	  {
-	     if (cb->type != gadcon)
-	       continue;
+   EINA_LIST_FOREACH (ci->boxes, ll, cb)
+     {
+        if (cb->type != gadcon)
+          continue;
 
-	     EINA_LIST_FOREACH(cb->gadcon_items, lll, cg)
-	       eina_hash_add(ngi_gadcon_hash, cg->name, cg);
-	  }
+        EINA_LIST_FOREACH(cb->gadcon_items, lll, cg)
+          eina_hash_add(ngi_gadcon_hash, cg->name, cg);
+     }
      }
 }
 
@@ -59,7 +59,7 @@ _ngi_gadcon_name_new()
         snprintf(name, 256, "ng_gadcon-%d", cnt++);
 
         if (!eina_hash_find(ngi_gadcon_hash, name))
-	  return strdup(name);
+     return strdup(name);
      }
    return NULL;
 }
@@ -421,20 +421,20 @@ _load_avail_gadgets(void *data)
    e_widget_ilist_clear(cfdata->o_avail);
    EINA_LIST_FOREACH (e_gadcon_provider_list(), l, cc)
      {
-	if (!cc)
-	  continue;
+   if (!cc)
+     continue;
 
-	if (cc->func.label)
-	  lbl = cc->func.label(cc);
+   if (cc->func.label)
+     lbl = cc->func.label(cc);
 
-	if (!lbl)
-	  lbl = cc->name;
+   if (!lbl)
+     lbl = cc->name;
 
-	if (cc->func.icon)
-	  icon = cc->func.icon(cc, evas);
+   if (cc->func.icon)
+     icon = cc->func.icon(cc, evas);
 
-	e_widget_ilist_append(cfdata->o_avail, icon, lbl, NULL,
-			      (void *)cc->name, NULL);
+   e_widget_ilist_append(cfdata->o_avail, icon, lbl, NULL,
+               (void *)cc->name, NULL);
      }
    e_widget_ilist_go(cfdata->o_avail);
    e_widget_size_min_get(cfdata->o_avail, &w, NULL);
@@ -468,34 +468,34 @@ _load_sel_gadgets(void *data)
 
    EINA_LIST_FOREACH(cfdata->box->items, ll, it)
      {
-	EINA_LIST_FOREACH(it->gadcon->cf->clients, l, cgc)
-	  {
-	     if (!cgc) continue;
+   EINA_LIST_FOREACH(it->gadcon->cf->clients, l, cgc)
+     {
+        if (!cgc) continue;
 
-	     EINA_LIST_FOREACH(e_gadcon_provider_list(), l2, gcc)
-	       {
-		  Evas_Object *icon = NULL;
-		  const char *lbl = NULL;
+        EINA_LIST_FOREACH(e_gadcon_provider_list(), l2, gcc)
+          {
+        Evas_Object *icon = NULL;
+        const char *lbl = NULL;
 
-		  if (!gcc) continue;
+        if (!gcc) continue;
 
-		  if ((cgc->name) && (gcc->name) &&
-		      (!strcmp(cgc->name, gcc->name)))
-		    {
-		       if (gcc->func.label)
-			 lbl = gcc->func.label(gcc);
+        if ((cgc->name) && (gcc->name) &&
+            (!strcmp(cgc->name, gcc->name)))
+          {
+             if (gcc->func.label)
+          lbl = gcc->func.label(gcc);
 
-		       if (!lbl)
-			 lbl = gcc->name;
+             if (!lbl)
+          lbl = gcc->name;
 
-		       if (gcc->func.icon)
-			 icon = gcc->func.icon(gcc, evas);
+             if (gcc->func.icon)
+          icon = gcc->func.icon(gcc, evas);
 
-		       e_widget_ilist_append(cfdata->o_sel, icon, lbl, NULL,
-					     (void *)gcc->name, NULL);
-		    }
-	       }
-	  }
+             e_widget_ilist_append(cfdata->o_sel, icon, lbl, NULL,
+                    (void *)gcc->name, NULL);
+          }
+          }
+     }
      }
 
    e_widget_ilist_go(cfdata->o_sel);
@@ -533,14 +533,14 @@ _cb_add(void *data, void *data2)
 
    EINA_LIST_FOREACH(al, l, item)
      {
-	Config_Gadcon *cg;
-	E_Config_Gadcon_Client *cgc;
-	Ngi_Item_Gadcon *it;
+   Config_Gadcon *cg;
+   E_Config_Gadcon_Client *cgc;
+   Ngi_Item_Gadcon *it;
         const char *name;
 
         if (!item->selected) continue;
 
-        name = (char *)	e_widget_ilist_item_data_get(item);
+        name = (char *) e_widget_ilist_item_data_get(item);
         if (!name) continue;
 
         gadcon_name = _ngi_gadcon_name_new();
@@ -553,11 +553,11 @@ _cb_add(void *data, void *data2)
 
         it = _ngi_gadcon_item_new(box, cg, NULL);
 
-	if (it->gadcon->cf->clients)
-	  e_gadcon_unpopulate(it->gadcon);
+   if (it->gadcon->cf->clients)
+     e_gadcon_unpopulate(it->gadcon);
 
         EINA_LIST_FOREACH(it->gadcon->cf->clients, ll, cgc)
-	  e_gadcon_client_config_del(it->gadcon->cf, cgc);
+     e_gadcon_client_config_del(it->gadcon->cf, cgc);
 
         if (!e_gadcon_client_config_new(it->gadcon, name))
           {
@@ -601,47 +601,47 @@ _cb_del(void *data, void *data2)
         E_Config_Gadcon_Client *cgc;
         const char *name = NULL;
         if (!(item = l->data))
-	  continue;
+     continue;
 
         if (!item->selected)
-	  continue;
+     continue;
 
         name = (char *)e_widget_ilist_nth_data_get(cfdata->o_sel, i);
         if (!name)
-	  continue;
+     continue;
 
         it = eina_list_nth(cfdata->box->items, i);
 
         if (!it)
-	  continue;
+     continue;
 
         EINA_LIST_FOREACH (it->gadcon->cf->clients, g, cgc)
-	  {
-	     if (!cgc)
-	       continue;
+     {
+        if (!cgc)
+          continue;
 
-	     if (strcmp(name, cgc->name))
-	       continue;
+        if (strcmp(name, cgc->name))
+          continue;
 
-	     e_gadcon_client_config_del(it->gadcon->cf, cgc);
+        e_gadcon_client_config_del(it->gadcon->cf, cgc);
 
-	     cfdata->box->cfg->gadcon_items =
-	       eina_list_remove(cfdata->box->cfg->gadcon_items, it->cfg_gadcon);
+        cfdata->box->cfg->gadcon_items =
+          eina_list_remove(cfdata->box->cfg->gadcon_items, it->cfg_gadcon);
 
-	     eina_hash_del_by_key(ngi_gadcon_hash, it->cfg_gadcon->name);
+        eina_hash_del_by_key(ngi_gadcon_hash, it->cfg_gadcon->name);
 
-	     e_gadcon_unpopulate(it->gadcon);
+        e_gadcon_unpopulate(it->gadcon);
 
-	     /* it->base.obj = NULL;
-	      * it->box->items = eina_list_remove(it->box->items, it);
-	      * ngi_item_free(it); */
+        /* it->base.obj = NULL;
+         * it->box->items = eina_list_remove(it->box->items, it);
+         * ngi_item_free(it); */
 
-	     ngi_item_remove((Ngi_Item*)it);
+        ngi_item_remove((Ngi_Item*)it);
 
-	     e_config_save_queue();
+        e_config_save_queue();
 
-	     update = 1;
-	  }
+        update = 1;
+     }
      }
    eina_list_free(sl);
    if (update)
