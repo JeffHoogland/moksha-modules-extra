@@ -2,23 +2,22 @@
 # This file is distributed under the same license as the enlightenment package.
 # Adaptado ao acordo ortográfico de 1990
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
-# Sérgio Marques <sarquespt@gmail.com>, 2010.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: news\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2016-02-07 19:00+0100\n"
-"PO-Revision-Date: 2012-11-14 23:22+0100\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"PO-Revision-Date: 2021-05-19 16:10+0100\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: Portugal\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: src/e_mod_main.c:52
 msgid "Config init failed"
@@ -142,7 +141,7 @@ msgstr "Alerta nos erros ou avisos"
 
 #: src/news_config_dialog.c:287
 msgid "Show on timeout ?"
-msgstr "Mostrar ao expirar?"
+msgstr "Mostrar ao expirar ?"
 
 #: src/news_config_dialog.c:309
 msgid "Unread feeds first"
@@ -312,11 +311,11 @@ msgid ""
 "<hilight>remove them first</hilight>"
 msgstr ""
 "Já existem <hilight>fontes</hilight> nesta categoria.<br>Antes de mais, "
-"<hilight>tem que as remover</hilight>."
+"<hilight>tem que as remover</hilight>"
 
 #: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
 msgid "News Module - Are you sure ?"
-msgstr "Tem a certeza?"
+msgstr "Módulo de notícias - Tem a certeza?"
 
 #: src/news_config_dialog_item.c:40
 msgid "News Gadget Configuration"
@@ -396,7 +395,7 @@ msgstr "Configuração de idioma das fontes"
 
 #: src/news_config_dialog_langs.c:123
 msgid "Welcome to News Module !"
-msgstr "Bem-vindo ao módulo de notícias!"
+msgstr "Bem-vindo ao módulo de notícias !"
 
 #: src/news_config_dialog_langs.c:125
 msgid "Please select the languages that you are able to read"
@@ -408,7 +407,7 @@ msgstr "O <hilight>nome</hilight> indicado é inválido"
 
 #: src/news_feed.c:296
 msgid "The need to <hilight>select a category</hilight>."
-msgstr "Tem que selecionar uma <hilight>categoria</hilight>"
+msgstr "Tem que selecionar uma <hilight>categoria</hilight>."
 
 #: src/news_feed.c:302
 #, c-format
@@ -427,11 +426,11 @@ msgstr "Tem que escolher um <hilight>idioma</hilight>."
 
 #: src/news_feed.c:318
 msgid "The <hilight>url</hilight> you specified is not correct"
-msgstr "O <hilight>url</hilight> indicado é inválido."
+msgstr "O <hilight>url</hilight> indicado é inválido"
 
 #: src/news_feed.c:880
 msgid "You need to enter a <hilight>name</hilight> !"
-msgstr "Tem que indicar um <hilight>nome</hilight>."
+msgstr "Tem que indicar um <hilight>nome</hilight> !"
 
 #: src/news_feed.c:888
 msgid ""
@@ -439,7 +438,7 @@ msgid ""
 "hilight><br>by another category"
 msgstr ""
 "O <hilight>nome</hilight> indicado já <hilight>está a ser utilizado</"
-"hilight> por outra categoria."
+"hilight>por outra categoria"
 
 #: src/news_menu.c:131
 msgid "Set all as read"

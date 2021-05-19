@@ -4,6 +4,7 @@ Name=TClock
 Name[de]=TClock
 Name[eo]=TClock horloĝo
 Name[el]=Ρολόι TClock
+Name[pt]=TClock
 Icon=e-module-tclock
 X-Enlightenment-ModuleType=utils
 Comment=A digital clock gadget.
