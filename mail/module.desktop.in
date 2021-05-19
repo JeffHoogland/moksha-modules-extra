@@ -21,4 +21,4 @@ Comment[hu]=E-mail értesítő modul. Kezeli a POP3, IMAP, maildir, és a mbox p
 Comment[it]=Modulo per notificare l'arrivo di posta. Controlla caselle POP3, IMAP, maildir e mbox.
 Comment[fr]=Notifie la réception du courriel. Support pour POP3, IMAP, maildir et mbox.
 Comment[el]=Συστατικό ειδοποίησης μηνυμάτων. Ελέγχει γραμματοκιβώτια τύπου POP3, IMAP, maildir, και mbox.
-Comment[pt]=Módulo para notificar a existência de novas mensagens eletrónicas. Funciona com caixas de correio POP3, IMAP, maildir e mbox
+Comment[pt]=Módulo para notificar a existência de novas mensagens eletrónicas. Funciona com caixas de correio POP3, IMAP, maildir e mbox.
