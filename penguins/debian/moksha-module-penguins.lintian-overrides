@@ -1,0 +1,2 @@
+moksha-module-penguins: new-package-should-close-itp-bug
+moksha-module-penguins: non-empty-dependency_libs-in-la-file

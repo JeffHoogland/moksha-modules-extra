@@ -1,3 +1,9 @@
+moksha-module-flame (20210531bodhi1-1) bionic; urgency=medium
+
+  * pt localization
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Mon, 31 May 2021 16:42:00 -0400
+
 moksha-module-flame (20200801bodhi1-1) bionic; urgency=medium
 
   * EFL changes

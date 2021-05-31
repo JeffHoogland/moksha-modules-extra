@@ -1,0 +1,35 @@
+photo_item.c: In function ‘_edj_gen’:
+photo_item.c:996:43: warning: ‘%s’ directive output may be truncated writing up to 4095 bytes into a region of size 4085 [-Wformat-truncation=]
+  996 |    snprintf(cmd, sizeof(cmd), "edje_cc -v %s %s %s",
+      |                                           ^~
+  997 |             ipart, tmpn, e_util_filename_escape(buf));
+      |             ~~~~~                          
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/enlightenment/e.h:57,
+                 from Photo.h:6,
+                 from photo_item.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:67:10: note: ‘__builtin___snprintf_chk’ output 14 or more bytes (assuming 8204) into a destination of size 4096
+   67 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |        __bos (__s), __fmt, __va_arg_pack ());
+   
+   
+   photo_picture.c: In function ‘photo_picture_infos_get’:
+photo_picture.c:224:13: warning: ‘%s’ directive output may be truncated writing up to 4095 bytes into a region of size 4035 [-Wformat-truncation=]
+  224 |             "<underline=on underline_color=#000>Picture path :</> %s<br>"
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  228 |      buf_ext);
+      |      ~~~~~~~ 
+photo_picture.c:226:14: note: format string is defined here
+  226 |             "%s",
+      |              ^~
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/enlightenment/e.h:57,
+                 from Photo.h:6,
+                 from photo_picture.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:67:10: note: ‘__builtin___snprintf_chk’ output 62 or more bytes (assuming 4157) into a destination of size 4096
+   67 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |        __bos (__s), __fmt, __va_arg_pack ());
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
