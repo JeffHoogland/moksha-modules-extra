@@ -48,9 +48,9 @@ static void _trash_conf_free(void);
 static E_Gadcon_Client *_gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style);
 static void _gc_shutdown(E_Gadcon_Client *gcc);
 static void _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient);
-static const char *_gc_label(E_Gadcon_Client_Class *client_class);
-static Evas_Object *_gc_icon(E_Gadcon_Client_Class *client_class, Evas *evas);
-static const char *_gc_id_new(E_Gadcon_Client_Class *client_class);
+static const char *_gc_label(const E_Gadcon_Client_Class *client_class);
+static Evas_Object *_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas);
+static const char *_gc_id_new(const E_Gadcon_Client_Class *client_class);
 static Eina_Bool _gc_in_site(E_Gadcon_Site site);
 
 
@@ -148,13 +148,13 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
 }
 
 static const char *
-_gc_label(E_Gadcon_Client_Class *client_class)
+_gc_label(const E_Gadcon_Client_Class *client_class)
 {
    return D_("Trash");
 }
 
 static Evas_Object *
-_gc_icon(E_Gadcon_Client_Class *client_class, Evas *evas)
+_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 {
    Evas_Object *o;
 
@@ -164,7 +164,7 @@ _gc_icon(E_Gadcon_Client_Class *client_class, Evas *evas)
 }
 
 static const char *
-_gc_id_new(E_Gadcon_Client_Class *client_class)
+_gc_id_new(const E_Gadcon_Client_Class *client_class)
 {
    return _gadcon_class.name;
 }
