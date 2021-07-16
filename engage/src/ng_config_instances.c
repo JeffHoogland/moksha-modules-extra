@@ -238,7 +238,7 @@ _cb_add(void *data, void *data2)
    zone = e_zone_current_get(con);
 
    cfg = ngi_bar_config_new(con->num, zone->num);
-   
+
    ngi_new(cfg);
 
    _ilist_fill(cfdata);

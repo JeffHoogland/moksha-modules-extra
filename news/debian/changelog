@@ -1,3 +1,9 @@
+moksha-module-news (0.1.2-2) focal; urgency=medium
+
+  * pt localization
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Mon, 31 May 2021 16:42:00 -0400
+
 moksha-module-news (0.1.2-1) focal; urgency=medium
 
   * Fix gcc warnings

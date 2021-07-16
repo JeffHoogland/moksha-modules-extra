@@ -2,23 +2,22 @@
 # This file is distributed under the same license as the enlightenment package.
 # Adaptado ao acordo ortográfico de 1990
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
-# Sérgio Marques <sarquespt@gmail.com>, 2010.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mail\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2016-11-22 20:51+0100\n"
-"PO-Revision-Date: 2012-08-25 01:18+0100\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"PO-Revision-Date: 2021-05-19 15:53+0100\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: Portugal\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: src/e_mod_config_box.c:68
 msgid "Mailbox Configuration"
@@ -102,7 +101,7 @@ msgstr "Utilizador:"
 
 #: src/e_mod_config_box.c:254
 msgid "Password:"
-msgstr "Senha:"
+msgstr "Palavra-passe:"
 
 #: src/e_mod_config_box.c:260
 msgid "New Mail Path:"
@@ -134,7 +133,7 @@ msgstr "Mostrar todas as caixas no alerta"
 
 #: src/e_mod_config.c:103
 msgid "Play sound when mail arrives"
-msgstr ""
+msgstr "Reproduzir som quando recebe correio"
 
 #: src/e_mod_config.c:105
 msgid "Check Interval"
@@ -155,7 +154,7 @@ msgstr "Adicionar"
 
 #: src/e_mod_config.c:127
 msgid "Delete"
-msgstr "Apagar"
+msgstr "Eliminar"
 
 #: src/e_mod_config.c:133
 msgid "Configure..."

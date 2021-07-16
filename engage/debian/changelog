@@ -1,3 +1,15 @@
+moksha-module-engage (20210531bodhi1-1) bionic; urgency=medium
+
+  * pt localization
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Mon, 31 May 2021 16:42:00 -0400
+
+moksha-module-engage (20210509bodhi1-1) bionic; urgency=medium
+
+  * Upstream changes
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sun, 09 May 2021 12:26:11 +0400
+
 moksha-module-engage (20201216bodhi1-1) bionic; urgency=medium
 
   * French localiation

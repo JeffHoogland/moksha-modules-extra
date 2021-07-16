@@ -51,7 +51,7 @@ ngi_launcher_new(Ng *ng, Config_Box *cfg)
    if (h) box->handlers = eina_list_append(box->handlers, h);
    h = ecore_event_handler_add(EFREET_EVENT_DESKTOP_CACHE_UPDATE, _cb_icons_update, box);
    if (h) box->handlers = eina_list_append(box->handlers, h);
-   
+
    if (!cfg->launcher_app_dir || strlen(cfg->launcher_app_dir) == 0)
      return;
 
@@ -73,7 +73,7 @@ void
 ngi_launcher_remove(Ngi_Box *box)
 {
    Ecore_Event_Handler *h;
-   
+
    e_drop_handler_del(box->drop_handler);
 
    if (box->apps)
@@ -113,8 +113,8 @@ _cb_icons_update(void *data, int type, void *event)
    Ngi_Item_Launcher *it;
 
    EINA_LIST_FOREACH(box->items, l, it)
-     _item_fill(it); 
-   
+     _item_fill(it);
+
    return ECORE_CALLBACK_PASS_ON;
 }
 
@@ -143,7 +143,7 @@ _drop_item_new(Ngi_Box *box)
    it->box = box;
    ngi_item_show(it, 0);
    it->delete_me = EINA_TRUE;
-   
+
    return it;
 }
 
@@ -163,28 +163,28 @@ _drop_handle_move(Ngi_Box *box, int x, int y)
 
    if (item && (item->box != box))
      {
-	l = eina_list_last(box->items);
-	if (l && (it = l->data) && (!it->app)) return;
+   l = eina_list_last(box->items);
+   if (l && (it = l->data) && (!it->app)) return;
 
-	ngi_item_remove(box->item_drop);
+   ngi_item_remove(box->item_drop);
 
-   	box->item_drop = _drop_item_new(box);
-   	box->items = eina_list_append(box->items, box->item_drop);
+      box->item_drop = _drop_item_new(box);
+      box->items = eina_list_append(box->items, box->item_drop);
      }
    else if (item && item->box == box)
      {
-	it = (Ngi_Item_Launcher*)item;
-	l = eina_list_data_find_list(box->items, it);
+   it = (Ngi_Item_Launcher*)item;
+   l = eina_list_data_find_list(box->items, it);
 
-   	if (l) it2 = eina_list_data_get(l->prev);
+      if (l) it2 = eina_list_data_get(l->prev);
 
-   	if (it->app && (!it2 || it2->app))
-   	  {
-	     ngi_item_remove(box->item_drop);
+      if (it->app && (!it2 || it2->app))
+        {
+        ngi_item_remove(box->item_drop);
 
-   	     box->item_drop = _drop_item_new(box);
-   	     box->items = eina_list_prepend_relative(box->items, box->item_drop, it);
-   	  }
+           box->item_drop = _drop_item_new(box);
+           box->items = eina_list_prepend_relative(box->items, box->item_drop, it);
+        }
      }
 }
 
@@ -253,34 +253,34 @@ _cb_drop_end(void *data, const char *type, void *event_info)
         E_Border *bd = (E_Border *)ev->data;
         app = bd->desktop;
 
-	if (bd->internal)
-	  {
-	     const char *class = bd->client.icccm.class;
+   if (bd->internal)
+     {
+        const char *class = bd->client.icccm.class;
 
-	     if ((class) && (!strncmp(class, "e_fwin::", 8)) &&
-		 (ecore_file_exists(class+8)))
-	       {
-		  const char *file = class+8;
-		  char buf[PATH_MAX];
+        if ((class) && (!strncmp(class, "e_fwin::", 8)) &&
+       (ecore_file_exists(class+8)))
+          {
+        const char *file = class+8;
+        char buf[PATH_MAX];
 
-		  if (!app)
-		    {
-		       app = e_desktop_border_create(bd);
-		       
-		       if (app->name) free(app->name);
-		       app->name = strdup(ecore_file_file_get(file)); 
-		       if (app->icon) free(app->icon);
-		       app->icon = strdup("folder");
-		       if (app->comment)free(app->comment);
-		       app->comment = strdup(D_("Open Directory"));
-		       if (app->exec) free(app->exec);
-		       snprintf(buf, PATH_MAX, "enlightenment_remote -efm-open-dir %s", file);
-		       app->exec = strdup(buf);
+        if (!app)
+          {
+             app = e_desktop_border_create(bd);
 
-		       efreet_desktop_save(app);
-		    }
-	       }
-	  }
+             if (app->name) free(app->name);
+             app->name = strdup(ecore_file_file_get(file));
+             if (app->icon) free(app->icon);
+             app->icon = strdup("folder");
+             if (app->comment)free(app->comment);
+             app->comment = strdup(D_("Open Directory"));
+             if (app->exec) free(app->exec);
+             snprintf(buf, PATH_MAX, "enlightenment_remote -efm-open-dir %s", file);
+             app->exec = strdup(buf);
+
+             efreet_desktop_save(app);
+          }
+          }
+     }
         else if (!app)
           {
              app = e_desktop_border_create(bd);
@@ -367,31 +367,31 @@ _item_fill(Ngi_Item_Launcher *it)
 
    if (it->o_icon)
      {
-	edje_object_part_unswallow(it->base.obj, it->o_icon);
-	evas_object_del(it->o_icon);
+   edje_object_part_unswallow(it->base.obj, it->o_icon);
+   evas_object_del(it->o_icon);
      }
    if (it->o_proxy)
      {
-	edje_object_part_unswallow(it->base.obj, it->o_proxy);
-	evas_object_del(it->o_proxy);
+   edje_object_part_unswallow(it->base.obj, it->o_proxy);
+   evas_object_del(it->o_proxy);
      }
 
    o = e_util_desktop_icon_add(it->app, 128, e);
    if (o)
      {
-	edje_object_part_swallow(it->base.obj, "e.swallow.content", o);
-	evas_object_show(o);
-	it->o_icon = o;
-	
-	o = evas_object_image_filled_add(e);
-	evas_object_image_fill_set(o, 0, 0, 1, 1);
-	evas_object_image_source_set(o, it->base.obj);
+   edje_object_part_swallow(it->base.obj, "e.swallow.content", o);
+   evas_object_show(o);
+   it->o_icon = o;
 
-	edje_object_part_swallow(it->base.over, "e.swallow.content", o);
-	evas_object_show(o);
-	it->o_proxy = o;
+   o = evas_object_image_filled_add(e);
+   evas_object_image_fill_set(o, 0, 0, 1, 1);
+   evas_object_image_source_set(o, it->base.obj);
+
+   edje_object_part_swallow(it->base.over, "e.swallow.content", o);
+   evas_object_show(o);
+   it->o_proxy = o;
      }
-   
+
    if (it->app->name && it->app->name[0])
      ngi_item_label_set((Ngi_Item*)it, it->app->name);
    else if (it->app->generic_name && it->app->generic_name[0])
@@ -431,13 +431,13 @@ _item_cb_drag_start(Ngi_Item *item)
 
    if (!ngi_config->use_composite)
      {
-	x -= box->ng->win->rect.x;
-	y -= box->ng->win->rect.y;
+   x -= box->ng->win->rect.x;
+   y -= box->ng->win->rect.y;
      }
 
    d = e_drag_new(box->ng->zone->container, x, y, drag_types, 1,
                   it->app, -1, NULL,
-		  _cb_drag_finished);
+        _cb_drag_finished);
    efreet_desktop_ref(it->app);
 
    o = e_util_desktop_icon_add(it->app, MIN(w, h), e_drag_evas_get(d));
@@ -520,8 +520,8 @@ _item_cb_mouse_down(Ngi_Item *item, Ecore_Event_Mouse_Button *ev)
 
    if (!(ev->buttons == 3))
      {
-	item->mouse_down = 1;
-	return;
+   item->mouse_down = 1;
+   return;
      }
 
    if (!it->app)
@@ -537,22 +537,22 @@ _item_cb_mouse_down(Ngi_Item *item, Ecore_Event_Mouse_Button *ev)
    switch(box->ng->cfg->orient)
      {
       case E_GADCON_ORIENT_TOP:
-	 dir = E_MENU_POP_DIRECTION_DOWN;
-	 y += h;
-	 break;
+    dir = E_MENU_POP_DIRECTION_DOWN;
+    y += h;
+    break;
 
       case E_GADCON_ORIENT_BOTTOM:
-	 dir = E_MENU_POP_DIRECTION_UP;
-	 break;
+    dir = E_MENU_POP_DIRECTION_UP;
+    break;
 
       case E_GADCON_ORIENT_LEFT:
-	 dir = E_MENU_POP_DIRECTION_RIGHT;
-	 x += w;
-	 break;
+    dir = E_MENU_POP_DIRECTION_RIGHT;
+    x += w;
+    break;
 
       case E_GADCON_ORIENT_RIGHT:
-	 dir = E_MENU_POP_DIRECTION_LEFT;
-	 break;
+    dir = E_MENU_POP_DIRECTION_LEFT;
+    break;
      }
 
    m = e_menu_new();
@@ -581,7 +581,7 @@ _item_cb_mouse_down(Ngi_Item *item, Ecore_Event_Mouse_Button *ev)
    e_menu_post_deactivate_callback_set(m, _menu_cb_menu_end, box->ng);
 
    e_menu_activate_mouse(m, box->ng->zone, x, y, 1, 1,
-			 dir, ev->timestamp);
+          dir, ev->timestamp);
 }
 
 static void
@@ -596,9 +596,9 @@ _item_cb_mouse_up(Ngi_Item *item, Ecore_Event_Mouse_Button *ev)
 
    if (ev->buttons == 1)
      {
-	e_exec(e_util_zone_current_get(e_manager_current_get()), it->app, NULL, NULL, NULL);
+   e_exec(e_util_zone_current_get(e_manager_current_get()), it->app, NULL, NULL, NULL);
 
-	ngi_item_signal_emit((Ngi_Item*)it, "e,action,start");
+   ngi_item_signal_emit((Ngi_Item*)it, "e,action,start");
      }
 }
 

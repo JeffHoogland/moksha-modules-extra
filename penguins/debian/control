@@ -1,0 +1,14 @@
+Source: moksha-module-penguins
+Section: utils
+Priority: optional
+Maintainer: Robert Wiley <ylee@bodhilinux.com> 
+Build-Depends: debhelper (>= 10), autotools-dev, libc6 (>= 2.7), libefl-dev, moksha
+Standards-Version: 4.5.0
+Homepage: https://github.com/JeffHoogland/moksha-modules-extra
+Rules-Requires-Root: no
+
+Package: moksha-module-penguins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, moksha
+Description: Penguins Module for Moksha
+ Adds configurable penguins to your Moksha

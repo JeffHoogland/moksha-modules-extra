@@ -1,0 +1,14 @@
+Source: moksha-module-screenshot
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, moksha, emprint
+Standards-Version: 4.5.0
+Homepage: https://github.com/JeffHoogland/moksha-modules-extra
+Rules-Requires-Root: no
+
+Package: moksha-module-screenshot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, moksha, emprint
+Description: Advanced Screenshot Module
+ An advanced screenshot tool for the moksha desktop.

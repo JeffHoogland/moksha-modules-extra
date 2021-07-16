@@ -6,30 +6,30 @@ ngi_item_init_defaults(Ngi_Item *it)
 {
    Ng *ng = it->box->ng;
    int ok = 0;
-   
+
    it->obj = edje_object_add(ng->evas);
 
    switch(ng->cfg->orient)
      {
       case E_GADCON_ORIENT_BOTTOM:
-	 ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_bottom");
-   	 break;
+    ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_bottom");
+       break;
       case E_GADCON_ORIENT_TOP:
-	 ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_top");
-   	 break;
+    ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_top");
+       break;
       case E_GADCON_ORIENT_LEFT:
-	 ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_left");
-   	 break;
+    ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_left");
+       break;
       case E_GADCON_ORIENT_RIGHT:
-	 ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_right");
-   	 break;
+    ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_right");
+       break;
      }
 
    /* TODO remove fallback */
    if (!ok)
      {
-   	if (!e_theme_edje_object_set(it->obj, "base/theme/modules/engage", "e/modules/engage/icon"))
-   	  edje_object_file_set(it->obj, ngi_config->theme_path, "e/modules/engage/icon");
+      if (!e_theme_edje_object_set(it->obj, "base/theme/modules/engage", "e/modules/engage/icon"))
+        edje_object_file_set(it->obj, ngi_config->theme_path, "e/modules/engage/icon");
      }
 
    it->over = edje_object_add(ng->evas);
@@ -37,22 +37,22 @@ ngi_item_init_defaults(Ngi_Item *it)
    switch(ng->cfg->orient)
      {
       case E_GADCON_ORIENT_BOTTOM:
-	 ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_bottom");
-   	 break;
+    ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_bottom");
+       break;
       case E_GADCON_ORIENT_TOP:
-	 ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_top");
-   	 break;
+    ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_top");
+       break;
       case E_GADCON_ORIENT_LEFT:
-	 ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_left");
-   	 break;
+    ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_left");
+       break;
       case E_GADCON_ORIENT_RIGHT:
-	 ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_right");
-   	 break;
+    ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_right");
+       break;
      }
    if (!ok)
      {
-	if (!e_theme_edje_object_set(it->over, "base/theme/modules/engage", "e/modules/engage/icon_overlay"))
-	  edje_object_file_set(it->over, ngi_config->theme_path, "e/modules/engage/icon_overlay");
+   if (!e_theme_edje_object_set(it->over, "base/theme/modules/engage", "e/modules/engage/icon_overlay"))
+     edje_object_file_set(it->over, ngi_config->theme_path, "e/modules/engage/icon_overlay");
      }
 
 
@@ -68,7 +68,7 @@ ngi_item_show(Ngi_Item *it, int instant)
 
    evas_object_show(it->obj);
    evas_object_show(it->over);
-   
+
    ngi_item_signal_emit(it, "e,state,item,show");
 
    if (eina_list_data_find(ng->items_remove, it))
@@ -77,10 +77,10 @@ ngi_item_show(Ngi_Item *it, int instant)
    if (instant)
      {
         it->scale = 1.0;
-	ngi_animate(ng);
-	return;
+   ngi_animate(ng);
+   return;
      }
-   
+
    it->start_time = ecore_time_get();
    it->scale = 0.0;
    ng->items_show = eina_list_append(ng->items_show, it);
@@ -91,19 +91,19 @@ void
 ngi_item_remove(Ngi_Item *it)
 {
    if (!it) return;
-     
+
    Ng *ng = it->box->ng;
    double now = ecore_time_get();
-   
+
    edje_object_signal_emit(it->obj, "e,state,item,hide", "e");
 
    if (now - it->start_time < ng->opt.fade_duration)
      it->start_time = now - (ng->opt.fade_duration - (now - it->start_time));
    else
      it->start_time = now;
-   
+
    it->delete_me = 1;
-   
+
    if (eina_list_data_find(ng->items_show, it))
      ng->items_show = eina_list_remove(ng->items_show, it);
 
@@ -154,7 +154,7 @@ void
 ngi_item_label_set(Ngi_Item *it, const char *label)
 {
    if (it->label)
-     eina_stringshare_del(it->label); 
+     eina_stringshare_del(it->label);
 
    if (label)
      it->label = eina_stringshare_add(label);

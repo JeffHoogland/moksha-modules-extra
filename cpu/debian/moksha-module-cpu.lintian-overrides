@@ -1,0 +1,2 @@
+moksha-module-cpu: new-package-should-close-itp-bug
+moksha-module-cpu: non-empty-dependency_libs-in-la-file
