@@ -1,12 +1,14 @@
 Source: trash
-Section: unknown
+Section: utils
 Priority: optional
-Maintainer: quaker <quaker66@gmail.com>
-Build-Depends: debhelper (>= 6), cdbs, e17 (>= 0.16.999) | ecomorph-e17 (>= 0.16.999)
+Maintainer: the_waiter <thewaiter@centrum.sk>
+Build-Depends: debhelper (>= 10), cdbs, autotools-dev, pkg-config, libefl-dev, moksha
 Standards-Version: 3.7.2
+Homepage: https://github.com/JeffHoogland/moksha-modules-extra
+Rules-Requires-Root: no
 
-Package: emodule-trash
+Package: moksha-module-trash
 Architecture: any
-Depends: ${shlibs:Depends}, e17 (>= 0.16.999) | ecomorph-e17 (>= 0.16.999), thunar
-Description: Trash module for E17
+Depends: ${shlibs:Depends}, ${misc:Depends}, moksha
+Description: Trash module for Moksha desktop
  A trash module for enlightenment that use efreet
