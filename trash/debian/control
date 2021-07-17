@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: the_waiter <thewaiter@centrum.sk>
 Build-Depends: debhelper (>= 10), cdbs, autotools-dev, pkg-config, libefl-dev, moksha
-Standards-Version: 3.7.2
+Standards-Version: 4.5.0
 Homepage: https://github.com/JeffHoogland/moksha-modules-extra
 Rules-Requires-Root: no
 

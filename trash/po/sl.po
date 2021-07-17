@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trash\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-21 22:23+0100\n"
+"POT-Creation-Date: 2021-07-16 22:34+0200\n"
 "PO-Revision-Date: 2016-11-25 17:56+0100\n"
 "Last-Translator: Renato Rener <renato.rener@gmail.com>\n"
 "Language-Team: slovenian <renato.rener@gmail.com>\n"
@@ -64,7 +64,7 @@ msgstr ""
 "<b>Odstranimo vse datoteke in mape iz koša?</><br>Vsi predmeti v košu bodo "
 "nepopravljivo izgubljeni!!!"
 
-#: src/e_mod_main.c:418 src/e_mod_main.c:514
+#: src/e_mod_main.c:418 src/e_mod_main.c:513
 msgid "Cancel"
 msgstr "Prekliči"
 
@@ -72,11 +72,11 @@ msgstr "Prekliči"
 msgid "Empty trash"
 msgstr "Izprazni koš"
 
-#: src/e_mod_main.c:510
+#: src/e_mod_main.c:509
 msgid "Alert"
 msgstr "Pozor"
 
-#: src/e_mod_main.c:511
+#: src/e_mod_main.c:510
 msgid ""
 "Some files can't be moved to trash <br>because they are not on the local "
 "filesystem.<br><br>The files will be deleted FOREVER!!!"
@@ -84,6 +84,6 @@ msgstr ""
 "Nekaterih datotek se ne da premakniti v koš <br>kerniso na krajevnem "
 "datotečnem sistemu. <br><br>Te datoteke bodo izbrisane ZA VEDNO!!!"
 
-#: src/e_mod_main.c:514
+#: src/e_mod_main.c:513
 msgid "Delete Files"
 msgstr "Izbriši datoteke"

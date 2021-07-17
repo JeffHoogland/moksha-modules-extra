@@ -3,14 +3,14 @@ dnl Process this file with autoconf to produce a configure script.
 # get rid of that stupid cache mechanism
 rm -f config.cache
 
-AC_INIT(trash, 0.0.4, dave@gurumeditation.it)
+AC_INIT(trash, 0.0.5, dave@gurumeditation.it)
 AC_PREREQ(2.52)
 AC_CONFIG_SRCDIR(configure.ac)
 AC_CANONICAL_BUILD
 AC_CANONICAL_HOST
 AC_ISC_POSIX
 
-AM_INIT_AUTOMAKE(1.8)
+AM_INIT_AUTOMAKE(1.6)
 AM_CONFIG_HEADER(config.h)
 
 AC_PROG_CC

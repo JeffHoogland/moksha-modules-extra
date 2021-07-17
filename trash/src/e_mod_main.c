@@ -352,9 +352,6 @@ _trash_button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_i
 
         m = e_menu_new();
 
-		
-       
-
         mi = e_menu_item_new(m);
         e_menu_item_label_set(mi, D_("Empty Trash"));
         e_menu_item_icon_edje_set(mi, icon, "icon");
@@ -435,8 +432,7 @@ _trash_cb_menu_show(void *data, E_Menu *m, E_Menu_Item *mi)
    
    //~ if (trash_conf->fileman = "pcmanfm")  trash_conf->fileman = "pcmanfm -n";
   
-	snprintf(buf, sizeof(buf), "%s trash:///", trash_conf->fileman);
-	
+   snprintf(buf, sizeof(buf), "%s trash:///", trash_conf->fileman);
    e_exec(zone, NULL, buf, NULL, NULL);
 }
 
@@ -580,7 +576,7 @@ _trash_conf_new(void)
    /* setup defaults */
    IFMODCFG(0x008d);
    //~ trash_conf->switch1 = 1;
-   trash_conf->fileman = eina_stringshare_add("pcmanfm -n");
+   trash_conf->fileman = eina_stringshare_add("Thunar");
    
    _trash_conf_item_get(NULL);
    IFMODCFGEND;

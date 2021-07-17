@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trash\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-21 22:23+0100\n"
+"POT-Creation-Date: 2021-07-16 22:34+0200\n"
 "PO-Revision-Date: 2016-11-21 22:19+0100\n"
 "Last-Translator: Stefan Uram <uram@szm.sk>\n"
 "Language-Team: slovak <stefan@bodhi.sk>\n"
@@ -63,7 +63,7 @@ msgstr ""
 "<b>Odstrániť všetky súbory a zložky z koša?</><br>Všetky položky v koši budú "
 "nenávratne vymazané!!!"
 
-#: src/e_mod_main.c:418 src/e_mod_main.c:514
+#: src/e_mod_main.c:418 src/e_mod_main.c:513
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -71,11 +71,11 @@ msgstr "Zrušiť"
 msgid "Empty trash"
 msgstr "Vysypať"
 
-#: src/e_mod_main.c:510
+#: src/e_mod_main.c:509
 msgid "Alert"
 msgstr "Pozor"
 
-#: src/e_mod_main.c:511
+#: src/e_mod_main.c:510
 msgid ""
 "Some files can't be moved to trash <br>because they are not on the local "
 "filesystem.<br><br>The files will be deleted FOREVER!!!"
@@ -83,6 +83,6 @@ msgstr ""
 "Niektoré súbory nemôžu byť presunuté do koša <br>pretože nie sú uložené v "
 "lokálnom súborovom systéme. <br><br>Tieto súbory budú nevávratne vymazané!!!"
 
-#: src/e_mod_main.c:514
+#: src/e_mod_main.c:513
 msgid "Delete Files"
 msgstr "Vymazať súbory"
