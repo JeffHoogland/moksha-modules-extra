@@ -94,7 +94,9 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    inst = E_NEW(Instance, 1);
 
    o = edje_object_add(gc->evas);
-   edje_object_file_set(o, icon, "icon");
+   if (!e_theme_edje_object_set(o, "base/theme/modules/trash", 
+                                "modules/trash/main"))
+     edje_object_file_set(o, icon, "modules/trash/main");
 
    if (!efreet_trash_is_empty())
       edje_object_signal_emit(o, "set_full", "e");

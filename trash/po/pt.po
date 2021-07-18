@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trash\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2021-07-16 22:34+0200\n"
+"POT-Creation-Date: 2021-07-18 14:24+0200\n"
 "PO-Revision-Date: 2021-05-19 20:35+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
@@ -44,19 +44,19 @@ msgstr "Lixo"
 msgid "Advanced"
 msgstr "Avançado"
 
-#: src/e_mod_main.c:359
+#: src/e_mod_main.c:356
 msgid "Empty Trash"
 msgstr "Esvaziar o lixo"
 
-#: src/e_mod_main.c:364
+#: src/e_mod_main.c:361
 msgid "Show trash"
 msgstr "Mostrar o lixo"
 
-#: src/e_mod_main.c:369
+#: src/e_mod_main.c:366
 msgid "Settings"
 msgstr "Definições"
 
-#: src/e_mod_main.c:416
+#: src/e_mod_main.c:413
 msgid ""
 "<b>Remove all the files and folders from the trash?</><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
@@ -64,19 +64,19 @@ msgstr ""
 "<b>Remover todos os ficheiros e pastas do lixo?</><br>Todos os elementos "
 "atualmente no lixo serão irremediavelmente perdidos!!!"
 
-#: src/e_mod_main.c:418 src/e_mod_main.c:513
+#: src/e_mod_main.c:415 src/e_mod_main.c:510
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/e_mod_main.c:418
+#: src/e_mod_main.c:415
 msgid "Empty trash"
 msgstr "Esvaziar o lixo"
 
-#: src/e_mod_main.c:509
+#: src/e_mod_main.c:506
 msgid "Alert"
 msgstr "Alerta"
 
-#: src/e_mod_main.c:510
+#: src/e_mod_main.c:507
 msgid ""
 "Some files can't be moved to trash <br>because they are not on the local "
 "filesystem.<br><br>The files will be deleted FOREVER!!!"
@@ -85,6 +85,6 @@ msgstr ""
 "sistema de ficheiros local.<br><br>Os ficheiros serão eliminados PARA "
 "SEMPRE!!!"
 
-#: src/e_mod_main.c:513
+#: src/e_mod_main.c:510
 msgid "Delete Files"
 msgstr "Eliminar ficheiros"
