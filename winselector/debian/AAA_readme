@@ -1,0 +1,65 @@
+e_mod_main.c: In function ‘_win_menu_pre_cb’:
+e_mod_main.c:299:5: warning: passing argument 3 of ‘eina_list_sort’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |     _win_menu_sort_alpha_cb);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+      |     |
+      |     int (*)(void *, void *)
+In file included from /usr/include/eina-1/Eina.h:223,
+                 from /usr/include/enlightenment/e.h:100,
+                 from e_mod_main.c:1:
+/usr/include/eina-1/eina/eina_list.h:891:28: note: expected ‘Eina_Compare_Cb’ {aka ‘int (*)(const void *, const void *)’} but argument is of type ‘int (*)(void *, void *)’
+  891 | EAPI Eina_List            *eina_list_sort(Eina_List *list, unsigned int limit, Eina_Compare_Cb func) EINA_ARG_NONNULL(3) EINA_WARN_UNUSED_RESULT;
+      |                            ^~~~~~~~~~~~~~
+e_mod_main.c:303:5: warning: passing argument 3 of ‘eina_list_sort’ from incompatible pointer type [-Wincompatible-pointer-types]
+  303 |     _win_menu_sort_z_order_cb);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |     |
+      |     int (*)(void *, void *)
+In file included from /usr/include/eina-1/Eina.h:223,
+                 from /usr/include/enlightenment/e.h:100,
+                 from e_mod_main.c:1:
+/usr/include/eina-1/eina/eina_list.h:891:28: note: expected ‘Eina_Compare_Cb’ {aka ‘int (*)(const void *, const void *)’} but argument is of type ‘int (*)(void *, void *)’
+  891 | EAPI Eina_List            *eina_list_sort(Eina_List *list, unsigned int limit, Eina_Compare_Cb func) EINA_ARG_NONNULL(3) EINA_WARN_UNUSED_RESULT;
+      |                            ^~~~~~~~~~~~~~
+e_mod_main.c:309:8: warning: passing argument 3 of ‘eina_list_sort’ from incompatible pointer type [-Wincompatible-pointer-types]
+  309 |        _win_menu_group_desk_cb);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+      |        |
+      |        int (*)(void *, void *)
+In file included from /usr/include/eina-1/Eina.h:223,
+                 from /usr/include/enlightenment/e.h:100,
+                 from e_mod_main.c:1:
+/usr/include/eina-1/eina/eina_list.h:891:28: note: expected ‘Eina_Compare_Cb’ {aka ‘int (*)(const void *, const void *)’} but argument is of type ‘int (*)(void *, void *)’
+  891 | EAPI Eina_List            *eina_list_sort(Eina_List *list, unsigned int limit, Eina_Compare_Cb func) EINA_ARG_NONNULL(3) EINA_WARN_UNUSED_RESULT;
+      |                            ^~~~~~~~~~~~~~
+e_mod_main.c:315:8: warning: passing argument 3 of ‘eina_list_sort’ from incompatible pointer type [-Wincompatible-pointer-types]
+  315 |        _win_menu_group_class_cb);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~
+      |        |
+      |        int (*)(void *, void *)
+In file included from /usr/include/eina-1/Eina.h:223,
+                 from /usr/include/enlightenment/e.h:100,
+                 from e_mod_main.c:1:
+/usr/include/eina-1/eina/eina_list.h:891:28: note: expected ‘Eina_Compare_Cb’ {aka ‘int (*)(const void *, const void *)’} but argument is of type ‘int (*)(void *, void *)’
+  891 | EAPI Eina_List            *eina_list_sort(Eina_List *list, unsigned int limit, Eina_Compare_Cb func) EINA_ARG_NONNULL(3) EINA_WARN_UNUSED_RESULT;
+      |                            ^~~~~~~~~~~~~~
+e_mod_main.c: In function ‘_win_menu_icon_cb’:
+e_mod_main.c:381:4: warning: ‘e_icon_object_set’ is deprecated [-Wdeprecated-declarations]
+  381 |    e_icon_object_set(o, e_border_icon_add(bd, m->evas));
+      |    ^~~~~~~~~~~~~~~~~
+In file included from /usr/include/enlightenment/e_includes.h:16,
+                 from /usr/include/enlightenment/e.h:136,
+                 from e_mod_main.c:1:
+/usr/include/enlightenment/e_icon.h:16:19: note: declared here
+   16 | EAPI void         e_icon_object_set       (Evas_Object *obj, Evas_Object *o) EINA_DEPRECATED;
+      |                   ^~~~~~~~~~~~~~~~~
+e_mod_main.c: In function ‘_win_menu_item_drag’:
+e_mod_main.c:407:4: warning: ‘e_icon_object_set’ is deprecated [-Wdeprecated-declarations]
+  407 |    e_icon_object_set(o, e_border_icon_add(bd, drag->evas));
+      |    ^~~~~~~~~~~~~~~~~
+In file included from /usr/include/enlightenment/e_includes.h:16,
+                 from /usr/include/enlightenment/e.h:136,
+                 from e_mod_main.c:1:
+/usr/include/enlightenment/e_icon.h:16:19: note: declared here
+   16 | EAPI void         e_icon_object_set       (Evas_Object *obj, Evas_Object *o) EINA_DEPRECATED;
+      |                   ^~~~~~~~~~~~~~~~~

@@ -80,13 +80,13 @@ _gc_init (E_Gadcon * gc, const char *name, const char *id, const char *style)
 
    evas_object_event_callback_add (o, EVAS_CALLBACK_MOUSE_DOWN,
 				   _mem_cb_mouse_down, inst);
-   evas_object_event_callback_add (o, EVAS_CALLBACK_MOUSE_IN, _mem_cb_mouse_in,
-				   inst);
-   evas_object_event_callback_add (o, EVAS_CALLBACK_MOUSE_OUT,
-				   _mem_cb_mouse_out, inst);
+   //~ evas_object_event_callback_add (o, EVAS_CALLBACK_MOUSE_IN, _mem_cb_mouse_in,
+				   //~ inst);
+   //~ evas_object_event_callback_add (o, EVAS_CALLBACK_MOUSE_OUT,
+				   //~ _mem_cb_mouse_out, inst);
 
-   if (inst->ci->always_text)
-     edje_object_signal_emit (inst->mem_obj, "label_active", "");
+   //~ if (inst->ci->always_text)
+     //~ edje_object_signal_emit (inst->mem_obj, "label_active", "");
 
    _mem_cb_check (inst);
 
@@ -98,8 +98,8 @@ _gc_init (E_Gadcon * gc, const char *name, const char *id, const char *style)
 static void
 _gc_orient (E_Gadcon_Client * gcc, E_Gadcon_Orient orient)
 {
-   e_gadcon_client_aspect_set (gcc, 32, 16);
-   e_gadcon_client_min_size_set (gcc, 32, 16);
+   e_gadcon_client_aspect_set (gcc, 36, 16);
+   e_gadcon_client_min_size_set (gcc, 36, 16);
 }
 
 static const char *
@@ -388,25 +388,25 @@ _mem_free (Mem * m)
    E_FREE (m);
 }
 
-static void
-_mem_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
-{
-   Instance *inst;
+//~ static void
+//~ _mem_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
+//~ {
+   //~ Instance *inst;
 
-   inst = data;
-   if (!inst->ci->always_text)
-     edje_object_signal_emit (inst->mem_obj, "label_active", "");
-}
+   //~ inst = data;
+   //~ if (!inst->ci->always_text)
+     //~ edje_object_signal_emit (inst->mem_obj, "label_active", "");
+//~ }
 
-static void
-_mem_cb_mouse_out (void *data, Evas * e, Evas_Object * obj, void *event_info)
-{
-   Instance *inst;
+//~ static void
+//~ _mem_cb_mouse_out (void *data, Evas * e, Evas_Object * obj, void *event_info)
+//~ {
+   //~ Instance *inst;
 
-   inst = data;
-   if (!inst->ci->always_text)
-     edje_object_signal_emit (inst->mem_obj, "label_passive", "");
-}
+   //~ inst = data;
+   //~ if (!inst->ci->always_text)
+     //~ edje_object_signal_emit (inst->mem_obj, "label_passive", "");
+//~ }
 
 static Eina_Bool
 _mem_cb_check (void *data)
@@ -422,22 +422,36 @@ _mem_cb_check (void *data)
 
    if (!inst->ci->show_percent)
      {
-	snprintf (real_str, sizeof (real_str), "Real: %d/%d MB", (real / 1024),
-		  (total_real / 1024));
-	if ( total_swap )
-	  snprintf (swap_str, sizeof (swap_str), "Swap: %d/%d MB", (swap / 1024),
+	  if (inst->gcc->gadcon->shelf)
+	    snprintf (real_str, sizeof (real_str), "%d MB", (real / 1024));
+	  else
+	    snprintf (real_str, sizeof (real_str), "Real: %d/%d MB", (real / 1024),
+		         (total_real / 1024));
+	  	         
+	  if ( total_swap ){
+		  if (inst->gcc->gadcon->shelf)
+	    snprintf (swap_str, sizeof (swap_str), "%d MB", (swap / 1024));
+		else    
+	    snprintf (swap_str, sizeof (swap_str), "Swap: %d/%d MB", (swap / 1024),
 		    (total_swap / 1024));
+	  }
      }
    else
      {
 	double tr;
 
 	tr = (((double) real / (double) total_real) * 100);
-	snprintf (real_str, sizeof (real_str), "Real: %1.2f%%", tr);
+	if (inst->gcc->gadcon->shelf)
+	  snprintf (real_str, sizeof (real_str), "%1.2f%%", tr);
+	else
+	  snprintf (real_str, sizeof (real_str), "Real: %1.2f%%", tr);
 	if ( total_swap )
 	  {
 	     tr = (((double) swap / (double) total_swap) * 100);
-	     snprintf (swap_str, sizeof (swap_str), "Swap: %1.2f%%", tr);
+	     if (inst->gcc->gadcon->shelf)
+	       snprintf (swap_str, sizeof (swap_str), "%1.2f%%", tr);
+	     else
+	       snprintf (swap_str, sizeof (swap_str), "Swap: %1.2f%%", tr);
 	  }
      }
    edje_object_part_text_set (inst->mem_obj, "real_label", real_str);

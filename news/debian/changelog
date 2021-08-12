@@ -1,0 +1,17 @@
+moksha-module-news (0.1.2-2) focal; urgency=medium
+
+  * pt localization
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Mon, 31 May 2021 16:42:00 -0400
+
+moksha-module-news (0.1.2-1) focal; urgency=medium
+
+  * Fix gcc warnings
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Fri, 25 Dec 2020 08:16:15 +0400
+
+moksha-module-news (0.1.1-1) focal; urgency=medium
+
+  * Initial release
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sun, 04 Oct 2020 08:16:15 +0400

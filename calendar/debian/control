@@ -1,0 +1,14 @@
+Source: moksha-module-calendar
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, moksha
+Standards-Version: 4.5.0
+Homepage: https://github.com/JeffHoogland/moksha-modules-extra
+Rules-Requires-Root: no
+
+Package: moksha-module-calendar
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, moksha
+Description: Calendar module for the Moksha desktop
+ Displays the current date on your Moksha desktop

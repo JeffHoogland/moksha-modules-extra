@@ -221,6 +221,7 @@ collections
 	       {
 		  name: "real_label";
 		  type: TEXT;
+		  scale: 1;
 		  effect: SOFT_SHADOW;
 		  description 
 		    {
@@ -230,13 +231,13 @@ collections
 		       visible: 0;
 		       rel1 
 			 {
-			    relative: 0.5 0.0;
+			    relative: 0.0 0.45;
 			    offset: 0 0;
 			    to: "real_meter";
 			 }
 		       rel2 
 			 {
-			    relative: 0.5 1.0;
+			    relative: 1.0 1.0;
 			    offset: -1 -1;
 			    to: "real_meter";
 			 }
@@ -244,7 +245,7 @@ collections
 			 {
 			    text: "Real:";
 			    font: "Sans:style=Mono";
-			    size: 9;
+			    size: 8;
 			    min: 1 1;
 			    align: 0.5 1.0;
 			    text_class: "module_small";
@@ -380,6 +381,7 @@ collections
 	       {
 		  name: "swap_label";
 		  type: TEXT;
+		  scale: 1;
 		  effect: SOFT_SHADOW;
 		  description 
 		    {
@@ -389,13 +391,13 @@ collections
 		       visible: 0;
 		       rel1 
 			 {
-			    relative: 0.5 0.0;
+			    relative: 0.0 0.0;
 			    offset: 0 0;
 			    to: "swap_meter";
 			 }
 		       rel2 
 			 {
-			    relative: 0.5 1.0;
+			    relative: 1.0 1.0;
 			    offset: -1 -1;
 			    to: "swap_meter";
 			 }
@@ -403,9 +405,9 @@ collections
 			 {
 			    text: "Swap:";
 			    font: "Sans:style=Mono";
-			    size: 9;
+			    size: 8;
 			    min: 1 1;
-			    align: 0.5 1.0;
+			    //~ align: 0.5 1.0;
 			    text_class: "module_small";
 			    ellipsis: -1;
 			 }
@@ -419,15 +421,21 @@ collections
 		       color3: 0 0 0 42;
 		       color_class: "module_label";
 		    }
-	       }	     
+	       }
+	     part { name: "over"; type: RECT;
+           description { state: "default" 0.0;
+            color: 0 0 0 0;
+         }
+      }	     
 	  }
 	programs 
 	  {
 	     program 
 	       {
 		  name: "go_active";
-		  signal: "label_active";
-		  source: "";
+		  //~ signal: "label_active";
+		  signal: "mouse,in";
+		  source: "over";
 		  action: STATE_SET "visible" 0.0;
 		  transition: SINUSOIDAL 0.5;
 		  target: "real_label";
@@ -444,8 +452,9 @@ collections
 	     program 
 	       {
 		  name: "go_passive";
-		  signal: "label_passive";
-		  source: "";
+		  signal: "mouse,out";
+		  //~ signal: "label_passive";
+		  source: "over";
 		  action: STATE_SET "default" 0.0;
 		  transition: SINUSOIDAL 1.0;		  
 		  target: "real_label";

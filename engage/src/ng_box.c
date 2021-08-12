@@ -19,16 +19,16 @@ ngi_box_new(Ng *ng)
    switch(box->ng->cfg->orient)
      {
       case E_GADCON_ORIENT_BOTTOM:
-	 ngi_object_theme_set(box->separator, "e/modules/engage/separator_bottom");
-	 break;
+    ngi_object_theme_set(box->separator, "e/modules/engage/separator_bottom");
+    break;
       case E_GADCON_ORIENT_TOP:
-	 ngi_object_theme_set(box->separator, "e/modules/engage/separator_top");
+    ngi_object_theme_set(box->separator, "e/modules/engage/separator_top");
          break;
       case E_GADCON_ORIENT_LEFT:
-	 ngi_object_theme_set(box->separator, "e/modules/engage/separator_left");
+    ngi_object_theme_set(box->separator, "e/modules/engage/separator_left");
          break;
       case E_GADCON_ORIENT_RIGHT:
-	 ngi_object_theme_set(box->separator, "e/modules/engage/separator_right");
+    ngi_object_theme_set(box->separator, "e/modules/engage/separator_right");
          break;
      }
 

@@ -41,7 +41,7 @@ ngi_taskbar_new(Ng *ng, Config_Box *cfg)
    E_Border *bd;
    E_Border_List *bl;
    Ecore_Event_Handler *h;
-   
+
    if (!box) return;
 
    box->cfg = cfg;
@@ -54,7 +54,7 @@ ngi_taskbar_new(Ng *ng, Config_Box *cfg)
                                           _cb_drop_leave, _cb_drop_end,
                                           drop, 3, 0, 0, 0, 0);
 
-#define HANDLE(_event, _cb)						\
+#define HANDLE(_event, _cb)                  \
    box->handlers = eina_list_append(box->handlers, ecore_event_handler_add(_event, _cb, box));
 
    HANDLE(E_EVENT_BORDER_ADD,           _cb_border_event);
@@ -69,13 +69,13 @@ ngi_taskbar_new(Ng *ng, Config_Box *cfg)
    HANDLE(E_EVENT_BORDER_FOCUS_OUT,     _cb_border_event);
    HANDLE(E_EVENT_DESK_SHOW,            _cb_desk_show);
 #undef HANDLE
-   
+
    bl = e_container_border_list_first(box->ng->zone->container);
 
    while ((bd = e_container_border_list_next(bl)))
      {
         if (box->ng->zone == bd->zone)
-	  _item_new(box, bd);
+     _item_new(box, bd);
      }
 
    e_container_border_list_free(bl);
@@ -85,7 +85,7 @@ void
 ngi_taskbar_remove(Ngi_Box *box)
 {
    Ecore_Event_Handler *h;
-   
+
    e_drop_handler_del(box->drop_handler);
 
    EINA_LIST_FREE(box->handlers, h)
@@ -99,7 +99,7 @@ _border_check(Ngi_Box *box, E_Border *bd)
 {
    if (box->ng->zone != bd->zone)
       return 0;
-   
+
    if (box->cfg->taskbar_show_iconified == 0 && bd->iconic)
       return 0;
 
@@ -165,8 +165,8 @@ _cb_drop_leave(void *data, const char *type, void *event_info)
 
    if (box->dnd_timer)
      {
-	ecore_timer_del(box->dnd_timer);
-	box->dnd_timer = NULL;
+   ecore_timer_del(box->dnd_timer);
+   box->dnd_timer = NULL;
      }
 
    ng->item_active = NULL;
@@ -192,14 +192,14 @@ _cb_drop_move(void *data, const char *type, void *event_info)
      {
         if (box->dnd_timer)
            ecore_timer_del(box->dnd_timer);
-	box->dnd_timer = NULL;
+   box->dnd_timer = NULL;
 
-	if (it)
-	  {
-	     ngi_item_activate(ng);
+   if (it)
+     {
+        ngi_item_activate(ng);
 
-	     box->dnd_timer = ecore_timer_add(0.5, _cb_show_window, it);
-	  }
+        box->dnd_timer = ecore_timer_add(0.5, _cb_show_window, it);
+     }
      }
 
    ngi_animate(ng);
@@ -216,8 +216,8 @@ _cb_drop_end(void *data, const char *type, void *event_info)
 
    if (box->dnd_timer)
      {
-	ecore_timer_del(box->dnd_timer);
-	box->dnd_timer = NULL;
+   ecore_timer_del(box->dnd_timer);
+   box->dnd_timer = NULL;
      }
 
    ng->item_active = NULL;
@@ -281,80 +281,80 @@ _cb_border_event(void *data, int type, void *event)
     *   return ECORE_CALLBACK_PASS_ON; */
 
    it = (Ngi_Item*)_border_find(box, bd);
-   
+
    if (type == E_EVENT_BORDER_FOCUS_IN)
      {
-	if (it) ngi_item_signal_emit(it, "e,state,taskbar,focus,on");
+   if (it) ngi_item_signal_emit(it, "e,state,taskbar,focus,on");
      }
    else if (type == E_EVENT_BORDER_FOCUS_OUT)
      {
-	if (it) ngi_item_signal_emit(it, "e,state,taskbar,focus,off");
+   if (it) ngi_item_signal_emit(it, "e,state,taskbar,focus,off");
      }
    else if (type == E_EVENT_BORDER_ICONIFY)
      {
-	if (it) ngi_item_signal_emit(it, "e,state,taskbar,iconic,on");
+   if (it) ngi_item_signal_emit(it, "e,state,taskbar,iconic,on");
      }
    else if (type == E_EVENT_BORDER_UNICONIFY)
      {
-	if (it) ngi_item_signal_emit(it, "e,state,taskbar,iconic,off");
+   if (it) ngi_item_signal_emit(it, "e,state,taskbar,iconic,off");
      }
    else if (type == E_EVENT_BORDER_ICON_CHANGE)
      {
-	if (it) _item_set_icon((Ngi_Item_Taskbar *)it);
+   if (it) _item_set_icon((Ngi_Item_Taskbar *)it);
      }
    else if (type == E_EVENT_BORDER_ADD)
      {
-	_item_new(box, bd);
+   _item_new(box, bd);
      }
    else if (type == E_EVENT_BORDER_REMOVE)
      {
-	if (it) ngi_item_remove(it);
+   if (it) ngi_item_remove(it);
      }
    else if (type == E_EVENT_BORDER_ZONE_SET)
      {
-	if (box->ng->zone == bd->zone)
-	  _item_new(box, bd);
-	else if (it)
-	  ngi_item_remove(it);
+   if (box->ng->zone == bd->zone)
+     _item_new(box, bd);
+   else if (it)
+     ngi_item_remove(it);
      }
    else if ((type == E_EVENT_BORDER_URGENT_CHANGE) && (it))
      {
-	 if (bd->client.icccm.urgent)
-	   {
-	      ((Ngi_Item_Taskbar *)it)->urgent = 1;
-	      ngi_item_signal_emit(it, "e,state,taskbar,urgent,on");
+    if (bd->client.icccm.urgent)
+      {
+         ((Ngi_Item_Taskbar *)it)->urgent = 1;
+         ngi_item_signal_emit(it, "e,state,taskbar,urgent,on");
 
-	      if (box->ng->cfg->autohide_show_urgent)
-		{
-		   ngi_bar_lock(box->ng, 1);
-		   ngi_animate(box->ng);
-		}
-	   }
-	 else
-	   {
-	      ((Ngi_Item_Taskbar *)it)->urgent = 0;
-	      ngi_item_signal_emit(it, "e,state,taskbar,urgent,off");
+         if (box->ng->cfg->autohide_show_urgent)
+      {
+         ngi_bar_lock(box->ng, 1);
+         ngi_animate(box->ng);
+      }
+      }
+    else
+      {
+         ((Ngi_Item_Taskbar *)it)->urgent = 0;
+         ngi_item_signal_emit(it, "e,state,taskbar,urgent,off");
 
-	      if (box->ng->cfg->autohide_show_urgent)
-		{
-		   ngi_bar_lock(box->ng, 0);
-		   ngi_animate(box->ng);
-		}
-	   }
+         if (box->ng->cfg->autohide_show_urgent)
+      {
+         ngi_bar_lock(box->ng, 0);
+         ngi_animate(box->ng);
+      }
+      }
      }
    else if (type == E_EVENT_BORDER_PROPERTY)
      {
-	if (it)
-	  {
-	     if (!_border_check(box, bd))
-	       ngi_item_remove(it);
-	     else
-	       _item_set_label((Ngi_Item_Taskbar *)it);
-	  }
-	else
-	  {
-	     _item_new(box, ev->border);
-	  }
+   if (it)
+     {
+        if (!_border_check(box, bd))
+          ngi_item_remove(it);
+        else
+          _item_set_label((Ngi_Item_Taskbar *)it);
+     }
+   else
+     {
+        _item_new(box, ev->border);
+     }
      }
 
    return ECORE_CALLBACK_PASS_ON;
@@ -373,23 +373,23 @@ _cb_desk_show(void *data, int type, void *event)
 
    if (!box->cfg->taskbar_show_desktop)
      return ECORE_CALLBACK_PASS_ON;
-   
+
    EINA_LIST_FOREACH(box->items, l, it)
      {
-	if ((it->border->desk == ev->desk) || (it->border->sticky))
-	  {
-	     evas_object_show(it->base.obj);
-	     evas_object_show(it->base.over);	     
-	     it->base.scale = 1.0;
-	  }
-	else
-	  {
-	     evas_object_hide(it->base.obj);
-	     evas_object_hide(it->base.over);
-	     it->base.scale = 0.0;
-	  }
+   if ((it->border->desk == ev->desk) || (it->border->sticky))
+     {
+        evas_object_show(it->base.obj);
+        evas_object_show(it->base.over);
+        it->base.scale = 1.0;
      }
-   
+   else
+     {
+        evas_object_hide(it->base.obj);
+        evas_object_hide(it->base.over);
+        it->base.scale = 0.0;
+     }
+     }
+
    ngi_thaw(box->ng);
 
    return ECORE_CALLBACK_PASS_ON;
@@ -431,23 +431,23 @@ _item_new(Ngi_Box *box, E_Border *bd)
    if ((box->cfg->taskbar_group_apps) &&
        (bd->client.icccm.class && bd->client.icccm.class[0]))
      {
-	it->class = eina_stringshare_ref(bd->client.icccm.class);
+   it->class = eina_stringshare_ref(bd->client.icccm.class);
 
-	EINA_LIST_FOREACH(box->items, l, l_it)
-	  {
-	     if (!l_it->class)
-	       {
-		  continue;
-	       }
-	     else if (l_it->class == it->class)
-	       {
-		  ll_it = l_it;
-	       }
-	     else if ((ll_it) && (l_it->class != it->class))
-	       {
-		  break;
-	       }
-	  }
+   EINA_LIST_FOREACH(box->items, l, l_it)
+     {
+        if (!l_it->class)
+          {
+        continue;
+          }
+        else if (l_it->class == it->class)
+          {
+        ll_it = l_it;
+          }
+        else if ((ll_it) && (l_it->class != it->class))
+          {
+        break;
+          }
+     }
      }
 
    if (ll_it)
@@ -461,14 +461,14 @@ _item_new(Ngi_Box *box, E_Border *bd)
        (bd->desk != e_desk_current_get(box->ng->zone)) &&
        (!bd->sticky))
      {
-	ngi_item_show(item, 1);
-	item->scale = 0.0;
+   ngi_item_show(item, 1);
+   item->scale = 0.0;
      }
    else
      {
-	ngi_item_show(item, 0);
+   ngi_item_show(item, 0);
      }
-   
+
    if (bd->iconic)
      ngi_item_signal_emit(item, "e,state,taskbar,iconic,on");
 
@@ -510,55 +510,55 @@ _border_icon_add(E_Border *bd, Evas *evas)
    if (bd->internal)
      {
         if (!bd->internal_icon)
-	  {
-	     o = e_icon_add(evas);
-	     e_util_icon_theme_set(o, "enlightenment");
-	  }
+     {
+        o = e_icon_add(evas);
+        e_util_icon_theme_set(o, "enlightenment");
+     }
         else if (!bd->internal_icon_key)
-	  {
-	     char *ext;
-	     ext = strrchr(bd->internal_icon, '.');
-	     if ((ext) && ((!strcmp(ext, ".edj"))))
-	       {
-		  o = edje_object_add(evas);
-		  if (!edje_object_file_set(o, bd->internal_icon, "icon"))
-		    e_util_icon_theme_set(o, "enlightenment");
-	       }
-	     else if (ext)
-	       {
-		  o = e_icon_add(evas);
-		  e_icon_file_set(o, bd->internal_icon);
-	       }
-	     else
-	       {
-		  o = e_icon_add(evas);
-		  e_icon_scale_size_set(o, 128);
-		  if (!e_util_icon_theme_set(o, bd->internal_icon))
-		    e_util_icon_theme_set(o, "enlightenment");
-	       }
-	  }
-	else
-	  {
-	     o = edje_object_add(evas);
-	     edje_object_file_set(o, bd->internal_icon, bd->internal_icon_key);
-	  }
+     {
+        char *ext;
+        ext = strrchr(bd->internal_icon, '.');
+        if ((ext) && ((!strcmp(ext, ".edj"))))
+          {
+        o = edje_object_add(evas);
+        if (!edje_object_file_set(o, bd->internal_icon, "icon"))
+          e_util_icon_theme_set(o, "enlightenment");
+          }
+        else if (ext)
+          {
+        o = e_icon_add(evas);
+        e_icon_file_set(o, bd->internal_icon);
+          }
+        else
+          {
+        o = e_icon_add(evas);
+        e_icon_scale_size_set(o, 128);
+        if (!e_util_icon_theme_set(o, bd->internal_icon))
+          e_util_icon_theme_set(o, "enlightenment");
+          }
+     }
+   else
+     {
+        o = edje_object_add(evas);
+        edje_object_file_set(o, bd->internal_icon, bd->internal_icon_key);
+     }
 
-	return o;
+   return o;
      }
 
    if (bd->client.netwm.icons)
      {
-	if (e_config->use_app_icon)
-	  goto _use_netwm_icon;
+   if (e_config->use_app_icon)
+     goto _use_netwm_icon;
 
-	if (bd->remember && (bd->remember->prop.icon_preference == E_ICON_PREF_NETWM))
-	  goto _use_netwm_icon;
+   if (bd->remember && (bd->remember->prop.icon_preference == E_ICON_PREF_NETWM))
+     goto _use_netwm_icon;
      }
 
    if (bd->desktop)
      {
         o = e_util_desktop_icon_add(bd->desktop, 128, evas);
-	if (o) return o;
+   if (o) return o;
      }
 
  _use_netwm_icon:
@@ -602,13 +602,13 @@ _item_set_icon(Ngi_Item_Taskbar *it)
 
    if (it->o_icon)
      {
-	edje_object_part_unswallow(it->base.obj, it->o_icon);
-	evas_object_del(it->o_icon);
+   edje_object_part_unswallow(it->base.obj, it->o_icon);
+   evas_object_del(it->o_icon);
      }
    if (it->o_proxy)
      {
-	edje_object_part_unswallow(it->base.obj, it->o_proxy);
-	evas_object_del(it->o_proxy);
+   edje_object_part_unswallow(it->base.obj, it->o_proxy);
+   evas_object_del(it->o_proxy);
      }
 
    o = _border_icon_add(it->border, e);
@@ -644,19 +644,19 @@ _item_set_label(Ngi_Item_Taskbar *it)
      {
         char *abbv;
         const char *left, *right;
-   
+
         abbv = E_NEW(char, E_CLIENTLIST_MAX_CAPTION_LEN + 4);
         left = title;
         right = title + (strlen(title) - (max_len / 2));
-   
+
         strncpy(abbv, left, max_len / 2);
         strncat(abbv, "...", 3);
         strncat(abbv, right, max_len / 2);
-   
-   	ngi_item_label_set((Ngi_Item*)it, abbv);
-	E_FREE(abbv);
-	
-   	return;
+
+      ngi_item_label_set((Ngi_Item*)it, abbv);
+   E_FREE(abbv);
+
+      return;
      }
 
    ngi_item_label_set((Ngi_Item*)it, title);
@@ -728,8 +728,8 @@ _item_cb_mouse_up(Ngi_Item *item, Ecore_Event_Mouse_Button *ev)
      {
         it->urgent = 0;
 
-	ngi_item_signal_emit((Ngi_Item*)it, "e,state,taskbar,urgent,off");
-	ngi_bar_lock(item->box->ng, 0);
+   ngi_item_signal_emit((Ngi_Item*)it, "e,state,taskbar,urgent,off");
+   ngi_bar_lock(item->box->ng, 0);
      }
 
    if (ev->buttons != 1)
@@ -746,27 +746,27 @@ _item_cb_mouse_up(Ngi_Item *item, Ecore_Event_Mouse_Button *ev)
 
    if (bd->iconic)
      {
-	e_border_uniconify(bd);
+   e_border_uniconify(bd);
 
-	if (it->border_was_fullscreen)
-	  e_border_fullscreen(bd, (E_Fullscreen)e_config->fullscreen_policy);
+   if (it->border_was_fullscreen)
+     e_border_fullscreen(bd, (E_Fullscreen)e_config->fullscreen_policy);
 
-	it->border_was_fullscreen = 0;
+   it->border_was_fullscreen = 0;
      }
    else
      {
-	e_border_raise(bd);
+   e_border_raise(bd);
      }
    if (bd->focused)
      {
-	char buf[1024];
-	E_Action *act = e_action_find("scale-windows");
+   char buf[1024];
+   E_Action *act = e_action_find("scale-windows");
         Eina_List *l;
         Ngi_Item_Taskbar *l_it;
         int cnt = 0;
 
-	if (!act) return;
-	if (!it->class) return;
+   if (!act) return;
+   if (!it->class) return;
 
         EINA_LIST_FOREACH(it->base.box->items, l, l_it)
           if (l_it->class == it->class)
@@ -775,8 +775,8 @@ _item_cb_mouse_up(Ngi_Item *item, Ecore_Event_Mouse_Button *ev)
         if (cnt < 2)
           return;
 
-	snprintf(buf, 1024, "go_scale_class:%s", bd->client.icccm.class);
-	act->func.go(NULL, buf);
+   snprintf(buf, 1024, "go_scale_class:%s", bd->client.icccm.class);
+   act->func.go(NULL, buf);
      }
    else
      e_border_focus_set(bd, 1, 1);
@@ -810,8 +810,8 @@ _item_cb_drag_start(Ngi_Item *item)
 
    if (!ngi_config->use_composite)
      {
-	x -= ng->win->rect.x;
-	y -= ng->win->rect.y;
+   x -= ng->win->rect.x;
+   y -= ng->win->rect.y;
      }
 
    const char *drag_types[] = { "enlightenment/border" };
@@ -851,34 +851,34 @@ _item_cb_drag_end(E_Drag *drag, int dropped)
 
    if ((bd->w < w) && (bd->h < w))
      {
-	int dx = abs(drag->x - w/2);
-	int dy = abs(drag->y - h/2);
+   int dx = abs(drag->x - w/2);
+   int dy = abs(drag->y - h/2);
 
-	if (sqrt(dx*dx + dy*dy) < w/8)
-	  {
-	     drag->x = w/2;
-	     drag->y = h/2;
-	  }
+   if (sqrt(dx*dx + dy*dy) < w/8)
+     {
+        drag->x = w/2;
+        drag->y = h/2;
+     }
 
-	int x = drag->x - bd->w/2;
+   int x = drag->x - bd->w/2;
 
-	if (bd->w < w - 50)
-	  {
-	     if (x < 50) x = 50;
-	     if (x + bd->w > w) x = w - bd->w - 50;
-	  }
-	else x = bd->x;
+   if (bd->w < w - 50)
+     {
+        if (x < 50) x = 50;
+        if (x + bd->w > w) x = w - bd->w - 50;
+     }
+   else x = bd->x;
 
-	int y = drag->y - bd->h/2;
+   int y = drag->y - bd->h/2;
 
-	if (bd->h < h - 50)
-	  {
-	     if (y < 50) y = 50;
-	     if (y + bd->h > h) y = h - bd->h - 50;
-	  }
-	else y = bd->y;
+   if (bd->h < h - 50)
+     {
+        if (y < 50) y = 50;
+        if (y + bd->h > h) y = h - bd->h - 50;
+     }
+   else y = bd->y;
 
-	e_border_move(bd, x, y);
+   e_border_move(bd, x, y);
    }
 
    if (bd->iconic)

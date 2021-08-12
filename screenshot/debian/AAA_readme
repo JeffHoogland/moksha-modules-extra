@@ -1,0 +1,14 @@
+edje_cc: Critical. GROUP modules/screenshot/main - state 'active:0.5' does not exist for part 'flash'; set in program 'flash5'
+make[3]: *** [Makefile:927: e-module-screenshot.edj] Error 255
+make[3]: Leaving directory '/home/bodhi/Code/Bodhi/moksha-modules-extra/screenshot'
+make[2]: *** [Makefile:505: all-recursive] Error 1
+make[2]: Leaving directory '/home/bodhi/Code/Bodhi/moksha-modules-extra/screenshot'
+make[1]: *** [Makefile:412: all] Error 2
+make[1]: Leaving directory '/home/bodhi/Code/Bodhi/moksha-modules-extra/screenshot'
+
+		  description 
+		    {
+		       state: "active" 0.5;
+		       inherit: "active" 0.0;
+		       image.normal: "flash5.png";
+		    }

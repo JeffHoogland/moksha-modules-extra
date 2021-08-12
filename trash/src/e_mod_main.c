@@ -48,9 +48,9 @@ static void _trash_conf_free(void);
 static E_Gadcon_Client *_gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style);
 static void _gc_shutdown(E_Gadcon_Client *gcc);
 static void _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient);
-static const char *_gc_label(E_Gadcon_Client_Class *client_class);
-static Evas_Object *_gc_icon(E_Gadcon_Client_Class *client_class, Evas *evas);
-static const char *_gc_id_new(E_Gadcon_Client_Class *client_class);
+static const char *_gc_label(const E_Gadcon_Client_Class *client_class);
+static Evas_Object *_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas);
+static const char *_gc_id_new(const E_Gadcon_Client_Class *client_class);
 static Eina_Bool _gc_in_site(E_Gadcon_Site site);
 
 
@@ -94,7 +94,9 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    inst = E_NEW(Instance, 1);
 
    o = edje_object_add(gc->evas);
-   edje_object_file_set(o, icon, "icon");
+   if (!e_theme_edje_object_set(o, "base/theme/modules/trash", 
+                                "modules/trash/main"))
+     edje_object_file_set(o, icon, "modules/trash/main");
 
    if (!efreet_trash_is_empty())
       edje_object_signal_emit(o, "set_full", "e");
@@ -148,13 +150,13 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
 }
 
 static const char *
-_gc_label(E_Gadcon_Client_Class *client_class)
+_gc_label(const E_Gadcon_Client_Class *client_class)
 {
    return D_("Trash");
 }
 
 static Evas_Object *
-_gc_icon(E_Gadcon_Client_Class *client_class, Evas *evas)
+_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 {
    Evas_Object *o;
 
@@ -164,7 +166,7 @@ _gc_icon(E_Gadcon_Client_Class *client_class, Evas *evas)
 }
 
 static const char *
-_gc_id_new(E_Gadcon_Client_Class *client_class)
+_gc_id_new(const E_Gadcon_Client_Class *client_class)
 {
    return _gadcon_class.name;
 }
@@ -352,9 +354,6 @@ _trash_button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_i
 
         m = e_menu_new();
 
-		
-       
-
         mi = e_menu_item_new(m);
         e_menu_item_label_set(mi, D_("Empty Trash"));
         e_menu_item_icon_edje_set(mi, icon, "icon");
@@ -435,8 +434,7 @@ _trash_cb_menu_show(void *data, E_Menu *m, E_Menu_Item *mi)
    
    //~ if (trash_conf->fileman = "pcmanfm")  trash_conf->fileman = "pcmanfm -n";
   
-	snprintf(buf, sizeof(buf), "%s trash:///", trash_conf->fileman);
-	
+   snprintf(buf, sizeof(buf), "%s trash:///", trash_conf->fileman);
    e_exec(zone, NULL, buf, NULL, NULL);
 }
 
@@ -580,7 +578,7 @@ _trash_conf_new(void)
    /* setup defaults */
    IFMODCFG(0x008d);
    //~ trash_conf->switch1 = 1;
-   trash_conf->fileman = eina_stringshare_add("pcmanfm -n");
+   trash_conf->fileman = eina_stringshare_add("Thunar");
    
    _trash_conf_item_get(NULL);
    IFMODCFGEND;

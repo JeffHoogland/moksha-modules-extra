@@ -1,0 +1,14 @@
+Source: moksha-module-diskio
+Section: utils
+Priority: optional
+Maintainer: Robert (ylee) Wiley <ylee@bodhilinux.com>
+Build-Depends: debhelper (>= 10), autotools-dev, pkg-config, libefl-dev, moksha
+Standards-Version: 4.5.0
+Homepage: https://github.com/JeffHoogland/moksha-modules-extra
+Rules-Requires-Root: no
+
+Package: moksha-module-diskio
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, moksha
+Description: Disk io module for the Moksha desktop
+ Disk monitoring module for the Moksha desktop

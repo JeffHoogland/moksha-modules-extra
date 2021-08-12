@@ -2,23 +2,22 @@
 # This file is distributed under the same license as the enlightenment package.
 # Adaptado ao acordo ortográfico de 1990
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
-# Sérgio Marques <sarquespt@gmail.com>, 2010.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: places\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-13 00:56+0100\n"
-"PO-Revision-Date: 2012-09-13 01:15+0100\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"PO-Revision-Date: 2021-05-19 19:25+0100\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: Portugal\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: src/e_mod_config.c:54
 msgid "Places Settings"
@@ -38,7 +37,7 @@ msgstr "Ocultar título do gadget"
 
 #: src/e_mod_config.c:147
 msgid "Mount volumes at boot"
-msgstr "Montar volumes ao iniciar"
+msgstr "Montar volumes ao arrancar"
 
 #: src/e_mod_config.c:151
 msgid "Mount volumes on insert"
@@ -56,29 +55,23 @@ msgstr "Utilizar um gestor de ficheiros personalizado"
 msgid "Show in menu"
 msgstr "Mostrar no menu"
 
-#: src/e_mod_config.c:178
-#: src/e_mod_places.c:774
+#: src/e_mod_config.c:178 src/e_mod_places.c:774
 msgid "Home"
 msgstr "Pasta pessoal"
 
-#: src/e_mod_config.c:181
-#: src/e_mod_places.c:783
+#: src/e_mod_config.c:181 src/e_mod_places.c:783
 msgid "Desktop"
 msgstr "Área de trabalho"
 
-#: src/e_mod_config.c:184
-#: src/e_mod_places.c:793
+#: src/e_mod_config.c:184 src/e_mod_places.c:793
 msgid "Trash"
 msgstr "Lixo"
 
-#: src/e_mod_config.c:187
-#: src/e_mod_places.c:618
-#: src/e_mod_places.c:802
+#: src/e_mod_config.c:187 src/e_mod_places.c:618 src/e_mod_places.c:802
 msgid "Filesystem"
 msgstr "Sistema de ficheiros"
 
-#: src/e_mod_config.c:190
-#: src/e_mod_places.c:811
+#: src/e_mod_config.c:190 src/e_mod_places.c:811
 msgid "Temp"
 msgstr "Temporários"
 
@@ -90,9 +83,7 @@ msgstr "Favoritos"
 msgid "Files"
 msgstr "Ficheiros"
 
-#: src/e_mod_main.c:61
-#: src/e_mod_places.c:236
-#: src/e_mod_places.c:868
+#: src/e_mod_main.c:61 src/e_mod_places.c:236 src/e_mod_places.c:868
 msgid "Places"
 msgstr "Locais"
 
@@ -110,7 +101,7 @@ msgstr "Aviso"
 
 #: src/e_mod_places.c:600
 msgid "<b>Cannot run the Enlightenment FileManager.</b><br>Please choose a custom file manager in<br>the gadget configuration."
-msgstr "<b>Não foi possível executar o EFM.</b><br>Escolha o gestor de ficheiros na configuração do gadget."
+msgstr "<b>Não foi possível executar o EFM.</b><br>Escolha o gestor de ficheiros na<br>configuração do gadget."
 
 #: src/e_mod_places.c:622
 msgid "No Name"

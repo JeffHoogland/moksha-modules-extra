@@ -1,0 +1,38 @@
+news_viewer.c: In function ‘_dialog_create’:
+news_viewer.c:313:4: warning: ignoring return value of ‘evas_object_key_grab’, declared with attribute warn_unused_result [-Wunused-result]
+  313 |    evas_object_key_grab(dia->event_object, "Escape", mask, ~mask, 0);
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+news_viewer.c: In function ‘_dialog_cb_article_selected’:
+news_viewer.c:599:13: warning: ‘%s’ directive output may be truncated writing up to 4095 bytes into a region of size between 4058 and 4066 [-Wformat-truncation=]
+  599 |             "<hilight>%s</hilight><br>"
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  604 |             buf_date,
+      |             ~~~~~~~~
+news_viewer.c:600:21: note: format string is defined here
+  600 |             "<small>%s</small><br><br>"
+      |                     ^~
+news_viewer.c:599:13: note: assuming directive output of 19 bytes
+  599 |             "<hilight>%s</hilight><br>"
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/enlightenment/e.h:57,
+                 from News.h:6,
+                 from news_viewer.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:67:10: note: ‘__builtin___snprintf_chk’ output 70 or more bytes (assuming 4242) into a destination of size 4096
+   67 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |        __bos (__s), __fmt, __va_arg_pack ());
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+news_viewer.c: In function ‘_varticles_refresh’:
+news_viewer.c:758:51: warning: ‘__builtin___snprintf_chk’ output may be truncated before the last format character [-Wformat-truncation=]
+  758 |              snprintf(label, sizeof(label), "%s %s", buf_date, art->title);
+      |                                                   ^
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/enlightenment/e.h:57,
+                 from News.h:6,
+                 from news_viewer.c:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:67:10: note: ‘__builtin___snprintf_chk’ output 2 or more bytes (assuming 4097) into a destination of size 4096
+   67 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |        __bos (__s), __fmt, __va_arg_pack ());

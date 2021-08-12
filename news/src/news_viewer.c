@@ -295,6 +295,7 @@ _dialog_create(News_Viewer *nv)
    Evas_Modifier_Mask mask;
    E_Dialog    *dia;
    char buf[4096];
+   Eina_Bool kg;
 
    snprintf(buf, sizeof(buf), "_e_mod_news_viewer_%d", nv->item->gcc->id);
    dia = e_dialog_new(e_container_current_get(e_manager_current_get()),
@@ -310,7 +311,9 @@ _dialog_create(News_Viewer *nv)
    //e_win_layer_set(dia->win, ECORE_X_WINDOW_LAYER_ABOVE);
 
    mask = 0;
-   evas_object_key_grab(dia->event_object, "Escape", mask, ~mask, 0);
+   kg = evas_object_key_grab(dia->event_object, "Escape", mask, ~mask, 0);
+   if (!kg)
+     fprintf(stderr, "ERROR: unable to redirect \"Escape\" key events to object %p.\n", dia->event_object);
    evas_object_event_callback_add(dia->event_object, EVAS_CALLBACK_KEY_DOWN, _dialog_cb_key_down, nv);
 
    nv->dialog.dia = dia;
@@ -584,7 +587,6 @@ _dialog_cb_article_selected(void *data)
 {
    News_Viewer *nv;
    News_Feed_Article *art;
-   char buf[4096];
    char buf_date[4096] = "Not dated";
 
    art = data;
@@ -595,7 +597,19 @@ _dialog_cb_article_selected(void *data)
 
    if (art->date.tm_year != 0)
      strftime(buf_date, sizeof(buf_date), "%Y-%m-%d %H:%M:%S", &art->date);
-   snprintf(buf, sizeof(buf),
+     
+   int n = snprintf(0, 0,
+            "<hilight>%s</hilight><br>"
+            "<small>%s</small><br><br>"
+            "%s<br><br>"
+            "<small>%s</small>",
+            (art->title && art->title[0]) ? art->title : "No title",
+            buf_date,
+            (art->description && art->description[0])? art->description : "No description text",
+            (art->url) ? "||click on the text to open article in a browser||" : "");
+   
+   char *buf = (char *)malloc(n + 1);
+   snprintf(buf, n + 1,
             "<hilight>%s</hilight><br>"
             "<small>%s</small><br><br>"
             "%s<br><br>"
@@ -605,7 +619,8 @@ _dialog_cb_article_selected(void *data)
             (art->description && art->description[0])? art->description : "No description text",
             (art->url) ? "||click on the text to open article in a browser||" : "");
    _vcontent_text_set(nv, buf);
-
+   free(buf);
+   
    if (art->unread)
      news_feed_article_unread_set(art, 0);
 }
@@ -748,17 +763,20 @@ _varticles_refresh(News_Viewer *nv)
         for (l=articles; l; l=eina_list_next(l))
           {
              News_Feed_Article *art;
-             char label[4096];
              char buf_date[4096] = "";
              
              art = l->data;
              /* append the article to the article ilist */
              if (art->date.tm_year)
                strftime(buf_date, sizeof(buf_date), "%d %H:%M", &art->date);
-             snprintf(label, sizeof(label), "%s %s", buf_date, art->title);
+               
+             int n = snprintf(0, 0, "%s %s", buf_date, art->title);
+             char *label = (char *)malloc(n + 1);
+             snprintf(label, n + 1, "%s %s", buf_date, art->title);
              e_widget_ilist_append(ilist,
                                    _article_icon_get(art, evas_object_evas_get(ilist)), label,
                                    _dialog_cb_article_selected, art, NULL);
+             free(label);                      
              if (nv->varticles.selected == art)
                toselect_pos = pos;
 

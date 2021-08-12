@@ -1,8 +1,11 @@
 [Desktop Entry]
 Type=Link
 Name=Trash
+Name[pt]=Lixo
 Name[sk]=Kôš
 Icon=e-module-trash
 X-Enlightenment-ModuleType=files
 Comment=A freedesktop compliant trash module.
+Comment[fr]=Module de corbeille pour Moksha.
+Comment[pt]=Um módulo de lixo para o Moksha/Enlightenment.
 Comment[sk]=Modul koša pre Moksha/Enlightenment desktop.
