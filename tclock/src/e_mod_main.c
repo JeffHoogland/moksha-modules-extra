@@ -252,6 +252,71 @@ _tclock_menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi)
    _config_tclock_module(inst->ci);
 }
 
+static void
+_eval_instance_size(Instance *inst)
+{
+   EINA_SAFETY_ON_NULL_RETURN(inst);
+   Evas_Coord mw, mh, omw, omh;
+
+   edje_object_size_min_get(inst->tclock, &mw, &mh);
+
+   omw = mw;
+   omh = mh;
+
+   if ((mw < 1) || (mh < 1))
+      {
+         Evas_Coord x, y, sw = 0, sh = 0, ow, oh;
+         Eina_Bool horiz;
+
+         switch (inst->gcc->gadcon->orient)
+            {
+             case E_GADCON_ORIENT_TOP:
+             case E_GADCON_ORIENT_CORNER_TL:
+             case E_GADCON_ORIENT_CORNER_TR:
+             case E_GADCON_ORIENT_BOTTOM:
+             case E_GADCON_ORIENT_CORNER_BL:
+             case E_GADCON_ORIENT_CORNER_BR:
+             case E_GADCON_ORIENT_HORIZ:
+                horiz = EINA_TRUE;
+                break;
+
+             case E_GADCON_ORIENT_LEFT:
+             case E_GADCON_ORIENT_CORNER_LB:
+             case E_GADCON_ORIENT_CORNER_LT:
+             case E_GADCON_ORIENT_RIGHT:
+             case E_GADCON_ORIENT_CORNER_RB:
+             case E_GADCON_ORIENT_CORNER_RT:
+             case E_GADCON_ORIENT_VERT:
+                horiz = EINA_FALSE;
+                break;
+
+             default:
+                horiz = EINA_TRUE;
+            }
+
+         if (inst->gcc->gadcon->shelf)
+            {
+               if (horiz)
+                  sh = inst->gcc->gadcon->shelf->h;
+               else
+                  sw = inst->gcc->gadcon->shelf->w;
+            }
+
+         evas_object_geometry_get(inst->tclock, NULL, NULL, &ow, &oh);
+         evas_object_resize(inst->tclock, sw, sh);
+         edje_object_parts_extends_calc(inst->tclock, &x, &y, &mw, &mh);
+         evas_object_resize(inst->tclock, ow, oh);
+      }
+
+   if (mw < 10) mw = 10;
+   if (mh < 10) mh = 10;
+
+   if (mw < omw) mw = omw;
+   if (mh < omh) mh = omh;
+
+   e_gadcon_client_min_size_set(inst->gcc, mw + 10, mh);
+}
+
 void
 _tclock_config_updated(Config_Item *ci)
 {
@@ -337,8 +402,9 @@ _tclock_cb_check(void *data)
 			  (inst->tclock, "module_label", inst->ci->color_r, inst->ci->color_g, inst->ci->color_b, 
 			   inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
      }
-
-
+   
+   _eval_instance_size(inst);
+   
    return EINA_TRUE;
 }
 
