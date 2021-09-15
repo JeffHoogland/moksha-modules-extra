@@ -80,13 +80,13 @@ _gc_init (E_Gadcon * gc, const char *name, const char *id, const char *style)
 
    evas_object_event_callback_add (o, EVAS_CALLBACK_MOUSE_DOWN,
 				   _mem_cb_mouse_down, inst);
-   //~ evas_object_event_callback_add (o, EVAS_CALLBACK_MOUSE_IN, _mem_cb_mouse_in,
-				   //~ inst);
-   //~ evas_object_event_callback_add (o, EVAS_CALLBACK_MOUSE_OUT,
-				   //~ _mem_cb_mouse_out, inst);
+   evas_object_event_callback_add (o, EVAS_CALLBACK_MOUSE_IN, _mem_cb_mouse_in,
+				   inst);
+   evas_object_event_callback_add (o, EVAS_CALLBACK_MOUSE_OUT,
+				   _mem_cb_mouse_out, inst);
 
-   //~ if (inst->ci->always_text)
-     //~ edje_object_signal_emit (inst->mem_obj, "label_active", "");
+   if (inst->ci->always_text)
+     edje_object_signal_emit (inst->mem_obj, "label_active", "");
 
    _mem_cb_check (inst);
 
@@ -388,25 +388,25 @@ _mem_free (Mem * m)
    E_FREE (m);
 }
 
-//~ static void
-//~ _mem_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
-//~ {
-   //~ Instance *inst;
+static void
+_mem_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
+{
+   Instance *inst;
 
-   //~ inst = data;
-   //~ if (!inst->ci->always_text)
-     //~ edje_object_signal_emit (inst->mem_obj, "label_active", "");
-//~ }
+   inst = data;
+   if (!inst->ci->always_text)
+     edje_object_signal_emit (inst->mem_obj, "label_active", "");
+}
 
-//~ static void
-//~ _mem_cb_mouse_out (void *data, Evas * e, Evas_Object * obj, void *event_info)
-//~ {
-   //~ Instance *inst;
+static void
+_mem_cb_mouse_out (void *data, Evas * e, Evas_Object * obj, void *event_info)
+{
+   Instance *inst;
 
-   //~ inst = data;
-   //~ if (!inst->ci->always_text)
-     //~ edje_object_signal_emit (inst->mem_obj, "label_passive", "");
-//~ }
+   inst = data;
+   if (!inst->ci->always_text)
+     edje_object_signal_emit (inst->mem_obj, "label_passive", "");
+}
 
 static Eina_Bool
 _mem_cb_check (void *data)
