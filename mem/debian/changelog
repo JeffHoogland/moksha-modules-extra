@@ -1,3 +1,9 @@
+moksha-module-mem (20210915bodhi1-1) bionic; urgency=medium
+
+  * Revert mouse events to code from edc
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Wed, 15 Sep 2021 12:33:56 -0400
+
 moksha-module-mem (20210531bodhi1-1) bionic; urgency=medium
 
   * pt localization
