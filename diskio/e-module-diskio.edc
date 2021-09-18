@@ -122,7 +122,7 @@ collections
 			    size:  8;
 			    min:   1 1;
 			    align: 0.5 0.5;
-			    elipsis: -1;
+			    ellipsis: -1;
 			    text_class: "module_small";
 			 }
 		    }
