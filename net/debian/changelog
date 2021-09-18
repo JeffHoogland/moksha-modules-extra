@@ -1,3 +1,9 @@
+moksha-module-net (20210917bodhi1-1) bionic; urgency=medium
+
+  * gadcon aspect changed
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Fri, 17 Sep 2021 09:56:08 -0400
+
 moksha-module-net (20210531bodhi1-1) bionic; urgency=medium
 
   * pt localization
