@@ -111,7 +111,7 @@ collections
 			    min: 1 1;
 			    align: 0.5 0.5;
 			    text_class: "menu_item";
-			    elipsis: -1;
+			    ellipsis: -1;
 			 }
 		    }
 		  description 
@@ -156,7 +156,7 @@ collections
 			    min: 1 1;
 			    align: 0.5 0.5;
 			    text_class: "menu_item";
-			    elipsis: -1;
+			    ellipsis: -1;
 			 }
 		    }
 		  description 
@@ -294,7 +294,7 @@ collections
 			    min: 1 1;
 			    align: 0.5 0.0;
 			    text_class: "menu_title";
-			    elipsis: -1;
+			    ellipsis: -1;
 			 }
 		    }
 	       }
@@ -357,7 +357,7 @@ collections
 			    min: 1 1;
 			    align: 0.0 0.5;
 			    text_class: "module_normal";
-			    elipsis: -1;
+			    ellipsis: -1;
 			 }
 		    }
 	       }
@@ -394,7 +394,7 @@ collections
 			    min: 1 1;
 			    align: 0.0 0.5;
 			    text_class: "module_normal";
-			    elipsis: -1;
+			    ellipsis: -1;
 			 }
 		    }
 	       }
