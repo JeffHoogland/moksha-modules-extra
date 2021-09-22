@@ -1,3 +1,9 @@
+moksha-module-alarm (20210922bodhi1-1) bionic; urgency=medium
+  
+  * Alarm module icon edje fix
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Wed, 22 Sep 2021 17:11:49 -0400
+
 moksha-module-alarm (20210531bodhi1-1) bionic; urgency=medium
   
   * pt localization
