@@ -71,26 +71,22 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    Evas_Object *o;
    E_Gadcon_Client *gcc;
    Instance *inst;
+   char buf[PATH_MAX];
    
    inst = E_NEW(Instance, 1);
    
    o = edje_object_add(gc->evas);
-
-   if (alarm_config->theme)
-     {
-        char buf[4096];
-        snprintf(buf, sizeof(buf), "%s/alarm.edj", e_module_dir_get(alarm_config->module));
-        edje_object_file_set(o, buf, THEME_MAIN);
-     }
-   else
-     e_theme_edje_object_set(o, THEME_IN_E, THEME_MAIN);
-
+   snprintf(buf, sizeof(buf), "%s/alarm.edj", e_module_dir_get(alarm_config->module));
+   if (!e_theme_edje_object_set
+       (o, "base/theme/modules/alarm", "modules/alarm/main"))
+   edje_object_file_set(o, buf, THEME_MAIN);
+     
    edje_object_signal_callback_add(o, EDJE_SIG_RECV_ALARM_STATE_ON,
-				   _cb_edje_alarm_state_on, NULL);
+           _cb_edje_alarm_state_on, NULL);
    edje_object_signal_callback_add(o, EDJE_SIG_RECV_ALARM_STATE_OFF,
-				   _cb_edje_alarm_state_off, NULL);
+           _cb_edje_alarm_state_off, NULL);
    edje_object_signal_callback_add(o, EDJE_SIG_RECV_ALARM_RING_STOP,
-				   _cb_edje_alarm_ring_stop, NULL);
+           _cb_edje_alarm_ring_stop, NULL);
 
    gcc = e_gadcon_client_new(gc, name, id, style, o);
    gcc->data = inst;
@@ -100,7 +96,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    inst->orient = E_GADCON_ORIENT_HORIZ;
 
    evas_object_event_callback_add(o, EVAS_CALLBACK_MOUSE_DOWN,
-				  _button_cb_mouse_down, inst);
+          _button_cb_mouse_down, inst);
 
    alarm_config->instances = eina_list_append(alarm_config->instances, inst);
 
@@ -193,7 +189,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
    
    o = edje_object_add(evas);
    snprintf(buf, sizeof(buf), "%s/module.edj",
-	    e_module_dir_get(alarm_config->module));
+      e_module_dir_get(alarm_config->module));
    edje_object_file_set(o, buf, "icon");
    return o;
 }
@@ -811,25 +807,28 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
    ev = event_info;
    if ((ev->button == 3) && (!alarm_config->menu))
      {
-	E_Menu *m;
-	E_Menu_Item *mi;
-	int cx, cy, cw, ch;
+  E_Menu *m;
+  E_Menu_Item *mi;
+  int cx, cy, cw, ch;
         int nb_snoozed = 0;
-	
-	m = e_menu_new();
-	mi = e_menu_item_new(m);
-	e_menu_item_label_set(mi, D_("Add an alarm"));
-	e_menu_item_callback_set(mi, _menu_cb_alarm_add, NULL);
-        if (!alarm_config->theme) e_util_menu_item_theme_icon_set(mi, THEME_ICON_ALARM_ON);
-        else e_menu_item_icon_edje_set(mi, alarm_config->theme, THEME_ICON_ALARM_ON);
-        mi = e_menu_item_new(m);
-        e_menu_item_separator_set(mi, 1);
-	mi = e_menu_item_new(m);
-	e_menu_item_label_set(mi, D_("Settings"));
-	e_util_menu_item_theme_icon_set(mi, "preferences-system");
-	e_menu_item_callback_set(mi, _menu_cb_configure, NULL);
-	
-	m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
+
+  m = e_menu_new();
+  mi = e_menu_item_new(m);
+  e_menu_item_label_set(mi, D_("Add an alarm"));
+  e_menu_item_callback_set(mi, _menu_cb_alarm_add, NULL);
+  if (!alarm_config->theme)
+    e_util_menu_item_theme_icon_set(mi, THEME_ICON_ALARM_ON);
+  else
+    e_menu_item_icon_edje_set(mi, alarm_config->theme, THEME_ICON_ALARM_ON);
+
+  mi = e_menu_item_new(m);
+  e_menu_item_separator_set(mi, 1);
+  mi = e_menu_item_new(m);
+  e_menu_item_label_set(mi, D_("Settings"));
+  e_util_menu_item_theme_icon_set(mi, "preferences-system");
+  e_menu_item_callback_set(mi, _menu_cb_configure, NULL);
+
+  m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
 
         /* snooze menu */
         if (alarm_config->alarms_state == ALARM_STATE_RINGING)
@@ -870,16 +869,16 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
              else e_menu_item_icon_edje_set(mi, alarm_config->theme, THEME_ICON_SNOOZE);
           }
 
-	e_menu_post_deactivate_callback_set(m, _menu_cb_deactivate_post, inst);
-	alarm_config->menu = m;	
-	e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon,
-					  &cx, &cy, &cw, &ch);
-	e_menu_activate_mouse(m,
-			      e_util_zone_current_get(e_manager_current_get()),
-			      cx + ev->output.x, cy + ev->output.y, 1, 1,
-			      E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
-	evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
-				 EVAS_BUTTON_NONE, ev->timestamp, NULL);
+  e_menu_post_deactivate_callback_set(m, _menu_cb_deactivate_post, inst);
+  alarm_config->menu = m;
+  e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon,
+            &cx, &cy, &cw, &ch);
+  e_menu_activate_mouse(m,
+            e_util_zone_current_get(e_manager_current_get()),
+            cx + ev->output.x, cy + ev->output.y, 1, 1,
+            E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
+  evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
+         EVAS_BUTTON_NONE, ev->timestamp, NULL);
      }
 }
 
@@ -1075,10 +1074,10 @@ e_modapi_init(E_Module *m)
 
    if (!alarm_config)
      {
-	alarm_config = E_NEW(Config, 1);
+  alarm_config = E_NEW(Config, 1);
         alarm_config->time_format = TIME_FORMAT_DEFAULT;
         alarm_config->alarms_state = ALARM_STATE_OFF;
-	alarm_config->alarms_details = ALARMS_DETAILS_DEFAULT;
+  alarm_config->alarms_details = ALARMS_DETAILS_DEFAULT;
         alarm_config->alarms_autoremove_default = ALARMS_AUTOREMOVE_DEFAULT;
         alarm_config->alarms_open_popup_default = ALARMS_OPEN_POPUP_DEFAULT;
         alarm_config->alarms_run_program_default = ALARMS_RUN_PROGRAM_DEFAULT;
@@ -1156,8 +1155,8 @@ e_modapi_shutdown(E_Module *m)
      e_object_del(E_OBJECT(alarm_config->config_dialog_alarm_new));
    if (alarm_config->menu)
      {
-	e_menu_post_deactivate_callback_set(alarm_config->menu , NULL, NULL);
-	e_object_del(E_OBJECT(alarm_config->menu));
+  e_menu_post_deactivate_callback_set(alarm_config->menu , NULL, NULL);
+  e_object_del(E_OBJECT(alarm_config->menu));
      }
 
    E_FREE(alarm_config);
