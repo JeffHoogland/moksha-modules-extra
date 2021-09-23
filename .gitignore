@@ -1,3 +1,4 @@
+*~
 *.ddeb
 *.buildinfo
 *.changes
@@ -45,6 +46,7 @@
 */po/en@quot.header
 */po/insert-header.sin
 */po/quot.sed
+*/po/remove-potcdate.sed
 */po/remove-potcdate.sin
 */po/stamp-po
 */stamp-h1
@@ -54,4 +56,4 @@
 */src/*.in
 */src/*.o
 */src/Makefile
-alarm/debian/moksha-module-alarm/
+*/debian/moksha-module-*
