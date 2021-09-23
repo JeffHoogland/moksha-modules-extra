@@ -805,7 +805,7 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
    
    inst = data;
    ev = event_info;
-   if ((ev->button == 3) && (!alarm_config->menu))
+   if (ev->button == 3)
      {
   E_Menu *m;
   E_Menu_Item *mi;
