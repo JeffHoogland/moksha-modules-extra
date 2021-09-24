@@ -57,3 +57,14 @@
 */src/*.o
 */src/Makefile
 */debian/moksha-module-*
+*/data/Makefile
+*/data/Makefile.in
+*/data/images/Makefile
+*/data/images/Makefile.in
+*/data/images/categories/Makefile
+*/data/images/categories/Makefile.in
+*/data/images/feeds/Makefile
+*/data/images/feeds/Makefile.in
+*/data/theme/Makefile
+*/data/theme/Makefile.in
+*/data/theme/e-module-news.edj
