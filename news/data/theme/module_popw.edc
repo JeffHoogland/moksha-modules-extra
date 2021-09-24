@@ -1,52 +1,197 @@
-/* Popup warn group */
+	/* Popup warn group */
+	#define POPUP_WARN_TYPE_INFO 0
+	#define POPUP_WARN_TYPE_ERROR 1
+	#define MSG_RECV_POPUP_WARN_TYPE 1
 
-#define POPUP_WARN_TYPE_INFO 0
-#define POPUP_WARN_TYPE_ERROR 1
+	group { "modules/news/popw";
+		script {
+			public show_disabled;
+			public popup_type;
+			public popup_in_update;
+			/* Message from C code */
+			public message(Msg_Type: type, id, msg) {
+				if (id == MSG_RECV_POPUP_WARN_TYPE) {
+					if (type == MSG_INT) {
+						set_int(popup_type, getarg(2));
+						if (get_int(popup_type) == POPUP_WARN_TYPE_INFO) {
+							if (get_int(popup_in_update))
+								run_program(PROGRAM:"update_anim_info");
+							else
+								set_state(PART:"logo", "default", 0.0);
+						}
+						if (get_int(popup_type) == POPUP_WARN_TYPE_ERROR) {
+							if (get_int(popup_in_update))
+								run_program(PROGRAM:"update_anim_error");
+							else
+								set_state(PART:"logo", "error", 0.0);
+						}
+					}
+				}
+			}
+		}
+		parts {
+			image { "background"; mouse;
+				desc { "default"; min: 60 120;
+					rel1.relative: 0.0 0.0;
+					rel2.relative: 1.0 1.0;
+					image.normal: "popup_warn_background.png";
+					image.border: 5 5 5 5;
+				}
+			}
+			image { "logo"; nomouse;
+				desc { "default"; color: VISIBLE;
+					aspect: 1 1;
+					rel1.relative: 0.1 0.0;
+					rel1.to_x: "background";
+					rel1.offset: 0 18;
+					rel2.relative: 0.9 0.0;
+					rel2.to_x: "background";
+					rel2.offset: 0 78;
+					image.normal: "popup_warn_logo_info.png";
+				}
+				desc { "error"; inherit;
+					image.normal: "popup_warn_logo_error.png";
+				}
+				desc { "info_hidden"; inherit; color: NO_COLOR;
+					image.normal: "popup_warn_logo_info.png";
+				}
+				desc { "error_hidden"; inherit; color: NO_COLOR;
+					image.normal: "popup_warn_logo_error.png";
+				}
+			}
+			text { "name"; nomouse; scale;
+				desc { "default"; color: "#000000";
+					color2: "#000000";
+					color3: VISIBLE;
+					rel1.relative: 0.0 1.0;
+					rel1.to_x: "background";
+					rel1.to_y: "logo";
+					rel1.offset: 6 0;
+					text.text: "Rss module"; 
+					text.font: "Sans"; text.size: 11;
+					text.align: 0.5 0.0;
+				}
+			}
+			text { "text"; nomouse; scale;
+				desc { "default"; color: "#000000";
+					color2: "#000000";
+					color3: VISIBLE;
+					rel1.relative: 0.0 0.8;
+					rel1.to: "background";
+					rel1.offset: 0 10;
+					rel2.relative: 1.0 0.8;
+					rel2.to: "background";
+					rel2.offset: 0 10;
+					text.text: "ooOoOo";
+					text.font: "Sans:style=Bold"; text.size: 11;
+					text.min: 1 1;
+					text.align: 0.5 0.0;
+				}
+			}
+			rect { "text_border"; nomouse;
+				desc { "default"; color: NO_COLOR;
+					rel1.relative: 0.0 0.0;
+					rel1.to: "text";
+					rel1.offset: -10 0;
+					rel2.relative: 1.0 1.0;
+					rel2.to: "text";
+					rel2.offset: 10 0;
+				}
+			}
+			image { "disable"; mouse;
+				desc { "default"; hid;
+					image.normal: "popup_warn_disable.png";
+				}
+				desc { "visible"; inherit; color: VISIBLE; vis;
+					aspect: 1 1;
+					rel1.relative: 1.0 0.0;
+					rel1.to: "background";
+					rel1.offset: -32 8;
+					rel2.relative: 1.0 0.0;
+					rel2.to: "background";
+					rel2.offset: -12 28;
+				}
+				desc { "clicked"; inherit: "visible" 0.0; vis;
+					rel1.relative: 0.0 0.0;
+					rel1.offset: 10 10;
+					rel2.relative: 1.0 1.0;
+					rel2.offset: 0 0;
+					image.normal: "popup_warn_disable_clicked.png";
+				}
+			}
+		}
 
-#define MSG_RECV_POPUP_WARN_TYPE 1
-
-group
-{
-        name: "modules/news/popw";
-
-	script
-	{
-		public show_disabled;
-                public popup_type;
-                public popup_in_update;
-
-		/* Message from C code */
-		public message(Msg_Type: type, id, msg)
-		{
-        		if (id == MSG_RECV_POPUP_WARN_TYPE){
-        			if (type == MSG_INT){
-        				set_int(popup_type, getarg(2));
-                                        if (get_int(popup_type) == POPUP_WARN_TYPE_INFO)
-                                        {
-                                                if (get_int(popup_in_update))
-                                                        run_program(PROGRAM:"update_anim_info");
-                                                else
-                        				set_state(PART:"logo", "default", 0.0);
-                                        }
-                                        if (get_int(popup_type) == POPUP_WARN_TYPE_ERROR)
-                                        {
-                                                if (get_int(popup_in_update))
-                                                        run_program(PROGRAM:"update_anim_error");
-                                                else
-                        				set_state(PART:"logo", "error", 0.0);
-                                        }
-        	      		}
-        		}
-        	}
-        }
-
-        parts
-        {
-		#include "module_popw_parts.edc"
-        }
-
-        programs
-        {
-		#include "module_popw_programs.edc"
-        }
-}
+		programs {
+			program { "init";
+				signal: "load";
+				source: "";
+				script {
+					set_int(popup_type, POPUP_WARN_TYPE_INFO);
+					set_int(popup_in_update, 0);
+				}
+			}
+			program { "disable_click";
+				signal: "mouse,up,1";
+				source: "disable";
+				script {
+					emit("desactivate", "popup");
+				}
+				after: "disable_click_1";
+			}
+			program { "disable_click_1";
+				action: STATE_SET "clicked" 0.0;
+				transition: DECELERATE 1.5;
+				target: "disable";
+				after: "close_click";
+			}
+			program { "close_click";
+				signal: "mouse,up,1";
+				source: "background";
+				script {
+					emit("close", "popup");
+				}
+			}
+			program { "update_anim";
+				signal: "update";
+				source: "devian";
+				script {
+					if (get_int(popup_in_update) == 0) {
+						set_int(popup_in_update, 1);
+						if (get_int(popup_type) == POPUP_WARN_TYPE_INFO)
+							run_program(PROGRAM:"update_anim_info");
+						if (get_int(popup_type) == POPUP_WARN_TYPE_ERROR)
+							run_program(PROGRAM:"update_anim_error");
+					}
+				}
+			}
+			program { "update_anim_info";
+				action: STATE_SET "info_hidden" 0.0;
+				transition: DECELERATE 1;
+				target: "logo";
+				after: "update_anim_info_1";
+				after: "update_anim_end";
+			}
+			program { "update_anim_info_1";
+				action: STATE_SET "default" 0.0;
+				transition: DECELERATE 1;
+				target: "logo";
+			}
+			program { "update_anim_error";
+				action: STATE_SET "error_hidden" 0.0;
+				transition: DECELERATE 1;
+				target: "logo";
+				after: "update_anim_error_1";
+				after: "update_anim_end";
+			}
+			program { "update_anim_error_1";
+				action: STATE_SET "error" 0.0;
+				transition: DECELERATE 1;
+				target: "logo";
+			}
+			program { "update_anim_end";
+				script {
+					set_int(popup_in_update, 0);
+				}
+			}
+		}
+	}

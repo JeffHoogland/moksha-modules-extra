@@ -10,17 +10,10 @@ files_DATA = e-module-news.edj
 EXTRA_DIST = \
 module.edc \
 module_feed.edc \
-module_feed_parts.edc \
-module_feed_programs.edc \
 module_feedone.edc \
-module_feedone_parts.edc \
-module_feedone_programs.edc \
 module_icon.edc \
 module_item.edc \
-module_item_parts.edc \
 module_popw.edc \
-module_popw_parts.edc \
-module_popw_programs.edc \
 images/feed_background_new.png \
 images/feed_border.png \
 images/icon_article_read.png \

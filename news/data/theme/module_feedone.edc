@@ -1,16 +1,86 @@
-/* Feedone group */
-
-group
-{
-        name: "modules/news/feedone";
-
-        parts
-        {
-                #include "module_feedone_parts.edc"
-        }
-
-        programs
-        {
-                #include "module_feedone_programs.edc"
-        }
+group { "modules/news/feedone";
+	parts {
+		image { "icon"; nomouse;
+			desc { "default";
+				aspect: 1.0 1.0;
+				rel1.relative: 0.1 0.1;
+				rel2.relative: 0.9 0.9;
+				image.normal: "icon_logo.png";
+			}
+		}
+		rect { "unread_clip"; nomouse;
+			desc { "default"; color: NO_COLOR; }
+			desc { "active"; inherit; color: VISIBLE; }
+		}
+		image { "unread"; nomouse; clip: "unread_clip";
+			desc { "default";
+				rel1.relative: 0.0 0.0;
+				rel2.relative: 1.0 1.0;
+				image.normal: "feed_background_new.png";
+			}
+		}
+		rect { "border_clip"; nomouse;
+			desc { "default"; color: NO_COLOR; }
+			desc { "active"; inherit; color: VISIBLE; }
+		}
+		image { "border"; nomouse; clip: "border_clip";
+			desc { "default";
+			rel1.relative: 0.0 0.0;
+			rel2.relative: 1.0 1.0;
+			image.normal: "feed_border.png";
+			}
+		}
+		text { "name"; nomouse; scale; effect: OUTLINE_SOFT_SHADOW;
+			desc { "default"; hid;
+				rel1.relative: 0.5 1.0;
+				rel1.offset: 0 0;
+				rel2.relative: 0.5 1.0;
+				text.text: "o Ooo Ooo"; text.font: "Sans";
+				text.align: 0.0 0.5;
+				text.fit: 0 1;
+			}
+			desc { "visible"; inherit; vis;
+				rel1.relative: 0.5 0.5;
+				rel2.relative: 0.5 0.5;
+			}
+		}
+		rect { "inout"; mouse;
+			desc { "default"; color: NO_COLOR; }
+		}
+	}
+	programs {
+		program { "new_set";
+			signal: "e,state,new,set";
+			source: "e";
+			action: STATE_SET "active" 0.0;
+			transition: SINUSOIDAL 0.7;
+			target: "unread_clip";
+		}
+		program { "new_unset";
+			signal: "e,state,new,unset";
+			source: "e";
+			action: STATE_SET "default" 0.0;
+			transition: SINUSOIDAL 0.5;
+			target: "unread_clip";
+		}
+		program { "mouse_in";
+			signal: "mouse,in";
+			source: "inout";
+			action: STATE_SET "active" 0.0;
+			transition: SINUSOIDAL 0.1;
+			target: "border_clip";
+		}
+		program { "mouse_out";
+			signal: "mouse,out";
+			source: "inout";
+			action: STATE_SET "default" 0.0;
+			transition: SINUSOIDAL 0.5;
+			target: "border_clip";
+		}
+		program { "mouse_down";
+			signal: "mouse,down,1";
+			source: "inout";
+			action: SIGNAL_EMIT "e,action,open" "e";
+		}
+	}
 }

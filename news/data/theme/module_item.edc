@@ -1,15 +1,18 @@
-/* Item group */
-
-group
-{
-        name: "modules/news/item";
-
-        parts
-        {
-                #include "module_item_parts.edc"
-        }
-
-        programs
-        {
-        }
+group { "modules/news/item";
+	parts {
+		rect { "ground"; mouse;
+			desc { "default"; color: "#00000000";
+				rel1.relative: 0.0 0.0;
+				rel2.relative: 1.0 1.0;
+			}
+		}
+		swallow { "view"; mouse;
+			desc { "default";
+				rel1.relative: 0.0 0.0;
+				rel1.to: "ground";
+				rel2.relative: 1.0 1.0;
+				rel2.to: "ground";
+			}
+		}
+	}
 }
