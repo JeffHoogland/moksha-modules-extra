@@ -68,3 +68,5 @@
 */data/theme/Makefile
 */data/theme/Makefile.in
 */data/theme/e-module-news.edj
+*/images/Makefile
+*/images/Makefile.in
