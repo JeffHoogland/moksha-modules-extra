@@ -1,6 +1,8 @@
 #define BG_OFFSET 12
 #define HOVER_EFFECT 0
 #define TRANSLUCENT 1
+#define NO_COLOR "#FFFFFF00"
+#define VISIBLE "#FFFFFF"
 
 images
 {
