@@ -1,168 +1,95 @@
-/*
-* vim:ts=8:sw=3:sts=8:noexpandtab:cino=>5n-3f0^-2{2
-*/
+images.image: "module_icon.png"   COMP;
+images.image: "module_icon_r.png" COMP;
+images.image: "module_icon_w.png" COMP;
 
-images 
-{
-   image: "module_icon.png"   COMP;
-   image: "module_icon_r.png" COMP;
-   image: "module_icon_w.png" COMP;
-}
+collections {
+	group { "icon"; max: 24 24;
+		parts {
+			image { "image";
+				desc { "default";
+					image.normal: "module_icon.png";
+				}
+			}
+		}
+	}
 
-collections 
-{
-   group 
-     {
-	name: "icon";
-	max: 24 24;
-	parts 
-	  {
-	     part 
-	       {
-		  name: "image";
-		  mouse_events: 0;
-		  type: IMAGE;
-		  description 
-		    {
-		       state: "default" 0.0;
-		       image.normal: "module_icon.png";
-		    }
-	       }
-	  }
-     }
-   group 
-     {
-	name: "modules/diskio/main";
-	max: 128 128;
-	parts 
-	  {
-	     part 
-	       {
-		  name: "icon";
-		  mouse_events: 1;
-		  type: IMAGE;
-		  description 
-		    {
-		       state: "default" 0.0;
-		       aspect: 1.0 1.0;
-		       aspect_preference: BOTH;
-		       image.normal: "module_icon.png";
-		    }
-	       }
-	     part 
-	       {
-		  name: "read";
-		  type: IMAGE;
-		  description 
-		    {
-		       state: "default" 0.0;
-		       aspect: 1.0 1.0;
-		       aspect_preference: BOTH;
-		       image.normal: "module_icon_r.png";
-		       color: 0 0 0 0;
-		    }
-		  description
-		    {
-		       state: "on" 0.0;
-		       aspect: 1.0 1.0;
-		       aspect_preference: BOTH;
-		       image.normal: "module_icon_r.png";
-		       color: 255 255 255 255;
-		    }
-	       }
-	     part 
-	       {
-		  name: "write";
-		  type: IMAGE;
-		  description 
-		    {
-		       state: "default" 0.0;
-		       aspect: 1.0 1.0;
-		       aspect_preference: BOTH;
-		       image.normal: "module_icon_w.png";
-		       color: 0 0 0 0;
-		    }
-		  description
-		    {
-		       state: "on" 0.0;
-		       aspect: 1.0 1.0;
-		       aspect_preference: BOTH;
-		       image.normal: "module_icon_w.png";
-		       color: 255 255 255 255;
-		    }
-	       }
-/////////////
-		part {
-		  name: "e.text.display_name";
-		  type: TEXT;
-		  effect: OUTLINE_SOFT_SHADOW;
-		  mouse_events: 0;
-		  description
-		    {
-		       state: "default" 0.0;
-		       rel1
-			 {
-			    relative: 0.0 0.2;
-			    offset:   0 0;
-			    to_x:     "icon";
-			 }
-		       rel2
-		         {
-			    relative: 0.95 0.95;
-			    offset:   -1  -1;
-			 }
-		       color:  255 255 255 255;
-		       color2: 0 0 0 96;
-		       color3: 0 0 0 32;
-		       color_class: "module_label";
-		       text
-		         {
-			    text:  "???";
-			    font:  "Sans:style=Bold";
-			    size:  8;
-			    min:   1 1;
-			    align: 0.5 0.5;
-			    ellipsis: -1;
-			    text_class: "module_small";
-			 }
-		    }
-///////////////////
-}
-	  }
-	programs 
-	  {
-	     program
-	       {
-		  name: "read_off";
-		  signal: "read,off";
-		  source: "";
-		  action: STATE_SET "default" 0.0;
-		  target: "read";
-	       }
-	     program
-	       {
-		  name: "read_on";
-		  signal: "read,on";
-		  source: "";
-		  action: STATE_SET "on" 0.0;
-		  target: "read";
-	       }
-	     program
-	       {
-		  name: "write_off";
-		  signal: "write,off";
-		  source: "";
-		  action: STATE_SET "default" 0.0;
-		  target: "write";
-	       }
-	     program
-	       {
-		  name: "write_on";
-		  signal: "write,on";
-		  source: "";
-		  action: STATE_SET "on" 0.0;
-		  target: "write";
-	       }
-	  }
-     }
+	group  { "modules/diskio/main"; max: 128 128;
+		parts  {
+			image { "icon"; mouse;
+				desc { "default";
+					aspect: 1.0 1.0;
+					aspect_preference: BOTH;
+					image.normal: "module_icon.png";
+				}
+			}
+			image { "read";
+				desc { "default"; color: "#00000000";
+					aspect: 1.0 1.0;
+					aspect_preference: BOTH;
+					image.normal: "module_icon_r.png";
+				}
+				desc { "on"; color: VISIBLE;
+					aspect: 1.0 1.0;
+					aspect_preference: BOTH;
+					image.normal: "module_icon_r.png";
+				}
+			}
+			image { "write";
+				desc { "default"; color: "#00000000";
+					aspect: 1.0 1.0;
+					aspect_preference: BOTH;
+					image.normal: "module_icon_w.png";
+				}
+				desc { "on"; color: VISIBLE;
+					aspect: 1.0 1.0;
+					aspect_preference: BOTH;
+					image.normal: "module_icon_w.png";
+				}
+			}
+			text { "e.text.display_name"; effect: OUTLINE_SOFT_SHADOW; nomouse;
+				desc { "default"; color: VISIBLE; color_class: "module_label";
+					color2: 0 0 0 96;
+					color3: 0 0 0 32;
+					rel1.relative: 0.0 0.2;
+					rel1.offset: 0 0;
+					rel1.to_x: "icon";
+					rel2.relative: 0.95 0.95;
+					rel2.offset: -1 -1;
+					text.text: "???";
+					text.font: "Sans:style=Bold"; text.size: 8;
+					text.min: 1 1;
+					text.align: 0.5 0.5;
+					text.ellipsis: -1;
+					text.text_class: "module_small";
+				}
+			}
+		}
+
+		programs {
+			program { "read_off";
+				signal: "read,off";
+				source: "";
+				action: STATE_SET "default" 0.0;
+				target: "read";
+			}
+			program { "read_on";
+				signal: "read,on";
+				source: "";
+				action: STATE_SET "on" 0.0;
+				target: "read";
+			}
+			program { "write_off";
+				signal: "write,off";
+				source: "";
+				action: STATE_SET "default" 0.0;
+				target: "write";
+			}
+			program { "write_on";
+				signal: "write,on";
+				source: "";
+				action: STATE_SET "on" 0.0;
+				target: "write";
+			}
+		}
+	}
 }
