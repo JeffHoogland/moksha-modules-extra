@@ -11,11 +11,11 @@ collections {
 				desc { "default"; color: VISIBLE; vis;
 					aspect: 1.0 1.0;
 					aspect_preference: BOTH;
-					rel1 .relative: 0.0 0.0;
+					rel1.relative: 0.0 0.0;
 					rel1.offset: 0 0;
 					rel2.relative: 1.0 1.0;
 					rel2.offset: -1 -1;
-					image .normal: "module_icon.png";
+					image.normal: "module_icon.png";
 				}
 				desc { "new"; inherit;
 					image.normal: "newmail.png";
