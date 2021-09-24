@@ -67,7 +67,6 @@ data/Makefile
 data/themes/Makefile
 src/Makefile
 module.desktop
-e_modules-engage.spec
 $po_makefile_in
 ],[
 ])
