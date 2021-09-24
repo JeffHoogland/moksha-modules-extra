@@ -1,3 +1,5 @@
+#define VISIBLE "#FFFFFF"
+
 images.image: "module_icon.png"   COMP;
 images.image: "module_icon_r.png" COMP;
 images.image: "module_icon_w.png" COMP;
