@@ -69,7 +69,6 @@ AC_ARG_ENABLE(homedir-install,
 AC_OUTPUT([
 Makefile
 src/Makefile
-e_modules-alarm.spec
 module.desktop
 $po_makefile_in
 ], [
