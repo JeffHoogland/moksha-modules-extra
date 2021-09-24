@@ -57,6 +57,11 @@
 */src/*.o
 */src/Makefile
 */debian/moksha-module-*
+*/debian/files
+*/debian/stamp-autotools
+*/debian/stamp-autotools-files
+*/debian/stamp-makefile-build
+*/debian/stamp-makefile-install
 */data/Makefile
 */data/Makefile.in
 */data/images/Makefile
@@ -70,3 +75,7 @@
 */data/theme/e-module-news.edj
 */images/Makefile
 */images/Makefile.in
+*/data/themes/Makefile
+*/data/themes/Makefile.in
+*/data/themes/*.edj
+
