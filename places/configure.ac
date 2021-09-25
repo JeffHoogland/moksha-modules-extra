@@ -101,7 +101,6 @@ AC_OUTPUT([
 Makefile
 src/Makefile
 module.desktop
-e_modules-places.spec
 $po_makefile_in
 ], [
 ])
