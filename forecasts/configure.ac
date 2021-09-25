@@ -66,7 +66,6 @@ AC_OUTPUT([
 Makefile
 src/Makefile
 module.desktop
-e_modules-forecasts.spec
 $po_makefile_in
 ], [
 ])
