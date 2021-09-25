@@ -102,7 +102,6 @@ AC_OUTPUT([
 Makefile
 src/Makefile
 images/Makefile
-e_modules-mail.spec
 module.desktop
 $po_makefile_in
 ], [
