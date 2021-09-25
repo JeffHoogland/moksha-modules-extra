@@ -65,7 +65,6 @@ AC_ARG_ENABLE(homedir-install,
 )
 
 AC_OUTPUT([
-e_modules-news.spec
 Makefile
 data/Makefile
 data/images/Makefile
