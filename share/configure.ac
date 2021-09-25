@@ -63,7 +63,6 @@ AC_ARG_ENABLE(homedir-install,
 AC_OUTPUT([
 Makefile
 src/Makefile
-e_modules-share.spec
 module.desktop
 ], [
 ])
