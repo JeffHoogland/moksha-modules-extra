@@ -66,7 +66,6 @@ AC_ARG_ENABLE(homedir-install,
 AC_OUTPUT([
 Makefile
 src/Makefile
-e_modules-snow.spec
 module.desktop
 $po_makefile_in
 ], [
