@@ -4,80 +4,62 @@
 #define NO_COLOR "#FFFFFF00"
 #define VISIBLE "#FFFFFF"
 
-images
-{
-	image:"itask_im0.png" COMP;
-	image:"itask_im1.png" COMP;
-	image:"itask_im2.png" COMP;
-	image:"itask_im3.png" COMP;
-	image:"itask_im4.png" COMP;
-	image:"itask_im5.png" COMP;
-	image:"itask_im6.png" COMP;
-	image:"bg.png" COMP;
-}
+images.image: "itask_im0.png" COMP;
+images.image: "itask_im1.png" COMP;
+images.image: "itask_im2.png" COMP;
+images.image: "itask_im3.png" COMP;
+images.image: "itask_im4.png" COMP;
+images.image: "itask_im5.png" COMP;
+images.image: "itask_im6.png" COMP;
+images.image: "bg.png" COMP;
 
-collections{
-	group {
+collections { 
+	group { "e/modules/engage/frame_bottom";
 		/* bg frame that keeps is not affected by 'Background
 		 * Transparency' setting */
-		name: "e/modules/engage/frame_bottom";
 		alias: "e/modules/engage/frame_top";
 		alias: "e/modules/engage/frame_left";
 		alias: "e/modules/engage/frame_right";
 
 		data {
 			/* space between icons */
-			item: "icon_spacing"    "3";
-
+			item: "icon_spacing" "3";
+			
 			/* space between boxes */
 			item: "separator_width" "24";
 
 			/* space between screen edge and icons */
-			item: "edge_offset"    "5";
+			item: "edge_offset" "5";
 
 			/* clip separator to background group
 			 * change opacity with background transparency */
-			item: "clip_separator"  "1";
+			item: "clip_separator" "1";
 
 			/* extra space between icons and bg
-			   (required for autohide to hide the whole background) */
+				 (required for autohide to hide the whole background) */
 			item: "bg_offset" "10";
 		}
 
 		parts {
-			part {
-				name: "frame";
-				type: RECT;
-				nomouse;
-
-				desc {
-					state: "default" 0.0;
-					hid;
-				}
+			rect { "frame"; nomouse;
+				desc { "default"; hid; }
 			}
 		}
 	}
+
 	group {
 		name: "e/modules/engage/bg_bottom";
 		alias: "e/modules/engage/bg_top";
 		alias: "e/modules/engage/bg_left";
 		alias: "e/modules/engage/bg_right";
 		parts {
-			part {
-				name: "bg";
-				nomouse;
+			part { "bg"; nomouse;
 
-				desc {
-					state: "default" 0.0;
-
+				desc { "default";
 					rel1.offset: (-BG_OFFSET) (-BG_OFFSET);
 					rel2.offset: (-1 + BG_OFFSET) (-1 + BG_OFFSET);
-
-					image {
-						normal: "bg.png";
-						border: 6 6 6 6;
-					}
-
+					image.normal: "bg.png";
+					image.border: 6 6 6 6;
 				}
 			}
 		}
@@ -86,373 +68,128 @@ collections{
 	/* the vertical and horizontal separator image. it can be a rectangle
 	 * as it is in this example.
 	 */
-#define SEPARATOR(NAME, MAX, ALIGN, OFF1, OFF2)	\
-	group {										\
-		name: NAME;								\
-		parts {									\
-			part {								\
-				name: "separator";				\
-				type: RECT;						\
-				nomouse;				\
-				desc {					\
-					state: "default" 0.0;		\
-					color: 255 255 255 200;		\
-					max: MAX;					\
-					align: ALIGN;				\
-					rel1.offset: OFF1;			\
-					rel2.offset: OFF2;			\
-				}								\
-			}									\
-		}										\
+#define SEPARATOR(NAME, MAX, ALIGN, OFF1, OFF2) \
+	group { NAME;																												\
+		parts {																														\
+			rect {  "separator"; nomouse;																		\
+				desc { "default"; color: "#FFFFFFC8"; max: MAX;								\
+					align: ALIGN;																								\
+					rel1.offset: OFF1;																					\
+					rel2.offset: OFF2;																					\
+				}																															\
+			}																																\
+		}																																	\
 	}
 
-	SEPARATOR("e/modules/engage/separator_bottom", 2 999, 0.5 0.0, 0 -8, -1 -1);
-	SEPARATOR("e/modules/engage/separator_top",    2 999, 0.5 0.0, 0 0,  -1  7);
-	SEPARATOR("e/modules/engage/separator_left",   999 2, 0.0 0.5, 0 0,   7 -1);
-	SEPARATOR("e/modules/engage/separator_right",  999 2, 0.0 0.5, -8 0, -1 -1);
+	SEPARATOR("e/modules/engage/separator_bottom", 2 999, 0.5 0.0,  0 -8, -1 -1);
+	SEPARATOR("e/modules/engage/separator_top",    2 999, 0.5 0.0,  0  0, -1  7);
+	SEPARATOR("e/modules/engage/separator_left",   999 2, 0.0 0.5,  0  0,  7 -1);
+	SEPARATOR("e/modules/engage/separator_right",  999 2, 0.0 0.5, -8  0, -1 -1);
 
-#define LABEL(NAME, DECOR, ALIGN)					\
-	group {											\
-		name: "e/modules/engage/label_"NAME"";		\
-		parts {										\
-			part {									\
-				name: "label";						\
-				type: IMAGE;						\
-				nomouse;					\
-				clip: "label.clip";				\
-				desc {						\
-					state: "default" 0.0;			\
-					align: 0.5 0.5;					\
-					color: 0 0 0 148;				\
-					max: 999 26;					\
-					rel1 {							\
-						to: "e.text.label";			\
-						offset: -8 -2;				\
-					}								\
-					rel2 {							\
-						to: "e.text.label";			\
-						offset: 4 -1;				\
-					}								\
-					image {							\
-						normal: "itask_im4.png";	\
-						border: 5 5 5 5;			\
-					}								\
-				}									\
-			}										\
-			part {									\
-				name: "label_decoration";			\
-				type: IMAGE;						\
-				nomouse;					\
-				clip: "label.clip";				\
-				desc {						\
-					state: "default" 0.0;			\
-					align: 0.5 1.0;					\
-					color: 255 0 0 148;				\
-					min: 11 6;						\
-					max: 11 6;						\
-					fixed: 1 1;						\
-					visible: DECOR;					\
-					rel1 {							\
-						to: "label";				\
-						offset: 0 0;				\
-					}								\
-					rel2 {							\
-						to: "label";				\
-						offset: -1 4;				\
-					}								\
-					image {							\
-						normal: "itask_im5.png";	\
-					}								\
-				}									\
-			}										\
-			part {									\
-				name: "e.text.label";				\
-				type: TEXT;							\
-				effect: SHADOW;						\
-				nomouse;					\
-				clip: "label.clip";				\
-				scale;							\
-				desc {						\
-					state: "default" 0.0;			\
-					align: ALIGN;					\
-					color: VISIBLE;			\
-					color3: 0 0 0 0;				\
-					rel1.offset: 0 2;				\
-					rel2.offset: -1 -1;				\
-					text {							\
-						text: "";					\
-						font: "Sans:style=Bold";	\
-						size: 11;					\
-						min: 1 1;					\
-						align: 0.5 0.5;				\
-						ellipsis: -1;				\
-						text_class: "module_large";	\
-					}								\
-				}									\
-			}										\
-			part {									\
-				name: "label.clip";					\
-				type: RECT;							\
-				nomouse;					\
-				desc {						\
-					state: "default" 0.0;			\
-					align: 0.5 0.5;					\
-					color: NO_COLOR;			\
-					min: 0 33;						\
-					rel1 {							\
-						to: "e.text.label";			\
-						offset: -12 -4;				\
-					}								\
-					rel2 {							\
-						to: "e.text.label";			\
-						offset: 11 -1;				\
-					}								\
-				}									\
-				desc {						\
-					state: "visible" 0.0;			\
-					inherit: "default" 0.0;			\
-					color: VISIBLE;			\
-				}									\
-			}										\
-		}											\
-		programs {									\
-			program {								\
-				name: "go_label_show";				\
-				signal: "e,state,label,show";		\
-				source: "e";						\
-				action: STATE_SET "visible" 0.0;	\
-				transition: DECELERATE 0.5;			\
-				target: "label.clip";				\
-			}										\
-			program {								\
-				name: "go_label_hide";				\
-				signal: "e,state,label,hide";		\
-				source: "e";						\
-				action: STATE_SET "default" 0.0;	\
-				transition: ACCELERATE 0.25;		\
-				target: "label.clip";				\
-			}										\
-		}											\
+#define LABEL(NAME, DECOR, ALIGN) \
+	group { "e/modules/engage/label_"NAME"";														\
+		parts {																														\
+			image { "label"; nomouse; clip: "label.clip";										\
+				desc { "default"; color: "#00000094"; max: 999 26;						\
+					align: 0.5 0.5;																							\
+					rel1.to: "e.text.label";																		\
+					rel1.offset: -8 -2;																					\
+					rel2.to: "e.text.label";																		\
+					rel2.offset: 4 -1;																					\
+					image.normal: "itask_im4.png";															\
+					image.border: 5 5 5 5;																			\
+				}																															\
+			}																																\
+			image { "label_decoration"; nomouse; clip: "label.clip";				\
+				desc { "default"; color: "#FF000094"; visible: DECOR;					\
+					min: 11 6; max: 11 6;																				\
+					align: 0.5 1.0;																							\
+					fixed: 1 1;																									\
+					rel1.to: "label";																						\
+					rel1.offset: 0 0;																						\
+					rel2.to: "label";																						\
+					rel2.offset: -1 4;																					\
+					image.normal: "itask_im5.png";															\
+				}																															\
+			}																																\
+			text { "e.text.label"; effect: SHADOW; nomouse; scale;					\
+				clip: "label.clip";																						\
+				desc { "default"; color3: "#00000000"; color: VISIBLE;				\
+					align: ALIGN;																								\
+					rel1.offset: 0 2;																						\
+					rel2.offset: -1 -1;																					\
+					text.text: "";																							\
+					text.font: "Sans:style=Bold"; text.size: 11;								\
+					text.min: 1 1;																							\
+					text.align: 0.5 0.5;																				\
+					text.ellipsis: -1;																					\
+					text.text_class: "module_large";														\
+				}																															\
+			}																																\
+			rect { "label.clip"; nomouse;																		\
+				desc { "default"; color: NO_COLOR; min: 0 33;									\
+					align: 0.5 0.5;																							\
+					rel1.to: "e.text.label";																		\
+					rel1.offset: -12 -4;																				\
+					rel2.to: "e.text.label";																		\
+					rel2.offset: 11 -1;																					\
+				}																															\
+				desc { "visible"; inherit; color: VISIBLE; }									\
+			}																																\
+		}																																	\
+																																			\
+		programs {																												\
+			program { "go_label_show";																			\
+				signal: "e,state,label,show";																	\
+				source: "e";																									\
+				action: STATE_SET "visible" 0.0;															\
+				transition: DECELERATE 0.5;																		\
+				target: "label.clip";																					\
+			}																																\
+			program { "go_label_hide";																			\
+				signal: "e,state,label,hide";																	\
+				source: "e";																									\
+				action: STATE_SET "default" 0.0;															\
+				transition: ACCELERATE 0.25;																	\
+				target: "label.clip";																					\
+			}																																\
+		}																																	\
 	}
 
 	LABEL("bottom", 1, 0.5 1.0);
 	LABEL("top",    0, 0.5 0.0);
 	LABEL("left",   0, 0.0 0.5);
 	LABEL("right",  0, 1.0 0.5);
-	
-	/*	group {
-		name: "e/modules/engage/label_top";
-		parts {
-			part {
-				name: "label";
-				type: IMAGE;
-				nomouse;
-				clip: "label.clip";
 
-				desc {
-					state: "default" 0.0;
-					align: 0.5 0.5;
-					color: 0 0 0 148;
-					max: 999 26;
-
-					rel1 {
-						to: "e.text.label";
-						offset: -8 -2;
-					}
-
-					rel2 {
-						to: "e.text.label";
-						offset: 4 -1;
-					}
-
-					image {
-						normal: "itask_im4.png";
-						border: 5 5 5 5;
-					}
-				}
-			}
-
-			part {
-				name: "e.text.label";
-				type: TEXT;
-				effect: SHADOW;
-				nomouse;
-				clip: "label.clip";
-				scale;
-
-				desc {
-					state: "default" 0.0;
-					align: 0.5 0.5;
-					color: VISIBLE;
-					color3: 0 0 0 0;
-
-					rel1.offset: 0 2;
-					rel2.offset: -1 -1;
-
-					text {
-						text: "";
-						font: "Sans:style=Bold";
-						size: 11;
-						min: 1 1;
-						align: 0.5 0.5;
-						text_class: "module_large";
-					}
-				}
-			}
-
-			part {
-				name: "label.clip";
-				type: RECT;
-				nomouse;
-
-				desc {
-					state: "default" 0.0;
-					align: 0.5 0.5;
-					color: NO_COLOR;
-					min: 0 33;
-
-					rel1 {
-						to: "e.text.label";
-						offset: -12 -4;
-					}
-
-					rel2 {
-						to: "e.text.label";
-						offset: 11 -1;
-					}
-				}
-
-				desc {
-					state: "visible" 0.0;
-					inherit: "default" 0.0;
-					color: VISIBLE;
-				}
-			}
-		}
-
-		programs {
-			program {
-				name: "go_label_show";
-				signal: "e,state,label,show";
-				source: "e";
-				action: STATE_SET "visible" 0.0;
-				transition: DECELERATE 0.5;
-				target: "label.clip";
-			}
-
-			program {
-				name: "go_label_hide";
-				signal: "e,state,label,hide";
-				source: "e";
-				action: STATE_SET "default" 0.0;
-				transition: ACCELERATE 0.25;
-				target: "label.clip";
-			}
-		}
-	}
-	*/
-	/* TODO needs to be supported in code */
-	/* group {
-	 * 	name: "e/modules/engage/label_left";
-	 * 	alias: "e/modules/engage/label_right";
-	 * } */
-
-	group {
-		name: "e/modules/engage/icon";
+	group { "e/modules/engage/icon"; min: 32 32; max: 128 128;
 		alias: "e/modules/engage/icon_top";
 		alias: "e/modules/engage/icon_left";
 		alias: "e/modules/engage/icon_right";
 		alias: "e/modules/engage/icon_bottom";
 
-		min: 32 32;
-		max: 128 128;
-
 		parts {
-			part {
-				name: "clip";
-				type: RECT;
-				nomouse;
-
-				desc {
-					state: "default" 0.0;
-					color: 255 255 255 128;
-				}
-				desc {
-					state: "visible" 0.0;
-					color: VISIBLE;
-				}
+			rect { "clip"; nomouse;
+				desc { "default"; color: "#FFFFFF80"; }
+				desc { "visible"; color: VISIBLE; }
 			}
-			part {
-				name: "focus_clip";
-				type: RECT;
-				clip: "clip";
-				nomouse;
-
-				desc {
-					state: "default" 0.0;
-					color: VISIBLE;
-				}
-
-				desc {
-					state: "focused" 0.0;
-					color: 200 200 255 255;
-				}
+			rect { "focus_clip"; clip: "clip"; nomouse;
+				desc { "default"; color: VISIBLE; }
+				desc { "focused"; color: "#C8C8FF"; }
 			}
-			part {
-				name: "iconic_clip";
-				type: RECT;
-				clip: "focus_clip";
-				nomouse;
-
-				desc {
-					state: "default" 0.0;
-					color: VISIBLE;
-				}
-
-				desc {
-					state: "iconic" 0.0;
-					color: 200 200 200 255;
-				}
+			rect { "iconic_clip"; clip: "focus_clip"; nomouse;
+				desc { "default"; color: VISIBLE; }
+				desc { "iconic"; color: "#C8C8FF"; }
 			}
-
-			part {
-				name: "urgent_clip";
-				type: RECT;
-				clip: "iconic_clip";
-				nomouse;
-
-				desc {
-					state: "default" 0.0;
-					color: VISIBLE;
-				}
-				desc {
-					state: "urgent" 0.0;
-					color: 255 180 180 255;
-				}
+			rect { "urgent_clip"; clip: "iconic_clip"; nomouse;
+				desc { "default"; color: VISIBLE; }
+				desc { "urgent"; color: "#FFB4B4"; }
 			}
-
-			part {
-				name: "input_clip";
-				type: RECT;
-				clip: "urgent_clip";
-				nomouse;
-
-				desc {
-					state: "default" 0.0;
-					color: VISIBLE;
-				}
-				desc {
-					state: "mouse_down" 0.0;
-					color: 200 200 200 255;
-				}
+			rect { "input_clip"; clip: "urgent_clip"; nomouse;
+				desc { "default"; color: VISIBLE; }
+				desc { "mouse_down"; color: "#C8C8FF"; }
 			}
-
-			part {
-				name: "e.swallow.content";
-				type: SWALLOW;
-				clip: "input_clip";
-				desc {
-					state: "default" 0.0;
+			swallow { "e.swallow.content"; clip: "input_clip";
+				desc { "default";
 					aspect: 1.0 1.0;
 					aspect_preference: BOTH;
 				}
@@ -460,64 +197,49 @@ collections{
 		}
 
 		programs {
-			program {
-				name: "go_show";
+			program { "go_show";
 				signal: "e,state,item,show";
 				source: "e";
 				action: STATE_SET "visible" 0.0;
 				transition: SINUSOIDAL 0.2;
 				target: "clip";
 			}
-
-			program {
-				name: "go_hide";
+			program { "go_hide";
 				signal: "e,state,item,hide";
 				source: "e";
 				action: STATE_SET "default" 0.0;
 				transition: SINUSOIDAL 0.3;
 				target: "clip";
 			}
-
-			/* when minimizing an application */
-			program {
-				name: "go_iconic1";
+			program { "go_iconic1";
 				signal: "e,state,taskbar,iconic,on";
 				source: "e";
 				action: STATE_SET "iconic" 0.0;
 				transition: LINEAR 0.3;
 				target: "iconic_clip";
 			}
-			program {
-				name: "go_iconic0";
+			program { "go_iconic0";
 				signal: "e,state,taskbar,iconic,off";
 				source: "e";
 				action: STATE_SET "default" 0.0;
 				transition: LINEAR 0.3;
 				target: "iconic_clip";
 			}
-
-			/* when an application got focus */
-			program {
-				name: "go_focused1";
+			program { "go_focused1";
 				signal: "e,state,taskbar,focus,on";
 				source: "e";
 				action: STATE_SET "focused" 0.0;
 				transition: SINUSOIDAL 0.3;
 				target: "focus_clip";
 			}
-
-			program {
-				name: "go_focused0";
+			program { "go_focused0";
 				signal: "e,state,taskbar,focus,off";
 				source: "e";
 				action: STATE_SET "default" 0.0;
 				transition: SINUSOIDAL 0.3;
 				target: "focus_clip";
 			}
-
-			/* application is sending urgent signal  */
-			program {
-				name: "go_urgent";
+			program { "go_urgent";
 				signal: "e,state,taskbar,urgent,on";
 				source: "e";
 				action: ACTION_STOP;
@@ -525,25 +247,19 @@ collections{
 				target: "go_urgent0";
 				after: "go_urgent1";
 			}
-
-			program {
-				name: "go_urgent1";
+			program { "go_urgent1";
 				action: STATE_SET "urgent" 0.0;
 				transition: LINEAR 1.0;
 				target: "urgent_clip";
 				after: "go_urgent2";
 			}
-
-			program {
-				name: "go_urgent2";
+			program { "go_urgent2";
 				action: STATE_SET "default" 0.0;
 				transition: LINEAR 1.0;
 				target: "urgent_clip";
 				after: "go_urgent1";
 			}
-
-			program {
-				name: "go_urgent0";
+			program { "go_urgent0";
 				signal: "e,state,taskbar,urgent,off";
 				source: "e";
 				action: ACTION_STOP;
@@ -551,16 +267,12 @@ collections{
 				target: "go_urgent0";
 				after: "go_urgent_end";
 			}
-
-			program {
-				name: "go_urgent_end";
+			program { "go_urgent_end";
 				action: STATE_SET "default" 0.0;
 				transition: LINEAR 0.2;
 				target: "urgent_clip";
 			}
-
-			program {
-				name: "go_mouse_down";
+			program { "go_mouse_down";
 				signal: "e,state,mouse,down";
 				source: "e";
 				action: STATE_SET "mouse_down" 0.0;
@@ -568,80 +280,40 @@ collections{
 				target: "input_clip";
 				after: "go_mouse_down2";
 			}
-			program {
-				name: "go_mouse_down2";
+			program { "go_mouse_down2";
 				action: STATE_SET "default" 0.0;
 				transition: LINEAR 0.3;
 				target: "input_clip";
 			}
-			/* program {
-			 * 	name: "go_mouse_up";
-			 * 	signal: "e,state,mouse,up";
-			 * 	source: "e";
-			 * 	action: STATE_SET "mouse_up" 0.0;
-			 * 	transition: LINEAR 0.2;
-			 * 	target: "input_clip";
-			 * } */
 		}
 	}
 
-	group {
-		name: "e/modules/engage/icon_over_top";
+	group { "e/modules/engage/icon_over_top";
 		alias: "e/modules/engage/icon_over_left";
 		alias: "e/modules/engage/icon_over_right";
 		alias: "e/modules/engage/icon_over_bottom";
 
 		parts {
-			part {
-				name: "icon_clip";
-				type: RECT;
-				nomouse;
-
-				desc {
-					state: "default" 0.0;
-					color: VISIBLE;
-					hid;
+			rect { "icon_clip"; nomouse;
+				desc { "default"; color: VISIBLE; hid;
 					rel1.offset: -256 -256;
 					rel2.offset: 256 256;
 				}
 			}
-			part {
-				name: "background";
-				type: RECT;
-				nomouse;
-
-				desc {
-					state: "default" 0.0;
-					color: NO_COLOR;
-					hid;
-				}
-				desc {
-					state: "visible" 0.0;
-					color: VISIBLE;
-				}
-				desc {
-					state: "hidden" 0.0;
-					vis;
+			rect { "background"; nomouse;
+				desc { "default"; color: NO_COLOR; hid; }
+				desc { "visible"; color: VISIBLE; }
+				desc { "hidden"; color: NO_COLOR; vis;
 					rel1.relative: -0.5  -0.5;
 					rel2.relative: 1.5  1.5;
-
-					color: NO_COLOR;
 				}
-				desc {
-					state: "huge" 0.0;
-					color: NO_COLOR;
+				desc { "huge"; color: NO_COLOR;
 					rel1.relative: -1.5 -1.5;
 					rel2.relative: 2.5  2.5;
 				}
 			}
-
-			part {
-				name: "e.swallow.content";
-				type: SWALLOW;
-				clip: "background";
-
-				desc {
-					state: "default" 0.0;
+			swallow { "e.swallow.content"; clip: "background";
+				desc { "default";
 					rel1.to: "background";
 					rel2.to: "background";
 				}
@@ -649,24 +321,20 @@ collections{
 		}
 
 		programs {
-
-			program {
-				name: "go_active";
+			program { "go_active";
 				signal: "e,state,animate,in";
 				source: "e";
 				action: STATE_SET "visible" 0.0;
 				target: "background";
 				after: "go_active2";
 			}
-			program {
-				name: "go_active2";
+			program { "go_active2";
 				action: STATE_SET "hidden" 0.0;
 				transition: LINEAR 0.5;
 				target: "background";
 				after: "go_active";
 			}
-			program {
-				name: "go_passive";
+			program { "go_passive";
 				signal: "e,state,animate,out";
 				source: "e";
 				action: ACTION_STOP;
@@ -674,35 +342,26 @@ collections{
 				target: "go_active2";
 				after: "go_passive2";
 			}
-			program {
-				name: "go_passive2";
+			program { "go_passive2";
 				action: STATE_SET "default" 0.0;
 				target: "background";
 			}
-
-			program {
-				name: "go_big";
+			program { "go_big";
 				action: STATE_SET "visible" 0.0;
 				target: "background";
 				after: "go_big2";
 			}
-
-			program {
-				name: "go_big2";
+			program { "go_big2";
 				action: STATE_SET "huge" 0.0;
 				transition: DECELERATE 0.4;
 				target: "background";
 				after: "go_big3";
 			}
-
-			program {
-				name: "go_big3";
+			program { "go_big3";
 				action: STATE_SET "default" 0.0;
 				target: "background";
 			}
-
-			program {
-				name: "exec_start";
+			program { "exec_start";
 				signal: "e,action,start";
 				source: "e";
 				action: ACTION_STOP;
