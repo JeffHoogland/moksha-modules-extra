@@ -13,7 +13,7 @@ images.image: "itask_im5.png" COMP;
 images.image: "itask_im6.png" COMP;
 images.image: "bg.png" COMP;
 
-collections { 
+collections {
 	group { "e/modules/engage/frame_bottom";
 		/* bg frame that keeps is not affected by 'Background
 		 * Transparency' setting */
@@ -24,7 +24,7 @@ collections {
 		data {
 			/* space between icons */
 			item: "icon_spacing" "3";
-			
+
 			/* space between boxes */
 			item: "separator_width" "24";
 
