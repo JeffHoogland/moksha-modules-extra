@@ -1,15 +1,13 @@
 images.image: "cpu.png" COMP;
 
-styles
-{
+styles {
 	style { "cpu_style";
 		base: "font=Sans:style=Mono font_size=12 text_class=tb_plain align=center color=#fff style=outline_soft_shadow shadow_color=#00000032 wrap=word";
 		tag:  "br" "\n";
 	}
 }
 
-collections
-{
+collections {
 	group { "modules/cpu/main";
 		parts {
 			part { "cpu";
