@@ -87,16 +87,16 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
      inst->check_timer = ecore_timer_add(inst->ci->poll_time, _slide_cb_check, inst);
    else
      {
-	_slide_get_bg_count(inst);
-	if(inst->ci->random_order)
-	  {
+        _slide_get_bg_count(inst);
+        if(inst->ci->random_order)
+          {
              srand(time(NULL) + inst->gcc->id * 100);
-	     inst->index = (rand() % (inst->bg_count+1));
-	  }
-	else
-	  inst->index = 0;
+             inst->index = (rand() % (inst->bg_count+1));
+          }
+        else
+          inst->index = 0;
 
-	_slide_set_preview(inst);
+        _slide_set_preview(inst);
      }
    return gcc;
 }
@@ -171,33 +171,33 @@ _slide_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
    ev = event_info;
    if ((ev->button == 3) && (!slide_config->menu))
      {
-	E_Menu *m;
-	E_Menu_Item *mi;
-	int x, y, w, h;
+        E_Menu *m;
+        E_Menu_Item *mi;
+        int x, y, w, h;
 
-	m = e_menu_new();
-	mi = e_menu_item_new(m);
-	e_menu_item_label_set(mi, D_("Settings"));
-	e_util_menu_item_theme_icon_set(mi, "preferences-system");
-	e_menu_item_callback_set(mi, _slide_menu_cb_configure, inst);
+        m = e_menu_new();
+        mi = e_menu_item_new(m);
+        e_menu_item_label_set(mi, D_("Settings"));
+        e_util_menu_item_theme_icon_set(mi, "preferences-system");
+        e_menu_item_callback_set(mi, _slide_menu_cb_configure, inst);
 
-	m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-	e_menu_post_deactivate_callback_set(m, _slide_menu_cb_post, inst);
-	slide_config->menu = m;
+        m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
+        e_menu_post_deactivate_callback_set(m, _slide_menu_cb_post, inst);
+        slide_config->menu = m;
 
-	e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, &w, &h);
-	e_menu_activate_mouse(m,
-			       e_util_zone_current_get(e_manager_current_get()), 
-			       x + ev->output.x, y + ev->output.y, 1, 1,
-			       E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
+        e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, &w, &h);
+        e_menu_activate_mouse(m,
+                               e_util_zone_current_get(e_manager_current_get()),
+                               x + ev->output.x, y + ev->output.y, 1, 1,
+                               E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
      }
    else if (ev->button == 2)
      {
-	if (inst->ci->disable_timer) return;
-	if (inst->check_timer)
-	  ecore_timer_del(inst->check_timer);
-	else
-	  inst->check_timer = ecore_timer_add(inst->ci->poll_time, 
+        if (inst->ci->disable_timer) return;
+        if (inst->check_timer)
+          ecore_timer_del(inst->check_timer);
+        else
+          inst->check_timer = ecore_timer_add(inst->ci->poll_time,
                                               _slide_cb_check, inst);
      }
    else if (ev->button == 1)
@@ -230,11 +230,11 @@ _slide_config_updated(Config_Item *ci)
    if (!slide_config) return;
    EINA_LIST_FOREACH(slide_config->instances, l, inst) 
      {
-	if (inst->ci != ci) continue;
-	if (inst->check_timer) ecore_timer_del(inst->check_timer);
-	if ((inst->ci->disable_timer) || (inst->ci->poll_time == 0))
-	  break;
-	inst->check_timer = ecore_timer_add(inst->ci->poll_time, 
+        if (inst->ci != ci) continue;
+        if (inst->check_timer) ecore_timer_del(inst->check_timer);
+        if ((inst->ci->disable_timer) || (inst->ci->poll_time == 0))
+          break;
+        inst->check_timer = ecore_timer_add(inst->ci->poll_time,
                                             _slide_cb_check, inst);
      }
 }
@@ -248,27 +248,27 @@ _slide_config_item_get(const char *id)
 
    if (!id)
      {
-	int  num = 0;
+        int  num = 0;
 
-	/* Create id */
-	if (slide_config->items)
-	  {
-	     const char *p;
+        /* Create id */
+        if (slide_config->items)
+          {
+             const char *p;
 
-	     ci = eina_list_last(slide_config->items)->data;
-	     p = strrchr(ci->id, '.');
-	     if (p) num = atoi(p + 1) + 1;
-	  }
-	snprintf(buf, sizeof(buf), "%s.%d", _gc_class.name, num);
-	id = buf;
+             ci = eina_list_last(slide_config->items)->data;
+             p = strrchr(ci->id, '.');
+             if (p) num = atoi(p + 1) + 1;
+          }
+        snprintf(buf, sizeof(buf), "%s.%d", _gc_class.name, num);
+        id = buf;
      }
    else
      {
         EINA_LIST_FOREACH(slide_config->items, l, ci) 
           {
-	     if (!ci->id) continue;
-	     if (!strcmp(ci->id, id)) return ci;
-	 }
+             if (!ci->id) continue;
+             if (!strcmp(ci->id, id)) return ci;
+          }
      }
 
    ci = E_NEW(Config_Item, 1);
@@ -319,19 +319,19 @@ e_modapi_init(E_Module *m)
    slide_config = e_config_domain_load("module.slideshow", conf_edd);
    if (!slide_config)
      {
-	Config_Item *ci;
+        Config_Item *ci;
 
-	snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
-	slide_config = E_NEW(Config, 1);
-	ci = E_NEW(Config_Item, 1);
+        snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
+        slide_config = E_NEW(Config, 1);
+        ci = E_NEW(Config_Item, 1);
 
-	ci->id = eina_stringshare_add("0");
-	ci->dir = eina_stringshare_add(buf);
-	ci->poll_time = 60.0;
-	ci->disable_timer = 0;
-	ci->random_order = 0;
-	ci->all_desks = 0;
-	slide_config->items = eina_list_append(slide_config->items, ci);
+        ci->id = eina_stringshare_add("0");
+        ci->dir = eina_stringshare_add(buf);
+        ci->poll_time = 60.0;
+        ci->disable_timer = 0;
+        ci->random_order = 0;
+        ci->all_desks = 0;
+        slide_config->items = eina_list_append(slide_config->items, ci);
      }
    slide_config->module = m;
    e_gadcon_provider_register(&_gc_class);
@@ -348,19 +348,19 @@ e_modapi_shutdown(E_Module *m)
      e_object_del(E_OBJECT(slide_config->config_dialog));
    if (slide_config->menu)
      {
-	e_menu_post_deactivate_callback_set(slide_config->menu, NULL, NULL);
-	e_object_del(E_OBJECT(slide_config->menu));
-	slide_config->menu = NULL;
+        e_menu_post_deactivate_callback_set(slide_config->menu, NULL, NULL);
+        e_object_del(E_OBJECT(slide_config->menu));
+        slide_config->menu = NULL;
      }
    while (slide_config->items)
      {
-	Config_Item *ci;
+        Config_Item *ci;
 
-	ci = slide_config->items->data;
-	slide_config->items = eina_list_remove_list(slide_config->items, slide_config->items);
-	if (ci->id) eina_stringshare_del(ci->id);
-	if (ci->dir) eina_stringshare_del(ci->dir);
-	E_FREE(ci);
+        ci = slide_config->items->data;
+        slide_config->items = eina_list_remove_list(slide_config->items, slide_config->items);
+        if (ci->id) eina_stringshare_del(ci->id);
+        if (ci->dir) eina_stringshare_del(ci->dir);
+        E_FREE(ci);
      }
    E_FREE(slide_config);
    E_CONFIG_DD_FREE(conf_item_edd);
@@ -420,23 +420,23 @@ _slide_cb_check(void *data)
    if (inst->index <= inst->bg_count)
      {
         bg = eina_list_nth(inst->bg_list, inst->index);
-	if (!bg)
-	  {
-	     inst->index = 0;
+        if (!bg)
+          {
+             inst->index = 0;
              bg = eina_list_nth(inst->bg_list, inst->index);
-	  }
-	if (bg)
-	  {
-	     _slide_set_bg(inst, bg);
-	     if(inst->ci->random_order)
-	       {
+          }
+        if (bg)
+          {
+             _slide_set_bg(inst, bg);
+             if(inst->ci->random_order)
+               {
                   srand(time(NULL) + inst->gcc->id * 100);
-		  inst->index = (rand() % (inst->bg_count+1));
-	       }
-	     else
-	       inst->index++;
-	     _slide_set_preview(inst);
-	  }
+                  inst->index = (rand() % (inst->bg_count+1));
+               }
+             else
+               inst->index++;
+             _slide_set_preview(inst);
+          }
      }
    return EINA_TRUE;
 }
@@ -492,13 +492,13 @@ _slide_get_bg_count(void *data)
    dir_list = ecore_file_ls(inst->ci->dir);
    EINA_LIST_FREE(dir_list, item)
      {
-	snprintf(item_full_path, sizeof(item_full_path), "%s/%s", inst->ci->dir, item);
+        snprintf(item_full_path, sizeof(item_full_path), "%s/%s", inst->ci->dir, item);
 
-	if(ecore_file_is_dir(item_full_path))
-	  _slide_get_bg_subdirs(inst, item);
-	else
+        if(ecore_file_is_dir(item_full_path))
+          _slide_get_bg_subdirs(inst, item);
+        else
           inst->bg_list = eina_list_append(inst->bg_list, strdup(item));
-	free(item);
+        free(item);
      }
 
    inst->bg_count = eina_list_count(inst->bg_list);
@@ -521,31 +521,31 @@ _slide_set_bg(void *data, const char *bg)
 
    if (inst->ci->all_desks == 0) 
      {
-	con = e_container_current_get(e_manager_current_get());
-	z = e_zone_current_get(con);
-	d = e_desk_current_get(z);
-	e_bg_del(con->num, z->num, d->x, d->y);
-	e_bg_add(con->num, z->num, d->x, d->y, buf);
+        con = e_container_current_get(e_manager_current_get());
+        z = e_zone_current_get(con);
+        d = e_desk_current_get(z);
+        e_bg_del(con->num, z->num, d->x, d->y);
+        e_bg_add(con->num, z->num, d->x, d->y, buf);
      }
    else if (inst->ci->all_desks == 1) 
      {
-	while (e_config->desktop_backgrounds) 
-	  {
-	     E_Config_Desktop_Background *cfbg;
+        while (e_config->desktop_backgrounds)
+          {
+             E_Config_Desktop_Background *cfbg;
 
-	     cfbg = e_config->desktop_backgrounds->data;
-	     e_bg_del(cfbg->container, cfbg->zone, cfbg->desk_x, cfbg->desk_y);
-	  }
-	e_bg_default_set(buf);
+             cfbg = e_config->desktop_backgrounds->data;
+             e_bg_del(cfbg->container, cfbg->zone, cfbg->desk_x, cfbg->desk_y);
+          }
+        e_bg_default_set(buf);
      }
    else if (inst->ci->all_desks == 2)
      {
-	z = e_gadcon_zone_get(g);
+        z = e_gadcon_zone_get(g);
         for (i = 0; i < z->desk_x_count * z->desk_y_count; i++)
           {
             e_bg_del(z->container->num, z->num, z->desks[i]->x, z->desks[i]->y);
             e_bg_add(z->container->num, z->num, z->desks[i]->x, z->desks[i]->y, buf);
-	  }
+          }
      }   
 
    e_bg_update();
