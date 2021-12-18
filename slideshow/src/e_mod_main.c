@@ -449,6 +449,7 @@ _slide_get_bg_subdirs(void *data, char *local_path)
    char item_full_path[PATH_MAX];
    char item_local_path[PATH_MAX];
    char *item;
+   int ret;
    Instance *inst;
 
    inst = data;
@@ -459,15 +460,17 @@ _slide_get_bg_subdirs(void *data, char *local_path)
 
    EINA_LIST_FREE(dir_list, item)
      {
-	snprintf(item_full_path, sizeof(item_full_path), "%s/%s", full_path, item);
-	snprintf(item_local_path, sizeof(item_local_path), "%s/%s", local_path, item);
+       ret = snprintf(item_full_path, sizeof(item_full_path), "%s/%s", full_path, item);
+       if (ret < 0) abort();
+       ret = snprintf(item_local_path, sizeof(item_local_path), "%s/%s", local_path, item);
+       if (ret < 0) abort();
 
-	if(ecore_file_is_dir(item_full_path))
-	  _slide_get_bg_subdirs(inst, item_local_path);
-	else
-          inst->bg_list = eina_list_append(inst->bg_list, strdup(item_local_path));
+       if(ecore_file_is_dir(item_full_path))
+        _slide_get_bg_subdirs(inst, item_local_path);
+       else
+         inst->bg_list = eina_list_append(inst->bg_list, strdup(item_local_path));
 
-	free(item);
+       free(item);
      }
 }
 
