@@ -7,7 +7,7 @@
 #include <sys/resource.h>
 #endif
 
-#define MAX_CPU 16	// FIXME: Yes, that's not so clever...
+#define MAX_CPU 16    // FIXME: Yes, that's not so clever...
 
 typedef struct _Instance Instance;
 typedef struct _Cpu Cpu;
@@ -80,11 +80,11 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    cpu->inst = inst;
 
    snprintf(buf, sizeof(buf), "%s/cpu.edj", 
-	    e_module_dir_get(cpu_conf->module));
+            e_module_dir_get(cpu_conf->module));
 
    cpu->o_icon = edje_object_add(gc->evas);
    if (!e_theme_edje_object_set(cpu->o_icon, 
-				"base/theme/modules/cpu", "modules/cpu/main"))
+                                "base/theme/modules/cpu", "modules/cpu/main"))
      edje_object_file_set(cpu->o_icon, buf, "modules/cpu/main");
    evas_object_show(cpu->o_icon);
 
@@ -141,7 +141,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
    if (!cpu_conf->module) return NULL;
 
    snprintf(buf, sizeof(buf), "%s/e-module-cpu.edj", 
-	    e_module_dir_get(cpu_conf->module));
+            e_module_dir_get(cpu_conf->module));
 
    o = edje_object_add(evas);
    edje_object_file_set(o, buf, "icon");
@@ -168,28 +168,28 @@ _config_item_get(const char *id)
 
    if (!id)
      {
-	/* Create id */
-	if (cpu_conf->items)
-	  {
-	     ci = eina_list_last(cpu_conf->items)->data;
-	     p = strrchr(ci->id, '.');
-	     if (p) num = atoi(p + 1) + 1;
-	  }
-	snprintf(buf, sizeof(buf), "%s.%d", _gc_class.name, num);
-	id = buf;
+        /* Create id */
+       if (cpu_conf->items)
+          {
+             ci = eina_list_last(cpu_conf->items)->data;
+             p = strrchr(ci->id, '.');
+             if (p) num = atoi(p + 1) + 1;
+          }
+        snprintf(buf, sizeof(buf), "%s.%d", _gc_class.name, num);
+        id = buf;
      }
    else
      {
-	for (l = cpu_conf->items; l; l = l->next) 
-	  {
-	     ci = l->data;
-	     if (!ci->id) continue;
-	     if (!strcmp(ci->id, id))
-	       {
-		  update_interval = ci->interval;
-		  return ci;
-	       }
-	  }
+        for (l = cpu_conf->items; l; l = l->next)
+          {
+             ci = l->data;
+             if (!ci->id) continue;
+             if (!strcmp(ci->id, id))
+               {
+                  update_interval = ci->interval;
+                  return ci;
+               }
+          }
      }
 
    ci = E_NEW(Config_Item, 1);
@@ -228,9 +228,9 @@ _set_cpu_load(void *data)
    i = 1;
    while (i < cpu_count)
      {
-	snprintf(str_tmp, sizeof(str_tmp), "<br>%d%%", cpu_stats[i]);
-	strncat(str, str_tmp, sizeof(str)-1);
-	i++;
+        snprintf(str_tmp, sizeof(str_tmp), "<br>%d%%", cpu_stats[i]);
+        strncat(str, str_tmp, sizeof(str)-1);
+        i++;
      }
    edje_object_part_text_set(cpu->o_icon, "load", str);
    return EINA_TRUE;
@@ -283,8 +283,8 @@ _get_cpu_load(Instance *inst)
 
    if (sysctlbyname("kern.cp_time", &cp_time, &len, NULL, 0) < 0)
      {
-	warn("sysctl()");
-	return 0;
+        warn("sysctl()");
+        return 0;
      }
 
    new_used = cp_time[CP_USER] + cp_time[CP_NICE] + cp_time[CP_SYS];
@@ -302,12 +302,12 @@ _get_cpu_load(Instance *inst)
 
    while (i < cpu_count)
      {
-	if (fscanf(stat, "%s %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu", dummy, &new_u, &new_n,
-	     &new_s, &new_i, &new_wa, &new_hi, &new_si, &dummy2, &dummy3, &dummy4) < 5)
-	  {
-	     fclose (stat);
-	     return -1;
-	  }
+        if (fscanf(stat, "%s %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu", dummy, &new_u, &new_n,
+            &new_s, &new_i, &new_wa, &new_hi, &new_si, &dummy2, &dummy3, &dummy4) < 5)
+          {
+             fclose (stat);
+             return -1;
+          }
 
         /* since if there are more than 1 CPUs, the first entry is the summary:
            cpu  366384 274786 214744 7129029 1975609 12775 353729 0
@@ -317,34 +317,34 @@ _get_cpu_load(Instance *inst)
            In this case the first line is read and forgotten
          */
 
-	ticks_past = ((new_u + new_n + new_s + new_i + new_wa + new_hi + new_si) -
-		      (old_u[i] + old_n[i] + old_s[i] + old_i[i] + old_wa[i] + old_hi[i] + old_si[i]));
+        ticks_past = ((new_u + new_n + new_s + new_i + new_wa + new_hi + new_si) -
+                      (old_u[i] + old_n[i] + old_s[i] + old_i[i] + old_wa[i] + old_hi[i] + old_si[i]));
 
-	if (ticks_past)
-	  {
-	     tmp_u = ((new_u - old_u[i]));
-	     tmp_n = ((new_n - old_n[i]));
-	     tmp_s = ((new_s - old_s[i]));
-	  }
-	
+        if (ticks_past)
+          {
+             tmp_u = ((new_u - old_u[i]));
+             tmp_n = ((new_n - old_n[i]));
+             tmp_s = ((new_s - old_s[i]));
+          }
+
         if (inst->ci->merge_cpus)
           cpu_stats[i] = (tmp_u + tmp_n + tmp_s) / update_interval / cpu_count;
         else
           cpu_stats[i] = (tmp_u + tmp_n + tmp_s) / update_interval;
 
-	old_u[i] = new_u;
-	old_n[i] = new_n;
-	old_s[i] = new_s;
-	old_wa[i] = new_wa;
-	old_hi[i] = new_hi;
-	old_si[i] = new_si;
-	
-	cpu_stats[i] = (cpu_stats[i] > 100 ? 100 : cpu_stats[i]);
+        old_u[i] = new_u;
+        old_n[i] = new_n;
+        old_s[i] = new_s;
+        old_wa[i] = new_wa;
+        old_hi[i] = new_hi;
+        old_si[i] = new_si;
+
+        cpu_stats[i] = (cpu_stats[i] > 100 ? 100 : cpu_stats[i]);
 
         if (inst->ci->merge_cpus)
           break;
 
-	i++;
+        i++;
      }
    fclose (stat);
 #endif
@@ -361,53 +361,53 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
    ev = event_info;
    if ((ev->button == 3) && (!cpu_conf->menu))
      {
-	E_Menu *m, *mo;
-	E_Menu_Item *mi;
-	int cx, cy, cw, ch;
-	
-	m = e_menu_new();
+        E_Menu *m, *mo;
+        E_Menu_Item *mi;
+        int cx, cy, cw, ch;
 
-	mo = e_menu_new();
-	cpu_conf->menu_interval = mo;
-	
-	mi = e_menu_item_new(mo);
-	e_menu_item_label_set(mi, D_("Fast (0.5 sec)"));
-	e_menu_item_radio_set(mi, 1);
-	e_menu_item_radio_group_set(mi, 1);
-	if (inst->ci->interval <= 0.5) e_menu_item_toggle_set(mi, 1);
-	e_menu_item_callback_set(mi, _cpu_menu_fast, inst);
+        m = e_menu_new();
 
-	mi = e_menu_item_new(mo);
-	e_menu_item_label_set(mi, D_("Medium (1 sec)"));
-	e_menu_item_radio_set(mi, 1);
-	e_menu_item_radio_group_set(mi, 1);
-	if (inst->ci->interval > 0.5) e_menu_item_toggle_set(mi, 1);
-	e_menu_item_callback_set(mi, _cpu_menu_medium, inst);
+        mo = e_menu_new();
+        cpu_conf->menu_interval = mo;
 
-	mi = e_menu_item_new(mo);
-	e_menu_item_label_set(mi, D_("Normal (2 sec)"));
-	e_menu_item_radio_set(mi, 1);
-	e_menu_item_radio_group_set(mi, 1);
-	if (inst->ci->interval >= 2.0) e_menu_item_toggle_set(mi, 1);
-	e_menu_item_callback_set(mi, _cpu_menu_normal, inst);
+        mi = e_menu_item_new(mo);
+        e_menu_item_label_set(mi, D_("Fast (0.5 sec)"));
+        e_menu_item_radio_set(mi, 1);
+        e_menu_item_radio_group_set(mi, 1);
+        if (inst->ci->interval <= 0.5) e_menu_item_toggle_set(mi, 1);
+        e_menu_item_callback_set(mi, _cpu_menu_fast, inst);
 
-	mi = e_menu_item_new(mo);
-	e_menu_item_label_set(mi, D_("Slow (5 sec)"));
-	e_menu_item_radio_set(mi, 1);
-	e_menu_item_radio_group_set(mi, 1);
-	if (inst->ci->interval >= 5.0) e_menu_item_toggle_set(mi, 1);
-	e_menu_item_callback_set(mi, _cpu_menu_slow, inst);
+        mi = e_menu_item_new(mo);
+        e_menu_item_label_set(mi, D_("Medium (1 sec)"));
+        e_menu_item_radio_set(mi, 1);
+        e_menu_item_radio_group_set(mi, 1);
+        if (inst->ci->interval > 0.5) e_menu_item_toggle_set(mi, 1);
+        e_menu_item_callback_set(mi, _cpu_menu_medium, inst);
 
-	mi = e_menu_item_new(mo);
-	e_menu_item_label_set(mi, D_("Very Slow (30 sec)"));
-	e_menu_item_radio_set(mi, 1);
-	e_menu_item_radio_group_set(mi, 1);
-	if (inst->ci->interval >= 30.0) e_menu_item_toggle_set(mi, 1);
-	e_menu_item_callback_set(mi, _cpu_menu_very_slow, inst);
-	
-	mi = e_menu_item_new(m);
-	e_menu_item_label_set(mi, D_("Time Between Updates"));
-	e_menu_item_submenu_set(mi, cpu_conf->menu_interval);
+        mi = e_menu_item_new(mo);
+        e_menu_item_label_set(mi, D_("Normal (2 sec)"));
+        e_menu_item_radio_set(mi, 1);
+        e_menu_item_radio_group_set(mi, 1);
+        if (inst->ci->interval >= 2.0) e_menu_item_toggle_set(mi, 1);
+        e_menu_item_callback_set(mi, _cpu_menu_normal, inst);
+
+        mi = e_menu_item_new(mo);
+        e_menu_item_label_set(mi, D_("Slow (5 sec)"));
+        e_menu_item_radio_set(mi, 1);
+        e_menu_item_radio_group_set(mi, 1);
+        if (inst->ci->interval >= 5.0) e_menu_item_toggle_set(mi, 1);
+        e_menu_item_callback_set(mi, _cpu_menu_slow, inst);
+
+        mi = e_menu_item_new(mo);
+        e_menu_item_label_set(mi, D_("Very Slow (30 sec)"));
+        e_menu_item_radio_set(mi, 1);
+        e_menu_item_radio_group_set(mi, 1);
+        if (inst->ci->interval >= 30.0) e_menu_item_toggle_set(mi, 1);
+        e_menu_item_callback_set(mi, _cpu_menu_very_slow, inst);
+
+        mi = e_menu_item_new(m);
+        e_menu_item_label_set(mi, D_("Time Between Updates"));
+        e_menu_item_submenu_set(mi, cpu_conf->menu_interval);
 
         if (cpu_count > 1)
           {
@@ -419,16 +419,16 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
           }
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-	e_menu_post_deactivate_callback_set(m, _menu_cb_post, inst);
-	cpu_conf->menu = m;
-	
-	e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &cx, &cy, &cw, &ch);
-	e_menu_activate_mouse(m,
-			      e_util_zone_current_get(e_manager_current_get()),
-			      cx + ev->output.x, cy + ev->output.y, 1, 1,
-			      E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
-	evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
-				 EVAS_BUTTON_NONE, ev->timestamp, NULL);
+        e_menu_post_deactivate_callback_set(m, _menu_cb_post, inst);
+        cpu_conf->menu = m;
+
+        e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &cx, &cy, &cw, &ch);
+       e_menu_activate_mouse(m,
+                              e_util_zone_current_get(e_manager_current_get()),
+                              cx + ev->output.x, cy + ev->output.y, 1, 1,
+                              E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
+       evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
+                              EVAS_BUTTON_NONE, ev->timestamp, NULL);
      }
 }
 
@@ -548,15 +548,15 @@ e_modapi_init(E_Module *m)
    cpu_conf = e_config_domain_load("module.cpu", conf_edd);
    if (!cpu_conf) 
      {
-	Config_Item *ci;
-	
-	cpu_conf = E_NEW(Config, 1);
-	ci = E_NEW(Config_Item, 1);
-	ci->id = eina_stringshare_add("0");
-	ci->interval = 1;
-	ci->merge_cpus = 0;
-	
-	cpu_conf->items = eina_list_append(cpu_conf->items, ci);
+        Config_Item *ci;
+
+        cpu_conf = E_NEW(Config, 1);
+        ci = E_NEW(Config_Item, 1);
+        ci->id = eina_stringshare_add("0");
+        ci->interval = 1;
+        ci->merge_cpus = 0;
+
+        cpu_conf->items = eina_list_append(cpu_conf->items, ci);
      }
    
    cpu_conf->module = m;
@@ -573,19 +573,19 @@ e_modapi_shutdown(E_Module *m)
      e_object_del(E_OBJECT(cpu_conf->config_dialog));
    if (cpu_conf->menu) 
      {
-	e_menu_post_deactivate_callback_set(cpu_conf->menu, NULL, NULL);
-	e_object_del(E_OBJECT(cpu_conf->menu));
-	cpu_conf->menu = NULL;
+        e_menu_post_deactivate_callback_set(cpu_conf->menu, NULL, NULL);
+        e_object_del(E_OBJECT(cpu_conf->menu));
+        cpu_conf->menu = NULL;
      }
 
    while (cpu_conf->items) 
      {
-	Config_Item *ci;
-	
-	ci = cpu_conf->items->data;
-	if (ci->id) eina_stringshare_del(ci->id);
-	cpu_conf->items = eina_list_remove_list(cpu_conf->items, cpu_conf->items);
-	E_FREE(ci);
+        Config_Item *ci;
+
+        ci = cpu_conf->items->data;
+        if (ci->id) eina_stringshare_del(ci->id);
+        cpu_conf->items = eina_list_remove_list(cpu_conf->items, cpu_conf->items);
+        E_FREE(ci);
      }
 
    E_FREE(cpu_conf);
