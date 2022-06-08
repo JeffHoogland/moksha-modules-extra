@@ -188,9 +188,9 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
    char buf[4096];
    
    o = edje_object_add(evas);
-   snprintf(buf, sizeof(buf), "%s/module.edj",
+   snprintf(buf, sizeof(buf), "%s/alarm.edj",
       e_module_dir_get(alarm_config->module));
-   edje_object_file_set(o, buf, "icon");
+   edje_object_file_set(o, buf, "modules/alarm/main");
    return o;
 }
 
