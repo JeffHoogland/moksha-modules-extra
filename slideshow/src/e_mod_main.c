@@ -3,6 +3,8 @@
 #include <Ecore_File.h>
 #include "e_mod_main.h"
 
+#define __UNUSED__
+
 typedef struct _Instance Instance;
 typedef struct _Slideshow Slideshow;
 
@@ -14,7 +16,12 @@ struct _Instance
    Ecore_Timer *check_timer;
    Eina_List *bg_list;
    const char *display;
+   char       *in_file;
+   char       *tmpf;
    int index, bg_id, bg_count;
+   Ecore_Exe *exe;
+   Ecore_Event_Handler *exe_handler;
+   Ecore_End_Cb ok;
    Config_Item *ci;
 };
 
@@ -41,6 +48,8 @@ static void _slide_get_bg_count(void *data);
 static void _slide_set_bg(void *data, const char *bg);
 static void _slide_set_preview(void *data);
 static void _slide_get_bg_subdirs(void *data, char *local_path);
+static Eina_Bool  _edj_cc_exit(void *data, int type __UNUSED__, void *event);
+static void _import_edj_gen(Instance *inst);
 
 static E_Config_DD *conf_edd = NULL;
 static E_Config_DD *conf_item_edd = NULL;
@@ -228,6 +237,7 @@ _slide_config_updated(Config_Item *ci)
    Instance *inst;
 
    if (!slide_config) return;
+
    EINA_LIST_FOREACH(slide_config->instances, l, inst) 
      {
         if (inst->ci != ci) continue;
@@ -464,7 +474,6 @@ _slide_get_bg_subdirs(void *data, char *local_path)
        if (ret < 0) abort();
        ret = snprintf(item_local_path, sizeof(item_local_path), "%s/%s", local_path, item);
        if (ret < 0) abort();
-
        if(ecore_file_is_dir(item_full_path))
         _slide_get_bg_subdirs(inst, item_local_path);
        else
@@ -518,6 +527,13 @@ _slide_set_bg(void *data, const char *bg)
    inst = data;
    if (!(g = inst->gcc->gadcon)) return;
    snprintf (buf, sizeof (buf), "%s/%s", inst->ci->dir, bg);
+   if (!eina_str_has_extension(bg, ".edj"))
+     {
+         inst->in_file = strdup(buf);
+         _import_edj_gen(inst);
+          snprintf (buf, sizeof (buf), "%s.edj", ecore_file_strip_ext(buf));
+         //~ e_util_dialog_internal("buf", buf);
+     }
 
    if (inst->ci->all_desks == 0) 
      {
@@ -564,9 +580,143 @@ _slide_set_preview(void *data)
 
    bg = eina_list_nth(inst->bg_list, inst->index);
    snprintf(buf, sizeof (buf), "%s/%s", inst->ci->dir, bg);
+
    if (!e_util_edje_collection_exists (buf, "e/desktop/background")) return;
    if (ss->bg_obj) evas_object_del(ss->bg_obj);
    ss->bg_obj = edje_object_add(e_livethumb_evas_get (ss->img_obj));
    edje_object_file_set(ss->bg_obj, buf, "e/desktop/background");
    e_livethumb_thumb_set(ss->img_obj, ss->bg_obj);
+}
+
+static void
+_import_free(Instance *inst)
+{
+   EINA_SAFETY_ON_NULL_RETURN(inst);
+   ecore_event_handler_del(inst->exe_handler);
+   inst->exe_handler = NULL;
+   inst->exe = NULL;
+   if (inst->tmpf) unlink(inst->tmpf);
+   unlink(inst->tmpf);
+   free(inst->tmpf);
+   ecore_file_remove(inst->in_file);
+   free(inst->in_file);
+}
+
+static Eina_Bool
+_edj_cc_exit(void *data, int type __UNUSED__, void *event)
+{
+   EINA_SAFETY_ON_NULL_RETURN_VAL(data,  ECORE_CALLBACK_DONE);
+   EINA_SAFETY_ON_NULL_RETURN_VAL(event, ECORE_CALLBACK_DONE);
+
+   Instance *inst;
+   Ecore_Exe_Event_Del *ev;
+   int r = 1;
+
+   ev = event;
+   inst = data;
+   if (ecore_exe_data_get(ev->exe) != inst) return ECORE_CALLBACK_PASS_ON;
+
+   if (ev->exit_code != 0)
+     {
+        e_util_dialog_show(D_("Picture Import Error"),
+                           D_("Moksha was unable to import the picture<br>"
+                             "due to conversion errors."));
+        r = 0;
+     }
+
+    if (r && inst->ok) inst->ok(inst, NULL);
+      _import_free(inst);
+
+   return ECORE_CALLBACK_DONE;
+}
+
+static void
+_import_edj_gen(Instance *inst)
+{
+   Eina_Bool anim = EINA_FALSE;
+   int fd, num = 1;
+   int w = 0, h = 0;
+   const char *in_file, *file, *locale;
+   char buf[PATH_MAX], cmd[PATH_MAX + PATH_MAX + 40], tmpn[PATH_MAX], ipart[PATH_MAX], enc[128];
+   char *imgdir = NULL, *fstrip;
+   FILE *f;
+   size_t len, off;
+
+   in_file = inst->in_file;
+   file = ecore_file_file_get(in_file);
+   fstrip = ecore_file_strip_ext(file);
+   if (!fstrip) return;
+   if (inst->ci->dir)
+     len = snprintf(buf, sizeof(buf), "%s/%s.edj", inst->ci->dir, fstrip);
+   else
+     len = e_user_dir_snprintf(buf, sizeof(buf), "backgrounds/%s.edj", fstrip);
+
+   if (len >= sizeof(buf))
+     {
+        free(fstrip);
+        return;
+     }
+   off = len - (sizeof(".edj") - 1);
+   for (num = 1; ecore_file_exists(buf) && num < 100; num++)
+     snprintf(buf + off, sizeof(buf) - off, "-%d.edj", num);
+   free(fstrip);
+
+   if (num == 100)
+     {
+        printf("Couldn't come up with another filename for %s\n", buf);
+        return;
+     }
+
+   strcpy(tmpn, "/tmp/e_bgdlg_new.edc-tmp-XXXXXX");
+   fd = mkstemp(tmpn);
+   if (fd < 0)
+     {
+        printf("Error Creating tmp file: %s\n", strerror(errno));
+        _import_free(inst);
+        return;
+     }
+
+   f = fdopen(fd, "w");
+   if (!f)
+     {
+        printf("Cannot open %s for writing\n", tmpn);
+        return;
+     }
+
+   anim = eina_str_has_extension(in_file, "gif");
+   imgdir = ecore_file_dir_get(in_file);
+   if (!imgdir) ipart[0] = '\0';
+   else
+     {
+        snprintf(ipart, sizeof(ipart), "-id %s", e_util_filename_escape(imgdir));
+        free(imgdir);
+     }
+
+     fstrip = strdupa(e_util_filename_escape(file));
+     //~ snprintf(enc, sizeof(enc), "LOSSY %i", 90);
+     snprintf(enc, sizeof(enc), "LOSSY %i", 90);
+     fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "%s"
+                "data { item: \"style\" \"0\"; }\n"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "image { normal: \"%s\"; scale_hint: STATIC; }\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n", w, h, fstrip);
+
+   fclose(f);
+
+   snprintf(cmd, sizeof(cmd), "edje_cc -v %s %s %s",
+            ipart, tmpn, e_util_filename_escape(buf));
+
+   inst->tmpf = strdup(tmpn);
+   if (inst->exe_handler) ecore_event_handler_del(inst->exe_handler);
+   inst->exe_handler = ecore_event_handler_add(ECORE_EXE_EVENT_DEL,
+                             _edj_cc_exit, inst);
+   inst->exe = ecore_exe_run(cmd, inst);
 }
