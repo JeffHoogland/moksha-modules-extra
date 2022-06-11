@@ -531,7 +531,7 @@ _slide_set_bg(void *data, const char *bg)
      {
          inst->in_file = strdup(buf);
          _import_edj_gen(inst);
-          snprintf (buf, sizeof (buf), "%s.edj", ecore_file_strip_ext(buf));
+          //~ snprintf (buf, sizeof (buf), "%s.edj", ecore_file_strip_ext(buf));
          //~ e_util_dialog_internal("buf", buf);
      }
 
