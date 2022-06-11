@@ -32,12 +32,12 @@ _config_slideshow_module(Config_Item *ci)
    v->basic.create_widgets = _basic_create;
 
    snprintf (buf, sizeof (buf), "%s/e-module-slideshow.edj", 
-	     e_module_dir_get(slide_config->module));
+             e_module_dir_get(slide_config->module));
    con = e_container_current_get (e_manager_current_get ());
    cfd = e_config_dialog_new (con, D_ ("Slideshow Settings"), 
-			      "SlideShow", 
-			      "_e_modules_slideshow_config_dialog", buf, 
-			      0, v, ci);
+                 "SlideShow",
+                 "_e_modules_slideshow_config_dialog", buf,
+                  0, v, ci);
    slide_config->config_dialog = cfd;
 }
 
@@ -54,8 +54,8 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
      cfdata->dir = strdup(ci->dir);
    else
      {
-	snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
-	cfdata->dir = strdup(buf);
+       snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
+       cfdata->dir = strdup(buf);
      }
 }
 
@@ -143,8 +143,8 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
      ci->dir = eina_stringshare_add (cfdata->dir);
    else
      {
-	snprintf (buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get ());
-	ci->dir = eina_stringshare_add (buf);
+       snprintf (buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get ());
+       ci->dir = eina_stringshare_add (buf);
      }
 
    e_config_save_queue ();
