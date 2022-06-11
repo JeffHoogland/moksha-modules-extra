@@ -531,10 +531,9 @@ _slide_set_bg(void *data, const char *bg)
      {
          inst->in_file = strdup(buf);
          _import_edj_gen(inst);
-          //~ snprintf (buf, sizeof (buf), "%s.edj", ecore_file_strip_ext(buf));
-         //~ e_util_dialog_internal("buf", buf);
+         snprintf (buf, sizeof (buf), "%s.edj", ecore_file_strip_ext(buf));
      }
-
+     
    if (inst->ci->all_desks == 0) 
      {
         con = e_container_current_get(e_manager_current_get());
@@ -600,6 +599,7 @@ _import_free(Instance *inst)
    free(inst->tmpf);
    ecore_file_remove(inst->in_file);
    free(inst->in_file);
+   _slide_cb_check(inst);
 }
 
 static Eina_Bool
