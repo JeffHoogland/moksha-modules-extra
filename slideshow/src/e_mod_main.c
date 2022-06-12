@@ -692,22 +692,21 @@ _import_edj_gen(Instance *inst)
         free(imgdir);
      }
 
-     fstrip = strdupa(e_util_filename_escape(file));
-     //~ snprintf(enc, sizeof(enc), "LOSSY %i", 90);
-     snprintf(enc, sizeof(enc), "LOSSY %i", 90);
-     fprintf(f,
-                "images { image: \"%s\" %s; }\n"
-                "collections {\n"
-                "group { name: \"e/desktop/background\";\n"
-                "%s"
-                "data { item: \"style\" \"0\"; }\n"
-                "max: %i %i;\n"
-                "parts {\n"
-                "part { name: \"bg\"; mouse_events: 0;\n"
-                "description { state: \"default\" 0.0;\n"
-                "image { normal: \"%s\"; scale_hint: STATIC; }\n"
-                "} } } } }\n"
-                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n", w, h, fstrip);
+   fstrip = strdupa(e_util_filename_escape(file));
+   snprintf(enc, sizeof(enc), "LOSSY %i", 90);
+   fprintf(f,
+             "images { image: \"%s\" %s; }\n"
+             "collections {\n"
+             "group { name: \"e/desktop/background\";\n"
+             "%s"
+             "data { item: \"style\" \"0\"; }\n"
+             "max: %i %i;\n"
+             "parts {\n"
+             "part { name: \"bg\"; mouse_events: 0;\n"
+             "description { state: \"default\" 0.0;\n"
+             "image { normal: \"%s\"; scale_hint: STATIC; }\n"
+             "} } } } }\n"
+             , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n", w, h, fstrip);
 
    fclose(f);
 
