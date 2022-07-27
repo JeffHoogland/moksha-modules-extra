@@ -1,3 +1,9 @@
+moksha-module-slideshow (20220727bodhi1-1) bionic; urgency=medium
+
+  * Covert imgs to edj for proper pager preview
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Wed, 27 Jul 2022 06:01:06 -0400
+
 moksha-module-slideshow (20210531bodhi1-1) bionic; urgency=medium
 
   * pt localization
