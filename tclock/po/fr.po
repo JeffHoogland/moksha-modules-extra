@@ -1,28 +1,28 @@
-# Tclock module (e17), French translation.
+# French translation for Tclock.
 # This file is put in the public domain.
 # batden <batden@orange.fr>, 2009.
 # dazibao <dazibao@sfr.fr>, 2011.
+# similar <similar@orange.fr>, 2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Tclock module\n"
+"Project-Id-Version: tclock\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2017-01-20 21:44+0100\n"
-"PO-Revision-Date: 2011-11-30 14:48+0100\n"
-"Last-Translator: dazibao <dazibao@sfr.fr>\n"
-"Language-Team: français <sansgourou@gmail.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-08-07 15:42+0200\n"
+"Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
+"Language-Team: French\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bits\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: FRANCE\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: src/e_mod_config.c:40
 msgid "Tclock Settings"
-msgstr "Paramétrage de Tclock"
+msgstr "Paramètres de Tclock"
 
 #: src/e_mod_config.c:99
 msgid "Top"
@@ -38,7 +38,7 @@ msgstr "Consulter strftime(3) [p. man de dev] pour la syntaxe"
 
 #: src/e_mod_config.c:110
 msgid "Add time offset (e.g.+2)"
-msgstr ""
+msgstr "Ajouter un décalage horaire (par ex. +2)"
 
 #: src/e_mod_config.c:122
 msgid "Bottom"
@@ -58,37 +58,35 @@ msgstr "Afficher l'infobulle"
 
 #: src/e_mod_config.c:147
 msgid "Font size"
-msgstr ""
+msgstr "Taille de la police"
 
 #: src/e_mod_config.c:149
-#, fuzzy
 msgid "Top line"
-msgstr "Afficher la ligne supérieure"
+msgstr "Ligne supérieure"
 
 #: src/e_mod_config.c:154
-#, fuzzy
 msgid "Bottom line"
-msgstr "Afficher la ligne inférieure"
+msgstr "Ligne inférieure"
 
 #: src/e_mod_config.c:161
 msgid "Label color"
-msgstr ""
+msgstr "Couleur de l'étiquette"
 
 #: src/e_mod_config.c:163
 msgid "Red"
-msgstr ""
+msgstr "Rouge"
 
 #: src/e_mod_config.c:168
 msgid "Green"
-msgstr ""
+msgstr "Vert"
 
 #: src/e_mod_config.c:173
 msgid "Blue"
-msgstr ""
+msgstr "Bleu"
 
 #: src/e_mod_config.c:178
 msgid "Alpha"
-msgstr ""
+msgstr "Opacité"
 
 #: src/e_mod_main.c:142
 msgid "TClock"

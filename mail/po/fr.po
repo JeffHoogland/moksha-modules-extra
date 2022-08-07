@@ -1,23 +1,23 @@
-# Mail module (e17), French translation.
+# French translation for Mail.
 # This file is put in the public domain.
 # batden <batden@orange.fr>, 2009, 2010.
+# similar <similar@orange.fr>, 2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mail module\n"
+"Project-Id-Version: mail\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2016-11-22 20:51+0100\n"
-"PO-Revision-Date: 2010-09-10 08:53+0400\n"
-"Last-Translator: batden <batden@orange.fr>\n"
-"Language-Team: French <pourunmondesansgourou@gmail.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-08-07 14:55+0200\n"
+"Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
+"Language-Team: French\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: FRANCE\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: src/e_mod_config_box.c:68
 msgid "Mailbox Configuration"
@@ -105,11 +105,11 @@ msgstr "Mot de passe :"
 
 #: src/e_mod_config_box.c:260
 msgid "New Mail Path:"
-msgstr "Nouveau chemin de courrier :"
+msgstr "Nouvel emplacement de courriel :"
 
 #: src/e_mod_config_box.c:272
 msgid "Current Mail Path:"
-msgstr "Chemin de courrier actuel :"
+msgstr "Emplacement de courriel actuel :"
 
 #: src/e_mod_config_box.c:430
 msgid "Inbox"
@@ -117,7 +117,7 @@ msgstr "Boîte de réception"
 
 #: src/e_mod_config.c:54
 msgid "Mail Settings"
-msgstr "Paramétrage de Courriel"
+msgstr "Configuration du courriel"
 
 #: src/e_mod_config.c:97
 msgid "Always Show Labels"
@@ -133,7 +133,7 @@ msgstr "Afficher toutes les boîtes dans le pop-up"
 
 #: src/e_mod_config.c:103
 msgid "Play sound when mail arrives"
-msgstr ""
+msgstr "Jouer un son à la réception d'un courriel"
 
 #: src/e_mod_config.c:105
 msgid "Check Interval"
