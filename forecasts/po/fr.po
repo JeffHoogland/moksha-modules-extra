@@ -1,27 +1,27 @@
-# Forecasts module (e17), French translation.
+# French translation for Forecasts.
 # This file is put in the public domain.
 # batden <batden@orange.fr>, 2009, 2010.
+# similar <similar@orange.fr>, 2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Forecasts module\n"
+"Project-Id-Version: forecasts\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2016-11-17 21:28+0100\n"
-"PO-Revision-Date: 2010-09-22 11:14+0400\n"
-"Last-Translator: batden <batden@orange.fr>\n"
-"Language-Team: French <pourunmondesansgourou@gmail.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-08-07 14:24+0200\n"
+"Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
+"Language-Team: French\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: FRANCE\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: src/e_mod_config.c:44
 msgid "Forecasts Settings"
-msgstr "Paramètrage des prévisions"
+msgstr "Paramétrage des prévisions"
 
 #: src/e_mod_config.c:98
 msgid "Display Settings"
@@ -37,14 +37,13 @@ msgid "%2.0f minutes"
 msgstr "%2.0f minutes"
 
 #: src/e_mod_config.c:104
-#, fuzzy
 msgid "Forecasts days"
-msgstr "Prévisions"
+msgstr "Jours de prévisions"
 
 #: src/e_mod_config.c:106
 #, c-format
 msgid "%2.0f"
-msgstr ""
+msgstr "%2.0f"
 
 #: src/e_mod_config.c:109
 msgid "Show Description"
@@ -68,24 +67,23 @@ msgstr "Anglais"
 
 #: src/e_mod_config.c:124
 msgid "GeoPlanet WOEID (Where on Earth Identifier)"
-msgstr ""
+msgstr "GeoPlanet WOEID (Where on Earth Identifier)"
 
 #: src/e_mod_config.c:127
 msgid "Code"
-msgstr ""
+msgstr "Code"
 
 #: src/e_mod_config.c:129
 msgid "City name"
-msgstr ""
+msgstr "Nom de la ville"
 
 #: src/e_mod_config.c:132
 msgid "Forecasts WOEID Code or city name: "
-msgstr ""
+msgstr "Code WOEID ou nom de la ville : "
 
 #: src/e_mod_config.c:137
-#, fuzzy
 msgid "To find the code, go to:"
-msgstr "Pour trouver le code de votre région, visitez :"
+msgstr "Pour trouver le code, visitez :"
 
 #: src/e_mod_main.c:260
 msgid "Forecasts"

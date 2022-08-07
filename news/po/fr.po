@@ -1,43 +1,43 @@
-# News module (e17), French translation.
+# French translation for News.
 # This file is put in the public domain.
 # batden <batden@orange.fr>, 2009, 2010, 2011.
+# similar <similar@orange.fr>, 2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: News module\n"
+"Project-Id-Version: news\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2016-02-07 19:00+0100\n"
-"PO-Revision-Date: 2011-02-18 07:11+0400\n"
-"Last-Translator: batden <batden@orange.fr>\n"
-"Language-Team: French <pourunmondesansgourou@gmail.com>\n"
+"PO-Revision-Date: 2022-08-07 15:31+0200\n"
+"Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
+"Language-Team: French\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: FRANCE\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: src/e_mod_main.c:52
 msgid "Config init failed"
-msgstr "L'initialisation de la configuration du module a échoué"
+msgstr "Échec à l'initialisation de la configuration"
 
 #: src/e_mod_main.c:53
 msgid "Parser init failed"
-msgstr "L'initialisation de l'analyseur syntaxique a échoué"
+msgstr "Échec à l'initialisation de l'analyseur syntaxique"
 
 #: src/e_mod_main.c:54
 msgid "Feeds init failed"
-msgstr "L'initialisation des flux a échoué"
+msgstr "Échec à l'initialisation des flux"
 
 #: src/e_mod_main.c:55
 msgid "Viewer init failed"
-msgstr "L'initialisation du lecteur a échoué"
+msgstr "Échec à l'initialisation du lecteur"
 
 #: src/e_mod_main.c:56
 msgid "Popup subsystem init failed"
-msgstr "L'initialisation du sous-système de pop-up a échoué"
+msgstr "Échec à l'initialisation du sous-système de pop-up"
 
 #: src/e_mod_main.c:219
 msgid "News"
@@ -51,7 +51,7 @@ msgid ""
 "removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
 msgstr ""
 "<hilight>Module de nouvelles : configuration actualisée</hilight><br><br>La "
-"configuration du module de nouvelles<br>a été mise à jour<br>Vos réglages "
+"configuration du module de nouvelles<br>a été mise à jour<br>Vos paramètres "
 "ont dû être supprimés<br>Désolé pour le désagrément<br><br>(%d ->%d)"
 
 #: src/news_config.c:112
@@ -63,12 +63,12 @@ msgid ""
 msgstr ""
 "<hilight>Module de nouvelles : configuration rétrogradée</hilight><br><br>La "
 "configuration du module de nouvelles<br>a été ramenée à un état "
-"antérieur<br>Vos réglages ont dû être supprimés<br>Désolé pour le "
+"antérieur<br>Vos paramètres ont dû être supprimés<br>Désolé pour le "
 "désagrément<br><br>(%d ->%d)"
 
 #: src/news_config_dialog.c:90
 msgid "News Main Configuration"
-msgstr "Configuration principale du module de nouvelles"
+msgstr "Configuration principale des nouvelles"
 
 #: src/news_config_dialog.c:192 src/news_config_dialog.c:230
 #: src/news_config_dialog_feeds.c:358 src/news_menu.c:153
@@ -77,8 +77,7 @@ msgstr "Flux"
 
 #: src/news_config_dialog.c:194 src/news_config_dialog.c:238
 msgid "Sort lists by name (disable Move action)"
-msgstr ""
-"Classer les listes par ordre alphabétique (désactive l'action déplacer)"
+msgstr "Classer les listes par nom (désactive l'action de déplacement)"
 
 #: src/news_config_dialog.c:199 src/news_config_dialog.c:307
 #: src/news_viewer.c:307
@@ -139,7 +138,7 @@ msgstr "%1.0f s"
 
 #: src/news_config_dialog.c:282
 msgid "Popup On Warning / Error"
-msgstr "Pop-up pour Avertissement / Erreur"
+msgstr "Pop-up pour avertissement / erreur"
 
 #: src/news_config_dialog.c:287
 msgid "Show on timeout ?"
@@ -155,7 +154,7 @@ msgstr "Articles non lus d'abord"
 
 #: src/news_config_dialog.c:313
 msgid "Sort articles by date"
-msgstr "Classer les articles par ordre chronologique"
+msgstr "Classer les articles par date"
 
 #: src/news_config_dialog.c:316
 msgid "Font"
@@ -187,7 +186,7 @@ msgstr "Configuration de la catégorie des nouvelles"
 
 #: src/news_config_dialog_category.c:135
 msgid "Icon"
-msgstr "Icone"
+msgstr "Icône"
 
 #: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
 msgid "Name"
@@ -195,11 +194,11 @@ msgstr "Nom"
 
 #: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
 msgid "Select an Icon"
-msgstr "Sélectionner un icone"
+msgstr "Choisir une icône"
 
 #: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
 msgid "OK"
-msgstr "O.K."
+msgstr "OK"
 
 #: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
 msgid "Cancel"
@@ -223,7 +222,7 @@ msgstr "Nom :"
 
 #: src/news_config_dialog_feed.c:349
 msgid "Feed url :"
-msgstr "Url du flux :"
+msgstr "URL du flux :"
 
 #: src/news_config_dialog_feed.c:353
 msgid "Mark as important feed"
@@ -247,7 +246,7 @@ msgstr "Description"
 
 #: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
 msgid "Home url"
-msgstr "Url de démarrage"
+msgstr "URL de la page d'accueil"
 
 #: src/news_config_dialog_feed.c:405
 msgid "Server informations"
@@ -268,12 +267,12 @@ msgstr "Catégories"
 #: src/news_config_dialog_feeds.c:301 src/news_config_dialog_feeds.c:375
 #: src/news_config_dialog_item_content.c:283
 msgid "Move Up"
-msgstr ""
+msgstr "Monter"
 
 #: src/news_config_dialog_feeds.c:304 src/news_config_dialog_feeds.c:378
 #: src/news_config_dialog_item_content.c:287
 msgid "Move Down"
-msgstr ""
+msgstr "Descendre"
 
 #: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
 msgid "Add"
@@ -317,7 +316,7 @@ msgstr ""
 
 #: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
 msgid "News Module - Are you sure ?"
-msgstr "Modules de nouvelles : êtes-vous sûr ?"
+msgstr "Modules de nouvelles : vraiment ?"
 
 #: src/news_config_dialog_item.c:40
 msgid "News Gadget Configuration"
@@ -329,7 +328,7 @@ msgstr "Mode d'affichage"
 
 #: src/news_config_dialog_item.c:107
 msgid "Show one icon for all feeds"
-msgstr "Afficher un seul icone pour tous les flux"
+msgstr "Afficher une seule icône pour tous les flux"
 
 #: src/news_config_dialog_item.c:109
 msgid "Show all feeds"
@@ -349,23 +348,23 @@ msgstr "Afficher les flux non lus marqués comme importants"
 
 #: src/news_config_dialog_item.c:120
 msgid "Feed open in"
-msgstr "Ouvir le flux dans"
+msgstr "Ouvrir le flux dans"
 
 #: src/news_config_dialog_item.c:123
 msgid "the feed viewer"
-msgstr "Le lecteur de flux"
+msgstr "le lecteur de flux"
 
 #: src/news_config_dialog_item.c:125
 msgid "my favorite browser"
-msgstr "Mon navigateur préféré"
+msgstr "mon navigateur préféré"
 
 #: src/news_config_dialog_item.c:127
 msgid "Browser opens home url"
-msgstr "Le navigateur ouvre l'url de démarrage"
+msgstr "Le navigateur ouvre l'URL de la page d'accueil"
 
 #: src/news_config_dialog_item.c:129
 msgid "instead of feed url"
-msgstr "à la place de l'url du flux"
+msgstr "au lieu de l'URL du flux"
 
 #: src/news_config_dialog_item.c:136
 msgid "Apply this to all News gadgets"
@@ -376,7 +375,6 @@ msgid "News Gadget Content Configuration"
 msgstr "Configuration du contenu du gadget de nouvelles"
 
 #: src/news_config_dialog_item_content.c:258
-#, fuzzy
 msgid "Available Feeds"
 msgstr "Flux disponibles"
 
@@ -429,7 +427,7 @@ msgstr "Vous devez sélectionner une <hilight>langue</hilight>."
 
 #: src/news_feed.c:318
 msgid "The <hilight>url</hilight> you specified is not correct"
-msgstr "L' <hilight>url</hilight> spécifiée est incorrecte"
+msgstr "L' <hilight>URL</hilight> spécifiée est incorrecte"
 
 #: src/news_feed.c:880
 msgid "You need to enter a <hilight>name</hilight> !"
@@ -484,9 +482,8 @@ msgid "Feeds in this gadget"
 msgstr "Flux dans ce gadget"
 
 #: src/news_viewer.c:388
-#, fuzzy
 msgid "Set as read"
-msgstr "Marquer tout comme lu"
+msgstr "Marquer comme lu"
 
 #: src/news_viewer.c:438
 msgid "Articles in selected feed"
