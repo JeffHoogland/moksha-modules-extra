@@ -580,7 +580,7 @@ _cb_animator(void *data)
                else
                {
                   edje_object_signal_emit(tux->obj, "start_walking_right", "epenguins");
-                  tux->reverse = FALSE;
+                  tux->reverse = EINA_FALSE;
                }
             }
             if ((tux->y + tux->action->h) < pop->height)   
@@ -604,7 +604,7 @@ _cb_animator(void *data)
                else
                {
                   edje_object_signal_emit(tux->obj, "start_walking_left", "epenguins");
-                  tux->reverse = TRUE;
+                  tux->reverse = EINA_TRUE;
                }
             }
             if ((tux->y + tux->action->h) < pop->height)   
