@@ -378,7 +378,7 @@ _win_menu_icon_cb(void *data, E_Menu *m, E_Menu_Item *mi)
    E_OBJECT_CHECK(bd);
 
    o = e_icon_add(m->evas);
-   e_icon_object_set(o, e_border_icon_add(bd, m->evas));
+   e_icon_edje_object_set(o, e_border_icon_add(bd, m->evas));
    e_menu_item_drag_callback_set(mi, _win_menu_item_drag, bd);
 
    mi->icon_object = o;
@@ -404,7 +404,7 @@ _win_menu_item_drag(void *data, E_Menu *m, E_Menu_Item *mi)
       drag_types, 1, bd, -1, NULL, NULL);
 
    o = e_icon_add(drag->evas);
-   e_icon_object_set(o, e_border_icon_add(bd, drag->evas));
+   e_icon_edje_object_set(o, e_border_icon_add(bd, drag->evas));
    e_drag_object_set(drag, o);
 
    e_drag_resize(drag, w, h);
