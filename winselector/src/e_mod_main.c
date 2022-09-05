@@ -53,10 +53,10 @@ static void _win_menu_fill_separator(E_Menu *m);
 static int _win_menu_fill_normal(Eina_List *normal, E_Menu *m);
 static int _win_menu_fill_alt(Eina_List *alt, E_Menu *m);
 static int _win_menu_fill_iconified  (Eina_List *borders, E_Menu *m);
-static int  _win_menu_sort_alpha_cb (void *d1, void *d2);
-static int  _win_menu_sort_z_order_cb (void *d1, void *d2);
-static int  _win_menu_group_desk_cb (void *d1, void *d2);
-static int  _win_menu_group_class_cb (void *d1, void *d2);
+static int  _win_menu_sort_alpha_cb (const void *d1, const void *d2);
+static int  _win_menu_sort_z_order_cb (const void *d1, const void *d2);
+static int  _win_menu_group_desk_cb (const void *d1, const void *d2);
+static int  _win_menu_group_class_cb (const void *d1, const void *d2);
 static void _win_menu_add_by_class (Eina_List *borders, E_Menu *m);
 static void _win_menu_add_by_desk (E_Desk *curr_desk, Eina_List *borders, E_Menu *m, E_Gadcon_Orient orient);
 static void _win_menu_add_by_none (Eina_List *borders, E_Menu *m);
@@ -528,10 +528,10 @@ static void _focus_out(Instance *inst)
      }
 }
 
-static int _win_menu_sort_alpha_cb(void *d1, void *d2)
+static int _win_menu_sort_alpha_cb(const void *d1, const void *d2)
 {
-   E_Border *bd1;
-   E_Border *bd2;
+   const E_Border *bd1;
+   const E_Border *bd2;
    const char *name1;
    const char *name2;
    
@@ -548,10 +548,10 @@ static int _win_menu_sort_alpha_cb(void *d1, void *d2)
    return 0;
 }
 
-static int _win_menu_sort_z_order_cb(void *d1, void *d2)
+static int _win_menu_sort_z_order_cb(const void *d1, const void *d2)
 {
-   E_Border *bd1;
-   E_Border *bd2;
+   const E_Border *bd1;
+   const E_Border *bd2;
 
    if (!d1) return 1;
    if (!d2) return -1;
@@ -564,10 +564,10 @@ static int _win_menu_sort_z_order_cb(void *d1, void *d2)
    return 0;   
 }
 
-static int _win_menu_group_desk_cb(void *d1, void *d2)
+static int _win_menu_group_desk_cb(const void *d1, const void *d2)
 {
-   E_Border *bd1;
-   E_Border *bd2;
+   const E_Border *bd1;
+   const E_Border *bd2;
    int j,k;
 
    if (!d1) return 1;
@@ -584,10 +584,10 @@ static int _win_menu_group_desk_cb(void *d1, void *d2)
    return -1;   /* Returning '-1' on equal is intentional */
 }
 
-static int _win_menu_group_class_cb(void *d1, void *d2)
+static int _win_menu_group_class_cb(const void *d1, const void *d2)
 {
-   E_Border *bd1;
-   E_Border *bd2;
+   const E_Border *bd1;
+   const E_Border *bd2;
 
    if (!d1) return 1;
    if (!d2) return -1;
