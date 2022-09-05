@@ -32,7 +32,7 @@ struct _News
    Ecore_Timer *feeds_timer;
 };
 
-News *news;
+extern News *news;
 
 EAPI extern E_Module_Api e_modapi;
 
