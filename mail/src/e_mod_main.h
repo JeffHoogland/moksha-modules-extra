@@ -12,7 +12,7 @@
 
 #define PRINT_LOTS_OF_DEBUG 0
 
-int start;
+//int start;
 
 typedef enum 
 {
