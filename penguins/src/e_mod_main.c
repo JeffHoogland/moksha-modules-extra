@@ -327,7 +327,7 @@ _load_custom_action(Population *pop, const char *filename, char *name)
 {
    Custom_Action *c;
    char *data;
-   char buf[25];
+   char buf[31];
 
    data = edje_file_data_get(filename, name);
    if (!data) 
@@ -367,7 +367,7 @@ static void
 _theme_load(Population *pop)
 {
    char *name;
-   char buf[15];
+   char buf[18];
    int i;
 
    pop->actions = NULL;
