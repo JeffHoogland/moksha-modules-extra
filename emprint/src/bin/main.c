@@ -556,12 +556,12 @@ _em_take_shot(int x, int y, int w, int h)
    char buf[4096];
 
    /* if user wanted a beep, then beep there shall be */
-    snprintf(buf, 4096, "aplay %s/images/Camera.wav", PACKAGE_DATA_DIR); 
-    if (opts->beep)
-      {
-        exe = ecore_exe_run(buf, NULL);
-        if (exe) ecore_exe_free(exe);
-      }
+   snprintf(buf, 4096, "aplay %s/images/Camera.wav", PACKAGE_DATA_DIR); 
+   if (opts->beep)
+     {
+       exe = ecore_exe_run(buf, NULL);
+       if (exe) ecore_exe_free(exe);
+     }
 
    memset(&att, 0, sizeof(Ecore_X_Window_Attributes));
    root = ecore_x_window_root_first_get();
