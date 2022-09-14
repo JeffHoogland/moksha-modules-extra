@@ -410,7 +410,7 @@ _em_do_window(void)
 
    /* setup handler to recieve click event */
    mouse_up_hdl = ecore_event_handler_add(ECORE_EVENT_MOUSE_BUTTON_UP, 
-					  _em_cb_mouse_up, NULL);
+                      _em_cb_mouse_up, NULL);
 }
 
 static void 
@@ -444,11 +444,11 @@ _em_do_region(void)
 
    /* setup handlers to recieve mouse events */
    mouse_move_hdl = ecore_event_handler_add(ECORE_EVENT_MOUSE_MOVE, 
-					    _em_cb_mouse_move, NULL);
+                      _em_cb_mouse_move, NULL);
    mouse_up_hdl = ecore_event_handler_add(ECORE_EVENT_MOUSE_BUTTON_UP,
-					  _em_cb_mouse_up, NULL);
+                      _em_cb_mouse_up, NULL);
    mouse_down_hdl = ecore_event_handler_add(ECORE_EVENT_MOUSE_BUTTON_DOWN,
-					    _em_cb_mouse_down, NULL);
+                      _em_cb_mouse_down, NULL);
 
    /* set the mouse pointer */
    if ((cursor = ecore_x_cursor_shape_get(ECORE_X_CURSOR_CROSS))) 
