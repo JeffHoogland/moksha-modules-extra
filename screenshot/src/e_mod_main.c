@@ -88,10 +88,10 @@ e_modapi_init(E_Module *m)
 
    /* register config dialog for panel */
    e_configure_registry_category_add("extensions", 90, "Screenshot", 
-				     NULL, "preferences-extensions");
+                                 NULL, "preferences-extensions");
    e_configure_registry_item_add("extensions/screenshot", 20, D_("Screenshot"), 
-				 NULL, buf, 
-				 e_int_config_screenshot_module);
+                                 NULL, buf,
+                                 e_int_config_screenshot_module);
 
    conf_edd = E_CONFIG_DD_NEW("Config", Config);
    #undef T
@@ -114,40 +114,40 @@ e_modapi_init(E_Module *m)
    ss_cfg = e_config_domain_load("module.screenshot", conf_edd);
    if (ss_cfg) 
      {
-	if ((ss_cfg->version >> 16) < MOD_CONFIG_FILE_EPOCH) 
-	  {
-	     /* Config Too Old */
-	     _cfg_free();
-	     ecore_timer_add(1.0, _cfg_timer,
-			     D_("Screenshot Module Configuration data needed "
-			     "upgrading. Your old configuration<br> has been"
-			     " wiped and a new set of defaults initialized. "
-			     "This<br>will happen regularly during "
-			     "development, so don't report a<br>bug. "
-			     "This simply means Screenshot module needs "
-			     "new configuration<br>data by default for "
-			     "usable functionality that your old<br>"
-			     "configuration simply lacks. This new set of "
-			     "defaults will fix<br>that by adding it in. "
-			     "You can re-configure things now to your<br>"
-			     "liking. Sorry for the inconvenience.<br>"));
-	  }
-	else if (ss_cfg->version > MOD_CONFIG_FILE_VERSION) 
-	  {
-	     /* Config Too New */
-	     _cfg_free();
-	     ecore_timer_add(1.0, _cfg_timer, 
-			     D_("Your Screenshot Module configuration is NEWER "
-			     "than the Screenshot Module version. This is "
-			     "very<br>strange. This should not happen unless"
-			     " you downgraded<br>the Screenshot Module or "
-			     "copied the configuration from a place where"
-			     "<br>a newer version of the Screenshot Module "
-			     "was running. This is bad and<br>as a "
-			     "precaution your configuration has been now "
-			     "restored to<br>defaults. Sorry for the "
-			     "inconvenience.<br>"));
-	  }
+        if ((ss_cfg->version >> 16) < MOD_CONFIG_FILE_EPOCH)
+          {
+            /* Config Too Old */
+             _cfg_free();
+             ecore_timer_add(1.0, _cfg_timer,
+                             D_("Screenshot Module Configuration data needed "
+                             "upgrading. Your old configuration<br> has been"
+                             " wiped and a new set of defaults initialized. "
+                             "This<br>will happen regularly during "
+                             "development, so don't report a<br>bug. "
+                             "This simply means Screenshot module needs "
+                             "new configuration<br>data by default for "
+                             "usable functionality that your old<br>"
+                             "configuration simply lacks. This new set of "
+                             "defaults will fix<br>that by adding it in. "
+                             "You can re-configure things now to your<br>"
+                             "liking. Sorry for the inconvenience.<br>"));
+          }
+        else if (ss_cfg->version > MOD_CONFIG_FILE_VERSION)
+          {
+             /* Config Too New */
+             _cfg_free();
+             ecore_timer_add(1.0, _cfg_timer,
+                             D_("Your Screenshot Module configuration is NEWER "
+                             "than the Screenshot Module version. This is "
+                             "very<br>strange. This should not happen unless"
+                             " you downgraded<br>the Screenshot Module or "
+                             "copied the configuration from a place where"
+                             "<br>a newer version of the Screenshot Module "
+                             "was running. This is bad and<br>as a "
+                             "precaution your configuration has been now "
+                             "restored to<br>defaults. Sorry for the "
+                             "inconvenience.<br>"));
+          }
      }
 
    if (!ss_cfg) _cfg_new();
@@ -158,9 +158,9 @@ e_modapi_init(E_Module *m)
    act = e_action_add("screenshot");
    if (act) 
      {
-	act->func.go = _cb_take_shot;
-	e_action_predef_name_set("Screenshot", D_("Take Screenshot"), 
-				 "screenshot", NULL, NULL, 0);	
+        act->func.go = _cb_take_shot;
+        e_action_predef_name_set("Screenshot", D_("Take Screenshot"),
+                                 "screenshot", NULL, NULL, 0);
      }
    
    e_gadcon_provider_register(&_gc_class);
@@ -174,9 +174,9 @@ e_modapi_shutdown(E_Module *m)
 
    if (act) 
      {
-	e_action_predef_name_del("Screenshot", D_("Take Screenshot"));
-	e_action_del("screenshot");
-	act = NULL;
+        e_action_predef_name_del("Screenshot", D_("Take Screenshot"));
+        e_action_del("screenshot");
+        act = NULL;
      }
 
    e_configure_registry_item_del("extensions/screenshot");
@@ -208,7 +208,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
 
    inst->o_base = edje_object_add(gc->evas);
    if (!e_theme_edje_object_set(inst->o_base, "base/theme/modules/screenshot", 
-				"modules/screenshot/main"))
+                               "modules/screenshot/main"))
      edje_object_file_set(inst->o_base, buf, "modules/screenshot/main");
 
    // respect theme aspect, but ignore Evas_Aspect_Control
@@ -219,11 +219,11 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    inst->gcc->data = inst;
 
    edje_object_signal_callback_add(inst->o_base, "e,action,screenshot,start", 
-				   "*", _cb_start_shot, inst);
+                                   "*", _cb_start_shot, inst);
    edje_object_signal_callback_add(inst->o_base, "e,action,screenshot,exec", 
-				   "*", _cb_exec_shot, inst);
+                                   "*", _cb_exec_shot, inst);
    evas_object_event_callback_add(inst->o_base, EVAS_CALLBACK_MOUSE_DOWN, 
-				  _cb_mouse_down, inst);
+                                       _cb_mouse_down, inst);
 
    edje_object_part_text_set(inst->o_base, "e.text.counter", "");
 
@@ -241,15 +241,15 @@ _gc_shutdown(E_Gadcon_Client *gcc)
    if (inst->timer) ecore_timer_del(inst->timer);
    if (inst->menu) 
      {
-	e_menu_post_deactivate_callback_set(inst->menu, NULL, NULL);
-	e_object_del(E_OBJECT(inst->menu));
-	inst->menu = NULL;
+        e_menu_post_deactivate_callback_set(inst->menu, NULL, NULL);
+        e_object_del(E_OBJECT(inst->menu));
+        inst->menu = NULL;
      }
    if (inst->o_base) 
      {
-	evas_object_event_callback_del(inst->o_base, EVAS_CALLBACK_MOUSE_DOWN,
-				       _cb_mouse_down);
-	evas_object_del(inst->o_base);
+        evas_object_event_callback_del(inst->o_base, EVAS_CALLBACK_MOUSE_DOWN,
+                                      _cb_mouse_down);
+        evas_object_del(inst->o_base);
      }
    E_FREE(inst);
 }
@@ -358,49 +358,49 @@ _cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, void *event_info)
         E_Zone *zone = NULL;
         int x = 0, y = 0;
 
-	zone = e_util_zone_current_get(e_manager_current_get());
+        zone = e_util_zone_current_get(e_manager_current_get());
 
-	m = e_menu_new();
-	mo = e_menu_new();
-	inst->menu_mode = mo;
+        m = e_menu_new();
+        mo = e_menu_new();
+        inst->menu_mode = mo;
 
-	mi = e_menu_item_new(mo);
-	e_menu_item_label_set(mi, D_("Whole Screen"));
-	e_menu_item_radio_group_set(mi, 1);
-	e_menu_item_radio_set(mi, 1);
-	if (ss_cfg->mode == 0) e_menu_item_toggle_set(mi, 1);
-	e_menu_item_callback_set(mi, _cb_normal, inst);
+        mi = e_menu_item_new(mo);
+        e_menu_item_label_set(mi, D_("Whole Screen"));
+        e_menu_item_radio_group_set(mi, 1);
+        e_menu_item_radio_set(mi, 1);
+        if (ss_cfg->mode == 0) e_menu_item_toggle_set(mi, 1);
+        e_menu_item_callback_set(mi, _cb_normal, inst);
 
-	mi = e_menu_item_new(mo);
-	e_menu_item_label_set(mi, D_("Select Window"));
-	e_menu_item_radio_group_set(mi, 1);
-	e_menu_item_radio_set(mi, 1);
-	if (ss_cfg->mode == 1) e_menu_item_toggle_set(mi, 1);
-	e_menu_item_callback_set(mi, _cb_window, inst);
+        mi = e_menu_item_new(mo);
+        e_menu_item_label_set(mi, D_("Select Window"));
+        e_menu_item_radio_group_set(mi, 1);
+        e_menu_item_radio_set(mi, 1);
+        if (ss_cfg->mode == 1) e_menu_item_toggle_set(mi, 1);
+        e_menu_item_callback_set(mi, _cb_window, inst);
 
-	mi = e_menu_item_new(mo);
-	e_menu_item_label_set(mi, D_("Select Region"));
-	e_menu_item_radio_group_set(mi, 1);
-	e_menu_item_radio_set(mi, 1);
-	if (ss_cfg->mode == 2) e_menu_item_toggle_set(mi, 1);
-	e_menu_item_callback_set(mi, _cb_region, inst);
+        mi = e_menu_item_new(mo);
+        e_menu_item_label_set(mi, D_("Select Region"));
+        e_menu_item_radio_group_set(mi, 1);
+        e_menu_item_radio_set(mi, 1);
+        if (ss_cfg->mode == 2) e_menu_item_toggle_set(mi, 1);
+        e_menu_item_callback_set(mi, _cb_region, inst);
 
-	mi = e_menu_item_new(m);
-	e_menu_item_label_set(mi, D_("Capture Mode"));
-	e_menu_item_submenu_set(mi, inst->menu_mode);
+        mi = e_menu_item_new(m);
+        e_menu_item_label_set(mi, D_("Capture Mode"));
+        e_menu_item_submenu_set(mi, inst->menu_mode);
 
-	mi = e_menu_item_new(m);
-	e_menu_item_label_set(mi, D_("Settings"));
-	e_util_menu_item_theme_icon_set(mi, "configure");
-	e_menu_item_callback_set(mi, _cb_menu_cfg, inst);
+        mi = e_menu_item_new(m);
+        e_menu_item_label_set(mi, D_("Settings"));
+        e_util_menu_item_theme_icon_set(mi, "configure");
+        e_menu_item_callback_set(mi, _cb_menu_cfg, inst);
 
-	m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-	e_menu_post_deactivate_callback_set(m, _cb_menu_post, inst);
+        m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
+        e_menu_post_deactivate_callback_set(m, _cb_menu_post, inst);
         inst->menu = m;
 
-	e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, NULL, NULL);
-	e_menu_activate_mouse(m, zone, x + ev->output.x, y + ev->output.y, 
-			      1, 1, E_MENU_POP_DIRECTION_AUTO, ev->timestamp);
+        e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, NULL, NULL);
+        e_menu_activate_mouse(m, zone, x + ev->output.x, y + ev->output.y,
+                              1, 1, E_MENU_POP_DIRECTION_AUTO, ev->timestamp);
      }
 }
 
@@ -476,9 +476,9 @@ _cb_start_shot(void *data, Evas_Object *obj, const char *emission, const char *s
    if (!(inst = data)) return;
    if (ss_cfg->prompt)
      {
-	e_entry_dialog_show(D_("Screenshot Module"), "enlightenment", 
-			    D_("Enter a new filename for this screenshot"),
-			    NULL, NULL, NULL, _cb_dialog_ok, NULL, inst);
+        e_entry_dialog_show(D_("Screenshot Module"), "enlightenment",
+                            D_("Enter a new filename for this screenshot"),
+                            NULL, NULL, NULL, _cb_dialog_ok, NULL, inst);
      }
    else 
      inst->timer = ecore_timer_add(1.0, _cb_timer, inst);
@@ -508,8 +508,8 @@ _cb_dialog_ok(void *data, char *text)
    t = ecore_file_dir_get(text);
    if (!strcmp(t, text)) 
      {
-	snprintf(buf, sizeof(buf), "%s/%s", ss_cfg->location, 
-		 ecore_file_file_get(text));
+        snprintf(buf, sizeof(buf), "%s/%s", ss_cfg->location,
+                 ecore_file_file_get(text));
      }
    else
      snprintf(buf, sizeof(buf), "%s", text);
@@ -545,69 +545,69 @@ _cb_do_shot(void)
    tmp = strdup("");
    if (ss_cfg->use_bell) 
      {
-	snprintf(buf, sizeof(buf), "--beep ");
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "--beep ");
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
 
    if (ss_cfg->quality > 0) 
      {
-	snprintf(buf, sizeof(buf), "--quality %d ", ss_cfg->quality);
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "--quality %d ", ss_cfg->quality);
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
 
    switch (ss_cfg->mode) 
      {
       case 0:
-	break;
+        break;
       case 1:
-	snprintf(buf, sizeof(buf), "--window ");
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
-	break;
+        snprintf(buf, sizeof(buf), "--window ");
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
+        break;
       case 2:
-	snprintf(buf, sizeof(buf), "--region ");
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
-	break;
+        snprintf(buf, sizeof(buf), "--region ");
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
+        break;
      }
 
    if ((ss_cfg->use_app) && (ss_cfg->app)) 
      {
-	snprintf(buf, sizeof(buf), "--app %s ", ss_cfg->app);
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "--app %s ", ss_cfg->app);
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
 
    if ((ss_cfg->use_thumb) && (ss_cfg->thumb_size > 0)) 
      {
-	snprintf(buf, sizeof(buf), "--thumb-geom %d ", ss_cfg->thumb_size);
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "--thumb-geom %d ", ss_cfg->thumb_size);
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
 
    if ((ss_cfg->prompt) && (ss_cfg->filename))
      {
-	snprintf(buf, sizeof(buf), "%s", ss_cfg->filename);
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "%s", ss_cfg->filename);
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
    else 
      {
-	if ((ss_cfg->location) && (ss_cfg->filename)) 
-	  {
-	     snprintf(buf, sizeof(buf), "%s/%s", ss_cfg->location, 
-		      ss_cfg->filename);
-	     tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	     strcat(tmp, buf);	     
-	  }
-	else if (ss_cfg->location) 
-	  {
-	     snprintf(buf, sizeof(buf), "%s", ss_cfg->location);
-	     tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	     strcat(tmp, buf);
-	  }
+        if ((ss_cfg->location) && (ss_cfg->filename))
+          {
+             snprintf(buf, sizeof(buf), "%s/%s", ss_cfg->location,
+                      ss_cfg->filename);
+             tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+             strcat(tmp, buf);
+          }
+        else if (ss_cfg->location)
+          {
+             snprintf(buf, sizeof(buf), "%s", ss_cfg->location);
+             tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+             strcat(tmp, buf);
+          }
      }
 
    if (!ecore_file_app_installed("emprint")) return;
@@ -625,76 +625,76 @@ _cb_take_shot(E_Object *obj, const char *params)
    tmp = strdup("");
    if (ss_cfg->delay > 0) 
      {
-	snprintf(buf, sizeof(buf), "--delay %i ", (int)ss_cfg->delay);
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "--delay %i ", (int)ss_cfg->delay);
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
 
    if (ss_cfg->use_bell) 
      {
-	snprintf(buf, sizeof(buf), "--beep ");
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "--beep ");
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
 
    if (ss_cfg->quality > 0) 
      {
-	snprintf(buf, sizeof(buf), "--quality %d ", ss_cfg->quality);
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "--quality %d ", ss_cfg->quality);
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
 
    switch (ss_cfg->mode) 
      {
       case 0:
-	break;
+        break;
       case 1:
-	snprintf(buf, sizeof(buf), "--window ");
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
-	break;
+        snprintf(buf, sizeof(buf), "--window ");
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
+        break;
       case 2:
-	snprintf(buf, sizeof(buf), "--region ");
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
-	break;
+        snprintf(buf, sizeof(buf), "--region ");
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
+        break;
      }
 
    if ((ss_cfg->use_app) && (ss_cfg->app)) 
      {
-	snprintf(buf, sizeof(buf), "--app %s ", ss_cfg->app);
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "--app %s ", ss_cfg->app);
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
 
    if ((ss_cfg->use_thumb) && (ss_cfg->thumb_size > 0)) 
      {
-	snprintf(buf, sizeof(buf), "--thumb-geom %d ", ss_cfg->thumb_size);
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "--thumb-geom %d ", ss_cfg->thumb_size);
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
 
    if ((ss_cfg->prompt) && (ss_cfg->filename))
      {
-	snprintf(buf, sizeof(buf), "%s", ss_cfg->filename);
-	tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	strcat(tmp, buf);
+        snprintf(buf, sizeof(buf), "%s", ss_cfg->filename);
+        tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+        strcat(tmp, buf);
      }
    else 
      {
-	if ((ss_cfg->location) && (ss_cfg->filename)) 
-	  {
-	     snprintf(buf, sizeof(buf), "%s/%s", ss_cfg->location, 
-		      ss_cfg->filename);
-	     tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	     strcat(tmp, buf);	     
-	  }
-	else if (ss_cfg->location) 
-	  {
-	     snprintf(buf, sizeof(buf), "%s", ss_cfg->location);
-	     tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
-	     strcat(tmp, buf);
-	  }
+        if ((ss_cfg->location) && (ss_cfg->filename))
+          {
+             snprintf(buf, sizeof(buf), "%s/%s", ss_cfg->location,
+                     ss_cfg->filename);
+             tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+             strcat(tmp, buf);
+          }
+       else if (ss_cfg->location)
+          {
+             snprintf(buf, sizeof(buf), "%s", ss_cfg->location);
+             tmp = realloc(tmp, strlen(tmp) + strlen(buf) + 1);
+             strcat(tmp, buf);
+          }
      }
 
    snprintf(buf, sizeof(buf), "emprint %s", tmp);
