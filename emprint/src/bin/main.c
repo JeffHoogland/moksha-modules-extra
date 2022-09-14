@@ -72,9 +72,9 @@ main(int argc, char **argv)
    opts = calloc(1, sizeof(Options));
    if (!opts)
      {
-	printf("Cannot allocate memory for Options structure.\n");
+        printf("Cannot allocate memory for Options structure.\n");
         eina_shutdown();
-	exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE);
      }
 
    /* parse our command line */
@@ -83,28 +83,28 @@ main(int argc, char **argv)
    /* initialize ecore */
    if (!ecore_init()) 
      {
-	_em_free_options();
+        _em_free_options();
         eina_shutdown();
-	exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE);
      }
 
    /* initialize ecore_evas */
    if (!ecore_evas_init()) 
      {
-	_em_free_options();
-	ecore_shutdown();
+        _em_free_options();
+        ecore_shutdown();
         eina_shutdown();
-	exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE);
      }
 
    /* initialize ecore_x */
    if (!ecore_x_init(NULL)) 
      {
-	_em_free_options();
-	ecore_evas_shutdown();
-	ecore_shutdown();
+        _em_free_options();
+        ecore_evas_shutdown();
+        ecore_shutdown();
         eina_shutdown();
-	exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE);
      }
 
    /* set app arguments */
@@ -144,23 +144,23 @@ _em_parse_cmdln(Options *o, int argc, char *argv[])
    char c;
    struct option longopts[]  = 
      {
-	  {"beep", no_argument, &(o->beep), 1},
-	  {"delay", required_argument, 0, 'd'},
-	  {"app", required_argument, 0, 'a'},
-	  {"thumb", required_argument, 0, 't'},
-	  {"thumb-geom", required_argument, 0, 'g'},
-	  {"quality", required_argument, 0, 'q'},
-	  {"region", no_argument, &(o->region), 1},
-	  {"window", no_argument, &(o->window), 1},
-	  {"help", no_argument, 0, 'h'},
-	  {"version", no_argument, 0, 'v'},
-	  {NULL, 0, NULL, 0}
+      {"beep", no_argument, &(o->beep), 1},
+      {"delay", required_argument, 0, 'd'},
+      {"app", required_argument, 0, 'a'},
+      {"thumb", required_argument, 0, 't'},
+      {"thumb-geom", required_argument, 0, 'g'},
+      {"quality", required_argument, 0, 'q'},
+      {"region", no_argument, &(o->region), 1},
+      {"window", no_argument, &(o->window), 1},
+      {"help", no_argument, 0, 'h'},
+      {"version", no_argument, 0, 'v'},
+      {NULL, 0, NULL, 0}
      };
 
    /* parse the options provided by user */
    while ((c = getopt_long_only(argc, argv, "d:a:t:g:q:hv", longopts, NULL)) != -1)
      {
-	switch (c) 
+       switch (c)
           {
            case 0: /* Flags were set.... do nothing. */
              break;
@@ -212,30 +212,30 @@ static void
 _em_print_help(void) 
 {
    printf("Usage: emprint [OPTIONS]... FILE \n"
-	  " Unless otherwise noted, all options may be used in\n"
-	  " their shorthand form (e.g. --thumb == -t) using the first\n"
-	  " letter in the option name.\n"
-	  "\tFILE\t\t\tWhere FILE is the target for\n"
-	  "\t\t\t\tthe screenshot. If no FILE is specified,\n"
-	  "\t\t\t\ta date-stamped file will be saved in the\n"
-	  "\t\t\t\tcurrent directory.\n"
-	  "\t--help\t\t\tDisplay this help\n"
-	  "\t--beep\t\t\tBeep before taking screenshot\n"
-	  "\t--delay NUM\t\tWait NUM seconds before taking screenshot\n"
-	  "\t--app APP\t\tLaunch APP after taking screenshot.  A '%%s'\n"
-	  "\t\t\t\tincluded in the app command line will be\n"
-	  "\t\t\t\treplaced with the filename.\n"
-	  "\t--thumb THUMB\t\tGenerate a thumbnail as THUMB\n"
-	  "\t--thumb-geom NUM\tGeometry to use for thumbnail\n"
-	  "\t\t\t\tNUM can be a percentage of the original size OR\n"
-	  "\t\t\t\tthe actual geometry to use for the thumbnail,\n"
-	  "\t\t\t\te.g. 100x100.\n"
-	  "\t\t\t\t(Shorthand: -g)\n"
-	  "\t--quality NUM\t\tImage quality of screenshot (in percentage)\n"
-	  "\t--region\t\tSelect a specific screen region\n"
-	  "\t--window\t\tSelect a specific window to grab\n"
-	  "\t--version\t\tPrint the version.\n"
-	  );
+      " Unless otherwise noted, all options may be used in\n"
+      " their shorthand form (e.g. --thumb == -t) using the first\n"
+      " letter in the option name.\n"
+      "\tFILE\t\t\tWhere FILE is the target for\n"
+      "\t\t\t\tthe screenshot. If no FILE is specified,\n"
+      "\t\t\t\ta date-stamped file will be saved in the\n"
+      "\t\t\t\tcurrent directory.\n"
+      "\t--help\t\t\tDisplay this help\n"
+      "\t--beep\t\t\tBeep before taking screenshot\n"
+      "\t--delay NUM\t\tWait NUM seconds before taking screenshot\n"
+      "\t--app APP\t\tLaunch APP after taking screenshot.  A '%%s'\n"
+      "\t\t\t\tincluded in the app command line will be\n"
+      "\t\t\t\treplaced with the filename.\n"
+      "\t--thumb THUMB\t\tGenerate a thumbnail as THUMB\n"
+      "\t--thumb-geom NUM\tGeometry to use for thumbnail\n"
+      "\t\t\t\tNUM can be a percentage of the original size OR\n"
+      "\t\t\t\tthe actual geometry to use for the thumbnail,\n"
+      "\t\t\t\te.g. 100x100.\n"
+      "\t\t\t\t(Shorthand: -g)\n"
+      "\t--quality NUM\t\tImage quality of screenshot (in percentage)\n"
+      "\t--region\t\tSelect a specific screen region\n"
+      "\t--window\t\tSelect a specific window to grab\n"
+      "\t--version\t\tPrint the version.\n"
+      );
 
    _em_free_options();
    exit(EXIT_SUCCESS);
@@ -277,13 +277,13 @@ _em_get_filename(void)
      strftime(buf, sizeof(buf), "%Y-%m-%d-%H%M%S.png", loctime);
    else 
      {
-	if (ecore_file_is_dir(opts->filename)) 
-	  {
-	     strftime(buf, sizeof(buf), "%Y-%m-%d-%H%M%S.png", loctime);
-	     snprintf(buf, sizeof(buf), "%s/%s", opts->filename, strdup(buf));
-	  }
-	else 
-	  {
+        if (ecore_file_is_dir(opts->filename))
+          {
+             strftime(buf, sizeof(buf), "%Y-%m-%d-%H%M%S.png", loctime);
+             snprintf(buf, sizeof(buf), "%s/%s", opts->filename, strdup(buf));
+          }
+        else
+         {
              char *filename = NULL;
              const char *file = NULL, *dir = NULL;
              char *ext = NULL, *p = NULL;
@@ -304,12 +304,12 @@ _em_get_filename(void)
              ext = strrchr(file, '.');
              if (!ext) ext = strdup(".png");
 
-	     /* filename was given, check for '%' signs to 
-	      * format based on strftime or file count */
-	     if ((strstr(opts->filename, "%")) && 
+          /* filename was given, check for '%' signs to
+          * format based on strftime or file count */
+          if ((strstr(opts->filename, "%")) && 
                  (!strstr(opts->filename, "%N")))
-	       strftime(buf, sizeof(buf), opts->filename, loctime);
-             else if (strstr(opts->filename, "%N")) 
+          strftime(buf, sizeof(buf), opts->filename, loctime);
+             else if (strstr(opts->filename, "%N"))
                {
                   int c = 0;
 
@@ -331,7 +331,7 @@ _em_get_filename(void)
                   else
                     snprintf(buf, sizeof(buf), "%s/%s", dir, file);
                }
-	  }
+      }
      }
 
    /* set the new filename */
@@ -344,19 +344,19 @@ _em_do_shot(void)
    /* if user specified a delay, do it */
    if (opts->delay > 0) 
      {
-	/* create a timer for the delay */
-	if (timer) ecore_timer_del(timer);
-	timer = ecore_timer_add(1.0, _em_cb_timer, NULL);
+       /* create a timer for the delay */
+       if (timer) ecore_timer_del(timer);
+       timer = ecore_timer_add(1.0, _em_cb_timer, NULL);
      }
    else 
      {
-	/* are we taking a region, window or whole screen shot? */
-	if (opts->region)
-	  _em_do_region();
-	else if (opts->window)
-	  _em_do_window();
-	else
-	  _em_do_screen();
+    /* are we taking a region, window or whole screen shot? */
+      if (opts->region)
+         _em_do_region();
+      else if (opts->window)
+         _em_do_window();
+      else
+         _em_do_screen();
      }
 }
 
@@ -485,19 +485,19 @@ _em_do_thumb(const char *filename)
    /* calculate thumbnail size */
    if ((opts->thumb.width > 0) && (opts->thumb.height > 0)) 
      {
-	tw = opts->thumb.width;
-	th = opts->thumb.height;
+       tw = opts->thumb.width;
+       th = opts->thumb.height;
      }
    else if (opts->thumb.size > 0) 
      {
-	tw = w * opts->thumb.size / 100;
-	th = h * opts->thumb.size / 100;
+       tw = w * opts->thumb.size / 100;
+       th = h * opts->thumb.size / 100;
      }
    else 
      {
-	/* by default, create a 50% thumbnail */
-	tw = w * 50 / 100;
-	th = h * 50 / 100;
+       /* by default, create a 50% thumbnail */
+       tw = w * 50 / 100;
+       th = h * 50 / 100;
      }
 
    evas_object_image_file_set(img, NULL, NULL);
@@ -585,7 +585,7 @@ _em_take_shot(int x, int y, int w, int h)
    snprintf(buff, sizeof(buff), "quality=%d compress=9", opts->quality);
    if (!(evas_object_image_save(im, opts->filename, NULL, buff)))
      {
-	printf("Error taking screenshot: %s\n", opts->filename);
+        printf("Error taking screenshot: %s\n", opts->filename);
         if (im) evas_object_del(im);
         if (ee) ecore_evas_free(ee);
         if (xim) ecore_x_image_free(xim);
@@ -651,24 +651,24 @@ _em_cb_mouse_move(void *data __UNUSED__, int type __UNUSED__, void *event)
    /* figure out how to move the band */
    if ((w < 0) && (h < 0))
      {
-	ecore_x_pointer_xy_get(input_window, &x, &y);
-	_em_band_move(x, y);
-	_em_band_resize(-w, -h);
+        ecore_x_pointer_xy_get(input_window, &x, &y);
+        _em_band_move(x, y);
+        _em_band_resize(-w, -h);
      }
    else if ((w < 0) &&  (h > 0))
      {
-	ecore_x_pointer_xy_get(input_window, &x, &y);
-	_em_band_move(x, gy);
-	_em_band_resize(-w, h);
+        ecore_x_pointer_xy_get(input_window, &x, &y);
+        _em_band_move(x, gy);
+        _em_band_resize(-w, h);
      }
    else if ((w > 0) && (h < 0))
      {
-	ecore_x_pointer_xy_get(input_window, &x, &y);
-	_em_band_move(gx, y);
-	_em_band_resize(w, -h);
+        ecore_x_pointer_xy_get(input_window, &x, &y);
+        _em_band_move(gx, y);
+        _em_band_resize(w, -h);
      }
    else
-     _em_band_resize(w, h);
+       _em_band_resize(w, h);
    return EINA_TRUE;
 }
 
@@ -681,8 +681,8 @@ _em_cb_mouse_up(void *data __UNUSED__, int type __UNUSED__, void *event)
 
    if (opts->region) 
      {
-	_em_grab_region_end();
-	return EINA_TRUE;
+       _em_grab_region_end();
+       return EINA_TRUE;
      }
    ev = event;
 
@@ -715,8 +715,8 @@ _em_cb_mouse_up(void *data __UNUSED__, int type __UNUSED__, void *event)
    root = ecore_x_window_root_first_get();
    while (win != root) 
      {
-	if (ecore_x_window_parent_get(win) == root) break;
-	win = ecore_x_window_parent_get(win);
+       if (ecore_x_window_parent_get(win) == root) break;
+       win = ecore_x_window_parent_get(win);
      }
 
    /* get this window's dimensions */
@@ -755,15 +755,15 @@ _em_cb_timer(void *data __UNUSED__)
 
    if (count == opts->delay) 
      {
-	/* are we taking a region, window or whole screen shot? */
-	if (opts->region)
-	  _em_do_region();
-	else if (opts->window)
-	  _em_do_window();
-	else
-	  _em_do_screen();
+       /* are we taking a region, window or whole screen shot? */
+       if (opts->region)
+         _em_do_region();
+       else if (opts->window)
+         _em_do_window();
+       else
+         _em_do_screen();
 
-        return EINA_FALSE;
+       return EINA_FALSE;
      }
 
    /* tell the user we are counting down */
@@ -835,8 +835,8 @@ _em_band_resize(int w, int h)
    ecore_evas_resize(band->ee, w, h);
    if ((w >= 6) && (h >= 6)) 
      {
-	evas_object_resize(band->edj, w, h);
-	evas_object_image_fill_set(band->edj, 0, 0, w, h);
+       evas_object_resize(band->edj, w, h);
+       evas_object_image_fill_set(band->edj, 0, 0, w, h);
      }
    _em_band_show();
 }

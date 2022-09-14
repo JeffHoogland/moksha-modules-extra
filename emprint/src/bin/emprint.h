@@ -11,8 +11,8 @@ struct _Options
    const char *app, *filename;
    struct 
      {
-	int width, height, size;
-	const char *filename;
+       int width, height, size;
+       const char *filename;
      } thumb;
 };
 
