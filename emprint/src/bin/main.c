@@ -545,6 +545,7 @@ static void
 _em_take_shot(int x, int y, int w, int h) 
 {
    Ecore_Evas *ee;
+   Ecore_Exe *exe;
    Evas *evas;
    Evas_Object *im;
    Ecore_X_Window root;
@@ -556,9 +557,11 @@ _em_take_shot(int x, int y, int w, int h)
 
    /* if user wanted a beep, then beep there shall be */
     snprintf(buf, 4096, "aplay %s/images/Camera.wav", PACKAGE_DATA_DIR); 
-    int ret=system(buf);
-    if (opts->beep) ret;
-   //if (opts->beep) ecore_x_bell(0);
+    if (opts->beep)
+      {
+        exe = ecore_exe_run(buf, NULL);
+        if (exe) ecore_exe_free(exe);
+      }
 
    memset(&att, 0, sizeof(Ecore_X_Window_Attributes));
    root = ecore_x_window_root_first_get();
