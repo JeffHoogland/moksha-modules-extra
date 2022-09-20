@@ -352,7 +352,10 @@ _em_do_shot(void)
      {
     /* are we taking a region, window or whole screen shot? */
       if (opts->region)
-         _em_do_region();
+        {
+          if (timer) ecore_timer_del(timer);
+          timer = ecore_timer_add(0.2, _em_cb_timer, NULL);
+        }
       else if (opts->window)
          _em_do_window();
       else
