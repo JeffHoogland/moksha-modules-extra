@@ -481,7 +481,17 @@ _cb_start_shot(void *data, Evas_Object *obj, const char *emission, const char *s
                             NULL, NULL, NULL, _cb_dialog_ok, NULL, inst);
      }
    else 
-     inst->timer = ecore_timer_add(1.0, _cb_timer, inst);
+     {
+         if (inst->timer)
+           {
+             if (!ecore_timer_freeze_get(inst->timer))
+               ecore_timer_freeze(inst->timer);
+             else
+               ecore_timer_thaw(inst->timer);
+           }
+         else
+           inst->timer = ecore_timer_add(1.0, _cb_timer, inst);
+     }
 }
 
 static void 
