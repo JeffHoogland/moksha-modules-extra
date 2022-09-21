@@ -9,7 +9,7 @@ images.image: "flash4.png" COMP;
 images.image: "flash5.png" COMP;
 
 collections {
-	group { "icon"; max: 24 24;
+	group { "icon"; max: 128 128;
 		parts {
 			image { "image"; nomouse;
 				desc { "default";
