@@ -1,3 +1,10 @@
+moksha-module-screenshot (20220922bodhi1-1) bionic; urgency=low
+
+  * Screenshot freeze and thaw timer added
+  * Screenshot: task module icon fix
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Thu, 22 Sep 2022 14:06:43 -0400
+
 moksha-module-screenshot (20210531bodhi1-1) bionic; urgency=low
 
   * pt localization
