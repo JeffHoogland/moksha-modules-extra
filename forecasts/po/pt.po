@@ -1,32 +1,29 @@
-# Portuguese translation for forecasts
-# This file is distributed under the same license as the enlightenment package.
+# Portuguese translation for Forecasts
 # Adaptado ao acordo ortográfico de 1990
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
-# Sérgio Marques <sarquespt@gmail.com>, 2010.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: forecasts\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2016-11-17 21:28+0100\n"
-"PO-Revision-Date: 2012-08-25 01:08+0100\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"PO-Revision-Date: 2022-09-28 12:47+0100\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: Portugal\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: src/e_mod_config.c:44
 msgid "Forecasts Settings"
-msgstr "Definições"
+msgstr "Definições de previsões"
 
 #: src/e_mod_config.c:98
 msgid "Display Settings"
-msgstr "Definições de exibição"
+msgstr "Definições de ecrã"
 
 #: src/e_mod_config.c:99
 msgid "Poll Time"
@@ -38,14 +35,13 @@ msgid "%2.0f minutes"
 msgstr "%2.0f minutos"
 
 #: src/e_mod_config.c:104
-#, fuzzy
 msgid "Forecasts days"
-msgstr "Previsões meteorológicas"
+msgstr "Dias de previsão"
 
 #: src/e_mod_config.c:106
 #, c-format
 msgid "%2.0f"
-msgstr ""
+msgstr "%2.0f"
 
 #: src/e_mod_config.c:109
 msgid "Show Description"
@@ -57,11 +53,11 @@ msgstr "Mostrar ao passar com o rato"
 
 #: src/e_mod_config.c:115
 msgid "Unit Settings"
-msgstr "Unidade de medição"
+msgstr "Unidade de medida"
 
 #: src/e_mod_config.c:117
 msgid "Metric"
-msgstr "Métrico"
+msgstr "Métrica"
 
 #: src/e_mod_config.c:119
 msgid "English"
@@ -69,28 +65,27 @@ msgstr "Inglês"
 
 #: src/e_mod_config.c:124
 msgid "GeoPlanet WOEID (Where on Earth Identifier)"
-msgstr ""
+msgstr "GeoPlanet WOEID (Where on Earth Identifier)"
 
 #: src/e_mod_config.c:127
 msgid "Code"
-msgstr ""
+msgstr "Código"
 
 #: src/e_mod_config.c:129
 msgid "City name"
-msgstr ""
+msgstr "Nome da cidade"
 
 #: src/e_mod_config.c:132
 msgid "Forecasts WOEID Code or city name: "
-msgstr ""
+msgstr "Código WOEID ou nome da cidade: "
 
 #: src/e_mod_config.c:137
-#, fuzzy
 msgid "To find the code, go to:"
-msgstr "Para encontrar o código da sua área vá a:"
+msgstr "Para encontrar o código, visite:"
 
 #: src/e_mod_main.c:260
 msgid "Forecasts"
-msgstr "Previsões meteorológicas"
+msgstr "Previsões"
 
 #: src/e_mod_main.c:302
 msgid "Settings"
@@ -99,7 +94,7 @@ msgstr "Definições"
 #: src/e_mod_main.c:1158
 #, c-format
 msgid "%s: Current Conditions"
-msgstr "%s: Condições atuais"
+msgstr "%s: condições atuais"
 
 #: src/e_mod_main.c:1173
 msgid "Wind Chill"
@@ -123,11 +118,11 @@ msgstr "Pressão"
 
 #: src/e_mod_main.c:1204
 msgid "Rising"
-msgstr "A subir"
+msgstr "Ascendente"
 
 #: src/e_mod_main.c:1206
 msgid "Falling"
-msgstr "A descer"
+msgstr "Descendente"
 
 #: src/e_mod_main.c:1208
 msgid "Steady"
@@ -135,7 +130,7 @@ msgstr "Estável"
 
 #: src/e_mod_main.c:1212
 msgid "Sunrise / Sunset"
-msgstr "Nascer do sol/Pôr do sol"
+msgstr "Nascer do sol / Pôr do sol"
 
 #: src/e_mod_main.c:1230
 msgid "Today"
@@ -147,11 +142,11 @@ msgstr "Amanhã"
 
 #: src/e_mod_main.c:1240
 msgid "High"
-msgstr "Alta"
+msgstr "Máxima"
 
 #: src/e_mod_main.c:1249
 msgid "Low"
-msgstr "Baixa"
+msgstr "Mínima"
 
 #~ msgid "Weather.com Forecasts Code"
 #~ msgstr "Código Weather.com"
