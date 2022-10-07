@@ -49,7 +49,7 @@ alarm_config_module(void)
 
    snprintf(buf, sizeof(buf), "%s/module.edj", e_module_dir_get(alarm_config->module));
    cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
-			     D_("Alarm Configuration"), "Alarm", "_e_modules_alarm_config_dialog", buf, 0, v, NULL);
+                 D_("Alarm Configuration"), "Alarm", "_e_modules_alarm_config_dialog", buf, 0, v, NULL);
    alarm_config->config_dialog = cfd;
 }
 
@@ -282,8 +282,6 @@ _advanced_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    e_config_save_queue();
    return ret;
 }
-
-
 
 static void
 _cb_alarms_list(void *data)

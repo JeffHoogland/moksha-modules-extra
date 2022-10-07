@@ -65,7 +65,7 @@ alarm_config_alarm(Alarm *al)
 
    snprintf(buf, sizeof(buf), "%s/module.edj", e_module_dir_get(alarm_config->module));
    cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
-			     D_("Alarm Configuration : Setup an alarm"), "Alarm", "_e_modules_alarm_alarm_config_dialog", buf, 0, v, al);
+                 D_("Alarm Configuration : Setup an alarm"), "Alarm", "_e_modules_alarm_alarm_config_dialog", buf, 0, v, al);
 }
 
 static void *
@@ -137,10 +137,10 @@ _fill_data(E_Config_Dialog_Data *cfdata, Alarm *al)
         cfdata->sched.day_friday = al->sched.day_friday;
         cfdata->sched.day_saturday = al->sched.day_saturday;
         cfdata->sched.day_sunday = al->sched.day_sunday;
-	cfdata->autoremove = al->autoremove;
-	if (al->description)
+    cfdata->autoremove = al->autoremove;
+    if (al->description)
           cfdata->description = strdup(al->description);
-	else
+    else
           cfdata->description = strdup("");
         cfdata->open_popup = al->open_popup;
         cfdata->run_program = al->run_program;
@@ -151,21 +151,21 @@ _fill_data(E_Config_Dialog_Data *cfdata, Alarm *al)
      }
    else
      {
-	struct tm *st;
-	time_t t;
-	char buf[20];
+    struct tm *st;
+    time_t t;
+    char buf[20];
 
         cfdata->new = 1;
         cfdata->state = 1;
         cfdata->name = strdup("");
         cfdata->sched.type = ALARM_SCHED_DEFAULT;
 
-	t = time(NULL);
-	st = localtime(&t);
-	strftime(buf, sizeof(buf), "%Y/", st);
-	cfdata->sched.date = strdup(buf);
+    t = time(NULL);
+    st = localtime(&t);
+    strftime(buf, sizeof(buf), "%Y/", st);
+    cfdata->sched.date = strdup(buf);
 
-	cfdata->autoremove = alarm_config->alarms_autoremove_default;
+    cfdata->autoremove = alarm_config->alarms_autoremove_default;
         cfdata->description = strdup("");
         cfdata->open_popup = alarm_config->alarms_open_popup_default;
         if (alarm_config->alarms_run_program_default)
@@ -269,8 +269,8 @@ _common_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
                         cfdata->sched.day_saturday,
                         cfdata->sched.day_sunday,
                         cfdata->sched.hour, cfdata->sched.minute,
-			cfdata->autoremove,
-			cfdata->description,
+                        cfdata->autoremove,
+                        cfdata->description,
                         cfdata->open_popup,
                         cfdata->run_program,
                         cfdata->program, &error);

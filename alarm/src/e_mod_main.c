@@ -168,7 +168,7 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
         w = 16;
         h = 16;
      default:
-	break;
+    break;
      }
 
    e_gadcon_client_aspect_set(gcc, w, h);
