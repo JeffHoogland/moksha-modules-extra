@@ -186,7 +186,7 @@ _tclock_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
         e_menu_post_deactivate_callback_set(m, _tclock_menu_cb_post, inst);
         tclock_config->menu = m;
-	
+
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, NULL, NULL);
         e_menu_activate_mouse (m,
                                e_util_zone_current_get(e_manager_current_get()), 
@@ -332,13 +332,22 @@ _tclock_config_updated(Config_Item *ci)
         if (!inst->ci->show_time)
           edje_object_signal_emit(inst->tclock, "time_hidden", "");
         else
-          edje_object_signal_emit(inst->tclock, "time_visible", "");
-        edje_object_message_signal_process(inst->tclock);
+          {
+             if (!inst->ci->show_date)
+                 edje_object_signal_emit(inst->tclock, "time_centered", "");
+             else
+                 edje_object_signal_emit(inst->tclock, "time_visible", "");
+          }
 
         if (!inst->ci->show_date)
           edje_object_signal_emit(inst->tclock, "date_hidden", "");
         else
-          edje_object_signal_emit(inst->tclock, "date_visible", "");
+          {
+             if (!inst->ci->show_time)
+               edje_object_signal_emit(inst->tclock, "date_centered", "");
+             else
+               edje_object_signal_emit(inst->tclock, "date_visible", "");
+          }
         edje_object_message_signal_process(inst->tclock);
 
         _tclock_cb_check(inst);
@@ -358,49 +367,59 @@ _tclock_cb_check(void *data)
         
    for (l = tclock_config->instances; l; l = l->next) 
      {
-		inst = l->data;
-		
-		if (!inst->ci->show_time)
-		  edje_object_signal_emit(inst->tclock, "time_hidden", "");
-		else
-		  edje_object_signal_emit(inst->tclock, "time_visible", "");
-		edje_object_message_signal_process(inst->tclock);
-		
-		if (!inst->ci->show_date)
-		  edje_object_signal_emit(inst->tclock, "date_hidden", "");
-		else
-		  edje_object_signal_emit(inst->tclock, "date_visible", "");
-		edje_object_message_signal_process(inst->tclock);
+        inst = l->data;
 
-		memset(buf, 0, sizeof(buf));
+        if (!inst->ci->show_time)
+          edje_object_signal_emit(inst->tclock, "time_hidden", "");
+        else
+          {
+             if (!inst->ci->show_date)
+                 edje_object_signal_emit(inst->tclock, "time_centered", "");
+             else
+                 edje_object_signal_emit(inst->tclock, "time_visible", "");
+          }
+        edje_object_message_signal_process(inst->tclock);
 
-		offset_int=atoi(inst->ci->time_offset); 
-	  
-		current_time = time(NULL)+offset_int*3600;
-		local_time = localtime(&current_time);
-		
-		if (inst->ci->time_format)
-		  {
-				 strftime(buf, 1024, inst->ci->time_format, local_time);
-				 edje_object_part_text_set(inst->tclock, "tclock_time", buf);
-		  }
-		
-		if (inst->ci->date_format)
-		  {
-				 strftime(buf, 1024, inst->ci->date_format, local_time);
-				 edje_object_part_text_set(inst->tclock, "tclock_date", buf);
-		  }
-		if ((inst->ci->tip_format) && (inst->o_tip))
-		  {
-				 strftime(buf, 1024, inst->ci->tip_format, local_time);
-			 e_widget_label_text_set(inst->o_tip, buf);
-		  }
-		 
-		edje_object_text_class_set(inst->tclock, "module_large", "Sans:style=Mono", inst->ci->font_size_up);
-		edje_object_text_class_set(inst->tclock, "module_small", "Sans:style=Mono", inst->ci->font_size_down);
-		edje_object_color_class_set
-			  (inst->tclock, "module_label", inst->ci->color_r, inst->ci->color_g, inst->ci->color_b, 
-			   inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
+        if (!inst->ci->show_date)
+          edje_object_signal_emit(inst->tclock, "date_hidden", "");
+        else
+          {
+             if (!inst->ci->show_time)
+               edje_object_signal_emit(inst->tclock, "date_centered", "");
+             else
+               edje_object_signal_emit(inst->tclock, "date_visible", "");
+          }
+        edje_object_message_signal_process(inst->tclock);
+
+        memset(buf, 0, sizeof(buf));
+
+        offset_int=atoi(inst->ci->time_offset);
+
+        current_time = time(NULL)+offset_int*3600;
+        local_time = localtime(&current_time);
+
+        if (inst->ci->time_format)
+          {
+             strftime(buf, 1024, inst->ci->time_format, local_time);
+             edje_object_part_text_set(inst->tclock, "tclock_time", buf);
+          }
+
+        if (inst->ci->date_format)
+          {
+             strftime(buf, 1024, inst->ci->date_format, local_time);
+             edje_object_part_text_set(inst->tclock, "tclock_date", buf);
+          }
+        if ((inst->ci->tip_format) && (inst->o_tip))
+          {
+             strftime(buf, 1024, inst->ci->tip_format, local_time);
+             e_widget_label_text_set(inst->o_tip, buf);
+          }
+
+        edje_object_text_class_set(inst->tclock, "module_large", "Sans:style=Mono", inst->ci->font_size_up);
+        edje_object_text_class_set(inst->tclock, "module_small", "Sans:style=Mono", inst->ci->font_size_down);
+        edje_object_color_class_set
+              (inst->tclock, "module_label", inst->ci->color_r, inst->ci->color_g, inst->ci->color_b, 
+               inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
      }
    
    _eval_instance_size(inst);
@@ -416,29 +435,29 @@ _tclock_config_item_get(const char *id)
 
    if (!id)
      {
-	int  num = 0;
+        int  num = 0;
         char buf[128];
 
-	/* Create id */
-	if (tclock_config->items)
-	  {
-	     const char *p;
+       /* Create id */
+       if (tclock_config->items)
+         {
+            const char *p;
 
-	     ci = eina_list_last(tclock_config->items)->data;
-	     p = strrchr(ci->id, '.');
-	     if (p) num = atoi(p + 1) + 1;
-	  }
-	snprintf(buf, sizeof(buf), "%s.%d", _gc_class.name, num);
-	id = buf;
+            ci = eina_list_last(tclock_config->items)->data;
+            p = strrchr(ci->id, '.');
+            if (p) num = atoi(p + 1) + 1;
+         }
+       snprintf(buf, sizeof(buf), "%s.%d", _gc_class.name, num);
+       id = buf;
      }
    else
      {
-	for (l = tclock_config->items; l; l = l->next)
-	  {
-	     ci = l->data;
-	     if (!ci->id) continue;
-	     if (!strcmp(ci->id, id)) return ci;
-	  }
+       for (l = tclock_config->items; l; l = l->next)
+         {
+           ci = l->data;
+           if (!ci->id) continue;
+           if (!strcmp(ci->id, id)) return ci;
+         }
      }
 
    ci = E_NEW(Config_Item, 1);
@@ -448,7 +467,7 @@ _tclock_config_item_get(const char *id)
    ci->show_tip = 1;
    ci->time_format = eina_stringshare_add("%T");
    ci->time_offset = eina_stringshare_add("0");
-   
+
    ci->date_format = eina_stringshare_add("%d/%m/%y");
    ci->tip_format = eina_stringshare_add("%A, %B %d, %Y");
    ci->font_size_up = 12;
