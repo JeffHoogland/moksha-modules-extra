@@ -334,9 +334,9 @@ _tclock_config_updated(Config_Item *ci)
         else
           {
              if (!inst->ci->show_date)
-                 edje_object_signal_emit(inst->tclock, "time_centered", "");
+               edje_object_signal_emit(inst->tclock, "time_centered", "");
              else
-                 edje_object_signal_emit(inst->tclock, "time_visible", "");
+               edje_object_signal_emit(inst->tclock, "time_visible", "");
           }
 
         if (!inst->ci->show_date)
@@ -374,11 +374,10 @@ _tclock_cb_check(void *data)
         else
           {
              if (!inst->ci->show_date)
-                 edje_object_signal_emit(inst->tclock, "time_centered", "");
+               edje_object_signal_emit(inst->tclock, "time_centered", "");
              else
-                 edje_object_signal_emit(inst->tclock, "time_visible", "");
+               edje_object_signal_emit(inst->tclock, "time_visible", "");
           }
-        edje_object_message_signal_process(inst->tclock);
 
         if (!inst->ci->show_date)
           edje_object_signal_emit(inst->tclock, "date_hidden", "");
