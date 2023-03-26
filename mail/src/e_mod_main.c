@@ -28,10 +28,6 @@
 #include "mdir.h"
 #include "mbox.h"
 
-#ifdef HAVE_ENOTIFY
-#include <E_Notify.h>
-#endif
-
 /* Func Protos for Gadcon */
 static E_Gadcon_Client *_gc_init (E_Gadcon * gc, const char *name,
 				  const char *id, const char *style);
@@ -657,14 +653,19 @@ _mail_cb_check (void *data)
    return EINA_TRUE;
 }
 
+static void
+_mail_popup_cb(void *data, unsigned int id)
+{
+   Instance *inst = data;
+
+   inst->notification_id = id;
+}
+
 void
 _mail_set_text (void *data)
 {
   Instance *inst = data;
   
-  #ifdef HAVE_ENOTIFY
-  static E_Notification *n;
-  #endif
   Eina_List *l;
   char *icon;
   char buf[256], cmd[256];
@@ -686,14 +687,20 @@ _mail_set_text (void *data)
       { 
           snprintf(buf, sizeof (buf), "%s:\n%s",  cb->name, 
                     (char *)eina_list_nth(cb->senders, 0));
+
           #ifdef HAVE_ENOTIFY
-          if (n) return;    
-          icon = "mail-unread";
-          n = e_notification_full_new("Mail", 0, icon, "A new mail!", buf, 5000);
-          e_notification_replaces_id_set(n, EINA_TRUE);
-          e_notification_send(n, NULL, NULL);
-          //~ e_notification_unref(n);
-          n = NULL;
+          {
+            E_Notification_Notify n;
+            memset(&n, 0, sizeof(E_Notification_Notify));
+            n.app_name = D_("Mail");
+            n.replaces_id = 0;
+            n.icon.icon = "mail-unread";
+            n.summary = D_("Mail");
+            n.body = D_("A new mail!");
+            n.timeout = 5000;
+            e_notification_client_send(&n, _mail_popup_cb, inst);
+            return;
+          }
           #endif
         }
       cb->count_old = cb->num_new;
