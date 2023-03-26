@@ -20,9 +20,9 @@ struct _E_Config_Dialog_Data
 static void *_create_data (E_Config_Dialog * cfd);
 static void _free_data (E_Config_Dialog * cfd, E_Config_Dialog_Data * cfdata);
 static Evas_Object *_basic_create_widgets (E_Config_Dialog * cfd, Evas * evas,
-					   E_Config_Dialog_Data * cfdata);
+                      E_Config_Dialog_Data * cfdata);
 static int _basic_apply_data (E_Config_Dialog * cfd,
-			      E_Config_Dialog_Data * cfdata);
+                  E_Config_Dialog_Data * cfdata);
 
 static void _load_boxes (E_Config_Dialog * cfd);
 static int _ilist_header_exists (Evas_Object * il, const char *name);
@@ -181,7 +181,7 @@ _load_boxes (E_Config_Dialog * cfd)
     return;
 
   snprintf (buf, sizeof (buf), "%s/module.edj",
-	    e_module_dir_get (mail_config->module));
+      e_module_dir_get (mail_config->module));
 
   e_widget_ilist_clear (il);
 
@@ -192,39 +192,39 @@ _load_boxes (E_Config_Dialog * cfd)
       char *name;
 
       switch (i)
-	{
-	case MAIL_TYPE_POP:
-	  name = "Pop3";
-	  break;
-	case MAIL_TYPE_IMAP:
-	  name = "Imap";
-	  break;
-	case MAIL_TYPE_MDIR:
-	  name = "Maildir";
-	  break;
-	case MAIL_TYPE_MBOX:
-	  name = "Mailbox";
-	  break;
-	}
+    {
+    case MAIL_TYPE_POP:
+      name = "Pop3";
+      break;
+    case MAIL_TYPE_IMAP:
+      name = "Imap";
+      break;
+    case MAIL_TYPE_MDIR:
+      name = "Maildir";
+      break;
+    case MAIL_TYPE_MBOX:
+      name = "Mailbox";
+      break;
+    }
       found = _ilist_header_exists (il, name);
       if (found <= 0)
-	e_widget_ilist_header_append (il, NULL, name);
+    e_widget_ilist_header_append (il, NULL, name);
 
       for (box = ci->boxes; box; box = box->next)
-	{
-	  Config_Box *cb;
-	  Evas_Object *ic;
+    {
+      Config_Box *cb;
+      Evas_Object *ic;
 
-	  cb = box->data;
-	  if (cb->type != i)
-	    continue;
-	  if (!cb->name)
-	    continue;
-	  ic = edje_object_add (cfd->dia->win->evas);
-	  edje_object_file_set (ic, buf, "icon");
-	  e_widget_ilist_append (il, ic, cb->name, _ilist_cb_selected, cfd,
-				 NULL);
-	}
+      cb = box->data;
+      if (cb->type != i)
+        continue;
+      if (!cb->name)
+        continue;
+      ic = edje_object_add (cfd->dia->win->evas);
+      edje_object_file_set (ic, buf, "icon");
+      e_widget_ilist_append (il, ic, cb->name, _ilist_cb_selected, cfd,
+        NULL);
+     }
     }
   e_widget_ilist_go (il);
 }
@@ -247,12 +247,12 @@ _ilist_header_exists (Evas_Object * il, const char *name)
 
       n = e_widget_ilist_nth_label_get (il, i);
       if (!n)
-	continue;
+         continue;
       if (!strcmp (n, name))
-	{
-	  found = 1;
-	  break;
-	}
+       {
+         found = 1;
+         break;
+       }
     }
   if (found)
     return i;
@@ -317,12 +317,12 @@ _cb_edit_box (void *data, void *data2)
 
       cb = l->data;
       if (!cb->name)
-	continue;
+        continue;
       if (!strcmp (s, cb->name))
-	{
-	  _config_box (ci, cb, cfd);
-	  break;
-	}
+        {
+          _config_box (ci, cb, cfd);
+          break; 
+        }
     }
 }
 
@@ -351,12 +351,12 @@ _cb_del_box (void *data, void *data2)
 
       cb = l->data;
       if (!cb->name)
-	continue;
+        continue;
       if (!strcmp (s, cb->name))
-	{
-	  _mail_box_deleted (ci, cb->name);
-	  break;
-	}
+        {
+          _mail_box_deleted (ci, cb->name);
+          break;
+        }
     }
   _load_boxes (cfd);
 }

@@ -5,7 +5,7 @@
 static Eina_List *mdirs;
 
 static void _mail_mdir_check_mail (void *data, Ecore_File_Monitor * monitor,
-				   Ecore_File_Event event, const char *path);
+            Ecore_File_Event event, const char *path);
 static int _mail_mdir_get_files (const char *path);
 
 void
@@ -45,9 +45,9 @@ _mail_mdir_del_mailbox (void *data)
 
       mc = l->data;
       if (!mc)
-	continue;
+    continue;
       if (mc->config != cb)
-	continue;
+    continue;
       mdirs = eina_list_remove (mdirs, mc);
       free (mc);
       mc = NULL;
@@ -66,7 +66,7 @@ _mail_mdir_shutdown ()
 
       mc = mdirs->data;
       if (mc->monitor)
-	ecore_file_monitor_del (mc->monitor);
+        ecore_file_monitor_del (mc->monitor);
       mdirs = eina_list_remove_list (mdirs, mdirs);
       free (mc);
       mc = NULL;
@@ -76,7 +76,7 @@ _mail_mdir_shutdown ()
 /* PRIVATES */
 static void
 _mail_mdir_check_mail (void *data, Ecore_File_Monitor * monitor,
-		       Ecore_File_Event event, const char *path)
+              Ecore_File_Event event, const char *path)
 {
   MdirClient *mc;
 

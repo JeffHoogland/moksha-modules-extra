@@ -30,29 +30,29 @@
 
 /* Func Protos for Gadcon */
 static E_Gadcon_Client *_gc_init (E_Gadcon * gc, const char *name,
-				  const char *id, const char *style);
-static void _gc_shutdown (E_Gadcon_Client * gcc);
-static void _gc_orient (E_Gadcon_Client * gcc, E_Gadcon_Orient orient);
-static const char *_gc_label (const E_Gadcon_Client_Class *client_class);
-static Evas_Object *_gc_icon (const E_Gadcon_Client_Class *client_class, Evas * evas);
-static const char *_gc_id_new (const E_Gadcon_Client_Class *client_class);
+                                  const char *id, const char *style);
+static void             _gc_shutdown (E_Gadcon_Client * gcc);
+static void             _gc_orient (E_Gadcon_Client * gcc, E_Gadcon_Orient orient);
+static const char      *_gc_label (const E_Gadcon_Client_Class *client_class);
+static Evas_Object     *_gc_icon (const E_Gadcon_Client_Class *client_class, Evas * evas);
+static const char      *_gc_id_new (const E_Gadcon_Client_Class *client_class);
 
 /* Func Protos for Module */
-static void _mail_cb_mouse_down (void *data, Evas * e, Evas_Object * obj,
-				 void *event_info);
-static void _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj,
-			       void *event_info);
-static void _mail_cb_mouse_out (void *data, Evas * e, Evas_Object * obj,
-				void *event_info);
-static void _mail_menu_cb_configure (void *data, E_Menu * m,
-				     E_Menu_Item * mi);
-static void _mail_menu_cb_post (void *data, E_Menu * m);
-static void _mail_menu_cb_exec (void *data, E_Menu * m, E_Menu_Item * mi);
-static Config_Item *_mail_config_item_get (const char *id);
-static Mail *_mail_new (Evas * evas);
-static void _mail_free (Mail * mail);
-static Eina_Bool _mail_cb_check (void *data);
-static Eina_Bool _mail_cb_exe_exit (void *data, int type, void *event);
+static void             _mail_cb_mouse_down (void *data, Evas * e, Evas_Object * obj,
+                                             void *event_info);
+static void             _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj,
+                                           void *event_info);
+static void             _mail_cb_mouse_out (void *data, Evas * e, Evas_Object * obj,
+                                            void *event_info);
+static void             _mail_menu_cb_configure (void *data, E_Menu * m,
+                                                 E_Menu_Item * mi);
+static void             _mail_menu_cb_post (void *data, E_Menu * m);
+static void             _mail_menu_cb_exec (void *data, E_Menu * m, E_Menu_Item * mi);
+static Config_Item     *_mail_config_item_get (const char *id);
+static Mail            *_mail_new (Evas * evas);
+static void             _mail_free (Mail * mail);
+static Eina_Bool        _mail_cb_check (void *data);
+static Eina_Bool        _mail_cb_exe_exit (void *data, int type, void *event);
 
 static E_Config_DD *conf_edd = NULL;
 static E_Config_DD *conf_item_edd = NULL;
@@ -92,11 +92,11 @@ _gc_init (E_Gadcon * gc, const char *name, const char *id, const char *style)
   inst->mail_obj = mail->mail_obj;
 
   evas_object_event_callback_add (inst->mail_obj, EVAS_CALLBACK_MOUSE_DOWN,
-				  _mail_cb_mouse_down, inst);
+                                  _mail_cb_mouse_down, inst);
   evas_object_event_callback_add (inst->mail_obj, EVAS_CALLBACK_MOUSE_IN,
-				  _mail_cb_mouse_in, inst);
+                                  _mail_cb_mouse_in, inst);
   evas_object_event_callback_add (inst->mail_obj, EVAS_CALLBACK_MOUSE_OUT,
-				  _mail_cb_mouse_out, inst);
+                                  _mail_cb_mouse_out, inst);
 
   if (inst->ci->show_label)
     edje_object_signal_emit (inst->mail_obj, "label_active", "");
@@ -110,35 +110,35 @@ _gc_init (E_Gadcon * gc, const char *name, const char *id, const char *style)
 
        cb = l->data;
        switch (cb->type)
-	 {
-	  case MAIL_TYPE_IMAP:
-	     have_imap = 1;
-	     _mail_imap_add_mailbox (cb);
-	     if (!inst->check_timer)
-	       inst->check_timer =
-		  ecore_timer_add ((inst->ci->check_time * 60.0), _mail_cb_check,
-			inst);
-	     break;
-	  case MAIL_TYPE_POP:
-	     have_pop = 1;
-	     _mail_pop_add_mailbox (cb);
-	     if (!inst->check_timer)
-	       inst->check_timer =
-		  ecore_timer_add ((inst->ci->check_time * 60.0), _mail_cb_check,
-			inst);
-	     break;
-	  case MAIL_TYPE_MDIR:
-	     _mail_mdir_add_mailbox (inst, cb);
-	     break;
-	  case MAIL_TYPE_MBOX:
-	     have_mbox = 1;
-	     _mail_mbox_add_mailbox (inst, cb);
-	     if (!inst->check_timer)
-	       inst->check_timer =
-		  ecore_timer_add ((inst->ci->check_time * 60.0), _mail_cb_check,
-			inst);
-	     break;
-	 }
+         {
+          case MAIL_TYPE_IMAP:
+             have_imap = 1;
+             _mail_imap_add_mailbox (cb);
+             if (!inst->check_timer)
+               inst->check_timer =
+                  ecore_timer_add ((inst->ci->check_time * 60.0), _mail_cb_check, 
+                        inst);
+             break;
+          case MAIL_TYPE_POP:
+             have_pop = 1;
+             _mail_pop_add_mailbox (cb);
+             if (!inst->check_timer)
+               inst->check_timer =
+                   ecore_timer_add ((inst->ci->check_time * 60.0), _mail_cb_check, 
+                         inst);
+             break;
+          case MAIL_TYPE_MDIR:
+             _mail_mdir_add_mailbox (inst, cb);
+             break;
+          case MAIL_TYPE_MBOX:
+             have_mbox = 1;
+             _mail_mbox_add_mailbox (inst, cb);
+             if (!inst->check_timer)
+               inst->check_timer =
+                   ecore_timer_add ((inst->ci->check_time * 60.0), _mail_cb_check,
+                         inst);
+              break;
+         }
     }
   if (have_pop)
     _mail_pop_check_mail (inst);
@@ -160,11 +160,11 @@ _gc_shutdown (E_Gadcon_Client * gcc)
     ecore_timer_del (inst->check_timer);
    
   evas_object_event_callback_del (inst->mail_obj, EVAS_CALLBACK_MOUSE_DOWN,
-				  _mail_cb_mouse_down);
+                                  _mail_cb_mouse_down);
   evas_object_event_callback_del (inst->mail_obj, EVAS_CALLBACK_MOUSE_IN,
-				  _mail_cb_mouse_in);
+                                  _mail_cb_mouse_in);
   evas_object_event_callback_del (inst->mail_obj, EVAS_CALLBACK_MOUSE_OUT,
-				  _mail_cb_mouse_out);
+                                  _mail_cb_mouse_out);
 
   if (inst->popup) e_object_del (E_OBJECT (inst->popup));
   mail_config->instances = eina_list_remove (mail_config->instances, inst);
@@ -194,7 +194,7 @@ _gc_icon (const E_Gadcon_Client_Class *client_class, Evas * evas)
 
   o = edje_object_add (evas);
   snprintf (buf, sizeof (buf), "%s/e-module-mail.edj",
-	    e_module_dir_get (mail_config->module));
+            e_module_dir_get (mail_config->module));
   edje_object_file_set (o, buf, "icon");
   return o;
 }
@@ -210,7 +210,7 @@ _gc_id_new (const E_Gadcon_Client_Class *client_class)
 
 static void
 _mail_cb_mouse_down (void *data, Evas * e, Evas_Object * obj,
-		     void *event_info)
+                     void *event_info)
 {
   Instance *inst = data;
   Evas_Event_Mouse_Down *ev = event_info;
@@ -381,29 +381,29 @@ _mail_config_item_get (const char *id)
 
    if (!id)
      {
-	int  num = 0;
+        int  num = 0;
 
-	/* Create id */
-	if (mail_config->items)
-	  {
-	     const char *p;
-	     ci = eina_list_last (mail_config->items)->data;
-	     p = strrchr (ci->id, '.');
-	     if (p) num = atoi (p + 1) + 1;
-	  }
-	snprintf (buf, sizeof (buf), "%s.%d", _gc_class.name, num);
-	id = buf;
+        /* Create id */
+        if (mail_config->items)
+          {
+             const char *p;
+             ci = eina_list_last (mail_config->items)->data;
+             p = strrchr (ci->id, '.');
+             if (p) num = atoi (p + 1) + 1;
+          }
+        snprintf (buf, sizeof (buf), "%s.%d", _gc_class.name, num);
+        id = buf;
      }
    else
      {
-	for (l = mail_config->items; l; l = l->next)
-	  {
-	     ci = l->data;
-	     if (!ci->id)
-	       continue;
-	     if (!strcmp (ci->id, id))
-	       return ci;
-	  }
+        for (l = mail_config->items; l; l = l->next)
+          {
+             ci = l->data;
+             if (!ci->id)
+               continue;
+             if (!strcmp (ci->id, id))
+               return ci;
+          }
      }
 
    ci = E_NEW (Config_Item, 1);
@@ -519,47 +519,47 @@ e_modapi_shutdown (E_Module * m)
 
       ci = mail_config->items->data;
       while (ci->boxes)
-	{
-	  Config_Box *cb;
+        {
+          Config_Box *cb;
 
-	  cb = ci->boxes->data;
-	  switch (cb->type)
-	    {
-	    case MAIL_TYPE_IMAP:
-	      _mail_imap_del_mailbox (cb);
-	      break;
-	    case MAIL_TYPE_POP:
-	      _mail_pop_del_mailbox (cb);
-	      break;
-	    case MAIL_TYPE_MDIR:
-	      _mail_mdir_del_mailbox (cb);
-	      break;
-	    case MAIL_TYPE_MBOX:
-	      _mail_mbox_del_mailbox (cb);
-	      break;
-	    }
-	  if (cb->name)
-	    eina_stringshare_del (cb->name);
-	  if (cb->host)
-	    eina_stringshare_del (cb->host);
-	  if (cb->user)
-	    eina_stringshare_del (cb->user);
-	  if (cb->pass)
-	    eina_stringshare_del (cb->pass);
-	  if (cb->new_path)
-	    eina_stringshare_del (cb->new_path);
-	  if (cb->cur_path)
-	    eina_stringshare_del (cb->cur_path);
-	  if (cb->exec)
-	    eina_stringshare_del (cb->exec);
-	  ci->boxes = eina_list_remove_list (ci->boxes, ci->boxes);
-	  free (cb);
-	  cb = NULL;
-	}
+          cb = ci->boxes->data;
+          switch (cb->type)
+            {
+            case MAIL_TYPE_IMAP:
+              _mail_imap_del_mailbox (cb);
+              break;
+            case MAIL_TYPE_POP:
+              _mail_pop_del_mailbox (cb);
+              break;
+            case MAIL_TYPE_MDIR:
+              _mail_mdir_del_mailbox (cb);
+              break;
+            case MAIL_TYPE_MBOX:
+              _mail_mbox_del_mailbox (cb);
+              break;
+            }
+          if (cb->name)
+            eina_stringshare_del (cb->name);
+          if (cb->host)
+            eina_stringshare_del (cb->host);
+          if (cb->user)
+            eina_stringshare_del (cb->user);
+          if (cb->pass)
+            eina_stringshare_del (cb->pass);
+          if (cb->new_path)
+            eina_stringshare_del (cb->new_path);
+          if (cb->cur_path)
+            eina_stringshare_del (cb->cur_path);
+          if (cb->exec)
+            eina_stringshare_del (cb->exec);
+          ci->boxes = eina_list_remove_list (ci->boxes, ci->boxes);
+          free (cb);
+          cb = NULL;
+        }
       if (ci->id)
-	eina_stringshare_del (ci->id);
+        eina_stringshare_del (ci->id);
       mail_config->items =
-	eina_list_remove_list (mail_config->items, mail_config->items);
+        eina_list_remove_list (mail_config->items, mail_config->items);
       free (ci);
       ci = NULL;
     }
@@ -624,21 +624,21 @@ _mail_cb_check (void *data)
 
       cb = l->data;
       if (!cb)
-	continue;
+        continue;
       switch (cb->type)
-	{
-	case MAIL_TYPE_MDIR:
-	  break;
-	case MAIL_TYPE_MBOX:
-	  have_mbox = 1;
-	  break;
-	case MAIL_TYPE_POP:
-	  have_pop = 1;
-	  break;
-	case MAIL_TYPE_IMAP:
-	  have_imap = 1;
-	  break;
-	}
+        {
+        case MAIL_TYPE_MDIR:
+          break;
+        case MAIL_TYPE_MBOX:
+          have_mbox = 1;
+          break;
+        case MAIL_TYPE_POP:
+          have_pop = 1;
+          break;
+        case MAIL_TYPE_IMAP:
+          have_imap = 1;
+        break;
+        }
     }
 
   if ((have_imap) || (have_pop) || (have_mbox))
@@ -766,30 +766,30 @@ _mail_box_added (Config_Item *ci, const char *box_name)
       inst = l->data;
       if (inst->ci != ci) continue;
       for (b = ci->boxes; b; b = b->next)
-	{
-	   Config_Box *cb;
+        {
+           Config_Box *cb;
 
-	   cb = b->data;
-	   if ((cb->name) && (!strcmp (cb->name, box_name)))
-	     {
-		switch (cb->type)
-		  {
-		   case MAIL_TYPE_IMAP:
-		      _mail_imap_add_mailbox (cb);
-		      break;
-		   case MAIL_TYPE_POP:
-		      _mail_pop_add_mailbox (cb);
-		      break;
-		   case MAIL_TYPE_MDIR:
-		      _mail_mdir_add_mailbox (inst, cb);
-		      break;
-		   case MAIL_TYPE_MBOX:
-		      _mail_mbox_add_mailbox (inst, cb);
-		      break;
-		  }
-		break;
-	     }
-	}
+           cb = b->data;
+           if ((cb->name) && (!strcmp (cb->name, box_name)))
+             {
+                switch (cb->type)
+                  {
+                   case MAIL_TYPE_IMAP:
+                      _mail_imap_add_mailbox (cb);
+                      break;
+                   case MAIL_TYPE_POP:
+                      _mail_pop_add_mailbox (cb);
+                      break;
+                   case MAIL_TYPE_MDIR:
+                      _mail_mdir_add_mailbox (inst, cb);
+                      break;
+                   case MAIL_TYPE_MBOX:
+                      _mail_mbox_add_mailbox (inst, cb);
+                      break;
+                  }
+                break;
+             }
+        }
     }
 }
 
@@ -807,38 +807,38 @@ _mail_box_deleted (Config_Item *ci, const char *box_name)
        inst = i->data;
        if (inst->ci != ci) continue;
        for (d = ci->boxes; d; d = d->next)
-	 {
-	    cb = d->data;
-	    if ((cb->name) && (box_name))
-	      {
-		 if (!strcmp (cb->name, box_name))
-		   {
-		      found = 1;
-		      break;
-		   }
-	      }
-	 }
+         {
+            cb = d->data;
+            if ((cb->name) && (box_name))
+              {
+                 if (!strcmp (cb->name, box_name))
+                   {
+                      found = 1;
+                      break;
+                   }
+              }
+         }
        if (found)
-	 {
-	    switch (cb->type)
-	      {
-	       case MAIL_TYPE_IMAP:
-		  _mail_imap_del_mailbox (cb);
-		  break;
-	       case MAIL_TYPE_POP:
-		  _mail_pop_del_mailbox (cb);
-		  break;
-	       case MAIL_TYPE_MDIR:
-		  _mail_mdir_del_mailbox (cb);
-		  break;
-	       case MAIL_TYPE_MBOX:
-		  _mail_mbox_del_mailbox (cb);
-		  break;
-	      }
-	    ci->boxes = eina_list_remove (ci->boxes, cb);
-	    e_config_save_queue ();
-	    break;
-	 }
+         {
+            switch (cb->type)
+              {
+               case MAIL_TYPE_IMAP:
+                  _mail_imap_del_mailbox (cb);
+                  break;
+               case MAIL_TYPE_POP:
+                  _mail_pop_del_mailbox (cb);
+                  break;
+               case MAIL_TYPE_MDIR:
+                  _mail_mdir_del_mailbox (cb);
+                  break;
+               case MAIL_TYPE_MBOX:
+                  _mail_mbox_del_mailbox (cb);
+                  break;
+              }
+            ci->boxes = eina_list_remove (ci->boxes, cb);
+            e_config_save_queue ();
+            break;
+         }
     }
 }
 
@@ -857,17 +857,17 @@ _mail_config_updated (Config_Item *ci)
       inst = l->data;
       if (inst->ci != ci) continue;
       if (inst->check_timer)
-	{
-	   ecore_timer_del (inst->check_timer);
-	   inst->check_timer =
-	      ecore_timer_add ((ci->check_time * 60.0), _mail_cb_check,
-		    inst);
-	}
+        {
+           ecore_timer_del (inst->check_timer);
+           inst->check_timer =
+               ecore_timer_add ((ci->check_time * 60.0), _mail_cb_check,
+                  inst);
+        }
 
       if (ci->show_label)
-	edje_object_signal_emit (inst->mail_obj, "label_active", "");
+        edje_object_signal_emit (inst->mail_obj, "label_active", "");
       else
-	edje_object_signal_emit (inst->mail_obj, "label_passive", "");
+        edje_object_signal_emit (inst->mail_obj, "label_passive", "");
       break;
     }
 }

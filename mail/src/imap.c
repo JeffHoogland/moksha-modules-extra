@@ -35,29 +35,29 @@ _mail_imap_check_mail (void *data)
       is = l->data;
       is->data = data;
       if (!is->server)
-	{
-	   printf("2\n");
-	  if (!is->add_handler)
-	    is->add_handler =
-	      ecore_event_handler_add (ECORE_CON_EVENT_SERVER_ADD,
-				       _mail_imap_server_add, NULL);
-	  if (!is->del_handler)
-	    is->del_handler =
-	      ecore_event_handler_add (ECORE_CON_EVENT_SERVER_DEL,
-				       _mail_imap_server_del, NULL);
-	  if (!is->data_handler)
-	    is->data_handler =
-	      ecore_event_handler_add (ECORE_CON_EVENT_SERVER_DATA,
-				       _mail_imap_server_data, NULL);
+        {
+          printf("2\n");
+          if (!is->add_handler)
+            is->add_handler =
+              ecore_event_handler_add (ECORE_CON_EVENT_SERVER_ADD,
+                                       _mail_imap_server_add, NULL);
+          if (!is->del_handler)
+            is->del_handler =
+              ecore_event_handler_add (ECORE_CON_EVENT_SERVER_DEL,
+                                       _mail_imap_server_del, NULL);
+          if (!is->data_handler)
+            is->data_handler =
+              ecore_event_handler_add (ECORE_CON_EVENT_SERVER_DATA,
+                                       _mail_imap_server_data, NULL);
 
-	  if (is->local)
-	    type = ECORE_CON_LOCAL_SYSTEM;
-	  else
-	    type = ECORE_CON_REMOTE_NODELAY;
+          if (is->local)
+            type = ECORE_CON_LOCAL_SYSTEM;
+          else
+            type = ECORE_CON_REMOTE_NODELAY;
 
-	  if (ecore_con_ssl_available_get () && (is->ssl))
+          if (ecore_con_ssl_available_get () && (is->ssl))
             {
-	       type |= ECORE_CON_USE_SSL;
+               type |= ECORE_CON_USE_SSL;
 #ifdef PRINT_LOTS_OF_DEBUG
                if (ecore_con_ssl_available_get() == 1)
                  {
@@ -67,14 +67,13 @@ _mail_imap_check_mail (void *data)
             }
 #endif
            }
-	  is->state = IMAP_STATE_DISCONNECTED;
-	  is->server =
-	     ecore_con_server_connect (type, is->host,
-		   is->port, NULL);
-	  is->cmd = 0;
-	  is->current = is->clients;
-	}
-    }
+          is->state = IMAP_STATE_DISCONNECTED;
+          is->server =
+             ecore_con_server_connect (type, is->host,
+                  is->port, NULL);
+          is->cmd = 0;
+          is->current = is->clients;
+        }
 }
 
 void
@@ -113,11 +112,11 @@ _mail_imap_shutdown ()
 
       is = iservers->data;
       if (is->add_handler)
-	ecore_event_handler_del (is->add_handler);
+        ecore_event_handler_del (is->add_handler);
       if (is->del_handler)
-	ecore_event_handler_del (is->del_handler);
+        ecore_event_handler_del (is->del_handler);
       if (is->data_handler)
-	ecore_event_handler_del (is->data_handler);
+        ecore_event_handler_del (is->data_handler);
       iservers = eina_list_remove_list (iservers, iservers);
        E_FREE(is);
     }
@@ -135,7 +134,7 @@ _mail_imap_server_find (Ecore_Con_Server * server)
 
       is = l->data;
       if (is->server == server)
-	return is;
+        return is;
     }
   return NULL;
 }
@@ -148,17 +147,17 @@ _mail_imap_server_get (Config_Box *cb)
 
    for (l = iservers; l; l = l->next)
      {
-	ImapServer *curr;
+        ImapServer *curr;
 
-	curr = l->data;
-	if ((curr->local == cb->local) && (curr->port == cb->port) && (curr->ssl == cb->ssl) &&
-	    (!strcmp(curr->host, cb->host)) &&
-	    (!strcmp(curr->user, cb->user)) &&
-	    (!strcmp(curr->pass, cb->pass)))
-	  {
-	     is = curr;
-	     break;
-	  }
+        curr = l->data;
+        if ((curr->local == cb->local) && (curr->port == cb->port) && (curr->ssl == cb->ssl) &&
+            (!strcmp(curr->host, cb->host)) &&
+            (!strcmp(curr->user, cb->user)) &&
+            (!strcmp(curr->pass, cb->pass)))
+          {
+             is = curr;
+             break;
+          }
      }
   if (!is)
     {
@@ -195,12 +194,12 @@ _mail_imap_client_get (Config_Box *cb)
     {
        ic = l->data;
        if (!ic->config)
-	 continue;
+         continue;
        if (!strcmp (ic->config->new_path, cb->new_path))
-	 {
-	    found = 1;
-	    break;
-	 }
+         {
+            found = 1;
+            break;
+         }
     }
   if (!found)
     {
@@ -277,17 +276,17 @@ _mail_imap_server_data (void *data, int type, void *event)
     {
       slen = strlen (spc);
       if ((slen > 5) && (!strncmp (spc + 1, "NO ", 3)))
-	{
-	  _mail_imap_server_logout (is);
-	  printf ("Imap Failure: %s\n", spc + 4);
-	  return EINA_FALSE;
-	}
+        {
+          _mail_imap_server_logout (is);
+          printf ("Imap Failure: %s\n", spc + 4);
+          return EINA_FALSE;
+        }
       else if ((slen > 6) && (!strncmp (spc + 1, "BAD ", 4)))
-	{
-	  _mail_imap_server_logout (is);
-	  printf ("Imap Bad Command: %s\n", spc + 5);
-	  return EINA_FALSE;
-	}
+        {
+          _mail_imap_server_logout (is);
+          printf ("Imap Bad Command: %s\n", spc + 5);
+          return EINA_FALSE;
+        }
     }
 
   if (!is->current) return EINA_FALSE;
@@ -298,37 +297,37 @@ _mail_imap_server_data (void *data, int type, void *event)
     {
     case IMAP_STATE_SERVER_READY:
       len =
-	snprintf (out, sizeof (out), "A%03i LOGIN %s %s\r\n", ++is->cmd,
-		  is->user, is->pass);
+        snprintf (out, sizeof (out), "A%03i LOGIN %s %s\r\n", ++is->cmd,
+              is->user, is->pass);
       ecore_con_server_send (ev->server, out, len);
       break;
     case IMAP_STATE_STATUS_OK:
       if (sscanf (in, "* STATUS %*s (MESSAGES %i UNSEEN %i)", &total, &num) == 2)
-	{
-	  ic->config->num_new = num;
-	  ic->config->num_total = total;
-	  _mail_set_text (is->data);
+        {
+          ic->config->num_new = num;
+          ic->config->num_total = total;
+          _mail_set_text (is->data);
 
-	  if ((num > 0) && (ic->config->use_exec) && (ic->config->exec))
-	    _mail_start_exe (ic->config);
-	}
+          if ((num > 0) && (ic->config->use_exec) && (ic->config->exec))
+            _mail_start_exe (ic->config);
+        }
 
       ic = NULL;
       is->current = is->current->next;
       if (is->current)
-	{
-	   is->state = IMAP_STATE_LOGGED_IN;
-	   ic = is->current->data;
-	}
+        {
+           is->state = IMAP_STATE_LOGGED_IN;
+           ic = is->current->data;
+        }
       else
-	_mail_imap_server_logout (is);
+         _mail_imap_server_logout (is);
       /* Fall through if we have another mailbox to check */
       if (!ic)
-	break;
+        break;
     case IMAP_STATE_LOGGED_IN:
       len =
-	snprintf (out, sizeof (out), "A%03i STATUS %s (MESSAGES UNSEEN)\r\n",
-		  ++is->cmd, ic->config->new_path);
+        snprintf (out, sizeof (out), "A%03i STATUS %s (MESSAGES UNSEEN)\r\n",
+                  ++is->cmd, ic->config->new_path);
       ecore_con_server_send (ev->server, out, len);
       break;
     default:

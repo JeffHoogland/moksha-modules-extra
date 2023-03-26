@@ -35,6 +35,7 @@ struct _Instance
    Mail *mail;
    Ecore_Exe *exe;
    Ecore_Timer *check_timer;
+   unsigned int notification_id;
    int count;
    Config_Item *ci;
 
