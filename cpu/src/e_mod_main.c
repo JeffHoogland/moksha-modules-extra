@@ -207,7 +207,7 @@ _set_cpu_load(void *data)
 {
    Instance *inst;
    Cpu *cpu;
-   int i = 0;
+   int w, i = 0;
    char str[100], str_tmp[100];
 
    if (cpu_count == -1) return EINA_FALSE;
@@ -218,7 +218,11 @@ _set_cpu_load(void *data)
 
    if ((cpu_count == 1) || (inst->ci->merge_cpus))
      {
-        snprintf(str, sizeof(str), "<br>%d%%", cpu_stats[0]);
+        e_gadcon_client_geometry_get(inst->gcc, NULL, NULL, &w, NULL);
+        if (w < 48)
+          snprintf(str, sizeof(str), "<br>%d", cpu_stats[0]);
+        else
+          snprintf(str, sizeof(str), "<br>%d%%", cpu_stats[0]);
         edje_object_part_text_set(cpu->o_icon, "load", str);
         return EINA_TRUE;
      }
