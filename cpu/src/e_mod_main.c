@@ -220,7 +220,7 @@ _set_cpu_load(void *data)
      {
         e_gadcon_client_geometry_get(inst->gcc, NULL, NULL, &w, NULL);
         if (w < 48)
-          snprintf(str, sizeof(str), "<br>%d", cpu_stats[0]);
+          snprintf(str, sizeof(str), "%d", cpu_stats[0]);
         else
           snprintf(str, sizeof(str), "<br>%d%%", cpu_stats[0]);
         edje_object_part_text_set(cpu->o_icon, "load", str);
