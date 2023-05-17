@@ -69,6 +69,7 @@ module.desktop
 themes/Makefile
 themes/default/Makefile
 themes/lemmings/Makefile
+themes/mickey/Makefile
 $po_makefile_in
 ], [
 ])

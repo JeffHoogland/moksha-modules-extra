@@ -1,2 +1,2 @@
 MAINTAINERCLEANFILES = Makefile.in
-SUBDIRS = default lemmings
+SUBDIRS = default lemmings mickey
