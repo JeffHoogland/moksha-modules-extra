@@ -231,8 +231,7 @@ e_modapi_init(E_Module *m)
         if ((trash_conf->version >> 16) < MOD_CONFIG_FILE_EPOCH) 
           {
              /* config too old */
-	    _trash_conf_free();
-	    
+            _trash_conf_free();
           }
 
         /* Ardvarks */
@@ -240,10 +239,8 @@ e_modapi_init(E_Module *m)
           {
              /* config too new...wtf ? */
              _trash_conf_free();
-	     
           }
      }
-
 
    if (!trash_conf) _trash_conf_new();
    trash_conf->module = m;
@@ -259,13 +256,13 @@ EAPI int
 e_modapi_shutdown(E_Module *m)
 {
    Instance *inst;
-	 e_configure_registry_item_del("advanced/trash");
-	  e_configure_registry_category_del("advanced");
-	   if (trash_conf->cfd) e_object_del(E_OBJECT(trash_conf->cfd));
+   e_configure_registry_item_del("advanced/trash");
+   e_configure_registry_category_del("advanced");
+   if (trash_conf->cfd) e_object_del(E_OBJECT(trash_conf->cfd));
    trash_conf->cfd = NULL;
    trash_conf->module = NULL;
    
-    while (trash_conf->conf_items) 
+   while (trash_conf->conf_items) 
      {
         Config_Item *ci = NULL;
 
@@ -283,13 +280,13 @@ e_modapi_shutdown(E_Module *m)
         /* keep the planet green */
         E_FREE(ci);
      }
-	  
+
    if (monitor) ecore_file_monitor_del(monitor);
    e_gadcon_provider_unregister(&_gadcon_class);
    if (icon) eina_stringshare_del(icon);
    if (!instances) return 1;
   
-  E_FREE(trash_conf);
+   E_FREE(trash_conf);
    E_CONFIG_DD_FREE(conf_item_edd);
    E_CONFIG_DD_FREE(conf_edd);
   
@@ -431,9 +428,7 @@ _trash_cb_menu_show(void *data, E_Menu *m, E_Menu_Item *mi)
    E_Zone *zone;
   
    zone = e_util_zone_current_get (e_manager_current_get ());
-   
-   //~ if (trash_conf->fileman = "pcmanfm")  trash_conf->fileman = "pcmanfm -n";
-  
+
    snprintf(buf, sizeof(buf), "%s trash:///", trash_conf->fileman);
    e_exec(zone, NULL, buf, NULL, NULL);
 }

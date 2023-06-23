@@ -72,7 +72,6 @@ static void
 _fill_data(E_Config_Dialog_Data *cfdata) 
 {
    /* load a temp copy of the config variables */
-  
    if (trash_conf->fileman) cfdata->fileman = strdup(trash_conf->fileman);
 }
 
@@ -90,13 +89,9 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
    ow = e_widget_entry_add(evas, &cfdata->fileman, NULL, NULL, NULL);
    e_widget_size_min_set(ow, 100, 28);
    e_widget_frametable_object_append(of, ow, 0, 1, 1, 1, 1, 0, 1, 0);
-   //~ ow = e_widget_label_add(evas, D_(""));
-   //~ e_widget_frametable_object_append(of, ow, 0, 2, 1, 1, 1, 0, 1, 0);
    ow = e_widget_label_add(evas, D_("Use pcmanfm -n for opening a new instance on the current desktop"));
    e_widget_frametable_object_append(of, ow, 0, 3, 1, 1, 1, 0, 1, 0);
-   
-   
-    e_widget_list_object_append(o, of, 1, 1, 0.5);
+   e_widget_list_object_append(o, of, 1, 1, 0.5);
 
    return o;
 }
@@ -108,7 +103,6 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    if (trash_conf->fileman) eina_stringshare_del(trash_conf->fileman);
    if (cfdata->fileman)
        trash_conf->fileman = eina_stringshare_add(cfdata->fileman);
-   
    
    e_config_save_queue();
    

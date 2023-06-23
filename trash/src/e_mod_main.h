@@ -20,9 +20,6 @@
 #define MOD_CONFIG_FILE_VERSION \
    ((MOD_CONFIG_FILE_EPOCH << 16) | MOD_CONFIG_FILE_GENERATION)
 
-/* More mac/def; Define your own. What do you need ? */
-#define CONN_DEVICE_ETHERNET 0
-
 /* We create a structure config for our module, and also a config structure
  * for every item element (you can have multiple gadgets for the same module) */
 
