@@ -284,6 +284,7 @@ e_modapi_shutdown(E_Module *m)
    if (monitor) ecore_file_monitor_del(monitor);
    e_gadcon_provider_unregister(&_gadcon_class);
    if (icon) eina_stringshare_del(icon);
+   if (trash_conf->fileman) eina_stringshare_del(trash_conf->fileman);
    if (!instances) return 1;
   
    E_FREE(trash_conf);
