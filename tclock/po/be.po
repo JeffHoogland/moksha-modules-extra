@@ -1,0 +1,96 @@
+# Belarusian translation of tclock module for E17.
+# This file is put in the public domain.
+# R0bur <robursw@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tclock\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2023-06-30 18:00+0300\n"
+"PO-Revision-Date: 2023-06-30 18:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_config.c:40
+msgid "Tclock Settings"
+msgstr "Налады Tclock"
+
+#: src/e_mod_config.c:99
+msgid "Top"
+msgstr "Верхні радок"
+
+#: src/e_mod_config.c:100
+msgid "Show Top Line"
+msgstr "Паказваць верхні радок"
+
+#: src/e_mod_config.c:107
+msgid "Consult strftime(3) for format syntax"
+msgstr "Глядзіце фармат сінтаксіса ў strftime(3)"
+
+#: src/e_mod_config.c:110
+msgid "Add time offset (e.g.+2)"
+msgstr "Дадаць зрушэнне па часе (напр. +2)"
+
+#: src/e_mod_config.c:122
+msgid "Bottom"
+msgstr "Ніжні радок"
+
+#: src/e_mod_config.c:124
+msgid "Show Bottom Line"
+msgstr "Паказваць ніжні радок"
+
+#: src/e_mod_config.c:134
+msgid "Tool Tip"
+msgstr "Усплывальная падказка"
+
+#: src/e_mod_config.c:136
+msgid "Show Tooltip"
+msgstr "Паказваць падказку"
+
+#: src/e_mod_config.c:147
+msgid "Font size"
+msgstr "Памер шрыфту"
+
+#: src/e_mod_config.c:149
+msgid "Top line"
+msgstr "Верхні радок"
+
+#: src/e_mod_config.c:154
+msgid "Bottom line"
+msgstr "Ніжні радок"
+
+#: src/e_mod_config.c:161
+msgid "Label color"
+msgstr "Колер надпісу"
+
+#: src/e_mod_config.c:163
+msgid "Red"
+msgstr "Чырвоны"
+
+#: src/e_mod_config.c:168
+msgid "Green"
+msgstr "Зялёны"
+
+#: src/e_mod_config.c:173
+msgid "Blue"
+msgstr "Блакітны"
+
+#: src/e_mod_config.c:178
+msgid "Alpha"
+msgstr "Альфа"
+
+#: src/e_mod_main.c:142
+msgid "TClock"
+msgstr "TClock"
+
+#: src/e_mod_main.c:182
+msgid "Settings"
+msgstr "Налады"
+
+#
+msgid "Click for the color selector"
+msgstr "Націсніце, каб змяніць колер"
