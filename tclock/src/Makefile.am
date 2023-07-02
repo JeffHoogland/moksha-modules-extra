@@ -2,7 +2,7 @@ MAINTAINERCLEANFILES = Makefile.in
 
 ACLOCAL_AMFLAGS = -I m4
 
-INCLUDES = -I. \
+AM_CPPFLAGS = -I. \
 	   -I$(top_srcdir) \
 	   -I$(includedir) \
 	   @E_CFLAGS@
