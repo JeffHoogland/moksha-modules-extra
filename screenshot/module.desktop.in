@@ -2,6 +2,7 @@
 Type=Link
 Name=Screenshot
 Name[ru]=Снимок экрана
+Name[be]=Здымак экрана
 Name[cs]=Snímek obrazovky
 Name[eo]=Ekrankopio
 Name[hu]=Képernyőkép készítő
@@ -12,6 +13,7 @@ Icon=e-module-screenshot
 X-Enlightenment-ModuleType=utils
 Comment=Gadget to take screenshots using emprint.
 Comment[ru]=Гаджет для получения снимков экрана.
+Comment[be]=Гаджэт для атрымання здымкаў экрана.
 Comment[cs]=Gadget umožňující vytvářet snímky obrazovky pomocí emprint.
 Comment[eo]=Ekrankopii per emprint.
 Comment[hu]=Képernyőkép készítő modul, amely az emprintet használja.
