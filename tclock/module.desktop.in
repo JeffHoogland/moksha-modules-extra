@@ -9,6 +9,7 @@ Icon=e-module-tclock
 X-Enlightenment-ModuleType=utils
 Comment=A digital clock gadget.
 Comment[ru]=Гаджет цифровых часов.
+Comment[be]=Гаджэт лічбавага гадзінніка.
 Comment[cs]=Gadget poskytující digitální hodiny.
 Comment[de]=Digitale Uhranzeige.
 Comment[eo]=Vidigi ciferecan horloĝon.
