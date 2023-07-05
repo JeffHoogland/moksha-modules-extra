@@ -1,0 +1,353 @@
+# Belarusian translation for enlightenment
+# This file is put in the public domain.
+# R0bur <robursw@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: alarm\n"
+"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
+"POT-Creation-Date: 2023-07-04 21:00+0300\n"
+"PO-Revision-Date: 2023-07-04 21:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:55
+msgid "Alarm Configuration"
+msgstr "Канфігураванне будзільніка"
+
+#: ../src/e_mod_config.c:155 ../src/e_mod_main.c:188
+msgid "Alarm"
+msgstr "Будзільнік"
+
+#: ../src/e_mod_config.c:157 ../src/e_mod_config_alarm.c:190
+msgid "Active"
+msgstr "Уключаны"
+
+#: ../src/e_mod_config.c:166
+msgid "Add"
+msgstr "Дадаць"
+
+#: ../src/e_mod_config.c:168
+msgid "Delete"
+msgstr "Выдаліць"
+
+#: ../src/e_mod_config.c:170
+msgid "Configure"
+msgstr "Канфігураваць"
+
+#: ../src/e_mod_config.c:172
+msgid "Duplicate"
+msgstr "Скапіяваць"
+
+#: ../src/e_mod_config.c:226
+msgid "Alarm Options"
+msgstr "Параметры будзільніка"
+
+#.
+#. ob = e_widget_label_add(evas, D_("Time format"));
+#. e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
+#. rg = e_widget_radio_group_new(&(cfdata->time_format));
+#. ob = e_widget_radio_add(evas, D_("12h"), TIME_FORMAT_12, rg);
+#. e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1);
+#. ob = e_widget_radio_add(evas, D_("24h"), TIME_FORMAT_24, rg);
+#. e_widget_frametable_object_append(of, ob, 2, 0, 1, 1, 1, 1, 1, 1);
+#.
+#: ../src/e_mod_config.c:238
+msgid "Show next alarm"
+msgstr "Паказаць наступную падзею"
+
+#: ../src/e_mod_config.c:244
+msgid "Alarms Defaults"
+msgstr "Перадвызначаныя падзеі"
+
+#: ../src/e_mod_config.c:246 ../src/e_mod_config_alarm.c:404
+msgid "Open popup"
+msgstr "Паказаць паведамленне"
+
+#: ../src/e_mod_config.c:249
+msgid "Run program"
+msgstr "Выканаць праграму"
+
+#: ../src/e_mod_config.c:256
+msgid "Auto-Remove alarms"
+msgstr "Аўтаматычнае выдаленне падзей"
+
+#: ../src/e_mod_config_alarm.c:71
+msgid "Alarm Configuration : Setup an alarm"
+msgstr "Канфігураванне будзільніка : Наладжванне падзеі"
+
+#: ../src/e_mod_config_alarm.c:188
+msgid "Informations"
+msgstr "Звесткі"
+
+#: ../src/e_mod_config_alarm.c:192
+msgid "Name"
+msgstr "Імя"
+
+#: ../src/e_mod_config_alarm.c:197
+msgid "Description"
+msgstr "Апісанне"
+
+#: ../src/e_mod_config_alarm.c:207
+msgid "Schedule"
+msgstr "Расклад"
+
+#: ../src/e_mod_config_alarm.c:209
+#, c-format
+msgid "%1.0f hour"
+msgstr "%1.0f гадзін"
+
+#: ../src/e_mod_config_alarm.c:212
+#, c-format
+msgid "%1.0f minute"
+msgstr "%1.0f хвілін"
+
+#: ../src/e_mod_config_alarm.c:218
+msgid "Days of the week"
+msgstr "Дні тыдня"
+
+#: ../src/e_mod_config_alarm.c:222
+msgid "Monday"
+msgstr "Панядзелак"
+
+#: ../src/e_mod_config_alarm.c:224
+msgid "Tuesday"
+msgstr "Аўторак"
+
+#: ../src/e_mod_config_alarm.c:226
+msgid "Wednesday"
+msgstr "Серада"
+
+#: ../src/e_mod_config_alarm.c:228
+msgid "Thursday"
+msgstr "Чацвер"
+
+#: ../src/e_mod_config_alarm.c:230
+msgid "Friday"
+msgstr "Пятніца"
+
+#: ../src/e_mod_config_alarm.c:232
+msgid "Saturday"
+msgstr "Субота"
+
+#: ../src/e_mod_config_alarm.c:234
+msgid "Sunday"
+msgstr "Нядзеля"
+
+#: ../src/e_mod_config_alarm.c:239
+msgid "One day"
+msgstr "Адзін дзень"
+
+#: ../src/e_mod_config_alarm.c:243
+msgid "Date (YYYY/MM/DD)"
+msgstr "Дата (ГГГГ/ММ/ДД)"
+
+#: ../src/e_mod_config_alarm.c:248
+msgid "Today"
+msgstr "Сёння"
+
+#: ../src/e_mod_config_alarm.c:250
+msgid "Tomorrow"
+msgstr "Заўтра"
+
+#: ../src/e_mod_config_alarm.c:288
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
+"in the informations / schedule of your alarm"
+msgstr ""
+"<hilight>Памылка, падзея не даданая !</hilight><br><br>Памылка ў "
+"звестках / раскладзе вашага будзільніка"
+
+#: ../src/e_mod_config_alarm.c:293
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>You have to enter "
+"a name for the alarm"
+msgstr ""
+"<hilight>Памылка, падзея не даданая !</hilight><br><br>Вам трэба ўвесці "
+"імя для падзеі"
+
+#: ../src/e_mod_config_alarm.c:298
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>You have to "
+"select at least one day in the week"
+msgstr ""
+"<hilight>Памылка, падзея не даданая !</hilight><br><br>Вам патрэбна выбраць "
+"хаця б адзін дзень у тыдні"
+
+#: ../src/e_mod_config_alarm.c:303
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
+"entered for the alarm has incorrect syntax<br><br>You have to respect this "
+"format :<br>   YYYY/MM/DD<br>YYYY is the year on 4 numbers<br>MM is the "
+"month on 2 numbers<br>DD is the day on 2 numbers<br>"
+msgstr ""
+"<hilight>Памылка, падзея не даданая !</hilight><br><br>Дата, якую вы "
+"ўвелі, мае недакладны сінтаксіс<br><br>Выкарыстоўвайце наступны фармат :<br> "
+"ГГГГ/ММ/ДД<br>ГГГГ гэта 4 лічбы года<br>ММ гэта 2 лічбы месяца<br>ДД гэта 2 "
+"лічбы дня<br>"
+
+#: ../src/e_mod_config_alarm.c:313
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
+"entered is before now"
+msgstr ""
+"<hilight>Памылка, падзея не даданая !</hilight><br><br>Дата, якую вы "
+"ўвелі, ужо мінула"
+
+#: ../src/e_mod_config_alarm.c:317 ../src/e_mod_main.c:427
+msgid "Alarm Module Error"
+msgstr "Памылка модуля Будзільнік"
+
+#: ../src/e_mod_config_alarm.c:354 ../src/e_mod_config_alarm.c:442
+msgid "Test this alarm"
+msgstr "Выпрабаваць гэту падзею"
+
+#: ../src/e_mod_config_alarm.c:382
+msgid "Ring Options"
+msgstr "Параметры званка"
+
+#: ../src/e_mod_config_alarm.c:384
+msgid "Remove alarm"
+msgstr "Выдаліць падзею"
+
+#: ../src/e_mod_config_alarm.c:391 ../src/e_mod_config_alarm.c:411
+msgid "No [default]"
+msgstr "Не [перадвызначана]"
+
+#: ../src/e_mod_config_alarm.c:393 ../src/e_mod_config_alarm.c:413
+msgid "Yes"
+msgstr "Так"
+
+#: ../src/e_mod_config_alarm.c:398 ../src/e_mod_config_alarm.c:418
+#: ../src/e_mod_config_alarm.c:429
+msgid "No"
+msgstr "Не"
+
+#: ../src/e_mod_config_alarm.c:400 ../src/e_mod_config_alarm.c:420
+msgid "Yes [default]"
+msgstr "Так [перадвызначана]"
+
+#: ../src/e_mod_config_alarm.c:424
+msgid "Run a program"
+msgstr "Выканаць праграму"
+
+#: ../src/e_mod_config_alarm.c:431
+msgid "Run default one"
+msgstr "Выконваць перадвызначаную"
+
+#: ../src/e_mod_config_alarm.c:433
+msgid "Run this program"
+msgstr "Выканаць гэту праграму"
+
+#: ../src/e_mod_config_alarm.c:478
+msgid ""
+"<hilight>Alarm test SUCCEED !</hilight><br><br>But DONT FORGET to ACTIVATE "
+"the alarms<br>via the 'Active' check button on the<br>main Alarm "
+"configuration panel."
+msgstr ""
+"<hilight>Выпрабаванне падзеі скончылася ПАСПЯХОВА !</hilight><br><br>НЕ ЗАБУДЬТЕСЯ "
+"УКЛЮЧЫЦЬ падзеі<br>з дапамогай кнопкі 'Ўключыць' на<br>асноўнай "
+"канфігурацыйнай панэлі Будзільніка."
+
+#: ../src/e_mod_config_alarm.c:484
+msgid "<hilight>Alarm test SUCCEED !</hilight>"
+msgstr "<hilight>Выпрабаванне падзеі скончылася ПАСПЯХОВА !</hilight>"
+
+#: ../src/e_mod_config_alarm.c:489
+msgid "<hilight>Alarm test FAILED !</hilight>"
+msgstr "<hilight>Выпрабаванне падзеі скончылася ПРАВАЛАМ !</hilight>"
+
+#: ../src/e_mod_config_alarm.c:491
+msgid "Alarm Module Test Report"
+msgstr "Справаздача аб выпрабаванні модуля Будзільнік"
+
+#: ../src/e_mod_main.c:399
+#, c-format
+msgid "<hilight>Alarm : %s</hilight><br><br>%s"
+msgstr "<hilight>Падзея : %s</hilight><br><br>%s"
+
+#: ../src/e_mod_main.c:402
+msgid "Alarm Module Popup"
+msgstr "Паведамленне модуля Будзільнік"
+
+#: ../src/e_mod_main.c:425
+msgid ""
+"<hilight>Failed !</hilight><br><br>Alarm couln't launch the program you "
+"specified"
+msgstr ""
+"<hilight>Няўдача !</hilight><br><br>Будзільнік не здолеў выканаць зададзеную "
+"праграму"
+
+#: ../src/e_mod_main.c:659 ../src/e_mod_main.c:838
+#, c-format
+msgid "Snooze %s"
+msgstr "Паўтор %s"
+
+#: ../src/e_mod_main.c:663
+#, c-format
+msgid "%1.0f hours"
+msgstr "%1.0f гадзін"
+
+#: ../src/e_mod_main.c:666
+#, c-format
+msgid "%1.0f minutes"
+msgstr "%1.0f хвілін"
+
+#: ../src/e_mod_main.c:673
+msgid "Ok"
+msgstr "Ок"
+
+#: ../src/e_mod_main.c:674
+msgid "Close"
+msgstr "Закрыць"
+
+#: ../src/e_mod_main.c:846
+#, c-format
+msgid "Snooze %.14s of %.2d:%.2d"
+msgstr "Паўтор %.14s з %.2d:%.2d"
+
+#: ../src/e_mod_main.c:860
+msgid "Snooze (No alarm to delay)"
+msgstr "Паўтор (Няма падзеі для затрымкі)"
+
+#: ../src/e_mod_main.c:867
+msgid "Add an alarm"
+msgstr "Дадаць падзею"
+
+#: ../src/e_mod_main.c:874
+msgid "Configuration"
+msgstr "Канфігураванне"
+
+#: ../src/e_mod_main.c:1055
+#, c-format
+msgid ""
+"<hilight>Alarm module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of alarm module<br>has been upgraded<br>Your settings and "
+"alarms were removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Модуль Будзільнік : Абноўлены налады</hilight><br><br>Вашы "
+"налады будзільніка<br>былі абноўлены<br>Усе вашы налады і падзеі "
+"былі выдалены<br>Выбачайце за нязручнасці<br><br>(%d -> %d)"
+
+#: ../src/e_mod_main.c:1061 ../src/e_mod_main.c:1075
+msgid "Alarm Module version "
+msgstr "Модуль Будзільнік версія "
+
+#: ../src/e_mod_main.c:1069
+#, c-format
+msgid ""
+"<hilight>Alarm module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Alarm module<br>has been downgraded<br>Your settings and "
+"alarms were removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Модуль Будзільнік : Аднаўленне налад</hilight><br><br>Адбылося аднаўленне "
+"вашых<br>налад будзільніка<br>Усе вашы налады ды падзеі былі "
+"выдалены<br>Выбачайце за нязручнасці<br><br>(%d -> %d)"
+
+#:
+msgid "Settings"
+msgstr "Налады"
