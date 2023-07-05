@@ -1,7 +1,7 @@
 MAINTAINERCLEANFILES = Makefile.in
 ACLOCAL_AMFLAGS = -I m4
 
-INCLUDES = -I. \
+AM_CPPFLAGS = -I. \
 	 -I$(top_srcdir) \
 	 @EINA_CFLAGS@ @ECORE_CFLAGS@ @EVAS_CFLAGS@
 
