@@ -2,6 +2,7 @@
 Version=1.0
 Name=Alarm
 Type=Link
+Name[be]=Будзільнік
 Name[ru]=Будильник
 Name[eo]=Alarmilo
 Name[es]=Alarma
@@ -19,6 +20,7 @@ X-Enlightenment-IconClass=alarm,gadget
 X-Enlightenment-ModuleType=utils
 Icon=e-module-alarm
 Comment=A module which allows you to set popup reminders.
+Comment[be]=Модуль дазваляе наладжваць напаміны пра падзеі.
 Comment[ru]=Модуль позволяет устанавливать напоминания и будильник.
 Comment[cs]=Modul umožňující nastavit upomínky.
 Comment[eo]=Difini spruĉfenestrajn memorigilojn.
