@@ -3,26 +3,28 @@ dnl Process this file with autoconf to produce a configure script.
 # get rid of that stupid cache mechanism
 rm -f config.cache
 
-AC_INIT(winlist-ng, 0.1.0, hannes.janetzek@gmail.com)
-AC_PREREQ(2.52)
+AC_INIT([winlist-ng],[0.1.0],[hannes.janetzek@gmail.com])
+AC_PREREQ([2.71])
 
 AC_CANONICAL_BUILD
 AC_CANONICAL_HOST
 
 AM_INIT_AUTOMAKE(1.6)
 AC_CONFIG_SRCDIR(configure.ac)
-AM_CONFIG_HEADER(config.h)
+AC_CONFIG_HEADERS(config.h)
 
-AC_ISC_POSIX
+AC_SEARCH_LIBS([strerror],[cposix])
 AC_PROG_CC
-AM_PROG_CC_STDC
-AC_HEADER_STDC
+
+AC_CHECK_INCLUDES_DEFAULT
+AC_PROG_EGREP
+
 AC_C_CONST
-AM_ENABLE_SHARED
-AC_PROG_LIBTOOL
+AC_ENABLE_SHARED([])
+LT_INIT
 
 m4_ifdef([AM_GNU_GETTEXT_VERSION], [
-AM_GNU_GETTEXT_VERSION([0.14])
+AM_GNU_GETTEXT_VERSION([0.19])
 ])
 
 m4_ifdef([AM_GNU_GETTEXT], [
@@ -49,13 +51,15 @@ AC_ARG_ENABLE(homedir-install,
   [ datadir="${HOME}/.e/e/modules/${PACKAGE}" ]
 )
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 data/Makefile
 data/themes/Makefile
 src/Makefile
 module.desktop
 $po_makefile_in
-],[
 ])
+AC_CONFIG_COMMANDS([default],[
+],[])
+AC_OUTPUT
 
