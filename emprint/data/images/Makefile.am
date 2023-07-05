@@ -10,7 +10,7 @@ image_DATA = $(IMG)
 
 SND = Camera.wav
 
-EXTRA_DIST = $(SND)
+EXTRA_DIST += $(SND)
 
 snddir = $(pkgdatadir)/images
 snd_DATA = $(SND)

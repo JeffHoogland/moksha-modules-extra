@@ -2,22 +2,27 @@ dnl Process this file with autoconf to produce a configure script.
 
 # get rid of that stupid cache mechanism
 rm -f config.cache
+AC_INIT([emprint],[0.1.0],[moksha@bodhilinux.com])
+AC_PREREQ([2.71])
+AC_CONFIG_SRCDIR(configure.ac)
 
-AC_INIT(configure.ac)
-AC_PREREQ(2.59)
-AC_CONFIG_MACRO_DIR([m4])
-AM_INIT_AUTOMAKE(emprint, 0.1.0)
+AM_INIT_AUTOMAKE(1.8)
 AC_CONFIG_HEADERS(config.h)
+AC_CONFIG_MACRO_DIR([m4])
+
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 AC_CANONICAL_BUILD
 AC_CANONICAL_HOST
 
 AC_PROG_CC
-AC_HEADER_STDC
-AC_HEADER_TIME
-AM_ENABLE_SHARED
-AM_PROG_LIBTOOL
+AC_CHECK_INCLUDES_DEFAULT
+AC_PROG_EGREP
+AC_C_CONST
+
+LT_INIT
+AC_ENABLE_SHARED
+
 AC_C___ATTRIBUTE__
 
 dnl Set PACKAGE_DATA_DIR in config.h.
@@ -52,11 +57,13 @@ ecore-input
 )
 PKG_CHECK_MODULES(EVAS, evas)
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 src/Makefile
 src/bin/Makefile
 data/Makefile
 data/images/Makefile
-], [
 ])
+AC_CONFIG_COMMANDS([default],[
+],[])
+AC_OUTPUT
