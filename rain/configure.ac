@@ -3,7 +3,7 @@ dnl Process this file with autoconf to produce a configure script.
 # get rid of that stupid cache mechanism
 rm -f config.cache
 
-AC_INIT([rain],[0.0.3],[enlightenment-devel@lists.sourceforge.net])
+AC_INIT([rain],[0.0.3],[moksha@bodhilinux.com])
 AC_PREREQ([2.71])
 AC_CONFIG_SRCDIR(configure.ac)
 AC_CANONICAL_BUILD
