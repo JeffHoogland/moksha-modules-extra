@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Link
 Name=Cpu
+Name[be]=Працэсар
 Name[ru]=Процессор
 Name[de]=Prozessor
 Name[eo]=Ĉeforgano
@@ -11,6 +12,7 @@ Name[pt]=Processador
 Icon=e-module-cpu
 X-Enlightenment-ModuleType=system
 Comment=Used to monitor CPU utilization.
+Comment[be]=Адлюстроўвае загрузку цэнтральнага працэсара.
 Comment[ru]=Показывает текущую нагрузку на ЦПУ.
 Comment[cs]=Použitý k měření vytížení CPU.
 Comment[de]=Prozessorauslastung visualisieren
