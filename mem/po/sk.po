@@ -6,55 +6,56 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"POT-Creation-Date: 2023-07-07 21:12+0200\n"
 "PO-Revision-Date: 2009-06-12 16:45+0000\n"
-"Last-Translator: milboy <Unknown>\n"
+"Last-Translator: Štefan Uram <thewaiter@centrum.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_config.c:43
-msgid "Mem Configuration"
-msgstr "Konfigurácia modulu mem"
+#: src/e_mod_config.c:43
+msgid "Mem Settings"
+msgstr "Nastavenia pamäte"
 
-#: ../src/e_mod_config.c:92
+#: src/e_mod_config.c:92
 msgid "General Settings"
 msgstr "Hlavné nastavenia"
 
-#: ../src/e_mod_config.c:94
+#: src/e_mod_config.c:94
 msgid "Always Show Text"
 msgstr "Vždy zobraziť text"
 
-#: ../src/e_mod_config.c:96
+#: src/e_mod_config.c:96
 msgid "Show Text On Mouse Over"
-msgstr "Zobryziť text ak je kurzor na ikonou"
+msgstr "Zobraziť text pri pohybe myšou"
 
-#: ../src/e_mod_config.c:99
+#: src/e_mod_config.c:99
 msgid "Show Text As Percent"
 msgstr "Zobraziť text ako percentá"
 
-#: ../src/e_mod_config.c:104
+#: src/e_mod_config.c:104
 msgid "Ignore Buffers"
 msgstr "Ignorovať vyrovnávaciu pamäť"
 
-#: ../src/e_mod_config.c:108
+#: src/e_mod_config.c:108
 msgid "Ignore Cached"
-msgstr "Ignorovať rýchlu pamäť"
+msgstr "Ignorovať cache pamäť"
 
-#: ../src/e_mod_config.c:112
+#: src/e_mod_config.c:112
 msgid "Check Interval:"
-msgstr "Interval kontroly"
+msgstr "Interval aktualizácie"
 
-#: ../src/e_mod_config.c:115
+#: src/e_mod_config.c:115
 #, c-format
 msgid "%1.0f seconds"
 msgstr "%1.0f sekúnd"
 
-#: ../src/e_mod_main.c:105
+#: src/e_mod_main.c:108
 msgid "Mem"
 msgstr "Mem"
 
-#: ../src/e_mod_main.c:162
-msgid "Configuration"
-msgstr "Konfigurácia"
+#: src/e_mod_main.c:162
+msgid "Settings"
+msgstr "Nastavenia"

@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
-"POT-Creation-Date: 2011-09-04 07:02-0700\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2023-07-07 21:12+0200\n"
 "PO-Revision-Date: 2011-09-04 16:13+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@gmail.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -15,48 +15,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_config.c:43
+#: src/e_mod_config.c:43
 msgid "Mem Settings"
 msgstr "Mem-configuratie"
 
-#: ../src/e_mod_config.c:92
+#: src/e_mod_config.c:92
 msgid "General Settings"
 msgstr "Algemene instellingen"
 
-#: ../src/e_mod_config.c:94
+#: src/e_mod_config.c:94
 msgid "Always Show Text"
 msgstr "Toon altijd tekst"
 
-#: ../src/e_mod_config.c:96
+#: src/e_mod_config.c:96
 msgid "Show Text On Mouse Over"
 msgstr "Toon tekst bij muisover"
 
-#: ../src/e_mod_config.c:99
+#: src/e_mod_config.c:99
 msgid "Show Text As Percent"
 msgstr "Toon tekst als percentage"
 
-#: ../src/e_mod_config.c:104
+#: src/e_mod_config.c:104
 msgid "Ignore Buffers"
 msgstr "Negeer buffers"
 
-#: ../src/e_mod_config.c:108
+#: src/e_mod_config.c:108
 msgid "Ignore Cached"
 msgstr "Negeer gecachede gegevens"
 
-#: ../src/e_mod_config.c:112
+#: src/e_mod_config.c:112
 msgid "Check Interval:"
 msgstr "Controle-interval:"
 
-#: ../src/e_mod_config.c:115
+#: src/e_mod_config.c:115
 #, c-format
 msgid "%1.0f seconds"
 msgstr "%1.0f seconden"
 
-#: ../src/e_mod_main.c:108
+#: src/e_mod_main.c:108
 msgid "Mem"
 msgstr "Mem"
 
-#: ../src/e_mod_main.c:162
+#: src/e_mod_main.c:162
 msgid "Settings"
 msgstr "Instellingen"
 

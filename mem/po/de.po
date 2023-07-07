@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-11-23 23:43+0100\n"
+"POT-Creation-Date: 2023-07-07 21:12+0200\n"
 "PO-Revision-Date: 2009-11-07 18:14+0000\n"
 "Last-Translator: MixCool <lars.thoms@mixcool.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -58,7 +58,7 @@ msgstr "%1.0f Sekunden"
 msgid "Mem"
 msgstr "Speichermodul"
 
-#: src/e_mod_main.c:167
+#: src/e_mod_main.c:162
 msgid "Settings"
 msgstr "Einstellungen"
 
