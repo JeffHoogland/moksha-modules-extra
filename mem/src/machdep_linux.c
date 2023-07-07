@@ -2,8 +2,8 @@
 #include "e_mod_main.h"
 
 void
-_mem_get_values (Config_Item * ci, int *real, int *swap, int *total_real,
-		 int *total_swap)
+_mem_get_values(Config_Item * ci, int *real, int *swap, int *total_real,
+               int *total_swap)
 {
   FILE *pmeminfo = NULL;
   int cursor = 0;
@@ -13,54 +13,54 @@ _mem_get_values (Config_Item * ci, int *real, int *swap, int *total_real,
   ldiv_t ldresult;
   long int liresult;
 
-  if (!(pmeminfo = fopen ("/proc/meminfo", "r")))
+  if (!(pmeminfo = fopen("/proc/meminfo", "r")))
     {
-      fprintf (stderr, "can't open /proc/meminfo");
+      fprintf(stderr, "can't open /proc/meminfo");
       return;
     }
 
-  line = (char *) calloc (64, sizeof (char));
-  while (fscanf (pmeminfo, "%c", &c) != EOF)
+  line = (char *) calloc(64, sizeof (char));
+  while (fscanf(pmeminfo, "%c", &c) != EOF)
     {
       if (c != '\n')
-	line[cursor++] = c;
+        line[cursor++] = c;
       else
-	{
-	  field = (char *) malloc (strlen (line) * sizeof (char));
-	  sscanf (line, "%s %ld kB", field, &value);
-	  if (!strcmp (field, "MemTotal:"))
-	    mtotal = value;
-	  else if (!strcmp (field, "MemFree:"))
-	    mfree = value;
-	  else if (ci->real_ignore_buffers && (!strcmp (field, "Buffers:")))
-	    mfree += value;
-	  else if (ci->real_ignore_cached && (!strcmp (field, "Cached:")))
-	    mfree += value;
-	  else if (ci->real_ignore_cached && (!strcmp (field, "SwapCached:")))
-	    sfree += value;
-	  else if (!strcmp (field, "SwapTotal:"))
-	    stotal = value;
-	  else if (!strcmp (field, "SwapFree:"))
-	    sfree = value;
+        {
+          field = (char *) malloc(strlen (line) * sizeof (char));
+          sscanf(line, "%s %ld kB", field, &value);
+          if (!strcmp(field, "MemTotal:"))
+            mtotal = value;
+          else if (!strcmp(field, "MemFree:"))
+            mfree = value;
+          else if (ci->real_ignore_buffers && (!strcmp(field, "Buffers:")))
+            mfree += value;
+          else if (ci->real_ignore_cached && (!strcmp(field, "Cached:")))
+            mfree += value;
+          else if (ci->real_ignore_cached && (!strcmp(field, "SwapCached:")))
+            sfree += value;
+          else if (!strcmp(field, "SwapTotal:"))
+            stotal = value;
+          else if (!strcmp(field, "SwapFree:"))
+            sfree = value;
 
-	  free (line);
-	  free (field);
-	  cursor = 0;
-	  line = (char *) calloc (64, sizeof (char));
-	}
+          free (line);
+          free (field);
+          cursor = 0;
+          line = (char *) calloc (64, sizeof (char));
+        }
     }
-  fclose (pmeminfo);
+  fclose(pmeminfo);
 
   if (stotal >= 1)
     {
-      ldresult = ldiv (stotal, 100);
+      ldresult = ldiv(stotal, 100);
       liresult = ldresult.quot;
-      ldresult = ldiv ((stotal - sfree), liresult);
+      ldresult = ldiv((stotal - sfree), liresult);
     }
 
-  ldresult = ldiv (mtotal, 100);
+  ldresult = ldiv(mtotal, 100);
   liresult = ldresult.quot;
-  ldresult = ldiv ((mtotal - mfree), liresult);
+  ldresult = ldiv((mtotal - mfree), liresult);
 
   *real = (mtotal - mfree);
   *swap = (stotal - sfree);

@@ -13,24 +13,20 @@
 #define GETSYSCTL(name, var)    getsysctl(name, &(var), sizeof (var))
 
 static int
-getsysctl (char *name, void *ptr, size_t len)
+getsysctl(char *name, void *ptr, size_t len)
 {
   size_t nlen = len;
   if (sysctlbyname (name, ptr, &nlen, NULL, 0) == -1)
-    {
-      return (1);
-    }
+    return (1);
 
   if (nlen != len)
-    {
-      return (1);
-    }
+    return (1);
 
   return (0);
 }
 
 static int
-swapinfo (int *total, int *used)
+swapinfo(int *total, int *used)
 {
   int pagesize = getpagesize ();
   size_t mibsize, size;
@@ -53,13 +49,13 @@ swapinfo (int *total, int *used)
       mib[mibsize] = n;
       size = sizeof xsw;
       if (sysctl (mib, mibsize + 1, &xsw, &size, NULL, 0) == -1)
-	break;
+        break;
 
       if (xsw.xsw_version != XSWDEV_VERSION)
-	{
-	  warnx ("xswdev version mismatch");
-	  return 1;
-	}
+        {
+          warnx ("xswdev version mismatch");
+          return 1;
+        }
 
       tmp_total = (long long) xsw.xsw_nblks * pagesize;
       tmp_used = (long long) xsw.xsw_used * pagesize;
@@ -73,7 +69,7 @@ swapinfo (int *total, int *used)
 }
 
 void
-_mem_get_values (ci, phys_used, sw_used, phys_total, sw_total)
+_mem_get_values(ci, phys_used, sw_used, phys_total, sw_total)
      Config_Item *ci;
      int *phys_used;
      int *sw_used;
