@@ -112,9 +112,8 @@ msgid "Inbox"
 msgstr "Входящие"
 
 #: src/e_mod_config.c:54
-#, fuzzy
 msgid "Mail Settings"
-msgstr "Настройки почтового ящика"
+msgstr "Настройки почты"
 
 #: src/e_mod_config.c:97
 msgid "Always Show Labels"
@@ -130,7 +129,7 @@ msgstr "Показывать все ящики в подсказке"
 
 #: src/e_mod_config.c:103
 msgid "Play sound when mail arrives"
-msgstr ""
+msgstr "Звуковой сигнал при поступлении почты"
 
 #: src/e_mod_config.c:105
 msgid "Check Interval"
@@ -162,9 +161,8 @@ msgid "Mail"
 msgstr "Почта"
 
 #: src/e_mod_main.c:233
-#, fuzzy
 msgid "Settings"
-msgstr "Настройки порта"
+msgstr "Настройки"
 
 #~ msgid "Mail Configuration"
 #~ msgstr "Настройка почты"
