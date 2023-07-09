@@ -1,0 +1,331 @@
+# Belarusian translation of Engage module
+# This file is put in the public domain.
+# R0bur <robursw@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Engage\n"
+"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
+"POT-Creation-Date: 2023-07-09 17:00+0300\n"
+"PO-Revision-Date: 2023-07-09 17:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:1705 src/e_mod_main.c:1863 src/e_mod_main.c:1890
+msgid "Engage"
+msgstr "Engage"
+
+#: src/ng_taskbar.c:641
+msgid "No name!"
+msgstr "Няма назвы!"
+
+#: src/ng_launcher.c:275
+msgid "Open Directory"
+msgstr "Адкрыць каталог"
+
+#: src/ng_launcher.c:561
+msgid "Configure Bar"
+msgstr "Канфігураваць панэль"
+
+#: src/ng_launcher.c:565
+msgid "Lock Dragging"
+msgstr "Забараніць перацягванне"
+
+#: src/ng_launcher.c:574
+msgid "Applications"
+msgstr "Праграмы"
+
+#: src/ng_launcher.c:578
+msgid "Edit Icon"
+msgstr "Рэдагаваць значок"
+
+#: src/ng_border_menu.c:30
+msgid "Fullscreen"
+msgstr "На ўвесь экран"
+
+#: src/ng_border_menu.c:45
+msgid "Close"
+msgstr "Закрыць"
+
+#: src/ng_border_menu.c:66
+msgid "Maximized"
+msgstr "Разгарнуць"
+
+#: src/ng_border_menu.c:86
+msgid "Uniconify"
+msgstr "Разгарнуць у акно"
+
+#: src/ng_border_menu.c:88
+msgid "Iconify"
+msgstr "Паменшыць"
+
+#: src/ng_gadcon.c:260
+msgid "Gadcon Config"
+msgstr "Канфігураванне Кантэйнера гаджэтаў"
+
+#: src/ng_gadcon.c:299
+msgid "Available Gadgets"
+msgstr "Даступныя гаджэты"
+
+#: src/ng_gadcon.c:306
+msgid "Add Gadget"
+msgstr "Дадаць гаджэт"
+
+#: src/ng_gadcon.c:312
+msgid "Selected Gadgets"
+msgstr "Выбраныя гаджэты"
+
+#: src/ng_gadcon.c:319
+msgid "Remove Gadget"
+msgstr "Выдаліць гаджэт"
+
+#: src/ng_gadcon.c:327 src/ng_gadcon.c:370 src/ng_gadcon.c:394
+msgid "Description: Unavailable"
+msgstr "Апісанне: Недаступна"
+
+#: src/ng_config.c:98
+msgid "Engage Configuration"
+msgstr "Канфігурацыя Engage"
+
+#: src/ng_config.c:167 src/ng_config.c:228
+msgid "Appearance"
+msgstr "Знешні выгляд"
+
+#: src/ng_config.c:168
+msgid "Icon Size:"
+msgstr "Памер значкоў:"
+
+#: src/ng_config.c:170
+#, c-format
+msgid "%1.0f px"
+msgstr "%1.0f пікс."
+
+#: src/ng_config.c:184
+msgid "Background Opacity:"
+msgstr "Непразрыстасць фону:"
+
+#: src/ng_config.c:186
+msgid "%1.0f \\%"
+msgstr "%1.0f \\%"
+
+#: src/ng_config.c:194
+msgid "Show Background Box"
+msgstr "Паказваць рамку фону"
+
+#: src/ng_config.c:197
+msgid "Show Mouse-Over Animation"
+msgstr "Паказваць анімацыю пры навядзенні мышы"
+
+#: src/ng_config.c:202
+msgid "Orientation"
+msgstr "Арыентацыя"
+
+#: src/ng_config.c:204
+msgid "Bottom Edge"
+msgstr "Ніжні край"
+
+#: src/ng_config.c:206
+msgid "Top Edge"
+msgstr "Верхні край"
+
+#: src/ng_config.c:208
+msgid "Left Edge"
+msgstr "Левы край"
+
+#: src/ng_config.c:210
+msgid "Right Edge"
+msgstr "Правы край"
+
+#: src/ng_config.c:231 src/ng_config.c:250
+msgid "Zoom"
+msgstr "Павелічэнне"
+
+#: src/ng_config.c:232
+msgid "Factor:"
+msgstr "Множнік:"
+
+#: src/ng_config.c:238
+msgid "Range:"
+msgstr "Дыяпазон:"
+
+#: src/ng_config.c:244
+msgid "Duration:"
+msgstr "Працягласць:"
+
+#: src/ng_config.c:253 src/ng_config.c:281
+msgid "Bar Items"
+msgstr "Элементы панэлі"
+
+#: src/ng_config.c:261 src/ng_config.c:547 src/ng_config_instances.c:104
+msgid "Delete"
+msgstr "Выдаліць"
+
+#: src/ng_config.c:263 src/ng_config.c:549 src/ng_config_instances.c:106
+msgid "Configure"
+msgstr "Канфігураваць"
+
+#: src/ng_config.c:265
+msgid "Up"
+msgstr "Уверх"
+
+#: src/ng_config.c:267
+msgid "Down"
+msgstr "Уніз"
+
+#: src/ng_config.c:272 src/ng_config.c:545 src/ng_config_instances.c:102
+msgid "Add"
+msgstr "Дадаць"
+
+#: src/ng_config.c:274
+msgid "Taskbar"
+msgstr "Панэль задач"
+
+#: src/ng_config.c:276
+msgid "Launcher"
+msgstr "Праграма запуску"
+
+#: src/ng_config.c:278
+msgid "Gadcon"
+msgstr "Кантэйнер гаджэтаў"
+
+#: src/ng_config.c:284 src/ng_config.c:303
+msgid "Auto Hide"
+msgstr "Аўтаматычнае хаванне"
+
+#: src/ng_config.c:288
+msgid "None"
+msgstr "Адключана"
+
+#: src/ng_config.c:291
+msgid "Autohide"
+msgstr "Хаваць аўтаматычна"
+
+#: src/ng_config.c:294
+msgid "Hide when Window overlaps"
+msgstr "Хаваць пры перакрыцці акном"
+
+#: src/ng_config.c:297
+msgid "Hide on Fullscreen"
+msgstr "Хаваць пры поўнаэкранным рэжыме"
+
+#: src/ng_config.c:301
+msgid "Show Bar when Urgent"
+msgstr "Паказваць панэль для тэрміновых вокнаў"
+
+#: src/ng_config.c:309
+msgid "Stacking"
+msgstr "Штабеляванне"
+
+#: src/ng_config.c:311
+msgid "Above All"
+msgstr "Паверх усіх"
+
+#: src/ng_config.c:313
+msgid "Below Fullscreen"
+msgstr "Пад поўнаэкраннымі вокнамі"
+
+#: src/ng_config.c:317 src/ng_config.c:324
+msgid "Other"
+msgstr "Іншае"
+
+#: src/ng_config.c:318
+msgid "Ecomorph Features"
+msgstr "Функцыі Ecomorph"
+
+#: src/ng_config.c:320
+msgid "Show Icon Label"
+msgstr "Паказваць прызнакі значкоў"
+
+#: src/ng_config.c:537
+msgid "Launcher Settings"
+msgstr "Налады праграмы запуску"
+
+#: src/ng_config.c:557
+msgid "Taskbar Settings"
+msgstr "Налады панэлі задач"
+
+#: src/ng_config.c:559
+msgid "Don't Show Dialogs"
+msgstr "Не паказваць дыялогавыя вокны"
+
+#: src/ng_config.c:562
+msgid "Advanced Window Menu"
+msgstr "Пашыранае меню акна"
+
+#: src/ng_config.c:565
+msgid "Only Show Current Desk"
+msgstr "Паказваць толькі бягучы працоўны стол"
+
+#: src/ng_config.c:568
+msgid "Group Applications by Window Class"
+msgstr "Аб'яднаць праграмы па класах вокнаў"
+
+#: src/ng_config.c:571
+msgid "Append new Applications on the right Side"
+msgstr "Дадаваць новыя праграмы з правага боку"
+
+#: src/ng_config.c:577
+msgid "Iconified Applications"
+msgstr "Мініяцюры праграм"
+
+#: src/ng_config.c:579
+msgid "Not Shown"
+msgstr "Не паказваць"
+
+#: src/ng_config.c:581
+msgid "Show"
+msgstr "Паказваць"
+
+#: src/ng_config.c:583
+msgid "Only Iconified"
+msgstr "Толькі мініяцюры"
+
+#: src/ng_config.c:652 src/ng_config.c:692
+msgid "Engage Bar Configuration"
+msgstr "Налады панэлі Engage"
+
+#: src/ng_config.c:797
+msgid "Create new source"
+msgstr "Стварыць новую крыніцу"
+
+#: src/ng_config.c:798
+msgid "Enter a name for this new Application Launcher:"
+msgstr "Увядзіце назву гэтай новай праграмы запуску:"
+
+#: src/ng_config.c:807
+#, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"source?"
+msgstr ""
+"Вы запыталі выдаліць \"%s\".<br><br>Вы ўпэўненыя, што жадаеце выдаліць гэту "
+"крыніцу?"
+
+#: src/ng_config.c:811
+msgid "Are you sure you want to delete this source?"
+msgstr "Вы ўпэўненыя, што жадаеце выдаліць гэту крыніцу?"
+
+#: src/ng_config_instances.c:64 src/ng_config_instances.c:94
+msgid "Engage Instances"
+msgstr "Асобнікі Engage"
+
+#: src/ng_config_instances.c:164
+msgid "Bar"
+msgstr "Панэль"
+
+#: src/ng_config_instances.c:271
+#, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"Instance?"
+msgstr ""
+"Вы запыталі выдаліць \"%s\".<br><br>Вы ўпэўненыя, што жадаеце выдаліць гэты "
+"асобнік?"
+
+#: src/ng_config_instances.c:275
+msgid "Are you sure you want to delete this Instance?"
+msgstr "Вы ўпэўнены, што жадаеце выдаліць гэты асобнік?"

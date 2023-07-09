@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Link
 Name=Mail
+Name[be]=Пошта
 Name[ru]=Почта
 Name[eo]=Retmesaĝo
 Name[es]=Correo electrónico
@@ -12,6 +13,7 @@ Name[pt]=Correio eletrónico
 Icon=e-module-mail
 X-Enlightenment-ModuleType=utils
 Comment=Mail notification gadget. Checks POP3, IMAP, maildir, and mbox mailboxes.
+Comment[be]=Гаджэт для паведамлення пра атрыманне пошты. Правярае паштовыя скрыні POP3, IMAP, Maildir ды Mbox.
 Comment[ru]=Гаджет для уведомления о получении почты. Проверяет почтовые ящики POP3, IMAP, Maildir и Mbox.
 Comment[cs]=Gadget pro upozornění na e-mail. Kontroluje POP3, IMAP, maildir, a mbox schránky.
 Comment[eo]=Vanaĵo por retmesaĝa averto. Inspektas POP3, IMAP, maildir kaj mbox retpoŝtkestojn.

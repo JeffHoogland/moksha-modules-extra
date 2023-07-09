@@ -1,39 +1,39 @@
-# Russian translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Belarusian translation of Mail module
+# This file is put in the public domain.
+# R0bur <robursw@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-22 20:51+0100\n"
-"PO-Revision-Date: 2009-06-01 08:05+0000\n"
-"Last-Translator: Lucky <lucky1.data@gmail.com>\n"
-"Language-Team: Russian <ru@li.org>\n"
-"Language: ru\n"
+"Project-Id-Version: Mail\n"
+"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
+"POT-Creation-Date: 2023-07-09 19:00+0300\n"
+"PO-Revision-Date: 2023-07-09 19:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_config_box.c:68
 msgid "Mailbox Configuration"
-msgstr "Настройка почтового ящика"
+msgstr "Налады паштовай скрыні"
 
 #: src/e_mod_config_box.c:160 src/e_mod_config.c:96
 msgid "General Settings"
-msgstr "Основные настройки"
+msgstr "Асноўныя налады"
 
 #: src/e_mod_config_box.c:162
 msgid "Start Program When New Mail Arrives"
-msgstr "Запускать программу при получении новой почты"
+msgstr "Выконваць праграму пры атрыманні новай пошты"
 
 #: src/e_mod_config_box.c:167
 msgid "Program:"
-msgstr "Программа:"
+msgstr "Праграма:"
 
 #: src/e_mod_config_box.c:179
 msgid "Mailbox Type"
-msgstr "Тип ящика"
+msgstr "Тып скрыні"
 
 #: src/e_mod_config_box.c:181
 msgid "Pop3"
@@ -53,15 +53,15 @@ msgstr "Mbox"
 
 #: src/e_mod_config_box.c:193
 msgid "Monitor Mbox file permanently"
-msgstr "Постоянный мониторинг файла Mbox"
+msgstr "Пастаянны маніторынг файла Mbox"
 
 #: src/e_mod_config_box.c:210
 msgid "Port Settings"
-msgstr "Настройки порта"
+msgstr "Налады порта"
 
 #: src/e_mod_config_box.c:212
 msgid "Use SSL:"
-msgstr "Использовать SSL:"
+msgstr "Выкарыстоўваць SSL:"
 
 #: src/e_mod_config_box.c:219
 msgid "v2"
@@ -77,23 +77,23 @@ msgstr "Порт:"
 
 #: src/e_mod_config_box.c:232
 msgid "Local:"
-msgstr "Локальный:"
+msgstr "Лакальны:"
 
 #: src/e_mod_config_box.c:238
 msgid "Mailbox Settings"
-msgstr "Настройки почтового ящика"
+msgstr "Налады паштовай скрыні"
 
 #: src/e_mod_config_box.c:239
 msgid "Name:"
-msgstr "Имя:"
+msgstr "Імя:"
 
 #: src/e_mod_config_box.c:244
 msgid "Mail Host:"
-msgstr "Хост:"
+msgstr "Паштовы вузел:"
 
 #: src/e_mod_config_box.c:249
 msgid "Username:"
-msgstr "Имя пользователя:"
+msgstr "Імя карыстальніка:"
 
 #: src/e_mod_config_box.c:254
 msgid "Password:"
@@ -101,74 +101,65 @@ msgstr "Пароль:"
 
 #: src/e_mod_config_box.c:260
 msgid "New Mail Path:"
-msgstr "Новый путь к почте:"
+msgstr "Новы шлях да пошты:"
 
 #: src/e_mod_config_box.c:272
 msgid "Current Mail Path:"
-msgstr "Текущий путь к почте:"
+msgstr "Існуючы шлях да пошты:"
 
 #: src/e_mod_config_box.c:430
 msgid "Inbox"
-msgstr "Входящие"
+msgstr "Уваходныя"
 
 #: src/e_mod_config.c:54
 msgid "Mail Settings"
-msgstr "Настройки почты"
+msgstr "Налады пошты"
 
 #: src/e_mod_config.c:97
 msgid "Always Show Labels"
-msgstr "Всегда показывать метки"
+msgstr "Заўсёды паказваць прызнакі"
 
 #: src/e_mod_config.c:99
 msgid "Show Mailbox Popup"
-msgstr "Показывать подсказку почтового ящика"
+msgstr "Паказваць усплываючае акно паштовай скрыні"
 
 #: src/e_mod_config.c:101
 msgid "Show All Boxes In Popup"
-msgstr "Показывать все ящики в подсказке"
+msgstr "Паказваць усе паштовыя скрыні ў усплываючым акне"
 
 #: src/e_mod_config.c:103
 msgid "Play sound when mail arrives"
-msgstr "Звуковой сигнал при поступлении почты"
+msgstr "Гукавы сігнал пры паступленні пошты"
 
 #: src/e_mod_config.c:105
 msgid "Check Interval"
-msgstr "Интервал проверки"
+msgstr "Інтэрвал праверкі"
 
 #: src/e_mod_config.c:108
 #, c-format
 msgid "%2.0f minutes"
-msgstr "%2.0f минут"
+msgstr "%2.0f хвілін"
 
 #: src/e_mod_config.c:113
 msgid "Mail Boxes"
-msgstr "Почтовые ящики"
+msgstr "Паштовыя скрыні"
 
 #: src/e_mod_config.c:123
 msgid "Add"
-msgstr "Добавить"
+msgstr "Дадаць"
 
 #: src/e_mod_config.c:127
 msgid "Delete"
-msgstr "Удалить"
+msgstr "Выдаліць"
 
 #: src/e_mod_config.c:133
 msgid "Configure..."
-msgstr "Настроить..."
+msgstr "Канфігураваць..."
 
 #: src/e_mod_main.c:189
 msgid "Mail"
-msgstr "Почта"
+msgstr "Пошта"
 
 #: src/e_mod_main.c:233
 msgid "Settings"
-msgstr "Настройки"
-
-#~ msgid "Mail Configuration"
-#~ msgstr "Настройка почты"
-
-#~ msgid "Mailboxes"
-#~ msgstr "Почтовые ящики"
-
-#~ msgid "Configuration"
-#~ msgstr "Настройка"
+msgstr "Налады"

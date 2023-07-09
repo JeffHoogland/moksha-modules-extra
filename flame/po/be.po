@@ -1,0 +1,78 @@
+# Belarusian translation of Flame module
+# This file is put in the public domain.
+# R0bur <robursw@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flame\n"
+"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
+"POT-Creation-Date: 2023-07-09 18:00+0300\n"
+"PO-Revision-Date: 2023-07-09 18:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_main.c:61
+msgid "Appearance"
+msgstr "Знешні выгляд"
+
+#: ../src/e_mod_main.c:63
+msgid "Flame"
+msgstr "Полымя"
+
+#: ../src/e_mod_config.c:47
+msgid "Flame Configuration"
+msgstr "Канфігурацыя модуля \"Полымя\""
+
+#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:177
+msgid "Flame Color"
+msgstr "Колер полымя"
+
+#: ../src/e_mod_config.c:96
+msgid "Gold"
+msgstr "Залаты"
+
+#: ../src/e_mod_config.c:98
+msgid "Fire"
+msgstr "Агонь"
+
+#: ../src/e_mod_config.c:100
+msgid "Plasma"
+msgstr "Плазма"
+
+#: ../src/e_mod_config.c:102
+msgid "Matrix"
+msgstr "Матрыца"
+
+#: ../src/e_mod_config.c:104
+msgid "Ice"
+msgstr "Лёд"
+
+#: ../src/e_mod_config.c:106
+msgid "White"
+msgstr "Белы"
+
+#: ../src/e_mod_config.c:108
+msgid "Custom"
+msgstr "Іншы"
+
+#: ../src/e_mod_config.c:179
+msgid "Red Amount"
+msgstr "Колькасць чырвонага"
+
+#: ../src/e_mod_config.c:182 ../src/e_mod_config.c:189
+#: ../src/e_mod_config.c:196
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/e_mod_config.c:186
+msgid "Blue Amount"
+msgstr "Колькасць сіняга"
+
+#: ../src/e_mod_config.c:193
+msgid "Green Amount"
+msgstr "Колькасць зялёнага"
