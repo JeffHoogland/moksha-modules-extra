@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Link
 Name=News
+Name[be]=Навіны
 Name[ru]=Новости
 Name[cs]=Novinky
 Name[eo]=Novaĵoj
@@ -12,6 +13,7 @@ Name[pt]=Notícias
 Icon=e-module-news
 X-Enlightenment-ModuleType=utils
 Comment=Gadget to monitor RSS feeds.
+Comment[be]=Гаджэт для адсочвання RSS-каналаў.
 Comment[ru]=Гаджет для отображения RSS-лент.
 Comment[cs]=Gadget k monitorování RSS.
 Comment[eo]=Elrigardi la RSS-abonfluojn.
