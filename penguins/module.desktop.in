@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Link
 Name=Penguins
+Name[be]=Пінгвіны
 Name[ru]=Пингвины
 Name[cs]=Tučňáci
 Name[de]=Pinguine
@@ -12,6 +13,7 @@ Name[pt]=Pinguins
 Icon=e-module-penguins
 X-Enlightenment-ModuleType=look
 Comment=Module to display fancy penguins walking around your desktop.
+Comment[be]=Модуль паказвае забаўных пінгвінаў, якія вандруюць па працоўным стале.
 Comment[ru]=Модуль показывает прикольных пингвинов на рабочем столе.
 Comment[cs]=Zobrazí tučňáky chodící pod desktopu(jako xpenguins).
 Comment[de]=Lustige Pinguine laufen auf Ihrem Desktop umher.
