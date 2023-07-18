@@ -1,4 +1,7 @@
 #include "Photo.h"
+
+Photo *photo;
+
 /* module requirements */
 EAPI E_Module_Api e_modapi = 
    {

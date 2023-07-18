@@ -50,7 +50,7 @@ struct _Photo
   int canvas_w, canvas_h;
 };
 
-Photo *photo;
+extern Photo *photo;
 
 EAPI extern E_Module_Api e_modapi;
 
