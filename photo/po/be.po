@@ -1,0 +1,404 @@
+# Belarusian translation of Photo module
+# This file is put in the public domain.
+# R0bur <robursw@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: Photo\n"
+"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
+"POT-Creation-Date: 2023-07-17 17:30+0300\n"
+"PO-Revision-Date: 2023-07-17 17:30+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../src/e_mod_main.c:53 ../src/e_mod_main.c:60 ../src/e_mod_main.c:67
+#: ../src/e_mod_main.c:74 ../src/e_mod_main.c:81 ../src/e_mod_main.c:88
+msgid "Photo Module"
+msgstr "Модуль Фота"
+
+#: ../src/e_mod_main.c:53
+msgid "E Canvas init failed !"
+msgstr "ПАМ. Не ўдалося ініцыялізаваць палатно !"
+
+#: ../src/e_mod_main.c:60
+msgid "Theme init failed !"
+msgstr "Не ўдалося ініцыялізаваць тэму !"
+
+#: ../src/e_mod_main.c:67
+msgid "Config init failed"
+msgstr "Не ўдалося ініцыялізаваць канфігурацыю"
+
+#: ../src/e_mod_main.c:74
+msgid "Picture subsystem init failed"
+msgstr "Не ўдалося ініцыялізаваць падсістэму відарысаў"
+
+#: ../src/e_mod_main.c:81
+msgid "Popup warn subsystem init failed"
+msgstr "Не ўдалося ініцыялізаваць падсістэму папярэджанняў"
+
+#: ../src/e_mod_main.c:88
+msgid "Popup info subsystem init failed"
+msgstr "Не ўдалося ініцыялізаваць падсістэму паведамленняў"
+
+#: ../src/e_mod_main.c:181
+msgid "Photo"
+msgstr "Фота"
+
+#: ../src/photo_config.c:65
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Модуль Фота : Канфігурацыя абноўлена</hilight><br><br>Ваша "
+"канфігурацыя модуля Фота<br>была абноўлена<br>Вашы налады былі "
+"выдалены<br>Выбачайце за нязручнасці<br><br>(%d -> %d)"
+
+#: ../src/photo_config.c:71 ../src/photo_config.c:85
+msgid "Photo Module version "
+msgstr "Версія модуля Фота "
+
+#: ../src/photo_config.c:79
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Модуль Фота : Зніжана версія канфігурацыі</hilight><br><br>Версія "
+"канфігурацыі модуля Фота<br>зніжана<br>Вашы налады былі "
+"выдалены<br>Выбачайце за нязручнасці<br><br>(%d ->%d)"
+
+#: ../src/photo_config_dialog.c:64
+msgid "Photo Configuration"
+msgstr "Канфігурацыя Фота"
+
+#: ../src/photo_config_dialog.c:220
+msgid "Picture directories"
+msgstr "Каталогі з відарысамі"
+
+#: ../src/photo_config_dialog.c:235
+msgid "Add"
+msgstr "Дадаць"
+
+#: ../src/photo_config_dialog.c:237
+msgid "Delete"
+msgstr "Выдаліць"
+
+#: ../src/photo_config_dialog.c:239
+msgid "Configure"
+msgstr "Канфігураваць"
+
+#: ../src/photo_config_dialog.c:242
+msgid "Reload picture directories"
+msgstr "Абнавіць каталогі відарысаў"
+
+#: ../src/photo_config_dialog.c:245
+msgid "Stop loading"
+msgstr "Спыніць загрузку"
+
+#: ../src/photo_config_dialog.c:252 ../src/photo_config_dialog_item.c:127
+msgid "Appearance"
+msgstr "Знешні выгляд"
+
+#: ../src/photo_config_dialog.c:254 ../src/photo_config_dialog_item.c:136
+msgid "Always show label"
+msgstr "Заўсёды адлюстроўваць пазнакі"
+
+#: ../src/photo_config_dialog.c:256
+msgid "Nice transitions"
+msgstr "Плаўныя пераходы"
+
+#: ../src/photo_config_dialog.c:262
+msgid "Default Mouse actions"
+msgstr "Перадвызначаныя дзеянні мышы"
+
+#: ../src/photo_config_dialog.c:264 ../src/photo_config_dialog_item.c:191
+msgid "Over"
+msgstr "Па-над"
+
+#: ../src/photo_config_dialog.c:268 ../src/photo_config_dialog_item.c:195
+msgid "Left"
+msgstr "Левая"
+
+#: ../src/photo_config_dialog.c:270 ../src/photo_config_dialog.c:276
+#: ../src/photo_config_dialog_item.c:197 ../src/photo_config_dialog_item.c:203
+msgid "click"
+msgstr "націсканне"
+
+#: ../src/photo_config_dialog.c:274 ../src/photo_config_dialog_item.c:201
+msgid "Middle"
+msgstr "Сярэдняя"
+
+#: ../src/photo_config_dialog.c:279 ../src/photo_config_dialog_item.c:142
+msgid "No"
+msgstr "Не"
+
+#: ../src/photo_config_dialog.c:318
+msgid "Popups"
+msgstr "Паведамленні"
+
+#: ../src/photo_config_dialog.c:320
+msgid "Picture loader popup"
+msgstr "Паведамленні загрузчыка відарысаў"
+
+#: ../src/photo_config_dialog.c:323
+msgid "Never"
+msgstr "Ніколі"
+
+#: ../src/photo_config_dialog.c:325
+msgid "Summary"
+msgstr "Вынік"
+
+#: ../src/photo_config_dialog.c:327
+msgid "Verbose"
+msgstr "Падрабязна"
+
+#: ../src/photo_config_dialog.c:332
+msgid "Miscellaneous"
+msgstr "Рознае"
+
+#: ../src/photo_config_dialog.c:334
+msgid "Remove generated backgrounds"
+msgstr "Выдаліць створаныя фоны"
+
+#: ../src/photo_config_dialog.c:338
+msgid "Pictures viewer"
+msgstr "Праграма прагляду відарысаў"
+
+#: ../src/photo_config_dialog.c:344
+msgid "Images Quality"
+msgstr "Якасць відарысаў"
+
+#: ../src/photo_config_dialog.c:346
+#, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f пікс."
+
+#: ../src/photo_config_dialog.c:353
+msgid "Automaticly reload directories"
+msgstr "Аўтаматычна абнаўляць каталогі"
+
+#: ../src/photo_config_dialog.c:356
+msgid "when add / modify directory list"
+msgstr "пры даданні / змяненні спісу каталога"
+
+#: ../src/photo_config_dialog.h:36
+msgid "Show label"
+msgstr "Адлюстроўваць пазнаку"
+
+#: ../src/photo_config_dialog.h:38
+msgid "Show informations"
+msgstr "Адлюстроўваць звесткі"
+
+#: ../src/photo_config_dialog.h:40 ../src/photo_menu.c:45
+msgid "Previous picture"
+msgstr "Папярэдні відарыс"
+
+#: ../src/photo_config_dialog.h:42 ../src/photo_menu.c:41
+msgid "Next picture"
+msgstr "Наступны відарыс"
+
+#: ../src/photo_config_dialog.h:44
+msgid "Pause"
+msgstr "Прыпыніць"
+
+#: ../src/photo_config_dialog.h:46 ../src/photo_menu.c:59
+msgid "Set as background"
+msgstr "Усталяваць у якасці фону"
+
+#: ../src/photo_config_dialog.h:48
+msgid "Open viewer"
+msgstr "Адкрыць для прагляду"
+
+#: ../src/photo_config_dialog.h:50
+msgid "Show menu"
+msgstr "Паказаць меню"
+
+#: ../src/photo_config_dialog_dir.c:38
+msgid "Photo Directory Configuration"
+msgstr "Канфігурацыя каталога з відарысамі"
+
+#: ../src/photo_config_dialog_dir.c:118
+msgid "Directory"
+msgstr "Каталог"
+
+#: ../src/photo_config_dialog_dir.c:127
+msgid "Loading options"
+msgstr "Параметры загрузкі"
+
+#: ../src/photo_config_dialog_dir.c:129
+msgid "Recursive"
+msgstr "Рэкурсіўна"
+
+#: ../src/photo_config_dialog_dir.c:131
+msgid "Read hidden files"
+msgstr "Чытаць схаваныя файлы"
+
+#: ../src/photo_config_dialog_dir.c:158
+msgid "Photo Module Warning"
+msgstr "Папярэджанні модуля Фота"
+
+#: ../src/photo_config_dialog_item.c:48
+msgid "Photo Item Configuration"
+msgstr "Канфігурацыя фотаздымкаў"
+
+#: ../src/photo_config_dialog_item.c:112
+msgid "Timer between pictures change"
+msgstr "Час паміж зменай відарысаў"
+
+#: ../src/photo_config_dialog_item.c:114
+msgid "Activate"
+msgstr "Актываваць"
+
+#: ../src/photo_config_dialog_item.c:117
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f секунд"
+
+#: ../src/photo_config_dialog_item.c:129
+msgid "Alpha"
+msgstr "Альфа"
+
+#: ../src/photo_config_dialog_item.c:132
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: ../src/photo_config_dialog_item.c:140
+msgid "Yes"
+msgstr "Так"
+
+#: ../src/photo_config_dialog_item.c:144 ../src/photo_config_dialog_item.c:206
+msgid "Default setting"
+msgstr "Перадвызначаныя налады"
+
+#: ../src/photo_config_dialog_item.c:189
+msgid "Mouse actions"
+msgstr "Дзеянні мышы"
+
+#: ../src/photo_item.c:389
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists.</hilight><br><br>This file is in Photo "
+"module picture list, but it seems you removed it from the disk<br>It cant be "
+"set as background, sorry."
+msgstr ""
+"<hilight>Файл %s не існуе.</hilight><br><br>Гэты файл ёсць у спісе "
+"відарысаў модуля Фота, але здаецца, што вы яго выдалілі з дыску<br>Яго немагчыма " 
+"ўсталяваць у якасці фону, выбачайце."
+
+#: ../src/photo_item.c:392 ../src/photo_item.c:417 ../src/photo_item.c:455
+#: ../src/photo_item.c:475 ../src/photo_picture_local.c:259
+msgid "Photo Module Error"
+msgstr "Памылка модуля Фота"
+
+#: ../src/photo_item.c:413
+#, c-format
+msgid ""
+"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file !"
+"<br>Photo module needs e17setroot util from e_utils package to set you're "
+"picture as backgroundPlease install it and try again"
+msgstr ""
+"<hilight>Патрэбны e17setroot</hilight><br><br>%s — гэта не edje-файл !"
+"<br>Модулю Фота патрэбна ўтыліта e17setroot з пакета e_utils для ўсталявання "
+"вашага відарыса ў якасці фону. Калі ласка, усталюйце яго ды паспрабуйце ізноў."
+
+#: ../src/photo_item.c:452
+#, c-format
+msgid ""
+"<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's "
+"module picture list, but it seems you removed it from the disk.<br>It cant "
+"be set opened in a viewer, sorry."
+msgstr ""
+"<hilight>Файл %s не існуе !</hilight><br><br>Гэты файл ёсць у спісе "
+"відарысаў модуля Фота, але здаецца, што вы яго выдалілі з дыску.<br>Таму "
+"яго немагчыма адкрыць для прагляду, выбачайце."
+
+#: ../src/photo_item.c:472
+#, c-format
+msgid ""
+"<hilight>Viewer %s not found !</hilight><br><br>You can change the viewer "
+"for images in Photo module configuration panel (Advanced view)"
+msgstr ""
+"<hilight>Праграма для прагляду %s не знойдзена !</hilight><br><br>Вы можаце выбраць "
+"іншую праграму для прагляду відарысаў у наладах модуля Фота (Дадатковыя)."
+
+#: ../src/photo_menu.c:31
+msgid "Pause slideshow"
+msgstr "Прыпыніць паказ слайдаў"
+
+#: ../src/photo_menu.c:36
+msgid "Resume slideshow"
+msgstr "Працягнуць паказ слайдаў"
+
+#: ../src/photo_menu.c:55
+msgid "Picture informations"
+msgstr "Звесткі пра відарыс"
+
+#: ../src/photo_menu.c:63
+msgid "Open in"
+msgstr "Адкрыць у"
+
+#: ../src/photo_menu.c:71
+#| msgid "Mouse actions"
+msgid "Module Settings"
+msgstr "Налады модуля"
+
+#: ../src/photo_menu.c:77
+msgid "Settings"
+msgstr "Налады"
+
+#: ../src/photo_picture_histo.c:121
+msgid "Historic"
+msgstr "Гістарычны"
+
+#: ../src/photo_picture_local.c:253
+#, c-format
+msgid ""
+"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr ""
+"<hilight>Каталог %s не існуе.</hilight><br><br>Вы можаце змяніць папкі "
+"з відарысамі на галоўнай панэлі налад.<br>Відарысы могуць быць jpeg або "
+"png.<br><br>Пасля імпарту, калі вы выдаліце гэтыя файлы, відарысы ўсё яшчэ можна "
+"будзе <br>праглядаць, але вы больш не зможаце ўсталяваць іх у якасці "
+"шпалер.<br><br>"
+
+#: ../src/photo_picture_local.c:591
+msgid "Photo Module Information"
+msgstr "Звесткі пра модуль Photo"
+
+#: ../src/photo_picture_local.c:592
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time wou will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr ""
+"<hilight>Стварэнне мініяцюр</hilight><br><br>Мініяцюры некаторых відарысаў ствараюцца "
+"<hilight>ў фонавым рэжыме</hilight>.<br>На гэта можа спатрэбіцца нейкі час, затое потым "
+"загрузка будзе хутчэй ды лягчэй :)<br><br>Кожны раз пры загрузцы "
+"відарысаў, якія не былі загружаны ў модуль Фота раней,<br>будуць стварацца "
+"мініяцюры.<br><br>У час стварэння ўсплываючых падказак вы не зможаце бачыць аніякіх "
+"відарысаў у Фота.<br>Я спадзяваюся, што гэта будзе выпраўлена :)"
+
+#~ msgid "Configure Photo module"
+#~ msgstr "Канфігураванне модуля Фота"
+
+#~ msgid "Configure this Photo gadget"
+#~ msgstr "Канфігураванне гэтага гаджэта Фота"
+
+#~ msgid "Configure Gadget and Shelf"
+#~ msgstr "Канфігураванне гаджэта ды паліцы"
