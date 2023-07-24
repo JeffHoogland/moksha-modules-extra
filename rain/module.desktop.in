@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Link
 Name=Rain
+Name[be]=Дождж
 Name[ru]=Дождь
 Name[cs]=Déšť
 Name[de]=Regen
@@ -12,6 +13,7 @@ Name[pt]=Chuva
 Icon=e-module-rain
 X-Enlightenment-ModuleType=look
 Comment=Module to display rain on the desktop.
+Comment[be]=Модуль для паказу дажджу на працоўным стале.
 Comment[ru]=Модуль для показа дождя на рабочем столе.
 Comment[cs]=Zobrazí déšť na ploše.
 Comment[de]=Regen auf dem Desktop.
