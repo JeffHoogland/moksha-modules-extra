@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Rain\n"
-"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n\n"
+"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
 "POT-Creation-Date: 2023-07-24 19:30+0300\n"
 "PO-Revision-Date: 2023-07-24 19:30+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
