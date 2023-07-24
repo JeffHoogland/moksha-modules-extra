@@ -1,0 +1,84 @@
+# Russian translation of Trash module.
+# This file is put in the public domain.
+# R0bur <robursw@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: trash\n"
+"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
+"POT-Creation-Date: 2023-07-24 20:30+0300\n"
+"PO-Revision-Date: 2023-07-24 20:30+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_config.c:44
+msgid "Trash module"
+msgstr "Модуль Корзина"
+
+#: src/e_mod_config.c:85
+msgid "Setting"
+msgstr "Настройки"
+
+#: src/e_mod_config.c:87
+msgid "File manager to open the trash:"
+msgstr "Менеджер файлов для открытия корзины:"
+
+#: src/e_mod_config.c:92
+msgid "Use pcmanfm -n for opening a new instance on the current desktop"
+msgstr "Используйте pcmanfm -n для открытия нового экземпляра на текущем рабочем столе"
+
+#: src/e_mod_main.c:155 src/e_mod_main.c:205
+msgid "Trash"
+msgstr "Корзина"
+
+#: src/e_mod_main.c:202
+msgid "Advanced"
+msgstr "Дополнительные"
+
+#: src/e_mod_main.c:355
+msgid "Empty Trash"
+msgstr "Очистить корзину"
+
+#: src/e_mod_main.c:360
+msgid "Show trash"
+msgstr "Показать корзину"
+
+#: src/e_mod_main.c:365
+msgid "Settings"
+msgstr "Настройки"
+
+#: src/e_mod_main.c:412
+msgid ""
+"<b>Remove all the files and folders from the trash?</><br>All the elements "
+"currently in the trash will be irreparably lost!!!"
+msgstr ""
+"<b>Удалить из корзины все файлы и папки?</><br>Всё содержимое корзины "
+"будет утеряно безвозвратно!!!"
+
+#: src/e_mod_main.c:414 src/e_mod_main.c:507
+msgid "Cancel"
+msgstr "Отмена"
+
+#: src/e_mod_main.c:414
+msgid "Empty trash"
+msgstr "Очистить корзину"
+
+#: src/e_mod_main.c:503
+msgid "Alert"
+msgstr "Предупреждение"
+
+#: src/e_mod_main.c:504
+msgid ""
+"Some files can't be moved to trash <br>because they are not on the local "
+"filesystem.<br><br>The files will be deleted FOREVER!!!"
+msgstr ""
+"Некоторые файлы не могут быть помещены в корзину, <br>потому что их нет в локальной "
+"файловой системе. <br><br>Эти файлы будут удалены БЕЗВОЗВРАТНО!!!"
+
+#: src/e_mod_main.c:507
+msgid "Delete Files"
+msgstr "Удалить файлы"

@@ -1,0 +1,84 @@
+# Belarusian translation of Trash module.
+# This file is put in the public domain.
+# R0bur <robursw@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: trash\n"
+"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
+"POT-Creation-Date: 2023-07-24 20:30+0300\n"
+"PO-Revision-Date: 2023-07-24 20:30+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_config.c:44
+msgid "Trash module"
+msgstr "Модуль Сметніца"
+
+#: src/e_mod_config.c:85
+msgid "Setting"
+msgstr "Налады"
+
+#: src/e_mod_config.c:87
+msgid "File manager to open the trash:"
+msgstr "Кіраўнік файлаў для адкрыцця сметніцы:"
+
+#: src/e_mod_config.c:92
+msgid "Use pcmanfm -n for opening a new instance on the current desktop"
+msgstr "Выкарыстоўвайце pcmanfm -n для адкрыцця новай сметніцы на працоўным стале"
+
+#: src/e_mod_main.c:155 src/e_mod_main.c:205
+msgid "Trash"
+msgstr "Сметніца"
+
+#: src/e_mod_main.c:202
+msgid "Advanced"
+msgstr "Дадатковыя"
+
+#: src/e_mod_main.c:355
+msgid "Empty Trash"
+msgstr "Спустошыць сметніцу"
+
+#: src/e_mod_main.c:360
+msgid "Show trash"
+msgstr "Паказаць смецце"
+
+#: src/e_mod_main.c:365
+msgid "Settings"
+msgstr "Налады"
+
+#: src/e_mod_main.c:412
+msgid ""
+"<b>Remove all the files and folders from the trash?</><br>All the elements "
+"currently in the trash will be irreparably lost!!!"
+msgstr ""
+"<b>Выдаліць з сметніцы ўсе файлы ды папкі?</><br>Усё змесціва сметніцы "
+"будзе страчана незваротна!!!"
+
+#: src/e_mod_main.c:414 src/e_mod_main.c:507
+msgid "Cancel"
+msgstr "Скасаваць"
+
+#: src/e_mod_main.c:414
+msgid "Empty trash"
+msgstr "Спустошыць сметніцу"
+
+#: src/e_mod_main.c:503
+msgid "Alert"
+msgstr "Папярэджанне"
+
+#: src/e_mod_main.c:504
+msgid ""
+"Some files can't be moved to trash <br>because they are not on the local "
+"filesystem.<br><br>The files will be deleted FOREVER!!!"
+msgstr ""
+"Некаторыя файлы немагчыма  перамясціць у сметніцу, <br>таму што іх няма ў лакальнай "
+"файлавай сістэме. <br><br>Гэтыя файлы будуць выдалены НЕЗВАРОТНА!!!"
+
+#: src/e_mod_main.c:507
+msgid "Delete Files"
+msgstr "Выдаліць файлы"
