@@ -357,7 +357,7 @@ msgstr "Налады"
 
 #: ../src/photo_picture_histo.c:121
 msgid "Historic"
-msgstr "Гістарычны"
+msgstr "Гісторыя"
 
 #: ../src/photo_picture_local.c:253
 #, c-format
