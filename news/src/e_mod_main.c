@@ -7,6 +7,8 @@
    return NULL;                       \
 }
 
+News *news;
+
 /* module requirements */
 EAPI E_Module_Api e_modapi = 
    {
