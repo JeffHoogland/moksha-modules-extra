@@ -3,6 +3,7 @@ Type=Link
 Name=Winlist NG
 Icon=e-module-ng
 Comment=<hilight>Winlist Switcher Module</hilight><br>Configure it with: <br> Config Panel > Extensions > Winlist NG
+Comment[be]=<hilight>Модуль пераключэння вокнаў</hilight><br>Канфігуруйце яго праз: <br> Панэль наладаў > Пашырэнні > Winlist NG
 Comment[ru]=<hilight>Модуль переключения окон</hilight><br>Конфигурация через: Панель параметров → Расширения → Winlist NG
 Comment[es]=<hilight>Módulo alternador de ventanas</hilight><br>Configúrelo desde: <br> Panel de configuración > Extensiones > Winlist NG
 Comment[gl]=<hilight>Módulo para alternar as xanelas</hilight><br>Configúreo dende: <br> Panel de configuración > Extensións > Winlist NG
