@@ -94,29 +94,29 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
 
    if (cfdata->disks)
      {
-		EINA_LIST_FOREACH(cfdata->disks, l, disk)
-		  {
-		     pos++;
+        EINA_LIST_FOREACH(cfdata->disks, l, disk)
+          {
+             pos++;
 
-			 snprintf (path, sizeof (path), "/sys/block/%s/device", disk);
-			 if (!ecore_file_exists(path)) continue;
+             snprintf (path, sizeof (path), "/sys/block/%s/device", disk);
+             if (!ecore_file_exists(path)) continue;
 
-			 ob = e_widget_radio_add (evas, D_ (disk), pos, rg);
-			 if (strcmp(disk, ci->disk)==0)
-			   {
-			 	  e_widget_radio_toggle_set(ob, 1);
-				  disk_found = 1;
-			   }
-			 e_widget_framelist_object_append(of, ob);
-		  }
+             ob = e_widget_radio_add (evas, D_ (disk), pos, rg);
+             if (strcmp(disk, ci->disk)==0)
+               {
+                  e_widget_radio_toggle_set(ob, 1);
+                  disk_found = 1;
+               }
+             e_widget_framelist_object_append(of, ob);
+          }
      }
 
    if (!disk_found)
-	 {
-		ob = e_widget_radio_add (evas, D_ (ci->disk), -1, rg);
-		e_widget_radio_toggle_set(ob, 1);
-		e_widget_framelist_object_append(of, ob);
-	 }
+     {
+        ob = e_widget_radio_add (evas, D_ (ci->disk), -1, rg);
+        e_widget_radio_toggle_set(ob, 1);
+        e_widget_framelist_object_append(of, ob);
+     }
 
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
@@ -134,17 +134,17 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    ci = cfd->data;
 
    for (l = cfdata->disks; l; l = eina_list_next(l))
-	 {
-	    disk = eina_list_data_get(l);
+     {
+        disk = eina_list_data_get(l);
         pos++;
 
-	    if (pos == cfdata->diskpos)
-		  {
-			 if (ci->disk) eina_stringshare_del(ci->disk);
-			 ci->disk = eina_stringshare_add(disk);
-			 break;
-		  }
-	}
+        if (pos == cfdata->diskpos)
+          {
+             if (ci->disk) eina_stringshare_del(ci->disk);
+             ci->disk = eina_stringshare_add(disk);
+             break;
+          }
+    }
 
    e_config_save_queue();
    return 1;

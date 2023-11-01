@@ -96,19 +96,19 @@ e_modapi_init(E_Module *m)
           {
              /* config too old */
              _diskio_conf_free();
-			 ecore_timer_add(1.0, _diskio_conf_timer,
-							 "DiskIO Module Configuration data needed "
-							 "upgrading. Your old configuration<br> has been"
-							 " wiped and a new set of defaults initialized. "
-							 "This<br>will happen regularly during "
-							 "development, so don't report a<br>bug. "
-							 "This simply means the module needs "
-							 "new configuration<br>data by default for "
-							 "usable functionality that your old<br>"
-							 "configuration simply lacks. This new set of "
-							 "defaults will fix<br>that by adding it in. "
-							 "You can re-configure things now to your<br>"
-							 "liking. Sorry for the inconvenience.<br>");
+             ecore_timer_add(1.0, _diskio_conf_timer,
+                             "DiskIO Module Configuration data needed "
+                             "upgrading. Your old configuration<br> has been"
+                             " wiped and a new set of defaults initialized. "
+                             "This<br>will happen regularly during "
+                             "development, so don't report a<br>bug. "
+                             "This simply means the module needs "
+                             "new configuration<br>data by default for "
+                             "usable functionality that your old<br>"
+                             "configuration simply lacks. This new set of "
+                             "defaults will fix<br>that by adding it in. "
+                             "You can re-configure things now to your<br>"
+                             "liking. Sorry for the inconvenience.<br>");
           }
 
         /* Ardvarks */
@@ -116,17 +116,17 @@ e_modapi_init(E_Module *m)
           {
              /* config too new...wtf ? */
              _diskio_conf_free();
-			 ecore_timer_add(1.0, _diskio_conf_timer, 
-							 "Your DiskIO Module configuration is NEWER "
-							 "than the module version. This is "
-							 "very<br>strange. This should not happen unless"
-							 " you downgraded<br>the module or "
-							 "copied the configuration from a place where"
-							 "<br>a newer version of the module "
-							 "was running. This is bad and<br>as a "
-							 "precaution your configuration has been now "
-							 "restored to<br>defaults. Sorry for the "
-							 "inconvenience.<br>");
+             ecore_timer_add(1.0, _diskio_conf_timer, 
+                             "Your DiskIO Module configuration is NEWER "
+                             "than the module version. This is "
+                             "very<br>strange. This should not happen unless"
+                             " you downgraded<br>the module or "
+                             "copied the configuration from a place where"
+                             "<br>a newer version of the module "
+                             "was running. This is bad and<br>as a "
+                             "precaution your configuration has been now "
+                             "restored to<br>defaults. Sorry for the "
+                             "inconvenience.<br>");
           }
      }
 
@@ -248,7 +248,7 @@ _diskio_set(void *data)
    char buffer[128];
    char path[128];
    unsigned long dummy0, dummy1, dummy2, dummy3, dummy4, dummy5,
-				 dummy6, dummy7, dummy8, bytes_r_new=0, bytes_w_new=0;
+                 dummy6, dummy7, dummy8, bytes_r_new=0, bytes_w_new=0;
 
    inst = data;
    if (!inst) return EINA_TRUE;
@@ -260,14 +260,15 @@ _diskio_set(void *data)
    snprintf (path, sizeof (path), "/sys/block/%s/stat", inst->conf_item->disk);
    statfile = fopen(path, "r");
    if (!statfile)
-	 { 
+     { 
         edje_object_signal_emit(inst->o_diskio, "read,off", "");
         edje_object_signal_emit(inst->o_diskio, "write,off", "");
-		return EINA_TRUE;
-	 }
+        return EINA_TRUE;
+     }
 
    if (fgets(buffer, sizeof(buffer), statfile)!=NULL)
-       sscanf(buffer, "%lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu", &dummy0, &dummy1, &bytes_r_new, &dummy2, &dummy3, &dummy4, &bytes_w_new, &dummy5, &dummy6, &dummy7, &dummy8);
+       sscanf(buffer, "%lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu", &dummy0, 
+       &dummy1, &bytes_r_new, &dummy2, &dummy3, &dummy4, &bytes_w_new, &dummy5, &dummy6, &dummy7, &dummy8);
 
    fclose (statfile);
 
@@ -275,21 +276,21 @@ _diskio_set(void *data)
      {
         edje_object_signal_emit(inst->o_diskio, "read,off", "");
         edje_object_signal_emit(inst->o_diskio, "write,off", "");
-	    return EINA_TRUE;
-	 }
+        return EINA_TRUE;
+     }
 
    if (inst->bytes_r != bytes_r_new)
      {
         edje_object_signal_emit(inst->o_diskio, "read,on", "");
-		inst->bytes_r = bytes_r_new;
+        inst->bytes_r = bytes_r_new;
      }
    else
      edje_object_signal_emit(inst->o_diskio, "read,off", "");
 
    if (inst->bytes_w != bytes_w_new)
      {
-		edje_object_signal_emit(inst->o_diskio, "write,on", "");
-		inst->bytes_w = bytes_w_new;
+        edje_object_signal_emit(inst->o_diskio, "write,on", "");
+        inst->bytes_w = bytes_w_new;
      }
    else
      edje_object_signal_emit(inst->o_diskio, "write,off", "");
@@ -306,7 +307,7 @@ _gc_shutdown(E_Gadcon_Client *gcc)
    if (!(inst = gcc->data)) return;
    instances = eina_list_remove(instances, inst);
 
-	/* Delete diskstat update timer */
+   /* Delete diskstat update timer */
    if (inst->timer) ecore_timer_del(inst->timer);
 
    /* kill popup menu */
