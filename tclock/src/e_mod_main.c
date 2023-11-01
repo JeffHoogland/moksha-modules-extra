@@ -118,8 +118,8 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 
    if (eina_list_count(tclock_config->instances) <= 0) 
      {
-	if (check_timer) ecore_timer_del(check_timer);
-	check_timer = NULL;
+       if (check_timer) ecore_timer_del(check_timer);
+       check_timer = NULL;
      }
 
    E_FREE(inst);
