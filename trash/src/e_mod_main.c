@@ -118,7 +118,6 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
                                            _trash_dnd_cb_leave, _trash_dnd_cb_drop,
                                            drop, 1, x, y, w,  h);
 
-
    evas_object_event_callback_add(inst->o_trash, EVAS_CALLBACK_MOUSE_DOWN,
                                   _trash_button_cb_mouse_down, inst);
    evas_object_event_callback_add(inst->o_trash, EVAS_CALLBACK_MOVE,
@@ -199,10 +198,10 @@ e_modapi_init(E_Module *m)
    icon = eina_stringshare_add(buf);
 
    //~ instances = NULL;
-    e_configure_registry_category_add("advanced", 80, D_("Advanced"), 
+   e_configure_registry_category_add("advanced", 80, D_("Advanced"), 
                                      NULL, "preferences-advanced");
                                      
-    e_configure_registry_item_add("advanced/trash", 110, D_("Trash"), 
+   e_configure_registry_item_add("advanced/trash", 110, D_("Trash"), 
                                  NULL, buf, e_int_config_trash_module);
                                  
    conf_item_edd = E_CONFIG_DD_NEW("Config_Item", Config_Item);
@@ -212,7 +211,6 @@ e_modapi_init(E_Module *m)
    #define D conf_item_edd
    E_CONFIG_VAL(D, T, id, STR);
    E_CONFIG_VAL(D, T, switch2, INT);
-   
 
    conf_edd = E_CONFIG_DD_NEW("Config", Config);
    #undef T
@@ -248,7 +246,7 @@ e_modapi_init(E_Module *m)
    e_gadcon_provider_register(&_gadcon_class);
    snprintf(buf, sizeof(buf), "%s/files", efreet_trash_dir_get(NULL));
    monitor = ecore_file_monitor_add(buf, _trash_monitor_cb, NULL);
-   
+
    return m;
 }
 
@@ -303,7 +301,7 @@ e_modapi_shutdown(E_Module *m)
 EAPI int
 e_modapi_save(E_Module *m)
 {
-    e_config_domain_save("module.trash", conf_edd, trash_conf);
+   e_config_domain_save("module.trash", conf_edd, trash_conf);
    return 1;
 }
 
@@ -410,10 +408,10 @@ _trash_cb_menu_empty(void *data, E_Menu *m, E_Menu_Item *mi)
 
    E_Confirm_Dialog *dialog;
    dialog = e_confirm_dialog_show("", NULL,
-                     D_("<b>Remove all the files and folders from the trash?</><br>"
-                     "All the elements currently in the trash will be irreparably lost!!!"),
-                     D_("Cancel"), D_("Empty trash"), 
-                     NULL, _trash_cb_menu_empty_ok, NULL, NULL, NULL, NULL);
+      D_("<b>Remove all the files and folders from the trash?</><br>"
+         "All the elements currently in the trash will be irreparably lost!!!"),
+      D_("Cancel"), D_("Empty trash"), 
+      NULL, _trash_cb_menu_empty_ok, NULL, NULL, NULL, NULL);
 }
 
 static void 
@@ -575,7 +573,7 @@ _trash_conf_new(void)
    IFMODCFG(0x008d);
    //~ trash_conf->switch1 = 1;
    trash_conf->fileman = eina_stringshare_add("Thunar");
-   
+
    _trash_conf_item_get(NULL);
    IFMODCFGEND;
    trash_conf->version = MOD_CONFIG_FILE_VERSION;

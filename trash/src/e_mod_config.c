@@ -83,7 +83,7 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
    o = e_widget_list_add(evas, 0, 0);
 
    of = e_widget_frametable_add(evas, D_("Setting"), 0);
-      
+
    ow = e_widget_label_add(evas, D_("File manager to open the trash:"));
    e_widget_frametable_object_append(of, ow, 0, 0, 1, 1, 1, 0, 1, 0);
    ow = e_widget_entry_add(evas, &cfdata->fileman, NULL, NULL, NULL);
@@ -103,8 +103,8 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    if (trash_conf->fileman) eina_stringshare_del(trash_conf->fileman);
    if (cfdata->fileman)
        trash_conf->fileman = eina_stringshare_add(cfdata->fileman);
-   
+
    e_config_save_queue();
-   
+
    return 1;
 }
