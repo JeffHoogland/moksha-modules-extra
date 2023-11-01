@@ -94,11 +94,11 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    length = strlen(e_module_dir_get(calendar_conf->module));
    inst->edje_module = malloc(length + 14);
    snprintf(inst->edje_module, length + 14, "%s/calendar.edj",
-	    e_module_dir_get(calendar_conf->module));
+            e_module_dir_get(calendar_conf->module));
 
    calendar->o_icon = edje_object_add(gc->evas);
    if (!e_theme_edje_object_set(calendar->o_icon,
-				"base/theme/modules/calendar", "modules/calendar/main"))
+                               "base/theme/modules/calendar", "modules/calendar/main"))
      edje_object_file_set(calendar->o_icon, inst->edje_module, "modules/calendar/main");
    evas_object_show(calendar->o_icon);
 
@@ -109,11 +109,11 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
 
    calendar_conf->instances = eina_list_append(calendar_conf->instances, inst);
    evas_object_event_callback_add(calendar->o_icon, EVAS_CALLBACK_MOUSE_IN,
-				   _cb_mouse_in, inst);
+                                  _cb_mouse_in, inst);
    evas_object_event_callback_add(calendar->o_icon, EVAS_CALLBACK_MOUSE_OUT,
-				   _cb_mouse_out, inst);
+                                  _cb_mouse_out, inst);
    evas_object_event_callback_add(calendar->o_icon, EVAS_CALLBACK_MOUSE_DOWN,
-				  _cb_mouse_down, inst);
+                                  _cb_mouse_down, inst);
 
    _update_calendar_sheet(inst);
    return gcc;
@@ -168,7 +168,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 
    if (!calendar_conf->module) return NULL;
    snprintf(buf, sizeof(buf), "%s/e-module-calendar.edj",
-	    e_module_dir_get(calendar_conf->module));
+            e_module_dir_get(calendar_conf->module));
 
    o = edje_object_add(evas);
    edje_object_file_set(o, buf, "icon");
@@ -186,10 +186,10 @@ _gc_id_new(const E_Gadcon_Client_Class *client_class)
    /* Create id */
    if (calendar_conf->items)
      {
-	const char *p;
-	ci = eina_list_data_get(eina_list_last(calendar_conf->items));
-	p = strrchr(ci->id, '.');
-	if (p) num = atoi(p + 1) + 1;
+        const char *p;
+        ci = eina_list_data_get(eina_list_last(calendar_conf->items));
+        p = strrchr(ci->id, '.');
+        if (p) num = atoi(p + 1) + 1;
      }
    snprintf(buf, sizeof(buf), "%s.%d", _gc_class.name, num);
    id = eina_stringshare_add(buf);
@@ -205,28 +205,28 @@ _config_item_get(const char *id)
 
    if (!id)
      {
-	int  num = 0;
+        int  num = 0;
 
-	/* Create id */
-	if (calendar_conf->items)
-	  {
-	     const char *p;
-	     ci = eina_list_last(calendar_conf->items)->data;
-	     p = strrchr(ci->id, '.');
-	     if (p) num = atoi(p + 1) + 1;
-	  }
-	snprintf(buf, sizeof(buf), "%s.%d", _gc_class.name, num);
-	id = buf;
+        /* Create id */
+        if (calendar_conf->items)
+          {
+             const char *p;
+             ci = eina_list_last(calendar_conf->items)->data;
+             p = strrchr(ci->id, '.');
+             if (p) num = atoi(p + 1) + 1;
+          }
+        snprintf(buf, sizeof(buf), "%s.%d", _gc_class.name, num);
+        id = buf;
      }
    else
      {
-	for (l = calendar_conf->items; l; l = l->next) 
-	  {
-	     ci = l->data;
-	     if (!ci->id) continue;
-	     if (!strcmp(ci->id, id))
-	       return ci;
-	  }
+        for (l = calendar_conf->items; l; l = l->next) 
+          {
+             ci = l->data;
+             if (!ci->id) continue;
+             if (!strcmp(ci->id, id))
+               return ci;
+          }
      }
 
    ci = E_NEW(Config_Item, 1);
@@ -257,8 +257,8 @@ _update_date(void *data)
 
    EINA_LIST_FOREACH(calendar_conf->instances, l, inst)
      {
-	if (!inst) continue;
-	_update_calendar_sheet(inst);
+        if (!inst) continue;
+        _update_calendar_sheet(inst);
      }
 
    return EINA_TRUE;
@@ -353,8 +353,8 @@ _month_minus(void *data, __UNUSED__ Evas_Object *obj, __UNUSED__ const char *emi
    inst->displayed_time.tm_mday = 1;
    if (inst->displayed_time.tm_mon < 0)
      {
-	inst->displayed_time.tm_mon = 11;
-	inst->displayed_time.tm_year--;
+        inst->displayed_time.tm_mon = 11;
+        inst->displayed_time.tm_year--;
      }
    _calendar_popup_content_update(inst);
 }
@@ -368,8 +368,8 @@ _month_plus(void *data, __UNUSED__ Evas_Object *obj, __UNUSED__ const char *emis
    inst->displayed_time.tm_mday = 1;
    if (inst->displayed_time.tm_mon > 11)
      {
-	inst->displayed_time.tm_mon = 0;
-	inst->displayed_time.tm_year++;
+        inst->displayed_time.tm_mon = 0;
+        inst->displayed_time.tm_year++;
      }
    _calendar_popup_content_update(inst);
 }
@@ -414,45 +414,45 @@ _calendar_popup_content_populate(Instance *inst, struct tm *time)
    day = inst->ci->firstweekday;
    for (col = 0; col < sizeof (days) / sizeof (char *); ++col)
      {
-	o = e_widget_label_add(evas, days[(col + inst->ci->firstweekday) % (sizeof (days) / sizeof (char *))]);
-	e_widget_table_object_append(table, o, col, 0, 1, 1, 0, 0, 0, 0);
+        o = e_widget_label_add(evas, days[(col + inst->ci->firstweekday) % (sizeof (days) / sizeof (char *))]);
+        e_widget_table_object_append(table, o, col, 0, 1, 1, 0, 0, 0, 0);
      }
 
    /* output days */
    day = 0;
    for (row = 1; row <= 6; row++)
      {
-	for (col = 0; col <= 6; col++)
-	  {
-	     int cday = 0;
+        for (col = 0; col <= 6; col++)
+          {
+             int cday = 0;
 
-	     if (!day) if (col == startwd) day = 1;
+             if (!day) if (col == startwd) day = 1;
 
-	     cday = day;
-	     if (day && (day <= maxdays))
-	       snprintf(buf, sizeof(buf), "%02d", day++);
-	     else
-	       buf[0] = 0;
+             cday = day;
+             if (day && (day <= maxdays))
+               snprintf(buf, sizeof(buf), "%02d", day++);
+             else
+               buf[0] = 0;
 
-	     if (cday == inst->current_time.tm_mday
-		 && month == inst->current_time.tm_mon
-		 && time->tm_year == inst->current_time.tm_year)
-	       {
-		  o = inst->calendar->o_today = edje_object_add(evas);
+             if (cday == inst->current_time.tm_mday
+                 && month == inst->current_time.tm_mon
+                 && time->tm_year == inst->current_time.tm_year)
+               {
+                  o = inst->calendar->o_today = edje_object_add(evas);
 
-		  if (!e_theme_edje_object_set(o,
-			  "base/theme/modules/calendar", "modules/calendar/today"))
-		    edje_object_file_set(o, inst->edje_module, "modules/calendar/today");
-		  edje_object_part_text_set(o, "e.text.label", buf);
-		  evas_object_show(o);
+                  if (!e_theme_edje_object_set(o,
+                        "base/theme/modules/calendar", "modules/calendar/today"))
+                    edje_object_file_set(o, inst->edje_module, "modules/calendar/today");
+                  edje_object_part_text_set(o, "e.text.label", buf);
+                  evas_object_show(o);
 
-		  e_widget_sub_object_add(table, o);
-	       }
-	     else
-	       o = e_widget_label_add(evas, buf);
-	     e_widget_table_object_append(table, o, col, row, 1, 1, 0, 0, 0, 0);
-	}
-	if (day > maxdays+1) break;
+                  e_widget_sub_object_add(table, o);
+               }
+             else
+               o = e_widget_label_add(evas, buf);
+             e_widget_table_object_append(table, o, col, row, 1, 1, 0, 0, 0, 0);
+          }
+        if (day > maxdays+1) break;
      }
 
    e_widget_list_object_append(inst->list, table, 1, 1, 0.5);
@@ -489,8 +489,8 @@ _calendar_popup_content_create(Instance *inst)
 
    oe = edje_object_add(evas);
    if (!e_theme_edje_object_set(oe,
-				"base/theme/modules/calendar",
-				"modules/calendar/header"))
+                                "base/theme/modules/calendar",
+                                "modules/calendar/header"))
      edje_object_file_set(oe, inst->edje_module, "modules/calendar/header");
    edje_object_part_swallow(oe, "content", label);
    edje_object_signal_callback_add(oe, "day", "today", _day_today, inst);
@@ -534,22 +534,22 @@ _cb_action(E_Object *obj, const char *params)
 
    EINA_LIST_FOREACH(calendar_conf->instances, l, inst)
      {
-	if (!inst) continue;
-	if (!inst->popup) continue;
+        if (!inst) continue;
+        if (!inst->popup) continue;
 
-	evas_object_geometry_get(inst->calendar->o_icon, NULL, NULL, &w, &h);
-	if (w == 0 || h == 0) continue ;
+        evas_object_geometry_get(inst->calendar->o_icon, NULL, NULL, &w, &h);
+        if (w == 0 || h == 0) continue ;
 
-	if (inst->popup->win->visible)
-	  {
-	     e_gadcon_popup_toggle_pinned(inst->popup);
-	     e_gadcon_popup_hide(inst->popup);
-	  }
-	else
-	  {
-	     e_gadcon_popup_toggle_pinned(inst->popup);
-	     e_gadcon_popup_show(inst->popup);
-	  }
+        if (inst->popup->win->visible)
+          {
+             e_gadcon_popup_toggle_pinned(inst->popup);
+             e_gadcon_popup_hide(inst->popup);
+          }
+        else
+          {
+             e_gadcon_popup_toggle_pinned(inst->popup);
+             e_gadcon_popup_show(inst->popup);
+          }
      }
 }
 
@@ -581,48 +581,48 @@ _cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
    ev = event_info;
    if (ev->button == 1)
      {
-	e_gadcon_popup_toggle_pinned(inst->popup);
+        e_gadcon_popup_toggle_pinned(inst->popup);
      }
    if ((ev->button == 3) && (!calendar_conf->menu))
      {
-	E_Menu *m, *mo;
-	E_Menu_Item *mi;
-	int cx, cy, cw, ch;
+        E_Menu *m, *mo;
+        E_Menu_Item *mi;
+        int cx, cy, cw, ch;
 
-	m = e_menu_new();
+        m = e_menu_new();
 
-	mo = e_menu_new();
-	calendar_conf->menu_firstweekday = mo;
+        mo = e_menu_new();
+        calendar_conf->menu_firstweekday = mo;
 
-	mi = e_menu_item_new(mo);
-	e_menu_item_label_set(mi, D_("Sunday"));
-	e_menu_item_radio_set(mi, 1);
-	e_menu_item_radio_group_set(mi, 1);
-	if (!inst->ci->firstweekday) e_menu_item_toggle_set(mi, 1);
-	e_menu_item_callback_set(mi, _calendar_firstweekday_su, inst);
+        mi = e_menu_item_new(mo);
+        e_menu_item_label_set(mi, D_("Sunday"));
+        e_menu_item_radio_set(mi, 1);
+        e_menu_item_radio_group_set(mi, 1);
+        if (!inst->ci->firstweekday) e_menu_item_toggle_set(mi, 1);
+        e_menu_item_callback_set(mi, _calendar_firstweekday_su, inst);
 
-	mi = e_menu_item_new(mo);
-	e_menu_item_label_set(mi, D_("Monday"));
-	e_menu_item_radio_set(mi, 1);
-	e_menu_item_radio_group_set(mi, 1);
-	if (inst->ci->firstweekday == 1) e_menu_item_toggle_set(mi, 1);
-	e_menu_item_callback_set(mi, _calendar_firstweekday_mo, inst);
+        mi = e_menu_item_new(mo);
+        e_menu_item_label_set(mi, D_("Monday"));
+        e_menu_item_radio_set(mi, 1);
+        e_menu_item_radio_group_set(mi, 1);
+        if (inst->ci->firstweekday == 1) e_menu_item_toggle_set(mi, 1);
+        e_menu_item_callback_set(mi, _calendar_firstweekday_mo, inst);
 
-	mi = e_menu_item_new(m);
-	e_menu_item_label_set(mi, D_("First Day of Week"));
-	e_util_menu_item_theme_icon_set(mi, "preferences-system");
-	e_menu_item_submenu_set(mi, calendar_conf->menu_firstweekday);
+        mi = e_menu_item_new(m);
+        e_menu_item_label_set(mi, D_("First Day of Week"));
+        e_util_menu_item_theme_icon_set(mi, "preferences-system");
+        e_menu_item_submenu_set(mi, calendar_conf->menu_firstweekday);
 
-	m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-	e_menu_post_deactivate_callback_set(m, _menu_cb_post, inst);
-	calendar_conf->menu = m;
-	e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &cx, &cy, &cw, &ch);
-	e_menu_activate_mouse(m,
-			      e_util_zone_current_get(e_manager_current_get()),
-			      cx + ev->output.x, cy + ev->output.y, 1, 1,
-			      E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
+        m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
+        e_menu_post_deactivate_callback_set(m, _menu_cb_post, inst);
+        calendar_conf->menu = m;
+        e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &cx, &cy, &cw, &ch);
+        e_menu_activate_mouse(m,
+                              e_util_zone_current_get(e_manager_current_get()),
+                              cx + ev->output.x, cy + ev->output.y, 1, 1,
+                              E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
         evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
-				 EVAS_BUTTON_NONE, ev->timestamp, NULL);
+                                 EVAS_BUTTON_NONE, ev->timestamp, NULL);
      }
 }
 
@@ -693,10 +693,10 @@ e_modapi_init(E_Module *m)
    act = e_action_add("calendar");
    if (act)
      {
-	act->func.go = _cb_action;
-	e_action_predef_name_set(D_("Calendar"),
-				 D_("Monthview Popup (Show/Hide)"),
-				 "calendar", "<none>", NULL, 0);
+        act->func.go = _cb_action;
+        e_action_predef_name_set(D_("Calendar"),
+                                 D_("Monthview Popup (Show/Hide)"),
+                                    "calendar", "<none>", NULL, 0);
      }
    calendar_conf->timer = ecore_timer_add(1, _update_date, calendar_conf);
    return m;
@@ -711,20 +711,20 @@ e_modapi_shutdown(E_Module *m)
    /* remove module-supplied action */
    if (act)
      {
-	e_action_predef_name_del(D_("Calendar"), D_("Monthview Popup (Show/Hide)"));
-	e_action_del("calendar");
-	act = NULL;
+        e_action_predef_name_del(D_("Calendar"), D_("Monthview Popup (Show/Hide)"));
+        e_action_del("calendar");
+        act = NULL;
      }
 
    while (calendar_conf->items)
      {
-	Config_Item *ci;
+        Config_Item *ci;
 
-	ci = calendar_conf->items->data;
-	if (ci->id)
-	  eina_stringshare_del(ci->id);
-	calendar_conf->items = eina_list_remove_list(calendar_conf->items, calendar_conf->items);
-	E_FREE(ci);
+        ci = calendar_conf->items->data;
+        if (ci->id)
+          eina_stringshare_del(ci->id);
+        calendar_conf->items = eina_list_remove_list(calendar_conf->items, calendar_conf->items);
+        E_FREE(ci);
      }
 
    E_FREE(calendar_conf);
