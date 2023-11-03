@@ -42,7 +42,7 @@ _configure_net_module(void *data)
             e_module_dir_get(net_cfg->mod));
    con = e_container_current_get(e_manager_current_get());
    cfd = e_config_dialog_new(con, D_("Net Module Settings"), "Net", 
-			     "_e_modules_netmod_config_dialog", buf, 0, v, ci);
+                 "_e_modules_netmod_config_dialog", buf, 0, v, ci);
    net_cfg->cfd = cfd;
 }
 
@@ -75,11 +75,11 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
    Eina_List *l;
    char *tmp;
    int i = 0;
-   
+
    cfdata->device = NULL;
    if (ci->device) 
      cfdata->device = strdup(ci->device);
-   
+
    cfdata->app = NULL;
    if (ci->app)
      cfdata->app = strdup(ci->app);
@@ -87,18 +87,18 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
    cfdata->show_text = ci->show_text;
    cfdata->show_popup = ci->show_popup;
    cfdata->limit = ci->limit;
-   
+
    cfdata->devs = _net_config_devices_get();
    if (!cfdata->devs) return;
    EINA_LIST_FOREACH(cfdata->devs, l, tmp)
      {
-	if (!cfdata->device) continue;
-	if (!strcmp(cfdata->device, tmp)) 
-	  {
-	     cfdata->num = i;
-	     break;
-	  }
-	i++;
+       if (!cfdata->device) continue;
+       if (!strcmp(cfdata->device, tmp))
+         {
+           cfdata->num = i;
+           break;
+         }
+       i++;
      }
 }
 
@@ -135,16 +135,16 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
    if (!cfdata->devs) return o;
-   
+
    of = e_widget_framelist_add(evas, D_("Device Settings"), 0);
    rg = e_widget_radio_group_new(&(cfdata->num));
    EINA_LIST_FOREACH(cfdata->devs, l, tmp)
      {
-	ob = e_widget_radio_add(evas, tmp, i, rg);
-	e_widget_framelist_object_append(of, ob);
-	i++;
+       ob = e_widget_radio_add(evas, tmp, i, rg);
+       e_widget_framelist_object_append(of, ob);
+       i++;
      }
-   
+
    e_widget_list_object_append(o, of, 1, 1, 0.5);
    return o;
 }
@@ -159,8 +159,8 @@ _apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    tmp = eina_list_nth(cfdata->devs, cfdata->num);
    if (tmp) 
      {
-	eina_stringshare_del(ci->device);
-	ci->device = eina_stringshare_add(tmp);
+       eina_stringshare_del(ci->device);
+       ci->device = eina_stringshare_add(tmp);
      }
    ci->limit = cfdata->limit;
    ci->show_text = cfdata->show_text;

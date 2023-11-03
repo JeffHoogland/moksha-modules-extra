@@ -51,25 +51,25 @@ _net_cb_poll(void *data)
    char dev[64];
    bytes_t dummy = 0;
    int found = 0;
-    
+
    f = fopen("/proc/net/dev", "r");
    if (!f) return EINA_TRUE;
 
    while (fgets(buf, 256, f))
      {
-	int i = 0;
+        int i = 0;
 
-	for (; buf[i] != 0; i++)
-	  if (buf[i] == ':') buf[i] = ' ';
-	
-	if (sscanf (buf, "%s %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu "
-		    "%lu %lu %lu %lu\n", dev, &in, &dummy, &dummy,
-		    &dummy, &dummy, &dummy, &dummy, &dummy, &out, &dummy,
-		    &dummy, &dummy, &dummy, &dummy, &dummy, &dummy) < 17)
-	  continue;
+        for (; buf[i] != 0; i++)
+          if (buf[i] == ':') buf[i] = ' ';
 
-	if (!strcmp(dev, inst->ci->device)) found = 1;
-	if (found) break;
+        if (sscanf (buf, "%s %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu "
+                    "%lu %lu %lu %lu\n", dev, &in, &dummy, &dummy,
+                    &dummy, &dummy, &dummy, &dummy, &dummy, &out, &dummy,
+                    &dummy, &dummy, &dummy, &dummy, &dummy, &dummy) < 17)
+          continue;
+
+        if (!strcmp(dev, inst->ci->device)) found = 1;
+        if (found) break;
      }
    fclose(f);
    if (!found) return EINA_TRUE;
@@ -82,9 +82,9 @@ _net_cb_poll(void *data)
 
    ifmd = malloc(sizeof(struct ifmibdata));
    for(i=1; i <= count; ++i)
-     { 
-	get_ifmib_general(i, ifmd);
-	if (!strcmp(ifmd->ifmd_name, inst->ci->device)) break;
+     {
+        get_ifmib_general(i, ifmd);
+        if (!strcmp(ifmd->ifmd_name, inst->ci->device)) break;
      }
 
    in = ifmd->ifmd_data.ifi_ibytes; 
@@ -114,19 +114,19 @@ _net_cb_poll(void *data)
    edje_object_part_text_set(inst->o_net, "e.text.recv", buf);
    if (inst->popup) 
      {
-	_bytes_to_string(in, tmp, sizeof(tmp));
-	snprintf(popbuf, sizeof(popbuf), "Rx: %s", tmp);
-	edje_object_part_text_set(inst->pop_bg, "e.text.recv", popbuf);
+        _bytes_to_string(in, tmp, sizeof(tmp));
+        snprintf(popbuf, sizeof(popbuf), "Rx: %s", tmp);
+        edje_object_part_text_set(inst->pop_bg, "e.text.recv", popbuf);
      }
-   
+
    _bytes_to_string(bout, tmp, sizeof(tmp));
    snprintf(buf, sizeof(buf), "%s/s", tmp);
    edje_object_part_text_set(inst->o_net, "e.text.send", buf);
    if (inst->popup) 
      {
-	_bytes_to_string(out, tmp, sizeof(tmp));
-	snprintf(popbuf, sizeof(popbuf), "Tx: %s", tmp);
-	edje_object_part_text_set(inst->pop_bg, "e.text.send", popbuf);
+        _bytes_to_string(out, tmp, sizeof(tmp));
+        snprintf(popbuf, sizeof(popbuf), "Tx: %s", tmp);
+        edje_object_part_text_set(inst->pop_bg, "e.text.send", popbuf);
      }
    
    return EINA_TRUE;
@@ -138,39 +138,39 @@ _net_cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, void *event)
    Instance *inst;
    Ecore_Exe *x;
    Evas_Event_Mouse_Down *ev;
-   
+
    inst = data;
    ev = event;
-   if ((ev->button == 1) && (ev->flags & EVAS_BUTTON_DOUBLE_CLICK)) 
+   if ((ev->button == 1) && (ev->flags & EVAS_BUTTON_DOUBLE_CLICK))
      {
-	if (inst->ci->app) 
-	  {
-	     x = ecore_exe_run(inst->ci->app, NULL);
-	     if (x) ecore_exe_free(x);
-	  }
+        if (inst->ci->app)
+          {
+             x = ecore_exe_run(inst->ci->app, NULL);
+             if (x) ecore_exe_free(x);
+          }
      }
    else if ((ev->button == 1) && (!net_cfg->menu))
      e_gadcon_popup_toggle_pinned(inst->popup);
    else if ((ev->button == 3) && (!net_cfg->menu)) 
      {
-	E_Menu *m;
-	E_Menu_Item *mi;
-	int x, y;
-	
-	m = e_menu_new();
-	mi = e_menu_item_new(m);
-	e_menu_item_label_set(mi, D_("Settings"));
-	e_util_menu_item_theme_icon_set(mi, "preferences-system");
-	e_menu_item_callback_set(mi, _cb_configure, inst);
-	
-	m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-	
-	e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, 
-					  NULL, NULL);
-	e_menu_activate_mouse(m, 
-			      e_util_zone_current_get(e_manager_current_get()),
-			      x + ev->output.x, y + ev->output.y, 1, 1,
-			      E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
+        E_Menu *m;
+        E_Menu_Item *mi;
+        int x, y;
+
+        m = e_menu_new();
+        mi = e_menu_item_new(m);
+        e_menu_item_label_set(mi, D_("Settings"));
+        e_util_menu_item_theme_icon_set(mi, "preferences-system");
+        e_menu_item_callback_set(mi, _cb_configure, inst);
+
+        m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
+
+        e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y,
+                                          NULL, NULL);
+        e_menu_activate_mouse(m,
+                              e_util_zone_current_get(e_manager_current_get()),
+                              x + ev->output.x, y + ev->output.y, 1, 1,
+                              E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
      }
 }
 
@@ -190,7 +190,7 @@ _net_cb_mouse_in(void *data, Evas_Object *obj, const char *emission, const char 
    
    bg = edje_object_add(inst->popup->win->evas);
    if (!e_theme_edje_object_set(bg, "base/theme/modules", 
-				"modules/net/popup"))
+                               "modules/net/popup"))
      edje_object_file_set(bg, buf, "modules/net/popup");
    snprintf(buf, sizeof(buf), D_("Device - %s"), inst->ci->device);
    edje_object_part_text_set(bg, "e.text.title", buf);
@@ -203,7 +203,7 @@ _net_cb_mouse_in(void *data, Evas_Object *obj, const char *emission, const char 
    _bytes_to_string(inst->out, tmp, sizeof(tmp));
    snprintf(buf, sizeof(buf), "Tx: %s", tmp);
    edje_object_part_text_set(bg, "e.text.send", buf);
-   
+
    e_gadcon_popup_content_set(inst->popup, bg);
    e_gadcon_popup_show(inst->popup);
 }

@@ -32,26 +32,26 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
  
    inst->o_net = edje_object_add(gc->evas);
    if (!e_theme_edje_object_set(inst->o_net, "base/theme/modules/net",
-				"modules/net/main"))
+                                             "modules/net/main"))
      edje_object_file_set(inst->o_net, buf, "modules/net/main");
    edje_object_signal_callback_add(inst->o_net, "e,action,mouse,in", "",
-				   _net_cb_mouse_in, inst);
+                                   _net_cb_mouse_in, inst);
    edje_object_signal_callback_add(inst->o_net, "e,action,mouse,out", "",
-				   _net_cb_mouse_out, inst);
+                                   _net_cb_mouse_out, inst);
    evas_object_show(inst->o_net);
 
    if (!inst->ci->show_text)
      edje_object_signal_emit(inst->o_net, "e,state,text,hide", "e");
    else
      edje_object_signal_emit(inst->o_net, "e,state,text,show", "e");
-   
+
    gcc = e_gadcon_client_new(gc, name, id, style, inst->o_net);
    gcc->data = inst;
    inst->gcc = gcc;
    inst->timer = ecore_timer_add(0.5, _net_cb_poll, inst);
 
    evas_object_event_callback_add(inst->o_net, EVAS_CALLBACK_MOUSE_DOWN, 
-				  _net_cb_mouse_down, inst);
+                                  _net_cb_mouse_down, inst);
 
    net_cfg->instances = eina_list_append(net_cfg->instances, inst);
    return gcc;
@@ -67,18 +67,18 @@ _gc_shutdown(E_Gadcon_Client *gcc)
    if (inst->timer) ecore_timer_del(inst->timer);
    if (inst->o_net) 
      {
-	evas_object_event_callback_del(inst->o_net, EVAS_CALLBACK_MOUSE_DOWN,
-				       _net_cb_mouse_down);
-	edje_object_signal_callback_del(inst->o_net, "e,action,mouse,in", "",
-					_net_cb_mouse_in);
-	edje_object_signal_callback_del(inst->o_net, "e,action,mouse,out", "",
-					_net_cb_mouse_out);
-   if (inst->popup)
-      {
-          e_object_del(E_OBJECT(inst->popup));
-          inst->popup = NULL;
-       }
-	evas_object_del(inst->o_net);
+        evas_object_event_callback_del(inst->o_net, EVAS_CALLBACK_MOUSE_DOWN,
+                                       _net_cb_mouse_down);
+        edje_object_signal_callback_del(inst->o_net, "e,action,mouse,in", "",
+                                        _net_cb_mouse_in);
+        edje_object_signal_callback_del(inst->o_net, "e,action,mouse,out", "",
+                                        _net_cb_mouse_out);
+        if (inst->popup)
+          {
+            e_object_del(E_OBJECT(inst->popup));
+            inst->popup = NULL;
+          }
+        evas_object_del(inst->o_net);
      }
    E_FREE(inst);
 }
