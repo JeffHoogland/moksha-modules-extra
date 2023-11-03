@@ -18,7 +18,7 @@
 static int        _is_inside_any_win(Population *pop, int x, int y, int ret_value);
 static Population *_population_init(E_Module *m);
 static void       _population_shutdown(Population *pop);
-static Eina_Bool        _cb_animator(void *data);
+static Eina_Bool  _cb_animator(void *data);
 static void       _population_load(Population *pop);
 static void       _theme_load(Population *pop);
 static void       _start_walking_at(Penguin *tux, int at_y);
@@ -34,7 +34,7 @@ static void       _cb_click_l (void *data, Evas_Object *o, const char *emi, cons
 static void       _cb_click_r (void *data, Evas_Object *o, const char *emi, const char *src);
 static void       _cb_click_c (void *data, Evas_Object *o, const char *emi, const char *src);
 static void       _start_bombing_at(Penguin *tux, int at_y);
-static Eina_Bool        _delay_born(void *data);
+static Eina_Bool  _delay_born(void *data);
 
 /* public module routines. all modules must have these */
 EAPI E_Module_Api e_modapi = {
@@ -297,7 +297,7 @@ _load_action(Population *pop, const char *filename, char *name, int id)
 {
    Action *act;
    char *data;
- 
+
    data = edje_file_data_get(filename, name);
    if (!data) 
       return NULL;
@@ -929,7 +929,7 @@ _start_custom_at(Penguin *tux, int at_y)
    ran = random() % (tux->pop->custom_num);
    //ran=2;  //!!!!
    //printf("START CUSTOM NUM %d RAN %d\n",tux->pop->custom_num, ran);
-   
+
    tux->custom = eina_list_nth(tux->pop->customs, ran);
    if (!tux->custom)
       return;
