@@ -35,9 +35,9 @@ e_modapi_init(E_Module *m)
 
    snprintf(buf, sizeof(buf), "%s/e-module-snow.edj", e_module_dir_get(m));
    e_configure_registry_category_add("appearance", 10, D_("Look"), NULL, 
-				     "preferences-look");
+                     "preferences-look");
    e_configure_registry_item_add("appearance/snow", 150, D_("Snow"), NULL, 
-				 buf, e_int_config_snow_module);
+                 buf, e_int_config_snow_module);
 
    snow = _snow_init(m);
    snow_module = m;
@@ -160,7 +160,7 @@ _snow_flakes_free(Snow *snow)
         evas_object_del(flake->flake);
         snow->flakes = eina_list_remove_list(snow->flakes, snow->flakes);
         free(flake);
-	flake = NULL;
+        flake = NULL;
      }
 }
 
@@ -217,8 +217,8 @@ _snow_trees_load(Snow *snow)
         if (i != 0)
           {
              o = evas_object_image_add(snow->canvas);
-	     snprintf(buf, sizeof(buf), "%s/tree.png", e_module_dir_get(snow->module));
-	     evas_object_image_file_set(o, buf, "");
+             snprintf(buf, sizeof(buf), "%s/tree.png", e_module_dir_get(snow->module));
+             evas_object_image_file_set(o, buf, "");
           }
         evas_object_resize(o, tw, th);
         evas_object_image_alpha_set(o, 1);
