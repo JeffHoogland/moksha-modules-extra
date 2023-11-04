@@ -14,25 +14,25 @@
  */
 
 /* module private routines */
-static Flame *_flame_init (E_Module * m);
-static void _flame_shutdown (Flame * f);
-static void _flame_config_palette_set (Flame * f, Flame_Palette_Type type);
+static Flame   * _flame_init (E_Module * m);
+static void      _flame_shutdown (Flame * f);
+static void      _flame_config_palette_set (Flame * f, Flame_Palette_Type type);
 
-static int _flame_face_init (Flame_Face * ff);
-static void _flame_face_free (Flame_Face * ff);
-static void _flame_face_anim_handle (Flame_Face * ff);
+static int       _flame_face_init (Flame_Face * ff);
+static void      _flame_face_free (Flame_Face * ff);
+static void      _flame_face_anim_handle (Flame_Face * ff);
 
-static void _flame_palette_gold_set (Flame_Face * ff);
-static void _flame_palette_fire_set (Flame_Face * ff);
-static void _flame_palette_plasma_set (Flame_Face * ff);
-static void _flame_palette_matrix_set (Flame_Face * ff);
-static void _flame_palette_ice_set (Flame_Face * ff);
-static void _flame_palette_white_set (Flame_Face * ff);
-static void _flame_palette_custom_set (Flame_Face * ff);
-static void _flame_zero_set (Flame_Face * ff);
-static void _flame_base_random_set (Flame_Face * ff);
-static void _flame_base_random_modify (Flame_Face * ff);
-static void _flame_process (Flame_Face * ff);
+static void      _flame_palette_gold_set (Flame_Face * ff);
+static void      _flame_palette_fire_set (Flame_Face * ff);
+static void      _flame_palette_plasma_set (Flame_Face * ff);
+static void      _flame_palette_matrix_set (Flame_Face * ff);
+static void      _flame_palette_ice_set (Flame_Face * ff);
+static void      _flame_palette_white_set (Flame_Face * ff);
+static void      _flame_palette_custom_set (Flame_Face * ff);
+static void      _flame_zero_set (Flame_Face * ff);
+static void      _flame_base_random_set (Flame_Face * ff);
+static void      _flame_base_random_modify (Flame_Face * ff);
+static void      _flame_process (Flame_Face * ff);
 static Eina_Bool _flame_cb_draw (void *data);
 static Eina_Bool _flame_cb_event_container_resize (void *data, int type, void *event);
 
@@ -59,9 +59,9 @@ e_modapi_init (E_Module * m)
 
    snprintf (buf, sizeof (buf), "%s/e-module-flame.edj", e_module_dir_get (m));
    e_configure_registry_category_add ("appearance", 10, D_ ("Look"), NULL, 
-				     "preferences-look");
+                     "preferences-look");
    e_configure_registry_item_add ("appearance/flame", 150, D_ ("Flame"), NULL, 
-				 buf, e_int_config_flame_module);
+                 buf, e_int_config_flame_module);
 
    f = _flame_init (m);
    f->module = m;
@@ -81,10 +81,10 @@ e_modapi_shutdown (E_Module * m)
   if (f)
     {
       if (f->config_dialog)
-	{
-	  e_object_del (E_OBJECT (f->config_dialog));
-	  f->config_dialog = NULL;
-	}
+        {
+           e_object_del (E_OBJECT (f->config_dialog));
+           f->config_dialog = NULL;
+        }
       _flame_shutdown (f);
     }
   return 1;
@@ -164,22 +164,22 @@ _flame_init (E_Module * m)
 
       man = l->data;
       for (l2 = man->containers; l2; l2 = l2->next)
-	{
-	  E_Container *con;
-	  Flame_Face *ff;
-
-	  con = l2->data;
-	  ff = calloc (1, sizeof (Flame_Face));
-	  if (ff)
-	    {
-	      f->face = ff;
-	      ff->flame = f;
-	      ff->con = con;
-	      ff->evas = con->bg_evas;
-	      if (!_flame_face_init (ff))
-		return NULL;
-	    }
-	}
+        {
+          E_Container *con;
+          Flame_Face *ff;
+    
+          con = l2->data;
+          ff = calloc (1, sizeof (Flame_Face));
+          if (ff)
+            {
+              f->face = ff;
+              ff->flame = f;
+              ff->con = con;
+              ff->evas = con->bg_evas;
+              if (!_flame_face_init (ff))
+            return NULL;
+            }
+        }
     }
   return f;
 }
@@ -237,7 +237,7 @@ _flame_face_init (Flame_Face * ff)
 
   ff->ev_handler_container_resize =
     ecore_event_handler_add (E_EVENT_CONTAINER_RESIZE,
-			     _flame_cb_event_container_resize, ff);
+                 _flame_cb_event_container_resize, ff);
   /* set up the flame object */
   o = evas_object_image_add (ff->evas);
   evas_output_viewport_get (ff->evas, NULL, NULL, &ww, &hh);
@@ -266,7 +266,7 @@ _flame_face_init (Flame_Face * ff)
   /* allocation of the image */
   ff->ims = powerof (ff->ww);
   evas_object_image_size_set (ff->flame_object, 1 << ff->ims,
-			      ff->flame->conf->height);
+                 ff->flame->conf->height);
   evas_object_image_fill_set (o, 0, 0, 1 << ff->ims, ff->flame->conf->height);
   ff->im = (unsigned int *) evas_object_image_data_get (ff->flame_object, 1);
 
@@ -390,8 +390,8 @@ _flame_palette_gold_set (Flame_Face * ff)
       b = gold_cmap[(i * 4) + 2];
       evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
-	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
-	 (((unsigned char) g) << 8) | ((unsigned char) b));
+      ((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
+      (((unsigned char) g) << 8) | ((unsigned char) b));
     }
 }
 
@@ -407,22 +407,22 @@ _flame_palette_fire_set (Flame_Face * ff)
       b = (i - 160) * 3;
 
       if (r < 0)
-	r = 0;
+        r = 0;
       if (r > 255)
-	r = 255;
+        r = 255;
       if (g < 0)
-	g = 0;
+        g = 0;
       if (g > 255)
-	g = 255;
+        g = 255;
       if (b < 0)
-	b = 0;
+        b = 0;
       if (b > 255)
-	b = 255;
+        b = 255;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
       evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
-	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
-	 (((unsigned char) g) << 8) | ((unsigned char) b));
+      ((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
+      (((unsigned char) g) << 8) | ((unsigned char) b));
     }
 }
 
@@ -440,8 +440,8 @@ _flame_palette_plasma_set (Flame_Face * ff)
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
       evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
-	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
-	 (((unsigned char) g) << 8) | ((unsigned char) b));
+      ((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
+      (((unsigned char) g) << 8) | ((unsigned char) b));
     }
   for (i = 80; i < 160; i++)
     {
@@ -450,13 +450,13 @@ _flame_palette_plasma_set (Flame_Face * ff)
       b = 255;
 
       if ((r * r + g * g + b * b) <= 100)
-	 a = (r * r + g * g + b * b);
+        a = (r * r + g * g + b * b);
       else
-         a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
+        a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
       evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
-	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
-	 (((unsigned char) g) << 8) | ((unsigned char) b));
+      ((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
+      (((unsigned char) g) << 8) | ((unsigned char) b));
     }
   for (i = 160; i < 300; i++)
     {
@@ -465,13 +465,13 @@ _flame_palette_plasma_set (Flame_Face * ff)
       b = 255;
 
       if ((r * r + g * g + b * b) <= 100)
-         a = r * r + g * g + b * b;
+        a = r * r + g * g + b * b;
       else
-         a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
+        a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
       evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
-	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
-	 (((unsigned char) g) << 8) | ((unsigned char) b));
+      ((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
+      (((unsigned char) g) << 8) | ((unsigned char) b));
     }
 }
 
@@ -487,22 +487,22 @@ _flame_palette_matrix_set (Flame_Face * ff)
       b = (i - 160) * 3;
 
       if (r < 0)
-	r = 0;
+        r = 0;
       if (r > 255)
-	r = 255;
+        r = 255;
       if (g < 0)
-	g = 0;
+        g = 0;
       if (g > 255)
-	g = 255;
+        g = 255;
       if (b < 0)
-	b = 0;
+        b = 0;
       if (b > 255)
-	b = 255;
+        b = 255;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
       evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
-	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
-	 (((unsigned char) g) << 8) | ((unsigned char) b));
+      ((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
+      (((unsigned char) g) << 8) | ((unsigned char) b));
     }
 }
 
@@ -518,22 +518,22 @@ _flame_palette_ice_set (Flame_Face * ff)
       b = i * 3;
 
       if (r < 0)
-	r = 0;
+        r = 0;
       if (r > 255)
-	r = 255;
+        r = 255;
       if (g < 0)
-	g = 0;
+        g = 0;
       if (g > 255)
-	g = 255;
+        g = 255;
       if (b < 0)
-	b = 0;
+        b = 0;
       if (b > 255)
-	b = 255;
+        b = 255;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
       evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
-	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
-	 (((unsigned char) g) << 8) | ((unsigned char) b));
+      ((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
+      (((unsigned char) g) << 8) | ((unsigned char) b));
     }
 }
 
@@ -549,22 +549,22 @@ _flame_palette_white_set (Flame_Face * ff)
       b = 0;
 
       if (r < 0)
-	r = 0;
+        r = 0;
       if (r > 255)
-	r = 255;
+        r = 255;
       if (g < 0)
-	g = 0;
+        g = 0;
       if (g > 255)
-	g = 255;
+        g = 255;
       if (b < 0)
-	b = 0;
+        b = 0;
       if (b > 255)
-	b = 255;
+        b = 255;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
       evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
-	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
-	 (((unsigned char) g) << 8) | ((unsigned char) b));
+      ((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
+      (((unsigned char) g) << 8) | ((unsigned char) b));
     }
 }
 
@@ -582,22 +582,22 @@ _flame_palette_custom_set (Flame_Face * ff)
       b = (i - f->conf->b) * 3;
 
       if (r < 0)
-	r = 0;
+        r = 0;
       if (r > 255)
-	r = 255;
+        r = 255;
       if (g < 0)
-	g = 0;
+        g = 0;
       if (g > 255)
-	g = 255;
+        g = 255;
       if (b < 0)
-	b = 0;
+        b = 0;
       if (b > 255)
-	b = 255;
+        b = 255;
       a = (int) ((r * 0.299) + (g * 0.587) + (b * 0.114));
       evas_color_argb_premul (a, &r, &g, &b);
       ff->palette[i] =
-	((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
-	 (((unsigned char) g) << 8) | ((unsigned char) b));
+      ((((unsigned char) a) << 24) | (((unsigned char) r) << 16) |
+      (((unsigned char) g) << 8) | ((unsigned char) b));
     }
 }
 
@@ -611,19 +611,19 @@ _flame_zero_set (Flame_Face * ff)
   for (y = 0; y < (ff->flame->conf->height >> 1); y++)
     {
       for (x = 0; x < (ff->ww >> 1); x++)
-	{
-	  ptr = ff->f_array1 + (y << ff->ws) + x;
-	  *ptr = 0;
-	}
+        {
+          ptr = ff->f_array1 + (y << ff->ws) + x;
+          *ptr = 0;
+        }
     }
 
   for (y = 0; y < (ff->flame->conf->height >> 1); y++)
     {
       for (x = 0; x < (ff->ww >> 1); x++)
-	{
-	  ptr = ff->f_array2 + (y << ff->ws) + x;
-	  *ptr = 0;
-	}
+        {
+          ptr = ff->f_array2 + (y << ff->ws) + x;
+          *ptr = 0;
+        }
     }
 }
 
@@ -657,10 +657,10 @@ _flame_base_random_modify (Flame_Face * ff)
     {
       ptr = ff->f_array1 + (y << ff->ws) + x;
       *ptr +=
-	((rand () % ff->flame->conf->variance) - ff->flame->conf->vartrend);
+      ((rand () % ff->flame->conf->variance) - ff->flame->conf->vartrend);
       val = *ptr;
       if (val > 300)
-	*ptr = 0;
+      *ptr = 0;
     }
 }
 
@@ -674,34 +674,34 @@ _flame_process (Flame_Face * ff)
   for (y = ((ff->flame->conf->height >> 1) - 1); y >= 2; y--)
     {
       for (x = 1; x < ((ff->ww >> 1) - 1); x++)
-	{
-	  ptr = ff->f_array1 + (y << ff->ws) + x;
-	  val = (int) *ptr;
-	  if (val > 300)
-	    *ptr = 300;
-	  val = (int) *ptr;
-	  if (val > 0)
-	    {
-	      tmp = (val * ff->flame->conf->vspread) >> 8;
-	      p = ptr - (2 << ff->ws);
-	      *p = *p + (tmp >> 1);
-	      p = ptr - (1 << ff->ws);
-	      *p = *p + tmp;
-	      tmp = (val * ff->flame->conf->hspread) >> 8;
-	      p = ptr - (1 << ff->ws) - 1;
-	      *p = *p + tmp;
-	      p = ptr - (1 << ff->ws) + 1;
-	      *p = *p + tmp;
-	      p = ptr - 1;
-	      *p = *p + (tmp >> 1);
-	      p = ptr + 1;
-	      *p = *p + (tmp >> 1);
-	      p = ff->f_array2 + (y << ff->ws) + x;
-	      *p = val;
-	      if (y < ((ff->flame->conf->height >> 1) - 1))
-		*ptr = (val * ff->flame->conf->residual) >> 8;
-	    }
-	}
+        {
+          ptr = ff->f_array1 + (y << ff->ws) + x;
+          val = (int) *ptr;
+          if (val > 300)
+            *ptr = 300;
+          val = (int) *ptr;
+          if (val > 0)
+            {
+              tmp = (val * ff->flame->conf->vspread) >> 8;
+              p = ptr - (2 << ff->ws);
+              *p = *p + (tmp >> 1);
+              p = ptr - (1 << ff->ws);
+              *p = *p + tmp;
+              tmp = (val * ff->flame->conf->hspread) >> 8;
+              p = ptr - (1 << ff->ws) - 1;
+              *p = *p + tmp;
+              p = ptr - (1 << ff->ws) + 1;
+              *p = *p + tmp;
+              p = ptr - 1;
+              *p = *p + (tmp >> 1);
+              p = ptr + 1;
+              *p = *p + (tmp >> 1);
+              p = ff->f_array2 + (y << ff->ws) + x;
+              *p = val;
+              if (y < ((ff->flame->conf->height >> 1) - 1))
+            *ptr = (val * ff->flame->conf->residual) >> 8;
+            }
+        }
     }
 }
 
@@ -725,30 +725,30 @@ _flame_cb_draw (void *data)
   for (y = 0; y < ((ff->flame->conf->height >> 1) - 1); y++)
     {
       for (x = 0; x < ((ff->ww >> 1) - 1); x++)
-	{
-	  xx = x << 1;
-	  yy = y << 1;
-
-	  ptr = ff->f_array2 + (y << ff->ws) + x;
-	  cl1 = cl = (unsigned int) *ptr;
-	  ptr = ff->f_array2 + (y << ff->ws) + x + 1;
-	  cl2 = (unsigned int) *ptr;
-	  ptr = ff->f_array2 + ((y + 1) << ff->ws) + x + 1;
-	  cl3 = (unsigned int) *ptr;
-	  ptr = ff->f_array2 + ((y + 1) << ff->ws) + x;
-	  cl4 = (unsigned int) *ptr;
-
-	  cptr = ff->im + (yy << ff->ims) + xx;
-	  *cptr = ff->palette[cl];
-	  *(cptr + 1) = ff->palette[((cl1 + cl2) >> 1)];
-	  *(cptr + 1 + (1 << ff->ims)) = ff->palette[((cl1 + cl3) >> 1)];
-	  *(cptr + (1 << ff->ims)) = ff->palette[((cl1 + cl4) >> 1)];
-	}
+        {
+          xx = x << 1;
+          yy = y << 1;
+    
+          ptr = ff->f_array2 + (y << ff->ws) + x;
+          cl1 = cl = (unsigned int) *ptr;
+          ptr = ff->f_array2 + (y << ff->ws) + x + 1;
+          cl2 = (unsigned int) *ptr;
+          ptr = ff->f_array2 + ((y + 1) << ff->ws) + x + 1;
+          cl3 = (unsigned int) *ptr;
+          ptr = ff->f_array2 + ((y + 1) << ff->ws) + x;
+          cl4 = (unsigned int) *ptr;
+    
+          cptr = ff->im + (yy << ff->ims) + xx;
+          *cptr = ff->palette[cl];
+          *(cptr + 1) = ff->palette[((cl1 + cl2) >> 1)];
+          *(cptr + 1 + (1 << ff->ims)) = ff->palette[((cl1 + cl3) >> 1)];
+          *(cptr + (1 << ff->ims)) = ff->palette[((cl1 + cl4) >> 1)];
+        }
     }
 
   evas_object_image_data_set (ff->flame_object, ff->im);
   evas_object_image_data_update_add (ff->flame_object, 0, 0, ff->ww,
-				     ff->flame->conf->height);
+                     ff->flame->conf->height);
 
   /* we loop indefinitely */
   return EINA_TRUE;
@@ -790,7 +790,7 @@ _flame_cb_event_container_resize (void *data, int type, void *event)
   /* allocation of the image */
   ff->ims = powerof (ff->ww);
   evas_object_image_size_set (ff->flame_object, 1 << ff->ims,
-			      ff->flame->conf->height);
+                 ff->flame->conf->height);
   evas_object_image_fill_set (o, 0, 0, 1 << ff->ims, ff->flame->conf->height);
   ff->im = (unsigned int *) evas_object_image_data_get (ff->flame_object, 1);
   return EINA_TRUE;
