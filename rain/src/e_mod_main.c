@@ -30,10 +30,10 @@ e_modapi_init(E_Module *m)
    bind_textdomain_codeset(PACKAGE, "UTF-8");
 
    snprintf(buf, sizeof(buf), "%s/e-module-rain.edj", e_module_dir_get(m));
-   e_configure_registry_category_add("appearance", 10, D_("Look"), NULL, 
-				     "preferences-look");
-   e_configure_registry_item_add("appearance/rain", 150, D_("Rain"), NULL, 
-				 buf, e_int_config_rain_module);
+   e_configure_registry_category_add("appearance", 10, D_("Look"), NULL,
+                     "preferences-look");
+   e_configure_registry_item_add("appearance/rain", 150, D_("Rain"), NULL,
+                  buf, e_int_config_rain_module);
 
    rain = _rain_init(m);
    rain_module = m;
@@ -157,7 +157,7 @@ _rain_drops_free(Rain *rain)
         evas_object_del(drop->drop);
         rain->drops = eina_list_remove_list(rain->drops, rain->drops);
         free(drop);
-	drop = NULL;
+        drop = NULL;
      }
 }
 
@@ -213,10 +213,10 @@ _rain_clouds_load(Rain *rain)
 
         if (i != 0)
           {
-             o = evas_object_image_add(rain->canvas);
-	     snprintf(buf, sizeof(buf), "%s/cloud.png", 
-		      e_module_dir_get(rain->module));
-	     evas_object_image_file_set(o, buf, "");
+            o = evas_object_image_add(rain->canvas);
+            snprintf(buf, sizeof(buf), "%s/cloud.png", 
+            e_module_dir_get(rain->module));
+            evas_object_image_file_set(o, buf, "");
           }
         evas_object_resize(o, tw, th);
         evas_object_image_alpha_set(o, 1);
