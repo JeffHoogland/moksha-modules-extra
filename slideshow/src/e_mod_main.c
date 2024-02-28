@@ -156,7 +156,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 
    o = edje_object_add(evas);
    snprintf(buf, sizeof (buf), "%s/e-module-slideshow.edj", 
-	    e_module_dir_get (slide_config->module));
+        e_module_dir_get (slide_config->module));
    edje_object_file_set(o, buf, "icon");
    return o;
 }
@@ -534,7 +534,7 @@ _slide_set_bg(void *data, const char *bg)
          snprintf (buf, sizeof (buf), "%s.edj", ecore_file_strip_ext(buf));
      }
      
-   if (inst->ci->all_desks == 0) 
+   if (inst->ci->all_desks == 0)
      {
         con = e_container_current_get(e_manager_current_get());
         z = e_zone_current_get(con);
@@ -542,7 +542,7 @@ _slide_set_bg(void *data, const char *bg)
         e_bg_del(con->num, z->num, d->x, d->y);
         e_bg_add(con->num, z->num, d->x, d->y, buf);
      }
-   else if (inst->ci->all_desks == 1) 
+   else if (inst->ci->all_desks == 1)
      {
         while (e_config->desktop_backgrounds)
           {
@@ -561,7 +561,7 @@ _slide_set_bg(void *data, const char *bg)
             e_bg_del(z->container->num, z->num, z->desks[i]->x, z->desks[i]->y);
             e_bg_add(z->container->num, z->num, z->desks[i]->x, z->desks[i]->y, buf);
           }
-     }   
+     }
 
    e_bg_update();
 }
