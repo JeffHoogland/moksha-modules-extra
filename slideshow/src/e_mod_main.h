@@ -27,9 +27,10 @@ struct _Config_Item
    const char *id;
 
    int disable_timer;
+   int disable_sched;
    int random_order;
    int all_desks;
-   double poll_time;
+   double poll_time, hours, minutes;
    const char *dir;
 };
 

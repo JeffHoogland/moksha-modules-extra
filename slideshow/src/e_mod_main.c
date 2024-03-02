@@ -10,19 +10,20 @@ typedef struct _Slideshow Slideshow;
 
 struct _Instance
 {
-   E_Gadcon_Client *gcc;
-   Evas_Object *slide_obj;
-   Slideshow *slide;
-   Ecore_Timer *check_timer;
-   Eina_List *bg_list;
-   const char *display;
-   char       *in_file;
-   char       *tmpf;
-   int index, bg_id, bg_count;
-   Ecore_Exe *exe;
+   E_Gadcon_Client     *gcc;
+   Evas_Object         *slide_obj;
+   Slideshow           *slide;
+   Ecore_Timer         *check_timer;
+   Ecore_Timer         *check_timer_hr;
+   Eina_List           *bg_list;
+   const char          *display;
+   char                *in_file;
+   char                *tmpf;
+   int                  index, bg_id, bg_count;
+   Ecore_Exe           *exe;
    Ecore_Event_Handler *exe_handler;
-   Ecore_End_Cb ok;
-   Config_Item *ci;
+   Ecore_End_Cb         ok;
+   Config_Item         *ci;
 };
 
 struct _Slideshow
@@ -44,6 +45,7 @@ static Config_Item *_slide_config_item_get(const char *id);
 static Slideshow *_slide_new(Evas *evas);
 static void _slide_free(Slideshow *ss);
 static Eina_Bool _slide_cb_check(void *data);
+static Eina_Bool _slide_cb_check_time(void *data);
 static void _slide_get_bg_count(void *data);
 static void _slide_set_bg(void *data, const char *bg);
 static void _slide_set_preview(void *data);
@@ -92,6 +94,8 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
                                   _slide_cb_mouse_down, inst);
    slide_config->instances = eina_list_append(slide_config->instances, inst);
 
+   if (!inst->ci->disable_sched)
+     inst->check_timer_hr = ecore_timer_add(60, _slide_cb_check_time, inst);
    if (!inst->ci->disable_timer)
      inst->check_timer = ecore_timer_add(inst->ci->poll_time, _slide_cb_check, inst);
    else
@@ -125,6 +129,7 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 
    if (inst->display) eina_stringshare_del(inst->display);
    if (inst->check_timer) ecore_timer_del(inst->check_timer);
+   if (inst->check_timer_hr) ecore_timer_del(inst->check_timer_hr);
 
    slide_config->instances = eina_list_remove(slide_config->instances, inst);
 
@@ -242,10 +247,14 @@ _slide_config_updated(Config_Item *ci)
      {
         if (inst->ci != ci) continue;
         if (inst->check_timer) ecore_timer_del(inst->check_timer);
-        if ((inst->ci->disable_timer) || (inst->ci->poll_time == 0))
-          break;
-        inst->check_timer = ecore_timer_add(inst->ci->poll_time,
+        if (inst->check_timer_hr) ecore_timer_del(inst->check_timer_hr);
+        //~ if ((inst->ci->disable_timer) || (inst->ci->poll_time == 0))
+          //~ break;
+        if ((!inst->ci->disable_timer) || (!inst->ci->poll_time == 0))
+          inst->check_timer = ecore_timer_add(inst->ci->poll_time,
                                             _slide_cb_check, inst);
+        if (!inst->ci->disable_sched)                                    
+          inst->check_timer_hr = ecore_timer_add(60, _slide_cb_check_time, inst);
      }
 }
 
@@ -284,7 +293,10 @@ _slide_config_item_get(const char *id)
    ci = E_NEW(Config_Item, 1);
    ci->id = eina_stringshare_add(id);
    ci->poll_time = 60.0;
+   ci->hours = 0.0;
+   ci->minutes = 0.0;
    ci->disable_timer = 0;
+   ci->disable_sched = 1;
    ci->all_desks = 0;
    snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
    ci->dir = eina_stringshare_add(buf);
@@ -315,7 +327,10 @@ e_modapi_init(E_Module *m)
    E_CONFIG_VAL(D, T, id, STR);
    E_CONFIG_VAL(D, T, dir, STR);
    E_CONFIG_VAL(D, T, poll_time, DOUBLE);
+   E_CONFIG_VAL(D, T, hours, DOUBLE);
+   E_CONFIG_VAL(D, T, minutes, DOUBLE);
    E_CONFIG_VAL(D, T, disable_timer, INT);
+   E_CONFIG_VAL(D, T, disable_sched, INT);
    E_CONFIG_VAL(D, T, random_order, INT);
    E_CONFIG_VAL(D, T, all_desks, INT);
 
@@ -338,7 +353,10 @@ e_modapi_init(E_Module *m)
         ci->id = eina_stringshare_add("0");
         ci->dir = eina_stringshare_add(buf);
         ci->poll_time = 60.0;
+        ci->hours = 0.0;
+        ci->minutes = 0.0;
         ci->disable_timer = 0;
+        ci->disable_sched = 1;
         ci->random_order = 0;
         ci->all_desks = 0;
         slide_config->items = eina_list_append(slide_config->items, ci);
@@ -415,6 +433,26 @@ _slide_free(Slideshow *ss)
    evas_object_del(ss->bg_obj);
    evas_object_del(ss->slide_obj);
    E_FREE(ss);
+}
+
+static Eina_Bool 
+_slide_cb_check_time(void *data)
+{
+  Instance *inst = data; 
+  double now, set_time;
+  time_t rawtime;
+  struct tm * timeinfo;
+   
+  time(&rawtime);
+  timeinfo = localtime( &rawtime );
+  
+  set_time = (int)inst->ci->hours * 3600 + inst->ci->minutes * 60;
+  now = ((int)timeinfo->tm_hour % 12) * 3600 + timeinfo->tm_min * 60;
+  
+  if (set_time == now)
+     _slide_cb_check(inst);
+
+  return EINA_TRUE;
 }
 
 static Eina_Bool 

@@ -4,9 +4,10 @@
 struct _E_Config_Dialog_Data
 {
    int disable_timer;
+   int disable_sched;
    int random_order;
    int all_desks;
-   double poll_time;
+   double poll_time, hours, minutes;
    char *dir;
 };
 
@@ -47,7 +48,10 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
    char buf[PATH_MAX];
 
    cfdata->poll_time = ci->poll_time;
+   cfdata->hours = ci->hours;
+   cfdata->minutes = ci->minutes;
    cfdata->disable_timer = ci->disable_timer;
+   cfdata->disable_sched = ci->disable_sched;
    cfdata->random_order = ci->random_order;
    cfdata->all_desks = ci->all_desks;
    if (ci->dir)
@@ -87,13 +91,25 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
    E_Radio_Group *rg;
 
    o = e_widget_list_add (evas, 0, 0);
-   of = e_widget_framelist_add (evas, D_ ("Cycle Time"), 0);
+   of = e_widget_framelist_add (evas, D_ ("Cycles Time"), 0);
    ob =
      e_widget_check_add (evas, D_ ("Disable Timer"), &(cfdata->disable_timer));
    e_widget_framelist_object_append (of, ob);
    ob =
      e_widget_slider_add (evas, 1, 0, D_ ("%3.0f seconds"), 5.0, 2400.0, 
                           1.0, 0, &(cfdata->poll_time), NULL, 200);
+   e_widget_framelist_object_append (of, ob);
+   e_widget_list_object_append (o, of, 1, 1, 0.5);
+   
+   of = e_widget_framelist_add (evas, D_ ("Schedule"), 0);
+   ob =
+     e_widget_check_add (evas, D_ ("Disable Scheduler"), &(cfdata->disable_sched));
+   e_widget_framelist_object_append (of, ob);
+   ob = e_widget_slider_add(evas, 1, 0, D_("%1.0f hr"), 0.0, 11.0, 
+                            1.0, 0, &(cfdata->hours), NULL, 130);
+   e_widget_framelist_object_append (of, ob);
+   ob = e_widget_slider_add(evas, 1, 0, D_("%1.0f min"), 0.0, 59.0, 
+                            1.0, 0, &(cfdata->minutes), NULL, 130);
    e_widget_framelist_object_append (of, ob);
    e_widget_list_object_append (o, of, 1, 1, 0.5);
 
@@ -135,6 +151,9 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    ci = cfd->data;
    ci->poll_time = cfdata->poll_time;
    ci->disable_timer = cfdata->disable_timer;
+   ci->hours = cfdata->hours;
+   ci->minutes = cfdata->minutes;
+   ci->disable_sched = cfdata->disable_sched;
    ci->random_order = cfdata->random_order;
    ci->all_desks = cfdata->all_desks;
 
