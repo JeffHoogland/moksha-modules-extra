@@ -205,11 +205,9 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 
    if (!cfdata->disable_sched)
      {
-       if (cfdata->file_day[0] == '\0' || cfdata->file_night[0] == '\0');
+       if (cfdata->file_day[0] == '\0' || cfdata->file_night[0] == '\0')
          {
-           e_util_dialog_show(D_("Warning"), D_("Day/Night file names are not defined!"));
-           //~ snprintf (buf, sizeof (buf), "%s %s", cfdata->file_day, cfdata->file_night);
-           //~ e_util_dialog_internal("buf", buf);
+           e_util_dialog_show(D_("Warning"), D_("Day/Night file names are not defined!")); 
            return 0;
          }
      }

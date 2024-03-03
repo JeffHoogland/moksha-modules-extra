@@ -448,12 +448,14 @@ _slide_free(Slideshow *ss)
 static Eina_Bool 
 _slide_cb_check_time(void *data)
 {
-  Instance *inst = data; 
+  Instance *inst; 
   double now, set_time;
   time_t rawtime;
   struct tm * timeinfo;
-
-  if (inst->ci->file_day[0] == '\0' || inst->ci->file_night[0] == '\0');
+  
+  inst = data;
+  
+  if (inst->ci->file_day[0] == '\0' || inst->ci->file_night[0] == '\0')
      e_util_dialog_show(D_("Warning"), D_("Day/Night file names are not defined!"));
   return EINA_FALSE;
 
