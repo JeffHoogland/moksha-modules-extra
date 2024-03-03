@@ -446,32 +446,34 @@ _slide_free(Slideshow *ss)
 static Eina_Bool 
 _slide_cb_check_time(void *data)
 {
-  Instance *inst; 
-  double now, set_time;
-  time_t rawtime;
-  struct tm * timeinfo;
+   Instance *inst; 
+   double now, set_time;
+   time_t rawtime;
+   struct tm * timeinfo;
   
-  inst = data;
-  
-  if (inst->ci->file_day[0] == '\0' || inst->ci->file_night[0] == '\0')
-    {
+   inst = data;
+
+   if (inst->ci->file_day[0] == '\0' || inst->ci->file_night[0] == '\0')
+     {
        e_util_dialog_show(D_("Warning"), 
                           D_("Day/Night file names are not defined!"));
        return EINA_FALSE;
-    }
+     }
 
-  time(&rawtime);
-  timeinfo = localtime( &rawtime );
+   time(&rawtime);
+   timeinfo = localtime( &rawtime );
+
+   set_time = inst->ci->hours * 3600 + inst->ci->minutes * 60;
+   now = timeinfo->tm_hour * 3600 + timeinfo->tm_min * 60;
+
+   if (now >= set_time && now < set_time + 12 * 3600)
+     _slide_set_bg(inst, inst->ci->file_day);
+   else 
+     _slide_set_bg(inst, inst->ci->file_night);
   
-  set_time = inst->ci->hours * 3600 + inst->ci->minutes * 60;
-  now = timeinfo->tm_hour * 3600 + timeinfo->tm_min * 60;
+   _slide_cb_check(inst);
 
-  if (now >= set_time && now < set_time + 12 * 3600)
-    _slide_set_bg(inst, inst->ci->file_day);
-  else 
-    _slide_set_bg(inst, inst->ci->file_night);
-
-  return EINA_TRUE;
+   return EINA_TRUE;
 }
 
 static Eina_Bool 

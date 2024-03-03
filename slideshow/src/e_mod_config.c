@@ -128,11 +128,11 @@ _basic_create(__UNUSED__ E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data 
    ob = e_widget_slider_add(evas, 1, 0, D_("%1.0f min"), 0.0, 59.0, 
                             1.0, 0, &(cfdata->minutes), NULL, 130);
    e_widget_framelist_object_append (of, ob);
-   ob = e_widget_label_add (evas, D_ ("Day file name:"));
+   ob = e_widget_label_add (evas, D_ ("Day bg file: (Start - slider time e.g. 6:00 am)"));
    e_widget_framelist_object_append (of, ob);
    ob = e_widget_entry_add (evas, &cfdata->file_day, NULL, NULL, NULL);
    e_widget_framelist_object_append (of, ob);
-   ob = e_widget_label_add (evas, D_ ("Night file name:"));
+   ob = e_widget_label_add (evas, D_ ("Night bg file: (12 hours later at 6:00 pm)"));
    e_widget_framelist_object_append (of, ob);
    ob = e_widget_entry_add (evas, &cfdata->file_night, NULL, NULL, NULL);
    e_widget_framelist_object_append (of, ob);
