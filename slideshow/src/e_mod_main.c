@@ -250,7 +250,7 @@ _slide_config_updated(Config_Item *ci)
         if (inst->check_timer_hr) ecore_timer_del(inst->check_timer_hr);
         //~ if ((inst->ci->disable_timer) || (inst->ci->poll_time == 0))
           //~ break;
-        if ((!inst->ci->disable_timer) || (!inst->ci->poll_time == 0))
+        if ((!inst->ci->disable_timer) && (!inst->ci->poll_time == 0))
           inst->check_timer = ecore_timer_add(inst->ci->poll_time,
                                             _slide_cb_check, inst);
         if (!inst->ci->disable_sched)                                    
