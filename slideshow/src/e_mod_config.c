@@ -8,7 +8,9 @@ struct _E_Config_Dialog_Data
    int random_order;
    int all_desks;
    double poll_time, hours, minutes;
-   char *dir, *file_day, *file_night;
+   char *dir; 
+   char *file_day; 
+   char *file_night;
 };
 
 /* Protos */
@@ -54,6 +56,7 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
    cfdata->disable_sched = ci->disable_sched;
    cfdata->random_order = ci->random_order;
    cfdata->all_desks = ci->all_desks;
+   
    if (ci->dir)
      cfdata->dir = strdup(ci->dir);
    else
@@ -61,16 +64,16 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
        snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
        cfdata->dir = strdup(buf);
      }
-     
+
    if (ci->file_day)
      cfdata->file_day = strdup(ci->file_day);
    else
-     cfdata->dir = strdup("");
-  
+     cfdata->file_day = strdup("");
+
    if (ci->file_night)
      cfdata->file_night = strdup(ci->file_night);
    else
-     cfdata->dir = strdup("");
+     cfdata->file_night = strdup("");
 }
 
 static void *
@@ -90,8 +93,12 @@ static void
 _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 {
    if (!slide_config) return;
+   
+   free(cfdata->dir);
+   free(cfdata->file_day);
+   free(cfdata->file_night);
    slide_config->config_dialog = NULL;
-   free(cfdata);
+   E_FREE(cfdata);
 }
 
 static Evas_Object *
@@ -184,22 +191,28 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
        ci->dir = eina_stringshare_add (buf);
      }
 
-   if (cfdata->disable_sched == 0)
+   if (ci->file_day) eina_stringshare_del (ci->file_day);
+   if (cfdata->file_day)
+     ci->file_day = eina_stringshare_add (cfdata->file_day);
+   else
+     ci->file_day = eina_stringshare_add ("");
+
+   if (ci->file_night) eina_stringshare_del (ci->file_night);
+   if (cfdata->file_night)
+     ci->file_night = eina_stringshare_add (cfdata->file_night);
+   else
+     ci->file_night = eina_stringshare_add ("");
+
+   if (!cfdata->disable_sched)
      {
        if (cfdata->file_day[0] == '\0' || cfdata->file_night[0] == '\0');
          {
            e_util_dialog_show(D_("Warning"), D_("Day/Night file names are not defined!"));
+           //~ snprintf (buf, sizeof (buf), "%s %s", cfdata->file_day, cfdata->file_night);
+           //~ e_util_dialog_internal("buf", buf);
            return 0;
          }
      }
-
-   if (ci->file_day) eina_stringshare_del (ci->file_day);
-   if (cfdata->file_day)
-     ci->file_day = eina_stringshare_add (cfdata->file_day);
-   
-   if (ci->file_night) eina_stringshare_del (ci->file_night);
-   if (cfdata->file_night)
-     ci->file_night = eina_stringshare_add (cfdata->file_night);
 
    e_config_save_queue ();
    _slide_config_updated (ci);

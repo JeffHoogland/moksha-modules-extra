@@ -96,8 +96,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
 
    if (!inst->ci->disable_sched)
      inst->check_timer_hr = ecore_timer_add(60, _slide_cb_check_time, inst);
-
-   if (!inst->ci->disable_timer)
+   else if (!inst->ci->disable_timer)
      inst->check_timer = ecore_timer_add(inst->ci->poll_time, _slide_cb_check, inst);
    else
      {
