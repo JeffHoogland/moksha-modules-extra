@@ -232,6 +232,9 @@ _slide_menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi)
    Instance *inst;
 
    inst = data;
+   
+   if (!slide_config) return;
+   if (slide_config->config_dialog) return;
    _config_slideshow_module(inst->ci);
 }
 
