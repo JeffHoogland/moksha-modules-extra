@@ -255,23 +255,29 @@ _slide_config_updated(Config_Item *ci)
         if (inst->ci != ci) continue;
         if (inst->check_timer) ecore_timer_del(inst->check_timer);
         if (inst->check_timer_hr) ecore_timer_del(inst->check_timer_hr);
-
-        if (!inst->ci->disable_timer)
-           inst->check_timer = ecore_timer_add(inst->ci->poll_time,
-                                              _slide_cb_check, inst);
-
-        if (!inst->ci->disable_sched)
-           inst->check_timer_hr = ecore_timer_add(60, 
-                                         _slide_cb_check_time, inst);
-
+        
         EINA_LIST_FOREACH(inst->bg_list, l, bg)
           {
             if (!strcmp(bg, inst->ci->file_day) || !strcmp(bg, inst->ci->file_night))
               no_match++;
           }
-        if (no_match != 2) 
-          e_util_dialog_show(D_("Warning"), D_("Check Day/Night bg file names. "
-                                               "They do not match!"));
+        if (no_match != 2)
+          {
+            e_util_dialog_show(D_("Warning"), D_("Check Day/Night bg file names. "
+                                                 "They do not match!"));
+            return;
+          }
+
+        if (!inst->ci->disable_timer)
+           inst->check_timer = ecore_timer_add(inst->ci->poll_time,
+                                              _slide_cb_check, inst);
+        if (!inst->ci->disable_sched)
+          {
+            inst->check_timer_hr = ecore_timer_add(60, 
+                                         _slide_cb_check_time, inst);
+            _slide_cb_check_time(inst);
+          }
+
      }
 }
 
