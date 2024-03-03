@@ -252,12 +252,11 @@ _slide_config_updated(Config_Item *ci)
         if (inst->ci != ci) continue;
         if (inst->check_timer) ecore_timer_del(inst->check_timer);
         if (inst->check_timer_hr) ecore_timer_del(inst->check_timer_hr);
-        //~ if ((inst->ci->disable_timer) || (inst->ci->poll_time == 0))
-          //~ break;
+
         if (!inst->ci->disable_timer)
           inst->check_timer = ecore_timer_add(inst->ci->poll_time,
-                                            _slide_cb_check, inst);
-        if (!inst->ci->disable_sched)                                    
+                                              _slide_cb_check, inst);
+        if (!inst->ci->disable_sched)
           inst->check_timer_hr = ecore_timer_add(60, _slide_cb_check_time, inst);
      }
 }
@@ -455,7 +454,7 @@ _slide_cb_check_time(void *data)
   time_t rawtime;
   struct tm * timeinfo;
 
-  if ((!strcmp(inst->ci->file_day, "")) || (!strcmp(inst->ci->file_night, "")));
+  if (inst->ci->file_day[0] == '\0' || inst->ci->file_night[0] == '\0');
      e_util_dialog_show(D_("Warning"), D_("Day/Night file names are not defined!"));
   return EINA_FALSE;
 

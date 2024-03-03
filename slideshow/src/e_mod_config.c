@@ -61,11 +61,16 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
        snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
        cfdata->dir = strdup(buf);
      }
+     
    if (ci->file_day)
      cfdata->file_day = strdup(ci->file_day);
+   else
+     cfdata->dir = strdup("");
   
    if (ci->file_night)
      cfdata->file_night = strdup(ci->file_night);
+   else
+     cfdata->dir = strdup("");
 }
 
 static void *
@@ -178,13 +183,16 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
        snprintf (buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get ());
        ci->dir = eina_stringshare_add (buf);
      }
-     
+
    if (cfdata->disable_sched == 0)
      {
-       if ((!strcmp(cfdata->file_day, "")) || (!strcmp(cfdata->file_night, "")));
-         e_util_dialog_show(D_("Warning"), D_("Day/Night file names are not defined!"));
+       if (cfdata->file_day[0] == '\0' || cfdata->file_night[0] == '\0');
+         {
+           e_util_dialog_show(D_("Warning"), D_("Day/Night file names are not defined!"));
+           return 0;
+         }
      }
-   
+
    if (ci->file_day) eina_stringshare_del (ci->file_day);
    if (cfdata->file_day)
      ci->file_day = eina_stringshare_add (cfdata->file_day);
