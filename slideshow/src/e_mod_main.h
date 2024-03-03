@@ -31,7 +31,7 @@ struct _Config_Item
    int random_order;
    int all_desks;
    double poll_time, hours, minutes;
-   const char *dir;
+   const char *dir, *file_day, *file_night;
 };
 
 EAPI extern E_Module_Api e_modapi;

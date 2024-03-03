@@ -303,6 +303,8 @@ _slide_config_item_get(const char *id)
    ci->all_desks = 0;
    snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
    ci->dir = eina_stringshare_add(buf);
+   ci->file_day = eina_stringshare_add(buf);
+   ci->file_night = eina_stringshare_add(buf);
 
    slide_config->items = eina_list_append(slide_config->items, ci);
    return ci;
@@ -329,6 +331,8 @@ e_modapi_init(E_Module *m)
 #define D conf_item_edd
    E_CONFIG_VAL(D, T, id, STR);
    E_CONFIG_VAL(D, T, dir, STR);
+   E_CONFIG_VAL(D, T, file_day, STR);
+   E_CONFIG_VAL(D, T, file_night, STR);
    E_CONFIG_VAL(D, T, poll_time, DOUBLE);
    E_CONFIG_VAL(D, T, hours, DOUBLE);
    E_CONFIG_VAL(D, T, minutes, DOUBLE);
@@ -355,6 +359,8 @@ e_modapi_init(E_Module *m)
 
         ci->id = eina_stringshare_add("0");
         ci->dir = eina_stringshare_add(buf);
+        ci->file_day = eina_stringshare_add(buf);
+        ci->file_night = eina_stringshare_add(buf);
         ci->poll_time = 60.0;
         ci->hours = 0.0;
         ci->minutes = 0.0;
@@ -391,6 +397,8 @@ e_modapi_shutdown(E_Module *m)
         slide_config->items = eina_list_remove_list(slide_config->items, slide_config->items);
         if (ci->id) eina_stringshare_del(ci->id);
         if (ci->dir) eina_stringshare_del(ci->dir);
+        if (ci->file_day) eina_stringshare_del(ci->dir);
+        if (ci->file_night) eina_stringshare_del(ci->dir);
         E_FREE(ci);
      }
    E_FREE(slide_config);

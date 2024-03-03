@@ -8,7 +8,7 @@ struct _E_Config_Dialog_Data
    int random_order;
    int all_desks;
    double poll_time, hours, minutes;
-   char *dir;
+   char *dir, *file_day, *file_night;
 };
 
 /* Protos */
@@ -61,6 +61,20 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
        snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
        cfdata->dir = strdup(buf);
      }
+   if (ci->file_day)
+     cfdata->file_day = strdup(ci->file_day);
+   else
+     {
+       snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
+       cfdata->file_day = strdup(buf);
+     }
+   if (ci->file_night)
+     cfdata->file_night = strdup(ci->file_night);
+   else
+     {
+       snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
+       cfdata->file_night = strdup(buf);
+     }
 }
 
 static void *
@@ -101,7 +115,7 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
    e_widget_framelist_object_append (of, ob);
    e_widget_list_object_append (o, of, 1, 1, 0.5);
    
-   of = e_widget_framelist_add (evas, D_ ("Schedule"), 0);
+   of = e_widget_framelist_add (evas, D_ ("Day/Night backgrounds"), 0);
    ob =
      e_widget_check_add (evas, D_ ("Disable Scheduler"), &(cfdata->disable_sched));
    e_widget_framelist_object_append (of, ob);
@@ -110,6 +124,14 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
    e_widget_framelist_object_append (of, ob);
    ob = e_widget_slider_add(evas, 1, 0, D_("%1.0f min"), 0.0, 59.0, 
                             1.0, 0, &(cfdata->minutes), NULL, 130);
+   e_widget_framelist_object_append (of, ob);
+   ob = e_widget_label_add (evas, D_ ("Day file path:"));
+   e_widget_framelist_object_append (of, ob);
+   ob = e_widget_entry_add (evas, &cfdata->file_day, NULL, NULL, NULL);
+   e_widget_framelist_object_append (of, ob);
+   ob = e_widget_label_add (evas, D_ ("Night file path:"));
+   e_widget_framelist_object_append (of, ob);
+   ob = e_widget_entry_add (evas, &cfdata->file_night, NULL, NULL, NULL);
    e_widget_framelist_object_append (of, ob);
    e_widget_list_object_append (o, of, 1, 1, 0.5);
 
@@ -164,6 +186,24 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
      {
        snprintf (buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get ());
        ci->dir = eina_stringshare_add (buf);
+     }
+     
+   if (ci->file_day) eina_stringshare_del (ci->file_day);
+   if (cfdata->file_day)
+     ci->file_day = eina_stringshare_add (cfdata->file_day);
+   else
+     {
+       snprintf (buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get ());
+       ci->file_day = eina_stringshare_add (buf);
+     }
+
+   if (ci->file_night) eina_stringshare_del (ci->file_night);
+   if (cfdata->file_night)
+     ci->file_night = eina_stringshare_add (cfdata->file_night);
+   else
+     {
+       snprintf (buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get ());
+       ci->file_night = eina_stringshare_add (buf);
      }
 
    e_config_save_queue ();
