@@ -96,6 +96,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
 
    if (!inst->ci->disable_sched)
      inst->check_timer_hr = ecore_timer_add(60, _slide_cb_check_time, inst);
+
    if (!inst->ci->disable_timer)
      inst->check_timer = ecore_timer_add(inst->ci->poll_time, _slide_cb_check, inst);
    else
@@ -253,7 +254,7 @@ _slide_config_updated(Config_Item *ci)
         if (inst->check_timer_hr) ecore_timer_del(inst->check_timer_hr);
         //~ if ((inst->ci->disable_timer) || (inst->ci->poll_time == 0))
           //~ break;
-        if ((!inst->ci->disable_timer) && (!inst->ci->poll_time == 0))
+        if (!inst->ci->disable_timer)
           inst->check_timer = ecore_timer_add(inst->ci->poll_time,
                                             _slide_cb_check, inst);
         if (!inst->ci->disable_sched)                                    
@@ -303,8 +304,8 @@ _slide_config_item_get(const char *id)
    ci->all_desks = 0;
    snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
    ci->dir = eina_stringshare_add(buf);
-   ci->file_day = eina_stringshare_add(buf);
-   ci->file_night = eina_stringshare_add(buf);
+   ci->file_day = eina_stringshare_add("");
+   ci->file_night = eina_stringshare_add("");
 
    slide_config->items = eina_list_append(slide_config->items, ci);
    return ci;
@@ -359,8 +360,8 @@ e_modapi_init(E_Module *m)
 
         ci->id = eina_stringshare_add("0");
         ci->dir = eina_stringshare_add(buf);
-        ci->file_day = eina_stringshare_add(buf);
-        ci->file_night = eina_stringshare_add(buf);
+        ci->file_day = eina_stringshare_add("");
+        ci->file_night = eina_stringshare_add("");
         ci->poll_time = 60.0;
         ci->hours = 0.0;
         ci->minutes = 0.0;
@@ -453,15 +454,21 @@ _slide_cb_check_time(void *data)
   double now, set_time;
   time_t rawtime;
   struct tm * timeinfo;
-   
+
+  if ((!strcmp(inst->ci->file_day, "")) || (!strcmp(inst->ci->file_night, "")));
+     e_util_dialog_show(D_("Warning"), D_("Day/Night file names are not defined!"));
+  return EINA_FALSE;
+
   time(&rawtime);
   timeinfo = localtime( &rawtime );
-  
-  set_time = (int)inst->ci->hours * 3600 + inst->ci->minutes * 60;
-  now = ((int)timeinfo->tm_hour % 12) * 3600 + timeinfo->tm_min * 60;
-  
-  if (set_time == now)
-     _slide_cb_check(inst);
+
+  set_time = inst->ci->hours * 3600 + inst->ci->minutes * 60;
+  now = timeinfo->tm_hour * 3600 + timeinfo->tm_min * 60;
+
+  if (now >= set_time && now < set_time + 12 * 3600)
+    _slide_set_bg(inst, inst->ci->file_day);
+  else 
+    _slide_set_bg(inst, inst->ci->file_night);
 
   return EINA_TRUE;
 }
