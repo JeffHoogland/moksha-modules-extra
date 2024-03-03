@@ -93,8 +93,11 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    slide_config->instances = eina_list_append(slide_config->instances, inst);
 
    if (!inst->ci->disable_sched)
-     inst->check_timer_hr = ecore_timer_add(60, _slide_cb_check_time, inst);
-   else if (!inst->ci->disable_timer)
+     {
+       _slide_cb_check_time(inst);
+       inst->check_timer_hr = ecore_timer_add(60, _slide_cb_check_time, inst);
+     }
+   if (!inst->ci->disable_timer)
      inst->check_timer = ecore_timer_add(inst->ci->poll_time, _slide_cb_check, inst);
    else
      {
@@ -241,20 +244,34 @@ _slide_config_updated(Config_Item *ci)
 {
    Eina_List *l;
    Instance *inst;
+   char *bg;
 
    if (!slide_config) return;
 
    EINA_LIST_FOREACH(slide_config->instances, l, inst) 
      {
+        int no_match = 0;
+        
         if (inst->ci != ci) continue;
         if (inst->check_timer) ecore_timer_del(inst->check_timer);
         if (inst->check_timer_hr) ecore_timer_del(inst->check_timer_hr);
 
         if (!inst->ci->disable_timer)
-          inst->check_timer = ecore_timer_add(inst->ci->poll_time,
+           inst->check_timer = ecore_timer_add(inst->ci->poll_time,
                                               _slide_cb_check, inst);
+
         if (!inst->ci->disable_sched)
-          inst->check_timer_hr = ecore_timer_add(60, _slide_cb_check_time, inst);
+           inst->check_timer_hr = ecore_timer_add(60, 
+                                         _slide_cb_check_time, inst);
+
+        EINA_LIST_FOREACH(inst->bg_list, l, bg)
+          {
+            if (!strcmp(bg, inst->ci->file_day) || !strcmp(bg, inst->ci->file_night))
+              no_match++;
+          }
+        if (no_match != 2) 
+          e_util_dialog_show(D_("Warning"), D_("Check Day/Night bg file names. "
+                                               "They do not match!"));
      }
 }
 
@@ -471,8 +488,6 @@ _slide_cb_check_time(void *data)
    else 
      _slide_set_bg(inst, inst->ci->file_night);
   
-   _slide_cb_check(inst);
-
    return EINA_TRUE;
 }
 
