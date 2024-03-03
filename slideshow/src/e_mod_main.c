@@ -3,8 +3,6 @@
 #include <Ecore_File.h>
 #include "e_mod_main.h"
 
-#define __UNUSED__
-
 typedef struct _Instance Instance;
 typedef struct _Slideshow Slideshow;
 
@@ -141,20 +139,20 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 }
 
 static void
-_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
+_gc_orient(E_Gadcon_Client *gcc, __UNUSED__ E_Gadcon_Orient orient)
 {
    e_gadcon_client_aspect_set(gcc, 16, 16);
    e_gadcon_client_min_size_set(gcc, 16, 16);
 }
 
 static const char *
-_gc_label(const E_Gadcon_Client_Class *client_class)
+_gc_label(__UNUSED__ const E_Gadcon_Client_Class *client_class)
 {
    return D_("Slideshow");
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
+_gc_icon(__UNUSED__ const E_Gadcon_Client_Class *client_class, Evas *evas)
 {
    Evas_Object *o;
    char buf[PATH_MAX];
@@ -167,7 +165,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 }
 
 static const char *
-_gc_id_new(const E_Gadcon_Client_Class *client_class)
+_gc_id_new(__UNUSED__ const E_Gadcon_Client_Class *client_class)
 {
    Config_Item *ci;
 
@@ -176,7 +174,7 @@ _gc_id_new(const E_Gadcon_Client_Class *client_class)
 }
 
 static void
-_slide_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_slide_cb_mouse_down(void *data, __UNUSED__ Evas *e, __UNUSED__ Evas_Object *obj, void *event_info)
 {
    Instance *inst;
    Evas_Event_Mouse_Down *ev;
@@ -219,7 +217,7 @@ _slide_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 }
 
 static void
-_slide_menu_cb_post(void *data, E_Menu *m)
+_slide_menu_cb_post(__UNUSED__ void *data, __UNUSED__ E_Menu *m)
 {
    if (!slide_config->menu) return;
    e_object_del(E_OBJECT(slide_config->menu));
@@ -227,7 +225,7 @@ _slide_menu_cb_post(void *data, E_Menu *m)
 }
 
 static void
-_slide_menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi)
+_slide_menu_cb_configure(void *data, __UNUSED__ E_Menu *m, __UNUSED__ E_Menu_Item *mi)
 {
    Instance *inst;
 
@@ -375,7 +373,7 @@ e_modapi_init(E_Module *m)
 }
 
 EAPI int
-e_modapi_shutdown(E_Module *m)
+e_modapi_shutdown(__UNUSED__ E_Module *m)
 {
    slide_config->module = NULL;
    e_gadcon_provider_unregister(&_gc_class);
@@ -407,7 +405,7 @@ e_modapi_shutdown(E_Module *m)
 }
 
 EAPI int
-e_modapi_save(E_Module *m)
+e_modapi_save(__UNUSED__ E_Module *m)
 {
    e_config_domain_save("module.slideshow", conf_edd, slide_config);
    return 1;
@@ -456,12 +454,15 @@ _slide_cb_check_time(void *data)
   inst = data;
   
   if (inst->ci->file_day[0] == '\0' || inst->ci->file_night[0] == '\0')
-     e_util_dialog_show(D_("Warning"), D_("Day/Night file names are not defined!"));
-  return EINA_FALSE;
+    {
+       e_util_dialog_show(D_("Warning"), 
+                          D_("Day/Night file names are not defined!"));
+       return EINA_FALSE;
+    }
 
   time(&rawtime);
   timeinfo = localtime( &rawtime );
-
+  
   set_time = inst->ci->hours * 3600 + inst->ci->minutes * 60;
   now = timeinfo->tm_hour * 3600 + timeinfo->tm_min * 60;
 
@@ -692,7 +693,7 @@ _import_edj_gen(Instance *inst)
    Eina_Bool anim = EINA_FALSE;
    int fd, num = 1;
    int w = 0, h = 0;
-   const char *in_file, *file, *locale;
+   const char *in_file, *file;
    char buf[PATH_MAX], cmd[PATH_MAX + PATH_MAX + 40], tmpn[PATH_MAX], ipart[PATH_MAX], enc[128];
    char *imgdir = NULL, *fstrip;
    FILE *f;
