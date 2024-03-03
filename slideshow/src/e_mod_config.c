@@ -90,7 +90,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
+_free_data(__UNUSED__ E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 {
    if (!slide_config) return;
    
@@ -102,7 +102,7 @@ _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
+_basic_create(__UNUSED__ E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o, *ob, *of, *ot;
    E_Radio_Group *rg;
