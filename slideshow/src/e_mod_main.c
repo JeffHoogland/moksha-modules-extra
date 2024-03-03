@@ -277,7 +277,6 @@ _slide_config_updated(Config_Item *ci)
                                          _slide_cb_check_time, inst);
             _slide_cb_check_time(inst);
           }
-
      }
 }
 
@@ -473,6 +472,10 @@ _slide_cb_check_time(void *data)
    double now, set_time;
    time_t rawtime;
    struct tm * timeinfo;
+   E_Container *con;
+   E_Desk *d;
+   E_Zone *z;
+   const char *file;
   
    inst = data;
 
@@ -488,12 +491,24 @@ _slide_cb_check_time(void *data)
 
    set_time = inst->ci->hours * 3600 + inst->ci->minutes * 60;
    now = timeinfo->tm_hour * 3600 + timeinfo->tm_min * 60;
+   
+   con = e_container_current_get(e_manager_current_get());
+   z = e_zone_current_get(con);
+   d = e_desk_current_get(z);
+   e_bg_del(con->num, z->num, d->x, d->y);
+   file = ecore_file_file_get(e_bg_file_get(con->num, z->num, d->x, d->y)); 
 
    if (now >= set_time && now < set_time + 12 * 3600)
-     _slide_set_bg(inst, inst->ci->file_day);
+     {
+       if (!strcmp(file, inst->ci->file_day)) return EINA_TRUE;
+       else  _slide_set_bg(inst, inst->ci->file_day);
+     }
    else 
-     _slide_set_bg(inst, inst->ci->file_night);
-  
+     {
+       if (!strcmp(file, inst->ci->file_night)) return EINA_TRUE;
+       else _slide_set_bg(inst, inst->ci->file_night);
+     }
+
    return EINA_TRUE;
 }
 
