@@ -53,6 +53,7 @@ static void _import_edj_gen(Instance *inst);
 
 static E_Config_DD *conf_edd = NULL;
 static E_Config_DD *conf_item_edd = NULL;
+static Eina_List *slideshow_handlers = NULL;
 
 Config *slide_config = NULL;
 
@@ -252,7 +253,7 @@ _slide_config_updated(Config_Item *ci)
      {
         int no_match = 0;
         
-        if (inst->ci != ci) continue;
+        if (ci && inst->ci != ci) continue;
         if (inst->check_timer) ecore_timer_del(inst->check_timer);
         if (inst->check_timer_hr) ecore_timer_del(inst->check_timer_hr);
         
@@ -278,6 +279,13 @@ _slide_config_updated(Config_Item *ci)
             _slide_cb_check_time(inst);
           }
      }
+}
+
+static Eina_Bool
+_slideshow_update(void *d __UNUSED__, int type __UNUSED__, void *event __UNUSED__)
+{
+   _slide_config_updated(NULL);
+   return ECORE_CALLBACK_PASS_ON;
 }
 
 static Config_Item *
@@ -389,6 +397,8 @@ e_modapi_init(E_Module *m)
         ci->all_desks = 0;
         slide_config->items = eina_list_append(slide_config->items, ci);
      }
+
+   E_LIST_HANDLER_APPEND(slideshow_handlers, E_EVENT_SYS_RESUME, _slideshow_update, NULL);
    slide_config->module = m;
    e_gadcon_provider_register(&_gc_class);
    return m;
@@ -399,6 +409,8 @@ e_modapi_shutdown(__UNUSED__ E_Module *m)
 {
    slide_config->module = NULL;
    e_gadcon_provider_unregister(&_gc_class);
+
+   E_FREE_LIST(slideshow_handlers, ecore_event_handler_del);
 
    if (slide_config->config_dialog)
      e_object_del(E_OBJECT(slide_config->config_dialog));
