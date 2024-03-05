@@ -178,7 +178,7 @@ _gc_id_new(__UNUSED__ const E_Gadcon_Client_Class *client_class)
 }
 
 static void
-_slide_cb_mouse_down(void *data, __UNUSED__ Evas *e, Evas_Object *obj __UNUSED__ , void *event_info)
+_slide_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
    Instance *inst;
    Evas_Event_Mouse_Down *ev;
