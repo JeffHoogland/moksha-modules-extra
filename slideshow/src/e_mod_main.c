@@ -48,7 +48,7 @@ static void _slide_get_bg_count(void *data);
 static void _slide_set_bg(void *data, const char *bg);
 static void _slide_set_preview(void *data);
 static void _slide_get_bg_subdirs(void *data, char *local_path);
-static Eina_Bool  _edj_cc_exit(void *data, int type __UNUSED__, void *event);
+static Eina_Bool  _edj_cc_exit(void *data, int type, void *event);
 static void _import_edj_gen(Instance *inst);
 
 static E_Config_DD *conf_edd = NULL;
@@ -143,20 +143,20 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 }
 
 static void
-_gc_orient(E_Gadcon_Client *gcc, __UNUSED__ E_Gadcon_Orient orient)
+_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
 {
    e_gadcon_client_aspect_set(gcc, 16, 16);
    e_gadcon_client_min_size_set(gcc, 16, 16);
 }
 
 static const char *
-_gc_label(__UNUSED__ const E_Gadcon_Client_Class *client_class)
+_gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return D_("Slideshow");
 }
 
 static Evas_Object *
-_gc_icon(__UNUSED__ const E_Gadcon_Client_Class *client_class, Evas *evas)
+_gc_icon( const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o;
    char buf[PATH_MAX];
@@ -178,7 +178,7 @@ _gc_id_new(__UNUSED__ const E_Gadcon_Client_Class *client_class)
 }
 
 static void
-_slide_cb_mouse_down(void *data, __UNUSED__ Evas *e, __UNUSED__ Evas_Object *obj, void *event_info)
+_slide_cb_mouse_down(void *data, __UNUSED__ Evas *e, Evas_Object *obj __UNUSED__ , void *event_info)
 {
    Instance *inst;
    Evas_Event_Mouse_Down *ev;
@@ -221,7 +221,7 @@ _slide_cb_mouse_down(void *data, __UNUSED__ Evas *e, __UNUSED__ Evas_Object *obj
 }
 
 static void
-_slide_menu_cb_post(__UNUSED__ void *data, __UNUSED__ E_Menu *m)
+_slide_menu_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
 {
    if (!slide_config->menu) return;
    e_object_del(E_OBJECT(slide_config->menu));
@@ -229,7 +229,7 @@ _slide_menu_cb_post(__UNUSED__ void *data, __UNUSED__ E_Menu *m)
 }
 
 static void
-_slide_menu_cb_configure(void *data, __UNUSED__ E_Menu *m, __UNUSED__ E_Menu_Item *mi)
+_slide_menu_cb_configure(void *data,E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
 
