@@ -265,7 +265,7 @@ ngi_free(Ng *ng)
    EINA_LIST_FREE(ng->handlers, h)
    ecore_event_handler_del(h);
 
-   free(ng);
+   E_FREE(ng);
 }
 
 Eina_Bool
@@ -339,10 +339,10 @@ _ngi_win_free(Ngi_Win *win)
    if (win->fake_iwin)
      {
       ecore_x_window_free(win->input);
-      free(win->fake_iwin);
+      E_FREE(win->fake_iwin);
      }
 
-   free(win);
+   E_FREE(win);
 
    return 1;
 }

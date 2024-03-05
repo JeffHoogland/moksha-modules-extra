@@ -151,7 +151,7 @@ _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    if (cfdata->cfg->ng)
      ngi_bar_lock(cfdata->cfg->ng, 0);
 
-   free(cfdata);
+   E_FREE(cfdata);
 }
 
 static Evas_Object *
