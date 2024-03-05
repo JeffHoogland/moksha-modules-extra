@@ -428,8 +428,8 @@ e_modapi_shutdown(__UNUSED__ E_Module *m)
         slide_config->items = eina_list_remove_list(slide_config->items, slide_config->items);
         if (ci->id) eina_stringshare_del(ci->id);
         if (ci->dir) eina_stringshare_del(ci->dir);
-        if (ci->file_day) eina_stringshare_del(ci->dir);
-        if (ci->file_night) eina_stringshare_del(ci->dir);
+        if (ci->file_day) eina_stringshare_del(ci->file_day);
+        if (ci->file_night) eina_stringshare_del(ci->file_night);
         E_FREE(ci);
      }
    E_FREE(slide_config);
