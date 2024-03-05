@@ -15,8 +15,8 @@ EAPI E_Module_Api e_modapi =
 static E_Gadcon_Client *_gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style);
 static void _gc_shutdown(E_Gadcon_Client *gcc);
 static void _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient);
-static const char *_gc_label(const E_Gadcon_Client_Class *client_class);
-static Evas_Object *_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas);
+static const char *_gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__);
+static Evas_Object *_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__ , Evas *evas);
 static const char *_gc_id_new(const E_Gadcon_Client_Class *client_class);
 static const E_Gadcon_Client_Class _gadcon_class =
    {
@@ -113,6 +113,8 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
      case ALARM_STATE_RINGING:
         edje_object_signal_emit(o, EDJE_SIG_SEND_ALARM_RING_START);
         break;
+      default:
+        // FIXMW: unhandled case: ALARM_STATE_SNOOZED
      }
 
    e_config_save_queue();
@@ -140,8 +142,7 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
    int w, h;
 
    inst = gcc->data;
-   if (orient != -1)
-      inst->orient = orient;
+   inst->orient = orient;
 
    /* details or not */
    if (alarm_config->alarms_details)
@@ -176,13 +177,13 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
 }
    
 static const char *
-_gc_label(const E_Gadcon_Client_Class *client_class)
+_gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return D_("Alarm");
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
+_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o;
    char buf[4096];
@@ -195,7 +196,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 }
 
 static const char *
-_gc_id_new(const E_Gadcon_Client_Class *client_class)
+_gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return _gadcon_class.name;
 }
@@ -410,7 +411,7 @@ alarm_alarm_ring(Alarm *al, int test)
                                       ECORE_EXE_USE_SH, NULL);
           }
 
-        if (exe > 0)
+        if (exe)
           ecore_exe_free(exe);
         else
           {
@@ -798,7 +799,7 @@ _epoch_find_next(int day_monday, int day_tuesday, int day_wenesday, int day_thur
 }
 
 static void
-_button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_button_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
    Instance *inst;
    Evas_Event_Mouse_Down *ev;
@@ -883,7 +884,7 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 }
 
 static void
-_menu_cb_deactivate_post(void *data, E_Menu *m)
+_menu_cb_deactivate_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
 {
    if (!alarm_config->menu) return;
    e_object_del(E_OBJECT(alarm_config->menu));
@@ -891,7 +892,7 @@ _menu_cb_deactivate_post(void *data, E_Menu *m)
 }
 
 static void
-_menu_cb_alarm_snooze(void *data, E_Menu *m, E_Menu_Item *mi)
+_menu_cb_alarm_snooze(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Alarm *al;
 
@@ -900,13 +901,13 @@ _menu_cb_alarm_snooze(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_menu_cb_alarm_add(void *data, E_Menu *m, E_Menu_Item *mi)
+_menu_cb_alarm_add(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    alarm_config_alarm(NULL);
 }
 
 static void
-_menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi)
+_menu_cb_configure(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    if (!alarm_config) return;
    if (alarm_config->config_dialog) return;
@@ -914,7 +915,7 @@ _menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_edje_alarm_state_on(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_edje_alarm_state_on(void *data __UNUSED__, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    if (alarm_config->alarms_state == ALARM_STATE_ON) return;
 
@@ -926,7 +927,7 @@ _cb_edje_alarm_state_on(void *data, Evas_Object *obj, const char *emission, cons
 }
 
 static void
-_cb_edje_alarm_state_off(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_edje_alarm_state_off(void *data __UNUSED__, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    if (alarm_config->alarms_state == ALARM_STATE_OFF) return;
 
@@ -936,7 +937,7 @@ _cb_edje_alarm_state_off(void *data, Evas_Object *obj, const char *emission, con
 }
 
 static void
-_cb_edje_alarm_ring_stop(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_edje_alarm_ring_stop(void *data __UNUSED__, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    if (alarm_config->alarms_state != ALARM_STATE_RINGING) return;
 
@@ -944,7 +945,7 @@ _cb_edje_alarm_ring_stop(void *data, Evas_Object *obj, const char *emission, con
 }
 
 static Eina_Bool
-_cb_alarms_ring_etimer(void *data)
+_cb_alarms_ring_etimer(void *data __UNUSED__)
 {
    Eina_List *l;
    double now;
@@ -1114,10 +1115,10 @@ e_modapi_init(E_Module *m)
    //FIXME not sure about that, maybe must use edje directly to find the part
    if (!e_theme_category_find(THEME_IN_E))
      {
-        char buf[512];
+        char temp[512];
 
-        snprintf(buf, sizeof(buf), "%s/alarm.edj", e_module_dir_get(m));
-        alarm_config->theme = strdup(buf);
+        snprintf(temp, sizeof(temp), "%s/alarm.edj", e_module_dir_get(m));
+        alarm_config->theme = strdup(temp);
      }
    
    alarm_config->module = m;
@@ -1128,7 +1129,7 @@ e_modapi_init(E_Module *m)
 }
 
 EAPI int
-e_modapi_shutdown(E_Module *m)
+e_modapi_shutdown(E_Module *m __UNUSED__)
 {
    e_gadcon_provider_unregister((const E_Gadcon_Client_Class *)&_gadcon_class);
    
@@ -1167,7 +1168,7 @@ e_modapi_shutdown(E_Module *m)
 }
 
 EAPI int
-e_modapi_save(E_Module *m)
+e_modapi_save(E_Module *m __UNUSED__)
 {
    e_config_domain_save("module.alarm", _conf_edd, alarm_config);
    return 1;

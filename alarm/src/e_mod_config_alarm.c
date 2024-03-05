@@ -66,6 +66,7 @@ alarm_config_alarm(Alarm *al)
    snprintf(buf, sizeof(buf), "%s/e-module-alarm.edj", e_module_dir_get(alarm_config->module));
    cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
                  D_("Alarm Configuration : Setup an alarm"), "Alarm", "_e_modules_alarm_alarm_config_dialog", buf, 0, v, al);
+   alarm_config->config_dialog = cfd;
 }
 
 static void *
@@ -85,18 +86,18 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
-   free(cfdata->name);
-   free(cfdata->description);
-   free(cfdata->program);
+   E_FREE(cfdata->name);
+   E_FREE(cfdata->description);
+   E_FREE(cfdata->program);
 
    if (cfdata->al)
      cfdata->al->config_dialog = NULL;
    else
      alarm_config->config_dialog_alarm_new = NULL;
 
-   free(cfdata);
+   E_FREE(cfdata);
 }
 
 static void
@@ -177,7 +178,7 @@ _fill_data(E_Config_Dialog_Data *cfdata, Alarm *al)
 }
 
 static void
-_common_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata, Evas_Object *o)
+_common_create_widgets(E_Config_Dialog *cfd  __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata, Evas_Object *o)
 {
    Evas_Object *of, *of2, *ob;
    E_Radio_Group *rg;
@@ -489,7 +490,7 @@ _cb_alarm_test(void *data, void *data2)
 }
 
 static void
-_cb_alarm_today(void *data, void *data2)
+_cb_alarm_today(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    struct tm *st;
@@ -505,7 +506,7 @@ _cb_alarm_today(void *data, void *data2)
 }
 
 static void
-_cb_alarm_tomorrow(void *data, void *data2)
+_cb_alarm_tomorrow(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    struct tm *st;

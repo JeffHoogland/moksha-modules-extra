@@ -108,7 +108,7 @@ alarm_config_refresh_alarms_ilist(E_Config_Dialog_Data *cfdata)
 }
 
 static void *
-_create_data(E_Config_Dialog *cfd) 
+_create_data(E_Config_Dialog *cfd __UNUSED__) 
 {
    E_Config_Dialog_Data *cfdata;
    
@@ -118,11 +118,11 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
-   free(cfdata->alarms_program_default);
+   E_FREE(cfdata->alarms_program_default);
    alarm_config->config_dialog = NULL;
-   free(cfdata);
+   E_FREE(cfdata);
 }
 
 static void
@@ -145,7 +145,7 @@ _fill_data(E_Config_Dialog_Data *cfdata)
 }
 
 static void
-_common_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata, Evas_Object *o)
+_common_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata, Evas_Object *o)
 {
    Evas_Object *of, *ob;
 
@@ -173,9 +173,9 @@ _common_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *c
 }
 
 static int
-_common_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
+_common_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
-   if (alarm_config->alarms_state != cfdata->alarms_active)
+   if ( alarm_config->alarms_state != (unsigned int) cfdata->alarms_active)
      {
         alarm_config->alarms_state = cfdata->alarms_active;
         if (cfdata->alarms_active)
@@ -292,7 +292,7 @@ _cb_alarms_list(void *data)
 }
 
 static void
-_cb_alarm_add(void *data, void *data2)
+_cb_alarm_add(void *data __UNUSED__, void *data2 __UNUSED__)
 {
    if (alarm_config->config_dialog_alarm_new) return;
 
@@ -300,7 +300,7 @@ _cb_alarm_add(void *data, void *data2)
 }
 
 static void
-_cb_alarm_del(void *data, void *data2)
+_cb_alarm_del(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    Alarm *al;
@@ -316,7 +316,7 @@ _cb_alarm_del(void *data, void *data2)
 }
 
 static void
-_cb_alarm_config(void *data, void *data2)
+_cb_alarm_config(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    Alarm *al;
@@ -331,7 +331,7 @@ _cb_alarm_config(void *data, void *data2)
 }
 
 static void
-_cb_alarm_duplicate(void *data, void *data2)
+_cb_alarm_duplicate(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    Alarm *al, *al_new;
