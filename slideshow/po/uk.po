@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow.HEAD\n"
-"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
-"POT-Creation-Date: 2010-09-09 08:01-0700\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-03-06 18:18+0100\n"
 "PO-Revision-Date: 2011-02-06 10:54+0300\n"
 "Last-Translator: Korostil Daniel <ted.korostiled@gmail.com>\n"
 "Language-Team: translation@linux.org.ua\n"
@@ -13,68 +13,115 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.6.1\n"
 
-#: ../src/e_mod_config.c:37
+#: src/e_mod_config.c:40
 #, fuzzy
-#| msgid "Slideshow"
 msgid "Slideshow Settings"
 msgstr "Налаштування"
 
-#: ../src/e_mod_config.c:90
-msgid "Cycle Time"
+#: src/e_mod_config.c:111
+#, fuzzy
+msgid "Cycles Time"
 msgstr "Час повторення"
 
-#: ../src/e_mod_config.c:92
+#: src/e_mod_config.c:113
 msgid "Disable Timer"
 msgstr "Вимкнути таймер"
 
-#: ../src/e_mod_config.c:95
+#: src/e_mod_config.c:116
 #, c-format
 msgid "%3.0f seconds"
 msgstr "%3.0f секунд"
 
-#: ../src/e_mod_config.c:100
+#: src/e_mod_config.c:121
+msgid "Day/Night backgrounds"
+msgstr ""
+
+#: src/e_mod_config.c:123
+#, fuzzy
+msgid "Disable Scheduler"
+msgstr "Вимкнути таймер"
+
+#: src/e_mod_config.c:125
+#, c-format
+msgid "%1.0f hr"
+msgstr ""
+
+#: src/e_mod_config.c:128
+#, c-format
+msgid "%1.0f min"
+msgstr ""
+
+#: src/e_mod_config.c:131
+msgid "Day bg file: (Start at slider time e.g. 6:00 am)"
+msgstr ""
+
+#: src/e_mod_config.c:135
+msgid "Night bg file: (12 hours later at 6:00 pm)"
+msgstr ""
+
+#: src/e_mod_config.c:141
 msgid "Directory"
 msgstr "Тека"
 
-#: ../src/e_mod_config.c:102
+#: src/e_mod_config.c:143
 msgid "Sub-directory to use for backgrounds"
 msgstr "Підтека для використання фонових елементів"
 
-#: ../src/e_mod_config.c:109
+#: src/e_mod_config.c:150
 msgid "Extra"
 msgstr "Додатковий"
 
-#: ../src/e_mod_config.c:110
+#: src/e_mod_config.c:151
 msgid "Randomize order"
 msgstr "Випадковий порядок"
 
-#: ../src/e_mod_config.c:113
+#: src/e_mod_config.c:154
 msgid "Set wallpaper on all desktops"
 msgstr "Встановити шпалеру на всі стільниці"
 
-#: ../src/e_mod_config.c:115
+#: src/e_mod_config.c:156
 msgid "Set wallpaper on current desktop"
 msgstr "Встановити шпалеру на теперішню стільницю"
 
-#: ../src/e_mod_config.c:117
+#: src/e_mod_config.c:158
 msgid "Set wallpaper on current screen"
 msgstr "Встановити шпалеру на теперішній екран"
 
-#: ../src/e_mod_config.c:121
+#: src/e_mod_config.c:162
 msgid "Set wallpaper on current monitor (Xinerama support)"
 msgstr "Встановити шпалеру на поточний монітор (підтримка Xinerama)"
 
-#: ../src/e_mod_main.c:139
+#: src/e_mod_config.c:210 src/e_mod_main.c:267 src/e_mod_main.c:492
+msgid "Warning"
+msgstr ""
+
+#: src/e_mod_config.c:210 src/e_mod_main.c:493
+msgid "Day/Night file names are not defined!"
+msgstr ""
+
+#: src/e_mod_main.c:155
 msgid "Slideshow"
 msgstr "Показ слайдів"
 
-#: ../src/e_mod_main.c:185
+#: src/e_mod_main.c:196
 msgid "Settings"
 msgstr "Налаштування"
+
+#: src/e_mod_main.c:267
+msgid "Check Day/Night bg file names. They do not match!"
+msgstr ""
+
+#: src/e_mod_main.c:712
+msgid "Picture Import Error"
+msgstr ""
+
+#: src/e_mod_main.c:713
+msgid "Moksha was unable to import the picture<br>due to conversion errors."
+msgstr ""
 
 #~ msgid "Slideshow Configuration"
 #~ msgstr "Налаштування показу слайдів"

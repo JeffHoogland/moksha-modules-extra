@@ -6,70 +6,126 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-03-06 18:18+0100\n"
 "PO-Revision-Date: 2010-01-17 14:53+0000\n"
 "Last-Translator: Joshas <Unknown>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2010-01-18 04:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: ../src/e_mod_config.c:37
-msgid "Slideshow Configuration"
-msgstr "Prezentacijos konfigūracija"
+#: src/e_mod_config.c:40
+#, fuzzy
+msgid "Slideshow Settings"
+msgstr "Prezentacija"
 
-#: ../src/e_mod_config.c:90
-msgid "Cycle Time"
+#: src/e_mod_config.c:111
+#, fuzzy
+msgid "Cycles Time"
 msgstr "Periodo laikas"
 
-#: ../src/e_mod_config.c:92
+#: src/e_mod_config.c:113
 msgid "Disable Timer"
 msgstr "Išjungti laikmatį"
 
-#: ../src/e_mod_config.c:95
+#: src/e_mod_config.c:116
 #, c-format
 msgid "%3.0f seconds"
 msgstr "%3.0f sekundės"
 
-#: ../src/e_mod_config.c:100
+#: src/e_mod_config.c:121
+msgid "Day/Night backgrounds"
+msgstr ""
+
+#: src/e_mod_config.c:123
+#, fuzzy
+msgid "Disable Scheduler"
+msgstr "Išjungti laikmatį"
+
+#: src/e_mod_config.c:125
+#, c-format
+msgid "%1.0f hr"
+msgstr ""
+
+#: src/e_mod_config.c:128
+#, c-format
+msgid "%1.0f min"
+msgstr ""
+
+#: src/e_mod_config.c:131
+msgid "Day bg file: (Start at slider time e.g. 6:00 am)"
+msgstr ""
+
+#: src/e_mod_config.c:135
+msgid "Night bg file: (12 hours later at 6:00 pm)"
+msgstr ""
+
+#: src/e_mod_config.c:141
 msgid "Directory"
 msgstr "Katalogas"
 
-#: ../src/e_mod_config.c:102
+#: src/e_mod_config.c:143
 msgid "Sub-directory to use for backgrounds"
 msgstr "Pokatalogis naudojamas fonams"
 
-#: ../src/e_mod_config.c:109
+#: src/e_mod_config.c:150
 msgid "Extra"
 msgstr "Papildomi"
 
-#: ../src/e_mod_config.c:110
+#: src/e_mod_config.c:151
 msgid "Randomize order"
 msgstr "Atsitiktinė tvarka"
 
-#: ../src/e_mod_config.c:113
+#: src/e_mod_config.c:154
 msgid "Set wallpaper on all desktops"
 msgstr "Nustatyti foną visiems darbalaukiams"
 
-#: ../src/e_mod_config.c:115
+#: src/e_mod_config.c:156
 msgid "Set wallpaper on current desktop"
 msgstr "Nustatyti foną dabartiniam darbalaukiui"
 
-#: ../src/e_mod_config.c:117
+#: src/e_mod_config.c:158
 msgid "Set wallpaper on current screen"
 msgstr "Nustatyti foną dabartiniam ekranui"
 
-#: ../src/e_mod_config.c:121
+#: src/e_mod_config.c:162
 msgid "Set wallpaper on current monitor (Xinerama support)"
 msgstr "Nustatyti foną dabartiniam monitoriui (Xinerama palaikymas)"
 
-#: ../src/e_mod_main.c:136
+#: src/e_mod_config.c:210 src/e_mod_main.c:267 src/e_mod_main.c:492
+msgid "Warning"
+msgstr ""
+
+#: src/e_mod_config.c:210 src/e_mod_main.c:493
+msgid "Day/Night file names are not defined!"
+msgstr ""
+
+#: src/e_mod_main.c:155
 msgid "Slideshow"
 msgstr "Prezentacija"
 
-#: ../src/e_mod_main.c:180
-msgid "Configuration"
-msgstr "Konfigūracija"
+#: src/e_mod_main.c:196
+msgid "Settings"
+msgstr ""
+
+#: src/e_mod_main.c:267
+msgid "Check Day/Night bg file names. They do not match!"
+msgstr ""
+
+#: src/e_mod_main.c:712
+msgid "Picture Import Error"
+msgstr ""
+
+#: src/e_mod_main.c:713
+msgid "Moksha was unable to import the picture<br>due to conversion errors."
+msgstr ""
+
+#~ msgid "Slideshow Configuration"
+#~ msgstr "Prezentacijos konfigūracija"
+
+#~ msgid "Configuration"
+#~ msgstr "Konfigūracija"
