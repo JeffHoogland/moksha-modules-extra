@@ -2,13 +2,14 @@
 # This file is put in the public domain.
 # quaker66@gmail.com
 # Vít Pelčák <vit@pelcak.org>, 2011.
+# Štefan Uram <thewaiter@centrum.sk>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: Slideshow\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-03-06 18:18+0100\n"
 "PO-Revision-Date: 2011-10-15 12:44+0200\n"
-"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
+"Last-Translator: Štefan Uram <thewaiter@centrum.sk>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +23,6 @@ msgid "Slideshow Settings"
 msgstr "Slideshow - nastavení"
 
 #: src/e_mod_config.c:111
-#, fuzzy
 msgid "Cycles Time"
 msgstr "Čas cyklu"
 
@@ -37,30 +37,29 @@ msgstr "%3.0f sekund"
 
 #: src/e_mod_config.c:121
 msgid "Day/Night backgrounds"
-msgstr ""
+msgstr "Den/Noc tapety"
 
 #: src/e_mod_config.c:123
-#, fuzzy
 msgid "Disable Scheduler"
 msgstr "Vypnout časovač"
 
 #: src/e_mod_config.c:125
 #, c-format
 msgid "%1.0f hr"
-msgstr ""
+msgstr "%1.0f hod."
 
 #: src/e_mod_config.c:128
 #, c-format
 msgid "%1.0f min"
-msgstr ""
+msgstr "%1.0f min."
 
 #: src/e_mod_config.c:131
 msgid "Day bg file: (Start at slider time e.g. 6:00 am)"
-msgstr ""
+msgstr "Soubor pro den: (Start v nastaveném čase např. 6:00)"
 
 #: src/e_mod_config.c:135
 msgid "Night bg file: (12 hours later at 6:00 pm)"
-msgstr ""
+msgstr "Soubor pro noc: (12 hodin později např. 18:00)"
 
 #: src/e_mod_config.c:141
 msgid "Directory"
@@ -96,11 +95,11 @@ msgstr "Nastavit tapetu na aktuálním monitoru (Podpora Xineramy)"
 
 #: src/e_mod_config.c:210 src/e_mod_main.c:267 src/e_mod_main.c:492
 msgid "Warning"
-msgstr ""
+msgstr "Upozornění"
 
 #: src/e_mod_config.c:210 src/e_mod_main.c:493
 msgid "Day/Night file names are not defined!"
-msgstr ""
+msgstr "Soubory Den/Noc nejsou definovány!"
 
 #: src/e_mod_main.c:155
 msgid "Slideshow"
@@ -112,18 +111,12 @@ msgstr "Nastavení"
 
 #: src/e_mod_main.c:267
 msgid "Check Day/Night bg file names. They do not match!"
-msgstr ""
+msgstr "Skontrolujte soubory Den/Noc. Nezhodují se!"
 
 #: src/e_mod_main.c:712
 msgid "Picture Import Error"
-msgstr ""
+msgstr "Chyba importu tapety"
 
 #: src/e_mod_main.c:713
 msgid "Moksha was unable to import the picture<br>due to conversion errors."
-msgstr ""
-
-#~ msgid "Slideshow Configuration"
-#~ msgstr "Nastavení slideshow"
-
-#~ msgid "Configuration"
-#~ msgstr "Konfigurace"
+msgstr "Moksha není schopna importovat tapetu<br> v důsledku chyb konverze"

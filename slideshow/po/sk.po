@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-03-06 18:18+0100\n"
 "PO-Revision-Date: 2009-06-09 17:58+0000\n"
-"Last-Translator: milboy <Unknown>\n"
+"Last-Translator: Stefan Uram <thewaiter@centrum.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr "Nastavenie"
 
 #: src/e_mod_main.c:267
 msgid "Check Day/Night bg file names. They do not match!"
-msgstr "Skontroluj súbory Deň/Noc. Nezhodujú sa!"
+msgstr "Skontrolujte súbory Deň/Noc. Nezhodujú sa!"
 
 #: src/e_mod_main.c:712
 msgid "Picture Import Error"
