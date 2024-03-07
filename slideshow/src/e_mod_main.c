@@ -103,7 +103,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    else
      {
         _slide_get_bg_count(inst);
-        if(inst->ci->random_order)
+        if (inst->ci->random_order)
           {
              srand(time(NULL) + inst->gcc->id * 100);
              inst->index = (rand() % (inst->bg_count+1));
@@ -323,7 +323,7 @@ _slide_config_item_get(const char *id)
    ci = E_NEW(Config_Item, 1);
    ci->id = eina_stringshare_add(id);
    ci->poll_time = 60.0;
-   ci->hours = 0.0;
+   ci->hours = 6.0;
    ci->minutes = 0.0;
    ci->disable_timer = 0;
    ci->disable_sched = 1;
@@ -389,7 +389,7 @@ e_modapi_init(E_Module *m)
         ci->file_day = eina_stringshare_add("");
         ci->file_night = eina_stringshare_add("");
         ci->poll_time = 60.0;
-        ci->hours = 0.0;
+        ci->hours = 6.0;
         ci->minutes = 0.0;
         ci->disable_timer = 0;
         ci->disable_sched = 1;
@@ -529,7 +529,7 @@ _slide_cb_check(void *data)
         if (bg)
           {
              _slide_set_bg(inst, bg);
-             if(inst->ci->random_order)
+             if (inst->ci->random_order)
                {
                   srand(time(NULL) + inst->gcc->id * 100);
                   inst->index = (rand() % (inst->bg_count+1));
@@ -565,7 +565,7 @@ _slide_get_bg_subdirs(void *data, char *local_path)
        if (ret < 0) abort();
        ret = snprintf(item_local_path, sizeof(item_local_path), "%s/%s", local_path, item);
        if (ret < 0) abort();
-       if(ecore_file_is_dir(item_full_path))
+       if (ecore_file_is_dir(item_full_path))
         _slide_get_bg_subdirs(inst, item_local_path);
        else
          inst->bg_list = eina_list_append(inst->bg_list, strdup(item_local_path));
@@ -594,7 +594,7 @@ _slide_get_bg_count(void *data)
      {
         snprintf(item_full_path, sizeof(item_full_path), "%s/%s", inst->ci->dir, item);
 
-        if(ecore_file_is_dir(item_full_path))
+        if (ecore_file_is_dir(item_full_path))
           _slide_get_bg_subdirs(inst, item);
         else
           inst->bg_list = eina_list_append(inst->bg_list, strdup(item));
