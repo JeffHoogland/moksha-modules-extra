@@ -257,16 +257,21 @@ _slide_config_updated(Config_Item *ci)
         if (inst->check_timer) ecore_timer_del(inst->check_timer);
         if (inst->check_timer_hr) ecore_timer_del(inst->check_timer_hr);
         
-        EINA_LIST_FOREACH(inst->bg_list, l, bg)
+        if (!inst->ci->disable_sched)
           {
-            if (!strcmp(bg, inst->ci->file_day) || !strcmp(bg, inst->ci->file_night))
-              no_match++;
-          }
-        if (no_match != 2)
-          {
-            e_util_dialog_show(D_("Warning"), D_("Check Day/Night bg file names. "
-                                                 "They do not match!"));
-            return;
+            EINA_LIST_FOREACH(inst->bg_list, l, bg)
+              {
+                if (!strcmp(bg, inst->ci->file_day) || 
+                    !strcmp(bg, inst->ci->file_night))
+                  no_match++;
+              }
+           if (no_match != 2)
+             {
+                e_util_dialog_show(D_("Warning"), 
+                                   D_("Check Day/Night bg file names. "
+                                      "They do not match!"));
+                return;
+             }
           }
 
         if (!inst->ci->disable_timer)
@@ -501,9 +506,9 @@ _slide_cb_check_time(void *data)
    now = timeinfo->tm_hour * 3600 + timeinfo->tm_min * 60;
    
    if (now >= set_time && now < set_time + 12 * 3600)
-       _slide_set_bg(inst, inst->ci->file_day);
+      _slide_set_bg(inst, inst->ci->file_day);
    else 
-       _slide_set_bg(inst, inst->ci->file_night);
+      _slide_set_bg(inst, inst->ci->file_night);
 
    return EINA_TRUE;
 }
