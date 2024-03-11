@@ -138,7 +138,7 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 }
 
 static void
-_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
+_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
 {
    Instance *inst;
    Evas_Coord mw, mh;
@@ -155,13 +155,13 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
 }
 
 static const char *
-_gc_label(const E_Gadcon_Client_Class *client_class)
+_gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return "Calendar";
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
+_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o;
    char buf[4096];
@@ -176,7 +176,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 }
 
 static const char *
-_gc_id_new(const E_Gadcon_Client_Class *client_class)
+_gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    Config_Item *ci;
    const char *id;
@@ -238,13 +238,13 @@ _config_item_get(const char *id)
 }
 
 static Eina_Bool
-_update_date(void *data)
+_update_date(void *data __UNUSED__)
 {
    Instance *inst;
    Eina_List *l;
    time_t current_time;
    struct tm *local_time;
-   static int prev_day=0;
+   static int prev_day = 0;
 
    if (!calendar_conf->instances) return EINA_TRUE;
 
@@ -303,8 +303,6 @@ static const char *days[] = {
 static void
 _calendar_popup_content_update(Instance *inst)
 {
-   char buf[32];
-
    evas_object_del(inst->table);
    inst->table = NULL;
 
@@ -316,10 +314,10 @@ _day_today(void *data, __UNUSED__ Evas_Object *obj, __UNUSED__ const char *emiss
 {
    Instance *inst = data;
    
-   time_t current_time;
-   struct tm *local_time;
-   current_time = time (NULL);
-   local_time = localtime_r(&current_time, &inst->displayed_time);
+   //~ time_t current_time;
+   //~ struct tm *local_time;
+   //~ current_time = time (NULL);
+   //~ local_time = localtime_r(&current_time, &inst->displayed_time);
    inst->displayed_time.tm_mday = 1;
    _calendar_popup_content_update(inst);
 }
@@ -412,7 +410,7 @@ _calendar_popup_content_populate(Instance *inst, struct tm *time)
 
    /* Column titles */
    day = inst->ci->firstweekday;
-   for (col = 0; col < sizeof (days) / sizeof (char *); ++col)
+   for (col = 0; col < (int) (sizeof (days) / sizeof (char *)); ++col)
      {
         o = e_widget_label_add(evas, days[(col + inst->ci->firstweekday) % (sizeof (days) / sizeof (char *))]);
         e_widget_table_object_append(table, o, col, 0, 1, 1, 0, 0, 0, 0);
@@ -526,7 +524,7 @@ _calendar_popup_destroy(Instance *inst)
 }
 
 static void
-_cb_action(E_Object *obj, const char *params)
+_cb_action(E_Object *obj __UNUSED__, const char *params __UNUSED__)
 {
    Eina_List *l;
    Instance *inst;
@@ -554,7 +552,8 @@ _cb_action(E_Object *obj, const char *params)
 }
 
 static void
-_cb_mouse_in(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_cb_mouse_in(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, 
+             void *event_info __UNUSED__)
 {
    Instance *inst;
 
@@ -563,7 +562,8 @@ _cb_mouse_in(void *data, Evas *e, Evas_Object *obj, void *event_info)
 }
 
 static void
-_cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_cb_mouse_out(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, 
+              void *event_info __UNUSED__)
 {
    Instance *inst;
 
@@ -572,7 +572,7 @@ _cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_info)
 }
 
 static void
-_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
    Instance *inst;
    Evas_Event_Mouse_Down *ev;
@@ -627,7 +627,7 @@ _cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 }
 
 static void
-_menu_cb_post(void *data, E_Menu *m)
+_menu_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
 {
    if (!calendar_conf->menu) return;
    e_object_del(E_OBJECT(calendar_conf->menu));
@@ -638,7 +638,7 @@ _menu_cb_post(void *data, E_Menu *m)
 }
 
 static void
-_calendar_firstweekday_su(void *data, E_Menu *m, E_Menu_Item *mi)
+_calendar_firstweekday_su(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
  
@@ -651,7 +651,7 @@ _calendar_firstweekday_su(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_calendar_firstweekday_mo(void *data, E_Menu *m, E_Menu_Item *mi)
+_calendar_firstweekday_mo(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
  
@@ -703,7 +703,7 @@ e_modapi_init(E_Module *m)
 }
 
 EAPI int
-e_modapi_shutdown(E_Module *m)
+e_modapi_shutdown(E_Module *m __UNUSED__)
 {
    if (calendar_conf->timer) ecore_timer_del(calendar_conf->timer);
    calendar_conf->module = NULL;
@@ -734,7 +734,7 @@ e_modapi_shutdown(E_Module *m)
 }
 
 EAPI int
-e_modapi_save(E_Module *m)
+e_modapi_save(E_Module *m __UNUSED__)
 {
    e_config_domain_save("module.calendar", conf_edd, calendar_conf);
    return 1;
