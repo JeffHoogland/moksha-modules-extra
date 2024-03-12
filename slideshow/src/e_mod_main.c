@@ -138,7 +138,6 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 
    evas_object_event_callback_del(slide->slide_obj, EVAS_CALLBACK_MOUSE_DOWN, 
                                   _slide_cb_mouse_down);
-
    _slide_free(slide);
    E_FREE(inst);
 }
@@ -235,7 +234,7 @@ _slide_menu_cb_configure(void *data,E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUS
    Instance *inst;
 
    inst = data;
-   
+
    if (!slide_config) return;
    if (slide_config->config_dialog) return;
    _config_slideshow_module(inst->ci);
@@ -513,14 +512,14 @@ _slide_config_free(void)
    E_FREE(slide_config);
 }
 
-static Eina_Bool 
+static Eina_Bool
 _slide_cb_check_time(void *data)
 {
    Instance *inst; 
    double now, set_time;
    time_t rawtime;
    struct tm * timeinfo;
-  
+
    inst = data;
 
    if (inst->ci->file_day[0] == '\0' || inst->ci->file_night[0] == '\0')
@@ -660,7 +659,7 @@ _slide_set_bg(void *data, const char *bg)
          _import_edj_gen(inst);
          snprintf (buf, sizeof (buf), "%s.edj", ecore_file_strip_ext(buf));
      }
-     
+
    if (inst->ci->all_desks == 0)
      {
         con = e_container_current_get(e_manager_current_get());
