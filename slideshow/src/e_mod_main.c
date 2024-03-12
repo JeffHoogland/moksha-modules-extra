@@ -382,7 +382,7 @@ e_modapi_init(E_Module *m)
 
    slide_config = e_config_domain_load("module.slideshow", conf_edd);
 
-   if (!slide_config)
+   if (slide_config)
       {
         if (!e_util_module_config_check(D_("Slideshow"), slide_config->version,
                                                MOD_CONFIG_FILE_VERSION))
