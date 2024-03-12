@@ -120,20 +120,20 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 }
 
 static void
-_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient) 
+_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__) 
 {
    e_gadcon_client_aspect_set(gcc, 32, 32);
    e_gadcon_client_min_size_set(gcc, 32, 32);
 }
 
 static const char *
-_gc_label(const E_Gadcon_Client_Class *client_class) 
+_gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return D_("Cpu");
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas) 
+_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas) 
 {
    Evas_Object *o;
    char buf[4096];
@@ -149,7 +149,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 }
 
 static const char *
-_gc_id_new(const E_Gadcon_Client_Class *client_class)
+_gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    Config_Item *ci;
 
@@ -158,7 +158,7 @@ _gc_id_new(const E_Gadcon_Client_Class *client_class)
 }
 
 static Config_Item *
-_config_item_get(const char *id) 
+_config_item_get(const char *id)
 {
    Eina_List *l = NULL;
    Config_Item *ci;
@@ -208,7 +208,7 @@ _set_cpu_load(void *data)
    Instance *inst;
    Cpu *cpu;
    int w, i = 0;
-   char str[100], str_tmp[100];
+   char str[200], str_tmp[100];
 
    if (cpu_count == -1) return EINA_FALSE;
    if (!(inst = data)) return EINA_TRUE;
@@ -356,7 +356,8 @@ _get_cpu_load(Instance *inst)
 }
 
 static void
-_button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_button_cb_mouse_down(void *data, Evas *e __UNUSED__, 
+                      Evas_Object *obj __UNUSED__, void *event_info)
 {
    Instance *inst;
    Evas_Event_Mouse_Down *ev;
@@ -437,7 +438,7 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 }
 
 static void
-_menu_cb_post(void *data, E_Menu *m)
+_menu_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
 {
    if (!cpu_conf->menu) return;
    e_object_del(E_OBJECT(cpu_conf->menu));
@@ -448,7 +449,7 @@ _menu_cb_post(void *data, E_Menu *m)
 }
    
 static void
-_cpu_menu_fast(void *data, E_Menu *m, E_Menu_Item *mi)
+_cpu_menu_fast(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
  
@@ -460,7 +461,7 @@ _cpu_menu_fast(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cpu_menu_medium(void *data, E_Menu *m, E_Menu_Item *mi)
+_cpu_menu_medium(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
  
@@ -472,7 +473,7 @@ _cpu_menu_medium(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cpu_menu_normal(void *data, E_Menu *m, E_Menu_Item *mi)
+_cpu_menu_normal(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
  
@@ -484,7 +485,7 @@ _cpu_menu_normal(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cpu_menu_slow(void *data, E_Menu *m, E_Menu_Item *mi)
+_cpu_menu_slow(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
 
@@ -496,7 +497,7 @@ _cpu_menu_slow(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cpu_menu_very_slow(void *data, E_Menu *m, E_Menu_Item *mi)
+_cpu_menu_very_slow(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
 
@@ -508,7 +509,7 @@ _cpu_menu_very_slow(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cpu_menu_merge_cpus(void *data, E_Menu *m, E_Menu_Item *mi)
+_cpu_menu_merge_cpus(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi)
 {
    Instance *inst;
 
@@ -569,7 +570,7 @@ e_modapi_init(E_Module *m)
 }
 
 EAPI int
-e_modapi_shutdown(E_Module *m) 
+e_modapi_shutdown(E_Module *m __UNUSED__)
 {
    cpu_conf->module = NULL;
    e_gadcon_provider_unregister(&_gc_class);
@@ -599,7 +600,7 @@ e_modapi_shutdown(E_Module *m)
 }
 
 EAPI int
-e_modapi_save(E_Module *m) 
+e_modapi_save(E_Module *m __UNUSED__)
 {
    e_config_domain_save("module.cpu", conf_edd, cpu_conf);
    return 1;
