@@ -12,6 +12,8 @@ AC_SEARCH_LIBS([strerror],[cposix])
 
 AM_INIT_AUTOMAKE(1.8)
 AC_CONFIG_HEADERS(config.h)
+AC_CONFIG_MACRO_DIR([m4])
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 AC_PROG_CC
 

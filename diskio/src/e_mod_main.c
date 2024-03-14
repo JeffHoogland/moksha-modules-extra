@@ -62,7 +62,7 @@ EAPI E_Module_Api e_modapi = {E_MODULE_API_VERSION, "DiskIO"};
  * Module Functions
  */
 EAPI void *
-e_modapi_init(E_Module *m) 
+e_modapi_init(E_Module *m)
 {
    char buf[4096];
 
@@ -150,7 +150,7 @@ e_modapi_init(E_Module *m)
  * Function to unload the module
  */
 EAPI int 
-e_modapi_shutdown(E_Module *m) 
+e_modapi_shutdown(E_Module *m __UNUSED__)
 {
    /* Kill the config dialog */
    if (diskio_conf->cfd) e_object_del(E_OBJECT(diskio_conf->cfd));
@@ -190,7 +190,7 @@ e_modapi_shutdown(E_Module *m)
  * Function to Save the modules config
  */ 
 EAPI int 
-e_modapi_save(E_Module *m) 
+e_modapi_save(E_Module *m __UNUSED__)
 {
    e_config_domain_save("module.diskio", conf_edd, diskio_conf);
    return 1;
@@ -300,7 +300,7 @@ _diskio_set(void *data)
 
 /* Called when Gadget_Container says stop */
 static void 
-_gc_shutdown(E_Gadcon_Client *gcc) 
+_gc_shutdown(E_Gadcon_Client *gcc)
 {
    Instance *inst = NULL;
 
@@ -330,7 +330,7 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 
 /* For for when container says we are changing position */
 static void 
-_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient) 
+_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
 {
    e_gadcon_client_aspect_set(gcc, 16, 16);
    e_gadcon_client_min_size_set(gcc, 16, 16);
@@ -338,14 +338,14 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
 
 /* Gadget/Module label */
 static const char *
-_gc_label(const E_Gadcon_Client_Class *client_class) 
+_gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return D_("DiskIO");
 }
 
 /* so E can keep a unique instance per-container */
 static const char *
-_gc_id_new(const E_Gadcon_Client_Class *client_class) 
+_gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    Config_Item *ci = NULL;
 
@@ -354,7 +354,7 @@ _gc_id_new(const E_Gadcon_Client_Class *client_class)
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas) 
+_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o = NULL;
    char buf[4096];
@@ -373,7 +373,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 
 /* new module needs a new config :), or config too old and we need one anyway */
 static void 
-_diskio_conf_new(void) 
+_diskio_conf_new(void)
 {
    diskio_conf = E_NEW(Config, 1);
    diskio_conf->version = (MOD_CONFIG_FILE_EPOCH << 16);
@@ -396,7 +396,7 @@ _diskio_conf_new(void)
 }
 
 static void 
-_diskio_conf_free(void) 
+_diskio_conf_free(void)
 {
    /* cleanup any stringshares here */
    while (diskio_conf->conf_items) 
@@ -418,7 +418,7 @@ _diskio_conf_free(void)
 
 /* timer for the config oops dialog */
 static Eina_Bool 
-_diskio_conf_timer(void *data) 
+_diskio_conf_timer(void *data)
 {
    e_util_dialog_internal( D_("DiskIO Configuration Updated"), data);
    return EINA_FALSE;
@@ -427,7 +427,7 @@ _diskio_conf_timer(void *data)
 /* function to search for any Config_Item struct for this Item
  * create if needed */
 static Config_Item *
-_diskio_conf_item_get(const char *id) 
+_diskio_conf_item_get(const char *id)
 {
    Config_Item *ci;
 
@@ -442,7 +442,7 @@ _diskio_conf_item_get(const char *id)
 
 /* Pants On */
 static void 
-_diskio_cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, void *event) 
+_diskio_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__, void *event)
 {
    Instance *inst = NULL;
    Evas_Event_Mouse_Down *ev;
@@ -486,7 +486,7 @@ _diskio_cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, void *event)
 
 /* popup menu closing, cleanup */
 static void 
-_diskio_cb_menu_post(void *data, E_Menu *menu) 
+_diskio_cb_menu_post(void *data, E_Menu *menu __UNUSED__)
 {
    Instance *inst = NULL;
 
@@ -498,7 +498,7 @@ _diskio_cb_menu_post(void *data, E_Menu *menu)
 
 /* call configure from popup */
 static void 
-_diskio_cb_menu_configure(void *data, E_Menu *mn, E_Menu_Item *mi) 
+_diskio_cb_menu_configure(void *data, E_Menu *mn, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst = NULL;
 
