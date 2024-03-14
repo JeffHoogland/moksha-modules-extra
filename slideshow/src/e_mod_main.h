@@ -10,12 +10,6 @@
 # define D_(string) (string)
 #endif
 
-/* Increment for Major Changes */
-#define MOD_CONFIG_FILE_EPOCH      1
-/* Increment for Minor Changes (ie: user doesn't need a new config) */
-#define MOD_CONFIG_FILE_GENERATION 0
-#define MOD_CONFIG_FILE_VERSION    ((MOD_CONFIG_FILE_EPOCH * 1000000) + MOD_CONFIG_FILE_GENERATION)
-
 typedef struct _Config Config;
 typedef struct _Config_Item Config_Item;
 

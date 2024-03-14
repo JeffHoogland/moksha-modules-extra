@@ -42,7 +42,7 @@ static void _slide_menu_cb_post(void *data, E_Menu *m);
 static Config_Item *_slide_config_item_get(const char *id);
 static Slideshow *_slide_new(Evas *evas);
 static void _slide_free(Slideshow *ss);
-static void _slide_config_free(void);
+//~ static void _slide_config_free(void);
 static Eina_Bool _slide_cb_check(void *data);
 static Eina_Bool _slide_cb_check_time(void *data);
 static void _slide_get_bg_count(void *data);
@@ -93,7 +93,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    evas_object_event_callback_add(o, EVAS_CALLBACK_MOUSE_DOWN, 
                                   _slide_cb_mouse_down, inst);
    slide_config->instances = eina_list_append(slide_config->instances, inst);
-
+   _slide_get_bg_count(inst);
    if (!inst->ci->disable_sched)
      {
        _slide_cb_check_time(inst);
@@ -103,7 +103,6 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
      inst->check_timer = ecore_timer_add(inst->ci->poll_time, _slide_cb_check, inst);
    else
      {
-        _slide_get_bg_count(inst);
         if (inst->ci->random_order)
           {
              srand(time(NULL) + inst->gcc->id * 100);
@@ -265,13 +264,13 @@ _slide_config_updated(Config_Item *ci)
                     !strcmp(bg, inst->ci->file_night))
                   no_match++;
               }
-           if (no_match != 2)
-             {
-                e_util_dialog_show(D_("Warning"), 
-                                   D_("Check Day/Night bg file names. "
+            if (no_match != 2)
+              {
+                 e_util_dialog_show(D_("Warning"), 
+                                    D_("Check Day/Night bg file names. "
                                       "They do not match!"));
-                return;
-             }
+                 return;
+              }
           }
 
         if (!inst->ci->disable_timer)
@@ -382,16 +381,6 @@ e_modapi_init(E_Module *m)
 
    slide_config = e_config_domain_load("module.slideshow", conf_edd);
 
-   if (slide_config)
-      {
-        if (!e_util_module_config_check(D_("Slideshow"), slide_config->version,
-                                               MOD_CONFIG_FILE_VERSION))
-          {
-             _slide_config_free();
-             slide_config = NULL;
-          }
-     }
-
    if (!slide_config)
      {
         Config_Item *ci;
@@ -412,7 +401,6 @@ e_modapi_init(E_Module *m)
         ci->random_order = 0;
         ci->all_desks = 0;
         slide_config->items = eina_list_append(slide_config->items, ci);
-        slide_config->version = MOD_CONFIG_FILE_VERSION;
      }
 
    E_LIST_HANDLER_APPEND(slideshow_handlers, E_EVENT_SYS_RESUME, _slideshow_update, NULL);
@@ -494,23 +482,23 @@ _slide_free(Slideshow *ss)
    E_FREE(ss);
 }
 
-void
-_slide_config_free(void)
-{
-   Config_Item *ci;
+//~ void
+//~ _slide_config_free(void)
+//~ {
+   //~ Config_Item *ci;
 
-   EINA_LIST_FREE(slide_config->items, ci)
-     {
-        eina_stringshare_del(ci->id);
-        eina_stringshare_del(ci->dir);
-        eina_stringshare_del(ci->file_day);
-        eina_stringshare_del(ci->file_night);
-        free(ci);
-     }
+   //~ EINA_LIST_FREE(slide_config->items, ci)
+     //~ {
+        //~ eina_stringshare_del(ci->id);
+        //~ eina_stringshare_del(ci->dir);
+        //~ eina_stringshare_del(ci->file_day);
+        //~ eina_stringshare_del(ci->file_night);
+        //~ free(ci);
+     //~ }
 
-   slide_config->module = NULL;
-   E_FREE(slide_config);
-}
+   //~ slide_config->module = NULL;
+   //~ E_FREE(slide_config);
+//~ }
 
 static Eina_Bool
 _slide_cb_check_time(void *data)
