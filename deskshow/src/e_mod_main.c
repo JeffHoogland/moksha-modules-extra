@@ -91,20 +91,20 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 }
 
 static void
-_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
+_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
 {
    e_gadcon_client_aspect_set (gcc, 16, 16);
    e_gadcon_client_min_size_set (gcc, 16, 16);
 }
 
 static const char *
-_gc_label (const E_Gadcon_Client_Class *client_class)
+_gc_label (const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return "Deskshow";
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas * evas)
+_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas * evas)
 {
    Evas_Object *o;
    char buf[PATH_MAX];
@@ -116,13 +116,14 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas * evas)
 }
 
 static const char *
-_gc_id_new (const E_Gadcon_Client_Class *client_class)
+_gc_id_new (const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return _gadcon_class.name;
 }
 
 static void
-_button_cb_mouse_down (void *data, Evas *e, Evas_Object *obj, void *event_info)
+_button_cb_mouse_down (void *data __UNUSED__, Evas *e __UNUSED__, 
+                       Evas_Object *obj __UNUSED__, void *event_info)
 {
   Evas_Event_Mouse_Down *ev;
 
@@ -137,7 +138,7 @@ _button_cb_mouse_down (void *data, Evas *e, Evas_Object *obj, void *event_info)
 }
 
 static Eina_Bool
-_deskshow_cb_event_desk_show(void *data, int type, void *event)
+_deskshow_cb_event_desk_show(void *data, int type __UNUSED__, void *event)
 {
    E_Event_Desk_Show *ev;
    E_Desk *desk;
@@ -169,7 +170,7 @@ e_modapi_init (E_Module * m)
 }
 
 EAPI int
-e_modapi_shutdown (E_Module * m)
+e_modapi_shutdown (E_Module * m __UNUSED__)
 {
   desk_module = NULL;
   e_gadcon_provider_unregister(&_gadcon_class);
@@ -177,7 +178,7 @@ e_modapi_shutdown (E_Module * m)
 }
 
 EAPI int
-e_modapi_save(E_Module * m)
+e_modapi_save(E_Module * m __UNUSED__)
 {
   return 1;
 }
