@@ -103,7 +103,7 @@ e_modapi_save (E_Module * m)
 
 /* module private routines */
 static Flame *
-_flame_init (E_Module * m)
+_flame_init (E_Module * m __UNUSED__)
 {
   Flame *f;
   Eina_List *managers, *l, *l2;
@@ -755,7 +755,7 @@ _flame_cb_draw (void *data)
 }
 
 static Eina_Bool
-_flame_cb_event_container_resize (void *data, int type, void *event)
+_flame_cb_event_container_resize (void *data, int type __UNUSED__, void *event __UNUSED__)
 {
   Flame_Face *ff;
   Evas_Object *o;
