@@ -172,9 +172,9 @@ _snow_shutdown(Snow *snow)
    E_CONFIG_DD_FREE(snow->conf_edd);
    while (snow->cons)
      {
-        E_Container *con;
+        //~ E_Container *con;
 
-        con = snow->cons->data;
+        //~ con = snow->cons->data;
         snow->cons = eina_list_remove_list(snow->cons, snow->cons);
      }
    _snow_trees_free(snow);
@@ -292,11 +292,11 @@ _snow_cb_animator(void *data)
    Snow *snow;
    Eina_List *next;
    Evas_Coord ww;
-   double time;
+   //~ double time;
 
    snow = data;
    evas_output_viewport_get(snow->canvas, NULL, NULL, &ww, NULL);
-   time = ecore_time_get();
+   //~ time = ecore_time_get();
 
    next = snow->flakes;
    while (next)
