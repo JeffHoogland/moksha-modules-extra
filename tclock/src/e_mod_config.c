@@ -6,7 +6,7 @@ struct _E_Config_Dialog_Data
   int show_date, show_time, show_tip;
   double font_size_up, font_size_down;
   char *time_format, *date_format, *tip_format, *time_offset;
-  E_Color    color[3]; 
+  E_Color color[3]; 
 };
 
 /* Protos */
@@ -17,7 +17,6 @@ static int _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
 static void _cb_time_check(void *data, Evas_Object *obj);
 static void _cb_date_check(void *data, Evas_Object *obj);
 static void _cb_tooltip_check(void *data, Evas_Object *obj);
-static void _color_cb_change(void *data, Evas_Object *obj);
 
 
 void
@@ -62,7 +61,6 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
    printf("Offset je %s ",cfdata->time_offset);
    if (ci->date_format) cfdata->date_format = strdup(ci->date_format);
    if (ci->tip_format) cfdata->tip_format = strdup(ci->tip_format);
-    _color_cb_change(cfdata, NULL);
 }
 
 static void *
@@ -169,22 +167,11 @@ _basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data 
    e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1); 
   
    ob = e_widget_color_well_add_full(evas, cfdata->color, 1, 1);
-   e_widget_on_change_hook_set(ob, _color_cb_change, cfdata);
    e_widget_frametable_object_append_full(of, ob, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 45,25,45,25); 
-   //~ e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1); 
    
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
    return o;
-}
-
-static void
-_color_cb_change(void *data, Evas_Object *obj __UNUSED__)
-{
-   E_Config_Dialog_Data *cfdata = data;
-   E_Color *col;
-    
-   col = cfdata->color;
 }
 
 static int
