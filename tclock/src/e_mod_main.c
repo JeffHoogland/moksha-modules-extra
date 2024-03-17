@@ -214,7 +214,6 @@ _tclock_cb_mouse_in(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__,
 
    inst->tip = e_gadcon_popup_new(inst->gcc);
 
-
    current_time = time(NULL);
 
    local_time = localtime(&current_time);
@@ -323,40 +322,10 @@ _eval_instance_size(Instance *inst)
 }
 
 void
-_tclock_config_updated(Config_Item *ci)
+_tclock_config_updated(Config_Item *ci __UNUSED__)
 {
-   Eina_List *l;
-
    if (!tclock_config) return;
-   for (l = tclock_config->instances; l; l = l->next)
-     {
-        Instance *inst;
-
-        inst = l->data;
-        if (inst->ci != ci) continue;
-        if (!inst->ci->show_time)
-          edje_object_signal_emit(inst->tclock, "time_hidden", "");
-        else
-          {
-             if (!inst->ci->show_date)
-               edje_object_signal_emit(inst->tclock, "time_centered", "");
-             else
-               edje_object_signal_emit(inst->tclock, "time_visible", "");
-          }
-
-        if (!inst->ci->show_date)
-          edje_object_signal_emit(inst->tclock, "date_hidden", "");
-        else
-          {
-             if (!inst->ci->show_time)
-               edje_object_signal_emit(inst->tclock, "date_centered", "");
-             else
-               edje_object_signal_emit(inst->tclock, "date_visible", "");
-          }
-        edje_object_message_signal_process(inst->tclock);
-
-        _tclock_cb_check(inst);
-     }
+   _tclock_cb_check(NULL);
 }
 
 static Eina_Bool
@@ -366,7 +335,8 @@ _tclock_cb_check(void *data __UNUSED__)
    Eina_List *l;
    time_t current_time;
    struct tm *local_time;
-   char buf[1024];
+   char buf[127];
+   char buff[128];
    int offset_int;
 
    EINA_LIST_FOREACH(tclock_config->instances, l, inst)
@@ -401,17 +371,19 @@ _tclock_cb_check(void *data __UNUSED__)
 
         if (inst->ci->time_format)
           {
-             strftime(buf, 1024, inst->ci->time_format, local_time);
-             edje_object_part_text_set(inst->tclock, "tclock_time", buf);
+             strftime(buf, 127, inst->ci->time_format, local_time);
+             sprintf(buff, "%s ", buf);
+             edje_object_part_text_set(inst->tclock, "tclock_time", buff);
           }
         if (inst->ci->date_format)
           {
-             strftime(buf, 1024, inst->ci->date_format, local_time);
-             edje_object_part_text_set(inst->tclock, "tclock_date", buf);
+             strftime(buf, 127, inst->ci->date_format, local_time);
+             sprintf(buff, "%s ", buf);
+             edje_object_part_text_set(inst->tclock, "tclock_date", buff);
           }
         if ((inst->ci->tip_format) && (inst->o_tip))
           {
-             strftime(buf, 1024, inst->ci->tip_format, local_time);
+             strftime(buf, 127, inst->ci->tip_format, local_time);
              e_widget_label_text_set(inst->o_tip, buf);
           }
 
