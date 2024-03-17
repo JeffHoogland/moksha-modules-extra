@@ -113,14 +113,17 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 
    if (inst->tclock) evas_object_del(inst->tclock);
 
+   if (eina_list_count(tclock_config->instances) <= 0)
+     {
+       if (check_timer)
+         {
+           ecore_timer_del(check_timer);
+           check_timer = NULL;
+         }
+     }
+
    tclock_config->instances =
      eina_list_remove(tclock_config->instances, inst);
-
-   if (eina_list_count(tclock_config->instances) <= 0) 
-     {
-       if (check_timer) ecore_timer_del(check_timer);
-       check_timer = NULL;
-     }
 
    E_FREE(inst);
 }
@@ -357,19 +360,17 @@ _tclock_config_updated(Config_Item *ci)
 }
 
 static Eina_Bool
-_tclock_cb_check(void *data)
+_tclock_cb_check(void *data __UNUSED__)
 {
-   Instance *inst = data;
+   Instance *inst;
    Eina_List *l;
    time_t current_time;
    struct tm *local_time;
    char buf[1024];
    int offset_int;
 
-   for (l = tclock_config->instances; l; l = l->next)
+   EINA_LIST_FOREACH(tclock_config->instances, l, inst)
      {
-        inst = l->data;
-
         if (!inst->ci->show_time)
           edje_object_signal_emit(inst->tclock, "time_hidden", "");
         else
@@ -403,7 +404,6 @@ _tclock_cb_check(void *data)
              strftime(buf, 1024, inst->ci->time_format, local_time);
              edje_object_part_text_set(inst->tclock, "tclock_time", buf);
           }
-
         if (inst->ci->date_format)
           {
              strftime(buf, 1024, inst->ci->date_format, local_time);
