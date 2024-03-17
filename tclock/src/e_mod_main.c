@@ -91,9 +91,9 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    tclock_config->instances =
      eina_list_append(tclock_config->instances, inst);
 
-   _tclock_cb_check(NULL);
+   _tclock_cb_check(inst);
    if (!check_timer)
-     check_timer = ecore_timer_add(1.0, _tclock_cb_check, NULL);
+     check_timer = ecore_timer_add(1.0, _tclock_cb_check, inst);
    return gcc;
 }
 
@@ -329,9 +329,9 @@ _tclock_config_updated(Config_Item *ci __UNUSED__)
 }
 
 static Eina_Bool
-_tclock_cb_check(void *data __UNUSED__)
+_tclock_cb_check(void *data)
 {
-   Instance *inst;
+   Instance *inst = data;
    Eina_List *l;
    time_t current_time;
    struct tm *local_time;
@@ -389,9 +389,8 @@ _tclock_cb_check(void *data __UNUSED__)
         edje_object_color_class_set(inst->tclock, "module_label", inst->ci->color_r,
                                     inst->ci->color_g, inst->ci->color_b, 
                                     inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
-        _eval_instance_size(inst);
      }
-
+   _eval_instance_size(inst);
    return EINA_TRUE;
 }
 
