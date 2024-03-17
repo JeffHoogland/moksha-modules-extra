@@ -503,7 +503,7 @@ e_modapi_init(E_Module *m)
         ci->time_format = eina_stringshare_add("%T");
         ci->time_offset = eina_stringshare_add("0");
         ci->date_format = eina_stringshare_add("%d/%m/%y");
-        ci->tip_format = eina_stringshare_add("%d");
+        ci->tip_format = eina_stringshare_add("%A, %B %d, %Y");
         ci->font_size_up = 12;
         ci->font_size_down = 10;
         ci->color_r = 255;
