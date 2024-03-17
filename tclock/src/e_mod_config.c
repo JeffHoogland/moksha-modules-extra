@@ -201,7 +201,7 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 
    e_config_save_queue();
 
-   _tclock_config_updated(ci);
+   _tclock_config_updated(NULL);
    return 1;
 }
 

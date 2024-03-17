@@ -318,7 +318,7 @@ _eval_instance_size(Instance *inst)
    if (mw < omw) mw = omw;
    if (mh < omh) mh = omh;
 
-   e_gadcon_client_min_size_set(inst->gcc, mw, mh);
+   e_gadcon_client_min_size_set(inst->gcc, mw + 10, mh);
 }
 
 void
@@ -380,11 +380,6 @@ _tclock_cb_check(void *data __UNUSED__)
              strftime(buf, 127, inst->ci->date_format, local_time);
              sprintf(buff, "%s ", buf);
              edje_object_part_text_set(inst->tclock, "tclock_date", buff);
-          }
-        if ((inst->ci->tip_format) && (inst->o_tip))
-          {
-             strftime(buf, 127, inst->ci->tip_format, local_time);
-             e_widget_label_text_set(inst->o_tip, buf);
           }
 
         edje_object_text_class_set (inst->tclock, "module_large", "Sans:style=Mono",
