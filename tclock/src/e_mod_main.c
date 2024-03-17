@@ -91,7 +91,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    tclock_config->instances =
      eina_list_append(tclock_config->instances, inst);
 
-   _tclock_cb_check(inst);
+   _tclock_cb_check(NULL);
    if (!check_timer)
      check_timer = ecore_timer_add(1.0, _tclock_cb_check, NULL);
    return gcc;
@@ -171,7 +171,7 @@ _tclock_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED_
 
    inst = data;
    ev = event_info;
-   if ((ev->button == 3) && (!tclock_config->menu))
+   if (ev->button == 3)
      {
         E_Menu *m;
         E_Menu_Item *mi;
@@ -316,7 +316,7 @@ _eval_instance_size(Instance *inst)
    if (mw < omw) mw = omw;
    if (mh < omh) mh = omh;
 
-   e_gadcon_client_min_size_set(inst->gcc, mw + 10, mh);
+   e_gadcon_client_min_size_set(inst->gcc, mw, mh);
 }
 
 void
@@ -365,9 +365,8 @@ _tclock_cb_check(void *data)
    struct tm *local_time;
    char buf[1024];
    int offset_int;
-  
-        
-   for (l = tclock_config->instances; l; l = l->next) 
+
+   for (l = tclock_config->instances; l; l = l->next)
      {
         inst = l->data;
 
@@ -416,15 +415,16 @@ _tclock_cb_check(void *data)
              e_widget_label_text_set(inst->o_tip, buf);
           }
 
-        edje_object_text_class_set(inst->tclock, "module_large", "Sans:style=Mono", inst->ci->font_size_up);
-        edje_object_text_class_set(inst->tclock, "module_small", "Sans:style=Mono", inst->ci->font_size_down);
-        edje_object_color_class_set
-              (inst->tclock, "module_label", inst->ci->color_r, inst->ci->color_g, inst->ci->color_b, 
-               inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
+        edje_object_text_class_set (inst->tclock, "module_large", "Sans:style=Mono",
+                                    inst->ci->font_size_up);
+        edje_object_text_class_set (inst->tclock, "module_small", "Sans:style=Mono",
+                                    inst->ci->font_size_down);
+        edje_object_color_class_set(inst->tclock, "module_label", inst->ci->color_r,
+                                    inst->ci->color_g, inst->ci->color_b, 
+                                    inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
+        _eval_instance_size(inst);
      }
-   
-   _eval_instance_size(inst);
-   
+
    return EINA_TRUE;
 }
 
