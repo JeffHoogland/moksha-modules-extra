@@ -329,7 +329,7 @@ _tclock_config_updated(Config_Item *ci __UNUSED__)
 static Eina_Bool
 _tclock_cb_check(void *data)
 {
-   Instance *inst;
+   Instance *inst = data;
    Eina_List *l;
    time_t current_time;
    struct tm *local_time;
@@ -395,35 +395,9 @@ _tclock_cb_check(void *data)
 static Config_Item *
 _tclock_config_item_get(const char *id)
 {
-   Eina_List *l;
    Config_Item *ci;
-
-   if (!id)
-     {
-        int  num = 0;
-        char buf[128];
-
-       /* Create id */
-       if (tclock_config->items)
-         {
-            const char *p;
-
-            ci = eina_list_last(tclock_config->items)->data;
-            p = strrchr(ci->id, '.');
-            if (p) num = atoi(p + 1) + 1;
-         }
-       snprintf(buf, sizeof(buf), "%s.%d", _gc_class.name, num);
-       id = buf;
-     }
-   else
-     {
-       for (l = tclock_config->items; l; l = l->next)
-         {
-           ci = l->data;
-           if (!ci->id) continue;
-           if (!strcmp(ci->id, id)) return ci;
-         }
-     }
+   
+   GADCON_CLIENT_CONFIG_GET(Config_Item, tclock_config->items, _gc_class, id);
 
    ci = E_NEW(Config_Item, 1);
    ci->id = eina_stringshare_add(id);
