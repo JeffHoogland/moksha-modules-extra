@@ -499,7 +499,6 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
      e_object_del(E_OBJECT(tclock_config->config_dialog));
    if (tclock_config->menu)
      {
-        e_menu_post_deactivate_callback_set(tclock_config->menu, NULL, NULL);
         e_object_del(E_OBJECT(tclock_config->menu));
         tclock_config->menu = NULL;
      }
