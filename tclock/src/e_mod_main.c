@@ -521,6 +521,11 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
         E_FREE (ci);
      }
 
+   if (check_timer)
+     {
+        ecore_timer_del(check_timer);
+        check_timer = NULL;
+     }
    if (tclock_config->mod_dir) eina_stringshare_del(tclock_config->mod_dir);
    E_FREE(tclock_config);
    E_CONFIG_DD_FREE(conf_item_edd);
