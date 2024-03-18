@@ -113,13 +113,10 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 
    if (inst->tclock) evas_object_del(inst->tclock);
 
-   if (eina_list_count(tclock_config->instances) <= 0)
+   if ((!tclock_config->instances) && (check_timer))
      {
-       if (check_timer)
-         {
-           ecore_timer_del(check_timer);
-           check_timer = NULL;
-         }
+        ecore_timer_del(check_timer);
+        check_timer = NULL;
      }
 
    tclock_config->instances =
@@ -259,7 +256,8 @@ _tclock_menu_cb_configure(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UN
 static void
 _eval_instance_size(Instance *inst)
 {
-   EINA_SAFETY_ON_NULL_RETURN(inst);
+   //~ EINA_SAFETY_ON_NULL_RETURN(inst);
+   if (!inst) return;
    Evas_Coord mw, mh, omw, omh;
 
    edje_object_size_min_get(inst->tclock, &mw, &mh);
@@ -331,7 +329,7 @@ _tclock_config_updated(Config_Item *ci __UNUSED__)
 static Eina_Bool
 _tclock_cb_check(void *data)
 {
-   Instance *inst = data;
+   Instance *inst;
    Eina_List *l;
    time_t current_time;
    struct tm *local_time;
