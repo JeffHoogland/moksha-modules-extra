@@ -28,7 +28,6 @@ static void _tclock_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *e
 static void _tclock_cb_mouse_in(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static void _tclock_cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static void _tclock_menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _tclock_menu_cb_post(void *data, E_Menu *m);
 static Eina_Bool _tclock_cb_check(void *data);
 static Config_Item *_tclock_config_item_get(const char *id);
 
@@ -184,7 +183,6 @@ _tclock_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED_
         e_menu_item_callback_set(mi, _tclock_menu_cb_configure, inst);
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-        e_menu_post_deactivate_callback_set(m, _tclock_menu_cb_post, inst);
         tclock_config->menu = m;
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, NULL, NULL);
@@ -237,14 +235,6 @@ _tclock_cb_mouse_out(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__
 }
 
 static void
-_tclock_menu_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
-{
-   if (!tclock_config->menu) return;
-   e_object_del(E_OBJECT(tclock_config->menu));
-   tclock_config->menu = NULL;
-}
-
-static void
 _tclock_menu_cb_configure(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst = NULL;
@@ -256,7 +246,6 @@ _tclock_menu_cb_configure(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UN
 static void
 _eval_instance_size(Instance *inst)
 {
-   //~ EINA_SAFETY_ON_NULL_RETURN(inst);
    if (!inst) return;
    Evas_Coord mw, mh, omw, omh;
 
@@ -497,11 +486,6 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
 
    if (tclock_config->config_dialog)
      e_object_del(E_OBJECT(tclock_config->config_dialog));
-   if (tclock_config->menu)
-     {
-        e_object_del(E_OBJECT(tclock_config->menu));
-        tclock_config->menu = NULL;
-     }
 
    while (tclock_config->items)
      {
