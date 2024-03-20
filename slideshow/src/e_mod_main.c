@@ -38,7 +38,6 @@ static Evas_Object *_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *ev
 static const char *_gc_id_new(const E_Gadcon_Client_Class *client_class);
 static void _slide_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static void _slide_menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _slide_menu_cb_post(void *data, E_Menu *m);
 static Config_Item *_slide_config_item_get(const char *id);
 static Slideshow *_slide_new(Evas *evas);
 static void _slide_free(Slideshow *ss);
@@ -197,7 +196,6 @@ _slide_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__
         e_menu_item_callback_set(mi, _slide_menu_cb_configure, inst);
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-        e_menu_post_deactivate_callback_set(m, _slide_menu_cb_post, inst);
         slide_config->menu = m;
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, &w, &h);
@@ -217,14 +215,6 @@ _slide_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__
      }
    else if (ev->button == 1)
      _slide_cb_check(inst);
-}
-
-static void
-_slide_menu_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
-{
-   if (!slide_config->menu) return;
-   e_object_del(E_OBJECT(slide_config->menu));
-   slide_config->menu = NULL;
 }
 
 static void
@@ -419,12 +409,7 @@ e_modapi_shutdown(__UNUSED__ E_Module *m)
 
    if (slide_config->config_dialog)
      e_object_del(E_OBJECT(slide_config->config_dialog));
-   if (slide_config->menu)
-     {
-        e_menu_post_deactivate_callback_set(slide_config->menu, NULL, NULL);
-        e_object_del(E_OBJECT(slide_config->menu));
-        slide_config->menu = NULL;
-     }
+
    while (slide_config->items)
      {
         Config_Item *ci;
