@@ -75,8 +75,8 @@ _mail_mdir_shutdown ()
 
 /* PRIVATES */
 static void
-_mail_mdir_check_mail (void *data, Ecore_File_Monitor * monitor,
-              Ecore_File_Event event, const char *path)
+_mail_mdir_check_mail (void *data, Ecore_File_Monitor * monitor __UNUSED__,
+              Ecore_File_Event event __UNUSED__ , const char *path __UNUSED__)
 {
   MdirClient *mc;
 

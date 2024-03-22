@@ -174,20 +174,20 @@ _gc_shutdown (E_Gadcon_Client * gcc)
 }
 
 static void
-_gc_orient (E_Gadcon_Client * gcc, E_Gadcon_Orient orient)
+_gc_orient (E_Gadcon_Client * gcc, E_Gadcon_Orient orient __UNUSED__)
 {
   e_gadcon_client_aspect_set (gcc, 16, 16);
   e_gadcon_client_min_size_set (gcc, 16, 16);
 }
 
 static const char *
-_gc_label (const E_Gadcon_Client_Class *client_class)
+_gc_label (const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
   return D_("Mail");
 }
 
 static Evas_Object *
-_gc_icon (const E_Gadcon_Client_Class *client_class, Evas * evas)
+_gc_icon (const E_Gadcon_Client_Class *client_class __UNUSED__, Evas * evas)
 {
   Evas_Object *o;
   char buf[4096];
@@ -200,7 +200,7 @@ _gc_icon (const E_Gadcon_Client_Class *client_class, Evas * evas)
 }
 
 static const char *
-_gc_id_new (const E_Gadcon_Client_Class *client_class)
+_gc_id_new (const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    Config_Item *ci;
 
@@ -209,7 +209,7 @@ _gc_id_new (const E_Gadcon_Client_Class *client_class)
 }
 
 static void
-_mail_cb_mouse_down (void *data, Evas * e, Evas_Object * obj,
+_mail_cb_mouse_down (void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED__,
                      void *event_info)
 {
   Instance *inst = data;
@@ -279,15 +279,16 @@ _mail_cb_mouse_down (void *data, Evas * e, Evas_Object * obj,
 }
 
 static void
-_mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
+_mail_cb_mouse_in (void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED__,
+                   void *event_info __UNUSED__)
 {
   Instance    *inst = data;
   Evas_Object *list;
   Eina_List   *l, *k;
   char         buf[256];
-  char path[PATH_MAX];
-  Config_Box *cb;
-  int i=0;
+  char         path[PATH_MAX];
+  Config_Box  *cb;
+  int          i = 0;
   
   if (!inst)
     return;
@@ -301,7 +302,8 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
          e_module_dir_get (mail_config->module));
   list = e_ilist_add (inst->popup->win->evas);
   for (l = inst->ci->boxes; l; l = l->next)
-    {int counter=1;
+    {  
+       int counter=1;
        cb = l->data;
        if (!cb) continue;
        if ((!inst->ci->show_popup_empty) && (!cb->num_new)) continue;
@@ -310,12 +312,12 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
        e_ilist_append (list, NULL, NULL, buf, 1, NULL, NULL, NULL, NULL);
        
        for (k = cb->senders; k; k = k->next)
-       {
-         snprintf(buf, sizeof (buf), "%d. %s", counter,  
-                 (char *)eina_list_data_get(k));
-         e_ilist_append (list, NULL, NULL, buf, 0, NULL, NULL, NULL, NULL);
-         counter++;
-       }
+         {
+           snprintf(buf, sizeof (buf), "%d. %s", counter,  
+                   (char *)eina_list_data_get(k));
+           e_ilist_append (list, NULL, NULL, buf, 0, NULL, NULL, NULL, NULL);
+           counter++;
+         }
        i++;
     }
     
@@ -332,12 +334,13 @@ _mail_cb_mouse_in (void *data, Evas * e, Evas_Object * obj, void *event_info)
     {
        e_object_del (E_OBJECT (inst->popup));
        inst->popup = NULL;
-       eina_list_free(cb->senders);
+       //~ eina_list_free(cb->senders);
     }
 }
 
 static void
-_mail_cb_mouse_out (void *data, Evas * e, Evas_Object * obj, void *event_info)
+_mail_cb_mouse_out (void *data, Evas * e __UNUSED__,
+                    Evas_Object * obj __UNUSED__, void *event_info __UNUSED__)
 {
   Instance *inst = data;
 
@@ -354,7 +357,7 @@ _mail_cb_mouse_out (void *data, Evas * e, Evas_Object * obj, void *event_info)
 }
 
 static void
-_mail_menu_cb_post (void *data, E_Menu * m)
+_mail_menu_cb_post (void *data __UNUSED__, E_Menu * m __UNUSED__)
 {
   if (!mail_config->menu)
     return;
@@ -363,7 +366,8 @@ _mail_menu_cb_post (void *data, E_Menu * m)
 }
 
 static void
-_mail_menu_cb_configure (void *data, E_Menu * m, E_Menu_Item * mi)
+_mail_menu_cb_configure (void *data, E_Menu * m __UNUSED__,
+                         E_Menu_Item * mi __UNUSED__)
 {
   Instance *inst = data;
 
@@ -497,7 +501,7 @@ e_modapi_init (E_Module * m)
 }
 
 EAPI int
-e_modapi_shutdown (E_Module * m)
+e_modapi_shutdown (E_Module * m __UNUSED__)
 {
   mail_config->module = NULL;
   e_gadcon_provider_unregister (&_gc_class);
@@ -576,7 +580,7 @@ e_modapi_shutdown (E_Module * m)
 }
 
 EAPI int
-e_modapi_save (E_Module * m)
+e_modapi_save (E_Module * m __UNUSED__)
 {
   e_config_domain_save ("module.mail", conf_edd, mail_config);
   return 1;
@@ -592,7 +596,7 @@ _mail_new (Evas * evas)
   mail->mail_obj = edje_object_add (evas);
 
   snprintf (buf, sizeof (buf), "%s/mail.edj",
-	    e_module_dir_get (mail_config->module));
+            e_module_dir_get (mail_config->module));
   if (!e_theme_edje_object_set
       (mail->mail_obj, "base/theme/modules/mail", "modules/mail/main"))
     edje_object_file_set (mail->mail_obj, buf, "modules/mail/main");
@@ -667,7 +671,6 @@ _mail_set_text (void *data)
   Instance *inst = data;
   
   Eina_List *l;
-  char *icon;
   char buf[256], cmd[256];
   int total_mails = 0;
   
@@ -706,27 +709,27 @@ _mail_set_text (void *data)
       cb->count_old = cb->num_new;
     } 
     
-  if (total_mails > 0)
-  {
-    snprintf (buf, sizeof (buf), "%d", total_mails);
-    edje_object_part_text_set (inst->mail->mail_obj, "new_label", buf);
-    edje_object_signal_emit (inst->mail->mail_obj, "new_mail", "");
-       
-    /* if user wanted a beep, then beep there shall be */
-    
-    if (inst->ci->play_sound)
-    {
-      snprintf(cmd, sizeof(cmd), "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR); 
-      int ret=system(cmd);
-    }
-      
-   }
+   if (total_mails > 0)
+     {
+       snprintf (buf, sizeof (buf), "%d", total_mails);
+       edje_object_part_text_set (inst->mail->mail_obj, "new_label", buf);
+       edje_object_signal_emit (inst->mail->mail_obj, "new_mail", "");
+
+       /* if user wanted a beep, then beep there shall be */ 
+
+       if (inst->ci->play_sound)
+         {
+           snprintf(cmd, sizeof(cmd), "aplay %s/mail_sound.wav", PACKAGE_DATA_DIR);
+           e_util_exe_safe_run(cmd, NULL);
+         }
+
+     }
    else
-   {
-     edje_object_part_text_set (inst->mail->mail_obj, "new_label", "");
-     edje_object_signal_emit (inst->mail->mail_obj, "no_mail", "");
-   }  
-} 
+     {
+       edje_object_part_text_set (inst->mail->mail_obj, "new_label", "");
+       edje_object_signal_emit (inst->mail->mail_obj, "no_mail", "");
+     }
+}
 
 void
 _mail_start_exe (void *data)
@@ -743,7 +746,7 @@ _mail_start_exe (void *data)
 }
 
 static Eina_Bool
-_mail_cb_exe_exit (void *data, int type, void *event)
+_mail_cb_exe_exit (void *data, int type __UNUSED__, void *event __UNUSED__)
 {
   Config_Box *cb;
 
@@ -873,7 +876,7 @@ _mail_config_updated (Config_Item *ci)
 }
 
 static void
-_mail_menu_cb_exec (void *data, E_Menu * m, E_Menu_Item * mi)
+_mail_menu_cb_exec (void *data, E_Menu * m __UNUSED__, E_Menu_Item * mi __UNUSED__)
 {
   Config_Box *cb;
 

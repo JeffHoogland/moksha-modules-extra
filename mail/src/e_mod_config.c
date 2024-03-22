@@ -79,7 +79,7 @@ _create_data (E_Config_Dialog * cfd)
 }
 
 static void
-_free_data (E_Config_Dialog * cfd, E_Config_Dialog_Data * cfdata)
+_free_data (E_Config_Dialog * cfd __UNUSED__, E_Config_Dialog_Data * cfdata)
 {
    if (!mail_config) return;
    mail_config->config_dialog = NULL;
@@ -273,10 +273,10 @@ _ilist_cb_selected (void *data)
 }
 
 static void
-_cb_add_box (void *data, void *data2)
+_cb_add_box (void *data, void *data2 __UNUSED__)
 {
   E_Config_Dialog *cfd;
-  E_Config_Dialog_Data *cfdata;
+  //~ E_Config_Dialog_Data *cfdata;
   Config_Item *ci;
 
   cfd = data;
@@ -284,13 +284,13 @@ _cb_add_box (void *data, void *data2)
     return;
 
   ci = cfd->data;
-  cfdata = cfd->cfdata;
+  //~ cfdata = cfd->cfdata;
 
   _config_box (ci, NULL, cfd);
 }
 
 static void
-_cb_edit_box (void *data, void *data2)
+_cb_edit_box (void *data, void *data2 __UNUSED__)
 {
   E_Config_Dialog *cfd;
   E_Config_Dialog_Data *cfdata;
@@ -327,7 +327,7 @@ _cb_edit_box (void *data, void *data2)
 }
 
 static void
-_cb_del_box (void *data, void *data2)
+_cb_del_box (void *data, void *data2 __UNUSED__)
 {
   E_Config_Dialog *cfd;
   E_Config_Dialog_Data *cfdata;

@@ -136,7 +136,7 @@ _create_data (E_Config_Dialog * cfd)
 }
 
 static void
-_free_data (E_Config_Dialog * cfd, E_Config_Dialog_Data * cfdata)
+_free_data (E_Config_Dialog * cfd __UNUSED__, E_Config_Dialog_Data * cfdata)
 {
    E_FREE(cfdata->name);
    E_FREE(cfdata->port);
@@ -150,8 +150,8 @@ _free_data (E_Config_Dialog * cfd, E_Config_Dialog_Data * cfdata)
 }
 
 static Evas_Object *
-_basic_create_widgets (E_Config_Dialog * cfd, Evas * evas,
-		       E_Config_Dialog_Data * cfdata)
+_basic_create_widgets (E_Config_Dialog * cfd __UNUSED__, Evas * evas,
+                       E_Config_Dialog_Data * cfdata)
 {
   Evas_Object *o, *of, *ob, *ot;
   E_Radio_Group *rg;
@@ -385,7 +385,7 @@ _basic_apply_data (E_Config_Dialog * cfd, E_Config_Dialog_Data * cfdata)
 }
 
 static void
-_monitor_cb_change (void *data, Evas_Object * obj)
+_monitor_cb_change (void *data, Evas_Object * obj __UNUSED__)
 {
   E_Config_Dialog_Data *cfdata;
 
@@ -396,7 +396,7 @@ _monitor_cb_change (void *data, Evas_Object * obj)
 }
 
 static void
-_type_cb_change (void *data, Evas_Object * obj)
+_type_cb_change (void *data, Evas_Object * obj __UNUSED__)
 {
   E_Config_Dialog_Data *cfdata;
 
@@ -410,15 +410,15 @@ _type_cb_change (void *data, Evas_Object * obj)
       e_widget_entry_text_set (cfdata->new_path_entry, "");
       e_widget_entry_text_set (cfdata->cur_path_entry, "");
       if (cfdata->ssl)
-	{
-	  e_widget_entry_text_set (cfdata->port_entry, "995");
-	  cfdata->port = strdup ("995");
-	}
+        {
+          e_widget_entry_text_set (cfdata->port_entry, "995");
+          cfdata->port = strdup ("995");
+        }
       else
-	{
-	  e_widget_entry_text_set (cfdata->port_entry, "110");
-	  cfdata->port = strdup ("110");
-	}
+        {
+          e_widget_entry_text_set (cfdata->port_entry, "110");
+          cfdata->port = strdup ("110");
+        }
     }
   else if ((cfdata->type == 1) || (cfdata->type == 3))
     {
@@ -429,15 +429,15 @@ _type_cb_change (void *data, Evas_Object * obj)
       e_widget_entry_text_set (cfdata->cur_path_entry, "");
       e_widget_entry_text_set (cfdata->new_path_entry, D_("Inbox"));
       if (cfdata->ssl)
-	{
-	  e_widget_entry_text_set (cfdata->port_entry, "993");
-	  cfdata->port = strdup ("993");
-	}
+        {
+          e_widget_entry_text_set (cfdata->port_entry, "993");
+          cfdata->port = strdup ("993");
+        }
       else
-	{
-	  e_widget_entry_text_set (cfdata->port_entry, "143");
-	  cfdata->port = strdup ("143");
-	}
+        {
+          e_widget_entry_text_set (cfdata->port_entry, "143");
+          cfdata->port = strdup ("143");
+        }
     }
   else if (cfdata->type == 2)
     {
@@ -472,7 +472,7 @@ _type_cb_change (void *data, Evas_Object * obj)
 }
 
 static void
-_use_exec_cb_change (void *data, Evas_Object * obj)
+_use_exec_cb_change (void *data, Evas_Object * obj __UNUSED__)
 {
   E_Config_Dialog_Data *cfdata;
 

@@ -10,7 +10,7 @@ static PopClient *_mail_pop_client_get_from_server (void *data);
 static void _mail_pop_client_quit (void *data);
 
 static Eina_List *pclients;
-static int mail_retr;
+static unsigned int mail_retr;
 
 
 void
@@ -137,7 +137,7 @@ _mail_pop_shutdown ()
 
 /* PRIVATES */
 static Eina_Bool
-_mail_pop_server_add (void *data, int type, void *event)
+_mail_pop_server_add (void *data __UNUSED__, int type __UNUSED__, void *event)
 {
   Ecore_Con_Event_Server_Add *ev = event;
   PopClient *pc;
@@ -150,7 +150,7 @@ _mail_pop_server_add (void *data, int type, void *event)
 }
 
 static Eina_Bool
-_mail_pop_server_del (void *data, int type, void *event)
+_mail_pop_server_del (void *data __UNUSED__, int type __UNUSED__, void *event)
 {
   Ecore_Con_Event_Server_Del *ev = event;
   PopClient *pc;
@@ -169,7 +169,7 @@ _mail_pop_server_del (void *data, int type, void *event)
 }
 
 static Eina_Bool
-_mail_pop_server_data (void *data, int type, void *event)
+_mail_pop_server_data (void *data __UNUSED__, int type __UNUSED__, void *event)
 {
   Ecore_Con_Event_Server_Data *ev = event;
   PopClient *pc;
@@ -177,7 +177,7 @@ _mail_pop_server_data (void *data, int type, void *event)
   int len, total = 0, counts;
   const char *heystack;
   const char *tmp;
-  char coding;
+  char coding = '\0';
   Eina_Strbuf *buffer;
 
  
@@ -263,7 +263,7 @@ _mail_pop_server_data (void *data, int type, void *event)
              counts = 1;                                     //=?UTF-8 occurence found  
              eina_strbuf_reset(buffer);
              heystack += 8;
-             if ((!strncmp(heystack, "B?", 2)) || (!strncmp(heystack, "b?", 2))) coding = 'B'; 
+             if ((!strncmp(heystack, "B?", 2)) || (!strncmp(heystack, "b?", 2))) coding = 'B';
              if ((!strncmp(heystack, "Q?", 2)) || (!strncmp(heystack, "q?", 2))) coding = 'Q';
              heystack += 2;
              sscanf(heystack, "%[^?\n]", parse_from_decode); //read until coded text
@@ -406,7 +406,7 @@ _mail_pop_client_get_from_server (void *data)
 static void 
 _mail_pop_client_quit (void *data)
 {
-  PopClient *pc=data;
+  PopClient *pc = data;
   int len;
   char out[1024];
 

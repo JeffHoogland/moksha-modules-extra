@@ -223,7 +223,7 @@ _mail_imap_client_get (Config_Box *cb)
 }
 
 static Eina_Bool
-_mail_imap_server_add (void *data, int type, void *event)
+_mail_imap_server_add (void *data __UNUSED__, int type __UNUSED__, void *event __UNUSED__)
 {
    Ecore_Con_Event_Server_Add *ev = event;
    ImapClient *ic;
@@ -238,7 +238,7 @@ _mail_imap_server_add (void *data, int type, void *event)
 }
 
 static Eina_Bool
-_mail_imap_server_del (void *data, int type, void *event)
+_mail_imap_server_del (void *data __UNUSED__, int type __UNUSED__, void *event)
 {
    Ecore_Con_Event_Server_Del *ev = event;
    ImapClient *ic;
@@ -267,7 +267,7 @@ _mail_imap_server_del (void *data, int type, void *event)
 }
 
 static Eina_Bool
-_mail_imap_server_data (void *data, int type, void *event)
+_mail_imap_server_data (void *data __UNUSED__, int type __UNUSED__, void *event)
 {
    Ecore_Con_Event_Server_Data *ev = event;
    ImapClient *ic;
@@ -309,21 +309,21 @@ _mail_imap_server_data (void *data, int type, void *event)
 	D ("Wrong eod %s:%s\n", ic->config->host, ic->config->new_path);
 	/* We got incomplete data, search for last EOD */
 	unsigned int pos = 0;
-	char *data;
+	char *data2;
 
-	data = reply;
+	data2 = reply;
 	while (pos < (size - 1))
 	  {
 	     if ((*(reply + pos) == '\r') && (*(reply + pos + 1) == '\n'))
-	       data = reply + pos + 2;
+	       data2 = reply + pos + 2;
 	     pos++;
 	  }
-	ic->prev.size = size - (data - reply);
+	ic->prev.size = size - (data2 - reply);
 	ic->prev.data = malloc (ic->prev.size);
-	memcpy (ic->prev.data, data, ic->prev.size);
+	memcpy (ic->prev.data, data2, ic->prev.size);
 
 	/* Remove captured data from reply */
-	if (data == reply)
+	if (data2 == reply)
 	  E_FREE (reply);
 	else
 	  size -= ic->prev.size;
