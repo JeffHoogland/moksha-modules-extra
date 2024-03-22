@@ -142,20 +142,20 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 }
 
 static void
-_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
+_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
 {
    e_gadcon_client_aspect_set(gcc, 16, 16);
    e_gadcon_client_min_size_set(gcc, 16, 16);
 }
 
 static const char *
-_gc_label(const E_Gadcon_Client_Class *client_class)
+_gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return D_("Trash");
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
+_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o;
 
@@ -165,13 +165,13 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 }
 
 static const char *
-_gc_id_new(const E_Gadcon_Client_Class *client_class)
+_gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return _gadcon_class.name;
 }
 
 static Eina_Bool
-_gc_in_site(E_Gadcon_Site site)
+_gc_in_site(E_Gadcon_Site site __UNUSED__)
 {
    //return (site != E_GADCON_SITE_DESKTOP);
    return EINA_TRUE;
@@ -251,7 +251,7 @@ e_modapi_init(E_Module *m)
 }
 
 EAPI int
-e_modapi_shutdown(E_Module *m)
+e_modapi_shutdown(E_Module *m __UNUSED__)
 {
    Instance *inst;
    e_configure_registry_item_del("advanced/trash");
@@ -299,7 +299,7 @@ e_modapi_shutdown(E_Module *m)
 }
 
 EAPI int
-e_modapi_save(E_Module *m)
+e_modapi_save(E_Module *m __UNUSED__)
 {
    e_config_domain_save("module.trash", conf_edd, trash_conf);
    return 1;
@@ -308,7 +308,8 @@ e_modapi_save(E_Module *m)
 
 /* callbacks */
 static void
-_trash_monitor_cb(void *data, Ecore_File_Monitor *em, Ecore_File_Event event, const char *path)
+_trash_monitor_cb(void *data __UNUSED__, Ecore_File_Monitor *em __UNUSED__,
+                  Ecore_File_Event event __UNUSED__, const char *path __UNUSED__)
 {
    Instance *inst;
    Eina_List *l;
@@ -327,11 +328,11 @@ _trash_monitor_cb(void *data, Ecore_File_Monitor *em, Ecore_File_Event event, co
 }
 
 static void
-_trash_button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_trash_button_cb_mouse_down(void *data, Evas *e __UNUSED__, 
+                           Evas_Object *obj __UNUSED__, void *event_info)
 {
    Instance *inst;
    Evas_Event_Mouse_Down *ev;
-   char buf[4096];
 
    inst = data;
    ev = event_info;
@@ -378,7 +379,7 @@ _trash_button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_i
 }
 
 static void
-_trash_cb_menu_post(void *data, E_Menu *menu)
+_trash_cb_menu_post(void *data, E_Menu *menu __UNUSED__)
 {
    Instance *inst = data;
 
@@ -390,7 +391,8 @@ _trash_cb_menu_post(void *data, E_Menu *menu)
 }
 
 static void
-_trash_cb_obj_moveresize(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_trash_cb_obj_moveresize(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__,
+                         void *event_info __UNUSED__)
 {
    Instance *inst = data;
    Evas_Coord x, y, w, h;
@@ -402,12 +404,9 @@ _trash_cb_obj_moveresize(void *data, Evas *e, Evas_Object *obj, void *event_info
 }
 
 static void
-_trash_cb_menu_empty(void *data, E_Menu *m, E_Menu_Item *mi)
+_trash_cb_menu_empty(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
-   Instance *inst = data;
-
-   E_Confirm_Dialog *dialog;
-   dialog = e_confirm_dialog_show("", NULL,
+   e_confirm_dialog_show("", NULL,
       D_("<b>Remove all the files and folders from the trash?</><br>"
          "All the elements currently in the trash will be irreparably lost!!!"),
       D_("Cancel"), D_("Empty trash"), 
@@ -415,13 +414,13 @@ _trash_cb_menu_empty(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void 
-_trash_cb_menu_empty_ok(void *data)
+_trash_cb_menu_empty_ok(void *data __UNUSED__)
 {
    efreet_trash_empty_trash();
 }
 
 static void
-_trash_cb_menu_show(void *data, E_Menu *m, E_Menu_Item *mi)
+_trash_cb_menu_show(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    char buf[4096];
    E_Zone *zone;
@@ -433,14 +432,14 @@ _trash_cb_menu_show(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_trash_dnd_cb_enter(void *data, const char *type, void *event_info)
+_trash_dnd_cb_enter(void *data, const char *type __UNUSED__, void *event_info __UNUSED__)
 {
    Instance *inst = data;
    edje_object_signal_emit(inst->o_trash, "drag_start", "e");
 }
 
 static void
-_trash_dnd_cb_move(void *data, const char *type, void *event_info)
+_trash_dnd_cb_move(void *data __UNUSED__, const char *type __UNUSED__, void *event_info __UNUSED__)
 {
    //~ E_Event_Dnd_Move *ev;
    //~ Instance *inst;
@@ -452,7 +451,7 @@ _trash_dnd_cb_move(void *data, const char *type, void *event_info)
 }
 
 static void
-_trash_dnd_cb_leave(void *data, const char *type, void *event_info)
+_trash_dnd_cb_leave(void *data, const char *type __UNUSED__, void *event_info __UNUSED__)
 {
    //~ E_Event_Dnd_Leave *ev;
    Instance *inst;
@@ -485,7 +484,7 @@ _trash_dnd_cb_drop(void *data, const char *type, void *event_info)
    for (l = ev->data; l; l = l->next)
      {
         Efreet_Uri *uri;
-        if (uri = efreet_uri_decode(l->data))
+        if ((uri = efreet_uri_decode(l->data)))
           {
              res = efreet_trash_delete_uri(uri, 0);
              if (res == -1)
@@ -498,8 +497,7 @@ _trash_dnd_cb_drop(void *data, const char *type, void *event_info)
    if (nonlocals)
      {
         printf("ALERT [%d]!!\n", eina_list_count(nonlocals));
-        E_Confirm_Dialog *dialog;
-        dialog = e_confirm_dialog_show(D_("Alert"), NULL, 
+        e_confirm_dialog_show(D_("Alert"), NULL, 
                      D_("Some files can't be moved to trash <br>"
                      "because they are not on the local filesystem.<br><br>"
                      "The files will be deleted FOREVER!!!"),
@@ -550,7 +548,7 @@ _trash_dialog_cb_cancel(void *data)
 }
 
 static void 
-_trash_cb_menu_configure(void *data, E_Menu *mn, E_Menu_Item *mi) 
+_trash_cb_menu_configure(void *data __UNUSED__, E_Menu *mn, E_Menu_Item *mi __UNUSED__)
 {
    if (!trash_conf) return;
    if (trash_conf->cfd) return;
@@ -560,9 +558,6 @@ _trash_cb_menu_configure(void *data, E_Menu *mn, E_Menu_Item *mi)
 static void 
 _trash_conf_new(void) 
 {
-   Config_Item *ci = NULL;
-   char buf[128];
-
    trash_conf = E_NEW(Config, 1);
    trash_conf->version = (MOD_CONFIG_FILE_EPOCH << 16);
 

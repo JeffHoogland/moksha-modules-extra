@@ -8,7 +8,7 @@ struct _E_Config_Dialog_Data
 {
    char *fileman;
 };
-
+ 
 /* Local Function Prototypes */
 static void *_create_data(E_Config_Dialog *cfd);
 static void _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
@@ -20,7 +20,7 @@ static int _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
 
 /* Function for calling our personal dialog menu */
 E_Config_Dialog *
-e_int_config_trash_module(E_Container *con, const char *params) 
+e_int_config_trash_module(E_Container *con, const char *params __UNUSED__)
 {
    E_Config_Dialog *cfd = NULL;
    E_Config_Dialog_View *v = NULL;
@@ -51,7 +51,7 @@ e_int_config_trash_module(E_Container *con, const char *params)
 
 /* Local Functions */
 static void *
-_create_data(E_Config_Dialog *cfd) 
+_create_data(E_Config_Dialog *cfd __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = NULL;
 
@@ -61,7 +61,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void 
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    trash_conf->cfd = NULL;
    E_FREE(cfdata->fileman);
@@ -76,7 +76,7 @@ _fill_data(E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata) 
 {
    Evas_Object *o = NULL, *of = NULL, *ow = NULL;
 
@@ -97,7 +97,7 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
 }
 
 static int 
-_basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_basic_apply(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
   
    if (trash_conf->fileman) eina_stringshare_del(trash_conf->fileman);
