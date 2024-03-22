@@ -114,6 +114,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
         edje_object_signal_emit(o, EDJE_SIG_SEND_ALARM_RING_START);
         break;
       default:
+        break;
         // FIXMW: unhandled case: ALARM_STATE_SNOOZED
      }
 
