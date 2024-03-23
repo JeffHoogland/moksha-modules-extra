@@ -24,7 +24,7 @@ static int _adv_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
 static void _cb_disable_check(void *data, Evas_Object *obj);
 
 E_Config_Dialog *
-e_int_config_screenshot_module(E_Container *con, const char *params)
+e_int_config_screenshot_module(E_Container *con, const char *params __UNUSED__)
 {
    E_Config_Dialog *cfd = NULL;
    E_Config_Dialog_View *v = NULL;
@@ -53,7 +53,7 @@ e_int_config_screenshot_module(E_Container *con, const char *params)
 
 /* private functions */
 static void *
-_create_data(E_Config_Dialog *cfd) 
+_create_data(E_Config_Dialog *cfd __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = NULL;
 
@@ -63,7 +63,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void 
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    ss_cfg->cfd = NULL;
    E_FREE(cfdata->location);
@@ -89,7 +89,7 @@ _fill_data(E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o = NULL, *of = NULL, *ow = NULL;
    E_Radio_Group *rg;
@@ -146,7 +146,7 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
 }
 
 static int 
-_basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_basic_apply(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    ss_cfg->use_bell = cfdata->use_bell;
    ss_cfg->delay = cfdata->delay;
@@ -168,7 +168,7 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_adv_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_adv_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o = NULL, *of = NULL, *ow = NULL;
    Evas_Object *launch_check = NULL, *app_entry = NULL;
@@ -257,7 +257,7 @@ _adv_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
 }
 
 static int 
-_adv_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_adv_apply(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    ss_cfg->delay = cfdata->delay;
    ss_cfg->prompt = cfdata->prompt;

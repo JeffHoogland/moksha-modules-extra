@@ -73,7 +73,7 @@ EAPI E_Module_Api e_modapi = {E_MODULE_API_VERSION, "Screenshot"};
 
 /* module functions */
 EAPI void *
-e_modapi_init(E_Module *m) 
+e_modapi_init(E_Module *m)
 {
    char buf[PATH_MAX];
 
@@ -168,7 +168,7 @@ e_modapi_init(E_Module *m)
 }
 
 EAPI int 
-e_modapi_shutdown(E_Module *m) 
+e_modapi_shutdown(E_Module *m __UNUSED__)
 {
    if (ss_cfg->cfd) e_object_del(E_OBJECT(ss_cfg->cfd));
 
@@ -189,7 +189,7 @@ e_modapi_shutdown(E_Module *m)
 }
 
 EAPI int 
-e_modapi_save(E_Module *m) 
+e_modapi_save(E_Module *m __UNUSED__)
 {
    e_config_domain_save("module.screenshot", conf_edd, ss_cfg);
    return 1;
@@ -197,7 +197,7 @@ e_modapi_save(E_Module *m)
 
 /* Gadcon Functions */
 static E_Gadcon_Client *
-_gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style) 
+_gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
 {
    Instance *inst = NULL;
    char buf[PATH_MAX];
@@ -232,7 +232,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
 }
 
 static void 
-_gc_shutdown(E_Gadcon_Client *gcc) 
+_gc_shutdown(E_Gadcon_Client *gcc)
 {
    Instance *inst = NULL;
 
@@ -255,20 +255,20 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 }
 
 static void 
-_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient) 
+_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
 {
    e_gadcon_client_aspect_set(gcc, 16, 16);
    e_gadcon_client_min_size_set(gcc, 16, 16);
 }
 
 static const char *
-_gc_label(const E_Gadcon_Client_Class *client_class) 
+_gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return D_("Screenshot");
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas) 
+_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o = NULL;
    char buf[PATH_MAX];
@@ -280,7 +280,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 }
 
 static const char *
-_gc_id_new(const E_Gadcon_Client_Class *client_class) 
+_gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    static char buf[PATH_MAX];
 
@@ -291,7 +291,7 @@ _gc_id_new(const E_Gadcon_Client_Class *client_class)
 
 /* private module functions */
 static void 
-_cfg_free(void) 
+_cfg_free(void)
 {
    if (ss_cfg->mod_dir) eina_stringshare_del(ss_cfg->mod_dir);
    if (ss_cfg->location) eina_stringshare_del(ss_cfg->location);
@@ -301,14 +301,14 @@ _cfg_free(void)
 }
 
 static Eina_Bool 
-_cfg_timer(void *data) 
+_cfg_timer(void *data)
 {
    e_util_dialog_internal(D_("Screenshot Configuration Updated"), data);
    return EINA_FALSE;
 }
 
 static void 
-_cfg_new(void) 
+_cfg_new(void)
 {
    char buf[PATH_MAX];
 
@@ -344,7 +344,8 @@ _cfg_new(void)
 }
 
 static void 
-_cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, void *event_info) 
+_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__, 
+               void *event_info)
 {
    Instance *inst = NULL;
    Evas_Event_Mouse_Down *ev;
@@ -405,7 +406,7 @@ _cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, void *event_info)
 }
 
 static void 
-_cb_menu_post(void *data, E_Menu *menu) 
+_cb_menu_post(void *data, E_Menu *menu __UNUSED__)
 {
    Instance *inst = NULL;
 
@@ -418,7 +419,7 @@ _cb_menu_post(void *data, E_Menu *menu)
 }
 
 static void 
-_cb_menu_cfg(void *data, E_Menu *menu, E_Menu_Item *mi)
+_cb_menu_cfg(void *data, E_Menu *menu __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst = NULL;
    E_Container *con;
@@ -439,7 +440,7 @@ _cb_menu_cfg(void *data, E_Menu *menu, E_Menu_Item *mi)
 }
 
 static void 
-_cb_normal(void *data, E_Menu *menu, E_Menu_Item *mi) 
+_cb_normal(void *data, E_Menu *menu __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst = NULL;
 
@@ -449,7 +450,7 @@ _cb_normal(void *data, E_Menu *menu, E_Menu_Item *mi)
 }
 
 static void 
-_cb_window(void *data, E_Menu *menu, E_Menu_Item *mi) 
+_cb_window(void *data, E_Menu *menu __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst = NULL;
 
@@ -459,7 +460,7 @@ _cb_window(void *data, E_Menu *menu, E_Menu_Item *mi)
 }
 
 static void 
-_cb_region(void *data, E_Menu *menu, E_Menu_Item *mi) 
+_cb_region(void *data, E_Menu *menu __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst = NULL;
 
@@ -469,7 +470,8 @@ _cb_region(void *data, E_Menu *menu, E_Menu_Item *mi)
 }
 
 static void 
-_cb_start_shot(void *data, Evas_Object *obj, const char *emission, const char *source) 
+_cb_start_shot(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, 
+               const char *source __UNUSED__)
 {
    Instance *inst = NULL;
 
@@ -495,7 +497,8 @@ _cb_start_shot(void *data, Evas_Object *obj, const char *emission, const char *s
 }
 
 static void 
-_cb_exec_shot(void *data, Evas_Object *obj, const char *emission, const char *source) 
+_cb_exec_shot(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__,
+              const char *source __UNUSED__)
 {
    Instance *inst = NULL;
 
@@ -507,7 +510,7 @@ _cb_exec_shot(void *data, Evas_Object *obj, const char *emission, const char *so
 }
 
 static void 
-_cb_dialog_ok(void *data, char *text) 
+_cb_dialog_ok(void *data, char *text)
 {
    Instance *inst = NULL;
    char buf[PATH_MAX];
@@ -531,7 +534,7 @@ _cb_dialog_ok(void *data, char *text)
 }
 
 static void 
-_cb_send_msg(void *data) 
+_cb_send_msg(void *data)
 {
    Instance *inst = NULL;
    Edje_Message_Int_Set *msg = NULL;
@@ -547,7 +550,7 @@ _cb_send_msg(void *data)
 }
 
 static void 
-_cb_do_shot(void) 
+_cb_do_shot(void)
 {
    Ecore_Exe *exe;
    char *tmp, buf[PATH_MAX];
@@ -627,7 +630,7 @@ _cb_do_shot(void)
 }
 
 static void 
-_cb_take_shot(E_Object *obj, const char *params) 
+_cb_take_shot(E_Object *obj __UNUSED__, const char *params __UNUSED__)
 {
    Ecore_Exe *exe;
    char *tmp, buf[PATH_MAX];
@@ -713,7 +716,7 @@ _cb_take_shot(E_Object *obj, const char *params)
 }
 
 static Eina_Bool 
-_cb_timer(void *data) 
+_cb_timer(void *data)
 {
    Instance *inst = NULL;
    char buf[256];
