@@ -84,20 +84,20 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 }
 
 static void 
-_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient) 
+_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
 {
    e_gadcon_client_aspect_set(gcc, 32, 32);
    e_gadcon_client_min_size_set(gcc, 32, 32);
 }
 
 static const char *
-_gc_label(const E_Gadcon_Client_Class *client_class) 
+_gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return D_("Net");
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas) 
+_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas) 
 {
    Evas_Object *o;
    char buf[PATH_MAX];
@@ -110,7 +110,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 }
 
 static const char *
-_gc_id_new(const E_Gadcon_Client_Class *client_class)
+_gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    Config_Item *ci;
 

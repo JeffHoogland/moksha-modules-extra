@@ -32,10 +32,11 @@ e_modapi_init(E_Module *m)
    net_cfg = e_config_domain_load("module.net", conf_edd);
    if (!net_cfg) 
      {
-        Config_Item *ci;
+        //~ Config_Item *ci;
 
         net_cfg = E_NEW(Config, 1);
-        ci = _net_config_item_get("0");
+        //~ ci = _net_config_item_get("0");
+        _net_config_item_get("0");
      }
    net_cfg->mod = m;
    _net_gc_register();
@@ -43,7 +44,7 @@ e_modapi_init(E_Module *m)
 }
 
 EAPI int
-e_modapi_shutdown(E_Module *m) 
+e_modapi_shutdown(E_Module *m __UNUSED__) 
 {
    _net_gc_unregister();
    net_cfg->mod = NULL;
@@ -75,7 +76,7 @@ e_modapi_shutdown(E_Module *m)
 }
 
 EAPI int
-e_modapi_save(E_Module *m) 
+e_modapi_save(E_Module *m __UNUSED__)
 {
    e_config_domain_save("module.net", conf_edd, net_cfg);
    return 1;

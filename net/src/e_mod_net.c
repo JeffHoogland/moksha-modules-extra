@@ -133,10 +133,10 @@ _net_cb_poll(void *data)
 }
 
 void 
-_net_cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, void *event) 
+_net_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__, void *event) 
 {
    Instance *inst;
-   Ecore_Exe *x;
+   Ecore_Exe *exe;
    Evas_Event_Mouse_Down *ev;
 
    inst = data;
@@ -145,8 +145,8 @@ _net_cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, void *event)
      {
         if (inst->ci->app)
           {
-             x = ecore_exe_run(inst->ci->app, NULL);
-             if (x) ecore_exe_free(x);
+             exe = ecore_exe_run(inst->ci->app, NULL);
+             if (exe) ecore_exe_free(exe);
           }
      }
    else if ((ev->button == 1) && (!net_cfg->menu))
@@ -164,6 +164,7 @@ _net_cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, void *event)
         e_menu_item_callback_set(mi, _cb_configure, inst);
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
+        e_menu_post_deactivate_callback_set(m, _cb_post, inst);
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y,
                                           NULL, NULL);
@@ -175,7 +176,8 @@ _net_cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, void *event)
 }
 
 void 
-_net_cb_mouse_in(void *data, Evas_Object *obj, const char *emission, const char *source)
+_net_cb_mouse_in(void *data, Evas_Object *obj __UNUSED__, 
+                 const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    Instance *inst;
    Evas_Object *bg;
@@ -209,7 +211,8 @@ _net_cb_mouse_in(void *data, Evas_Object *obj, const char *emission, const char 
 }
 
 void 
-_net_cb_mouse_out(void *data, Evas_Object *obj, const char *emission, const char *source)
+_net_cb_mouse_out(void *data, Evas_Object *obj __UNUSED__, 
+                  const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    Instance *inst;
    
@@ -231,7 +234,7 @@ _bytes_to_string(bytes_t bytes, char *string, int size)
 }
 
 static void 
-_cb_post(void *data, E_Menu *m) 
+_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
 {
    if (!net_cfg->menu) return;
    e_menu_post_deactivate_callback_set(net_cfg->menu, NULL, NULL);
@@ -240,7 +243,7 @@ _cb_post(void *data, E_Menu *m)
 }
 
 static void 
-_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi) 
+_cb_configure(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
    

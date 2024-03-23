@@ -59,7 +59,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void 
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
    if (cfdata->devs) eina_list_free(cfdata->devs);
    E_FREE(cfdata->device);
@@ -103,7 +103,7 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata) 
 {
    Evas_Object *o, *ob, *of;
    E_Radio_Group *rg;
