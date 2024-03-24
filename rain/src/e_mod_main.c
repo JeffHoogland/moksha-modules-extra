@@ -168,9 +168,9 @@ _rain_shutdown(Rain *rain)
    E_CONFIG_DD_FREE(rain->conf_edd);
    while (rain->cons)
      {
-        E_Container *con;
+        //~ E_Container *con;
 
-        con = rain->cons->data;
+        //~ con = rain->cons->data;
         rain->cons = eina_list_remove_list(rain->cons, rain->cons);
      }
 

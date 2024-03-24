@@ -20,9 +20,9 @@ static Evas_Object *_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Co
 static int _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata);
 static void _fill_data(Rain *rn, E_Config_Dialog_Data *cfdata);
 
-E_Config_Dialog *e_int_config_rain_module(E_Container *con, const char *params)
+E_Config_Dialog *e_int_config_rain_module(E_Container *con, const char *params __UNUSED__)
 {
-   E_Config_Dialog *cfd;
+   E_Config_Dialog *cfd = NULL;
    E_Config_Dialog_View *v;
    Rain *r;
    char buf[PATH_MAX];
@@ -90,7 +90,7 @@ _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
+_basic_create_widgets(E_Config_Dialog *cfd  __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o, *of, *ob;
    E_Radio_Group *rg;
