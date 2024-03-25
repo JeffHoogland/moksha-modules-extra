@@ -195,7 +195,7 @@ const char *photo_picture_name_get(char *url)
 char *photo_picture_infos_get(Picture *p)
 {
    char buf[4096];
-   char buf_ext[4096];
+   char buf_ext[2048];
    int w = 0, h = 0;
 
    if (!photo_util_image_size(p->path, &w, &h))

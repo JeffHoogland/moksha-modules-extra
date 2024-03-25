@@ -1008,12 +1008,12 @@ _edj_gen(Import *import)
 }
 
 static void
-_cb_import_ok(void *data, void *dia __UNUSED__)
+_cb_import_ok(void *data __UNUSED__, void *dia __UNUSED__)
 {
-   Import *import;
-   import = data;
+   //~ Import *import;
+   //~ import = data;
 
-   if (photo->config->pictures_set_bg_purge)	
+   if (photo->config->pictures_set_bg_purge)
       photo_picture_setbg_add(name);
    name = NULL;
    e_bg_update();
@@ -1058,7 +1058,7 @@ _import_free(Import *import)
 }
 
 static void
-_apply_import_ok(const char *file, E_Import_Config_Dialog *import)
+_apply_import_ok(const char *file __UNUSED__, E_Import_Config_Dialog *import)
 {
    e_bg_default_set(import->fdest);
    if (photo->config->pictures_set_bg_purge)
