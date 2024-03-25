@@ -61,14 +61,14 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void 
-_fill_data(Config_Item * ci, E_Config_Dialog_Data *cfdata) 
+_fill_data(Config_Item * ci __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
    // load available disk devices
    cfdata->disks = ecore_file_ls("/sys/block");
 }
 
 static void 
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
    diskio_conf->cfd = NULL;
    E_FREE(cfdata);
