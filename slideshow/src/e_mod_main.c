@@ -180,12 +180,10 @@ _gc_id_new(__UNUSED__ const E_Gadcon_Client_Class *client_class)
 static void
 _slide_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
-   Instance *inst;
-   Evas_Event_Mouse_Down *ev;
+   Instance *inst = data;
+   Evas_Event_Mouse_Down *ev = event_info;
 
-   inst = data;
-   ev = event_info;
-   if ((ev->button == 3) && (!slide_config->menu))
+   if (ev->button == 3)
      {
         E_Menu *m;
         E_Menu_Item *mi;
@@ -196,11 +194,8 @@ _slide_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__
         e_menu_item_label_set(mi, D_("Settings"));
         e_util_menu_item_theme_icon_set(mi, "preferences-system");
         e_menu_item_callback_set(mi, _slide_menu_cb_configure, inst);
-
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-        e_menu_post_deactivate_callback_set(m, _slide_menu_cb_post, inst);
-        slide_config->menu = m;
-
+        
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, &w, &h);
         e_menu_activate_mouse(m,
                                e_util_zone_current_get(e_manager_current_get()),
@@ -218,14 +213,6 @@ _slide_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__
      }
    else if (ev->button == 1)
      _slide_cb_check(inst);
-}
-
-static void
-_slide_menu_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
-{
-   if (!slide_config->menu) return;
-   e_object_del(E_OBJECT(slide_config->menu));
-   slide_config->menu = NULL;
 }
 
 static void
@@ -404,21 +391,14 @@ EAPI int
 e_modapi_shutdown(__UNUSED__ E_Module *m)
 {
    slide_config->module = NULL;
+
    e_gadcon_provider_unregister(&_gc_class);
 
    E_FREE_LIST(slideshow_handlers, ecore_event_handler_del);
 
-   /* Kill the config dialog */
    if (slide_config->config_dialog)
      e_object_del(E_OBJECT(slide_config->config_dialog));
-
-   if (slide_config->menu)
-     {
-        e_menu_post_deactivate_callback_set(slide_config->menu, NULL, NULL);
-        e_object_del(E_OBJECT(slide_config->menu));
-        slide_config->menu = NULL;
-     }
-  
+ 
    _slide_conf_free();
    
    E_CONFIG_DD_FREE(conf_item_edd);

@@ -10,6 +10,10 @@
 # define D_(string) (string)
 #endif
 
+#define ENABLE_DEBUG 0
+#define DEBUG(f, ...) if (ENABLE_DEBUG) \
+    printf("\x1b[31m[slideshow]\x1b[0m "f "\n", __VA_ARGS__)
+
 /* Increment for Major Changes */
 #define MOD_CONFIG_FILE_EPOCH      1
 /* Increment for Minor Changes (ie: user doesn't need a new config) */
@@ -23,7 +27,6 @@ struct _Config
 {
    E_Module *module;
    E_Config_Dialog *config_dialog;
-   E_Menu *menu;
    Eina_List *instances;
    Eina_List *items;
    int version;
