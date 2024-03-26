@@ -36,7 +36,6 @@ static void _mem_cb_mouse_in(void *data, Evas * e, Evas_Object * obj,
 static void _mem_cb_mouse_out(void *data, Evas * e, Evas_Object * obj,
                                void *event_info);
 static void _mem_menu_cb_configure(void *data, E_Menu * m, E_Menu_Item * mi);
-static void _mem_menu_cb_post(void *data, E_Menu * m);
 static Config_Item *_mem_config_item_get(const char *id);
 static Mem *_mem_new(Evas * evas);
 static void _mem_free(Mem * mem);
@@ -151,7 +150,7 @@ _mem_cb_mouse_down(void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED__
 
    inst = data;
    ev = event_info;
-   if ((ev->button == 3) && (!mem_config->menu))
+   if (ev->button == 3)
      {
         E_Menu *m;
         E_Menu_Item *mi;
@@ -164,8 +163,6 @@ _mem_cb_mouse_down(void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED__
         e_menu_item_callback_set(mi, _mem_menu_cb_configure, inst);
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-        e_menu_post_deactivate_callback_set(m, _mem_menu_cb_post, inst);
-        mem_config->menu = m;
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, &w, &h);
         e_menu_activate_mouse(m,
@@ -176,15 +173,6 @@ _mem_cb_mouse_down(void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED__
         evas_event_feed_mouse_up (inst->gcc->gadcon->evas, ev->button,
                                EVAS_BUTTON_NONE, ev->timestamp, NULL);
     }
-}
-
-static void
-_mem_menu_cb_post(void *data __UNUSED__, E_Menu * m __UNUSED__)
-{
-   if (!mem_config->menu)
-     return;
-   e_object_del(E_OBJECT (mem_config->menu));
-   mem_config->menu = NULL;
 }
 
 static void
@@ -332,12 +320,7 @@ e_modapi_shutdown(E_Module * m __UNUSED__)
 
    if (mem_config->config_dialog)
      e_object_del (E_OBJECT (mem_config->config_dialog));
-   if (mem_config->menu)
-     {
-        e_menu_post_deactivate_callback_set (mem_config->menu, NULL, NULL);
-        e_object_del (E_OBJECT (mem_config->menu));
-        mem_config->menu = NULL;
-    }
+
    while (mem_config->items)
      {
         Config_Item *ci;

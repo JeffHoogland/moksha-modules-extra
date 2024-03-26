@@ -17,7 +17,6 @@ struct _Config
 {
    E_Module *module;
    E_Config_Dialog *config_dialog;
-   E_Menu *menu;
    Eina_List *instances;
    Eina_List *items;
 };
