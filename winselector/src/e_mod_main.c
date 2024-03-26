@@ -28,7 +28,6 @@ struct _Instance
   E_Gadcon_Client *gcc;
   Evas_Object     *o_button;
   Evas_Object     *bd_icon;
-  E_Menu          *win_menu;
 
   Eina_List       *handlers;
 };
@@ -69,7 +68,7 @@ _gc_init (E_Gadcon * gc, const char *name, const char *id, const char *style)
   Evas_Object *o;
   E_Gadcon_Client *gcc;
   Instance *inst;
-  char buf[4096];
+  char buf[PATH_MAX];
 
   inst = E_NEW (Instance, 1);
 
@@ -106,15 +105,8 @@ _gc_init (E_Gadcon * gc, const char *name, const char *id, const char *style)
 static void
 _gc_shutdown (E_Gadcon_Client * gcc)
 {
-   Instance *inst;
+   Instance *inst = gcc->data;
 
-  inst = gcc->data;
-  if (inst->win_menu)
-    {
-       e_menu_post_deactivate_callback_set(inst->win_menu, NULL, NULL);
-       e_object_del(E_OBJECT(inst->win_menu));
-       inst->win_menu = NULL;
-    }
   if (inst->bd_icon)
     {
        edje_object_part_unswallow(inst->o_button, inst->bd_icon);
@@ -152,7 +144,7 @@ static Evas_Object *
 _gc_icon (const E_Gadcon_Client_Class *client_class __UNUSED__, Evas * evas)
 {
   Evas_Object *o;
-  char buf[4096];
+  char buf[PATH_MAX];
 
   o = edje_object_add (evas);
   snprintf (buf, sizeof (buf), "%s/e-module-winselector.edj",
@@ -180,73 +172,71 @@ _button_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED_
      {
         Evas_Coord x, y, w, h;
         int cx, cy, cw, ch;
+        E_Menu *m;
 
         evas_object_geometry_get(inst->o_button, &x, &y, &w, &h); 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon,
             &cx, &cy, &cw, &ch);
         x += cx;
         y += cy;
-        if (!inst->win_menu)
-          inst->win_menu = _win_menu_new(inst);
-        if (inst->win_menu)
-          {
-             int dir;
+        m = _win_menu_new(inst);
 
-             e_menu_post_deactivate_callback_set(inst->win_menu, _menu_cb_post,
-                 inst);
+        int dir;
+
+        e_menu_post_deactivate_callback_set(m, _menu_cb_post,
+            inst);
+        dir = E_MENU_POP_DIRECTION_AUTO;
+        switch (inst->gcc->gadcon->orient)
+           {
+           case E_GADCON_ORIENT_TOP:
+             dir = E_MENU_POP_DIRECTION_DOWN;
+             break;
+           case E_GADCON_ORIENT_BOTTOM:
+             dir = E_MENU_POP_DIRECTION_UP;
+             break;
+           case E_GADCON_ORIENT_LEFT:
+             dir = E_MENU_POP_DIRECTION_RIGHT;
+             break;
+           case E_GADCON_ORIENT_RIGHT:
+             dir = E_MENU_POP_DIRECTION_LEFT;
+             break;
+           case E_GADCON_ORIENT_CORNER_TL:
+             dir = E_MENU_POP_DIRECTION_DOWN;
+             break;
+           case E_GADCON_ORIENT_CORNER_TR:
+             dir = E_MENU_POP_DIRECTION_DOWN;
+             break;
+           case E_GADCON_ORIENT_CORNER_BL:
+             dir = E_MENU_POP_DIRECTION_UP;
+             break;
+           case E_GADCON_ORIENT_CORNER_BR:
+             dir = E_MENU_POP_DIRECTION_UP;
+             break;
+           case E_GADCON_ORIENT_CORNER_LT:
+             dir = E_MENU_POP_DIRECTION_RIGHT;
+             break;
+           case E_GADCON_ORIENT_CORNER_RT:
+             dir = E_MENU_POP_DIRECTION_LEFT;
+             break;
+           case E_GADCON_ORIENT_CORNER_LB:
+             dir = E_MENU_POP_DIRECTION_RIGHT;
+             break;
+           case E_GADCON_ORIENT_CORNER_RB:
+             dir = E_MENU_POP_DIRECTION_LEFT;
+             break;
+           case E_GADCON_ORIENT_FLOAT:
+           case E_GADCON_ORIENT_HORIZ:
+           case E_GADCON_ORIENT_VERT:
+           default:
              dir = E_MENU_POP_DIRECTION_AUTO;
-             switch (inst->gcc->gadcon->orient)
-                {
-                case E_GADCON_ORIENT_TOP:
-                  dir = E_MENU_POP_DIRECTION_DOWN;
-                  break;
-                case E_GADCON_ORIENT_BOTTOM:
-                  dir = E_MENU_POP_DIRECTION_UP;
-                  break;
-                case E_GADCON_ORIENT_LEFT:
-                  dir = E_MENU_POP_DIRECTION_RIGHT;
-                  break;
-                case E_GADCON_ORIENT_RIGHT:
-                  dir = E_MENU_POP_DIRECTION_LEFT;
-                  break;
-                case E_GADCON_ORIENT_CORNER_TL:
-                  dir = E_MENU_POP_DIRECTION_DOWN;
-                  break;
-                case E_GADCON_ORIENT_CORNER_TR:
-                  dir = E_MENU_POP_DIRECTION_DOWN;
-                  break;
-                case E_GADCON_ORIENT_CORNER_BL:
-                  dir = E_MENU_POP_DIRECTION_UP;
-                  break;
-                case E_GADCON_ORIENT_CORNER_BR:
-                  dir = E_MENU_POP_DIRECTION_UP;
-                  break;
-                case E_GADCON_ORIENT_CORNER_LT:
-                  dir = E_MENU_POP_DIRECTION_RIGHT;
-                  break;
-                case E_GADCON_ORIENT_CORNER_RT:
-                  dir = E_MENU_POP_DIRECTION_LEFT;
-                  break;
-                case E_GADCON_ORIENT_CORNER_LB:
-                  dir = E_MENU_POP_DIRECTION_RIGHT;
-                  break;
-                case E_GADCON_ORIENT_CORNER_RB:
-                  dir = E_MENU_POP_DIRECTION_LEFT;
-                  break;
-                case E_GADCON_ORIENT_FLOAT:
-                case E_GADCON_ORIENT_HORIZ:
-                case E_GADCON_ORIENT_VERT:
-                default:
-                  dir = E_MENU_POP_DIRECTION_AUTO;
-                  break;
-               }
-              e_menu_activate_mouse(inst->win_menu,
-                   e_util_zone_current_get(e_manager_current_get()),
-                   x, y, w, h, dir, ev->timestamp);
-             edje_object_signal_emit(inst->o_button, "active", "");
-             evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
-                  EVAS_BUTTON_NONE, ev->timestamp, NULL);
+             break;
           }
+          e_menu_activate_mouse(m,
+               e_util_zone_current_get(e_manager_current_get()),
+               x, y, w, h, dir, ev->timestamp);
+         edje_object_signal_emit(inst->o_button, "active", "");
+         evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
+              EVAS_BUTTON_NONE, ev->timestamp, NULL);
      }
 }
 
@@ -434,13 +424,10 @@ _win_menu_free_hook(void *obj)
 static void
 _menu_cb_post(void *data, E_Menu *m __UNUSED__)
 {
-   Instance *inst;
-   
-   inst = data;
-   if (!inst->win_menu) return;
+   Instance *inst = data;
+
+   if (!inst->gcc->menu) return;
    edje_object_signal_emit(inst->o_button, "passive", "");
-   e_object_del(E_OBJECT(inst->win_menu));
-   inst->win_menu = NULL;
 }
 
 static Eina_Bool _window_cb_focus_in(void *data, int type __UNUSED__, void *event)
