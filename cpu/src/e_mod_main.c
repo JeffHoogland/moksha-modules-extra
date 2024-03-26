@@ -69,7 +69,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    Cpu *cpu;
    Instance *inst;
    E_Gadcon_Client *gcc;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    cpu_count = _get_cpu_count();
 
@@ -96,7 +96,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    cpu_conf->instances = eina_list_append(cpu_conf->instances, inst);
 
    evas_object_event_callback_add(cpu->o_icon, EVAS_CALLBACK_MOUSE_DOWN,
-				  _button_cb_mouse_down, inst);
+               _button_cb_mouse_down, inst);
 
    inst->timer = ecore_timer_add(inst->ci->interval, _set_cpu_load, inst);
    return gcc;
@@ -136,7 +136,7 @@ static Evas_Object *
 _gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas) 
 {
    Evas_Object *o;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    if (!cpu_conf->module) return NULL;
 
@@ -364,7 +364,7 @@ _button_cb_mouse_down(void *data, Evas *e __UNUSED__,
    
    inst = data;
    ev = event_info;
-   if ((ev->button == 3) && (!cpu_conf->menu))
+   if (ev->button == 3)
      {
         E_Menu *m, *mo;
         E_Menu_Item *mi;
@@ -425,7 +425,6 @@ _button_cb_mouse_down(void *data, Evas *e __UNUSED__,
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
         e_menu_post_deactivate_callback_set(m, _menu_cb_post, inst);
-        cpu_conf->menu = m;
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &cx, &cy, &cw, &ch);
        e_menu_activate_mouse(m,
@@ -440,9 +439,6 @@ _button_cb_mouse_down(void *data, Evas *e __UNUSED__,
 static void
 _menu_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
 {
-   if (!cpu_conf->menu) return;
-   e_object_del(E_OBJECT(cpu_conf->menu));
-   cpu_conf->menu = NULL;
    if (cpu_conf->menu_interval)
      e_object_del(E_OBJECT(cpu_conf->menu_interval));
    cpu_conf->menu_interval = NULL;
@@ -527,7 +523,7 @@ EAPI E_Module_Api e_modapi =
 EAPI void *
 e_modapi_init(E_Module *m) 
 {
-   char buf[4096];
+   char buf[PATH_MAX];
 
    snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
    bindtextdomain(PACKAGE, buf);
@@ -576,12 +572,6 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
    e_gadcon_provider_unregister(&_gc_class);
    if (cpu_conf->config_dialog)
      e_object_del(E_OBJECT(cpu_conf->config_dialog));
-   if (cpu_conf->menu) 
-     {
-        e_menu_post_deactivate_callback_set(cpu_conf->menu, NULL, NULL);
-        e_object_del(E_OBJECT(cpu_conf->menu));
-        cpu_conf->menu = NULL;
-     }
 
    while (cpu_conf->items) 
      {
