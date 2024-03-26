@@ -38,7 +38,6 @@ static Evas_Object *_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *ev
 static const char *_gc_id_new(const E_Gadcon_Client_Class *client_class);
 static void _slide_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static void _slide_menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi);
-static void _slide_menu_cb_post(void *data, E_Menu *m);
 static Config_Item *_slide_config_item_get(const char *id);
 static Slideshow *_slide_new(Evas *evas);
 static void _slide_free(Slideshow *ss);
