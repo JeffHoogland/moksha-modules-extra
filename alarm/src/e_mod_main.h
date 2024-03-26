@@ -139,7 +139,6 @@ struct _Config
    E_Config_Dialog *config_dialog;
    E_Config_Dialog *config_dialog_alarm_new;
    Eina_List       *instances;
-   E_Menu          *menu;
 };
 
 EAPI extern E_Module_Api e_modapi;

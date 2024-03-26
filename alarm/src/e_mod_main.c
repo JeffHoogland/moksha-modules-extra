@@ -46,7 +46,6 @@ static void   _alarm_dialog_snooze_delete(E_Dialog *dia, Alarm *al);
 static double _epoch_find_date(char *date, int hour, int minute);
 static double _epoch_find_next(int day_monday, int day_tuesday, int day_wenesday, int day_thursday, int day_friday, int day_saturday, int day_sunday, int hour, int minute);
 static void   _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info);
-static void   _menu_cb_deactivate_post(void *data, E_Menu *m);
 static void   _menu_cb_alarm_snooze(void *data, E_Menu *m, E_Menu_Item *mi);
 static void   _menu_cb_alarm_add(void *data, E_Menu *m, E_Menu_Item *mi);
 static void   _menu_cb_configure(void *data, E_Menu *m, E_Menu_Item *mi);
@@ -871,8 +870,6 @@ _button_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED_
              else e_menu_item_icon_edje_set(mi, alarm_config->theme, THEME_ICON_SNOOZE);
           }
 
-  e_menu_post_deactivate_callback_set(m, _menu_cb_deactivate_post, inst);
-  alarm_config->menu = m;
   e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon,
             &cx, &cy, &cw, &ch);
   e_menu_activate_mouse(m,
@@ -882,14 +879,6 @@ _button_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED_
   evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
          EVAS_BUTTON_NONE, ev->timestamp, NULL);
      }
-}
-
-static void
-_menu_cb_deactivate_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
-{
-   if (!alarm_config->menu) return;
-   e_object_del(E_OBJECT(alarm_config->menu));
-   alarm_config->menu = NULL;
 }
 
 static void
@@ -1155,11 +1144,6 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
      e_object_del(E_OBJECT(alarm_config->config_dialog));
    if (alarm_config->config_dialog_alarm_new) 
      e_object_del(E_OBJECT(alarm_config->config_dialog_alarm_new));
-   if (alarm_config->menu)
-     {
-  e_menu_post_deactivate_callback_set(alarm_config->menu , NULL, NULL);
-  e_object_del(E_OBJECT(alarm_config->menu));
-     }
 
    E_FREE(alarm_config);
    E_CONFIG_DD_FREE(_alarms_edd);
