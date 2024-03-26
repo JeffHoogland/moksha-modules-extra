@@ -23,7 +23,6 @@ e_int_config_diskio_module(E_Container *con, Config_Item *ci)
    E_Config_Dialog_View *v = NULL;
    char buf[4096];
 
-   /* is this config dialog already visible ? */
    if (e_config_dialog_find("DiskIO", "_e_module_diskio_cfg_dlg")) return NULL;
 
    v = E_NEW(E_Config_Dialog_View, 1);
@@ -34,10 +33,8 @@ e_int_config_diskio_module(E_Container *con, Config_Item *ci)
    v->basic.create_widgets = _basic_create;
    v->basic.apply_cfdata = _basic_apply;
 
-   /* Icon in the theme */
    snprintf(buf, sizeof(buf), "%s/e-module-diskio.edj", diskio_conf->module->dir);
 
-   /* create new config dialog */
    cfd = e_config_dialog_new(con, "DiskIO Module", "DiskIO", 
                              "_e_module_diskio_cfg_dlg", buf, 0, v, ci);
 

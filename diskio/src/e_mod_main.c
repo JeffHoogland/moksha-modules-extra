@@ -21,15 +21,9 @@ static Eina_Bool  _diskio_set(void *data);
 typedef struct _Instance Instance;
 struct _Instance 
 {
-   /* pointer to this gadget's container */
    E_Gadcon_Client *gcc;
-
-   /* evas_object used to display */
    Evas_Object *o_diskio;
-
-   /* Config_Item structure. Every gadget should have one :) */
    Config_Item *conf_item;
-
    /* diskstat update timer */
    Ecore_Timer *timer;
    unsigned long bytes_r;
@@ -62,10 +56,7 @@ e_modapi_init(E_Module *m)
 {
    char buf[4096];
 
-   /* Location of theme to load for this module */
    snprintf(buf, sizeof(buf), "%s/e-module-diskio.edj", m->dir);
-
-   /* Define EET Data Storage */
 
    conf_item_edd = E_CONFIG_DD_NEW("Config_Item", Config_Item);
    #undef T
@@ -83,14 +74,11 @@ e_modapi_init(E_Module *m)
    E_CONFIG_VAL(D, T, version, INT);
    E_CONFIG_LIST(D, T, conf_items, conf_item_edd); /* the list */
 
-   /* Tell E to find any existing module data. First run ? */
    diskio_conf = e_config_domain_load("module.diskio", conf_edd);
    if (diskio_conf) 
      {
-        /* Check config version */
         if ((diskio_conf->version >> 16) < MOD_CONFIG_FILE_EPOCH) 
           {
-             /* config too old */
              _diskio_conf_free();
              ecore_timer_add(1.0, _diskio_conf_timer,
                              "DiskIO Module Configuration data needed "
@@ -106,11 +94,8 @@ e_modapi_init(E_Module *m)
                              "You can re-configure things now to your<br>"
                              "liking. Sorry for the inconvenience.<br>");
           }
-
-        /* Ardvarks */
         else if (diskio_conf->version > MOD_CONFIG_FILE_VERSION) 
           {
-             /* config too new...wtf ? */
              _diskio_conf_free();
              ecore_timer_add(1.0, _diskio_conf_timer, 
                              "Your DiskIO Module configuration is NEWER "
@@ -125,66 +110,41 @@ e_modapi_init(E_Module *m)
                              "inconvenience.<br>");
           }
      }
-
-   /* if we don't have a config yet, or it got erased above, 
-    * then create a default one */
    if (!diskio_conf) _diskio_conf_new();
-
-   /* create a link from the modules config to the module
-    * this is not written */
    diskio_conf->module = m;
-
-   /* Tell any gadget containers (shelves, etc) that we provide a module
-    * for the user to enjoy */
    e_gadcon_provider_register(&_gc_class);
 
-   /* Give E the module */
    return m;
 }
 
-/*
- * Function to unload the module
- */
 EAPI int 
 e_modapi_shutdown(E_Module *m __UNUSED__)
 {
-   /* Kill the config dialog */
    if (diskio_conf->cfd) e_object_del(E_OBJECT(diskio_conf->cfd));
    diskio_conf->cfd = NULL;
 
-   /* Tell E the module is now unloaded. Gets removed from shelves, etc. */
    diskio_conf->module = NULL;
    e_gadcon_provider_unregister(&_gc_class);
 
-   /* Cleanup our item list */
    while (diskio_conf->conf_items) 
      {
         Config_Item *ci = NULL;
 
-        /* Grab an item from the list */
         ci = diskio_conf->conf_items->data;
-        /* remove it */
         diskio_conf->conf_items = 
           eina_list_remove_list(diskio_conf->conf_items, 
                                 diskio_conf->conf_items);
-        /* cleanup stringshares !! ) */
         if (ci->id) eina_stringshare_del(ci->id);
-        /* keep the planet green */
         E_FREE(ci);
      }
 
-   /* Cleanup the main config structure */
    E_FREE(diskio_conf);
 
-   /* Clean EET */
    E_CONFIG_DD_FREE(conf_item_edd);
    E_CONFIG_DD_FREE(conf_edd);
    return 1;
 }
 
-/*
- * Function to Save the modules config
- */ 
 EAPI int 
 e_modapi_save(E_Module *m __UNUSED__)
 {
@@ -194,43 +154,34 @@ e_modapi_save(E_Module *m __UNUSED__)
 
 /* Local Functions */
 
-/* Called when Gadget_Container says go */
 static E_Gadcon_Client *
 _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style) 
 {
    Instance *inst = NULL;
    char buf[4096];
 
-   /* theme file */
    snprintf(buf, sizeof(buf), "%s/e-module-diskio.edj", 
             diskio_conf->module->dir);
 
-   /* New visual instance, any config ? */
    inst = E_NEW(Instance, 1);
    inst->conf_item = _diskio_conf_item_get(id);
    if (inst->conf_item->disk) inst->conf_item->disk = eina_stringshare_add(inst->conf_item->disk);
 
-   /* create on-screen object */
    inst->o_diskio = edje_object_add(gc->evas);
-   /* we have a theme ? */
    if (!e_theme_edje_object_set(inst->o_diskio, "base/theme/modules/diskio", 
                                 "modules/diskio/main"))
      edje_object_file_set(inst->o_diskio, buf, "modules/diskio/main");
 
-   /* Start loading our module on screen via container */
    inst->gcc = e_gadcon_client_new(gc, name, id, style, inst->o_diskio);
    inst->gcc->data = inst;
 
-   /* hook a mouse down. we want/have a popup menu, right ? */
    evas_object_event_callback_add(inst->o_diskio, EVAS_CALLBACK_MOUSE_DOWN, 
                                   _diskio_cb_mouse_down, inst);
 
-   /* add to list of running instances so we can cleanup later */
    instances = eina_list_append(instances, inst);
 
    inst->timer = ecore_timer_add(0.1, _diskio_set, inst);
 
-   /* return the Gadget_Container Client */
    return inst->gcc;
 }
 
@@ -294,7 +245,6 @@ _diskio_set(void *data)
    return EINA_TRUE;
 }
 
-/* Called when Gadget_Container says stop */
 static void 
 _gc_shutdown(E_Gadcon_Client *gcc)
 {
@@ -303,13 +253,10 @@ _gc_shutdown(E_Gadcon_Client *gcc)
    if (!(inst = gcc->data)) return;
    instances = eina_list_remove(instances, inst);
 
-   /* Delete diskstat update timer */
    if (inst->timer) ecore_timer_del(inst->timer);
 
-   /* delete the visual */
    if (inst->o_diskio) 
      {
-        /* remove mouse down callback hook */
         evas_object_event_callback_del(inst->o_diskio, EVAS_CALLBACK_MOUSE_DOWN, 
                                        _diskio_cb_mouse_down);
         evas_object_del(inst->o_diskio);
@@ -317,7 +264,6 @@ _gc_shutdown(E_Gadcon_Client *gcc)
    E_FREE(inst);
 }
 
-/* For for when container says we are changing position */
 static void 
 _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
 {
@@ -325,14 +271,13 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
    e_gadcon_client_min_size_set(gcc, 16, 16);
 }
 
-/* Gadget/Module label */
+
 static const char *
 _gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return D_("DiskIO");
 }
 
-/* so E can keep a unique instance per-container */
 static const char *
 _gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
@@ -348,19 +293,13 @@ _gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
    Evas_Object *o = NULL;
    char buf[4096];
 
-   /* theme */
    snprintf(buf, sizeof(buf), "%s/e-module-diskio.edj", diskio_conf->module->dir);
 
-   /* create icon object */
    o = edje_object_add(evas);
-
-   /* load icon from theme */
    edje_object_file_set(o, buf, "icon");
-
    return o;
 }
 
-/* new module needs a new config :), or config too old and we need one anyway */
 static void 
 _diskio_conf_new(void)
 {
@@ -387,7 +326,6 @@ _diskio_conf_new(void)
 static void 
 _diskio_conf_free(void)
 {
-   /* cleanup any stringshares here */
    while (diskio_conf->conf_items) 
      {
         Config_Item *ci = NULL;
@@ -396,7 +334,6 @@ _diskio_conf_free(void)
         diskio_conf->conf_items = 
           eina_list_remove_list(diskio_conf->conf_items, 
                                 diskio_conf->conf_items);
-        /* EPA */
         if (ci->id) eina_stringshare_del(ci->id);
         if (ci->disk) eina_stringshare_del(ci->disk);
         E_FREE(ci);
@@ -405,7 +342,6 @@ _diskio_conf_free(void)
    E_FREE(diskio_conf);
 }
 
-/* timer for the config oops dialog */
 static Eina_Bool 
 _diskio_conf_timer(void *data)
 {
@@ -413,8 +349,6 @@ _diskio_conf_timer(void *data)
    return EINA_FALSE;
 }
 
-/* function to search for any Config_Item struct for this Item
- * create if needed */
 static Config_Item *
 _diskio_conf_item_get(const char *id)
 {
@@ -429,7 +363,6 @@ _diskio_conf_item_get(const char *id)
    return ci;
 }
 
-/* Pants On */
 static void 
 _diskio_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__, void *event)
 {
@@ -446,23 +379,19 @@ _diskio_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUS
      {
         E_Menu *m;
 
-        /* grab current zone */
         zone = e_util_zone_current_get(e_manager_current_get());
 
-        /* create popup menu */
         m = e_menu_new();
         mi = e_menu_item_new(m);
         e_menu_item_label_set(mi, D_("Settings"));
         e_util_menu_item_theme_icon_set(mi, "preferences-system");
         e_menu_item_callback_set(mi, _diskio_cb_menu_configure, inst);
 
-        /* Each Gadget Client has a utility menu from the Container */
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, 
                                           NULL, NULL);
 
-        /* show the menu relative to gadgets position */
         e_menu_activate_mouse(m, zone, (x + ev->output.x), 
                               (y + ev->output.y), 1, 1, 
                               E_MENU_POP_DIRECTION_AUTO, ev->timestamp);
@@ -471,7 +400,6 @@ _diskio_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUS
      }
 }
 
-/* call configure from popup */
 static void 
 _diskio_cb_menu_configure(void *data, E_Menu *mn, E_Menu_Item *mi __UNUSED__)
 {
