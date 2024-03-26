@@ -183,7 +183,6 @@ _tclock_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED_
         e_menu_item_callback_set(mi, _tclock_menu_cb_configure, inst);
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-        tclock_config->menu = m;
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, NULL, NULL);
         e_menu_activate_mouse (m,

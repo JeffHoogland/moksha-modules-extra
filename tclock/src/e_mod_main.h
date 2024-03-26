@@ -20,7 +20,6 @@ struct _Config
 {
    const char *mod_dir;
    E_Config_Dialog *config_dialog;
-   E_Menu *menu;
    Eina_List *instances, *items;
 };
 
