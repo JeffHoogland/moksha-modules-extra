@@ -186,7 +186,7 @@ static Evas_Object *
 _gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o;
-   char buf[4096];
+   char buf[PATH_MAX];
    
    o = edje_object_add(evas);
    snprintf(buf, sizeof(buf), "%s/alarm.edj",
@@ -984,7 +984,7 @@ _cb_alarm_snooze_time(void *data)
 EAPI void *
 e_modapi_init(E_Module *m)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    Eina_List *l;
 
    snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
