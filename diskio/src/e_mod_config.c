@@ -21,7 +21,7 @@ e_int_config_diskio_module(E_Container *con, Config_Item *ci)
 {
    E_Config_Dialog *cfd = NULL;
    E_Config_Dialog_View *v = NULL;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    if (e_config_dialog_find("DiskIO", "_e_module_diskio_cfg_dlg")) return NULL;
 

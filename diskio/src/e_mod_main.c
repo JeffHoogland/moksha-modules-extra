@@ -54,7 +54,7 @@ EAPI E_Module_Api e_modapi = {E_MODULE_API_VERSION, "DiskIO"};
 EAPI void *
 e_modapi_init(E_Module *m)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
 
    snprintf(buf, sizeof(buf), "%s/e-module-diskio.edj", m->dir);
 
@@ -158,7 +158,7 @@ static E_Gadcon_Client *
 _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style) 
 {
    Instance *inst = NULL;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    snprintf(buf, sizeof(buf), "%s/e-module-diskio.edj", 
             diskio_conf->module->dir);
@@ -291,7 +291,7 @@ static Evas_Object *
 _gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o = NULL;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    snprintf(buf, sizeof(buf), "%s/e-module-diskio.edj", diskio_conf->module->dir);
 
