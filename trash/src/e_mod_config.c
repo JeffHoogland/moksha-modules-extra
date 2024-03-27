@@ -24,7 +24,7 @@ e_int_config_trash_module(E_Container *con, const char *params __UNUSED__)
 {
    E_Config_Dialog *cfd = NULL;
    E_Config_Dialog_View *v = NULL;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    /* is this config dialog already visible ? */
    if (e_config_dialog_find("Trash", "advanced/trash")) return NULL;

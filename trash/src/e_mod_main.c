@@ -186,7 +186,7 @@ EAPI E_Module_Api e_modapi =
 EAPI void *
 e_modapi_init(E_Module *m)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    
    snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
    bindtextdomain(PACKAGE, buf);
@@ -406,7 +406,7 @@ _trash_cb_menu_empty_ok(void *data __UNUSED__)
 static void
 _trash_cb_menu_show(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    E_Zone *zone;
   
    zone = e_util_zone_current_get (e_manager_current_get ());
