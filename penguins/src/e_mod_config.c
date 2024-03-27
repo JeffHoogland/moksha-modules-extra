@@ -25,7 +25,7 @@ e_int_config_penguins_module(E_Container *con, const char *params)
 {
    E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
-   char buf[4096];
+   char buf[PATH_MAX];
    Population *pop;
 
    pop = penguins_mod->data;

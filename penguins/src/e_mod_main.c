@@ -48,7 +48,7 @@ EAPI void *
 e_modapi_init(E_Module *m)
 {
    Population *pop;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    /* Set up module's message catalogue */
    snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
@@ -122,7 +122,7 @@ _population_init(E_Module *m)
    pop->conf = e_config_domain_load("module.penguins", pop->conf_edd);
    if (!pop->conf)
    {
-      char buf[4096];
+      char buf[PATH_MAX];
 
       pop->conf = E_NEW(Config, 1);
       pop->conf->zoom = 1;
@@ -168,7 +168,7 @@ _population_init(E_Module *m)
    Eina_List *files;
    char *filename;
    char *name;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    snprintf(buf, sizeof(buf), "%s/themes", e_module_dir_get(m));
    files = ecore_file_ls(buf);
