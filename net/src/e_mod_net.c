@@ -11,7 +11,6 @@
 #endif
 
 static void _bytes_to_string(bytes_t bytes, char *string, int size);
-static void _cb_post(void *data, E_Menu *m);
 static void _cb_configure(void *data, E_Menu *m, E_Menu_Item *mi);
 
 #ifdef __FreeBSD__
@@ -149,9 +148,9 @@ _net_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED_
              if (exe) ecore_exe_free(exe);
           }
      }
-   else if ((ev->button == 1) && (!net_cfg->menu))
+   else if (ev->button == 1)
      e_gadcon_popup_toggle_pinned(inst->popup);
-   else if ((ev->button == 3) && (!net_cfg->menu)) 
+   else if (ev->button == 3)
      {
         E_Menu *m;
         E_Menu_Item *mi;
@@ -164,7 +163,6 @@ _net_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED_
         e_menu_item_callback_set(mi, _cb_configure, inst);
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-        e_menu_post_deactivate_callback_set(m, _cb_post, inst);
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y,
                                           NULL, NULL);
@@ -231,15 +229,6 @@ _bytes_to_string(bytes_t bytes, char *string, int size)
      snprintf(string, size, "%lu KB", (bytes / 1024));
    else
      snprintf(string, size, "%lu B", bytes);
-}
-
-static void 
-_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
-{
-   if (!net_cfg->menu) return;
-   e_menu_post_deactivate_callback_set(net_cfg->menu, NULL, NULL);
-   e_object_del(E_OBJECT(net_cfg->menu));
-   net_cfg->menu = NULL;
 }
 
 static void 

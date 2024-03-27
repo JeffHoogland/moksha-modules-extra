@@ -50,12 +50,6 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
    net_cfg->mod = NULL;
 
    if (net_cfg->cfd) e_object_del(E_OBJECT(net_cfg->cfd));
-   if (net_cfg->menu) 
-     {
-        e_menu_post_deactivate_callback_set(net_cfg->menu, NULL, NULL);
-        e_object_del(E_OBJECT(net_cfg->menu));
-        net_cfg->menu = NULL;
-     }
 
    while (net_cfg->items) 
      {
