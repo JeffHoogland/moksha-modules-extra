@@ -33,7 +33,6 @@ static void _trash_dialog_cb_ok(void *data);
 static void _trash_dialog_cb_cancel(void *data);
 
 static void _trash_button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info);
-static void _trash_cb_menu_post(void *data, E_Menu *menu);
 static void _trash_cb_obj_moveresize(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static void _trash_monitor_cb(void *data, Ecore_File_Monitor *em, Ecore_File_Event event, const char *path);
 static void _trash_cb_menu_empty(void *data, E_Menu *m, E_Menu_Item *mi);
@@ -60,7 +59,6 @@ struct _Instance
    E_Gadcon_Client *gcc;
    Evas_Object     *o_trash;
    E_Drop_Handler  *drop_handler;
-   E_Menu          *menu;
 }; 
 
 
@@ -340,7 +338,7 @@ _trash_button_cb_mouse_down(void *data, Evas *e __UNUSED__,
      {
         _trash_cb_menu_show(NULL, NULL, NULL);
      }
-   else if ((ev->button == 3) && (!inst->menu))
+   else if (ev->button == 3)
      {
         E_Zone *zone;
         E_Menu *m;
@@ -367,26 +365,12 @@ _trash_button_cb_mouse_down(void *data, Evas *e __UNUSED__,
         e_menu_item_callback_set(mi, _trash_cb_menu_configure, NULL);
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-        e_menu_post_deactivate_callback_set(m, _trash_cb_menu_post, inst);
-        inst->menu = m;
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, NULL, NULL);
         e_menu_activate_mouse(m, zone, x + ev->output.x, y + ev->output.y,
                               1, 1, E_MENU_POP_DIRECTION_AUTO, ev->timestamp);
         evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
                                  EVAS_BUTTON_NONE, ev->timestamp, NULL);
-     }
-}
-
-static void
-_trash_cb_menu_post(void *data, E_Menu *menu __UNUSED__)
-{
-   Instance *inst = data;
-
-   if (inst && inst->menu)
-     {
-        e_object_del(E_OBJECT(inst->menu));
-        inst->menu = NULL;
      }
 }
 
