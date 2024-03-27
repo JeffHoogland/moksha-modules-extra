@@ -18,7 +18,6 @@ struct _Config
 {
   E_Module      *module;
   Eina_List     *instances;
-  E_Menu        *menu;
   Eina_List     *handlers;
 
   char          *theme_path;

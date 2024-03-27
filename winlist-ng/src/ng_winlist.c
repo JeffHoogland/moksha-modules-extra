@@ -741,7 +741,7 @@ _ngw_winlist_set_label(Ng *ng, Ngw_Item *it)
       right = title + (strlen(title) - (max_len / 2));
 
       strncpy(abbv, left, max_len / 2);
-      strncat(abbv, "...", 3);
+      strncat(abbv, "...", 4);
       strncat(abbv, right, max_len / 2);
 
       it->label =  abbv;
