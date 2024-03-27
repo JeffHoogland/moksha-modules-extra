@@ -50,7 +50,7 @@ EAPI void *
 e_modapi_init (E_Module * m)
 {
    Flame *f;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    /* Set up module's message catalogue */
    snprintf (buf, sizeof (buf), "%s/locale", e_module_dir_get (m));
