@@ -4,7 +4,6 @@
 
 #include <Ecore.h>
 
-#define __UNUSED__
 #define _(S) S
 
 /* actual module specifics */
@@ -33,8 +32,8 @@ static void _share_menu_post_cb(void *data, E_Menu *menu);
 static void _share_menu_share_request_click_cb(Instance *inst, E_Menu *m, E_Menu_Item *mi);
 static void _share_menu_share_item_click_cb(Share_Data *selected_share, E_Menu *m, E_Menu_Item *mi);
 static void _share_open_link_in_browser(const Share_Data *sd);
-static void _share_notify(const Share_Data *sd);
-static void _share_notification_clicked_cb(void *data, unsigned int id);
+//~ static void _share_notify(const Share_Data *sd);
+//~ static void _share_notification_clicked_cb(void *data, unsigned int id);
 static void _free_share_data(Share_Data *sd);
 
 
@@ -116,20 +115,20 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 }
 
 static void
-_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
+_gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
 {
    e_gadcon_client_aspect_set (gcc, 16, 16);
    e_gadcon_client_min_size_set (gcc, 16, 16);
 }
 
 static const char *
-_gc_label (const E_Gadcon_Client_Class *client_class)
+_gc_label (const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return "Share";
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas * evas)
+_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas * evas)
 {
    Evas_Object *o;
    /*
@@ -147,13 +146,14 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas * evas)
 }
 
 static const char *
-_gc_id_new (const E_Gadcon_Client_Class *client_class)
+_gc_id_new (const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return _gadcon_class.name;
 }
 
 static void
-_share_button_cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, Evas_Event_Mouse_Down *ev)
+_share_button_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__,
+                            Evas_Event_Mouse_Down *ev)
 {
     Instance *inst = (Instance*)data;
     Evas_Coord x, y, w, h;
@@ -241,7 +241,7 @@ _share_button_cb_mouse_down(void *data, Evas *evas, Evas_Object *obj, Evas_Event
 }
 
 static Eina_Bool
-_share_x_selection_notify_handler(Instance *instance, int type, void *event)
+_share_x_selection_notify_handler(Instance *instance, int type __UNUSED__, void *event)
 {
    char *icon;
    Ecore_X_Event_Selection_Notify *ev;
@@ -261,34 +261,30 @@ _share_x_selection_notify_handler(Instance *instance, int type, void *event)
         if ((text_data->data.content == ECORE_X_SELECTION_CONTENT_TEXT) &&
             (text_data->text))
           {
-			  
-	char cmd[200];
-	
-	icon="edit-paste";
-	
-   snprintf(cmd, 200, "notify-send --expire-time=2500 --icon=%s  'Content shared!' 'Sourcedrop link is in your clipboard now.'", icon);
-	//~ notify("edit-paste",4000,'Content shared!', 'Sourcedrop link is in your clipboard now.');
-   ecore_init();
-   ecore_exe_run(cmd, NULL);
-   ecore_shutdown();
-   snprintf(cmd, 200,"...");
-			  
-              char buf[20];
-              if (text_data->data.length == 0)  return EINA_TRUE;
+            char cmd[200];
+            icon = "edit-paste";
 
-              sd = E_NEW(Share_Data, 1);
-              sd->inst = instance;
-              //~ snprintf(buf, ((text_data->data.length >= sizeof(buf)) ? (sizeof(buf) - 1) : text_data->data.length), text_data->text);
-              
-              strncpy(buf, text_data->text, 20);
-              
-              asprintf(&sd->name, "%s", buf);
-              asprintf(&sd->content, "%s", text_data->text);
+            snprintf(cmd, 200, "notify-send --expire-time=2500 --icon=%s  'Content shared!' 'Sourcedrop link is in your clipboard now.'", icon);
+            //~ notify("edit-paste",4000,'Content shared!', 'Sourcedrop link is in your clipboard now.');
+            ecore_init();
+            ecore_exe_run(cmd, NULL);
+            ecore_shutdown();
+            snprintf(cmd, 200,"...");
 
-              sourcedrop_share(sd);
+            char buf[20];
+            if (text_data->data.length == 0)  return EINA_TRUE;
+
+            sd = E_NEW(Share_Data, 1);
+            sd->inst = instance;
+            //~ snprintf(buf, ((text_data->data.length >= sizeof(buf)) ? (sizeof(buf) - 1) : text_data->data.length), text_data->text);
+
+            strncpy(buf, text_data->text, 20);
+     
+            asprintf(&sd->name, "%s", buf);
+            asprintf(&sd->content, "%s", text_data->text);
+            sourcedrop_share(sd);
           }
      }
-
 
    return ECORE_CALLBACK_PASS_ON;
 }
@@ -297,72 +293,61 @@ _share_x_selection_notify_handler(Instance *instance, int type, void *event)
 void
 _clipboard_update(const char *text, const Instance *inst)
 {
-  EINA_SAFETY_ON_NULL_RETURN(inst);
-  EINA_SAFETY_ON_NULL_RETURN(text);
+   EINA_SAFETY_ON_NULL_RETURN(inst);
+   EINA_SAFETY_ON_NULL_RETURN(text);
 
-  ecore_x_selection_clipboard_set(inst->win, text, strlen(text) + 1);
+   ecore_x_selection_clipboard_set(inst->win, text, strlen(text) + 1);
    //~ e_util_dialog_internal ("Pišta",text);
 }
 
 void e_share_upload_completed(Share_Data *sd)
 {
-    if (!sd) return;
-    ((Instance*)sd->inst)->shares = eina_list_append(((Instance*)sd->inst)->shares, sd);
-    //~ _share_notify(sd);
-    _clipboard_update(sd->url, sd->inst);
+   if (!sd) return;
    
-}
-
-
-static void
-_share_menu_share_request_click_cb(Instance *inst, E_Menu *m, E_Menu_Item *mi)
-{
-  
- 
-    if (!inst) 
-   	    return;   	
-    
-    ecore_x_selection_clipboard_request(inst->win, ECORE_X_SELECTION_TARGET_UTF8_STRING);
-   
+   ((Instance*)sd->inst)->shares = eina_list_append(((Instance*)sd->inst)->shares, sd);
+   //~ _share_notify(sd);
+   _clipboard_update(sd->url, sd->inst);
 }
 
 static void
-_share_menu_share_item_click_cb(Share_Data *selected_share, E_Menu *m, E_Menu_Item *mi)
+_share_menu_share_request_click_cb(Instance *inst, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
-	 
-    _share_open_link_in_browser(selected_share);
+   if (!inst) return;
+
+   ecore_x_selection_clipboard_request(inst->win, ECORE_X_SELECTION_TARGET_UTF8_STRING);
 }
 
 static void
-_share_notify(const Share_Data *sd)
+_share_menu_share_item_click_cb(Share_Data *selected_share, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
-
-//~ this does not work under Moksha       
-    
+   _share_open_link_in_browser(selected_share);
 }
+
+/*static void
+_share_notify(const Share_Data *sd __UNUSED__)
+{
+  this does not work under Moksha 
+} */
 
 static void
 _share_open_link_in_browser(const Share_Data *sd)
 {
-    char buf[256];
-    
-    if (!sd)
-        return;
-    
-     
-    snprintf(buf, (sizeof(buf) - 1), "xdg-open %s", sd->url);
-    e_exec(e_gadcon_client_zone_get(((Instance*)sd->inst)->gcc), NULL, buf, NULL, NULL);
+   char buf[256];
+
+   if (!sd) return;
+
+   snprintf(buf, (sizeof(buf) - 1), "xdg-open %s", sd->url);
+   e_exec(e_gadcon_client_zone_get(((Instance*)sd->inst)->gcc), NULL, buf, NULL, NULL);
 }
 
- static void
-_share_notification_clicked_cb(void *data, unsigned int id)
-{ 
-    //~ _share_open_link_in_browser((Share_Data*)data);
-    
-}
+/* static void
+_share_notification_clicked_cb(void *data __UNUSED__, unsigned int id __UNUSED__)
+{
+   _share_open_link_in_browser((Share_Data*)data);
+} */
 
 static void
-_share_menu_post_cb(void *data, E_Menu *menu)
+_share_menu_post_cb(void *data, E_Menu *menu __UNUSED__)
 {
    Instance *inst = data;
 
@@ -395,7 +380,7 @@ e_modapi_init (E_Module * m)
 }
 
 EAPI int
-e_modapi_shutdown (E_Module * m)
+e_modapi_shutdown (E_Module * m __UNUSED__)
 {
   sourcedrop_shutdown();
   share_module = NULL;
@@ -404,9 +389,7 @@ e_modapi_shutdown (E_Module * m)
 }
 
 EAPI int
-e_modapi_save(E_Module * m)
+e_modapi_save(E_Module * m __UNUSED__)
 {
   return 1;
 }
-
-

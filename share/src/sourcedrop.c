@@ -59,7 +59,7 @@ const char *json_encode(const char *title, const char *content)
 }
 
 static Eina_Bool
-__upload_completed_cb(void *data, int type, Ecore_Con_Event_Url_Complete *ev)
+__upload_completed_cb(void *data __UNUSED__, int type __UNUSED__, Ecore_Con_Event_Url_Complete *ev)
 {
     char buf[BUFFER_SIZE_MAX];
     const Eina_List *headers = NULL, *it;
