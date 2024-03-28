@@ -8,7 +8,6 @@
 #define PHOTO_MENU_H_INCLUDED
 
 int  photo_menu_show(Photo_Item *pi);
-void photo_menu_hide(Photo_Item *pi);
 
 #endif
 #endif

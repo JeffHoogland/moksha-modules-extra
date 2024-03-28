@@ -143,8 +143,6 @@ void photo_item_del(Photo_Item *pi)
    photo_config_item_free(pi->config);
    if (pi->config_dialog)
      photo_config_dialog_item_hide(pi);
-   if (pi->menu)
-     photo_menu_hide(pi);
 
    if (pi->timer)
      E_FN_DEL(ecore_timer_del,pi->timer);
@@ -509,7 +507,7 @@ int photo_item_action_menu(Photo_Item *pi, Evas_Event_Mouse_Down *ev)
 {
    int cx, cy, cw, ch;
 
-   if (pi->menu) return 0;
+   if (pi->gcc->menu) return 0;
 
    if (!photo_menu_show(pi))
      return 0;
@@ -518,7 +516,7 @@ int photo_item_action_menu(Photo_Item *pi, Evas_Event_Mouse_Down *ev)
      {
         e_gadcon_canvas_zone_geometry_get(pi->gcc->gadcon,
                                           &cx, &cy, &cw, &ch);
-        e_menu_activate_mouse(pi->menu,
+        e_menu_activate_mouse(pi->gcc->menu,
                               e_util_zone_current_get(e_manager_current_get()),
                               cx + ev->output.x, cy + ev->output.y, 1, 1,
                               E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
@@ -530,7 +528,7 @@ int photo_item_action_menu(Photo_Item *pi, Evas_Event_Mouse_Down *ev)
         E_Manager *man;
         man = e_manager_current_get();
         ecore_x_pointer_xy_get(man->root, &cx, &cy);
-        e_menu_activate(pi->menu,
+        e_menu_activate(pi->gcc->menu,
                         e_util_zone_current_get(e_manager_current_get()),
                         cx, cy, 1, 1,
                         E_MENU_POP_DIRECTION_DOWN);
@@ -685,8 +683,6 @@ void _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__,
                          photo->config->action_mouse_middle);
         break;
      case 3:
-        if (pi->menu)
-          break;
         photo_item_action_menu(pi, ev);
         break;
      }

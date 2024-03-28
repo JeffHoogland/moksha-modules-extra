@@ -1,6 +1,5 @@
 #include "Photo.h"
 
-static void _cb_deactivate_post(void *data, E_Menu *m __UNUSED__);
 static void _cb_picture_info(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
 static void _cb_picture_next(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
 static void _cb_picture_prev(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
@@ -43,8 +42,6 @@ int photo_menu_show(Photo_Item *pi)
    e_menu_item_callback_set(mi, _cb_configure_item, pi);
 
    m = e_gadcon_client_util_menu_items_append(pi->gcc, m, 0);
-   e_menu_post_deactivate_callback_set(m, _cb_deactivate_post, pi);
-   pi->menu = m;
 
    mi = e_menu_item_new_relative(m, NULL);
    if (pi->config->timer_active)
@@ -95,31 +92,10 @@ int photo_menu_show(Photo_Item *pi)
    return 1;
 }
 
-void photo_menu_hide(Photo_Item *pi)
-{
-   e_menu_post_deactivate_callback_set(pi->menu, NULL, NULL);
-   _cb_deactivate_post(pi, pi->menu);
-   pi->menu = NULL;
-}
-
-
 /*
  * Private functions
  *
  */
-
-static void
-_cb_deactivate_post(void *data, E_Menu *m __UNUSED__)
-{
-   Photo_Item *pi;
-
-   pi = data;
-   if (!pi) return;
-   if (!pi->menu) return;
-
-   e_object_del(E_OBJECT(pi->menu));
-   pi->menu = NULL;
-}
 
 static void
 _cb_picture_info(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
