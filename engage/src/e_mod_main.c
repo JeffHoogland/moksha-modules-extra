@@ -49,7 +49,6 @@ ngi_new(Config_Item *cfg)
    Ng *ng;
    E_Zone *zone;
    Config_Box *cfg_box;
-   E_Shelf *es;
    Eina_List *l;
    int alpha;
 
@@ -281,7 +280,7 @@ static Ngi_Win *
 _ngi_win_new(Ng *ng)
 {
    Ngi_Win *win;
-   Evas *evas;
+   //~ Evas *evas;
    
    win = E_NEW(Ngi_Win, 1);
    if (!win) return NULL;
@@ -348,7 +347,7 @@ _ngi_win_free(Ngi_Win *win)
 }
 
 static Eina_Bool
-_ngi_cb_container_resize(void *data, int ev_type, void *event_info)
+_ngi_cb_container_resize(void *data __UNUSED__, int ev_type __UNUSED__, void *event_info __UNUSED__)
 {
    Config_Item *ci;
    E_Zone *zone;
@@ -583,7 +582,7 @@ ngi_mouse_in(Ng *ng)
 }
 
 static Eina_Bool
-_ngi_win_cb_mouse_in(void *data, int type, void *event)
+_ngi_win_cb_mouse_in(void *data, int type __UNUSED__, void *event)
 {
    Ecore_X_Event_Mouse_In *ev = event;
    Ng *ng = data;
@@ -619,7 +618,7 @@ ngi_mouse_out(Ng *ng)
 }
 
 static Eina_Bool
-_ngi_win_cb_mouse_out(void *data, int type, void *event)
+_ngi_win_cb_mouse_out(void *data, int type __UNUSED__, void *event)
 {
    Ecore_X_Event_Mouse_Out *ev = event;
    Ng *ng = data;
@@ -664,7 +663,7 @@ _ngi_menu_wait_timer_cb(void *data)
 }
 
 static Eina_Bool
-_ngi_win_cb_mouse_down(void *data, int type, void *event)
+_ngi_win_cb_mouse_down(void *data, int type __UNUSED__, void *event)
 {
    Ecore_Event_Mouse_Button *ev = event;
    Ng *ng = data;
@@ -712,7 +711,7 @@ _ngi_win_cb_mouse_down(void *data, int type, void *event)
 }
 
 static Eina_Bool
-_ngi_win_cb_mouse_up(void *data, int type, void *event)
+_ngi_win_cb_mouse_up(void *data, int type __UNUSED__, void *event)
 {
    Ecore_Event_Mouse_Button *ev = event;
    Ng *ng = data;
@@ -736,7 +735,7 @@ _ngi_win_cb_mouse_up(void *data, int type, void *event)
 }
 
 static Eina_Bool
-_ngi_win_cb_mouse_wheel(void *data, int type, void *event)
+_ngi_win_cb_mouse_wheel(void *data, int type __UNUSED__, void *event)
 {
    Ecore_Event_Mouse_Wheel *ev = event;
    Ng *ng = data;
@@ -751,7 +750,7 @@ _ngi_win_cb_mouse_wheel(void *data, int type, void *event)
 }
 
 static Eina_Bool
-_ngi_win_cb_mouse_move(void *data, int type, void *event)
+_ngi_win_cb_mouse_move(void *data, int type __UNUSED__, void *event)
 {
    Ecore_Event_Mouse_Move *ev = event;
    Ng *ng = data;
@@ -1160,7 +1159,7 @@ ngi_reposition(Ng *ng)
    Ngi_Box *box;
    double pos;
    Eina_List *l, *ll;
-   Ngi_Item *it;
+   Ngi_Item *nit;
    int size = ng->size;
    int cnt = 0, end;
    int width = ng->horizontal ? ng->win->popup->w : ng->win->popup->h;
@@ -1173,10 +1172,10 @@ ngi_reposition(Ng *ng)
      {
         box->w = 0;
 
-        EINA_LIST_FOREACH (box->items, ll, it)
+        EINA_LIST_FOREACH (box->items, ll, nit)
           {
-        if (it->scale == 0.0) continue;
-        box->w += (size * it->scale) + ng->opt.item_spacing;
+        if (nit->scale == 0.0) continue;
+        box->w += (size * nit->scale) + ng->opt.item_spacing;
           }
 
         ng->w += box->w;
@@ -1207,14 +1206,14 @@ ngi_reposition(Ng *ng)
       if (cnt++ > 0)
          pos += (ng->opt.separator_width);
 
-      EINA_LIST_FOREACH (box->items, ll, it)
+      EINA_LIST_FOREACH (box->items, ll, nit)
       {
-         if (it->scale == 0.0)
+         if (nit->scale == 0.0)
             continue;
 
-         it->pos = pos;
+         nit->pos = pos;
 
-         pos += it->scale * size + ng->opt.item_spacing;
+         pos += nit->scale * size + ng->opt.item_spacing;
       }
    }
 
@@ -1337,7 +1336,7 @@ _ngi_redraw(Ng *ng)
 
    double pos, pos2;
    int end1, end2, size_spacing, hide_step;
-   int bw, bh, bx, by;
+   int bw = 0, bh = 0, bx = 0, by = 0;
 
    Config_Item *cfg = ng->cfg;
 
@@ -1488,11 +1487,11 @@ _ngi_redraw(Ng *ng)
 }
 
 void
-ngi_bar_lock(Ng *ng, int show)
+ngi_bar_lock(Ng *ng, int showed)
 {
    if (!ng) return;
 
-   if (show)
+   if (showed)
      {
    ng->show_bar++;
      }
@@ -1526,7 +1525,7 @@ _ngi_win_border_intersects(Ng *ng)
    Eina_List *l;
    E_Border *bd;
    E_Desk *desk;
-   int x, y, w, h, size;
+   int x = 0, y = 0, w = 0, h = 0, size;
 
    desk = e_desk_current_get(ng->zone);
    size = ng->size + ng->opt.bg_offset + ng->opt.edge_offset;
@@ -1628,7 +1627,7 @@ _ngi_win_autohide_check(Ng *ng, E_Desk *desk)
 }
 
 static Eina_Bool
-_ngi_win_cb_desk_show(void *data, int type, void *event)
+_ngi_win_cb_desk_show(void *data, int type __UNUSED__, void *event)
 {
    E_Event_Desk_Show *ev = event;
    Ng *ng = data;
@@ -1639,7 +1638,7 @@ _ngi_win_cb_desk_show(void *data, int type, void *event)
 }
 
 static Eina_Bool
-_ngi_win_cb_border_event(void *data, int type, void *event)
+_ngi_win_cb_border_event(void *data, int type __UNUSED__, void *event)
 {
    E_Event_Border_Property *ev = event;
    Ng *ng = data;
@@ -1659,7 +1658,7 @@ _ngi_win_cb_border_event(void *data, int type, void *event)
 EAPI E_Module_Api e_modapi = { E_MODULE_API_VERSION, "engage" };
 
 static Eina_Bool
-_ngi_init_timer_cb(void *data)
+_ngi_init_timer_cb(void *data __UNUSED__)
 {
    Eina_List *l;
    Config_Item *ci;
@@ -1689,23 +1688,23 @@ _ngi_init_timer_cb(void *data)
 }
 
 /* menu item callback(s) */
-static void
-_e_mod_run_cb(void *data, E_Menu *m, E_Menu_Item *mi)
-{
-   ngi_instances_config(e_util_zone_current_get(e_manager_current_get())->container, NULL);
-}
+//~ static void
+//~ _e_mod_run_cb(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
+//~ {
+   //~ ngi_instances_config(e_util_zone_current_get(e_manager_current_get())->container, NULL);
+//~ }
 
 /* menu item add hook */
-static void
-_e_mod_menu_add(void *data, E_Menu *m)
-{
-   E_Menu_Item *mi;
+//~ static void
+//~ _e_mod_menu_add(void *data __UNUSED__, E_Menu *m)
+//~ {
+   //~ E_Menu_Item *mi;
 
-   mi = e_menu_item_new(m);
-   e_menu_item_label_set(mi, D_("Engage"));
-   e_util_menu_item_theme_icon_set(mi, "preferences-desktop-shelf");
-   e_menu_item_callback_set(mi, _e_mod_run_cb, NULL);
-}
+   //~ mi = e_menu_item_new(m);
+   //~ e_menu_item_label_set(mi, D_("Engage"));
+   //~ e_util_menu_item_theme_icon_set(mi, "preferences-desktop-shelf");
+   //~ e_menu_item_callback_set(mi, _e_mod_run_cb, NULL);
+//~ }
 
 static void
 _ngi_config_free()
@@ -1922,7 +1921,7 @@ e_modapi_init(E_Module *m)
 }
 
 EAPI int
-e_modapi_shutdown(E_Module *m)
+e_modapi_shutdown(E_Module *m __UNUSED__)
 {
    Ecore_Event_Handler *h;
    Ng *ng;
@@ -1960,7 +1959,7 @@ e_modapi_shutdown(E_Module *m)
 }
 
 EAPI int
-e_modapi_save(E_Module *m)
+e_modapi_save(E_Module *m __UNUSED__)
 {
    e_config_domain_save("module.engage", ngi_conf_edd, ngi_config);
 

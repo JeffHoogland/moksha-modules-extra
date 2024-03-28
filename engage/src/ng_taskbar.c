@@ -40,7 +40,7 @@ ngi_taskbar_new(Ng *ng, Config_Box *cfg)
    Ngi_Box *box = ngi_box_new(ng);
    E_Border *bd;
    E_Border_List *bl;
-   Ecore_Event_Handler *h;
+   //~ Ecore_Event_Handler *h;
 
    if (!box) return;
 
@@ -135,7 +135,7 @@ _border_find(Ngi_Box *box, E_Border *bd)
 /* *************************  DND  CALLBACKS  ************************** */
 
 static void
-_cb_drop_enter(void *data, const char *type, void *event_info)
+_cb_drop_enter(void *data, const char *type __UNUSED__, void *event_info __UNUSED__)
 {
    E_Event_Dnd_Enter *ev = (E_Event_Dnd_Enter *)event_info;
    Ngi_Box *box = (Ngi_Box *)data;
@@ -158,7 +158,7 @@ _cb_drop_enter(void *data, const char *type, void *event_info)
 }
 
 static void
-_cb_drop_leave(void *data, const char *type, void *event_info)
+_cb_drop_leave(void *data, const char *type __UNUSED__, void *event_info __UNUSED__)
 {
    Ngi_Box *box = (Ngi_Box *)data;
    Ng *ng = box->ng;
@@ -174,7 +174,7 @@ _cb_drop_leave(void *data, const char *type, void *event_info)
 }
 
 static void
-_cb_drop_move(void *data, const char *type, void *event_info)
+_cb_drop_move(void *data, const char *type __UNUSED__, void *event_info)
 {
    E_Event_Dnd_Move *ev = (E_Event_Dnd_Move *)event_info;
    Ngi_Box *box = (Ngi_Box *)data;
@@ -206,7 +206,7 @@ _cb_drop_move(void *data, const char *type, void *event_info)
 }
 
 static void
-_cb_drop_end(void *data, const char *type, void *event_info)
+_cb_drop_end(void *data, const char *type __UNUSED__, void *event_info __UNUSED__)
 {
    Ngi_Box *box = (Ngi_Box *)data;
    Ng *ng = box->ng;
@@ -361,7 +361,7 @@ _cb_border_event(void *data, int type, void *event)
 }
 
 static Eina_Bool
-_cb_desk_show(void *data, int type, void *event)
+_cb_desk_show(void *data, int type __UNUSED__, void *event)
 {
    E_Event_Desk_Show *ev = event;
    Ngi_Box *box = data;
@@ -784,7 +784,8 @@ _item_cb_mouse_up(Ngi_Item *item, Ecore_Event_Mouse_Button *ev)
 
 
 static void
-_item_cb_drag_del(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_item_cb_drag_del(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__,
+                  void *event_info __UNUSED__)
 {
    Ng *ng = data;
 

@@ -99,7 +99,7 @@ ngi_border_menu_show(Ngi_Box *box, E_Border *bd, Evas_Coord x, Evas_Coord y, int
 }
 
 static void
-_ng_border_cb_border_menu_end(void *data, E_Menu *m)
+_ng_border_cb_border_menu_end(void *data __UNUSED__, E_Menu *m)
 {
    E_Border *bd;
 
@@ -119,7 +119,7 @@ _ng_border_cb_border_menu_end(void *data, E_Menu *m)
 }
 
 static void
-_ng_border_menu_cb_close(void *data, E_Menu *m, E_Menu_Item *mi)
+_ng_border_menu_cb_close(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    E_Border *bd = (E_Border *)data;
    if (!bd->lock_close)
@@ -127,7 +127,7 @@ _ng_border_menu_cb_close(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_ng_border_menu_cb_iconify(void *data, E_Menu *m, E_Menu_Item *mi)
+_ng_border_menu_cb_iconify(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    E_Border *bd = (E_Border *)data;
    if (!bd->lock_user_iconify)
@@ -140,7 +140,7 @@ _ng_border_menu_cb_iconify(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_ng_border_menu_cb_maximize(void *data, E_Menu *m, E_Menu_Item *mi)
+_ng_border_menu_cb_maximize(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    E_Border *bd = (E_Border *)data;
    if (!bd->lock_user_maximize)
@@ -149,14 +149,14 @@ _ng_border_menu_cb_maximize(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_ng_border_menu_cb_unmaximize(void *data, E_Menu *m, E_Menu_Item *mi)
+_ng_border_menu_cb_unmaximize(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    E_Border *bd = (E_Border *)data;
    e_border_unmaximize(bd, E_MAXIMIZE_BOTH);
 }
 
 static void
-_ng_border_menu_cb_fullscreen(void *data, E_Menu *m, E_Menu_Item *mi)
+_ng_border_menu_cb_fullscreen(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    E_Border *bd = (E_Border *)data;
    int toggle;

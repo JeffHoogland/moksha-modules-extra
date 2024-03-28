@@ -144,7 +144,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    cfdata->cfg->config_dialog = NULL;
 
@@ -155,7 +155,7 @@ _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
+_basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    E_Radio_Group *rg;
    Evas_Object *ol, *of, *ob, *ot, *otb;
@@ -434,7 +434,7 @@ _update_boxes(Ng *ng)
 /***************************************************************************************/
 
 static void
-_cb_box_add_taskbar(void *data, void *data2)
+_cb_box_add_taskbar(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    Config_Box *cfg_box;
@@ -455,7 +455,7 @@ _cb_box_add_taskbar(void *data, void *data2)
 }
 
 static void
-_cb_box_add_launcher(void *data, void *data2)
+_cb_box_add_launcher(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    Config_Box *cfg_box;
@@ -471,7 +471,7 @@ _cb_box_add_launcher(void *data, void *data2)
 }
 
 static void
-_cb_box_add_gadcon(void *data, void *data2)
+_cb_box_add_gadcon(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    Config_Box *cfg_box;
@@ -487,7 +487,7 @@ _cb_box_add_gadcon(void *data, void *data2)
 }
 
 static void
-_cb_box_del(void *data, void *data2)
+_cb_box_del(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    int selected = e_widget_ilist_selected_get(cfdata->ilist);
@@ -524,7 +524,7 @@ _cb_box_del(void *data, void *data2)
 }
 
 static Evas_Object *
-_basic_create_box_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
+_basic_create_box_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o, *ol, *of, *ob, *ot;
    E_Radio_Group *rg;
@@ -590,7 +590,7 @@ _basic_create_box_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data
 }
 
 static int
-_basic_apply_box_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
+_basic_apply_box_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    eina_stringshare_replace(&cfdata->cfg_box->launcher_app_dir, cfdata->app_dir);
 
@@ -606,17 +606,17 @@ _create_box_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_box_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
+_free_box_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    eina_stringshare_del(cfdata->app_dir);
 }
 
 static void
-_cb_box_config(void *data, void *data2)
+_cb_box_config(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
 
-   E_Config_Dialog *cfd;
+   //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
    char buf[4096];
 
@@ -648,7 +648,7 @@ _cb_box_config(void *data, void *data2)
         v->advanced.create_widgets = NULL;
 
         snprintf(buf, sizeof(buf), "%s/e-module-ng.edj", e_module_dir_get(ngi_config->module));
-        cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+        e_config_dialog_new(e_container_current_get(e_manager_current_get()),
                                   D_("Engage Bar Configuration"),
                                   "e", "_e_mod_ngi_config_dialog_add_box", buf, 0, v, cfdata);
      }
@@ -674,7 +674,7 @@ _create_data2(E_Config_Dialog *cfd)
 void
 ngi_configure_box(Ngi_Box *box)
 {
-   E_Config_Dialog *cfd;
+   //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
    char buf[4096];
 
@@ -688,13 +688,13 @@ ngi_configure_box(Ngi_Box *box)
    v->advanced.create_widgets = NULL;
 
    snprintf(buf, sizeof(buf), "%s/e-module-ng.edj", e_module_dir_get(ngi_config->module));
-   cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+   e_config_dialog_new(e_container_current_get(e_manager_current_get()),
                              D_("Engage Bar Configuration"),
                              "e", "_e_mod_ngi_config_dialog_add_box", buf, 0, v, box);
 }
 
 static void
-_cb_box_up(void *data, void *data2)
+_cb_box_up(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    int selected = e_widget_ilist_selected_get(cfdata->ilist);
@@ -722,7 +722,7 @@ _cb_box_up(void *data, void *data2)
 }
 
 static void
-_cb_box_down(void *data, void *data2)
+_cb_box_down(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    int selected = e_widget_ilist_selected_get(cfdata->ilist);
@@ -791,7 +791,7 @@ _load_box_tlist(E_Config_Dialog_Data *cfdata)
 }
 
 static void
-_cb_add(void *data, void *data2)
+_cb_add(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    e_entry_dialog_show(D_("Create new source"), "enlightenment/e",
@@ -800,7 +800,7 @@ _cb_add(void *data, void *data2)
 }
 
 static void
-_cb_del(void *data, void *data2)
+_cb_del(void *data, void *data2 __UNUSED__)
 {
    char buf[4096];
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
@@ -814,7 +814,7 @@ _cb_del(void *data, void *data2)
 }
 
 static void
-_cb_config(void *data, void *data2)
+_cb_config(void *data, void *data2 __UNUSED__)
 {
    char path[4096];
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
@@ -908,7 +908,7 @@ _load_ilist(E_Config_Dialog_Data *cfdata)
 }
 
 static void
-_cb_slider_change(void *data, Evas_Object *obj)
+_cb_slider_change(void *data, Evas_Object *obj __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    Ng *ng = cfdata->cfg->ng;

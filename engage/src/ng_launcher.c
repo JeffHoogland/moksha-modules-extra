@@ -106,7 +106,7 @@ _box_fill(Ngi_Box *box)
 }
 
 static Eina_Bool
-_cb_icons_update(void *data, int type, void *event)
+_cb_icons_update(void *data, int type __UNUSED__, void *event __UNUSED__)
 {
    Ngi_Box *box = (Ngi_Box *)data;
    Eina_List *l;
@@ -119,7 +119,7 @@ _cb_icons_update(void *data, int type, void *event)
 }
 
 static void
-_app_change_cb(void *data, E_Order *eo)
+_app_change_cb(void *data, E_Order *eo __UNUSED__)
 {
    Ngi_Box *box = (Ngi_Box *)data;
 
@@ -151,7 +151,7 @@ static void
 _drop_handle_move(Ngi_Box *box, int x, int y)
 {
    Ngi_Item *item;
-   Ngi_Item_Launcher *it, *it2;
+   Ngi_Item_Launcher *it, *it2 = NULL;
    Eina_List *l;
 
    if (box->ng->horizontal)
@@ -218,7 +218,7 @@ _cb_drop_move(void *data, const char *type, void *event_info)
 }
 
 static void
-_cb_drop_leave(void *data, const char *type, void *event_info)
+_cb_drop_leave(void *data, const char *type, void *event_info __UNUSED__)
 {
    Ngi_Box *box = (Ngi_Box *)data;
 
@@ -399,7 +399,8 @@ _item_fill(Ngi_Item_Launcher *it)
 }
 
 static void
-_cb_drag_del(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_cb_drag_del(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__,
+             void *event_info __UNUSED__)
 {
    Ngi_Box *box = data;
 
@@ -408,7 +409,7 @@ _cb_drag_del(void *data, Evas *e, Evas_Object *obj, void *event_info)
 }
 
 static void
-_cb_drag_finished(E_Drag *d, int dropped)
+_cb_drag_finished(E_Drag *d, int dropped __UNUSED__)
 {
    efreet_desktop_unref((Efreet_Desktop*)d->data);
 }
@@ -460,7 +461,7 @@ _item_cb_drag_start(Ngi_Item *item)
 }
 
 static void
-_menu_cb_lock_dnd(void *data, E_Menu *m, E_Menu_Item *mi)
+_menu_cb_lock_dnd(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi)
 {
    Ngi_Box *box = (Ngi_Box *)data;
 
@@ -468,7 +469,7 @@ _menu_cb_lock_dnd(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_menu_cb_edit_icon(void *data, E_Menu *m, E_Menu_Item *mi)
+_menu_cb_edit_icon(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Ngi_Item_Launcher *it = data;
 
@@ -476,7 +477,7 @@ _menu_cb_edit_icon(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_menu_cb_configure_bar(void *data, E_Menu *m, E_Menu_Item *mi)
+_menu_cb_configure_bar(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Ng *ng = (Ng *)data;
 
@@ -484,7 +485,7 @@ _menu_cb_configure_bar(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_menu_cb_configure_launcher(void *data, E_Menu *m, E_Menu_Item *mi)
+_menu_cb_configure_launcher(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Ngi_Box *box = (Ngi_Box *)data;
    char path[4096];

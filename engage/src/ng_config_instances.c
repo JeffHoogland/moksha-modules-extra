@@ -69,7 +69,7 @@ ngi_instances_config(E_Container *con, const char *params)
 }
 
 static void *
-_create_data(E_Config_Dialog *cfd)
+_create_data(E_Config_Dialog *cfd __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
 
@@ -78,7 +78,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    ngi_config->cfd = NULL;
    E_FREE(cfdata);
@@ -125,7 +125,7 @@ _ilist_fill(E_Config_Dialog_Data *cfdata)
    Eina_List *l;
    int n = -1;
    char buf[256];
-   Ng *ng;
+   //~ Ng *ng;
    Config_Item *ci;
    Evas_Object *ob;
    const char *label;
@@ -153,7 +153,7 @@ _ilist_fill(E_Config_Dialog_Data *cfdata)
       if (!ci)
          continue;
 
-      ng = ci->ng;
+      //~ ng = ci->ng;
 
       /* FIXME*/
       /*if(ci->launcher)
@@ -223,11 +223,11 @@ _ilist_cb_selected(void *data)
 }
 
 static void
-_cb_add(void *data, void *data2)
+_cb_add(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    Config_Item *cfg;
-   Config_Box *cfg_box;
+   //~ Config_Box *cfg_box;
    E_Container *con;
    E_Zone *zone;
 
@@ -245,7 +245,7 @@ _cb_add(void *data, void *data2)
 }
 
 static void
-_cb_delete(void *data, void *data2)
+_cb_delete(void *data, void *data2 __UNUSED__)
 {
    Ngi_Del_Confirm_Data *d;
    char buf[4096];
@@ -301,7 +301,7 @@ _cb_dialog_destroy(void *data)
 }
 
 static void
-_cb_config(void *data, void *data2)
+_cb_config(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    Config_Item *ci;

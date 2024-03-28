@@ -65,22 +65,22 @@ _ngi_gadcon_name_new()
 }
 
 static void
-_ngi_gadcon_item_cb_mouse_down(Ngi_Item *it, Ecore_Event_Mouse_Button *ev)
+_ngi_gadcon_item_cb_mouse_down(Ngi_Item *it __UNUSED__, Ecore_Event_Mouse_Button *ev __UNUSED__)
 {
 }
 
 static void
-_ngi_gadcon_item_cb_mouse_up(Ngi_Item *it, Ecore_Event_Mouse_Button *ev)
+_ngi_gadcon_item_cb_mouse_up(Ngi_Item *it __UNUSED__, Ecore_Event_Mouse_Button *ev __UNUSED__)
 {
 }
 
 static void
-_ngi_gadcon_item_cb_mouse_in(Ngi_Item *it)
+_ngi_gadcon_item_cb_mouse_in(Ngi_Item *it __UNUSED__)
 {
 }
 
 static void
-_ngi_gadcon_item_cb_mouse_out(Ngi_Item *it)
+_ngi_gadcon_item_cb_mouse_out(Ngi_Item *it __UNUSED__)
 {
 }
 
@@ -202,27 +202,30 @@ ngi_gadcon_remove(Ngi_Box *box)
 }
 
 static void
-_ngi_gadcon_cb_gadcon_min_size_request(void *data, E_Gadcon *gc, Evas_Coord w, Evas_Coord h)
+_ngi_gadcon_cb_gadcon_min_size_request(void *data __UNUSED__, E_Gadcon *gc __UNUSED__,
+                                       Evas_Coord w __UNUSED__, Evas_Coord h __UNUSED__)
 {
-   Ngi_Item *it;
+   //~ Ngi_Item *it;
 
-   it = data;
+   //~ it = data;
 
    return;
 }
 
 static void
-_ngi_gadcon_cb_gadcon_size_request(void *data, E_Gadcon *gc, Evas_Coord w, Evas_Coord h)
+_ngi_gadcon_cb_gadcon_size_request(void *data __UNUSED__, E_Gadcon *gc __UNUSED__,
+                                   Evas_Coord w __UNUSED__, Evas_Coord h __UNUSED__)
 {
-   Ngi_Item *it;
+   //~ Ngi_Item *it;
 
-   it = data;
+   //~ it = data;
 
    return;
 }
 
 static Evas_Object *
-_ngi_gadcon_cb_gadcon_frame_request(void *data, E_Gadcon_Client *gcc, const char *style)
+_ngi_gadcon_cb_gadcon_frame_request(void *data __UNUSED__, E_Gadcon_Client *gcc __UNUSED__,
+                                    const char *style __UNUSED__)
 {
    /* FIXME: provide an inset look edje thing */
    return NULL;
@@ -291,7 +294,7 @@ _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
+_basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o = NULL, *of = NULL;
    Evas_Object *ow = NULL;
@@ -338,7 +341,7 @@ _basic_create(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
 }
 
 static Eina_Bool
-_cb_mod_update(void *data, int type, void *event)
+_cb_mod_update(void *data, int type, void *event __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = NULL;
 
@@ -354,7 +357,7 @@ _cb_mod_update(void *data, int type, void *event)
 }
 
 static void
-_avail_list_cb_change(void *data, Evas_Object *obj)
+_avail_list_cb_change(void *data, Evas_Object *obj __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = NULL;
    const char *name;
@@ -378,7 +381,7 @@ _avail_list_cb_change(void *data, Evas_Object *obj)
 }
 
 static void
-_sel_list_cb_change(void *data, Evas_Object *obj)
+_sel_list_cb_change(void *data, Evas_Object *obj __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = NULL;
    const char *name;
@@ -516,7 +519,7 @@ _load_sel_gadgets(void *data)
 }
 
 static void
-_cb_add(void *data, void *data2)
+_cb_add(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = NULL;
    Eina_List *l, *ll, *al;
@@ -584,7 +587,7 @@ _cb_add(void *data, void *data2)
 }
 
 static void
-_cb_del(void *data, void *data2)
+_cb_del(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata = NULL;
    Eina_List *l = NULL, *g = NULL, *sl = NULL;
