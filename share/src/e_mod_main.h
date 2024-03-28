@@ -1,6 +1,10 @@
 #ifndef E_MOD_MAIN_H
 #define E_MOD_MAIN_H
 
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif
+
 #include <e.h>
 
 EAPI extern E_Module_Api e_modapi;
