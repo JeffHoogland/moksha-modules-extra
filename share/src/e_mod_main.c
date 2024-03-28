@@ -11,7 +11,6 @@ typedef struct _Instance Instance;
 struct _Instance
 {
    E_Gadcon_Client *gcc;
-   E_Menu *menu;
    Ecore_X_Window win;
    Evas_Object *o_button;
    Eina_List *handlers;
@@ -100,13 +99,6 @@ _gc_shutdown(E_Gadcon_Client *gcc)
    E_FREE_LIST(inst->handlers, ecore_event_handler_del);
    inst->handlers = NULL;
 
-   if (inst->menu)
-     {
-        e_menu_post_deactivate_callback_set(inst->menu, NULL, NULL);
-        e_object_del(E_OBJECT(inst->menu));
-        inst->menu = NULL;
-     }
-
    E_FREE_LIST(inst->shares, _free_share_data);
    inst->shares = NULL;
 
@@ -159,13 +151,14 @@ _share_button_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj 
     Evas_Coord x, y, w, h;
     int cx, cy;
     int dir;
+    E_Menu *m;
     E_Menu_Item *mi;
     Eina_List *it;
     Share_Data *share;
 
     if (!inst) return;
 
-    if ((ev->button == 1) && (!inst->menu))
+    if (ev->button == 1)
     {
         /* Coordinates and sizing */
         evas_object_geometry_get(inst->o_button, &x, &y, &w, &h);
@@ -174,23 +167,23 @@ _share_button_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj 
         x += cx;
         y += cy;
 
-        inst->menu = e_menu_new();
+        m = e_menu_new();
 
-        mi = e_menu_item_new(inst->menu);
+        mi = e_menu_item_new(m);
         e_menu_item_label_set(mi, _("Share Clipboard Content"));
         e_menu_item_callback_set(mi, (E_Menu_Cb)_share_menu_share_request_click_cb, inst);
 
-        mi = e_menu_item_new(inst->menu);
+        mi = e_menu_item_new(m);
         e_menu_item_separator_set(mi, EINA_TRUE);
 
         EINA_LIST_FOREACH(inst->shares, it, share)
         {
-            mi = e_menu_item_new(inst->menu);
+            mi = e_menu_item_new(m);
             e_menu_item_label_set(mi, share->name);
             e_menu_item_callback_set(mi, (E_Menu_Cb)_share_menu_share_item_click_cb, share);
         }
 
-        e_menu_post_deactivate_callback_set(inst->menu,
+        e_menu_post_deactivate_callback_set(m,
                 _share_menu_post_cb, inst);
 
         /* Proper menu orientation */
@@ -233,7 +226,7 @@ _share_button_cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj 
         /* We display not relatively to the gadget, but similarly to
          * the start menu - thus the need for direction etc.
          */
-        e_menu_activate_mouse(inst->menu,
+        e_menu_activate_mouse(m,
                 e_util_zone_current_get
                 (e_manager_current_get()),
                 x, y, w, h, dir, ev->timestamp);
@@ -353,7 +346,6 @@ _share_menu_post_cb(void *data, E_Menu *menu __UNUSED__)
 
    if (!inst) return;
    e_gadcon_locked_set(inst->gcc->gadcon, EINA_FALSE);
-   inst->menu = NULL;
 }
 
 static void _free_share_data(Share_Data *sd)
