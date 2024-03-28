@@ -402,8 +402,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
 
    if (photo->config && photo->config->bg_dialog)
       {
-          E_Import_Config_Dialog *import_cfg;
-          import_cfg = e_import_config_dialog_show(NULL, import->file, (Ecore_End_Cb) _apply_import_ok, NULL);
+          e_import_config_dialog_show(NULL, import->file, (Ecore_End_Cb) _apply_import_ok, NULL);
           return 1;
       }
    import->ok = _cb_import_ok;

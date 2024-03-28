@@ -408,7 +408,7 @@ _load_idler(void *data __UNUSED__)
    if ( (S_ISLNK(fs_stat.st_mode)) &&
         (file_tmp = ecore_file_readlink(file)) )
      {
-        strncpy(file, file_tmp, sizeof(file));
+        strncpy(file, file_tmp, sizeof(file)-1);
         if (stat(file, &fs_stat) < 0) return EINA_FALSE;
      }
 
