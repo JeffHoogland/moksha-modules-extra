@@ -583,7 +583,7 @@ _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void
      {
         e_gadcon_popup_toggle_pinned(inst->popup);
      }
-   if ((ev->button == 3) && (!calendar_conf->menu))
+   if (ev->button == 3)
      {
         E_Menu *m, *mo;
         E_Menu_Item *mi;
@@ -615,7 +615,7 @@ _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
         e_menu_post_deactivate_callback_set(m, _menu_cb_post, inst);
-        calendar_conf->menu = m;
+
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &cx, &cy, &cw, &ch);
         e_menu_activate_mouse(m,
                               e_util_zone_current_get(e_manager_current_get()),
@@ -629,9 +629,6 @@ _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void
 static void
 _menu_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
 {
-   if (!calendar_conf->menu) return;
-   e_object_del(E_OBJECT(calendar_conf->menu));
-   calendar_conf->menu = NULL;
    if (calendar_conf->menu_firstweekday)
      e_object_del(E_OBJECT(calendar_conf->menu_firstweekday));
    calendar_conf->menu_firstweekday = NULL;
@@ -671,7 +668,7 @@ EAPI E_Module_Api e_modapi =
 EAPI void *
 e_modapi_init(E_Module *m) 
 {
-   char buf[4095];
+   char buf[PATH_MAX];
    snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
    bindtextdomain(PACKAGE, buf);
    bind_textdomain_codeset(PACKAGE, "UTF-8");

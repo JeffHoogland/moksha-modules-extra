@@ -239,12 +239,7 @@ _gc_shutdown(E_Gadcon_Client *gcc)
    if (!(inst = gcc->data)) return;
    instances = eina_list_remove(instances, inst);
    if (inst->timer) ecore_timer_del(inst->timer);
-   if (inst->menu) 
-     {
-        e_menu_post_deactivate_callback_set(inst->menu, NULL, NULL);
-        e_object_del(E_OBJECT(inst->menu));
-        inst->menu = NULL;
-     }
+
    if (inst->o_base) 
      {
         evas_object_event_callback_del(inst->o_base, EVAS_CALLBACK_MOUSE_DOWN,
@@ -352,7 +347,7 @@ _cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__,
 
    if (!(inst = data)) return;
    ev = event_info;
-   if ((ev->button == 3) && (!inst->menu)) 
+   if (ev->button == 3)
      {
         E_Menu *m = NULL, *mo = NULL;
         E_Menu_Item *mi = NULL;
@@ -397,7 +392,6 @@ _cb_mouse_down(void *data, Evas *evas __UNUSED__, Evas_Object *obj __UNUSED__,
 
         m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
         e_menu_post_deactivate_callback_set(m, _cb_menu_post, inst);
-        inst->menu = m;
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, NULL, NULL);
         e_menu_activate_mouse(m, zone, x + ev->output.x, y + ev->output.y,
@@ -414,8 +408,6 @@ _cb_menu_post(void *data, E_Menu *menu __UNUSED__)
    if (!inst->menu) return;
    if (inst->menu_mode) e_object_del(E_OBJECT(inst->menu_mode));
    inst->menu_mode = NULL;
-   e_object_del(E_OBJECT(inst->menu));
-   inst->menu = NULL;
 }
 
 static void 

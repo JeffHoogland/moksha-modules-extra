@@ -17,7 +17,7 @@ typedef struct _Config_Item Config_Item;
 struct _Config
 {
    E_Module        *module;
-   E_Menu          *menu, *menu_firstweekday;
+   E_Menu          *menu_firstweekday;
    Ecore_Timer     *timer;
    Eina_List       *instances;
    Eina_List       *items;
