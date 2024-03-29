@@ -8,7 +8,6 @@ static void _cb_configure_item_content(void *data, E_Menu *m, E_Menu_Item *mi);
 static void _cb_configure_main(void *data, E_Menu *m, E_Menu_Item *mi);
 static void _cb_configure_feeds(void *data, E_Menu *m, E_Menu_Item *mi);
 
-static void _cb_item_deactivate_post(void *data, E_Menu *m);
 static void _cb_item_setasread(void *data, E_Menu *m, E_Menu_Item *mi);
 static void _cb_item_update(void *data, E_Menu *m, E_Menu_Item *mi);
 
@@ -28,19 +27,9 @@ news_menu_item_show(News_Item *ni)
 
    mn = e_menu_new();
    mn = e_gadcon_client_util_menu_items_append(ni->gcc, mn, 0);
-   e_menu_post_deactivate_callback_set(mn, _cb_item_deactivate_post, ni);
    _menu_append(mn, ni);
 
-   ni->menu = mn;
-
    return 1;
-}
-
-void
-news_menu_item_hide(News_Item *ni)
-{
-   e_menu_post_deactivate_callback_set(ni->menu, NULL, NULL);
-   _cb_item_deactivate_post(ni, ni->menu);
 }
 
 int
@@ -110,7 +99,6 @@ news_menu_browser_hide(News_Item *ni)
    e_menu_post_deactivate_callback_set(ni->menu_browser, NULL, NULL);
    _cb_browser_deactivate_post(ni, ni->menu_browser);
 }
-
 
 /*
  * Private functions
@@ -221,19 +209,6 @@ _cb_configure_feeds(void *data, E_Menu *m, E_Menu_Item *mi)
    if (!news) return;
 
    news_config_dialog_feeds_show();
-}
-
-static void
-_cb_item_deactivate_post(void *data, E_Menu *m)
-{
-   News_Item *ni;
-
-   ni = data;
-   if (!ni) return;
-   if (!ni->menu) return;
-
-   e_object_del(E_OBJECT(ni->menu));
-   ni->menu = NULL;
 }
 
 static void

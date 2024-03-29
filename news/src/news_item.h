@@ -52,7 +52,6 @@ struct _News_Item
    News_Config_Item *config;
    E_Config_Dialog  *config_dialog;
    E_Config_Dialog  *config_dialog_content;
-   E_Menu           *menu;
    E_Menu           *menu_browser;
 
    struct

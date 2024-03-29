@@ -69,7 +69,6 @@ news_item_free(News_Item *ni)
    
    if (ni->config_dialog) news_config_dialog_item_hide(ni);
    if (ni->config_dialog_content) news_config_dialog_item_content_hide(ni);
-   if (ni->menu) news_menu_item_hide(ni);
    if (ni->menu_browser) news_menu_browser_hide(ni);
 
    if (ni->view.box) evas_object_del(ni->view.box);
@@ -290,11 +289,10 @@ _cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
         int cx, cy, cw, ch;
 
      case 3:
-        if (ni->menu) break;
         news_menu_item_show(ni);
         e_gadcon_canvas_zone_geometry_get(ni->gcc->gadcon,
                                           &cx, &cy, &cw, &ch);
-        e_menu_activate_mouse(ni->menu,
+        e_menu_activate_mouse(ni->gcc->menu,
                               e_util_zone_current_get(e_manager_current_get()),
                               cx + ev->output.x, cy + ev->output.y, 1, 1,
                               E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
