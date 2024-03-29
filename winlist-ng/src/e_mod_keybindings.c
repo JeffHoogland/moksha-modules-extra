@@ -1,17 +1,17 @@
 #include "e_mod_main.h"
 #include "e_mod_keybindings.h"
 
-#define NGW_WINLIST_ACTION_GROUP	 D_("NG Winlist")
-#define NGW_WINLIST_ACTION_NEXT   D_("Switch To Next Window")
-#define NGW_WINLIST_ACTION_PREV   D_("Switch To Previous Window")
+#define NGW_WINLIST_ACTION_GROUP         D_("NG Winlist")
+#define NGW_WINLIST_ACTION_NEXT          D_("Switch To Next Window")
+#define NGW_WINLIST_ACTION_PREV          D_("Switch To Previous Window")
 #define NGW_WINLIST_ACTION_DESK_TOGGLE   D_("Show Windows From All Desks")
 #define NGW_WINLIST_ACTION_ZONE_TOGGLE   D_("Show Windows From Other Zones")
 
 #define ACT_FN_GO_KEY(act) \
-   static void _e_actions_act_##act##_go_key(E_Object *obj, const char *params, Ecore_Event_Key *ev)
+   static void _e_actions_act_##act##_go_key(E_Object *obj __UNUSED__, const char *params __UNUSED__, Ecore_Event_Key *ev)
 
 #define ACT_FN_GO_WHEEL(act) \
-   static void _e_actions_act_##act##_go_wheel(E_Object *obj, const char *params, Ecore_Event_Mouse_Wheel *ev)
+   static void _e_actions_act_##act##_go_wheel(E_Object *obj __UNUSED__, const char *params __UNUSED__, Ecore_Event_Mouse_Wheel *ev)
 
 #define ACT_GO_KEY(name) \
    { \

@@ -2,8 +2,6 @@
 #include "e_mod_keybindings.h"
 #include <X11/extensions/shape.h>
 
-
-
 static int      _ngw_win_free(Ngw_Win *win);
 static Ngw_Win *_ngw_win_new(Ng *ng);
 static void     _ngw_win_position_calc(Ngw_Win *es);
@@ -13,8 +11,6 @@ static Eina_Bool      _ngw_win_container_resize_cb(void *data, int type, void *e
 E_Config_DD *conf_edd = NULL;
 E_Config_DD *conf_item_edd = NULL;
 Config      *ngw_config = NULL;
-
-
 
 Ng *
 ngw_new(Config_Item *cfg)
@@ -59,13 +55,14 @@ ngw_free(Ng *ng)
 }
 
 /* TODO */
+/*
 void
-ngw_update_config(Ng *ng, int change_type, int change_orient, int chg_apps)
+ngw_update_config(Ng *ng __UNUSED__, int change_type, int change_orient, int chg_apps)
 {
-}
+} */
 
 EAPI E_Config_Dialog *
-_ngw_config_dialog(E_Container *con, const char *params)
+_ngw_config_dialog(E_Container *con __UNUSED__, const char *params __UNUSED__)
 {
    return ngw_configure_module(ngw_config->winlist_cfg);
 }
@@ -84,7 +81,7 @@ e_modapi_init(E_Module *m)
    snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
    bindtextdomain(PACKAGE, buf);
    bind_textdomain_codeset(PACKAGE, "UTF-8");
-  
+
    conf_item_edd = E_CONFIG_DD_NEW("Ngw_Config_Item", Config_Item);
 #undef T
 #undef D
@@ -123,31 +120,31 @@ e_modapi_init(E_Module *m)
    ngw_config = (Config*) e_config_domain_load("module.winlist_ng", conf_edd);
    if(!ngw_config)
      {
-	ngw_config = E_NEW(Config, 1);
-	ngw_config->winlist_next_key.context	 = E_BINDING_CONTEXT_ANY;
-	ngw_config->winlist_next_key.key	         = eina_stringshare_add("comma");
-	ngw_config->winlist_next_key.modifiers	 = E_BINDING_MODIFIER_CTRL | E_BINDING_MODIFIER_ALT;
-	ngw_config->winlist_next_key.any_mod	 = 0;
-	ngw_config->winlist_next_key.action	 = eina_stringshare_add(NGW_WINLIST_NEXT_ACTION);
-	ngw_config->winlist_next_key.params	 = NULL;
+        ngw_config = E_NEW(Config, 1);
+        ngw_config->winlist_next_key.context = E_BINDING_CONTEXT_ANY;
+        ngw_config->winlist_next_key.key = eina_stringshare_add("comma");
+        ngw_config->winlist_next_key.modifiers = E_BINDING_MODIFIER_CTRL | E_BINDING_MODIFIER_ALT;
+        ngw_config->winlist_next_key.any_mod = 0;
+        ngw_config->winlist_next_key.action = eina_stringshare_add(NGW_WINLIST_NEXT_ACTION);
+        ngw_config->winlist_next_key.params = NULL;
 
-	ngw_config->winlist_prev_key.context	 = E_BINDING_CONTEXT_ANY;
-	ngw_config->winlist_prev_key.key	         = eina_stringshare_add("period");
-	ngw_config->winlist_prev_key.modifiers	 = E_BINDING_MODIFIER_CTRL | E_BINDING_MODIFIER_ALT;
-	ngw_config->winlist_prev_key.any_mod	 = 0;
-	ngw_config->winlist_prev_key.action	 = eina_stringshare_add(NGW_WINLIST_PREV_ACTION);
-	ngw_config->winlist_prev_key.params	 = NULL;
+        ngw_config->winlist_prev_key.context = E_BINDING_CONTEXT_ANY;
+        ngw_config->winlist_prev_key.key = eina_stringshare_add("period");
+        ngw_config->winlist_prev_key.modifiers = E_BINDING_MODIFIER_CTRL | E_BINDING_MODIFIER_ALT;
+        ngw_config->winlist_prev_key.any_mod = 0;
+        ngw_config->winlist_prev_key.action = eina_stringshare_add(NGW_WINLIST_PREV_ACTION);
+        ngw_config->winlist_prev_key.params = NULL;
 
-	Config_Item *cfg = E_NEW(Config_Item, 1);
-	cfg->orient = E_GADCON_ORIENT_FLOAT;
-	cfg->size = 34;
-	cfg->zoom_duration = 0.3;
-	cfg->zoom_range = 0.6;
-	cfg->hide_timeout  = 0.2;
-	cfg->zoomfactor  = 2.0;
-	cfg->hide_animation = 1;
-      
-	ngw_config->winlist_cfg = cfg;
+        Config_Item *cfg = E_NEW(Config_Item, 1);
+        cfg->orient = E_GADCON_ORIENT_FLOAT;
+        cfg->size = 34;
+        cfg->zoom_duration = 0.3;
+        cfg->zoom_range = 0.6;
+        cfg->hide_timeout  = 0.2;
+        cfg->zoomfactor  = 2.0;
+        cfg->hide_animation = 1;
+
+        ngw_config->winlist_cfg = cfg;
      }
 
    ngw_config->module = m;
@@ -162,13 +159,13 @@ e_modapi_init(E_Module *m)
 
    if(ecore_x_screen_is_composited(0) || e_config->use_composite)
      {
-	ngw_config->use_composite = 1;
-	printf("found composite manager\n");
+        ngw_config->use_composite = 1;
+        printf("found composite manager\n");
      }
    else
      {
-	ngw_config->use_composite = 0;    
-	printf("no composite manager found\n");
+        ngw_config->use_composite = 0;
+        printf("no composite manager found\n");
      }
 
    ngw_winlist_init();
@@ -182,12 +179,12 @@ e_modapi_init(E_Module *m)
 }
 
 EAPI int
-e_modapi_shutdown(E_Module *m)
+e_modapi_shutdown(E_Module *m __UNUSED__)
 {
    while (ngw_config->handlers)
      {
-	ecore_event_handler_del(ngw_config->handlers->data);
-	ngw_config->handlers = eina_list_remove_list(ngw_config->handlers, ngw_config->handlers);
+        ecore_event_handler_del(ngw_config->handlers->data);
+        ngw_config->handlers = eina_list_remove_list(ngw_config->handlers, ngw_config->handlers);
      }
 
    ngw_winlist_shutdown();
@@ -204,7 +201,7 @@ e_modapi_shutdown(E_Module *m)
 }
 
 EAPI int
-e_modapi_save(E_Module *m)
+e_modapi_save(E_Module *m __UNUSED__)
 {
    e_config_domain_save("module.winlist_ng", conf_edd, ngw_config);
    return 1;
@@ -213,13 +210,13 @@ e_modapi_save(E_Module *m)
 EAPI int
 e_modapi_about(E_Module *m)
 {
-   e_module_dialog_show(m,D_("Winlist NG Module"),
-			D_("a replacement for the standard winlist"));
+   e_module_dialog_show(m, D_("Winlist NG Module"),
+                           D_("a replacement for the standard winlist"));
    return 1;
 }
 
 EAPI int
-e_modapi_config(E_Module *m)
+e_modapi_config(E_Module *m __UNUSED__)
 {
    ngw_configure_module(ngw_config->winlist_cfg);
    return 1;
@@ -245,12 +242,12 @@ _ngw_win_new(Ng *ng)
 
    if(e_config->use_composite)
      {
-	ecore_evas_alpha_set(win->ee, 1);
+        ecore_evas_alpha_set(win->ee, 1);
      }
    else
      {
-	win->popup->shaped = 1;
-	ecore_evas_shaped_set(win->popup->ecore_evas, 1);
+        win->popup->shaped = 1;
+        ecore_evas_shaped_set(win->popup->ecore_evas, 1);
      }
    
    win->popup->evas_win = ecore_evas_software_x11_window_get(win->ee);
@@ -270,10 +267,10 @@ _ngw_win_free(Ngw_Win *win)
 }
 
 static Eina_Bool
-_ngw_win_container_resize_cb(void *data, int ev_type, void *event_info)
+_ngw_win_container_resize_cb(void *data __UNUSED__, int ev_type __UNUSED__, void *event_info __UNUSED__)
 {
    _ngw_win_position_calc(ngw_config->winlist_cfg->ng->win);
-  
+
    return EINA_TRUE;
 }
 
@@ -300,14 +297,14 @@ _ngw_win_position_calc(Ngw_Win *win)
    switch (orient)
      {
       case E_GADCON_ORIENT_FLOAT:
-	 win->w = ng->zone->w;
-	 win->h = size;
-	 win->x = 0;
-	 win->y = (ng->zone->h - size) / 2;
-	 break;
+         win->w = ng->zone->w;
+         win->h = size;
+         win->x = 0;
+         win->y = (ng->zone->h - size) / 2;
+         break;
 
       default:
-	 break;
+        break;
      }
    e_popup_move_resize(win->popup, win->x, win->y, win->w, win->h);
 }
