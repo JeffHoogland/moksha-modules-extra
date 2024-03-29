@@ -173,7 +173,7 @@ _mail_pop_server_data (void *data __UNUSED__, int type __UNUSED__, void *event)
 {
   Ecore_Con_Event_Server_Data *ev = event;
   PopClient *pc;
-  char in[2048], out[2048], parse_from_decode[256]="", parse_from[256]="", buf[256];
+  char in[2048], out[2048], parse_from_decode[256]="", parse_from[256]="", buf[274];
   int len, total = 0, counts;
   const char *heystack;
   const char *tmp;
