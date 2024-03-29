@@ -37,7 +37,7 @@ _config_mail_module (Config_Item * ci)
   E_Config_Dialog *cfd;
   E_Config_Dialog_View *v;
   E_Container *con;
-  char buf[4096];
+  char buf[PATH_MAX];
 
   v = E_NEW (E_Config_Dialog_View, 1);
   if (!v)
@@ -165,7 +165,7 @@ _load_boxes (E_Config_Dialog * cfd)
   Evas_Object *il;
   Config_Item *ci;
   int i;
-  char buf[4096];
+  char buf[PATH_MAX];
 
   cfdata = cfd->cfdata;
   il = cfdata->il;

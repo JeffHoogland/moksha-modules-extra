@@ -189,7 +189,7 @@ static Evas_Object *
 _gc_icon (const E_Gadcon_Client_Class *client_class __UNUSED__, Evas * evas)
 {
   Evas_Object *o;
-  char buf[4096];
+  char buf[PATH_MAX];
 
   o = edje_object_add (evas);
   snprintf (buf, sizeof (buf), "%s/e-module-mail.edj",
@@ -419,7 +419,7 @@ EAPI E_Module_Api e_modapi = {
 EAPI void *
 e_modapi_init (E_Module * m)
 {
-  char buf[4096];
+  char buf[PATH_MAX];
 
   snprintf (buf, sizeof (buf), "%s/locale", e_module_dir_get (m));
   bindtextdomain (PACKAGE, buf);
@@ -573,7 +573,7 @@ static Mail *
 _mail_new (Evas * evas)
 {
   Mail *mail;
-  char buf[4096];
+  char buf[PATH_MAX];
 
   mail = E_NEW (Mail, 1);
   mail->mail_obj = edje_object_add (evas);
