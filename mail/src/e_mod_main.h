@@ -17,9 +17,9 @@
 typedef enum 
 {
    MAIL_TYPE_POP,
-     MAIL_TYPE_IMAP,
-     MAIL_TYPE_MDIR,
-     MAIL_TYPE_MBOX
+   MAIL_TYPE_IMAP,
+   MAIL_TYPE_MDIR,
+   MAIL_TYPE_MBOX
 } MailType;
 
 typedef struct _Config Config;
@@ -52,7 +52,6 @@ struct _Config
 {
    E_Module *module;
    E_Config_Dialog *config_dialog;
-   E_Menu *menu;
    Eina_List *instances;
    Eina_List *items;
 };

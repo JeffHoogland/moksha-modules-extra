@@ -46,7 +46,6 @@ static void             _mail_cb_mouse_out (void *data, Evas * e, Evas_Object * 
                                             void *event_info);
 static void             _mail_menu_cb_configure (void *data, E_Menu * m,
                                                  E_Menu_Item * mi);
-static void             _mail_menu_cb_post (void *data, E_Menu * m);
 static void             _mail_menu_cb_exec (void *data, E_Menu * m, E_Menu_Item * mi);
 static Config_Item     *_mail_config_item_get (const char *id);
 static Mail            *_mail_new (Evas * evas);
@@ -218,7 +217,7 @@ _mail_cb_mouse_down (void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED
 
   if (!inst)
     return;
-  if ((ev->button == 3) && (!mail_config->menu))
+  if (ev->button == 3)
     {
       E_Menu *m;
       E_Menu_Item *mi;
@@ -232,8 +231,6 @@ _mail_cb_mouse_down (void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED
       e_menu_item_callback_set (mi, _mail_menu_cb_configure, inst);
 
       m = e_gadcon_client_util_menu_items_append (inst->gcc, m, 0);
-      e_menu_post_deactivate_callback_set (m, _mail_menu_cb_post, inst);
-      mail_config->menu = m;
 
       if ((inst->ci->boxes) && (eina_list_count (inst->ci->boxes) > 0))
       {
@@ -354,15 +351,6 @@ _mail_cb_mouse_out (void *data, Evas * e __UNUSED__,
        e_object_del (E_OBJECT (inst->popup));
        inst->popup = NULL;
     }
-}
-
-static void
-_mail_menu_cb_post (void *data __UNUSED__, E_Menu * m __UNUSED__)
-{
-  if (!mail_config->menu)
-    return;
-  e_object_del (E_OBJECT (mail_config->menu));
-  mail_config->menu = NULL;
 }
 
 static void
@@ -511,12 +499,7 @@ e_modapi_shutdown (E_Module * m __UNUSED__)
 
   if (mail_config->config_dialog)
     e_object_del (E_OBJECT (mail_config->config_dialog));
-  if (mail_config->menu)
-    {
-      e_menu_post_deactivate_callback_set (mail_config->menu, NULL, NULL);
-      e_object_del (E_OBJECT (mail_config->menu));
-      mail_config->menu = NULL;
-    }
+
   while (mail_config->items)
     {
       Config_Item *ci;
