@@ -65,7 +65,7 @@ e_modapi_init(E_Module *m)
 }
 
 EAPI int
-e_modapi_shutdown(E_Module *m)
+e_modapi_shutdown(E_Module *m __UNUSED__)
 {
    if (!news) return 0;
 
@@ -96,7 +96,7 @@ e_modapi_shutdown(E_Module *m)
 }
 
 EAPI int
-e_modapi_save(E_Module *m)
+e_modapi_save(E_Module *m __UNUSED__)
 {
    int ret;
 
@@ -134,7 +134,7 @@ static void
 _gc_shutdown(E_Gadcon_Client *gcc)
 {
    News_Item *ni;
-   
+
    ni = gcc->data;
 
    DMAIN(("GCC shutdown"));
@@ -146,7 +146,7 @@ static void
 _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
 {
    News_Item *ni;
-   int nb_feeds;
+   int nb_feeds = 0;
    int gc_min_w = 16;
    int gc_min_h = 16;
    int gc_aspect_w = 16;
@@ -163,7 +163,7 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
      case NEWS_ITEM_VIEW_MODE_FEED:
         nb_feeds = eina_list_count(ni->config->feed_refs);
         if (!nb_feeds) nb_feeds = 1;
-        break;        
+        break;
      case NEWS_ITEM_VIEW_MODE_FEED_UNREAD:
         nb_feeds = ni->unread_count;
         if (!nb_feeds) nb_feeds = 1;
@@ -194,7 +194,7 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
      case E_GADCON_ORIENT_CORNER_TR:
      case E_GADCON_ORIENT_CORNER_BL:
      case E_GADCON_ORIENT_CORNER_BR:
-        gc_aspect_w = nb_feeds*16;
+        gc_aspect_w = nb_feeds * 16;
         gc_orient_horiz = 1;
         break;
      case E_GADCON_ORIENT_VERT:
@@ -204,25 +204,25 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient)
      case E_GADCON_ORIENT_CORNER_RT:
      case E_GADCON_ORIENT_CORNER_LB:
      case E_GADCON_ORIENT_CORNER_RB:
-        gc_aspect_h = nb_feeds*16;
+        gc_aspect_h = nb_feeds * 16;
         break;
      default:
         break;
      }
-   
+
    e_gadcon_client_aspect_set(gcc, gc_aspect_w, gc_aspect_h);
    e_gadcon_client_min_size_set(gcc, gc_min_w, gc_min_h);
    news_item_orient_set(ni, gc_orient_horiz);
 }
-   
+
 static const char *
-_gc_label(const E_Gadcon_Client_Class *client_class)
+_gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    return D_("News");
 }
 
 static Evas_Object *
-_gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
+_gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o;
 
@@ -232,7 +232,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class, Evas *evas)
 }
 
 static const char *
-_gc_id_new(const E_Gadcon_Client_Class *client_class)
+_gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
    News_Config_Item *nic;
 

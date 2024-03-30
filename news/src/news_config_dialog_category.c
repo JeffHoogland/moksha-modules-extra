@@ -36,7 +36,7 @@ static void         _icon_select_changed(void *data);
 int
 news_config_dialog_category_show(News_Feed_Category *fcat)
 {
-   E_Config_Dialog *cfd;
+   //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
 
    v = E_NEW(E_Config_Dialog_View, 1);
@@ -46,7 +46,7 @@ news_config_dialog_category_show(News_Feed_Category *fcat)
    v->basic.apply_cfdata = _basic_apply_data;
    v->basic.create_widgets = _basic_create_widgets;
    
-   cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+   e_config_dialog_new(e_container_current_get(e_manager_current_get()),
 			     D_("News Category Configuration"),
                              "News", "_e_modules_news_category_config_dialog",
                              news_theme_file_get(NEWS_THEME_CAT_ICON), 0, v, fcat);
@@ -92,7 +92,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
    free(cfdata->name);
    free(cfdata->icon);
@@ -126,7 +126,7 @@ _fill_data(E_Config_Dialog_Data *cfdata, News_Feed_Category *cat)
 }
 
 static Evas_Object *
-_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata) 
 {
    Evas_Object *o, *of, *ob;
    
@@ -182,7 +182,7 @@ _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static void
-_icon_select(void *data1, void *data2)
+_icon_select(void *data1, void *data2 __UNUSED__)
 {
    E_Config_Dialog *cfd;
    E_Config_Dialog_Data *cfdata;
@@ -235,11 +235,11 @@ _icon_select(void *data1, void *data2)
 }
 
 static void
-_icon_select_cb(void *data, Evas_Object *obj)
+_icon_select_cb(void *data __UNUSED__, Evas_Object *obj __UNUSED__)
 {
-   E_Config_Dialog_Data *cfdata;
+   //~ E_Config_Dialog_Data *cfdata;
 
-   cfdata = data;
+   //~ cfdata = data;
 }
 
 static void

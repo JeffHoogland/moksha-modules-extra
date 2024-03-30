@@ -283,7 +283,7 @@ int
 news_feed_edit(News_Feed *f, char *name, int name_ovrw, char *language, int language_ovrw, char *description, int description_ovrw, char *url_home, int url_home_ovrw, char *url_feed, char *icon, int icon_ovrw, int important, News_Feed_Category *category, int check_only)
 {
    News_Feed *f2;
-   char *host, *file;
+   char *host = "", *file;
    int update = 0;
 
    if ( !name || !name[0] )
@@ -1131,7 +1131,7 @@ _get_file_from_url(const char *url)
 }
 
 static void
-_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
    News_Feed *f;
    Evas_Event_Mouse_Down *ev;
@@ -1163,20 +1163,22 @@ _cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 }
 
 static void
-_cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_cb_mouse_out(void *data __UNUSED__, Evas *e __UNUSED__, 
+              Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
 {
-   News_Item *ni;
-   Evas_Event_Mouse_Out *ev;
+   //~ News_Item *ni;
+   //~ Evas_Event_Mouse_Out *ev;
 
-   ni = data;
-   ev = event_info;
+   //~ ni = data;
+   //~ ev = event_info;
 
    DITEM(("Mouse out"));
 
 }
 
 static void
-_cb_feed_open(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_feed_open(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__,
+              const char *source __UNUSED__)
 {
    News_Item *ni;
    News_Feed *f;
@@ -1216,7 +1218,7 @@ _cb_feed_open(void *data, Evas_Object *obj, const char *emission, const char *so
 }
 
 static Eina_Bool
-_cb_feed_server_add(void *data, int type, void *event)
+_cb_feed_server_add(void *data, int type __UNUSED__, void *event)
 {
    News_Feed_Document *doc;
    Ecore_Con_Event_Server_Add *ev;
@@ -1244,7 +1246,7 @@ _cb_feed_server_add(void *data, int type, void *event)
 }
 
 static Eina_Bool
-_cb_feed_server_del(void *data, int type, void *event)
+_cb_feed_server_del(void *data, int type __UNUSED__, void *event)
 {
    News_Feed_Document *doc;
    Ecore_Con_Event_Server_Del *ev;
@@ -1281,7 +1283,7 @@ _cb_feed_server_del(void *data, int type, void *event)
 }
 
 static Eina_Bool
-_cb_feed_server_data(void *data, int type, void *event)
+_cb_feed_server_data(void *data, int type __UNUSED__, void *event)
 {
    News_Feed_Document *doc;
    Ecore_Con_Event_Server_Data *ev;
@@ -1351,7 +1353,7 @@ _cb_feed_parse(News_Feed_Document *doc, News_Parse_Error error, int changes)
 }
 
 static Eina_Bool
-_cb_feeds_timer(void *data)
+_cb_feeds_timer(void *data __UNUSED__)
 {
    NEWS_FEED_FOREACH_BEG();
    if (_feed->doc)

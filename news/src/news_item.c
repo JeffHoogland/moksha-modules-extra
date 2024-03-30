@@ -123,6 +123,7 @@ news_item_refresh(News_Item *ni, int changed_order, int changed_content, int cha
         break;
      case NEWS_ITEM_VIEW_MODE_FEED_UNREAD:
         _item_refresh_mode_feed(ni, 0, 1, changed_order, changed_content, changed_state);
+        break;
      case NEWS_ITEM_VIEW_MODE_FEED_IMPORTANT:
         _item_refresh_mode_feed(ni, 1, 0, changed_order, changed_content, changed_state);
         break;
@@ -147,7 +148,7 @@ news_item_orient_set(News_Item *ni, int horizontal)
 }
 
 void
-news_item_loadingstate_refresh(News_Item *ni)
+news_item_loadingstate_refresh(News_Item *ni __UNUSED__)
 {
    // TODO
 }
@@ -252,7 +253,7 @@ _item_refresh_mode_feed(News_Item *ni, int important_only, int unread_only, int 
            news_feed_obj_refresh(_feed, changed_content, changed_state);
            obj = _feed->obj;
         }
-      
+
       if (!_feed->obj || changed_order)
         {
            /* insert in the box */
@@ -267,14 +268,14 @@ _item_refresh_mode_feed(News_Item *ni, int important_only, int unread_only, int 
                                   );
            evas_object_show(obj);
         }
-      
+
       _feed->obj = obj;
    }
    NEWS_ITEM_FEEDS_FOREACH_END();
 }
 
 static void
-_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
    News_Item *ni;
    Evas_Event_Mouse_Down *ev;
@@ -303,20 +304,22 @@ _cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 }
 
 static void
-_cb_mouse_out(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_cb_mouse_out(void *data __UNUSED__, Evas *e __UNUSED__, 
+              Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
 {
-   News_Item *ni;
-   Evas_Event_Mouse_Out *ev;
+   //~ News_Item *ni;
+   //~ Evas_Event_Mouse_Out *ev;
 
-   ni = data;
-   ev = event_info;
+   //~ ni = data;
+   //~ ev = event_info;
 
    DITEM(("Mouse out"));
 
 }
 
 static void
-_cb_item_open(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_item_open(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__,
+              const char *source __UNUSED__)
 {
    News_Item *ni;
    E_Manager *man;

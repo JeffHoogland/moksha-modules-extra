@@ -39,7 +39,7 @@ static void         _cb_selected_feed_change(void *data, Evas_Object *obj);
 int
 news_config_dialog_item_content_show(News_Item *ni)
 {
-   E_Config_Dialog *cfd;
+   //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
 
    v = E_NEW(E_Config_Dialog_View, 1);
@@ -49,7 +49,7 @@ news_config_dialog_item_content_show(News_Item *ni)
    v->basic.apply_cfdata = _basic_apply_data;
    v->basic.create_widgets = _basic_create_widgets;
    
-   cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+   e_config_dialog_new(e_container_current_get(e_manager_current_get()),
 			     D_("News Gadget Content Configuration"),
                              "News", DIALOG_CLASS,
                              news_theme_file_get(NEWS_THEME_CAT_ICON), 0, v, ni);
@@ -93,7 +93,7 @@ news_config_dialog_item_content_refresh_feeds(News_Item *ni)
      e_widget_disabled_set(cfdata->button_add, 1);
 
    pos = -1;
-   for(l=news->config->feed.categories; l; l=eina_list_next(l))
+   for (l=news->config->feed.categories; l; l=eina_list_next(l))
      {
         News_Feed_Category *cat;
         Evas_Object *iccat = NULL;
@@ -110,7 +110,7 @@ news_config_dialog_item_content_refresh_feeds(News_Item *ni)
           }
 
         e_widget_ilist_header_append(ilist, iccat, cat->name);
-	pos++;
+        pos++;
 
         for(l2=cat->feeds_visible; l2; l2=eina_list_next(l2))
           {
@@ -129,9 +129,9 @@ news_config_dialog_item_content_refresh_feeds(News_Item *ni)
              snprintf(buf, sizeof(buf), "%s%s", (f->important) ? "[i] " : "", f->name);
              
              e_widget_ilist_append(ilist, ic, buf, NULL, f, NULL);
-	     pos++;
+             pos++;
 
-	     if (eina_list_data_find(cfdata->ilist_feeds_sel, f))
+             if (eina_list_data_find(cfdata->ilist_feeds_sel, f))
                e_widget_ilist_multi_select(ilist, pos);
           }
      }
@@ -140,7 +140,7 @@ news_config_dialog_item_content_refresh_feeds(News_Item *ni)
    e_widget_size_min_get(ilist, &iw, &ih);
    if (iw < 200) iw = 200;
    e_widget_size_min_set(ilist, iw, 250);
-   
+
    e_widget_ilist_go(ilist);
    _cb_feed_change(cfdata, NULL);
    /* restore the callback */
@@ -176,7 +176,7 @@ news_config_dialog_item_content_refresh_selected_feeds(News_Item *ni)
    {
       Evas_Object *ic = NULL;
       char buf[1024];
-        
+
         if (_feed->icon && _feed->icon[0])
           {
              ic = e_icon_add(evas_object_evas_get(ilist));
@@ -186,9 +186,9 @@ news_config_dialog_item_content_refresh_selected_feeds(News_Item *ni)
         snprintf(buf, sizeof(buf), "%s%s", (_feed->important) ? "[i] " : "", _feed->name);
 
         e_widget_ilist_append(ilist, ic, buf, NULL, _feed, NULL);
-	pos++;
+        pos++;
 
-	if (eina_list_data_find(cfdata->ilist_selected_feeds_sel, _feed))
+        if (eina_list_data_find(cfdata->ilist_selected_feeds_sel, _feed))
           e_widget_ilist_multi_select(ilist, pos);
    }
    NEWS_ITEM_FEEDS_FOREACH_END();
@@ -211,7 +211,7 @@ news_config_dialog_item_content_refresh_selected_feeds(News_Item *ni)
  */
 
 static void *
-_create_data(E_Config_Dialog *cfd) 
+_create_data(E_Config_Dialog *cfd)
 {
    E_Config_Dialog_Data *cfdata;
    News_Item *ni;
@@ -227,7 +227,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    if (cfdata->ilist_feeds_sel)
      eina_list_free(cfdata->ilist_feeds_sel);
@@ -241,14 +241,14 @@ _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 static void
 _fill_data(E_Config_Dialog_Data *cfdata, News_Item *ni)
 {
-   News_Config_Item *nic;
+   //~ News_Config_Item *nic;
 
-   nic = ni->config;
+   //~ nic = ni->config;
    cfdata->ni = ni;
 }
 
 static Evas_Object *
-_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o;
    Evas_Object *of, *ob;
@@ -263,7 +263,7 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cf
    news_config_dialog_item_content_refresh_feeds(cfdata->ni);
    e_widget_on_change_hook_set(ob, _cb_feed_change, cfdata);
    e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
-   
+
    ob = e_widget_button_add(evas, D_("Add this Feed"), NULL, _cb_feed_add, cfdata, NULL);
    e_widget_disabled_set(ob, 1);
    cfdata->button_add = ob;
@@ -302,14 +302,14 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cf
 }
 
 static int
-_basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_basic_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata __UNUSED__)
 {
    news_config_save();
    return 1;
 }
 
 static void
-_cb_feed_up(void *data, void *data2)
+_cb_feed_up(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed *f;
@@ -340,7 +340,7 @@ _cb_feed_up(void *data, void *data2)
 }
 
 static void
-_cb_feed_down(void *data, void *data2)
+_cb_feed_down(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed *f;
@@ -371,7 +371,7 @@ _cb_feed_down(void *data, void *data2)
 }
 
 static void
-_cb_feed_add(void *data, void *data2)
+_cb_feed_add(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Item *ni;
@@ -401,7 +401,7 @@ _cb_feed_add(void *data, void *data2)
 }
 
 static void
-_cb_feed_remove(void *data, void *data2)
+_cb_feed_remove(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Item *ni;
@@ -425,7 +425,7 @@ _cb_feed_remove(void *data, void *data2)
 }
 
 static void
-_cb_feed_change(void *data, Evas_Object *obj)
+_cb_feed_change(void *data, Evas_Object *obj __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    E_Ilist_Item *item;
@@ -462,7 +462,7 @@ _cb_feed_change(void *data, Evas_Object *obj)
 }
 
 static void
-_cb_selected_feed_change(void *data, Evas_Object *obj)
+_cb_selected_feed_change(void *data, Evas_Object *obj __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    E_Ilist_Item *item;

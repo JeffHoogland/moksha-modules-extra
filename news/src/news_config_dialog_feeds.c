@@ -65,7 +65,7 @@ static void         _cb_confirm_dialog_destroy(void *data);
 int
 news_config_dialog_feeds_show(void)
 {
-   E_Config_Dialog *cfd;
+   //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
 
    if (e_config_dialog_find("News", DIALOG_CLASS))
@@ -78,7 +78,7 @@ news_config_dialog_feeds_show(void)
    v->basic.apply_cfdata = _basic_apply_data;
    v->basic.create_widgets = _basic_create_widgets;
    
-   cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+   e_config_dialog_new(e_container_current_get(e_manager_current_get()),
 			     D_("News Feeds Configuration"),
                              "News", DIALOG_CLASS,
                              news_theme_file_get(NEWS_THEME_CAT_ICON), 0, v, NULL);
@@ -119,7 +119,7 @@ news_config_dialog_feeds_refresh_feeds(void)
 
    pos = -1;
    pos_to_select = -1;
-   for (lcat=news->config->feed.categories; lcat; lcat=eina_list_next(lcat))
+   for (lcat = news->config->feed.categories; lcat; lcat=eina_list_next(lcat))
      {
         News_Feed_Category *cat;
         Evas_Object *iccat = NULL;
@@ -136,28 +136,28 @@ news_config_dialog_feeds_refresh_feeds(void)
           }
 
         e_widget_ilist_header_append(ilist, iccat, cat->name);
-	pos++;
+        pos++;
 
         for (l=cat->feeds_visible; l; l=eina_list_next(l))
           {
              Evas_Object *ic = NULL;
              News_Feed *f;
              char buf[1024];
-	   
+
              f = eina_list_data_get(l);
-	
+
              if (f->icon && f->icon[0])
                {
                   ic = e_icon_add(evas_object_evas_get(ilist));
                   e_icon_file_set(ic, f->icon);
                }
-	   
-             snprintf(buf, sizeof(buf), "%s%s", (f->important) ? "[i] " : "", f->name);
-	   
-             e_widget_ilist_append(ilist, ic, buf, _cb_feed_list, f, NULL);
-	     pos++;
 
-	     if (cfdata->selected_feed == f)
+             snprintf(buf, sizeof(buf), "%s%s", (f->important) ? "[i] " : "", f->name);
+
+             e_widget_ilist_append(ilist, ic, buf, _cb_feed_list, f, NULL);
+             pos++;
+
+             if (cfdata->selected_feed == f)
                pos_to_select = pos;
           }
      }
@@ -218,9 +218,9 @@ news_config_dialog_feeds_refresh_categories(void)
         snprintf(buf, sizeof(buf), "%s", fc->name);
 
         e_widget_ilist_append(ilist, ic, buf, _cb_category_list, fc, NULL);
-	pos++;
+        pos++;
 
-	if (cfdata->selected_category == fc)
+        if (cfdata->selected_category == fc)
           pos_to_select = pos;
      }
    e_widget_ilist_go(ilist);
@@ -258,7 +258,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
    if (cfdata->cd) e_object_del(E_OBJECT(cfdata->cd));
 
@@ -403,7 +403,7 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cf
 }
 
 static int
-_basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_basic_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata __UNUSED__)
 {
    news_config_save();
    return 1;
@@ -448,7 +448,7 @@ _buttons_category_update(E_Config_Dialog_Data *cfdata)
 }
 
 static void
-_cb_feed_up(void *data, void *data2)
+_cb_feed_up(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed_Category *cat;
@@ -475,7 +475,7 @@ _cb_feed_up(void *data, void *data2)
 }
 
 static void
-_cb_feed_down(void *data, void *data2)
+_cb_feed_down(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed_Category *cat;
@@ -522,7 +522,7 @@ _cb_feed_list(void *data)
 }
 
 static void
-_cb_feed_add(void *data, void *data2)
+_cb_feed_add(void *data __UNUSED__, void *data2 __UNUSED__)
 {
    if (news->config_dialog_feed_new) return;
 
@@ -530,7 +530,7 @@ _cb_feed_add(void *data, void *data2)
 }
 
 static void
-_cb_feed_del(void *data, void *data2)
+_cb_feed_del(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed_Category *cat;
@@ -561,7 +561,7 @@ _cb_feed_del(void *data, void *data2)
 }
 
 static void
-_cb_feed_config(void *data, void *data2)
+_cb_feed_config(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed *f;
@@ -575,7 +575,7 @@ _cb_feed_config(void *data, void *data2)
 }
 
 static void
-_cb_category_up(void *data, void *data2)
+_cb_category_up(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed_Category *cat;
@@ -600,7 +600,7 @@ _cb_category_up(void *data, void *data2)
 }
 
 static void
-_cb_category_down(void *data, void *data2)
+_cb_category_down(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed_Category *cat;
@@ -664,7 +664,7 @@ _cb_category_list(void *data)
 }
 
 static void
-_cb_category_add(void *data, void *data2)
+_cb_category_add(void *data __UNUSED__, void *data2 __UNUSED__)
 {
    if (news->config_dialog_category_new) return;
 
@@ -672,7 +672,7 @@ _cb_category_add(void *data, void *data2)
 }
 
 static void
-_cb_category_del(void *data, void *data2)
+_cb_category_del(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed_Category *c;
@@ -703,7 +703,7 @@ _cb_category_del(void *data, void *data2)
 }
 
 static void
-_cb_category_config(void *data, void *data2)
+_cb_category_config(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed_Category *c;
@@ -717,7 +717,7 @@ _cb_category_config(void *data, void *data2)
 }
 
 static void
-_cb_langs_all_change(void *data, Evas_Object *obj)
+_cb_langs_all_change(void *data, Evas_Object *obj __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
 
@@ -735,16 +735,16 @@ _cb_langs_all_change(void *data, Evas_Object *obj)
 }
 
 static void
-_cb_langs_config(void *data, void *data2)
+_cb_langs_config(void *data __UNUSED__, void *data2 __UNUSED__)
 {
-   E_Config_Dialog_Data *cfdata;
+   //~ E_Config_Dialog_Data *cfdata;
 
-   cfdata = data;
+   //~ cfdata = data;
    news_config_dialog_langs_show();
 }
 
 static void
-_cb_empty(void *data, void *data2)
+_cb_empty(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    E_Confirm_Dialog *cd = NULL;
@@ -762,14 +762,14 @@ _cb_empty(void *data, void *data2)
 }
 
 static void
-_cb_empty_yes(void *data)
+_cb_empty_yes(void *data __UNUSED__)
 {
    news_feed_all_delete();
    news_viewer_all_refresh(0, 0);
 }
 
 static void
-_cb_reset(void *data, void *data2)
+_cb_reset(void *data, void *data2 __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    E_Confirm_Dialog *cd = NULL;
@@ -788,7 +788,7 @@ _cb_reset(void *data, void *data2)
 }
 
 static void
-_cb_reset_yes(void *data)
+_cb_reset_yes(void *data __UNUSED__)
 {
    news_feed_all_restore();
    news_viewer_all_refresh(0, 0);

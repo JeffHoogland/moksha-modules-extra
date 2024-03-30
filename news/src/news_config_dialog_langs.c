@@ -29,7 +29,7 @@ static void         _cb_lang_change(void *data, Evas_Object *obj);
 int
 news_config_dialog_langs_show(void)
 {
-   E_Config_Dialog *cfd;
+   //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
 
    if (e_config_dialog_find("News", DIALOG_CLASS))
@@ -41,7 +41,7 @@ news_config_dialog_langs_show(void)
    v->free_cfdata = _free_data;
    v->basic.create_widgets = _basic_create_widgets;
    
-   cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+   e_config_dialog_new(e_container_current_get(e_manager_current_get()),
 			     D_("News Feeds Language Configuration"),
                              "News", DIALOG_CLASS,
                              news_theme_file_get(NEWS_THEME_CAT_ICON), 0, v, NULL);
@@ -61,7 +61,7 @@ news_config_dialog_langs_hide()
  */
 
 static void *
-_create_data(E_Config_Dialog *cfd) 
+_create_data(E_Config_Dialog *cfd)
 {
    E_Config_Dialog_Data *cfdata;
 
@@ -74,7 +74,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    Lang_Choice *ch;
 
@@ -106,7 +106,7 @@ _fill_data(E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *ol, *of, *o;
    Evas_Object *ob;
@@ -167,7 +167,7 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cf
 }
 
 static void
-_cb_lang_change(void *data, Evas_Object *obj)
+_cb_lang_change(void *data, Evas_Object *obj __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed_Lang *lang;

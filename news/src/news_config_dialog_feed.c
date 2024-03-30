@@ -55,7 +55,7 @@ static void         _icon_select_changed(void *data);
 int
 news_config_dialog_feed_show(News_Feed *feed)
 {
-   E_Config_Dialog *cfd;
+   //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
 
    if (!eina_list_count(news->config->feed.categories))
@@ -73,7 +73,7 @@ news_config_dialog_feed_show(News_Feed *feed)
    v->advanced.apply_cfdata = _common_apply_data;
    v->advanced.create_widgets = _advanced_create_widgets;
    
-   cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+   e_config_dialog_new(e_container_current_get(e_manager_current_get()),
 			     D_("News Feed Configuration"),
                              "E", "_e_mod_news_config_dialog_feed",
                              news_theme_file_get(NEWS_THEME_CAT_ICON), 0, v, feed);
@@ -122,12 +122,13 @@ news_config_dialog_feed_refresh_categories(News_Feed *feed)
 
    pos = 0;
    pos_to_select = -1;
-   for(l=news->config->feed.categories; l; l=eina_list_next(l))
+
+   for (l=news->config->feed.categories; l; l=eina_list_next(l))
      {
         Evas_Object *ic = NULL;
         News_Feed_Category *fc;
         char buf[1024];
-        
+
         fc = eina_list_data_get(l);
 
         if (fc->icon && fc->icon[0])
@@ -136,15 +137,15 @@ news_config_dialog_feed_refresh_categories(News_Feed *feed)
              e_icon_file_set(ic, fc->icon);
           }
 
-	snprintf(buf, sizeof(buf), "%s",
-		 fc->name);
+        snprintf(buf, sizeof(buf), "%s",
+        fc->name);
 
-	if (cfdata->category == fc)
+        if (cfdata->category == fc)
           pos_to_select = pos;
 
         e_widget_ilist_append(ilist, ic, buf, _cb_category_list, cfdata, NULL);
 
-	pos++;
+        pos++;
      }
    e_widget_ilist_go(ilist);
    e_widget_ilist_thaw(ilist);
@@ -207,7 +208,7 @@ news_config_dialog_feed_refresh_langs(News_Feed *feed)
    else
      e_widget_ilist_selected_set(ilist, 0);
    _cb_lang_change(cfdata, NULL);
-   
+
 
    e_widget_size_min_get(ilist, &w, NULL);
    e_widget_size_min_set(ilist, w, 110);
@@ -228,7 +229,7 @@ _create_data(E_Config_Dialog *cfd)
 
    if (feed) feed->config_dialog = cfd;
    else news->config_dialog_feed_new = cfd;
-   
+
    cfdata = E_NEW(E_Config_Dialog_Data, 1);
    _fill_data(cfdata, feed);
    cfd->cfdata = cfdata;
@@ -236,7 +237,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
    free(cfdata->name);
    free(cfdata->language);
@@ -322,7 +323,7 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cf
 }
 
 static void
-_common_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata, Evas_Object *o)
+_common_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata, Evas_Object *o)
 {
    Evas_Object *of, *ob;
 
@@ -492,7 +493,7 @@ _common_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static void
-_cb_lang_change(void *data, Evas_Object *obj)
+_cb_lang_change(void *data, Evas_Object *obj __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed_Lang *lang;
@@ -522,7 +523,7 @@ _cb_category_list(void *data)
 }
 
 static void
-_icon_select(void *data1, void *data2)
+_icon_select(void *data1, void *data2 __UNUSED__)
 {
    E_Config_Dialog *cfd;
    E_Config_Dialog_Data *cfdata;
@@ -575,11 +576,11 @@ _icon_select(void *data1, void *data2)
 }
 
 static void
-_icon_select_cb(void *data, Evas_Object *obj)
+_icon_select_cb(void *data __UNUSED__, Evas_Object *obj __UNUSED__)
 {
-   E_Config_Dialog_Data *cfdata;
+   //~ E_Config_Dialog_Data *cfdata;
 
-   cfdata = data;
+   //~ cfdata = data;
 }
 
 static void

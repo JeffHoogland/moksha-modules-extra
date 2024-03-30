@@ -71,7 +71,7 @@ static void         _cb_color_viewer_font_shadow_change(void *data, Evas_Object 
 int
 news_config_dialog_show(void)
 {
-   E_Config_Dialog *cfd;
+   //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
 
    if (e_config_dialog_find("News", DIALOG_CLASS))
@@ -86,7 +86,7 @@ news_config_dialog_show(void)
    v->advanced.apply_cfdata = _advanced_apply_data;
    v->advanced.create_widgets = _advanced_create_widgets;
    
-   cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+   e_config_dialog_new(e_container_current_get(e_manager_current_get()),
 			     D_("News Main Configuration"),
                              "News", DIALOG_CLASS,
                              news_theme_file_get(NEWS_THEME_CAT_ICON), 0, v, NULL);
@@ -107,7 +107,7 @@ news_config_dialog_hide(void)
  */
 
 static void *
-_create_data(E_Config_Dialog *cfd) 
+_create_data(E_Config_Dialog *cfd)
 {
    E_Config_Dialog_Data *cfdata;
 
@@ -120,7 +120,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    free(cfdata->proxy.host);
 
@@ -129,7 +129,7 @@ _free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static void
-_fill_data(E_Config_Dialog_Data *cfdata) 
+_fill_data(E_Config_Dialog_Data *cfdata)
 {
    News_Config *c;
 
@@ -183,7 +183,7 @@ _fill_data(E_Config_Dialog_Data *cfdata)
 }
 
 static Evas_Object *
-_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o, *of, *ob;
 
@@ -218,7 +218,7 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cf
 }
 
 static Evas_Object *
-_advanced_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_advanced_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o, *o2, *of, *of2, *ob;
    E_Radio_Group *rg;
@@ -356,7 +356,7 @@ _advanced_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data 
 }
 
 static int
-_advanced_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_advanced_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata) 
 {
    News_Config *c;
    int update_feeds = 0;
@@ -453,7 +453,7 @@ _advanced_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static void
-_cb_color_viewer_font_change(void *data, Evas_Object *obj)
+_cb_color_viewer_font_change(void *data, Evas_Object *obj __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
 
@@ -462,7 +462,7 @@ _cb_color_viewer_font_change(void *data, Evas_Object *obj)
 }
 
 static void
-_cb_color_viewer_font_shadow_change(void *data, Evas_Object *obj)
+_cb_color_viewer_font_shadow_change(void *data, Evas_Object *obj __UNUSED__)
 {
    E_Config_Dialog_Data *cfdata;
 

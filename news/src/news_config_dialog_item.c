@@ -26,7 +26,7 @@ static int          _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data
 int
 news_config_dialog_item_show(News_Item *ni)
 {
-   E_Config_Dialog *cfd;
+   //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
 
    v = E_NEW(E_Config_Dialog_View, 1);
@@ -36,7 +36,7 @@ news_config_dialog_item_show(News_Item *ni)
    v->basic.apply_cfdata = _basic_apply_data;
    v->basic.create_widgets = _basic_create_widgets;
    
-   cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
+   e_config_dialog_new(e_container_current_get(e_manager_current_get()),
 			     D_("News Gadget Configuration"),
                              "News", DIALOG_CLASS,
                              news_theme_file_get(NEWS_THEME_CAT_ICON), 0, v, ni);
@@ -57,7 +57,7 @@ news_config_dialog_item_hide(News_Item *ni)
  */
 
 static void *
-_create_data(E_Config_Dialog *cfd) 
+_create_data(E_Config_Dialog *cfd)
 {
    E_Config_Dialog_Data *cfdata;
    News_Item *ni;
@@ -73,7 +73,7 @@ _create_data(E_Config_Dialog *cfd)
 }
 
 static void
-_free_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    cfdata->ni->config_dialog = NULL;
    free(cfdata);
@@ -93,7 +93,7 @@ _fill_data(E_Config_Dialog_Data *cfdata, News_Item *ni)
 }
 
 static Evas_Object *
-_basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
+_basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
    Evas_Object *o;
    Evas_Object *of, *ob;
@@ -135,17 +135,17 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cf
    e_widget_list_object_append(o, ob, 1, 1, 0.0);
    ob = e_widget_check_add(evas, D_("Apply this to all News gadgets"), &(cfdata->apply_to_all));
    e_widget_list_object_append(o, ob, 1, 1, 0.0);
-   
+
    return o;
 }
 
 static int
-_basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
+_basic_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
    News_Config_Item *nic, *nic2;
    News_Item *ni, *ni2;
    Eina_List *l;
-   
+
    ni = cfdata->ni;
    nic = ni->config;
 
@@ -175,7 +175,7 @@ _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
           }
      }
    nic->apply_to_all = cfdata->apply_to_all;
-   
+
    news_config_save();
    return 1;
 }
