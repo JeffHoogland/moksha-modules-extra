@@ -544,7 +544,7 @@ int photo_item_action_menu(Photo_Item *pi, Evas_Event_Mouse_Down *ev)
 Picture *_picture_new_get(Photo_Item *pi)
 {
    Picture *picture = NULL;
-   int from_rand, from_conf, from_final;
+   int from_rand, from_conf, from_final = PICTURE_LOCAL;
 
    from_conf = photo->config->pictures_from;
    switch (from_conf)
