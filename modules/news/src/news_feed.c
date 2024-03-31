@@ -1100,7 +1100,7 @@ _get_host_from_url(const char *url)
    char *host, *p;
    char buf[PATH_MAX];
 
-   strncpy(buf, url, sizeof(buf));
+   strncpy(buf, url, sizeof(buf) - 1);
    if (strncmp(buf, "http://", 7))
      return NULL;
    if (*(buf+7) == '\0')

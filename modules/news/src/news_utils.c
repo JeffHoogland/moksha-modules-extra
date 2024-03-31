@@ -120,7 +120,7 @@ news_util_proxy_detect(void)
    c = news->config;
    proxy = getenv("HTTP_PROXY");
    if (!proxy) return 0;
-   strncpy(buf, proxy, sizeof(buf));
+   strncpy(buf, proxy, sizeof(buf) - 1);
    port = strrchr(buf, ':');
    if (!port || (port == buf)) return 0;
    if (!sscanf(port+1, "%d", &c->proxy.port)) return 0;
