@@ -262,7 +262,7 @@ static int
 _advanced_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
 {
    int ret;
-   
+
    ret = _common_apply_data(cfd, cfdata);
 
    alarm_config->time_format = cfdata->time_format;
@@ -284,11 +284,11 @@ _advanced_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 }
 
 static void
-_cb_alarms_list(void *data)
+_cb_alarms_list(void *data __UNUSED__)
 {
-   E_Config_Dialog_Data *cfdata;
-   
-   cfdata = data;
+   //~ E_Config_Dialog_Data *cfdata;
+
+   //~ cfdata = data;
 }
 
 static void
