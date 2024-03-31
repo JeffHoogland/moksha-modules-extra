@@ -24,7 +24,7 @@ static int _advanced_apply_data (E_Config_Dialog * cfd,
 static void _fill_data (Flame * f, E_Config_Dialog_Data * cfdata);
 
 E_Config_Dialog *
-e_int_config_flame_module(E_Container *con, const char *params) 
+e_int_config_flame_module(E_Container *con, const char *params __UNUSED__)
 {
    E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
@@ -51,12 +51,12 @@ e_int_config_flame_module(E_Container *con, const char *params)
 }
 
 static void *
-_create_data (E_Config_Dialog * cfd)
+_create_data (E_Config_Dialog * cfd __UNUSED__)
 {
   E_Config_Dialog_Data *cfdata;
-  Flame *f;
+  //~ Flame *f;
 
-  f = cfd->data;
+  //~ f = cfd->data;
   cfdata = E_NEW (E_Config_Dialog_Data, 1);
   return cfdata;
 }
@@ -152,6 +152,7 @@ _basic_apply_data (E_Config_Dialog * cfd, E_Config_Dialog_Data * cfdata)
       f->conf->r = 0;
       f->conf->g = 0;
       f->conf->b = 0;
+      break;
     case 7:
       f->conf->palette_type = CUSTOM_PALETTE;	//Custom
       break;
