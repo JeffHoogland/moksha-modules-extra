@@ -4,13 +4,22 @@ Optional additional modules for the [Moksha desktop](https://github.com/JeffHoog
 Module List:
 
 - Alarm
+- Calendar
 - Cpu
 - Deskshow
+- Diskio
 - Engage
 - Flame
-- Forecasts
 - Mem
+- Net
 - Penguins
-- Places
+- Photo
 - Rain
 - Screenshot
+- Slideshow
+- Snow
+- Tclock
+- Trash
+- Wincontrol
+- Winlist-ng
+- Winselector
