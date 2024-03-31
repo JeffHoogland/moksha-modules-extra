@@ -36,11 +36,12 @@ news_popup_shutdown(void)
 }
 
 News_Popup *
-news_popup_add(int type, const char *title, const char *text, int timer, int (*func_close) (News_Popup *popw, void *data), void (*func_desactivate) (News_Popup *popw, void *data), void *data)
+news_popup_add(int type, const char *title __UNUSED__, const char *text __UNUSED__, int timer,
+               int (*func_close) (News_Popup *popw, void *data), void (*func_desactivate) (News_Popup *popw, void *data), void *data)
 {
   E_Zone *zone;
   News_Popup *popw;
-  int fw, fh;
+  int fw = 0, fh = 0;
   int ecanvas_w, ecanvas_h;
 
   popw = E_NEW(News_Popup, 1);
@@ -197,7 +198,7 @@ _try_close(News_Popup *popw)
    if (popw->func_close)
      {
        if (!popw->func_close(popw, popw->data))
-	 del = 0;
+       del = 0;
      }
 
    if (del)
@@ -216,7 +217,7 @@ _cb_timer(void *data)
 }
 
 static void
-_cb_edje_close(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_edje_close(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    News_Popup *popw;
 
@@ -225,7 +226,7 @@ _cb_edje_close(void *data, Evas_Object *obj, const char *emission, const char *s
 }
 
 static void
-_cb_edje_desactivate(void *data, Evas_Object *obj, const char *emission, const char *source)
+_cb_edje_desactivate(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    News_Popup *popw;
 

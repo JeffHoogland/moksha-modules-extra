@@ -206,7 +206,7 @@ static Eina_Bool
 _idler(void *data)
 {
    News_Parse *parser;
-   News_Parse_Error err;
+   News_Parse_Error err = NEWS_PARSE_ERROR_NO;
 
    parser = data;
 
@@ -283,12 +283,12 @@ _idler(void *data)
 static News_Parse_Error
 _idler_parse_detect_metas(News_Parse *parser)
 {
-   News_Feed *feed;
+   //~ News_Feed *feed;
    News_Feed_Document *doc;
    float ver;
 
    doc = parser->doc;
-   feed = doc->feed;
+   //~ feed = doc->feed;
    ver = doc->parse.version;
 
    /* already done in a previous update ? */
@@ -306,13 +306,13 @@ _idler_parse_detect_metas(News_Parse *parser)
         else
           doc->parse.meta_channel = eina_stringshare_add("<channel>");
 
-	doc->parse.meta_date = eina_stringshare_add("<dc:date");
+        doc->parse.meta_date = eina_stringshare_add("<dc:date");
      }
    else if ((ver > 0.0) && (ver <= 2.0))
      {
         doc->parse.meta_article = eina_stringshare_add("<item>");
         doc->parse.meta_channel = eina_stringshare_add("<channel>");
-	doc->parse.meta_date = eina_stringshare_add("<pubDate");
+        doc->parse.meta_date = eina_stringshare_add("<pubDate");
      }
 
    if (!doc->parse.meta_channel)
@@ -559,7 +559,7 @@ _idler_parse_item_date(News_Parse *parser)
 }
 
 static News_Parse_Error
-_idler_parse_item_image(News_Parse *parser)
+_idler_parse_item_image(News_Parse *parser __UNUSED__)
 {
    // TODO parse and ecore_download
 

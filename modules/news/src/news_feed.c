@@ -392,7 +392,7 @@ news_feed_edit(News_Feed *f, char *name, int name_ovrw, char *language, int lang
         f->category = category;
 
         if (f->item)
-	  {
+          {
              News_Feed_Ref *ref;
 
              if (f->icon && !f->obj_icon)
@@ -407,7 +407,7 @@ news_feed_edit(News_Feed *f, char *name, int name_ovrw, char *language, int lang
                   if (ref->category) eina_stringshare_del(ref->category);
                   ref->category = eina_stringshare_add(f->category->name);
                }
-	  }
+          }
 
         news_config_save();
      }
@@ -1098,7 +1098,7 @@ static char *
 _get_host_from_url(const char *url)
 {
    char *host, *p;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    strncpy(buf, url, sizeof(buf));
    if (strncmp(buf, "http://", 7))

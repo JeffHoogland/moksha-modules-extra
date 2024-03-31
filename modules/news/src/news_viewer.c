@@ -640,7 +640,7 @@ _dialog_cb_del(void *obj)
 }
 
 static void
-_dialog_cb_key_down(void *data, Evas *e, Evas_Object *obj, void *event)
+_dialog_cb_key_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event)
 {
    Evas_Event_Key_Down *ev;
    News_Viewer *nv;
@@ -681,7 +681,7 @@ _vfeeds_buttons_state_refresh(News_Viewer *nv)
 }
 
 static void
-_vfeeds_cb_button_feed(void *data, void *data2)
+_vfeeds_cb_button_feed(void *data, void *data2 __UNUSED__)
 {
    News_Viewer *nv;
 
@@ -693,7 +693,7 @@ _vfeeds_cb_button_feed(void *data, void *data2)
 }
 
 static void
-_vfeeds_cb_button_refresh(void *data, void *data2)
+_vfeeds_cb_button_refresh(void *data, void *data2 __UNUSED__)
 {
    News_Viewer *nv;
    News_Feed *f;
@@ -706,7 +706,7 @@ _vfeeds_cb_button_refresh(void *data, void *data2)
 }
 
 static void
-_vfeeds_cb_button_setasread(void *data, void *data2)
+_vfeeds_cb_button_setasread(void *data, void *data2 __UNUSED__)
 {
    News_Viewer *nv;
    News_Feed *f;
@@ -845,11 +845,11 @@ _vcontent_feed_infos_set(News_Viewer *nv)
      {
         switch(f->doc->parse.error)
           {
-	   case NEWS_PARSE_ERROR_NO:
-	   case NEWS_PARSE_ERROR_NOT_IMPLEMENTED:
+             case NEWS_PARSE_ERROR_NO:
+             case NEWS_PARSE_ERROR_NOT_IMPLEMENTED:
              break;
-	   case NEWS_PARSE_ERROR_BROKEN_FEED:
-	   case NEWS_PARSE_ERROR_TYPE_UNKNOWN:
+             case NEWS_PARSE_ERROR_BROKEN_FEED:
+             case NEWS_PARSE_ERROR_TYPE_UNKNOWN:
              snprintf(buf_error, sizeof(buf_error),
                       "<br><color=#ff0000>An error happend during the parse of this feed !<br>"
                       "You can report error at ooookiwi@gmail.com to get it fixed</><br><br>");
@@ -862,11 +862,12 @@ _vcontent_feed_infos_set(News_Viewer *nv)
 
              switch (f->doc->parse.type)
                {
-		case NEWS_FEED_TYPE_RSS:
-                  type = "RSS"; break;
-		case NEWS_FEED_TYPE_ATOM:
-                  type = "ATOM <color=#ff0000>(not supported for now)</>"; break;
-		default:
+                  case NEWS_FEED_TYPE_RSS:
+                    type = "RSS"; 
+                  break;
+                  case NEWS_FEED_TYPE_ATOM:
+                    type = "ATOM <color=#ff0000>(not supported for now)</>"; break;
+                  default:
                   type = "UNKNOWN";
                }
              snprintf(buf_mtime, sizeof(buf_mtime),
@@ -913,13 +914,13 @@ _vcontent_feed_infos_set(News_Viewer *nv)
 }
 
 static void
-_vcontent_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
+_vcontent_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
 {
    News_Viewer *nv;
-   Evas_Event_Mouse_Down *ev;
+   //~ Evas_Event_Mouse_Down *ev;
 
    nv = data;
-   ev = event_info;
+   //~ ev = event_info;
 
    if (nv->varticles.selected)
      {

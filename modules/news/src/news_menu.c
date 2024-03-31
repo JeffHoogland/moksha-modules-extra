@@ -160,7 +160,7 @@ _menu_append(E_Menu *ma, News_Item *ni)
 }
 
 static void
-_cb_configure_feed(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_configure_feed(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    News_Feed *f;
 
@@ -172,7 +172,7 @@ _cb_configure_feed(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_configure_item(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_configure_item(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    News_Item *ni;
 
@@ -184,7 +184,7 @@ _cb_configure_item(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_configure_item_content(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_configure_item_content(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    News_Item *ni;
 
@@ -196,7 +196,7 @@ _cb_configure_item_content(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_configure_main(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_configure_main(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    if (!news) return;
 
@@ -204,7 +204,7 @@ _cb_configure_main(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_configure_feeds(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_configure_feeds(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    if (!news) return;
 
@@ -212,7 +212,7 @@ _cb_configure_feeds(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_item_setasread(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_item_setasread(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    News_Item *ni;
 
@@ -224,7 +224,7 @@ _cb_item_setasread(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_item_update(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_item_update(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    News_Item *ni;
 
@@ -235,7 +235,7 @@ _cb_item_update(void *data, E_Menu *m, E_Menu_Item *mi)
 }
 
 static void
-_cb_feed_deactivate_post(void *data, E_Menu *m)
+_cb_feed_deactivate_post(void *data, E_Menu *m __UNUSED__)
 {
    News_Feed *f;
 
@@ -248,7 +248,7 @@ _cb_feed_deactivate_post(void *data, E_Menu *m)
 }
 
 static void
-_cb_browser_deactivate_post(void *data, E_Menu *m)
+_cb_browser_deactivate_post(void *data, E_Menu *m __UNUSED__)
 {
    News_Item *ni;
 
@@ -261,7 +261,7 @@ _cb_browser_deactivate_post(void *data, E_Menu *m)
 }
 
 static void
-_cb_browser_feed(void *data, E_Menu *m, E_Menu_Item *mi)
+_cb_browser_feed(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    News_Feed *feed;
    News_Item *ni;

@@ -6,7 +6,7 @@
  */
 
 int
-news_url_image_get(char *url, void (*func_cb) (News_Feed_Document *doc, int error))
+news_url_image_get(char *url __UNUSED__, __UNUSED__ void (*func_cb ) (News_Feed_Document *doc, int error __UNUSED__))
 {
    // TODO
 
@@ -64,7 +64,7 @@ news_util_browser_open(const char *url)
    snprintf(buf, sizeof(buf), "xdg-open \"%s\"", url);
    DBROWSER(("Exec %s", buf));
    exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
-   if (exe > 0)
+   if (exe)
      {
         ecore_exe_free(exe);
      }
