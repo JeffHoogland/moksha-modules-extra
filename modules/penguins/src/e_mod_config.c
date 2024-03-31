@@ -3,7 +3,6 @@
 #include "e_mod_config.h"
 #include "config.h"
 
-
 struct _E_Config_Dialog_Data
 {
    double zoom;
@@ -20,8 +19,9 @@ static int _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 static void _fill_data(Population *pop, E_Config_Dialog_Data *cfdata);
 //static E_Config_Dialog *
 //_pager_config_dialog(E_Container *con, const char *params)
+
 E_Config_Dialog *
-e_int_config_penguins_module(E_Container *con, const char *params)
+e_int_config_penguins_module(E_Container *con, const char *params __UNUSED__)
 {
    E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
@@ -31,7 +31,7 @@ e_int_config_penguins_module(E_Container *con, const char *params)
    pop = penguins_mod->data;
    if (e_config_dialog_find("Penguins", "appearance/penguins")) return NULL;
    v = E_NEW(E_Config_Dialog_View, 1);
-   
+
    v->create_cfdata = _create_data;
    v->free_cfdata = _free_data;
    v->basic.apply_cfdata = _basic_apply_data;
@@ -150,11 +150,11 @@ _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 
    pop = cfd->data;
    e_border_button_bindings_ungrab_all();
-   
+
    pop->conf->penguins_count = cfdata->penguins_count;
    pop->conf->zoom = cfdata->zoom;
    pop->conf->alpha = cfdata->alpha;
-   
+
    eina_stringshare_del(pop->conf->theme);
    pop->conf->theme = eina_stringshare_ref(cfdata->theme);
 

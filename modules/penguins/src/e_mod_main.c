@@ -196,7 +196,8 @@ _population_init(E_Module *m)
 }
 
 Eina_Bool 
-_action_free(const Eina_Hash *hash, const void *key, void *data, void *fdata)
+_action_free(const Eina_Hash *hash __UNUSED__, const void *key __UNUSED__,
+             void *data, void *fdata __UNUSED__)
 {
    Action *a;
    a = data;
@@ -253,9 +254,9 @@ _population_shutdown(Population *pop)
 
    while (pop->cons)
    {
-      E_Container *con;
+      //~ E_Container *con;
 
-      con = pop->cons->data;
+      //~ con = pop->cons->data;
       pop->cons = eina_list_remove_list(pop->cons, pop->cons);
    }
 
@@ -356,7 +357,7 @@ _load_custom_action(Population *pop, const char *filename, char *name)
 }
 
 Eina_Bool
-hash_fn(const Eina_Hash *hash, const char *key, void *data, void *fdata)
+hash_fn(const Eina_Hash *hash __UNUSED__, const char *key, void *data, void *fdata __UNUSED__)
 {
    Action *a = data;
    printf("PENGUINS: Load action: '%s' w:%d h:%d speed:%d\n", key, a->w, a->h, a->speed);
@@ -457,20 +458,23 @@ _delay_born(void *data)
 }
 
 static void
-_cb_click_l (void *data, Evas_Object *o, const char *emi, const char *src)
+_cb_click_l (void *data, Evas_Object *o __UNUSED__, const char *emi __UNUSED__,
+             const char *src __UNUSED__)
 {
    Penguin *tux = data;
    //printf("Left-click on TUX !!!\n");
    _start_bombing_at(tux, tux->y + tux->action->h);
 }
 static void
-_cb_click_r (void *data, Evas_Object *o, const char *emi, const char *src)
+_cb_click_r (void *data __UNUSED__, Evas_Object *o __UNUSED__,
+             const char *emi __UNUSED__, const char *src __UNUSED__)
 {
    //printf("Right-click on TUX !!!\n");
    e_int_config_penguins_module(NULL, NULL);
 }
 static void
-_cb_click_c (void *data, Evas_Object *o, const char *emi, const char *src)
+_cb_click_c (void *data __UNUSED__, Evas_Object *o __UNUSED__,
+             const char *emi __UNUSED__, const char *src __UNUSED__)
 {
    //printf("Center-click on TUX !!!\n");
 }
@@ -677,7 +681,7 @@ _cb_animator(void *data)
 }
 
 static int
-_is_inside_any_win(Population *pop, int x, int y, int ret_value)
+_is_inside_any_win(Population *pop __UNUSED__, int x, int y, int ret_value)
 {
    Eina_List *l;
    E_Container *con;
@@ -831,7 +835,8 @@ _start_angel_at(Penguin *tux, int at_y)
 }
 
 static void 
-_cb_splatter_end(void *data, Evas_Object *o, const char *emi, const char *src)
+_cb_splatter_end(void *data, Evas_Object *o, const char *emi __UNUSED__,
+                 const char *src __UNUSED__)
 {
    Penguin *tux = data;
    edje_object_signal_callback_del(o,"splatting_done","edje", _cb_splatter_end);
@@ -860,7 +865,8 @@ _start_splatting_at(Penguin *tux, int at_y)
 }
 
 static void 
-_cb_bomber_end(void *data, Evas_Object *o, const char *emi, const char *src)
+_cb_bomber_end(void *data, Evas_Object *o, const char *emi __UNUSED__,
+               const char *src __UNUSED__)
 {
    Penguin *tux = data;
    edje_object_signal_callback_del(o,"bombing_done","edje", _cb_bomber_end);
@@ -895,7 +901,8 @@ _start_bombing_at(Penguin *tux, int at_y)
 }
 
 static void 
-_cb_custom_end(void *data, Evas_Object *o, const char *emi, const char *src)
+_cb_custom_end(void *data, Evas_Object *o, const char *emi __UNUSED__,
+               const char *src __UNUSED__)
 {
    Penguin* tux = data;
    //printf("PENGUINS: Custom action end.\n");
