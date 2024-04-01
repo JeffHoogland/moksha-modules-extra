@@ -640,6 +640,7 @@ _mail_cb_check (void *data)
    return EINA_TRUE;
 }
 
+#ifdef HAVE_ENOTIFY
 static void
 _mail_popup_cb(void *data, unsigned int id)
 {
@@ -647,6 +648,7 @@ _mail_popup_cb(void *data, unsigned int id)
 
    inst->notification_id = id;
 }
+#endif
 
 void
 _mail_set_text (void *data)
