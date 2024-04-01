@@ -383,8 +383,8 @@ int  photo_item_action_setbg(Photo_Item *pi)
 {
    Picture *p;
    E_Zone *zone;
-   Ecore_Exe *exe;
-   const char *file;
+   Ecore_Exe *exe = NULL;
+   const char *file = NULL;
    char buf[4096];
    Import *import;
 
@@ -440,8 +440,11 @@ int  photo_item_action_setbg(Photo_Item *pi)
     // FIX ME: This is broken below
     // Uses an old version of e17 enlightenment_remote no longer has such an option
     //   altho I have thought about adding it. regardless should use native e code here
-	snprintf(buf, 4096, "enlightenment_remote -default-bg-set \"%s\"", file);
-	exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
+	if (file)
+	   {
+		 snprintf(buf, 4096, "enlightenment_remote -default-bg-set \"%s\"", file);
+	     exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
+	   }
 	if (exe)
 	  {
 	    ecore_exe_free(exe);
