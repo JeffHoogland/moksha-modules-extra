@@ -395,7 +395,7 @@ _advanced_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfda
         (cfdata->viewer.vcontent.color_changed) )
    {
       int recreate = 0;
-      char buf[8];
+      char buf[27];
       
       if ( (c->viewer.vcontent.font_size != cfdata->viewer.vcontent.font_size) ||
            (c->viewer.vcontent.font_shadow != cfdata->viewer.vcontent.font_shadow) ||
@@ -410,7 +410,7 @@ _advanced_apply_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfda
       if (cfdata->viewer.vcontent.font_color->r < 16) cfdata->viewer.vcontent.font_color->r = 16;
       if (cfdata->viewer.vcontent.font_color->g < 16) cfdata->viewer.vcontent.font_color->g = 16;
       if (cfdata->viewer.vcontent.font_color->b < 16) cfdata->viewer.vcontent.font_color->b = 16;
-      snprintf(buf, sizeof(buf), "#%x%x%x",
+      snprintf(buf, sizeof(buf)-1, "#%x%x%x",
                cfdata->viewer.vcontent.font_color->r,
                cfdata->viewer.vcontent.font_color->g,
                cfdata->viewer.vcontent.font_color->b);
