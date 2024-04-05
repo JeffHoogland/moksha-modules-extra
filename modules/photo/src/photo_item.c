@@ -437,20 +437,21 @@ int  photo_item_action_setbg(Photo_Item *pi)
      }
    
     DITEM(("Set edje background %s", import->file));
-    // FIX ME: This is broken below
-    // Uses an old version of e17 enlightenment_remote no longer has such an option
-    //   altho I have thought about adding it. regardless should use native e code here
-	if (file)
-	   {
-		 snprintf(buf, 4096, "enlightenment_remote -default-bg-set \"%s\"", file);
-	     exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
-	   }
-	if (exe)
-	  {
-	    ecore_exe_free(exe);
-	    if (photo->config->pictures_set_bg_purge)
-	      photo_picture_setbg_add(name);
-	  }
+    // FIX ME: Should use native e code here
+    // Added enlightenment_remote -default-bg-set to Moksha
+    //   commit eba02ad Apr 04 2024
+    //   moksha version 0.4.1.17979
+    if (file)
+       {
+         snprintf(buf, 4096, "enlightenment_remote -default-bg-set \"%s\"", file);
+         exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
+       }
+    if (exe)
+      {
+        ecore_exe_free(exe);
+        if (photo->config->pictures_set_bg_purge)
+          photo_picture_setbg_add(name);
+      }
     name = NULL;
 
    return 1;
