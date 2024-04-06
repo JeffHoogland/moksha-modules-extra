@@ -199,7 +199,7 @@ char *photo_picture_infos_get(Picture *p)
    int w = 0, h = 0;
 
    if (!photo_util_image_size(p->path, &w, &h))
-      DPICL(("Picture load error: $s", p->path));
+      DPICL(("Picture load error: %s", p->path));
 
    if (ecore_file_exists(p->path))
      {

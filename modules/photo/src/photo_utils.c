@@ -46,7 +46,7 @@ photo_util_image_size(const char *path, int *w, int *h)
       evas_object_image_size_get(img, w, h);
    else
      {
-         DPICL(("Picture load error: $d", err));
+         DPICL(("Picture load error: %d", err));
          ret = EINA_FALSE;
       }
    evas_object_del(img);
