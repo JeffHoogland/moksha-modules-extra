@@ -156,7 +156,7 @@ _ng_border_menu_cb_unmaximize(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi 
 }
 
 static void
-_ng_border_menu_cb_fullscreen(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
+_ng_border_menu_cb_fullscreen(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi)
 {
    E_Border *bd = (E_Border *)data;
    int toggle;
