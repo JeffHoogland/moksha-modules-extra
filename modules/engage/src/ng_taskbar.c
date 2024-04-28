@@ -135,7 +135,7 @@ _border_find(Ngi_Box *box, E_Border *bd)
 /* *************************  DND  CALLBACKS  ************************** */
 
 static void
-_cb_drop_enter(void *data, const char *type __UNUSED__, void *event_info __UNUSED__)
+_cb_drop_enter(void *data, const char *type __UNUSED__, void *event_info)
 {
    E_Event_Dnd_Enter *ev = (E_Event_Dnd_Enter *)event_info;
    Ngi_Box *box = (Ngi_Box *)data;
@@ -650,7 +650,7 @@ _item_set_label(Ngi_Item_Taskbar *it)
         right = title + (strlen(title) - (max_len / 2));
 
         strncpy(abbv, left, max_len / 2);
-        strncat(abbv, "...", 3);
+        strncat(abbv, "...", 4);
         strncat(abbv, right, max_len / 2);
 
       ngi_item_label_set((Ngi_Item*)it, abbv);
