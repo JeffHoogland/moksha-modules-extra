@@ -346,13 +346,14 @@ _tclock_cb_check(void *data)
              else
                edje_object_signal_emit(inst->tclock, "date_visible", "");
           }
+
         edje_object_message_signal_process(inst->tclock);
 
-        memset(buf, 0, sizeof(buf));
+        memset (buf, 0, sizeof(buf));
 
-        offset_int=atoi(inst->ci->time_offset);
+        offset_int = atoi(inst->ci->time_offset);
 
-        current_time = time(NULL)+offset_int*3600;
+        current_time = time(NULL) + offset_int * 3600;
         local_time = localtime(&current_time);
 
         if (inst->ci->time_format)
@@ -372,9 +373,9 @@ _tclock_cb_check(void *data)
                                     inst->ci->font_size_up);
         edje_object_text_class_set (inst->tclock, "module_small", "Sans:style=Mono",
                                     inst->ci->font_size_down);
-        edje_object_color_class_set(inst->tclock, "module_label", inst->ci->color_r,
-                                    inst->ci->color_g, inst->ci->color_b, 
-                                    inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
+        edje_object_color_class_set (inst->tclock, "module_label", inst->ci->color_r,
+                                     inst->ci->color_g, inst->ci->color_b, 
+                                     inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
      }
    _eval_instance_size(inst);
    return EINA_TRUE;

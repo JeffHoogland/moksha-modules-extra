@@ -1,9 +1,6 @@
 collections
 {
-   images 
-     {
-     }
-   group
+  group
      {
 	name: "modules/tclock/main";
 	parts
@@ -40,13 +37,13 @@ collections
 			  ellipsis: -1;	  
 		       }
 		    }
-		  description 
+		  description
 		    {
 		       state: "hidden" 0.0;
 		       inherit: "default" 0.0;
 		       visible: 0;
 		    }
-		  description 
+		  description
 		    {
 		       state: "visible" 0.0;
 		       inherit: "default" 0.0;
@@ -130,9 +127,9 @@ collections
 	       }
 	  }
 	/* Close Parts */
-	programs 
+	programs
 	  {
-	     program 
+	     program
 	       {
 		  name: "p1";
 		  signal: "time_hidden";
