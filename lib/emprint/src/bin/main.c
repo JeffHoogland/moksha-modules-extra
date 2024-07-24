@@ -865,7 +865,7 @@ _em_grab_region_end(void)
    _em_band_hide();
 
    /* grab shot */
-   _em_take_shot(x, y, w, h);
+   _em_take_shot(x + 2, y + 2, w - 4, h - 4);
 
    /* quit the app */
    ecore_main_loop_quit();
