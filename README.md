@@ -10,8 +10,10 @@ Module List:
 - Diskio
 - Engage
 - Flame
+- Mail
 - Mem
 - Net
+- News
 - Penguins
 - Photo
 - Rain
@@ -20,6 +22,5 @@ Module List:
 - Snow
 - Tclock
 - Trash
-- Wincontrol
 - Winlist-ng
 - Winselector
