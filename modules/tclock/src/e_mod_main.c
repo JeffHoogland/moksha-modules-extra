@@ -200,7 +200,6 @@ _tclock_cb_mouse_in(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__,
    char buf[1024];
    time_t current_time;
    struct tm *local_time;
- 
 
    if (!(inst = data)) return;
    if (!inst->ci->show_tip) return;
@@ -385,7 +384,7 @@ static Config_Item *
 _tclock_config_item_get(const char *id)
 {
    Config_Item *ci;
-   
+
    GADCON_CLIENT_CONFIG_GET(Config_Item, tclock_config->items, _gc_class, id);
 
    ci = E_NEW(Config_Item, 1);

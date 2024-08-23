@@ -108,7 +108,7 @@ _basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data 
    e_widget_frametable_object_append(of, time_entry, 0, 1, 1, 1, 1, 0, 1, 0);
    ob = e_widget_label_add(evas, D_("Consult strftime(3) for format syntax"));
    e_widget_frametable_object_append(of, ob, 0, 2, 1, 1, 1, 0, 1, 0);
-   
+
    ob = e_widget_label_add(evas, D_("Add time offset (e.g.+2)"));
    e_widget_frametable_object_append(of, ob, 0, 3, 1, 1, 1, 0, 1, 0);
    
@@ -117,8 +117,7 @@ _basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data 
    e_widget_disabled_set(time_entry, !cfdata->show_time);
    e_widget_size_min_set(time_entry, 150, 20);
    e_widget_frametable_object_append(of, offset_entry, 0, 4, 1, 1, 1, 0, 1, 0);
-   
-   
+
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
    of = e_widget_frametable_add (evas, D_ ("Bottom"), 1);
@@ -147,12 +146,12 @@ _basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data 
    e_widget_list_object_append(o, of, 1, 1, 0.5);
    
    of = e_widget_frametable_add(evas, D_("Font size"), 1);
-   
+
    ob = e_widget_label_add(evas, D_("Top line"));
    e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
    ob = e_widget_slider_add(evas, 1, 0, "%2.0f", 8, 40, 1.0, 0, &(cfdata->font_size_up), NULL, 40);
    e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 1, 1, 1);
-   
+
    ob = e_widget_label_add(evas, D_("Bottom line"));
    e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1); 
    ob = e_widget_slider_add(evas, 1, 0, "%2.0f", 8, 40, 1.0, 0, &(cfdata->font_size_down), NULL, 40);
@@ -165,7 +164,7 @@ _basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data 
    
    ob = e_widget_label_add(evas, D_("Click for the color selector"));
    e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1); 
-  
+
    ob = e_widget_color_well_add_full(evas, cfdata->color, 1, 1);
    e_widget_frametable_object_append_full(of, ob, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 45,25,45,25); 
    
@@ -189,7 +188,7 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    ci->color_g = cfdata->color->g;
    ci->color_b = cfdata->color->b;
    ci->color_alpha = cfdata->color->a;
-   
+
    if (ci->time_format) eina_stringshare_del(ci->time_format);
    ci->time_format = eina_stringshare_add(cfdata->time_format);
    if (ci->time_offset) eina_stringshare_del(ci->time_offset);
