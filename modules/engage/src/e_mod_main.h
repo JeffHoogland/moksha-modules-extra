@@ -15,13 +15,13 @@
 
 #define MOD_CONFIG_FILE_EPOCH 0x0001
 #define MOD_CONFIG_FILE_GENERATION 0x0001
-#define MOD_CONFIG_FILE_VERSION					\
+#define MOD_CONFIG_FILE_VERSION                              \
   ((MOD_CONFIG_FILE_EPOCH << 16) | MOD_CONFIG_FILE_GENERATION)
 
-#define AUTOHIDE_NONE		0
-#define AUTOHIDE_NORMAL		1
-#define AUTOHIDE_FULLSCREEN	2
-#define AUTOHIDE_OVERLAP	3
+#define AUTOHIDE_NONE       0
+#define AUTOHIDE_NORMAL     1
+#define AUTOHIDE_FULLSCREEN 2
+#define AUTOHIDE_OVERLAP    3
 
 typedef struct _Config             Config;
 typedef struct _Config_Item        Config_Item;
@@ -62,8 +62,8 @@ struct _Config_Item
   int            orient;
   int            size;
   int            window_size;
-  int	         autohide;
-  int	         autohide_show_urgent;
+  int            autohide;
+  int            autohide_show_urgent;
   int            hide_below_windows;
   float          zoomfactor;
   float          zoom_range;
@@ -107,17 +107,15 @@ struct _Config_Gadcon
 };
 
 
-
 struct _Ngi_Win
 {
-  Ng             *ng;
-  E_Popup        *popup;
-  Ecore_X_Window  input;
-  Ecore_X_Rectangle rect;
-  E_Win          *fake_iwin;
-  E_Object       *drop_win;
+  Ng                *ng;
+  E_Popup           *popup;
+  Ecore_X_Window     input;
+  Ecore_X_Rectangle  rect;
+  E_Win             *fake_iwin;
+  E_Object          *drop_win;
 };
-
 
 
 struct _Ng
@@ -129,7 +127,7 @@ struct _Ng
   Config_Item     *cfg;
 
   E_Zone          *zone;
-  E_Shelf        *es;
+  E_Shelf         *es;
 
   Evas_Object     *o_bg;
   Evas_Object     *o_frame;
@@ -176,12 +174,12 @@ struct _Ng
 
   struct
   {
-    int clip_separator;
-    int separator_width;
-    int item_spacing;
-    int edge_offset;
-    int bg_offset;
-    int reflection_offset;
+    int    clip_separator;
+    int    separator_width;
+    int    item_spacing;
+    int    edge_offset;
+    int    bg_offset;
+    int    reflection_offset;
     double keep_overlay_pos;
     double fade_duration;
   } opt;
@@ -284,7 +282,6 @@ EAPI int   e_modapi_about    (E_Module *m);
 EAPI int   e_modapi_config   (E_Module *m);
 
 EAPI E_Config_Dialog *ngi_instances_config(E_Container *con, const char *params);
-
 
 
 Ng          *ngi_new                          (Config_Item *ci);

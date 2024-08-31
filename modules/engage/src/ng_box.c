@@ -19,17 +19,17 @@ ngi_box_new(Ng *ng)
    switch(box->ng->cfg->orient)
      {
       case E_GADCON_ORIENT_BOTTOM:
-    ngi_object_theme_set(box->separator, "e/modules/engage/separator_bottom");
-    break;
+         ngi_object_theme_set(box->separator, "e/modules/engage/separator_bottom");
+        break;
       case E_GADCON_ORIENT_TOP:
-    ngi_object_theme_set(box->separator, "e/modules/engage/separator_top");
-         break;
+         ngi_object_theme_set(box->separator, "e/modules/engage/separator_top");
+        break;
       case E_GADCON_ORIENT_LEFT:
-    ngi_object_theme_set(box->separator, "e/modules/engage/separator_left");
-         break;
+         ngi_object_theme_set(box->separator, "e/modules/engage/separator_left");
+        break;
       case E_GADCON_ORIENT_RIGHT:
-    ngi_object_theme_set(box->separator, "e/modules/engage/separator_right");
-         break;
+         ngi_object_theme_set(box->separator, "e/modules/engage/separator_right");
+        break;
      }
 
    const char *clip_to = edje_object_data_get(box->separator, "clip_to_background");
@@ -38,9 +38,7 @@ ngi_box_new(Ng *ng)
       evas_object_clip_set(box->separator, ng->bg_clip);
 
    evas_object_clip_set(box->separator, ng->bg_clip);
-
    ng->boxes = eina_list_append(ng->boxes, box);
-
    return box;
 }
 

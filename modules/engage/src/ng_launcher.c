@@ -6,21 +6,21 @@
 
 */
 
-static void      _box_fill           (Ngi_Box *box);
-static void      _app_change_cb      (void *data, E_Order *eo);
+static void       _box_fill           (Ngi_Box *box);
+static void       _app_change_cb      (void *data, E_Order *eo);
 
-static void      _item_new           (Ngi_Box *box, Efreet_Desktop *dekstop, int instant, Ngi_Item_Launcher *after);
-static void      _item_fill          (Ngi_Item_Launcher *it);
+static void       _item_new           (Ngi_Box *box, Efreet_Desktop *dekstop, int instant, Ngi_Item_Launcher *after);
+static void       _item_fill          (Ngi_Item_Launcher *it);
 
-static void      _item_cb_free       (Ngi_Item *it);
-static void      _item_cb_drag_start (Ngi_Item *it);
-static void      _item_cb_mouse_up   (Ngi_Item *it, Ecore_Event_Mouse_Button *ev);
-static void      _item_cb_mouse_down (Ngi_Item *it, Ecore_Event_Mouse_Button *ev);
+static void       _item_cb_free       (Ngi_Item *it);
+static void       _item_cb_drag_start (Ngi_Item *it);
+static void       _item_cb_mouse_up   (Ngi_Item *it, Ecore_Event_Mouse_Button *ev);
+static void       _item_cb_mouse_down (Ngi_Item *it, Ecore_Event_Mouse_Button *ev);
 
-static void      _cb_drop_enter      (void *data, const char *type, void *event_info);
-static void      _cb_drop_leave      (void *data, const char *type, void *event_info);
-static void      _cb_drop_move       (void *data, const char *type, void *event_info);
-static void      _cb_drop_end        (void *data, const char *type, void *event_info);
+static void       _cb_drop_enter      (void *data, const char *type, void *event_info);
+static void       _cb_drop_leave      (void *data, const char *type, void *event_info);
+static void       _cb_drop_move       (void *data, const char *type, void *event_info);
+static void       _cb_drop_end        (void *data, const char *type, void *event_info);
 static Eina_Bool  _cb_icons_update(void *data, int type, void *event);
 
 
@@ -258,7 +258,7 @@ _cb_drop_end(void *data, const char *type, void *event_info)
             const char *class = bd->client.icccm.class;
     
             if ((class) && (!strncmp(class, "e_fwin::", 8)) &&
-           (ecore_file_exists(class+8)))
+                (ecore_file_exists(class+8)))
               {
                 const char *file = class+8;
                 char buf[PATH_MAX];
@@ -537,22 +537,22 @@ _item_cb_mouse_down(Ngi_Item *item, Ecore_Event_Mouse_Button *ev)
    switch(box->ng->cfg->orient)
      {
       case E_GADCON_ORIENT_TOP:
-    dir = E_MENU_POP_DIRECTION_DOWN;
-    y += h;
-    break;
+        dir = E_MENU_POP_DIRECTION_DOWN;
+        y += h;
+       break;
 
       case E_GADCON_ORIENT_BOTTOM:
-    dir = E_MENU_POP_DIRECTION_UP;
-    break;
+        dir = E_MENU_POP_DIRECTION_UP;
+       break;
 
       case E_GADCON_ORIENT_LEFT:
-    dir = E_MENU_POP_DIRECTION_RIGHT;
-    x += w;
-    break;
+        dir = E_MENU_POP_DIRECTION_RIGHT;
+        x += w;
+       break;
 
       case E_GADCON_ORIENT_RIGHT:
-    dir = E_MENU_POP_DIRECTION_LEFT;
-    break;
+        dir = E_MENU_POP_DIRECTION_LEFT;
+       break;
      }
 
    m = e_menu_new();

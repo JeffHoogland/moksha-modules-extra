@@ -227,7 +227,6 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dial
    e_widget_list_object_append(ol, of, 1, 0, 0.0);
    e_widget_toolbook_page_append(otb, NULL, D_("Appearance"), ol, 1, 1, 1, 1, 0.5, 0.5);
 
-
    of = e_widget_framelist_add(evas, D_("Zoom"), 0);
    ob = e_widget_label_add (evas, D_("Factor:"));
    e_widget_framelist_object_append (of, ob);
@@ -248,7 +247,6 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dial
    e_widget_on_change_hook_set(ob, _cb_slider_change, cfdata);
    e_widget_framelist_object_append (of, ob);
    e_widget_toolbook_page_append(otb, NULL, D_("Zoom"), of, 1, 0, 1, 0, 0.5, 0.0);
-
 
    of = e_widget_frametable_add(evas, D_("Bar Items"), 0);
    ol = e_widget_ilist_add(evas, 0, 0, NULL);
@@ -322,10 +320,7 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dial
    e_widget_list_object_append(ol, of, 1, 0, 0.0);
 
    e_widget_toolbook_page_append(otb, NULL, D_("Other"), ol, 1, 0, 1, 0, 0.5, 0.0);
-
    e_widget_toolbook_page_show(otb, 0);
-
-
    return otb;
 }
 
@@ -366,8 +361,8 @@ _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    if (ci->orient != cfdata->orient)
      {
         ci->orient = cfdata->orient;
-   ngi_free(ng);
-   ngi_new(ci);
+        ngi_free(ng);
+        ngi_new(ci);
      }
    else
      {
@@ -378,11 +373,11 @@ _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
              ng->es->cfg->autohide = ng->cfg->autohide;
              ng->es->cfg->overlap = (ng->cfg->autohide == AUTOHIDE_OVERLAP);
           }
-   ng->hide_step = 0;
-   ng->hide_state = show;
-   ngi_reposition(ng);
-   ngi_input_extents_calc(ng);
-   ngi_thaw(ng);
+        ng->hide_step = 0;
+        ng->hide_state = show;
+        ngi_reposition(ng);
+        ngi_input_extents_calc(ng);
+        ngi_thaw(ng);
      }
 
    e_config_domain_save("module.ng", ngi_conf_edd, ngi_config);
@@ -417,11 +412,9 @@ _update_boxes(Ng *ng)
          case launcher:
             ngi_launcher_new(ng, cfg_box);
             break;
-
          case taskbar:
             ngi_taskbar_new(ng, cfg_box);
             break;
-
          case gadcon:
             ngi_gadcon_new(ng, cfg_box);
             break;
@@ -713,11 +706,8 @@ _cb_box_up(void *data, void *data2 __UNUSED__)
 
    boxes = eina_list_remove(boxes, cfg_box);
    cfdata->cfg->boxes = eina_list_prepend_relative(boxes, cfg_box, l->prev->data);
-
    _update_boxes(cfdata->cfg->ng);
-
    _load_box_tlist(cfdata);
-
    e_widget_ilist_selected_set(cfdata->ilist, selected - 1);
 }
 
@@ -741,11 +731,8 @@ _cb_box_down(void *data, void *data2 __UNUSED__)
 
    boxes = eina_list_remove(boxes, cfg_box);
    cfdata->cfg->boxes = eina_list_append_relative(boxes, cfg_box, l->next->data);
-
    _update_boxes(cfdata->cfg->ng);
-
    _load_box_tlist(cfdata);
-
    e_widget_ilist_selected_set(cfdata->ilist, selected + 1);
 }
 
@@ -897,7 +884,6 @@ _load_ilist(E_Config_Dialog_Data *cfdata)
            e_widget_ilist_append(cfdata->tlist_box, NULL, file, NULL, NULL, file);
            if ((cfdata->app_dir) && (!strcmp(cfdata->app_dir, file)))
               selnum = i;
-
            i++;
         }
    }

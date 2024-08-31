@@ -12,24 +12,24 @@ ngi_item_init_defaults(Ngi_Item *it)
    switch(ng->cfg->orient)
      {
       case E_GADCON_ORIENT_BOTTOM:
-    ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_bottom");
+         ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_bottom");
        break;
       case E_GADCON_ORIENT_TOP:
-    ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_top");
+         ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_top");
        break;
       case E_GADCON_ORIENT_LEFT:
-    ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_left");
+         ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_left");
        break;
       case E_GADCON_ORIENT_RIGHT:
-    ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_right");
+         ok = ngi_object_theme_set(it->obj, "e/modules/engage/icon_right");
        break;
      }
 
    /* TODO remove fallback */
    if (!ok)
      {
-      if (!e_theme_edje_object_set(it->obj, "base/theme/modules/engage", "e/modules/engage/icon"))
-        edje_object_file_set(it->obj, ngi_config->theme_path, "e/modules/engage/icon");
+       if (!e_theme_edje_object_set(it->obj, "base/theme/modules/engage", "e/modules/engage/icon"))
+         edje_object_file_set(it->obj, ngi_config->theme_path, "e/modules/engage/icon");
      }
 
    it->over = edje_object_add(ng->evas);
@@ -37,24 +37,23 @@ ngi_item_init_defaults(Ngi_Item *it)
    switch(ng->cfg->orient)
      {
       case E_GADCON_ORIENT_BOTTOM:
-    ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_bottom");
+        ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_bottom");
        break;
       case E_GADCON_ORIENT_TOP:
-    ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_top");
+        ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_top");
        break;
       case E_GADCON_ORIENT_LEFT:
-    ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_left");
+        ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_left");
        break;
       case E_GADCON_ORIENT_RIGHT:
-    ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_right");
+        ok = ngi_object_theme_set(it->over, "e/modules/engage/icon_over_right");
        break;
      }
    if (!ok)
      {
-   if (!e_theme_edje_object_set(it->over, "base/theme/modules/engage", "e/modules/engage/icon_overlay"))
-     edje_object_file_set(it->over, ngi_config->theme_path, "e/modules/engage/icon_overlay");
+       if (!e_theme_edje_object_set(it->over, "base/theme/modules/engage", "e/modules/engage/icon_overlay"))
+         edje_object_file_set(it->over, ngi_config->theme_path, "e/modules/engage/icon_overlay");
      }
-
 
    evas_object_layer_set(it->over, 9999);
    evas_object_show(it->over);
@@ -77,8 +76,8 @@ ngi_item_show(Ngi_Item *it, int instant)
    if (instant)
      {
         it->scale = 1.0;
-   ngi_animate(ng);
-   return;
+        ngi_animate(ng);
+        return;
      }
 
    it->start_time = ecore_time_get();

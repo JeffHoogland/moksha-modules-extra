@@ -1,29 +1,29 @@
 #include "e_mod_main.h"
 #include <X11/Xlib.h>
 
-static int            _border_check          (Ngi_Box *box, E_Border *bd);
+static int               _border_check          (Ngi_Box *box, E_Border *bd);
 static Ngi_Item_Taskbar *_border_find        (Ngi_Box *box, E_Border *bd);
 
-static Eina_Bool      _cb_border_event       (void *data, int type, void *event);
-static Eina_Bool      _cb_desk_show          (void *data, int type, void *event);
+static Eina_Bool         _cb_border_event       (void *data, int type, void *event);
+static Eina_Bool         _cb_desk_show          (void *data, int type, void *event);
 
-static void           _item_new              (Ngi_Box *box, E_Border *bd);
-static void           _item_cb_free          (Ngi_Item *it);
-static void           _item_set_icon         (Ngi_Item_Taskbar *it);
-static void           _item_set_label        (Ngi_Item_Taskbar *it);
+static void              _item_new              (Ngi_Box *box, E_Border *bd);
+static void              _item_cb_free          (Ngi_Item *it);
+static void              _item_set_icon         (Ngi_Item_Taskbar *it);
+static void              _item_set_label        (Ngi_Item_Taskbar *it);
 
-static void           _item_cb_mouse_down    (Ngi_Item *it, Ecore_Event_Mouse_Button *ev);
-static void           _item_cb_mouse_up      (Ngi_Item *it, Ecore_Event_Mouse_Button *ev);
-static void           _item_cb_mouse_in      (Ngi_Item *it);
-static void           _item_cb_mouse_out     (Ngi_Item *it);
-static void           _item_cb_drag_start    (Ngi_Item *it);
-static void           _item_cb_drag_end      (E_Drag *drag, int dropped);
+static void              _item_cb_mouse_down    (Ngi_Item *it, Ecore_Event_Mouse_Button *ev);
+static void              _item_cb_mouse_up      (Ngi_Item *it, Ecore_Event_Mouse_Button *ev);
+static void              _item_cb_mouse_in      (Ngi_Item *it);
+static void              _item_cb_mouse_out     (Ngi_Item *it);
+static void              _item_cb_drag_start    (Ngi_Item *it);
+static void              _item_cb_drag_end      (E_Drag *drag, int dropped);
 
-static Eina_Bool      _cb_show_window        (void *data);
-static void           _cb_drop_enter         (void *data, const char *type, void *event_info);
-static void           _cb_drop_move          (void *data, const char *type, void *event_info);
-static void           _cb_drop_end           (void *data, const char *type, void *event_info);
-static void           _cb_drop_leave         (void *data, const char *type, void *event_info);
+static Eina_Bool         _cb_show_window        (void *data);
+static void              _cb_drop_enter         (void *data, const char *type, void *event_info);
+static void              _cb_drop_move          (void *data, const char *type, void *event_info);
+static void              _cb_drop_end           (void *data, const char *type, void *event_info);
+static void              _cb_drop_leave         (void *data, const char *type, void *event_info);
 
 
 static Ecore_X_Atom ECOMORPH_ATOM_THUMBNAIL = 0;
@@ -195,11 +195,11 @@ _cb_drop_move(void *data, const char *type __UNUSED__, void *event_info)
         box->dnd_timer = NULL;
 
         if (it)
-         {
-           ngi_item_activate(ng);
+          {
+            ngi_item_activate(ng);
 
-           box->dnd_timer = ecore_timer_add(0.5, _cb_show_window, it);
-         }
+            box->dnd_timer = ecore_timer_add(0.5, _cb_show_window, it);
+          }
      }
 
    ngi_animate(ng);
@@ -504,40 +504,40 @@ _border_icon_add(E_Border *bd, Evas *evas)
    if (bd->internal)
      {
         if (!bd->internal_icon)
-     {
-        o = e_icon_add(evas);
-        e_util_icon_theme_set(o, "enlightenment");
-     }
+          {
+             o = e_icon_add(evas);
+             e_util_icon_theme_set(o, "enlightenment");
+          }
         else if (!bd->internal_icon_key)
-     {
-        char *ext;
-        ext = strrchr(bd->internal_icon, '.');
-        if ((ext) && ((!strcmp(ext, ".edj"))))
           {
-            o = edje_object_add(evas);
-            if (!edje_object_file_set(o, bd->internal_icon, "icon"))
-              e_util_icon_theme_set(o, "enlightenment");
+             char *ext;
+             ext = strrchr(bd->internal_icon, '.');
+             if ((ext) && ((!strcmp(ext, ".edj"))))
+               {
+                 o = edje_object_add(evas);
+                 if (!edje_object_file_set(o, bd->internal_icon, "icon"))
+                   e_util_icon_theme_set(o, "enlightenment");
+               }
+             else if (ext)
+               {
+                 o = e_icon_add(evas);
+                 e_icon_file_set(o, bd->internal_icon);
+               }
+             else
+               {
+                 o = e_icon_add(evas);
+                 e_icon_scale_size_set(o, 128);
+                 if (!e_util_icon_theme_set(o, bd->internal_icon))
+                   e_util_icon_theme_set(o, "enlightenment");
+               }
           }
-        else if (ext)
-          {
-            o = e_icon_add(evas);
-            e_icon_file_set(o, bd->internal_icon);
-          }
-        else
-          {
-            o = e_icon_add(evas);
-            e_icon_scale_size_set(o, 128);
-            if (!e_util_icon_theme_set(o, bd->internal_icon))
-              e_util_icon_theme_set(o, "enlightenment");
-          }
-     }
    else
      {
         o = edje_object_add(evas);
         edje_object_file_set(o, bd->internal_icon, bd->internal_icon_key);
      }
 
-   return o;
+       return o;
      }
 
    if (bd->client.netwm.icons)
@@ -679,23 +679,23 @@ _item_cb_mouse_down(Ngi_Item *item, Ecore_Event_Mouse_Button *ev)
 
         switch(ng->cfg->orient)
           {
-           case E_GADCON_ORIENT_TOP:
-              dir = E_MENU_POP_DIRECTION_DOWN;
-              y += h;
-              break;
+            case E_GADCON_ORIENT_TOP:
+               dir = E_MENU_POP_DIRECTION_DOWN;
+               y += h;
+               break;
 
-           case E_GADCON_ORIENT_BOTTOM:
-              dir = E_MENU_POP_DIRECTION_UP;
-              break;
+            case E_GADCON_ORIENT_BOTTOM:
+               dir = E_MENU_POP_DIRECTION_UP;
+               break;
 
-           case E_GADCON_ORIENT_LEFT:
-              dir = E_MENU_POP_DIRECTION_RIGHT;
-              x += w;
-              break;
+            case E_GADCON_ORIENT_LEFT:
+               dir = E_MENU_POP_DIRECTION_RIGHT;
+               x += w;
+               break;
 
-           case E_GADCON_ORIENT_RIGHT:
-              dir = E_MENU_POP_DIRECTION_LEFT;
-              break;
+            case E_GADCON_ORIENT_RIGHT:
+               dir = E_MENU_POP_DIRECTION_LEFT;
+               break;
           } /* switch */
         ngi_border_menu_show(item->box, it->border, x, y, dir, ev->timestamp);
      }
