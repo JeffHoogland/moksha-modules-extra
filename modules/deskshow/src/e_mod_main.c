@@ -44,7 +44,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    inst = E_NEW(Instance, 1);
 
    snprintf(buf, sizeof(buf), "%s/e-module-deskshow.edj", e_module_dir_get(desk_module));
-   
+
    o = edje_object_add(gc->evas);
    if (!e_theme_edje_object_set(o, "base/theme/modules/deskshow", "modules/deskshow/main"))
      edje_object_file_set(o, buf, "modules/deskshow/main");
@@ -125,16 +125,16 @@ static void
 _button_cb_mouse_down (void *data __UNUSED__, Evas *e __UNUSED__, 
                        Evas_Object *obj __UNUSED__, void *event_info)
 {
-  Evas_Event_Mouse_Down *ev;
+   Evas_Event_Mouse_Down *ev;
 
-  ev = event_info;
-  if (ev->button == 1)
-    {
-      E_Zone *zone;
+   ev = event_info;
+   if (ev->button == 1)
+     {
+       E_Zone *zone;
 
-      zone = e_util_zone_current_get(e_manager_current_get());
-      if (zone) e_desk_deskshow(zone);
-    }
+       zone = e_util_zone_current_get(e_manager_current_get());
+       if (zone) e_desk_deskshow(zone);
+     }
 }
 
 static Eina_Bool
@@ -157,8 +157,8 @@ _deskshow_cb_event_desk_show(void *data, int type __UNUSED__, void *event)
 
 /* module setup */
 EAPI E_Module_Api e_modapi = {
-  E_MODULE_API_VERSION,
-  "Deskshow"
+   E_MODULE_API_VERSION,
+   "Deskshow"
 };
 
 EAPI void *
@@ -172,13 +172,13 @@ e_modapi_init (E_Module * m)
 EAPI int
 e_modapi_shutdown (E_Module * m __UNUSED__)
 {
-  desk_module = NULL;
-  e_gadcon_provider_unregister(&_gadcon_class);
-  return 1;
+   desk_module = NULL;
+   e_gadcon_provider_unregister(&_gadcon_class);
+   return 1;
 }
 
 EAPI int
 e_modapi_save(E_Module * m __UNUSED__)
 {
-  return 1;
+   return 1;
 }
