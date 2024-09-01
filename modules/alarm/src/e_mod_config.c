@@ -68,9 +68,9 @@ alarm_config_refresh_alarms_ilist(E_Config_Dialog_Data *cfdata)
         Evas_Object *ic;
         Alarm *al;
         char buf[1024], bufdate[15];
-        
+
         al = eina_list_data_get(l);
-        
+
         if (al->state == ALARM_STATE_OFF)
           ic = NULL;
         else
@@ -102,7 +102,7 @@ alarm_config_refresh_alarms_ilist(E_Config_Dialog_Data *cfdata)
      e_widget_size_min_set(cfdata->alarms_ilist, wmw, 200);
    else 
      e_widget_size_min_set(cfdata->alarms_ilist, 165, 100);
-   
+
    e_widget_ilist_go(cfdata->alarms_ilist);
    e_widget_ilist_selected_set(cfdata->alarms_ilist, pos);
 }
@@ -111,7 +111,7 @@ static void *
 _create_data(E_Config_Dialog *cfd __UNUSED__) 
 {
    E_Config_Dialog_Data *cfdata;
-   
+
    cfdata = E_NEW(E_Config_Dialog_Data, 1);
    _fill_data(cfdata);
    return cfdata;
@@ -191,7 +191,7 @@ static Evas_Object *
 _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata) 
 {
    Evas_Object *o;
-   
+
    o = e_widget_table_add(evas, 0);
 
    _common_create_widgets(cfd, evas, cfdata, o);
@@ -219,7 +219,6 @@ _advanced_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data 
 
    _common_create_widgets(cfd, evas, cfdata, o);
 
-
    of = e_widget_frametable_add(evas, D_("Alarm Options"), 0);
 
    /*
@@ -236,7 +235,6 @@ _advanced_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data 
    e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 1, 1, 1);
 
    e_widget_table_object_append(o, of, 1, 0, 1, 1, 1, 0, 1, 0);
-
 
    of = e_widget_frametable_add(evas, D_("Alarms Defaults"), 0);
 

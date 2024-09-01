@@ -53,9 +53,9 @@ alarm_config_alarm(Alarm *al)
    E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
    char buf[PATH_MAX];
-   
+
    v = E_NEW(E_Config_Dialog_View, 1);
-   
+
    v->create_cfdata = _create_data;
    v->free_cfdata = _free_data;
    v->basic.apply_cfdata = _basic_apply_data;
@@ -152,28 +152,28 @@ _fill_data(E_Config_Dialog_Data *cfdata, Alarm *al)
      }
    else
      {
-    struct tm *st;
-    time_t t;
-    char buf[20];
+       struct tm *st;
+       time_t t;
+       char buf[20];
 
-        cfdata->new = 1;
-        cfdata->state = 1;
-        cfdata->name = strdup("");
-        cfdata->sched.type = ALARM_SCHED_DEFAULT;
+       cfdata->new = 1;
+       cfdata->state = 1;
+       cfdata->name = strdup("");
+       cfdata->sched.type = ALARM_SCHED_DEFAULT;
 
-    t = time(NULL);
-    st = localtime(&t);
-    strftime(buf, sizeof(buf), "%Y/", st);
-    cfdata->sched.date = strdup(buf);
+       t = time(NULL);
+       st = localtime(&t);
+       strftime(buf, sizeof(buf), "%Y/", st);
+       cfdata->sched.date = strdup(buf);
 
-    cfdata->autoremove = alarm_config->alarms_autoremove_default;
-        cfdata->description = strdup("");
-        cfdata->open_popup = alarm_config->alarms_open_popup_default;
-        if (alarm_config->alarms_run_program_default)
-          cfdata->run_program = ALARM_RUN_PROGRAM_PARENT;
-        else
-          cfdata->run_program = ALARM_RUN_PROGRAM_NO;
-        cfdata->program = strdup("");
+       cfdata->autoremove = alarm_config->alarms_autoremove_default;
+       cfdata->description = strdup("");
+       cfdata->open_popup = alarm_config->alarms_open_popup_default;
+       if (alarm_config->alarms_run_program_default)
+         cfdata->run_program = ALARM_RUN_PROGRAM_PARENT;
+       else
+         cfdata->run_program = ALARM_RUN_PROGRAM_NO;
+       cfdata->program = strdup("");
      }
 }
 
@@ -197,10 +197,8 @@ _common_create_widgets(E_Config_Dialog *cfd  __UNUSED__, Evas *evas, E_Config_Di
    ob = e_widget_entry_add(evas, &(cfdata->description), NULL, NULL, NULL);
    e_widget_size_min_set(ob, 250, 25);
    e_widget_frametable_object_append(of, ob, 0, 3, 2, 1, 1, 1, 1, 1);
-   
 
    e_widget_table_object_append(o, of, 0, 0, 1, 1, 1, 1, 1, 1);
-
 
    of = e_widget_frametable_add(evas, D_("Schedule"), 0);
 
@@ -346,11 +344,8 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cf
    Evas_Object *o, *ob;
 
    o = e_widget_table_add(evas, 0);
-
    _common_create_widgets(cfd, evas, cfdata, o);
-
    ob = e_widget_button_add(evas, D_("Test this alarm"), NULL, _cb_alarm_test, cfd, cfdata);
-
    e_widget_table_object_append(o, ob, 0, 2, 1, 1, 1, 1, 1, 1);
 
    return o;

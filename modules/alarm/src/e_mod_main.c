@@ -71,15 +71,15 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    E_Gadcon_Client *gcc;
    Instance *inst;
    char buf[PATH_MAX];
-   
+
    inst = E_NEW(Instance, 1);
-   
+
    o = edje_object_add(gc->evas);
    snprintf(buf, sizeof(buf), "%s/alarm.edj", e_module_dir_get(alarm_config->module));
    if (!e_theme_edje_object_set
        (o, "base/theme/modules/alarm", "modules/alarm/main"))
    edje_object_file_set(o, buf, THEME_MAIN);
-     
+
    edje_object_signal_callback_add(o, EDJE_SIG_RECV_ALARM_STATE_ON,
            _cb_edje_alarm_state_on, NULL);
    edje_object_signal_callback_add(o, EDJE_SIG_RECV_ALARM_STATE_OFF,
@@ -89,7 +89,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
 
    gcc = e_gadcon_client_new(gc, name, id, style, o);
    gcc->data = inst;
-   
+
    inst->gcc = gcc;
    inst->obj = o;
    inst->orient = E_GADCON_ORIENT_HORIZ;
@@ -126,7 +126,7 @@ static void
 _gc_shutdown(E_Gadcon_Client *gcc)
 {
    Instance *inst;
-   
+
    inst = gcc->data;
    evas_object_del(inst->obj);
    alarm_config->instances = eina_list_remove(alarm_config->instances, inst);
@@ -187,7 +187,7 @@ _gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o;
    char buf[PATH_MAX];
-   
+
    o = edje_object_add(evas);
    snprintf(buf, sizeof(buf), "%s/alarm.edj",
       e_module_dir_get(alarm_config->module));
@@ -288,7 +288,7 @@ alarm_alarm_add(int state, char *name, int type,
      {
         ALARM_ADD_FAIL(ALARM_ADD_ERROR_UNKNOWN);
      }
-   
+
    if (!alarm_config->alarms_ring_etimer)
      alarm_config->alarms_ring_etimer = ecore_timer_add(ALARMS_CHECK_TIMER,
                                                         _cb_alarms_ring_etimer,
@@ -803,81 +803,81 @@ _button_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED_
 {
    Instance *inst;
    Evas_Event_Mouse_Down *ev;
-   
+
    inst = data;
    ev = event_info;
    if (ev->button == 3)
      {
-  E_Menu *m;
-  E_Menu_Item *mi;
-  int cx, cy, cw, ch;
-        int nb_snoozed = 0;
+       E_Menu *m;
+       E_Menu_Item *mi;
+       int cx, cy, cw, ch;
+       int nb_snoozed = 0;
+    
+       m = e_menu_new();
+       mi = e_menu_item_new(m);
+       e_menu_item_label_set(mi, D_("Add an alarm"));
+       e_menu_item_callback_set(mi, _menu_cb_alarm_add, NULL);
+       if (!alarm_config->theme)
+         e_util_menu_item_theme_icon_set(mi, THEME_ICON_ALARM_ON);
+       else
+         e_menu_item_icon_edje_set(mi, alarm_config->theme, THEME_ICON_ALARM_ON);
 
-  m = e_menu_new();
-  mi = e_menu_item_new(m);
-  e_menu_item_label_set(mi, D_("Add an alarm"));
-  e_menu_item_callback_set(mi, _menu_cb_alarm_add, NULL);
-  if (!alarm_config->theme)
-    e_util_menu_item_theme_icon_set(mi, THEME_ICON_ALARM_ON);
-  else
-    e_menu_item_icon_edje_set(mi, alarm_config->theme, THEME_ICON_ALARM_ON);
+       mi = e_menu_item_new(m);
+       e_menu_item_separator_set(mi, 1);
+       mi = e_menu_item_new(m);
+       e_menu_item_label_set(mi, D_("Settings"));
+       e_util_menu_item_theme_icon_set(mi, "preferences-system");
+       e_menu_item_callback_set(mi, _menu_cb_configure, NULL);
 
-  mi = e_menu_item_new(m);
-  e_menu_item_separator_set(mi, 1);
-  mi = e_menu_item_new(m);
-  e_menu_item_label_set(mi, D_("Settings"));
-  e_util_menu_item_theme_icon_set(mi, "preferences-system");
-  e_menu_item_callback_set(mi, _menu_cb_configure, NULL);
+       m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
 
-  m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
+       /* snooze menu */
+       if (alarm_config->alarms_state == ALARM_STATE_RINGING)
+         {
+            Eina_List *l;
 
-        /* snooze menu */
-        if (alarm_config->alarms_state == ALARM_STATE_RINGING)
-          {
-             Eina_List *l;
+            for (l=alarm_config->alarms; l; l=eina_list_next(l))
+              {
+                 Alarm *al;
+                 al = eina_list_data_get(l);
+                 if (al->state == ALARM_STATE_RINGING)
+                   {
+                      char buf[30];
+                      snprintf(buf, sizeof(buf), D_("Snooze %s"), al->name);
+                      mi = e_menu_item_new_relative(m, NULL);
+                      e_menu_item_label_set(mi, buf);
+                      e_menu_item_callback_set(mi, _menu_cb_alarm_snooze, al);
+                      if (!alarm_config->theme) e_util_menu_item_theme_icon_set(mi, THEME_ICON_SNOOZE);
+                      else e_menu_item_icon_edje_set(mi, alarm_config->theme, THEME_ICON_SNOOZE);
+                      if (al->snooze.remember)
+                        {
+                           snprintf(buf, sizeof(buf), D_("Snooze %.14s of %.2d:%.2d"),
+                                    al->name, al->snooze.hour, al->snooze.minute);
+                           mi = e_menu_item_new_relative(m, NULL);
+                           e_menu_item_label_set(mi, buf);
+                           e_menu_item_callback_set(mi, _menu_cb_alarm_snooze, al);
+                        }
+                      nb_snoozed = 1;
+                   }
+              }
+         }
 
-             for (l=alarm_config->alarms; l; l=eina_list_next(l))
-               {
-                  Alarm *al;
-                  al = eina_list_data_get(l);
-                  if (al->state == ALARM_STATE_RINGING)
-                    {
-                       char buf[30];
-                       snprintf(buf, sizeof(buf), D_("Snooze %s"), al->name);
-                       mi = e_menu_item_new_relative(m, NULL);
-                       e_menu_item_label_set(mi, buf);
-                       e_menu_item_callback_set(mi, _menu_cb_alarm_snooze, al);
-                       if (!alarm_config->theme) e_util_menu_item_theme_icon_set(mi, THEME_ICON_SNOOZE);
-                       else e_menu_item_icon_edje_set(mi, alarm_config->theme, THEME_ICON_SNOOZE);
-                       if (al->snooze.remember)
-                         {
-                            snprintf(buf, sizeof(buf), D_("Snooze %.14s of %.2d:%.2d"),
-                                     al->name, al->snooze.hour, al->snooze.minute);
-                            mi = e_menu_item_new_relative(m, NULL);
-                            e_menu_item_label_set(mi, buf);
-                            e_menu_item_callback_set(mi, _menu_cb_alarm_snooze, al);
-                         }
-                       nb_snoozed = 1;
-                    }
-               }
-          }
+      if (!nb_snoozed)
+        {
+           mi = e_menu_item_new_relative(m, NULL);
+           e_menu_item_label_set(mi, D_("Snooze (No alarm to delay)"));
+           if (!alarm_config->theme) e_util_menu_item_theme_icon_set(mi, THEME_ICON_SNOOZE);
+           else e_menu_item_icon_edje_set(mi, alarm_config->theme, THEME_ICON_SNOOZE);
+        }
 
-        if (!nb_snoozed)
-          {
-             mi = e_menu_item_new_relative(m, NULL);
-             e_menu_item_label_set(mi, D_("Snooze (No alarm to delay)"));
-             if (!alarm_config->theme) e_util_menu_item_theme_icon_set(mi, THEME_ICON_SNOOZE);
-             else e_menu_item_icon_edje_set(mi, alarm_config->theme, THEME_ICON_SNOOZE);
-          }
-
-  e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon,
-            &cx, &cy, &cw, &ch);
-  e_menu_activate_mouse(m,
-            e_util_zone_current_get(e_manager_current_get()),
-            cx + ev->output.x, cy + ev->output.y, 1, 1,
-            E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
-  evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
-         EVAS_BUTTON_NONE, ev->timestamp, NULL);
+      e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon,
+                &cx, &cy, &cw, &ch);
+      e_menu_activate_mouse(m,
+                e_util_zone_current_get(e_manager_current_get()),
+                cx + ev->output.x, cy + ev->output.y, 1, 1,
+                E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
+      evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
+             EVAS_BUTTON_NONE, ev->timestamp, NULL);
      }
 }
 
@@ -948,7 +948,7 @@ _cb_alarms_ring_etimer(void *data __UNUSED__)
 
    now = ecore_time_unix_get();
 
-   for(l=alarm_config->alarms; l; l=eina_list_next(l))
+   for(l = alarm_config->alarms; l; l = eina_list_next(l))
      {
         Alarm *al;
 
@@ -1065,10 +1065,10 @@ e_modapi_init(E_Module *m)
 
    if (!alarm_config)
      {
-  alarm_config = E_NEW(Config, 1);
+        alarm_config = E_NEW(Config, 1);
         alarm_config->time_format = TIME_FORMAT_DEFAULT;
         alarm_config->alarms_state = ALARM_STATE_OFF;
-  alarm_config->alarms_details = ALARMS_DETAILS_DEFAULT;
+        alarm_config->alarms_details = ALARMS_DETAILS_DEFAULT;
         alarm_config->alarms_autoremove_default = ALARMS_AUTOREMOVE_DEFAULT;
         alarm_config->alarms_open_popup_default = ALARMS_OPEN_POPUP_DEFAULT;
         alarm_config->alarms_run_program_default = ALARMS_RUN_PROGRAM_DEFAULT;
@@ -1112,9 +1112,7 @@ e_modapi_init(E_Module *m)
      }
    
    alarm_config->module = m;
-
    e_gadcon_provider_register((const E_Gadcon_Client_Class *)&_gadcon_class);
-
    return alarm_config;
 }
 
