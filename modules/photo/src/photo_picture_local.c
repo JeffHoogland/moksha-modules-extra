@@ -7,15 +7,15 @@ list->loader.popup =                                                   \
   photo_popup_warn_add(POPUP_WARN_TYPE_NEWS, buf,                      \
                        PICTURE_LOCAL_POPUP_LOADER_TIME + dtime,        \
                        _popup_loader_close, _popup_loader_desactivate, \
-		       NULL);
+                       NULL);
 
-#define POPUP_THUMBNAILING(list, buf, dtime)                         \
-if (list->thumb.popup)                                               \
-  photo_popup_warn_del(list->thumb.popup);                            \
-list->thumb.popup =                                                  \
-  photo_popup_warn_add(POPUP_WARN_TYPE_NEWS, buf,                    \
-                       PICTURE_LOCAL_POPUP_THUMB_TIME + dtime,       \
-                       _popup_thumb_close, _popup_thumb_desactivate, \
+#define POPUP_THUMBNAILING(list, buf, dtime)                           \
+if (list->thumb.popup)                                                 \
+  photo_popup_warn_del(list->thumb.popup);                             \
+list->thumb.popup =                                                    \
+  photo_popup_warn_add(POPUP_WARN_TYPE_NEWS, buf,                      \
+                       PICTURE_LOCAL_POPUP_THUMB_TIME + dtime,         \
+                       _popup_thumb_close, _popup_thumb_desactivate,   \
                        NULL);
 
 
@@ -96,7 +96,7 @@ int photo_picture_local_init(void)
 void photo_picture_local_shutdown(void)
 {
    photo_picture_local_load_stop();
-   
+
    _pictures_old_del(1, 1);
 
    eina_list_free(pictures_local->pictures);
@@ -189,22 +189,22 @@ Picture *photo_picture_local_get(int position)
              DD(("- Search -"));
              picture = eina_list_data_get(l);
              if (!picture->pi && !picture->delete_me &&
-		 (picture->thumb != PICTURE_THUMB_WAITING))
+                (picture->thumb != PICTURE_THUMB_WAITING))
                return picture;
              l = eina_list_next(l);
              if (!l) l = pl->pictures;
           } while (l != was_first);
         picture = NULL;
      }
-  
+
    return picture;
 }
 
 int photo_picture_local_loaded_nb_get(void)
 {
-  return ((eina_list_count(pictures_local->pictures) -
-	  pictures_local->thumb.nb) -
-	  pictures_local->pictures_waiting_delete);
+   return ((eina_list_count(pictures_local->pictures) -
+      pictures_local->thumb.nb) -
+      pictures_local->pictures_waiting_delete);
 }
 
 int photo_picture_local_tothumb_nb_get(void)
@@ -228,12 +228,13 @@ void photo_picture_local_ev_set(Photo_Item *pi)
 void photo_picture_local_ev_raise(int nb)
 {
    Picture_Event_Fill *ev;
-	 
+
    if (!pictures_local->loader_ev.nb_clients) return;
 
    ev = E_NEW(Picture_Event_Fill, 1);
    ev->new = nb;
    ev->type = PICTURE_LOCAL;
+   
    /* raise event to warn clients : a picture is here for you ! */
    ecore_event_add(pictures_local->loader_ev.id, ev, NULL, NULL);
    DPICL(("Loader event RAISED !"));
@@ -291,13 +292,13 @@ _pictures_old_del(int force, int force_now)
 {
    Picture *p;
    int no = 0;
-   
+
    while ( (p = eina_list_nth(pictures_local->pictures, no)) )
      {
         if (photo_picture_free(p, force, force_now))
           pictures_local->pictures = eina_list_remove(pictures_local->pictures, p);
         else
-	  no++;
+          no++;
      }
 }
 
@@ -327,8 +328,8 @@ _load_idler(void *data __UNUSED__)
           {
              pl->loader.current_dir->state = PICTURE_LOCAL_DIR_LOADED;
              pl->loader.current_dir = NULL;
-	     if (photo->config_dialog)
-	       photo_config_dialog_refresh_local_dirs();
+             if (photo->config_dialog)
+               photo_config_dialog_refresh_local_dirs();
           }
         DD(("oo"));
         for (l=photo->config->local.dirs; l; l=eina_list_next(l))
@@ -341,10 +342,10 @@ _load_idler(void *data __UNUSED__)
                   pl->loader.current_dir = d;
                   pl->loader.dirs = eina_list_append(pl->loader.dirs,
                                                      strdup(d->path));
-		  pl->loader.odir = NULL;
+                  pl->loader.odir = NULL;
                   DPICL(("Going to read %s", d->path));
-		  if (photo->config_dialog)
-		    photo_config_dialog_refresh_local_dirs();
+                  if (photo->config_dialog)
+                    photo_config_dialog_refresh_local_dirs();
                   return EINA_TRUE;
                }
           }
@@ -358,14 +359,15 @@ _load_idler(void *data __UNUSED__)
                   photo_config_dialog_refresh_local_infos();
                   photo_config_dialog_refresh_local_load();
                }
-	     /* last loading popup message */
+
+             /* last loading popup message */
              if (photo->config->local.popup >= PICTURE_LOCAL_POPUP_SUM)
                {
-		 char buf[50];
+                 char buf[50];
 
-		 snprintf(buf, sizeof(buf), "Scan finished : %d pictures found",
-			  eina_list_count(pl->pictures) - pl->pictures_waiting_delete);
-		 POPUP_LOADING(pl, buf, 3);
+                 snprintf(buf, sizeof(buf), "Scan finished : %d pictures found",
+                 eina_list_count(pl->pictures) - pl->pictures_waiting_delete);
+                 POPUP_LOADING(pl, buf, 3);
                }
              if (pl->loader.timer)
                {
@@ -422,7 +424,7 @@ _load_idler(void *data __UNUSED__)
 
    /* enqueue the file */
    pl->loader.queue = eina_list_append(pl->loader.queue, strdup(file));
-   
+
    return EINA_TRUE;
 }
 
@@ -515,11 +517,11 @@ _load_idler_stop(void)
 
    if (pl->loader.dirs)
      {
-	Eina_List *l;
+        Eina_List *l;
 
         for(l=pl->loader.dirs; l; l=eina_list_next(l))
           {
-	     char *name;
+             char *name;
              name = eina_list_data_get(l);
              free(name);
           }
@@ -555,7 +557,7 @@ _load_cb_ev_fill(void *data, int type __UNUSED__, void *event)
    ev->new--;
    if (!ev->new)
      return EINA_FALSE;
-   else  
+   else
      return EINA_TRUE;
 }
 
@@ -576,13 +578,13 @@ _thumb_generate_cb(void *data, Evas_Object *obj, void *event_info __UNUSED__)
    if (!obj)
      {
         DPICL(("generated object is NULL !!"));
-	pl->pictures = eina_list_remove(pl->pictures, picture);
+        pl->pictures = eina_list_remove(pl->pictures, picture);
         photo_picture_free(picture, 1, 1);
         return;
      }
 
    evas_object_geometry_get(obj, NULL, NULL,
-			    &picture->original_w, &picture->original_h);
+               &picture->original_w, &picture->original_h);
    DPICL(("thumb generated %dx%d", picture->original_w, picture->original_h));
    
 
@@ -594,15 +596,15 @@ _thumb_generate_cb(void *data, Evas_Object *obj, void *event_info __UNUSED__)
    if (photo->config->local.thumb_msg)
      {
         photo->config->local.thumb_msg = 0;
-	photo_config_save();
+        photo_config_save();
         e_module_dialog_show(photo->module, D_("Photo Module Information"),
                              D_("<hilight>Creating thumbs</hilight><br><br>"
                                "Some pictures are being thumbed in a <hilight>background task</hilight>.<br>"
                                "It can take a while, but after, loading will be faster and lighter :)<br><br>"
                                "Each time wou will load pictures that haven't been loaded in Photo module before,<br>"
                                "they will be thumbed.<br><br>"
-			       "While creating popups, you will not be able to see any picture in Photo.<br>"
-			       "I hope i'll be able to change that :)"));
+                               "While creating popups, you will not be able to see any picture in Photo.<br>"
+                               "I hope i'll be able to change that :)"));
      }
 
    /* when still thumbnailing after loading */
@@ -636,12 +638,12 @@ _thumb_generate_cb(void *data, Evas_Object *obj, void *event_info __UNUSED__)
    if (photo->config_dialog)
      {
        if (!pl->thumb.nb)
-	 {
-	   photo_config_dialog_refresh_local_load();
-	   photo_config_dialog_refresh_local_infos();
-	 }
+         {
+           photo_config_dialog_refresh_local_load();
+           photo_config_dialog_refresh_local_infos();
+         }
        if ( !(pl->thumb.nb%100) )
-	 photo_config_dialog_refresh_local_infos();
+         photo_config_dialog_refresh_local_infos();
      }
 
    /* new picture event */

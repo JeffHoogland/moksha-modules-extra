@@ -47,12 +47,12 @@ int photo_menu_show(Photo_Item *pi)
    if (pi->config->timer_active)
      {
         e_menu_item_label_set(mi, D_("Pause slideshow"));
-	photo_util_menu_icon_set(mi, PHOTO_THEME_ICON_PAUSE);
+        photo_util_menu_icon_set(mi, PHOTO_THEME_ICON_PAUSE);
      }
    else
      {
         e_menu_item_label_set(mi, D_("Resume slideshow"));
-	photo_util_menu_icon_set(mi, PHOTO_THEME_ICON_RESUME);
+        photo_util_menu_icon_set(mi, PHOTO_THEME_ICON_RESUME);
      }
    e_menu_item_callback_set(mi, _cb_pause_toggle, pi);
    mi = e_menu_item_new_relative(m, mi);
@@ -68,9 +68,9 @@ int photo_menu_show(Photo_Item *pi)
    mi = e_menu_item_new_relative(m, mi);
    e_menu_item_label_set(mi, D_("Historic"));
    e_menu_item_submenu_pre_callback_set(mi,
-					_cb_hist_menu_populate, pi);
+                     _cb_hist_menu_populate, pi);
    e_menu_item_submenu_post_callback_set(mi,
-					 _cb_hist_menu_activate, pi);
+                     _cb_hist_menu_activate, pi);
 
    mi = e_menu_item_new_relative(m, mi);
    e_menu_item_separator_set(mi, 1);
@@ -259,7 +259,7 @@ _cb_hist_menu_deactivate_post(void *data, E_Menu *m)
 
    pi = data;
    pi->menu_histo = NULL;
-  
+
    DD(("deactivate cb post"));
 
    e_object_del(E_OBJECT(m));
@@ -314,14 +314,14 @@ _cb_hist_menu_activate(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSE
 
    for (l=mn->items; l; l=eina_list_next(l))
      {
-	E_Menu_Item *hmi;
+        E_Menu_Item *hmi;
 
-	hmi = eina_list_data_get(l);
-	if (!hmi || hmi->separator) continue;
-	evas_object_event_callback_add(hmi->event_object, EVAS_CALLBACK_MOUSE_IN,
-				       _cb_hist_menu_pre_select, hmi);
-	evas_object_event_callback_add(hmi->event_object, EVAS_CALLBACK_MOUSE_OUT,
-				       _cb_hist_menu_post_select, hmi);
+        hmi = eina_list_data_get(l);
+        if (!hmi || hmi->separator) continue;
+        evas_object_event_callback_add(hmi->event_object, EVAS_CALLBACK_MOUSE_IN,
+                           _cb_hist_menu_pre_select, hmi);
+        evas_object_event_callback_add(hmi->event_object, EVAS_CALLBACK_MOUSE_OUT,
+                           _cb_hist_menu_post_select, hmi);
      }
 }
 

@@ -163,7 +163,7 @@ static void
 _gc_shutdown(E_Gadcon_Client *gcc)
 {
    Photo_Item *pi;
-   
+
    pi = gcc->data;
 
    DMAIN(("GCC shutdown"));
@@ -177,7 +177,7 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
    e_gadcon_client_aspect_set(gcc, 16, 16);
    e_gadcon_client_min_size_set(gcc, 16, 16);
 }
-   
+
 static const char *
 _gc_label(const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
@@ -189,10 +189,10 @@ _gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o;
    char buf[4096];
-   
+
    o = edje_object_add(evas);
    snprintf(buf, sizeof(buf), "%s/e-module-photo.edj",
-	    e_module_dir_get(photo->module));
+       e_module_dir_get(photo->module));
    edje_object_file_set(o, buf, "icon");
    return o;
 }
@@ -210,19 +210,18 @@ _gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 
 static int _e_canvas_init(void)
 {
-  E_Container *c;
+   E_Container *c;
 
-  c = e_container_current_get(e_manager_current_get());
-  evas_output_viewport_get(c->bg_evas,
-			   NULL, NULL,
-			   &photo->canvas_w, &photo->canvas_h);
-  
-  return 1;
+   c = e_container_current_get(e_manager_current_get());
+   evas_output_viewport_get(c->bg_evas,
+                NULL, NULL,
+                &photo->canvas_w, &photo->canvas_h);
+   return 1;
 }
 
 static void _e_canvas_shutdown(void)
 {
-  
+
 }
 
 static int _theme_init(void)
@@ -262,5 +261,5 @@ static int _theme_init(void)
 
 static void _theme_shutdown(void)
 {
-  E_FREE(photo->theme);
+   E_FREE(photo->theme);
 }

@@ -37,7 +37,7 @@ Picture *photo_picture_new(char *path, int thumb_it, void (*func_done) (void *da
    th_w = photo->config->pictures_thumb_size;
    th_h = photo->config->pictures_thumb_size;
 #endif
-      
+
    ext = strrchr(path, '.');
    if (!ext)
      return NULL;
@@ -45,9 +45,9 @@ Picture *photo_picture_new(char *path, int thumb_it, void (*func_done) (void *da
        strcasecmp(ext, ".jpeg") && strcasecmp(ext, ".JPEG") &&
        strcasecmp(ext, ".png") && strcasecmp(ext, ".PNG"))
      return NULL;
-      
+
    DPICL(("New picture :  file %s", path));
-      
+
    picture = E_NEW(Picture, 1);
    picture->path = eina_stringshare_add(path);
    picture->infos.name = photo_picture_name_get(path);
@@ -77,12 +77,12 @@ int photo_picture_free(Picture *p, int force, int force_now)
         if (!force) return 0;
         if (!force_now)
           {
-	    if (!p->delete_me)
-	      {
-		if (p->from == PICTURE_LOCAL)
-		  photo_picture_local_picture_deleteme_nb_update(+1);
-		p->delete_me = 1;
-	      }
+            if (!p->delete_me)
+              {
+                if (p->from == PICTURE_LOCAL)
+                  photo_picture_local_picture_deleteme_nb_update(+1);
+                p->delete_me = 1;
+              }
              return 0;
           }
      }
@@ -90,7 +90,7 @@ int photo_picture_free(Picture *p, int force, int force_now)
    if (p->delete_me)
      {
        if (p->from == PICTURE_LOCAL)
-	 photo_picture_local_picture_deleteme_nb_update(-1);
+         photo_picture_local_picture_deleteme_nb_update(-1);
      }
 
    DD(("Picture Free : %s", p->path));
@@ -185,7 +185,7 @@ const char *photo_picture_name_get(char *url)
      name_l = strlen(name) - strlen(ext);
    else
      name_l = strlen(name);
-   
+
    strncpy(buf, name, name_l);
    name[name_l] = '\0';
 
@@ -222,10 +222,10 @@ char *photo_picture_infos_get(Picture *p)
 
    snprintf(buf, sizeof(buf),
             "<underline=on underline_color=#000>Picture path :</> %s<br>"
-	    "<br>"
+            "<br>"
             "%s",
             p->path,
-	    buf_ext);
+            buf_ext);
 
    return strdup(buf);
 }
@@ -235,7 +235,7 @@ void photo_picture_setbg_add(const char *name)
    if (!name) return;
    char buf[4096];
    const char *home;
- 
+
    home = e_user_homedir_get();
    snprintf(buf, sizeof(buf), "%s/.e/e/backgrounds/%s.edj", home, name);
 

@@ -112,7 +112,7 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dial
 {
    Evas_Object *o;
    Evas_Object *of, *ob;
-   
+
    o = e_widget_table_add(evas, 0);
 
    of = e_widget_frametable_add(evas, D_("Directory"), 0);

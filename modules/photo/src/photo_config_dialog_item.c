@@ -35,17 +35,18 @@ int  photo_config_dialog_item_show(Photo_Item *pi)
    char buf[4096];
 
    v = E_NEW(E_Config_Dialog_View, 1);
-   
+
    v->create_cfdata = _create_data;
    v->free_cfdata = _free_data;
    v->basic.apply_cfdata = _basic_apply_data;
    v->basic.create_widgets = _basic_create_widgets;
    v->advanced.apply_cfdata = _advanced_apply_data;
    v->advanced.create_widgets = _advanced_create_widgets;
-   
+
    snprintf(buf, sizeof(buf), "%s/e-module-photo.edj", e_module_dir_get(photo->module));
    cfd = e_config_dialog_new(e_container_current_get(e_manager_current_get()),
-			     D_("Photo Item Configuration"), "Photo", "_e_modules_photo_item_config_dialog", buf, 0, v, pi);
+                 D_("Photo Item Configuration"), "Photo",
+                    "_e_modules_photo_item_config_dialog", buf, 0, v, pi);
    pi->config_dialog = cfd;
 
    return 1;
@@ -70,7 +71,7 @@ _create_data(E_Config_Dialog *cfd)
    Photo_Item *pi;
 
    pi = cfd->data;
-   
+
    cfdata = E_NEW(E_Config_Dialog_Data, 1);
    _fill_data(cfdata, pi);
    cfd->cfdata = cfdata;
@@ -121,8 +122,6 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dial
    e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 0, 1, 0);
 
    e_widget_table_object_append(o, of, 0, 0, 1, 1, 1, 1, 1, 1);
-
-   
 
    of = e_widget_frametable_add(evas, D_("Appearance"), 0);
 

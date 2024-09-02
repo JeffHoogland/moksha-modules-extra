@@ -37,103 +37,101 @@ void photo_popup_warn_shutdown(void)
 
 Popup_Warn *photo_popup_warn_add(int type, const char *text, int timer, int (*func_close) (Popup_Warn *popw, void *data), void (*func_desactivate) (Popup_Warn *popw, void *data), void *data)
 {
-  E_Zone *zone;
-  Popup_Warn *popw;
-  int fw, fh;
+   E_Zone *zone;
+   Popup_Warn *popw;
+   int fw, fh;
 
-  popw = E_NEW(Popup_Warn, 1);
+   popw = E_NEW(Popup_Warn, 1);
 
-  popw->type = type;
-  popw->timer_org = timer;
+   popw->type = type;
+   popw->timer_org = timer;
 
-  zone = e_util_zone_current_get(e_manager_current_get());
+   zone = e_util_zone_current_get(e_manager_current_get());
 
-  /* pop */
-  popw->pop = e_popup_new(zone, 0, 0, 1, 1);
-  if (!popw->pop)
-    {
-      photo_popup_warn_del(popw);
-      return 0;
-    }
-  evas_event_freeze(popw->pop->evas);
-  e_popup_layer_set(popw->pop, 255);
+   /* pop */
+   popw->pop = e_popup_new(zone, 0, 0, 1, 1);
+   if (!popw->pop)
+     {
+       photo_popup_warn_del(popw);
+       return 0;
+     }
+   evas_event_freeze(popw->pop->evas);
+   e_popup_layer_set(popw->pop, 255);
 
+   /* face and text */
+   popw->face = edje_object_add(popw->pop->evas);
+   photo_util_edje_set(popw->face, PHOTO_THEME_POPW);
+   edje_object_signal_callback_add(popw->face, "close", "popup",
+                   _cb_edje_close, popw);
+   edje_object_signal_callback_add(popw->face, "desactivate", "popup",
+                   _cb_edje_desactivate, popw);
+   edje_object_part_text_set(popw->face, "text", text);
+   edje_object_part_geometry_get(popw->face, "text_border",
+                 NULL, NULL, &fw, NULL);
+   edje_object_part_geometry_get(popw->face, "background",
+                 NULL, NULL, NULL, &fh);
+   evas_object_resize(popw->face, fw, fh);
+   evas_object_move(popw->face, 0, 0);
 
+   /* type */
+   edje_object_message_send(popw->face, EDJE_MESSAGE_INT,
+              POPUP_WARN_EDJE_MESSAGE_TYPE,
+              &type);
 
-  /* face and text */
-  popw->face = edje_object_add(popw->pop->evas);
-  photo_util_edje_set(popw->face, PHOTO_THEME_POPW);
-  edje_object_signal_callback_add(popw->face, "close", "popup",
-				  _cb_edje_close, popw);
-  edje_object_signal_callback_add(popw->face, "desactivate", "popup",
-				  _cb_edje_desactivate, popw);
-  edje_object_part_text_set(popw->face, "text", text);
-  edje_object_part_geometry_get(popw->face, "text_border",
-				NULL, NULL, &fw, NULL);
-  edje_object_part_geometry_get(popw->face, "background",
-				NULL, NULL, NULL, &fh);
-  evas_object_resize(popw->face, fw, fh);
-  evas_object_move(popw->face, 0, 0);
+   /* pos */
+   popw->x = photo->canvas_w - (fw + 20);;
+   popw->y = photo->canvas_h - (fh + 20);;
+   popw->w = fw;
+   popw->h = fh;
 
-  /* type */
-  edje_object_message_send(popw->face, EDJE_MESSAGE_INT,
-			   POPUP_WARN_EDJE_MESSAGE_TYPE,
-			   &type);
+   /* timer */
+   if (timer)
+     popw->timer = ecore_timer_add(timer, _cb_timer, popw);
 
-  /* pos */
-  popw->x = photo->canvas_w - (fw + 20);;
-  popw->y = photo->canvas_h - (fh + 20);;
-  popw->w = fw;
-  popw->h = fh;
+   /* close and desactivate functions */
+   popw->func_close = func_close;
+   if (func_desactivate)
+     {
+       int show_desactivate = 1;
 
-  /* timer */
-  if (timer)
-    popw->timer = ecore_timer_add(timer, _cb_timer, popw);
-
-  /* close and desactivate functions */
-  popw->func_close = func_close;
-  if (func_desactivate)
-    {
-      int show_desactivate = 1;
-
-      popw->func_desactivate = func_desactivate;
-      edje_object_message_send(popw->face, EDJE_MESSAGE_INT,
-			       POPUP_WARN_EDJE_MESSAGE_SHOW_DESACTIVATE,
-			       &show_desactivate);
+       popw->func_desactivate = func_desactivate;
+       edje_object_message_send(popw->face, EDJE_MESSAGE_INT,
+                   POPUP_WARN_EDJE_MESSAGE_SHOW_DESACTIVATE,
+                   &show_desactivate);
     }
 
-  /* attach data */
-  popw->data = data;
+   /* attach data */
+   popw->data = data;
 
-  /* check for popup overlaps */
-  _check_overlap(&popw->x, &popw->y, &popw->w, &popw->h, 0, popw->x, popw->y);
-  e_popup_move_resize(popw->pop, popw->x, popw->y, popw->w, popw->h);
-  DPOPW(("New: %dx%d : %dx%d", popw->x, popw->y, popw->w, popw->h));
-  DPOPW(("New face: %dx%d", fw, fh));
+   /* check for popup overlaps */
+   _check_overlap(&popw->x, &popw->y, &popw->w, &popw->h, 0, popw->x, popw->y);
+   e_popup_move_resize(popw->pop, popw->x, popw->y, popw->w, popw->h);
+   DPOPW(("New: %dx%d : %dx%d", popw->x, popw->y, popw->w, popw->h));
+   DPOPW(("New face: %dx%d", fw, fh));
 
-  /* go ! */
-  evas_object_show(popw->face);
-  e_popup_edje_bg_object_set(popw->pop, popw->face);
-  evas_event_thaw(popw->pop->evas);
-  e_popup_show(popw->pop);
-  
-  _popups_warn = eina_list_append(_popups_warn, popw);
-	
+   /* go ! */
+   evas_object_show(popw->face);
+   e_popup_edje_bg_object_set(popw->pop, popw->face);
+   evas_event_thaw(popw->pop->evas);
+   e_popup_show(popw->pop);
+
+   _popups_warn = eina_list_append(_popups_warn, popw);
+
    return popw;
 }
 
 void photo_popup_warn_del(Popup_Warn *popw)
 {
-  if (popw->timer)
-    ecore_timer_del(popw->timer);
-  if (popw->face)
-    evas_object_del(popw->face);
-  if (popw->pop)
-    e_object_del(E_OBJECT(popw->pop));
+   if (popw->timer)
+     ecore_timer_del(popw->timer);
+   if (popw->face)
+     evas_object_del(popw->face);
+   if (popw->pop)
+     e_object_del(E_OBJECT(popw->pop));
 
-  _popups_warn = eina_list_remove(_popups_warn, popw);
+   _popups_warn = eina_list_remove(_popups_warn, popw);
 
-  free(popw);
+   free(popw);
 }
 
 
@@ -187,12 +185,12 @@ _check_overlap(int *px, int *py, int *pw, int *ph, int tries, int org_x, int org
 static void
 _try_close(Popup_Warn *popw)
 {
-  int del = 1;
+   int del = 1;
 
    if (popw->func_close)
      {
        if (!popw->func_close(popw, popw->data))
-	 del = 0;
+       del = 0;
      }
 
    if (del)

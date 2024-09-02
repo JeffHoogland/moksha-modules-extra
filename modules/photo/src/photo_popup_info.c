@@ -25,7 +25,6 @@
 
 static Eina_List *_popups_info;
 
-
 static void _placement(Photo_Item *pi, int placement, int popi_w, int popi_h, int *popi_x, int *popi_y);
 static void _close(Popup_Info *popi);
 static Eina_Bool  _cb_timer(void *data);;
@@ -58,112 +57,112 @@ void photo_popup_info_shutdown(void)
 
 Popup_Info *photo_popup_info_add(Photo_Item *pi, const char *title, const char *text, Picture *picture, int timer, int placement, void (*cb_func) (void *data), void *data)
 {
-  E_Zone *zone;
-  Popup_Info *popi;
-  Evas_Object *tb;
-  Evas_Textblock_Style *tb_style;
-  int fw, fh, tw, th;
+   E_Zone *zone;
+   Popup_Info *popi;
+   Evas_Object *tb;
+   Evas_Textblock_Style *tb_style;
+   int fw, fh, tw, th;
 
-  popi = E_NEW(Popup_Info, 1);
+   popi = E_NEW(Popup_Info, 1);
 
-  popi->pi = pi;
-  popi->timer_org = timer;
+   popi->pi = pi;
+   popi->timer_org = timer;
 
-  zone = e_util_zone_current_get(e_manager_current_get());
+   zone = e_util_zone_current_get(e_manager_current_get());
 
-  /* pop */
-  popi->pop = e_popup_new(zone, 0, 0, 1, 1);
-  if (!popi->pop)
-    {
-      photo_popup_info_del(popi);
-      return 0;
-    }
-  evas_event_freeze(popi->pop->evas);
-  e_popup_layer_set(popi->pop, 255);
+   /* pop */
+   popi->pop = e_popup_new(zone, 0, 0, 1, 1);
+   if (!popi->pop)
+     {
+       photo_popup_info_del(popi);
+       return 0;
+     }
+   evas_event_freeze(popi->pop->evas);
+   e_popup_layer_set(popi->pop, 255);
 
-  /* textblock */
-  tb = evas_object_textblock_add(popi->pop->evas);
-  tb_style = evas_textblock_style_new();
-  evas_textblock_style_set(tb_style,
+   /* textblock */
+   tb = evas_object_textblock_add(popi->pop->evas);
+   tb_style = evas_textblock_style_new();
+   evas_textblock_style_set(tb_style,
                            "DEFAULT='font=Vera font_size=10 align=left color=#000000ff wrap=line'" "br='\n'");
-  evas_object_textblock_style_set(tb, tb_style);
-  evas_textblock_style_free(tb_style);
+   evas_object_textblock_style_set(tb, tb_style);
+   evas_textblock_style_free(tb_style);
 
-  evas_object_textblock_clear(tb);
-  evas_object_textblock_text_markup_set(tb, text);
-  evas_object_textblock_size_formatted_get(tb, &tw, &th);
-  evas_object_resize(tb, tw, th);
-  popi->tb = tb;
+   evas_object_textblock_clear(tb);
+   evas_object_textblock_text_markup_set(tb, text);
+   evas_object_textblock_size_formatted_get(tb, &tw, &th);
+   evas_object_resize(tb, tw, th);
+   popi->tb = tb;
 
-  /* face, title, icon and text */
-  popi->face = edje_object_add(popi->pop->evas);
-  photo_util_edje_set(popi->face, PHOTO_THEME_POPI);
-  edje_object_part_text_set(popi->face, "title", title);
-  edje_object_part_swallow(popi->face, "text", tb);
-  evas_object_pass_events_set(tb, 1);
+   /* face, title, icon and text */
+   popi->face = edje_object_add(popi->pop->evas);
+   photo_util_edje_set(popi->face, PHOTO_THEME_POPI);
+   edje_object_part_text_set(popi->face, "title", title);
+   edje_object_part_swallow(popi->face, "text", tb);
+   evas_object_pass_events_set(tb, 1);
    if (picture)
-   {
-      Evas_Object *im;
-      im = photo_picture_object_get(picture,
+     {
+       Evas_Object *im;
+       im = photo_picture_object_get(picture,
                                     popi->pop->evas);
-      if (im)
-        {
+       if (im)
+         {
            popi->icon = im;
            edje_object_part_swallow(popi->face, "icon", im);
            evas_object_pass_events_set(im, 1);
-        }
-   }
-  edje_object_signal_callback_add(popi->face, "close", "popup",
-				  _cb_edje_close, popi);
-  edje_object_part_geometry_get(popi->face, "background",
-				NULL, NULL, &fw, &fh);
-  evas_object_move(popi->face, 0, 0);
+         }
+     }
+   edje_object_signal_callback_add(popi->face, "close", "popup",
+                _cb_edje_close, popi);
+   edje_object_part_geometry_get(popi->face, "background",
+                NULL, NULL, &fw, &fh);
+   evas_object_move(popi->face, 0, 0);
 
   /* pos and size */
-  popi->w = fw + tw;
-  popi->h = fh + th + 20;
-  evas_object_resize(popi->face, popi->w, popi->h);
-  _placement(pi, placement, popi->w, popi->h, &popi->x, &popi->y);
-  e_popup_move_resize(popi->pop, popi->x, popi->y, popi->w, popi->h);
-  DPOPI(("New: %dx%d : %dx%d", popi->x, popi->y, popi->w, popi->h));
-  DPOPI(("New face: %dx%d", fw, fh));
-  DPOPI(("New tb: %dx%d", tw, th));
+   popi->w = fw + tw;
+   popi->h = fh + th + 20;
+   evas_object_resize(popi->face, popi->w, popi->h);
+   _placement(pi, placement, popi->w, popi->h, &popi->x, &popi->y);
+   e_popup_move_resize(popi->pop, popi->x, popi->y, popi->w, popi->h);
+   DPOPI(("New: %dx%d : %dx%d", popi->x, popi->y, popi->w, popi->h));
+   DPOPI(("New face: %dx%d", fw, fh));
+   DPOPI(("New tb: %dx%d", tw, th));
 
-  /* timer */
-  if (timer)
-    popi->timer = ecore_timer_add(timer, _cb_timer, popi);
+   /* timer */
+   if (timer)
+     popi->timer = ecore_timer_add(timer, _cb_timer, popi);
 
-  /* callback function and data / pi */
-  popi->cb_func = cb_func;
-  popi->data = data;
+   /* callback function and data / pi */
+   popi->cb_func = cb_func;
+   popi->data = data;
 
-  /* go ! */
-  evas_object_show(popi->face);
-  e_popup_edje_bg_object_set(popi->pop, popi->face);
-  evas_event_thaw(popi->pop->evas);
-  e_popup_show(popi->pop);
-  
-  _popups_info = eina_list_append(_popups_info, popi);
-	
+   /* go ! */
+   evas_object_show(popi->face);
+   e_popup_edje_bg_object_set(popi->pop, popi->face);
+   evas_event_thaw(popi->pop->evas);
+   e_popup_show(popi->pop);
+
+   _popups_info = eina_list_append(_popups_info, popi);
+
    return popi;
 }
 
 void photo_popup_info_del(Popup_Info *popi)
 {
-  if (popi->timer)
-    ecore_timer_del(popi->timer);
-  if (popi->tb)
-    evas_object_del(popi->tb);
-  if (popi->icon)
-    evas_object_del(popi->icon);
-  if (popi->face)
-    evas_object_del(popi->face);
-  if (popi->pop)
-    e_object_del(E_OBJECT(popi->pop));
+   if (popi->timer)
+     ecore_timer_del(popi->timer);
+   if (popi->tb)
+     evas_object_del(popi->tb);
+   if (popi->icon)
+     evas_object_del(popi->icon);
+   if (popi->face)
+     evas_object_del(popi->face);
+   if (popi->pop)
+     e_object_del(E_OBJECT(popi->pop));
 
-  _popups_info = eina_list_remove(_popups_info, popi);
+   _popups_info = eina_list_remove(_popups_info, popi);
 
-  free(popi);
+   free(popi);
 }
 
 
@@ -179,7 +178,7 @@ _placement(Photo_Item *pi, int placement, int popi_w, int popi_h, int *popi_x, i
    int ox, oy, ow, oh;
    int gx, gy, gw, gh;
    int ew, eh;
-	
+
    w = popi_w;
    h = popi_h;
 
@@ -258,7 +257,7 @@ static void
 _close(Popup_Info *popi)
 {
    DPOPI(("close"));
-   
+
    if(popi->cb_func)
      {
         if (popi->data)
