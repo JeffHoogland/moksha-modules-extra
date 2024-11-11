@@ -361,7 +361,7 @@ _button_cb_mouse_down(void *data, Evas *e __UNUSED__,
 {
    Instance *inst;
    Evas_Event_Mouse_Down *ev;
-   
+
    inst = data;
    ev = event_info;
    if (ev->button == 3)
@@ -427,11 +427,11 @@ _button_cb_mouse_down(void *data, Evas *e __UNUSED__,
         e_menu_post_deactivate_callback_set(m, _menu_cb_post, inst);
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &cx, &cy, &cw, &ch);
-       e_menu_activate_mouse(m,
+        e_menu_activate_mouse(m,
                               e_util_zone_current_get(e_manager_current_get()),
                               cx + ev->output.x, cy + ev->output.y, 1, 1,
                               E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
-       evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
+        evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
                               EVAS_BUTTON_NONE, ev->timestamp, NULL);
      }
 }
@@ -443,12 +443,12 @@ _menu_cb_post(void *data __UNUSED__, E_Menu *m __UNUSED__)
      e_object_del(E_OBJECT(cpu_conf->menu_interval));
    cpu_conf->menu_interval = NULL;
 }
-   
+
 static void
 _cpu_menu_fast(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
- 
+
    inst = data;
    inst->ci->interval = 0.5;
    ecore_timer_del(inst->timer);
@@ -460,7 +460,7 @@ static void
 _cpu_menu_medium(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
- 
+
    inst = data;
    inst->ci->interval = 1.0;
    ecore_timer_del(inst->timer);
@@ -472,7 +472,7 @@ static void
 _cpu_menu_normal(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Instance *inst;
- 
+
    inst = data;
    inst->ci->interval = 2.0;
    ecore_timer_del(inst->timer);
@@ -539,13 +539,13 @@ e_modapi_init(E_Module *m)
    E_CONFIG_VAL(D, T, id, STR);
    E_CONFIG_VAL(D, T, interval, DOUBLE);
    E_CONFIG_VAL(D, T, merge_cpus, INT);
-   
+
    #undef T
    #define T Config
    #undef D
    #define D conf_edd
    E_CONFIG_LIST(D, T, items, conf_item_edd);
-   
+
    cpu_conf = e_config_domain_load("module.cpu", conf_edd);
    if (!cpu_conf) 
      {
@@ -559,7 +559,7 @@ e_modapi_init(E_Module *m)
 
         cpu_conf->items = eina_list_append(cpu_conf->items, ci);
      }
-   
+
    cpu_conf->module = m;
    e_gadcon_provider_register(&_gc_class);
    return m;
