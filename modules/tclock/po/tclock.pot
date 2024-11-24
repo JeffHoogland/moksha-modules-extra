@@ -1,38 +1,37 @@
-# Turkish translation for enlightenment
-# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Enlightenment development team
+# This file is distributed under the same license as the tclock package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
+"Project-Id-Version: tclock 0.3.2\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-11-24 09:44+0100\n"
-"PO-Revision-Date: 2009-11-14 14:06+0000\n"
-"Last-Translator: Mustafa Yılmaz <apshalasha@gmail.com>\n"
-"Language-Team: Turkish <tr@li.org>\n"
-"Language: tr\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-11-15 04:48+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
 
 #: src/e_mod_config.c:42
 msgid "Tclock Settings"
-msgstr "Tclock Ayarları"
+msgstr ""
 
 #: src/e_mod_config.c:101
 msgid "Top"
-msgstr "Üstte"
+msgstr ""
 
 #: src/e_mod_config.c:102
 msgid "Show Top Line"
-msgstr "Üst Çizgiyi Göster"
+msgstr ""
 
 #: src/e_mod_config.c:109
 msgid "Consult strftime(3) for format syntax"
-msgstr "biçim sözdizimi için strftime(3)'e danışın."
+msgstr ""
 
 #: src/e_mod_config.c:112
 msgid "Add time offset (e.g.+2)"
@@ -40,33 +39,31 @@ msgstr ""
 
 #: src/e_mod_config.c:123
 msgid "Bottom"
-msgstr "Altta"
+msgstr ""
 
 #: src/e_mod_config.c:125
 msgid "Show Bottom Line"
-msgstr "Alt Çizgiyi Göster"
+msgstr ""
 
 #: src/e_mod_config.c:135
 msgid "Tool Tip"
-msgstr "İpucu"
+msgstr ""
 
 #: src/e_mod_config.c:137
 msgid "Show Tooltip"
-msgstr "İpucu Göster"
+msgstr ""
 
 #: src/e_mod_config.c:148
 msgid "Font size"
 msgstr ""
 
 #: src/e_mod_config.c:150
-#, fuzzy
 msgid "Top line"
-msgstr "Üst Çizgiyi Göster"
+msgstr ""
 
 #: src/e_mod_config.c:155
-#, fuzzy
 msgid "Bottom line"
-msgstr "Alt Çizgiyi Göster"
+msgstr ""
 
 #: src/e_mod_config.c:163
 msgid "Label color"
@@ -78,8 +75,8 @@ msgstr ""
 
 #: src/e_mod_main.c:141
 msgid "TClock"
-msgstr "TClock"
+msgstr ""
 
 #: src/e_mod_main.c:181
 msgid "Settings"
-msgstr "Ayarlar"
+msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eo\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2017-01-20 21:44+0100\n"
+"POT-Creation-Date: 2024-11-24 09:44+0100\n"
 "PO-Revision-Date: 2011-12-17 10:41+0000\n"
 "Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
@@ -18,80 +18,68 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-12-05 05:29+0000\n"
 "X-Generator: Launchpad (build 16335)\n"
 
-#: src/e_mod_config.c:40
+#: src/e_mod_config.c:42
 msgid "Tclock Settings"
 msgstr "Agordoj pri Thorloĝo"
 
-#: src/e_mod_config.c:99
+#: src/e_mod_config.c:101
 msgid "Top"
 msgstr "Supre"
 
-#: src/e_mod_config.c:100
+#: src/e_mod_config.c:102
 msgid "Show Top Line"
 msgstr "Montri supran linion"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:109
 msgid "Consult strftime(3) for format syntax"
 msgstr "Konsilu strftime(3) por sintaksaranĝo"
 
-#: src/e_mod_config.c:110
+#: src/e_mod_config.c:112
 msgid "Add time offset (e.g.+2)"
 msgstr ""
 
-#: src/e_mod_config.c:122
+#: src/e_mod_config.c:123
 msgid "Bottom"
 msgstr "Malsupre"
 
-#: src/e_mod_config.c:124
+#: src/e_mod_config.c:125
 msgid "Show Bottom Line"
 msgstr "Montri malsupran linion"
 
-#: src/e_mod_config.c:134
+#: src/e_mod_config.c:135
 msgid "Tool Tip"
 msgstr "Ŝpruchelpilo"
 
-#: src/e_mod_config.c:136
+#: src/e_mod_config.c:137
 msgid "Show Tooltip"
 msgstr "Montri ŝpruchelpilon"
 
-#: src/e_mod_config.c:147
+#: src/e_mod_config.c:148
 msgid "Font size"
 msgstr ""
 
-#: src/e_mod_config.c:149
+#: src/e_mod_config.c:150
 #, fuzzy
 msgid "Top line"
 msgstr "Montri supran linion"
 
-#: src/e_mod_config.c:154
+#: src/e_mod_config.c:155
 #, fuzzy
 msgid "Bottom line"
 msgstr "Montri malsupran linion"
 
-#: src/e_mod_config.c:161
+#: src/e_mod_config.c:163
 msgid "Label color"
 msgstr ""
 
-#: src/e_mod_config.c:163
-msgid "Red"
+#: src/e_mod_config.c:165
+msgid "Click for the color selector"
 msgstr ""
 
-#: src/e_mod_config.c:168
-msgid "Green"
-msgstr ""
-
-#: src/e_mod_config.c:173
-msgid "Blue"
-msgstr ""
-
-#: src/e_mod_config.c:178
-msgid "Alpha"
-msgstr ""
-
-#: src/e_mod_main.c:142
+#: src/e_mod_main.c:141
 msgid "TClock"
 msgstr "THorloĝo"
 
-#: src/e_mod_main.c:182
+#: src/e_mod_main.c:181
 msgid "Settings"
 msgstr "Agordoj"

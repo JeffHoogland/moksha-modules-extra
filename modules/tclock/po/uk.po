@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tclock.HEAD\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2017-01-20 21:44+0100\n"
+"POT-Creation-Date: 2024-11-24 09:44+0100\n"
 "PO-Revision-Date: 2011-02-06 10:57+0300\n"
 "Last-Translator: Korostil Daniel <ted.korostiled@gmail.com>\n"
 "Language-Team: translation@linux.org.ua\n"
@@ -18,81 +18,69 @@ msgstr ""
 "X-Generator: Virtaal 0.6.1\n"
 "X-Launchpad-Export-Date: 2009-11-12 04:52+0000\n"
 
-#: src/e_mod_config.c:40
+#: src/e_mod_config.c:42
 msgid "Tclock Settings"
 msgstr "Налаштування"
 
-#: src/e_mod_config.c:99
+#: src/e_mod_config.c:101
 msgid "Top"
 msgstr "Верхівка"
 
-#: src/e_mod_config.c:100
+#: src/e_mod_config.c:102
 msgid "Show Top Line"
 msgstr "Показати верхню лінію"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:109
 msgid "Consult strftime(3) for format syntax"
 msgstr "Узгодити strftime(3) для розуміння синтаксису"
 
-#: src/e_mod_config.c:110
+#: src/e_mod_config.c:112
 msgid "Add time offset (e.g.+2)"
 msgstr ""
 
-#: src/e_mod_config.c:122
+#: src/e_mod_config.c:123
 msgid "Bottom"
 msgstr "Низ"
 
-#: src/e_mod_config.c:124
+#: src/e_mod_config.c:125
 msgid "Show Bottom Line"
 msgstr "Показати нижню лінію"
 
-#: src/e_mod_config.c:134
+#: src/e_mod_config.c:135
 msgid "Tool Tip"
 msgstr "Підказка"
 
-#: src/e_mod_config.c:136
+#: src/e_mod_config.c:137
 msgid "Show Tooltip"
 msgstr "Показувати підказку"
 
-#: src/e_mod_config.c:147
+#: src/e_mod_config.c:148
 msgid "Font size"
 msgstr ""
 
-#: src/e_mod_config.c:149
+#: src/e_mod_config.c:150
 #, fuzzy
 msgid "Top line"
 msgstr "Показати верхню лінію"
 
-#: src/e_mod_config.c:154
+#: src/e_mod_config.c:155
 #, fuzzy
 msgid "Bottom line"
 msgstr "Показати нижню лінію"
 
-#: src/e_mod_config.c:161
+#: src/e_mod_config.c:163
 msgid "Label color"
 msgstr ""
 
-#: src/e_mod_config.c:163
-msgid "Red"
+#: src/e_mod_config.c:165
+msgid "Click for the color selector"
 msgstr ""
 
-#: src/e_mod_config.c:168
-msgid "Green"
-msgstr ""
-
-#: src/e_mod_config.c:173
-msgid "Blue"
-msgstr ""
-
-#: src/e_mod_config.c:178
-msgid "Alpha"
-msgstr ""
-
-#: src/e_mod_main.c:142
+#: src/e_mod_main.c:141
 msgid "TClock"
 msgstr "Годинник"
 
-#: src/e_mod_main.c:182
+#: src/e_mod_main.c:181
 msgid "Settings"
 msgstr "Налаштування"
 

@@ -9,92 +9,80 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tclock module (e17)\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2017-01-20 21:44+0100\n"
+"POT-Creation-Date: 2024-11-24 09:44+0100\n"
 "PO-Revision-Date: 2009-08-27 02:59+0000\n"
 "Last-Translator: Careone <zzbusagain@yahoo.com.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2009-08-27 10:01+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: src/e_mod_config.c:40
+#: src/e_mod_config.c:42
 msgid "Tclock Settings"
 msgstr "Tclock 设置"
 
-#: src/e_mod_config.c:99
+#: src/e_mod_config.c:101
 msgid "Top"
 msgstr "顶部"
 
-#: src/e_mod_config.c:100
+#: src/e_mod_config.c:102
 msgid "Show Top Line"
 msgstr "显示上边线"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:109
 msgid "Consult strftime(3) for format syntax"
 msgstr "请查阅 strftime(3) 来了解格式语法"
 
-#: src/e_mod_config.c:110
+#: src/e_mod_config.c:112
 msgid "Add time offset (e.g.+2)"
 msgstr ""
 
-#: src/e_mod_config.c:122
+#: src/e_mod_config.c:123
 msgid "Bottom"
 msgstr "底部"
 
-#: src/e_mod_config.c:124
+#: src/e_mod_config.c:125
 msgid "Show Bottom Line"
 msgstr "显示下边线"
 
-#: src/e_mod_config.c:134
+#: src/e_mod_config.c:135
 msgid "Tool Tip"
 msgstr "工具提示"
 
-#: src/e_mod_config.c:136
+#: src/e_mod_config.c:137
 msgid "Show Tooltip"
 msgstr "显示提示"
 
-#: src/e_mod_config.c:147
+#: src/e_mod_config.c:148
 msgid "Font size"
 msgstr ""
 
-#: src/e_mod_config.c:149
+#: src/e_mod_config.c:150
 #, fuzzy
 msgid "Top line"
 msgstr "显示上边线"
 
-#: src/e_mod_config.c:154
+#: src/e_mod_config.c:155
 #, fuzzy
 msgid "Bottom line"
 msgstr "显示下边线"
 
-#: src/e_mod_config.c:161
+#: src/e_mod_config.c:163
 msgid "Label color"
 msgstr ""
 
-#: src/e_mod_config.c:163
-msgid "Red"
+#: src/e_mod_config.c:165
+msgid "Click for the color selector"
 msgstr ""
 
-#: src/e_mod_config.c:168
-msgid "Green"
-msgstr ""
-
-#: src/e_mod_config.c:173
-msgid "Blue"
-msgstr ""
-
-#: src/e_mod_config.c:178
-msgid "Alpha"
-msgstr ""
-
-#: src/e_mod_main.c:142
+#: src/e_mod_main.c:141
 msgid "TClock"
 msgstr "TClock"
 
-#: src/e_mod_main.c:182
+#: src/e_mod_main.c:181
 msgid "Settings"
 msgstr "设置"
 
