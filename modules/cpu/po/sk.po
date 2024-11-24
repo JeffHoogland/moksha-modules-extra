@@ -45,4 +45,4 @@ msgstr "Čas obnovovania"
 
 #: src/e_mod_main.c:420
 msgid "Merge CPU's into single Statistic"
-msgstr "Spojiť CPU do jednej štatistiky"
+msgstr "Zlúčiť CPU do jednej štatistiky"
