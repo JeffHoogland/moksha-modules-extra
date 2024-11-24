@@ -6,66 +6,72 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2009-12-01 15:38+0800\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-11-24 09:52+0100\n"
 "PO-Revision-Date: 2010-01-20 20:57+0000\n"
 "Last-Translator: Joshas <Unknown>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2010-01-21 04:34+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: ../src/e_mod_configure.c:44
-msgid "Net Module Configuration"
+#: src/e_mod_configure.c:44
+#, fuzzy
+msgid "Net Module Settings"
 msgstr "Tinklo modulio konfigūracija"
 
-#: ../src/e_mod_configure.c:114
+#: src/e_mod_configure.c:116
 msgid "General Settings"
 msgstr "Bendros nuostatos"
 
-#: ../src/e_mod_configure.c:115
+#: src/e_mod_configure.c:117
 msgid "Show Text"
 msgstr "Rodyti tekstą"
 
-#: ../src/e_mod_configure.c:117
+#: src/e_mod_configure.c:119
 msgid "Show Popup On Mouse-Over"
 msgstr "Užvedus žymeklį rodyti iššokantį langą"
 
-#: ../src/e_mod_configure.c:119
+#: src/e_mod_configure.c:121
 msgid "Launch Application On Double-Click"
 msgstr "Du-kart spragtelėjus paleisti programą"
 
-#: ../src/e_mod_configure.c:125
+#: src/e_mod_configure.c:127
 msgid "Activity Notification Level"
 msgstr "Veikos informavimo lygis"
 
-#: ../src/e_mod_configure.c:127
+#: src/e_mod_configure.c:129
 msgid "High (MB)"
 msgstr "Aukštas (MB)"
 
-#: ../src/e_mod_configure.c:129
+#: src/e_mod_configure.c:131
 msgid "Middle (KB)"
 msgstr "Vidutinis (KB)"
 
-#: ../src/e_mod_configure.c:131
+#: src/e_mod_configure.c:133
 msgid "Low (B)"
 msgstr "Žemas (B)"
 
-#: ../src/e_mod_configure.c:137
+#: src/e_mod_configure.c:139
 msgid "Device Settings"
 msgstr "Įrenginio nuostatos"
 
-#: ../src/e_mod_gadcon.c:91
+#: src/e_mod_gadcon.c:96
 msgid "Net"
 msgstr "Tinklas"
 
-#: ../src/e_mod_net.c:168
-msgid "Configuration"
-msgstr "Konfigūracija"
+#: src/e_mod_net.c:161
+#, fuzzy
+msgid "Settings"
+msgstr "Įrenginio nuostatos"
 
-#: ../src/e_mod_net.c:203
+#: src/e_mod_net.c:195
 #, c-format
 msgid "Device - %s"
 msgstr "Įrenginys - %s"
+
+#~ msgid "Configuration"
+#~ msgstr "Konfigūracija"

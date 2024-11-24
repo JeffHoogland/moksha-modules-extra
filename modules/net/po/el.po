@@ -3,10 +3,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2008-11-23 20:16+0800\n"
+"POT-Creation-Date: 2024-11-24 09:52+0100\n"
 "PO-Revision-Date: 2008-11-09 15:36+0200\n"
 "Last-Translator: \n"
 "Language-Team: Greek <en@li.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,55 +16,60 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/e_mod_configure.c:44
-msgid "Net Module Configuration"
+#: src/e_mod_configure.c:44
+#, fuzzy
+msgid "Net Module Settings"
 msgstr "Ρύθμιση Αρθρώματος Δικτύου"
 
-#: ../src/e_mod_configure.c:114
+#: src/e_mod_configure.c:116
 msgid "General Settings"
 msgstr "Γενικές Ρυθμίσεις"
 
-#: ../src/e_mod_configure.c:115
+#: src/e_mod_configure.c:117
 msgid "Show Text"
 msgstr "Εμφάνιση Κειμένου"
 
-#: ../src/e_mod_configure.c:117
+#: src/e_mod_configure.c:119
 msgid "Show Popup On Mouse-Over"
 msgstr "Εμφάνιση "
 
-#: ../src/e_mod_configure.c:119
+#: src/e_mod_configure.c:121
 msgid "Launch Application On Double-Click"
 msgstr "Εκτέλεση Εφαρμογής Σε Διπλό-Κλικ"
 
-#: ../src/e_mod_configure.c:125
+#: src/e_mod_configure.c:127
 msgid "Activity Notification Level"
 msgstr "Ειδοποίηση Επιπέδου Δραστηριότητας"
 
-#: ../src/e_mod_configure.c:127
+#: src/e_mod_configure.c:129
 msgid "High (MB)"
 msgstr "Υψηλή (MB)"
 
-#: ../src/e_mod_configure.c:129
+#: src/e_mod_configure.c:131
 msgid "Middle (KB)"
 msgstr "Μεσαία (KB)"
 
-#: ../src/e_mod_configure.c:131
+#: src/e_mod_configure.c:133
 msgid "Low (B)"
 msgstr "Χαμηλή (B)"
 
-#: ../src/e_mod_configure.c:137
+#: src/e_mod_configure.c:139
 msgid "Device Settings"
 msgstr "Ρυθμίσεις Συσκευής"
 
-#: ../src/e_mod_gadcon.c:91
+#: src/e_mod_gadcon.c:96
 msgid "Net"
 msgstr "Δίκτυο"
 
-#: ../src/e_mod_net.c:168
-msgid "Configuration"
-msgstr "Ρύθμιση"
+#: src/e_mod_net.c:161
+#, fuzzy
+msgid "Settings"
+msgstr "Ρυθμίσεις Συσκευής"
 
-#: ../src/e_mod_net.c:203
+#: src/e_mod_net.c:195
 #, c-format
 msgid "Device - %s"
 msgstr "Συσκευή - %s"
+
+#~ msgid "Configuration"
+#~ msgstr "Ρύθμιση"
