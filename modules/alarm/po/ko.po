@@ -7,156 +7,149 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-08-28 16:31+0800\n"
+"POT-Creation-Date: 2024-09-01 10:13+0200\n"
 "PO-Revision-Date: 2009-08-15 13:20+0000\n"
 "Last-Translator: jincreator <Unknown>\n"
 "Language-Team: Korean <ko@li.org>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2009-08-27 10:01+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: ../src/e_mod_config.c:55
+#: src/e_mod_config.c:52
 msgid "Alarm Configuration"
 msgstr "알람 구성"
 
-#: ../src/e_mod_config.c:155 ../src/e_mod_main.c:188
+#: src/e_mod_config.c:152 src/e_mod_main.c:182
 msgid "Alarm"
 msgstr "알람"
 
-#: ../src/e_mod_config.c:157 ../src/e_mod_config_alarm.c:190
+#: src/e_mod_config.c:154 src/e_mod_config_alarm.c:188
 msgid "Active"
 msgstr "활성"
 
-#: ../src/e_mod_config.c:166
+#: src/e_mod_config.c:163
 msgid "Add"
 msgstr "추가"
 
-#: ../src/e_mod_config.c:168
+#: src/e_mod_config.c:165
 msgid "Delete"
 msgstr "삭제"
 
-#: ../src/e_mod_config.c:170
+#: src/e_mod_config.c:167
 msgid "Configure"
 msgstr "구성"
 
-#: ../src/e_mod_config.c:172
+#: src/e_mod_config.c:169
 msgid "Duplicate"
 msgstr "복제"
 
-#: ../src/e_mod_config.c:226
+#: src/e_mod_config.c:222
 msgid "Alarm Options"
 msgstr "알람 옵션"
 
-#.
-#. ob = e_widget_label_add(evas, D_("Time format"));
-#. e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
-#. rg = e_widget_radio_group_new(&(cfdata->time_format));
-#. ob = e_widget_radio_add(evas, D_("12h"), TIME_FORMAT_12, rg);
-#. e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1);
-#. ob = e_widget_radio_add(evas, D_("24h"), TIME_FORMAT_24, rg);
-#. e_widget_frametable_object_append(of, ob, 2, 0, 1, 1, 1, 1, 1, 1);
-#.
-#: ../src/e_mod_config.c:238
+#: src/e_mod_config.c:234
 msgid "Show next alarm"
 msgstr "다음 알람 보이기"
 
-#: ../src/e_mod_config.c:244
+#: src/e_mod_config.c:239
 msgid "Alarms Defaults"
 msgstr "알람 기본값"
 
-#: ../src/e_mod_config.c:246 ../src/e_mod_config_alarm.c:404
+#: src/e_mod_config.c:241 src/e_mod_config_alarm.c:397
 msgid "Open popup"
 msgstr "팝업 열기"
 
-#: ../src/e_mod_config.c:249
+#: src/e_mod_config.c:244
 msgid "Run program"
 msgstr "프로그램 실행"
 
-#: ../src/e_mod_config.c:256
+#: src/e_mod_config.c:251
 msgid "Auto-Remove alarms"
 msgstr "자동으로 알람 제거"
 
-#: ../src/e_mod_config_alarm.c:71
+#: src/e_mod_config_alarm.c:68
 msgid "Alarm Configuration : Setup an alarm"
 msgstr "알람 구성 : 알람을 설정"
 
-#: ../src/e_mod_config_alarm.c:188
+#: src/e_mod_config_alarm.c:186
 msgid "Informations"
 msgstr "정보"
 
-#: ../src/e_mod_config_alarm.c:192
+#: src/e_mod_config_alarm.c:190
 msgid "Name"
 msgstr "이름"
 
-#: ../src/e_mod_config_alarm.c:197
+#: src/e_mod_config_alarm.c:195
 msgid "Description"
 msgstr "설명"
 
-#: ../src/e_mod_config_alarm.c:207
+#: src/e_mod_config_alarm.c:203
 msgid "Schedule"
 msgstr "일정"
 
-#: ../src/e_mod_config_alarm.c:209
+#: src/e_mod_config_alarm.c:205
 #, c-format
 msgid "%1.0f hour"
 msgstr "%1.0f 시"
 
-#: ../src/e_mod_config_alarm.c:212
+#: src/e_mod_config_alarm.c:208
 #, c-format
 msgid "%1.0f minute"
 msgstr "%1.0f 분"
 
-#: ../src/e_mod_config_alarm.c:218
+#: src/e_mod_config_alarm.c:214
 msgid "Days of the week"
 msgstr "주의 첫날"
 
-#: ../src/e_mod_config_alarm.c:222
+#: src/e_mod_config_alarm.c:218
 msgid "Monday"
 msgstr "월요일"
 
-#: ../src/e_mod_config_alarm.c:224
+#: src/e_mod_config_alarm.c:220
 msgid "Tuesday"
 msgstr "화요일"
 
-#: ../src/e_mod_config_alarm.c:226
-msgid "Wenesday"
+#: src/e_mod_config_alarm.c:222
+#, fuzzy
+msgid "Wednesday"
 msgstr "수요일"
 
-#: ../src/e_mod_config_alarm.c:228
+#: src/e_mod_config_alarm.c:224
 msgid "Thursday"
 msgstr "목요일"
 
-#: ../src/e_mod_config_alarm.c:230
+#: src/e_mod_config_alarm.c:226
 msgid "Friday"
 msgstr "금요일"
 
-#: ../src/e_mod_config_alarm.c:232
+#: src/e_mod_config_alarm.c:228
 msgid "Saturday"
 msgstr "토요일"
 
-#: ../src/e_mod_config_alarm.c:234
+#: src/e_mod_config_alarm.c:230
 msgid "Sunday"
 msgstr "일요일"
 
-#: ../src/e_mod_config_alarm.c:239
+#: src/e_mod_config_alarm.c:235
 msgid "One day"
 msgstr "하루"
 
-#: ../src/e_mod_config_alarm.c:243
+#: src/e_mod_config_alarm.c:239
 msgid "Date (YYYY/MM/DD)"
 msgstr "날짜(YYYY/MM/DD)"
 
-#: ../src/e_mod_config_alarm.c:248
+#: src/e_mod_config_alarm.c:244
 msgid "Today"
 msgstr "오늘"
 
-#: ../src/e_mod_config_alarm.c:250
+#: src/e_mod_config_alarm.c:246
 msgid "Tomorrow"
 msgstr "내일"
 
-#: ../src/e_mod_config_alarm.c:288
+#: src/e_mod_config_alarm.c:284
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
 "in the informations / schedule of your alarm"
@@ -164,7 +157,7 @@ msgstr ""
 "<hilight>오류, 알람이 추가되지 못했습니다 !</hilight><br><br>정보에 오류가 있"
 "습니다 / 알람의 일정"
 
-#: ../src/e_mod_config_alarm.c:293
+#: src/e_mod_config_alarm.c:289
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>You have to enter "
 "a name for the alarm"
@@ -172,7 +165,7 @@ msgstr ""
 "<hilight>오류, 알람이 추가되지 못했습니다 !</hilight><br><br>알람의 이름을 입"
 "력하십시오"
 
-#: ../src/e_mod_config_alarm.c:298
+#: src/e_mod_config_alarm.c:294
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>You have to "
 "select at least one day in the week"
@@ -180,7 +173,7 @@ msgstr ""
 "<hilight>오류, 알람이 추가되지 못했습니다 !</hilight><br><br>주중 하루 이상"
 "을 선택하십시오"
 
-#: ../src/e_mod_config_alarm.c:303
+#: src/e_mod_config_alarm.c:299
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
 "entered for the alarm has incorrect syntax<br><br>You have to respect this "
@@ -192,7 +185,7 @@ msgstr ""
 "DD<br>YYYY는 4자리 년도입니다<br>MM은 2자리 월입니다<br>DD는 2자리 일입니다"
 "<br>"
 
-#: ../src/e_mod_config_alarm.c:313
+#: src/e_mod_config_alarm.c:309
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
 "entered is before now"
@@ -200,52 +193,52 @@ msgstr ""
 "<hilight>오류, 알람이 추가되지 못했습니다 !</hilight><br><br>입력된 날짜는 과"
 "거입니다"
 
-#: ../src/e_mod_config_alarm.c:317 ../src/e_mod_main.c:427
+#: src/e_mod_config_alarm.c:313 src/e_mod_main.c:421
 msgid "Alarm Module Error"
 msgstr "알람 모듈 오륲"
 
-#: ../src/e_mod_config_alarm.c:354 ../src/e_mod_config_alarm.c:442
+#: src/e_mod_config_alarm.c:348 src/e_mod_config_alarm.c:435
 msgid "Test this alarm"
 msgstr "알람 검사"
 
-#: ../src/e_mod_config_alarm.c:382
+#: src/e_mod_config_alarm.c:375
 msgid "Ring Options"
 msgstr "울림 옵션"
 
-#: ../src/e_mod_config_alarm.c:384
+#: src/e_mod_config_alarm.c:377
 msgid "Remove alarm"
 msgstr "알람 제거"
 
-#: ../src/e_mod_config_alarm.c:391 ../src/e_mod_config_alarm.c:411
+#: src/e_mod_config_alarm.c:384 src/e_mod_config_alarm.c:404
 msgid "No [default]"
 msgstr "아니오 [기본값]"
 
-#: ../src/e_mod_config_alarm.c:393 ../src/e_mod_config_alarm.c:413
+#: src/e_mod_config_alarm.c:386 src/e_mod_config_alarm.c:406
 msgid "Yes"
 msgstr "예"
 
-#: ../src/e_mod_config_alarm.c:398 ../src/e_mod_config_alarm.c:418
-#: ../src/e_mod_config_alarm.c:429
+#: src/e_mod_config_alarm.c:391 src/e_mod_config_alarm.c:411
+#: src/e_mod_config_alarm.c:422
 msgid "No"
 msgstr "아니오"
 
-#: ../src/e_mod_config_alarm.c:400 ../src/e_mod_config_alarm.c:420
+#: src/e_mod_config_alarm.c:393 src/e_mod_config_alarm.c:413
 msgid "Yes [default]"
 msgstr "예 [기본값]"
 
-#: ../src/e_mod_config_alarm.c:424
+#: src/e_mod_config_alarm.c:417
 msgid "Run a program"
 msgstr "프로그램 실행"
 
-#: ../src/e_mod_config_alarm.c:431
+#: src/e_mod_config_alarm.c:424
 msgid "Run default one"
 msgstr "기본값 실행"
 
-#: ../src/e_mod_config_alarm.c:433
+#: src/e_mod_config_alarm.c:426
 msgid "Run this program"
 msgstr "이 프로그램 실행"
 
-#: ../src/e_mod_config_alarm.c:478
+#: src/e_mod_config_alarm.c:471
 msgid ""
 "<hilight>Alarm test SUCCEED !</hilight><br><br>But DONT FORGET to ACTIVATE "
 "the alarms<br>via the 'Active' check button on the<br>main Alarm "
@@ -254,28 +247,28 @@ msgstr ""
 "<hilight>알람 검사 성공 !</hilight><br><br>그러나 절대로 알람을 활성화하는 것"
 "을 잊지 마십시오!<br>주 알람 구성 패널의<br>'활성' 체크 바튼을 사용하십시오."
 
-#: ../src/e_mod_config_alarm.c:484
+#: src/e_mod_config_alarm.c:477
 msgid "<hilight>Alarm test SUCCEED !</hilight>"
 msgstr "<hilight>알람 검사 성공 !</hilight>"
 
-#: ../src/e_mod_config_alarm.c:489
+#: src/e_mod_config_alarm.c:482
 msgid "<hilight>Alarm test FAILED !</hilight>"
 msgstr "<hilight>알람 검사 실패 !</hilight>"
 
-#: ../src/e_mod_config_alarm.c:491
+#: src/e_mod_config_alarm.c:484
 msgid "Alarm Module Test Report"
 msgstr "알람 모듈 검사 보고서"
 
-#: ../src/e_mod_main.c:399
+#: src/e_mod_main.c:393
 #, c-format
 msgid "<hilight>Alarm : %s</hilight><br><br>%s"
 msgstr "<hilight>알람 : %s</hilight><br><br>%s"
 
-#: ../src/e_mod_main.c:402
+#: src/e_mod_main.c:396
 msgid "Alarm Module Popup"
 msgstr "알람 모듈 팝업"
 
-#: ../src/e_mod_main.c:425
+#: src/e_mod_main.c:419
 msgid ""
 "<hilight>Failed !</hilight><br><br>Alarm couln't launch the program you "
 "specified"
@@ -283,47 +276,47 @@ msgstr ""
 "<hilight>실패 !</hilight><br><br>알람은 지정된 프로그램을 실행시킬 수 없었습"
 "니다."
 
-#: ../src/e_mod_main.c:659 ../src/e_mod_main.c:838
+#: src/e_mod_main.c:653 src/e_mod_main.c:846
 #, c-format
 msgid "Snooze %s"
 msgstr "스누즈 %s"
 
-#: ../src/e_mod_main.c:663
+#: src/e_mod_main.c:657
 #, c-format
 msgid "%1.0f hours"
 msgstr "%1.0f 시간"
 
-#: ../src/e_mod_main.c:666
+#: src/e_mod_main.c:660
 #, c-format
 msgid "%1.0f minutes"
 msgstr "%1.0f 분"
 
-#: ../src/e_mod_main.c:673
+#: src/e_mod_main.c:667
 msgid "Ok"
 msgstr "확인"
 
-#: ../src/e_mod_main.c:674
+#: src/e_mod_main.c:668
 msgid "Close"
 msgstr "닫기"
 
-#: ../src/e_mod_main.c:846
+#: src/e_mod_main.c:818
+msgid "Add an alarm"
+msgstr "알람 추가"
+
+#: src/e_mod_main.c:828
+msgid "Settings"
+msgstr ""
+
+#: src/e_mod_main.c:854
 #, c-format
 msgid "Snooze %.14s of %.2d:%.2d"
 msgstr "스누즈 %.14s - %.2d:%.2d"
 
-#: ../src/e_mod_main.c:860
+#: src/e_mod_main.c:868
 msgid "Snooze (No alarm to delay)"
 msgstr "스누즈 (더 이상 연기할 수 없음)"
 
-#: ../src/e_mod_main.c:867
-msgid "Add an alarm"
-msgstr "알람 추가"
-
-#: ../src/e_mod_main.c:874
-msgid "Configuration"
-msgstr "구성"
-
-#: ../src/e_mod_main.c:1055
+#: src/e_mod_main.c:1040
 #, c-format
 msgid ""
 "<hilight>Alarm module : Configuration Upgraded</hilight><br><br>Your "
@@ -334,11 +327,11 @@ msgstr ""
 "<br>업그레이드되었습니다<br>설정과 알람이 모두 제거되었습니다<br>불편을 드려 "
 "죄송합니다<br><br>(%d -> %d)"
 
-#: ../src/e_mod_main.c:1061 ../src/e_mod_main.c:1075
+#: src/e_mod_main.c:1046 src/e_mod_main.c:1060
 msgid "Alarm Module version "
 msgstr "알람 모듈 버전 "
 
-#: ../src/e_mod_main.c:1069
+#: src/e_mod_main.c:1054
 #, c-format
 msgid ""
 "<hilight>Alarm module : Configuration Downgraded</hilight><br><br>Your "
@@ -348,3 +341,6 @@ msgstr ""
 "<hilight>알람 모듈 : 구성 다운그레이드됨</hilight><br><br>알람 모듈의 구성이"
 "<br>업그레이드되었습니다<br>설정과 알람이 모두 제거되었습니다<br>불편을 드려 "
 "죄송합니다<br><br>(%d -> %d)"
+
+#~ msgid "Configuration"
+#~ msgstr "구성"

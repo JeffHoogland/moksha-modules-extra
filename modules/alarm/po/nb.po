@@ -6,175 +6,168 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2009-11-05 16:07+0800\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-09-01 10:13+0200\n"
 "PO-Revision-Date: 2009-11-01 15:04+0000\n"
 "Last-Translator: Bjørn Olav Samdal <bjornsam@ulrik.uio.no>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2009-11-10 07:13+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: ../src/e_mod_config.c:55
+#: src/e_mod_config.c:52
 msgid "Alarm Configuration"
 msgstr "Alarmoppsett"
 
-#: ../src/e_mod_config.c:155 ../src/e_mod_main.c:188
+#: src/e_mod_config.c:152 src/e_mod_main.c:182
 msgid "Alarm"
 msgstr "Alarm"
 
-#: ../src/e_mod_config.c:157 ../src/e_mod_config_alarm.c:190
+#: src/e_mod_config.c:154 src/e_mod_config_alarm.c:188
 msgid "Active"
 msgstr "Aktiv"
 
-#: ../src/e_mod_config.c:166
+#: src/e_mod_config.c:163
 msgid "Add"
 msgstr "Legg til"
 
-#: ../src/e_mod_config.c:168
+#: src/e_mod_config.c:165
 msgid "Delete"
 msgstr "Slett"
 
-#: ../src/e_mod_config.c:170
+#: src/e_mod_config.c:167
 msgid "Configure"
 msgstr "Konfigurer"
 
-#: ../src/e_mod_config.c:172
+#: src/e_mod_config.c:169
 msgid "Duplicate"
 msgstr "Kopier"
 
-#: ../src/e_mod_config.c:226
+#: src/e_mod_config.c:222
 msgid "Alarm Options"
 msgstr ""
 
-#. 
-#. ob = e_widget_label_add(evas, D_("Time format"));
-#. e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
-#. rg = e_widget_radio_group_new(&(cfdata->time_format));
-#. ob = e_widget_radio_add(evas, D_("12h"), TIME_FORMAT_12, rg);
-#. e_widget_frametable_object_append(of, ob, 1, 0, 1, 1, 1, 1, 1, 1);
-#. ob = e_widget_radio_add(evas, D_("24h"), TIME_FORMAT_24, rg);
-#. e_widget_frametable_object_append(of, ob, 2, 0, 1, 1, 1, 1, 1, 1);
-#. 
-#: ../src/e_mod_config.c:238
+#: src/e_mod_config.c:234
 msgid "Show next alarm"
 msgstr ""
 
-#: ../src/e_mod_config.c:244
+#: src/e_mod_config.c:239
 msgid "Alarms Defaults"
 msgstr ""
 
-#: ../src/e_mod_config.c:246 ../src/e_mod_config_alarm.c:404
+#: src/e_mod_config.c:241 src/e_mod_config_alarm.c:397
 msgid "Open popup"
 msgstr "Åpne fane"
 
-#: ../src/e_mod_config.c:249
+#: src/e_mod_config.c:244
 msgid "Run program"
 msgstr "Kjør program"
 
-#: ../src/e_mod_config.c:256
+#: src/e_mod_config.c:251
 msgid "Auto-Remove alarms"
 msgstr "Slett Automatisk alarm"
 
-#: ../src/e_mod_config_alarm.c:71
+#: src/e_mod_config_alarm.c:68
 msgid "Alarm Configuration : Setup an alarm"
 msgstr "Alarmoppsett : Lag nytt alarmoppsett"
 
-#: ../src/e_mod_config_alarm.c:188
+#: src/e_mod_config_alarm.c:186
 msgid "Informations"
 msgstr "Informasjoner"
 
-#: ../src/e_mod_config_alarm.c:192
+#: src/e_mod_config_alarm.c:190
 msgid "Name"
 msgstr "Navn"
 
-#: ../src/e_mod_config_alarm.c:197
+#: src/e_mod_config_alarm.c:195
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: ../src/e_mod_config_alarm.c:207
+#: src/e_mod_config_alarm.c:203
 msgid "Schedule"
 msgstr "Planlagt"
 
-#: ../src/e_mod_config_alarm.c:209
+#: src/e_mod_config_alarm.c:205
 #, c-format
 msgid "%1.0f hour"
 msgstr "%1.0f time"
 
-#: ../src/e_mod_config_alarm.c:212
+#: src/e_mod_config_alarm.c:208
 #, c-format
 msgid "%1.0f minute"
 msgstr "%1.0f minutt"
 
-#: ../src/e_mod_config_alarm.c:218
+#: src/e_mod_config_alarm.c:214
 msgid "Days of the week"
 msgstr "Ukedager"
 
-#: ../src/e_mod_config_alarm.c:222
+#: src/e_mod_config_alarm.c:218
 msgid "Monday"
 msgstr "Mandag"
 
-#: ../src/e_mod_config_alarm.c:224
+#: src/e_mod_config_alarm.c:220
 msgid "Tuesday"
 msgstr "Tirsdag"
 
-#: ../src/e_mod_config_alarm.c:226
-msgid "Wenesday"
+#: src/e_mod_config_alarm.c:222
+#, fuzzy
+msgid "Wednesday"
 msgstr "Onsdag"
 
-#: ../src/e_mod_config_alarm.c:228
+#: src/e_mod_config_alarm.c:224
 msgid "Thursday"
 msgstr "Torsdag"
 
-#: ../src/e_mod_config_alarm.c:230
+#: src/e_mod_config_alarm.c:226
 msgid "Friday"
 msgstr "Fredag"
 
-#: ../src/e_mod_config_alarm.c:232
+#: src/e_mod_config_alarm.c:228
 msgid "Saturday"
 msgstr "Lørdag"
 
-#: ../src/e_mod_config_alarm.c:234
+#: src/e_mod_config_alarm.c:230
 msgid "Sunday"
 msgstr "Søndag"
 
-#: ../src/e_mod_config_alarm.c:239
+#: src/e_mod_config_alarm.c:235
 msgid "One day"
 msgstr "En dag"
 
-#: ../src/e_mod_config_alarm.c:243
+#: src/e_mod_config_alarm.c:239
 msgid "Date (YYYY/MM/DD)"
 msgstr "Dato (YYYY/MM/DD)"
 
-#: ../src/e_mod_config_alarm.c:248
+#: src/e_mod_config_alarm.c:244
 msgid "Today"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:250
+#: src/e_mod_config_alarm.c:246
 msgid "Tomorrow"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:288
+#: src/e_mod_config_alarm.c:284
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
 "in the informations / schedule of your alarm"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:293
+#: src/e_mod_config_alarm.c:289
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>You have to enter "
 "a name for the alarm"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:298
+#: src/e_mod_config_alarm.c:294
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>You have to "
 "select at least one day in the week"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:303
+#: src/e_mod_config_alarm.c:299
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
 "entered for the alarm has incorrect syntax<br><br>You have to respect this "
@@ -182,132 +175,132 @@ msgid ""
 "month on 2 numbers<br>DD is the day on 2 numbers<br>"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:313
+#: src/e_mod_config_alarm.c:309
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
 "entered is before now"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:317 ../src/e_mod_main.c:427
+#: src/e_mod_config_alarm.c:313 src/e_mod_main.c:421
 msgid "Alarm Module Error"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:354 ../src/e_mod_config_alarm.c:442
+#: src/e_mod_config_alarm.c:348 src/e_mod_config_alarm.c:435
 msgid "Test this alarm"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:382
+#: src/e_mod_config_alarm.c:375
 msgid "Ring Options"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:384
+#: src/e_mod_config_alarm.c:377
 msgid "Remove alarm"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:391 ../src/e_mod_config_alarm.c:411
+#: src/e_mod_config_alarm.c:384 src/e_mod_config_alarm.c:404
 msgid "No [default]"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:393 ../src/e_mod_config_alarm.c:413
+#: src/e_mod_config_alarm.c:386 src/e_mod_config_alarm.c:406
 msgid "Yes"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:398 ../src/e_mod_config_alarm.c:418
-#: ../src/e_mod_config_alarm.c:429
+#: src/e_mod_config_alarm.c:391 src/e_mod_config_alarm.c:411
+#: src/e_mod_config_alarm.c:422
 msgid "No"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:400 ../src/e_mod_config_alarm.c:420
+#: src/e_mod_config_alarm.c:393 src/e_mod_config_alarm.c:413
 msgid "Yes [default]"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:424
+#: src/e_mod_config_alarm.c:417
 msgid "Run a program"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:431
+#: src/e_mod_config_alarm.c:424
 msgid "Run default one"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:433
+#: src/e_mod_config_alarm.c:426
 msgid "Run this program"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:478
+#: src/e_mod_config_alarm.c:471
 msgid ""
 "<hilight>Alarm test SUCCEED !</hilight><br><br>But DONT FORGET to ACTIVATE "
 "the alarms<br>via the 'Active' check button on the<br>main Alarm "
 "configuration panel."
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:484
+#: src/e_mod_config_alarm.c:477
 msgid "<hilight>Alarm test SUCCEED !</hilight>"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:489
+#: src/e_mod_config_alarm.c:482
 msgid "<hilight>Alarm test FAILED !</hilight>"
 msgstr ""
 
-#: ../src/e_mod_config_alarm.c:491
+#: src/e_mod_config_alarm.c:484
 msgid "Alarm Module Test Report"
 msgstr ""
 
-#: ../src/e_mod_main.c:399
+#: src/e_mod_main.c:393
 #, c-format
 msgid "<hilight>Alarm : %s</hilight><br><br>%s"
 msgstr ""
 
-#: ../src/e_mod_main.c:402
+#: src/e_mod_main.c:396
 msgid "Alarm Module Popup"
 msgstr ""
 
-#: ../src/e_mod_main.c:425
+#: src/e_mod_main.c:419
 msgid ""
 "<hilight>Failed !</hilight><br><br>Alarm couln't launch the program you "
 "specified"
 msgstr ""
 
-#: ../src/e_mod_main.c:659 ../src/e_mod_main.c:838
+#: src/e_mod_main.c:653 src/e_mod_main.c:846
 #, c-format
 msgid "Snooze %s"
 msgstr ""
 
-#: ../src/e_mod_main.c:663
+#: src/e_mod_main.c:657
 #, c-format
 msgid "%1.0f hours"
 msgstr ""
 
-#: ../src/e_mod_main.c:666
+#: src/e_mod_main.c:660
 #, c-format
 msgid "%1.0f minutes"
 msgstr ""
 
-#: ../src/e_mod_main.c:673
+#: src/e_mod_main.c:667
 msgid "Ok"
 msgstr ""
 
-#: ../src/e_mod_main.c:674
+#: src/e_mod_main.c:668
 msgid "Close"
 msgstr ""
 
-#: ../src/e_mod_main.c:846
+#: src/e_mod_main.c:818
+msgid "Add an alarm"
+msgstr ""
+
+#: src/e_mod_main.c:828
+msgid "Settings"
+msgstr ""
+
+#: src/e_mod_main.c:854
 #, c-format
 msgid "Snooze %.14s of %.2d:%.2d"
 msgstr ""
 
-#: ../src/e_mod_main.c:860
+#: src/e_mod_main.c:868
 msgid "Snooze (No alarm to delay)"
 msgstr ""
 
-#: ../src/e_mod_main.c:867
-msgid "Add an alarm"
-msgstr ""
-
-#: ../src/e_mod_main.c:874
-msgid "Configuration"
-msgstr ""
-
-#: ../src/e_mod_main.c:1055
+#: src/e_mod_main.c:1040
 #, c-format
 msgid ""
 "<hilight>Alarm module : Configuration Upgraded</hilight><br><br>Your "
@@ -315,11 +308,11 @@ msgid ""
 "alarms were removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
 msgstr ""
 
-#: ../src/e_mod_main.c:1061 ../src/e_mod_main.c:1075
+#: src/e_mod_main.c:1046 src/e_mod_main.c:1060
 msgid "Alarm Module version "
 msgstr ""
 
-#: ../src/e_mod_main.c:1069
+#: src/e_mod_main.c:1054
 #, c-format
 msgid ""
 "<hilight>Alarm module : Configuration Downgraded</hilight><br><br>Your "
