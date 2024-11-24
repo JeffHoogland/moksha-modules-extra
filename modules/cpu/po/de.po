@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-11-23 23:33+0100\n"
+"POT-Creation-Date: 2024-11-24 08:24+0100\n"
 "PO-Revision-Date: 2010-11-26 17:51+0100\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -16,30 +16,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:129
+#: src/e_mod_main.c:132
 msgid "Cpu"
 msgstr "CPU"
 
-#: src/e_mod_main.c:374
+#: src/e_mod_main.c:379
 msgid "Fast (0.5 sec)"
 msgstr "Schnell (0,5 Sek.)"
 
-#: src/e_mod_main.c:381
+#: src/e_mod_main.c:386
 msgid "Medium (1 sec)"
 msgstr "Mittel (1 Sek.)"
 
-#: src/e_mod_main.c:388
+#: src/e_mod_main.c:393
 msgid "Normal (2 sec)"
 msgstr "Normal (2 Sek.)"
 
-#: src/e_mod_main.c:395
+#: src/e_mod_main.c:400
 msgid "Slow (5 sec)"
 msgstr "Langsam (5 Sek.)"
 
-#: src/e_mod_main.c:402
+#: src/e_mod_main.c:407
 msgid "Very Slow (30 sec)"
 msgstr "Sehr langsam (30 Sek.)"
 
-#: src/e_mod_main.c:411
+#: src/e_mod_main.c:414
 msgid "Time Between Updates"
 msgstr "Aktualisierungsgeschwindigkeit"
+
+#: src/e_mod_main.c:420
+msgid "Merge CPU's into single Statistic"
+msgstr ""

@@ -5,42 +5,46 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CPU\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"POT-Creation-Date: 2024-11-24 08:24+0100\n"
 "PO-Revision-Date: 2009-05-15 19:37+0400\n"
 "Last-Translator: Koptev Oleg <koptev.oleg@gmail.com>\n"
 "Language-Team: Russian Ubuntu Translators\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.3.1\n"
 
-#: ../src/e_mod_main.c:132
+#: src/e_mod_main.c:132
 msgid "Cpu"
 msgstr "Процессор"
 
-#: ../src/e_mod_main.c:366
+#: src/e_mod_main.c:379
 msgid "Fast (0.5 sec)"
 msgstr "Быстро (0.5 sec)"
 
-#: ../src/e_mod_main.c:373
+#: src/e_mod_main.c:386
 msgid "Medium (1 sec)"
 msgstr "Средне (1 sec)"
 
-#: ../src/e_mod_main.c:380
+#: src/e_mod_main.c:393
 msgid "Normal (2 sec)"
 msgstr "Нормально (2 sec)"
 
-#: ../src/e_mod_main.c:387
+#: src/e_mod_main.c:400
 msgid "Slow (5 sec)"
 msgstr "Медленно (5 sec)"
 
-#: ../src/e_mod_main.c:394
+#: src/e_mod_main.c:407
 msgid "Very Slow (30 sec)"
 msgstr "Очень медленно (30 sec)"
 
-#: ../src/e_mod_main.c:405
+#: src/e_mod_main.c:414
 msgid "Time Between Updates"
 msgstr "Время между обновлениями"
+
+#: src/e_mod_main.c:420
+msgid "Merge CPU's into single Statistic"
+msgstr ""

@@ -9,44 +9,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cpu\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2011-11-22 07:39+0100\n"
+"POT-Creation-Date: 2024-11-24 08:24+0100\n"
 "PO-Revision-Date: 2021-05-19 15:28+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt\n"
 "X-Generator: Poedit 2.3\n"
 
 #: src/e_mod_main.c:132
 msgid "Cpu"
 msgstr "Processador"
 
-#: src/e_mod_main.c:377
+#: src/e_mod_main.c:379
 msgid "Fast (0.5 sec)"
 msgstr "Rápido (0,5 seg.)"
 
-#: src/e_mod_main.c:384
+#: src/e_mod_main.c:386
 msgid "Medium (1 sec)"
 msgstr "Médio (1 seg.)"
 
-#: src/e_mod_main.c:391
+#: src/e_mod_main.c:393
 msgid "Normal (2 sec)"
 msgstr "Normal (2 seg.)"
 
-#: src/e_mod_main.c:398
+#: src/e_mod_main.c:400
 msgid "Slow (5 sec)"
 msgstr "Lento (5 seg.)"
 
-#: src/e_mod_main.c:405
+#: src/e_mod_main.c:407
 msgid "Very Slow (30 sec)"
 msgstr "Muito lento (30 seg.)"
 
-#: src/e_mod_main.c:412
+#: src/e_mod_main.c:414
 msgid "Time Between Updates"
 msgstr "Tempo entre atualizações"
 
-#: src/e_mod_main.c:418
+#: src/e_mod_main.c:420
 msgid "Merge CPU's into single Statistic"
 msgstr "Unir CPUs numa só estatística"

@@ -6,38 +6,43 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"POT-Creation-Date: 2024-11-24 08:24+0100\n"
 "PO-Revision-Date: 2008-11-29 21:06+0000\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_main.c:132
+#: src/e_mod_main.c:132
 msgid "Cpu"
 msgstr "מעבד"
 
-#: ../src/e_mod_main.c:366
+#: src/e_mod_main.c:379
 msgid "Fast (0.5 sec)"
 msgstr "מהיר (0.5 שנ')"
 
-#: ../src/e_mod_main.c:373
+#: src/e_mod_main.c:386
 msgid "Medium (1 sec)"
 msgstr "ממוצע (1 שנ')"
 
-#: ../src/e_mod_main.c:380
+#: src/e_mod_main.c:393
 msgid "Normal (2 sec)"
 msgstr "רגיל (2 שנ')"
 
-#: ../src/e_mod_main.c:387
+#: src/e_mod_main.c:400
 msgid "Slow (5 sec)"
 msgstr "איטי (5 שנ')"
 
-#: ../src/e_mod_main.c:394
+#: src/e_mod_main.c:407
 msgid "Very Slow (30 sec)"
 msgstr "איטי מאוד (30 sec)"
 
-#: ../src/e_mod_main.c:405
+#: src/e_mod_main.c:414
 msgid "Time Between Updates"
 msgstr "הזמן בין העדכונים"
+
+#: src/e_mod_main.c:420
+msgid "Merge CPU's into single Statistic"
+msgstr ""

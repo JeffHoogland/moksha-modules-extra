@@ -7,40 +7,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"POT-Creation-Date: 2024-11-24 08:24+0100\n"
 "PO-Revision-Date: 2009-01-10 01:25+0000\n"
 "Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2009-01-17 15:25+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: ../src/e_mod_main.c:132
+#: src/e_mod_main.c:132
 msgid "Cpu"
 msgstr "Cpu"
 
-#: ../src/e_mod_main.c:366
+#: src/e_mod_main.c:379
 msgid "Fast (0.5 sec)"
 msgstr "Rápido (0.5 seg)"
 
-#: ../src/e_mod_main.c:373
+#: src/e_mod_main.c:386
 msgid "Medium (1 sec)"
 msgstr "Médio (1 seg)"
 
-#: ../src/e_mod_main.c:380
+#: src/e_mod_main.c:393
 msgid "Normal (2 sec)"
 msgstr "Normal (2 seg)"
 
-#: ../src/e_mod_main.c:387
+#: src/e_mod_main.c:400
 msgid "Slow (5 sec)"
 msgstr "Lento (5 seg)"
 
-#: ../src/e_mod_main.c:394
+#: src/e_mod_main.c:407
 msgid "Very Slow (30 sec)"
 msgstr "Muito lento (30 seg)"
 
-#: ../src/e_mod_main.c:405
+#: src/e_mod_main.c:414
 msgid "Time Between Updates"
 msgstr "Tempo entre atualizações"
+
+#: src/e_mod_main.c:420
+msgid "Merge CPU's into single Statistic"
+msgstr ""

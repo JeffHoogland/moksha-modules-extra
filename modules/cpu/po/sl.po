@@ -2,45 +2,49 @@
 # This file is put in the public domain.
 # r1to <renato.rener@gmail.com>, 2011.
 # , fuzzy
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: CPU 1.0\n"
-"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
-"POT-Creation-Date: 2011-02-17 15:00-0800\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-11-24 08:24+0100\n"
 "PO-Revision-Date: 2011-02-20 17:44+0100\n"
 "Last-Translator: r1to <renato.rener@gmail.com>\n"
 "Language-Team: Slovenian\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_main.c:129
+#: src/e_mod_main.c:132
 msgid "Cpu"
 msgstr "Cpu"
 
-#: ../src/e_mod_main.c:374
+#: src/e_mod_main.c:379
 msgid "Fast (0.5 sec)"
 msgstr "Hitro·(0.5·sek)"
 
-#: ../src/e_mod_main.c:381
+#: src/e_mod_main.c:386
 msgid "Medium (1 sec)"
 msgstr "Srednje·(1·sek)"
 
-#: ../src/e_mod_main.c:388
+#: src/e_mod_main.c:393
 msgid "Normal (2 sec)"
 msgstr "Normalno·(2·sek)"
 
-#: ../src/e_mod_main.c:395
+#: src/e_mod_main.c:400
 msgid "Slow (5 sec)"
 msgstr "Počasno·(5·sek)"
 
-#: ../src/e_mod_main.c:402
+#: src/e_mod_main.c:407
 msgid "Very Slow (30 sec)"
 msgstr "Zelo počasi·(30·sek)"
 
-#: ../src/e_mod_main.c:411
+#: src/e_mod_main.c:414
 msgid "Time Between Updates"
 msgstr "Čas med posodobitvami"
 
+#: src/e_mod_main.c:420
+msgid "Merge CPU's into single Statistic"
+msgstr ""
