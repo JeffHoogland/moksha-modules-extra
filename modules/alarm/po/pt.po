@@ -1,8 +1,7 @@
 # Portuguese translation for alarm
 # This file is distributed under the same license as the enlightenment package.
-# Pulsar <Unknown>, 2009.
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
 # Adaptado ao acordo ortográfico de 1990
 #
 msgid ""
@@ -10,15 +9,15 @@ msgstr ""
 "Project-Id-Version: alarm\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-09-01 10:13+0200\n"
-"PO-Revision-Date: 2021-05-19 15:04+0100\n"
+"PO-Revision-Date: 2024-11-25 11:44+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_config.c:52
 msgid "Alarm Configuration"
@@ -115,7 +114,6 @@ msgid "Tuesday"
 msgstr "Terça"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "Quarta"
 
@@ -183,9 +181,9 @@ msgid ""
 "month on 2 numbers<br>DD is the day on 2 numbers<br>"
 msgstr ""
 "<hilight>Erro, o alarme não foi adicionado!</hilight><br><br>A data que "
-"indicou tem uma sintaxe incorreta<br><br>Tem que respeitar este formato:"
-"<br>   AAAA/MM/DD<br>AAAA é o ano com 4 dígitos<br>MM é o mês com 2 "
-"dígitos<br>DD é o dia em 2 dígitos<br>"
+"indicou para ao alarme tem uma sintaxe incorreta<br><br>Tem que respeitar "
+"este formato:<br> AAAA/MM/DD<br>AAAA é o ano com 4 dígitos<br>MM é o mês com "
+"2 dígitos<br>DD é o dia em 2 dígitos<br>"
 
 #: src/e_mod_config_alarm.c:309
 msgid ""
