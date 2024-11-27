@@ -1,7 +1,7 @@
 # Portuguese translation for tclock
 # This file is distributed under the same license as the enlightenment package.
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
 # Adaptado ao acordo ortográfico de 1990
 #
 msgid ""
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: tclock\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-11-24 09:44+0100\n"
-"PO-Revision-Date: 2021-05-19 20:06+0100\n"
+"PO-Revision-Date: 2024-11-25 11:47+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: \n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_config.c:42
 msgid "Tclock Settings"
@@ -73,7 +73,7 @@ msgstr "Cor da etiqueta"
 
 #: src/e_mod_config.c:165
 msgid "Click for the color selector"
-msgstr ""
+msgstr "Clicar para selecionar a cor"
 
 #: src/e_mod_main.c:141
 msgid "TClock"
