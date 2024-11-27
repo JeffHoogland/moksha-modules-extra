@@ -6,23 +6,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: $MSGID_BUGS_ADDRESS\n"
-"POT-Creation-Date: 2013-08-23 11:50+0200\n"
+"Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
+"POT-Creation-Date: 2024-11-27 20:04+0100\n"
 "PO-Revision-Date: 2014-01-02 15:08+0000\n"
 "Last-Translator: Eliovir <Unknown>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-01-03 05:49+0000\n"
 "X-Generator: Launchpad (build 16877)\n"
-"Language: eo\n"
 
-#: src/e_mod_main.c:1705 src/e_mod_main.c:1863 src/e_mod_main.c:1890
+#: src/e_mod_main.c:1863 src/e_mod_main.c:1901
 msgid "Engage"
 msgstr "Engage"
 
-#: src/ng_taskbar.c:641
+#: src/ng_taskbar.c:635
 msgid "No name!"
 msgstr "Neniu nomo!"
 
@@ -66,27 +66,27 @@ msgstr "Malpiktogramigi"
 msgid "Iconify"
 msgstr "Piktogramigi"
 
-#: src/ng_gadcon.c:260
+#: src/ng_gadcon.c:264
 msgid "Gadcon Config"
 msgstr "Agordoj de kontrolilo de akcecoraĵoj"
 
-#: src/ng_gadcon.c:299
+#: src/ng_gadcon.c:303
 msgid "Available Gadgets"
 msgstr "Disponeblaj akcesoraĵoj"
 
-#: src/ng_gadcon.c:306
+#: src/ng_gadcon.c:310
 msgid "Add Gadget"
 msgstr "Aldoni akcesoraĵon"
 
-#: src/ng_gadcon.c:312
+#: src/ng_gadcon.c:316
 msgid "Selected Gadgets"
 msgstr "Elektitaj akcesoraĵoj"
 
-#: src/ng_gadcon.c:319
+#: src/ng_gadcon.c:323
 msgid "Remove Gadget"
 msgstr "Forigi akcesoraĵon"
 
-#: src/ng_gadcon.c:327 src/ng_gadcon.c:370 src/ng_gadcon.c:394
+#: src/ng_gadcon.c:331 src/ng_gadcon.c:374 src/ng_gadcon.c:398
 msgid "Description: Unavailable"
 msgstr "Priskribo: nedisponebla"
 
@@ -112,7 +112,8 @@ msgid "Background Opacity:"
 msgstr "Opakeco de ekranfono:"
 
 #: src/ng_config.c:186
-msgid "%1.0f \\%"
+#, fuzzy
+msgid "%1.0f %"
 msgstr "%1.0f \\%"
 
 #: src/ng_config.c:194
@@ -143,163 +144,163 @@ msgstr "Maldekstra flanko"
 msgid "Right Edge"
 msgstr "Dekstra flanko"
 
-#: src/ng_config.c:231 src/ng_config.c:250
+#: src/ng_config.c:230 src/ng_config.c:249
 msgid "Zoom"
 msgstr "Pligrandigi"
 
-#: src/ng_config.c:232
+#: src/ng_config.c:231
 msgid "Factor:"
 msgstr "Faktoro:"
 
-#: src/ng_config.c:238
+#: src/ng_config.c:237
 msgid "Range:"
 msgstr "Intervalo:"
 
-#: src/ng_config.c:244
+#: src/ng_config.c:243
 msgid "Duration:"
 msgstr "Daŭro:"
 
-#: src/ng_config.c:253 src/ng_config.c:281
+#: src/ng_config.c:251 src/ng_config.c:279
 msgid "Bar Items"
 msgstr "Eroj de breto"
 
-#: src/ng_config.c:261 src/ng_config.c:547 src/ng_config_instances.c:104
+#: src/ng_config.c:259 src/ng_config.c:540 src/ng_config_instances.c:104
 msgid "Delete"
 msgstr "Forigi"
 
-#: src/ng_config.c:263 src/ng_config.c:549 src/ng_config_instances.c:106
+#: src/ng_config.c:261 src/ng_config.c:542 src/ng_config_instances.c:106
 msgid "Configure"
 msgstr "Agordi"
 
-#: src/ng_config.c:265
+#: src/ng_config.c:263
 msgid "Up"
 msgstr "Supre"
 
-#: src/ng_config.c:267
+#: src/ng_config.c:265
 msgid "Down"
 msgstr "Malsupre"
 
-#: src/ng_config.c:272 src/ng_config.c:545 src/ng_config_instances.c:102
+#: src/ng_config.c:270 src/ng_config.c:538 src/ng_config_instances.c:102
 msgid "Add"
 msgstr "Aldoni"
 
-#: src/ng_config.c:274
+#: src/ng_config.c:272
 msgid "Taskbar"
 msgstr "Taskopleto"
 
-#: src/ng_config.c:276
+#: src/ng_config.c:274
 msgid "Launcher"
 msgstr "Lanĉilo"
 
-#: src/ng_config.c:278
+#: src/ng_config.c:276
 msgid "Gadcon"
 msgstr "Kontrolilo de akcesoraĵoj"
 
-#: src/ng_config.c:284 src/ng_config.c:303
+#: src/ng_config.c:282 src/ng_config.c:301
 msgid "Auto Hide"
 msgstr "Aŭtomate kaŝi"
 
-#: src/ng_config.c:288
+#: src/ng_config.c:286
 msgid "None"
 msgstr "Neniu"
 
-#: src/ng_config.c:291
+#: src/ng_config.c:289
 msgid "Autohide"
 msgstr "Aŭtomate kaŝi"
 
-#: src/ng_config.c:294
+#: src/ng_config.c:292
 msgid "Hide when Window overlaps"
 msgstr "Kaŝi kiam fenestro supras"
 
-#: src/ng_config.c:297
+#: src/ng_config.c:295
 msgid "Hide on Fullscreen"
 msgstr "Kaŝi kiam estas plenekrano"
 
-#: src/ng_config.c:301
+#: src/ng_config.c:299
 msgid "Show Bar when Urgent"
 msgstr "Montri breton por urĝoj"
 
-#: src/ng_config.c:309
+#: src/ng_config.c:307
 msgid "Stacking"
 msgstr "Stako"
 
-#: src/ng_config.c:311
+#: src/ng_config.c:309
 msgid "Above All"
 msgstr "Supre ĉio"
 
-#: src/ng_config.c:313
+#: src/ng_config.c:311
 msgid "Below Fullscreen"
 msgstr "Sube plenekrano"
 
-#: src/ng_config.c:317 src/ng_config.c:324
+#: src/ng_config.c:315 src/ng_config.c:322
 msgid "Other"
 msgstr "Alia"
 
-#: src/ng_config.c:318
+#: src/ng_config.c:316
 msgid "Ecomorph Features"
 msgstr "Eblecoj de Ecomorph"
 
-#: src/ng_config.c:320
+#: src/ng_config.c:318
 msgid "Show Icon Label"
 msgstr "Vidigi piktograman etikedon"
 
-#: src/ng_config.c:537
+#: src/ng_config.c:530
 msgid "Launcher Settings"
 msgstr "Agordoj de lanĉilo"
 
-#: src/ng_config.c:557
+#: src/ng_config.c:550
 msgid "Taskbar Settings"
 msgstr "Agordoj de taskopleto"
 
-#: src/ng_config.c:559
+#: src/ng_config.c:552
 msgid "Don't Show Dialogs"
 msgstr "Ne montri dialogojn"
 
-#: src/ng_config.c:562
+#: src/ng_config.c:555
 msgid "Advanced Window Menu"
 msgstr "Detala fenestra menuo"
 
-#: src/ng_config.c:565
+#: src/ng_config.c:558
 msgid "Only Show Current Desk"
 msgstr "Nur montri nunan labortablon"
 
-#: src/ng_config.c:568
+#: src/ng_config.c:561
 msgid "Group Applications by Window Class"
 msgstr "Grupi aplikaĵojn laŭ fenestra klaso"
 
-#: src/ng_config.c:571
+#: src/ng_config.c:564
 msgid "Append new Applications on the right Side"
 msgstr "Aldoni novajn aplikaĵojn dekstraflanken"
 
-#: src/ng_config.c:577
+#: src/ng_config.c:570
 msgid "Iconified Applications"
 msgstr "Piktogramigitaj aplikaĵoj"
 
-#: src/ng_config.c:579
+#: src/ng_config.c:572
 msgid "Not Shown"
 msgstr "Ne montrita"
 
-#: src/ng_config.c:581
+#: src/ng_config.c:574
 msgid "Show"
 msgstr "Montri"
 
-#: src/ng_config.c:583
+#: src/ng_config.c:576
 msgid "Only Iconified"
 msgstr "Nur piktogramigita"
 
-#: src/ng_config.c:652 src/ng_config.c:692
+#: src/ng_config.c:645 src/ng_config.c:685
 msgid "Engage Bar Configuration"
 msgstr "Agordoj de Engage-breto"
 
-#: src/ng_config.c:797
+#: src/ng_config.c:784
 msgid "Create new source"
 msgstr "Krei novan fonton"
 
-#: src/ng_config.c:798
+#: src/ng_config.c:785
 msgid "Enter a name for this new Application Launcher:"
 msgstr "Entajpi nomon por tiu nova aplikaĵa lanĉilo:"
 
-#: src/ng_config.c:807
+#: src/ng_config.c:794
 #, c-format
 msgid ""
 "You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
@@ -307,7 +308,7 @@ msgid ""
 msgstr ""
 "Vi petis forigon de \"%s\".<br><br>Ĉu vi certe volas forigi tiun fonton?"
 
-#: src/ng_config.c:811
+#: src/ng_config.c:798
 msgid "Are you sure you want to delete this source?"
 msgstr "Ĉu vi certe volas forigi tiun fonton?"
 

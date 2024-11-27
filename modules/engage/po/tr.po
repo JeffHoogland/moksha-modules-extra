@@ -6,22 +6,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-23 11:50+0200\n"
+"Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
+"POT-Creation-Date: 2024-11-27 20:04+0100\n"
 "PO-Revision-Date: 2014-04-16 13:14+0000\n"
 "Last-Translator: Ali E.İMREK <alierkanimrek@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-04-17 05:56+0000\n"
 "X-Generator: Launchpad (build 16985)\n"
 
-#: src/e_mod_main.c:1705 src/e_mod_main.c:1863 src/e_mod_main.c:1890
+#: src/e_mod_main.c:1863 src/e_mod_main.c:1901
 msgid "Engage"
 msgstr "Engage"
 
-#: src/ng_taskbar.c:641
+#: src/ng_taskbar.c:635
 msgid "No name!"
 msgstr "İsim yok!"
 
@@ -65,27 +66,27 @@ msgstr "Simgeleştirilmez"
 msgid "Iconify"
 msgstr "Simgeleştir"
 
-#: src/ng_gadcon.c:260
+#: src/ng_gadcon.c:264
 msgid "Gadcon Config"
 msgstr "Gadcon Yapılandırması"
 
-#: src/ng_gadcon.c:299
+#: src/ng_gadcon.c:303
 msgid "Available Gadgets"
 msgstr "Mevcut Araçlar"
 
-#: src/ng_gadcon.c:306
+#: src/ng_gadcon.c:310
 msgid "Add Gadget"
 msgstr "Araç Ekle"
 
-#: src/ng_gadcon.c:312
+#: src/ng_gadcon.c:316
 msgid "Selected Gadgets"
 msgstr "Seçilmiş Araçlar"
 
-#: src/ng_gadcon.c:319
+#: src/ng_gadcon.c:323
 msgid "Remove Gadget"
 msgstr "Aracı Kaldır"
 
-#: src/ng_gadcon.c:327 src/ng_gadcon.c:370 src/ng_gadcon.c:394
+#: src/ng_gadcon.c:331 src/ng_gadcon.c:374 src/ng_gadcon.c:398
 msgid "Description: Unavailable"
 msgstr "Tanımlama: Mevcut değil"
 
@@ -111,7 +112,8 @@ msgid "Background Opacity:"
 msgstr "Arkaplan matlığı"
 
 #: src/ng_config.c:186
-msgid "%1.0f \\%"
+#, fuzzy
+msgid "%1.0f %"
 msgstr "%1.0f \\%"
 
 #: src/ng_config.c:194
@@ -142,163 +144,163 @@ msgstr "Sol Kenar"
 msgid "Right Edge"
 msgstr "Sağ Kenar"
 
-#: src/ng_config.c:231 src/ng_config.c:250
+#: src/ng_config.c:230 src/ng_config.c:249
 msgid "Zoom"
 msgstr "Yakınlaştır"
 
-#: src/ng_config.c:232
+#: src/ng_config.c:231
 msgid "Factor:"
 msgstr "Çarpan:"
 
-#: src/ng_config.c:238
+#: src/ng_config.c:237
 msgid "Range:"
 msgstr "Aralık:"
 
-#: src/ng_config.c:244
+#: src/ng_config.c:243
 msgid "Duration:"
 msgstr "Süre:"
 
-#: src/ng_config.c:253 src/ng_config.c:281
+#: src/ng_config.c:251 src/ng_config.c:279
 msgid "Bar Items"
 msgstr "Çubuk öğeleri"
 
-#: src/ng_config.c:261 src/ng_config.c:547 src/ng_config_instances.c:104
+#: src/ng_config.c:259 src/ng_config.c:540 src/ng_config_instances.c:104
 msgid "Delete"
 msgstr "Sil"
 
-#: src/ng_config.c:263 src/ng_config.c:549 src/ng_config_instances.c:106
+#: src/ng_config.c:261 src/ng_config.c:542 src/ng_config_instances.c:106
 msgid "Configure"
 msgstr "Yapılandır"
 
-#: src/ng_config.c:265
+#: src/ng_config.c:263
 msgid "Up"
 msgstr "Yukarı"
 
-#: src/ng_config.c:267
+#: src/ng_config.c:265
 msgid "Down"
 msgstr "Aşağı"
 
-#: src/ng_config.c:272 src/ng_config.c:545 src/ng_config_instances.c:102
+#: src/ng_config.c:270 src/ng_config.c:538 src/ng_config_instances.c:102
 msgid "Add"
 msgstr "Ekle"
 
-#: src/ng_config.c:274
+#: src/ng_config.c:272
 msgid "Taskbar"
 msgstr "Görev Çubuğu"
 
-#: src/ng_config.c:276
+#: src/ng_config.c:274
 msgid "Launcher"
 msgstr "Başlatıcı"
 
-#: src/ng_config.c:278
+#: src/ng_config.c:276
 msgid "Gadcon"
 msgstr "Gadcon"
 
-#: src/ng_config.c:284 src/ng_config.c:303
+#: src/ng_config.c:282 src/ng_config.c:301
 msgid "Auto Hide"
 msgstr "Otomatik Gizle"
 
-#: src/ng_config.c:288
+#: src/ng_config.c:286
 msgid "None"
 msgstr "Hiçbiri"
 
-#: src/ng_config.c:291
+#: src/ng_config.c:289
 msgid "Autohide"
 msgstr "Otomatik Gizle"
 
-#: src/ng_config.c:294
+#: src/ng_config.c:292
 msgid "Hide when Window overlaps"
 msgstr "Pencere kapladığında gizle"
 
-#: src/ng_config.c:297
+#: src/ng_config.c:295
 msgid "Hide on Fullscreen"
 msgstr "Tam ekranda gizle"
 
-#: src/ng_config.c:301
+#: src/ng_config.c:299
 msgid "Show Bar when Urgent"
 msgstr "Çubuğu acilen göster"
 
-#: src/ng_config.c:309
+#: src/ng_config.c:307
 msgid "Stacking"
 msgstr "Yerleştirme"
 
-#: src/ng_config.c:311
+#: src/ng_config.c:309
 msgid "Above All"
 msgstr "Hepsinin üzerinde"
 
-#: src/ng_config.c:313
+#: src/ng_config.c:311
 msgid "Below Fullscreen"
 msgstr "Tam ekranın altında"
 
-#: src/ng_config.c:317 src/ng_config.c:324
+#: src/ng_config.c:315 src/ng_config.c:322
 msgid "Other"
 msgstr "Diğer"
 
-#: src/ng_config.c:318
+#: src/ng_config.c:316
 msgid "Ecomorph Features"
 msgstr "Ecomorph Özellikleri"
 
-#: src/ng_config.c:320
+#: src/ng_config.c:318
 msgid "Show Icon Label"
 msgstr "Simge Etiketini Göster"
 
-#: src/ng_config.c:537
+#: src/ng_config.c:530
 msgid "Launcher Settings"
 msgstr "Başlatıcı Ayarları"
 
-#: src/ng_config.c:557
+#: src/ng_config.c:550
 msgid "Taskbar Settings"
 msgstr "Görev Çubuğu Ayarları"
 
-#: src/ng_config.c:559
+#: src/ng_config.c:552
 msgid "Don't Show Dialogs"
 msgstr "Diyalogları gösterme"
 
-#: src/ng_config.c:562
+#: src/ng_config.c:555
 msgid "Advanced Window Menu"
 msgstr "Gelişmiş Pencere Menüsü"
 
-#: src/ng_config.c:565
+#: src/ng_config.c:558
 msgid "Only Show Current Desk"
 msgstr "Sadece geçerli masaüstünü göster"
 
-#: src/ng_config.c:568
+#: src/ng_config.c:561
 msgid "Group Applications by Window Class"
 msgstr "Uygulamaları pencere sınıfına göre gruplandır"
 
-#: src/ng_config.c:571
+#: src/ng_config.c:564
 msgid "Append new Applications on the right Side"
 msgstr "Yeni uygulamaları sağ tarafa ekle"
 
-#: src/ng_config.c:577
+#: src/ng_config.c:570
 msgid "Iconified Applications"
 msgstr "Simgeleştirilmiş uygulamalar"
 
-#: src/ng_config.c:579
+#: src/ng_config.c:572
 msgid "Not Shown"
 msgstr "Gösterilmeyen"
 
-#: src/ng_config.c:581
+#: src/ng_config.c:574
 msgid "Show"
 msgstr "Göster"
 
-#: src/ng_config.c:583
+#: src/ng_config.c:576
 msgid "Only Iconified"
 msgstr "Sadece simgeleştirilmiş"
 
-#: src/ng_config.c:652 src/ng_config.c:692
+#: src/ng_config.c:645 src/ng_config.c:685
 msgid "Engage Bar Configuration"
 msgstr "Engage Çubuğu Yapılandırması"
 
-#: src/ng_config.c:797
+#: src/ng_config.c:784
 msgid "Create new source"
 msgstr "Yeni başlatıcı oluştur"
 
-#: src/ng_config.c:798
+#: src/ng_config.c:785
 msgid "Enter a name for this new Application Launcher:"
 msgstr "Yeni uygulama başlatıcı için bir isim girin"
 
-#: src/ng_config.c:807
+#: src/ng_config.c:794
 #, c-format
 msgid ""
 "You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
@@ -307,7 +309,7 @@ msgstr ""
 "Şunu silmek istediniz: \"%s\" <br><br>Bu başlatıcıyı silmek istediğinizden "
 "emin misiniz?"
 
-#: src/ng_config.c:811
+#: src/ng_config.c:798
 msgid "Are you sure you want to delete this source?"
 msgstr "Bu başlatıcıyı silmek istediğinizden emin misiniz?"
 
