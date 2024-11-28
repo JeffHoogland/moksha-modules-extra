@@ -122,7 +122,7 @@ msgstr "Zobrazit pozadí"
 
 #: src/ng_config.c:197
 msgid "Show Mouse-Over Animation"
-msgstr "Animaci při nájezdu myši"
+msgstr "Animace při nájezdu myši"
 
 #: src/ng_config.c:202
 msgid "Orientation"
