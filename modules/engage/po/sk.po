@@ -1,0 +1,335 @@
+# Czech translation.
+# This file is put in the public domain.
+# quaker66@gmail.com
+# Vít Pelčák <vit@pelcak.org>, 2011.
+# Štefan Uram <thewaiter@bodhilinux.com>, 2024.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Itask-ng\n"
+"Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
+"POT-Creation-Date: 2024-11-27 20:04+0100\n"
+"PO-Revision-Date: 2011-10-15 15:42+0200\n"
+"Last-Translator: Štefan Uram <thewaiter@bodhilinux.com>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: src/e_mod_main.c:1863 src/e_mod_main.c:1901
+msgid "Engage"
+msgstr "Engage"
+
+#: src/ng_taskbar.c:635
+msgid "No name!"
+msgstr "Bez mena!"
+
+#: src/ng_launcher.c:275
+msgid "Open Directory"
+msgstr "Otvoríť adresár"
+
+#: src/ng_launcher.c:561
+msgid "Configure Bar"
+msgstr "Nastaviť panel"
+
+#: src/ng_launcher.c:565
+msgid "Lock Dragging"
+msgstr "Zamknúť presun"
+
+#: src/ng_launcher.c:574
+msgid "Applications"
+msgstr "Aplikácie"
+
+#: src/ng_launcher.c:578
+msgid "Edit Icon"
+msgstr "Upravit ikonu"
+
+#: src/ng_border_menu.c:30
+msgid "Fullscreen"
+msgstr "Celá obrazovka"
+
+#: src/ng_border_menu.c:45
+msgid "Close"
+msgstr "Zavrieť"
+
+#: src/ng_border_menu.c:66
+msgid "Maximized"
+msgstr "Maximalizované"
+
+#: src/ng_border_menu.c:86
+msgid "Uniconify"
+msgstr "Deminimalizovat"
+
+#: src/ng_border_menu.c:88
+msgid "Iconify"
+msgstr "Minimalizovat"
+
+#: src/ng_gadcon.c:264
+#, fuzzy
+msgid "Gadcon Config"
+msgstr "Gadcon"
+
+#: src/ng_gadcon.c:303
+msgid "Available Gadgets"
+msgstr "Dostupné gadgety"
+
+#: src/ng_gadcon.c:310
+msgid "Add Gadget"
+msgstr "Pridať gadget"
+
+#: src/ng_gadcon.c:316
+msgid "Selected Gadgets"
+msgstr "Vybrané gadgety"
+
+#: src/ng_gadcon.c:323
+msgid "Remove Gadget"
+msgstr "Odstrániť gadget"
+
+#: src/ng_gadcon.c:331 src/ng_gadcon.c:374 src/ng_gadcon.c:398
+msgid "Description: Unavailable"
+msgstr "Popis: Nedostupný"
+
+#: src/ng_config.c:98
+msgid "Engage Configuration"
+msgstr "Nastavenie Engage"
+
+#: src/ng_config.c:167 src/ng_config.c:228
+msgid "Appearance"
+msgstr "Vzhľad"
+
+#: src/ng_config.c:168
+msgid "Icon Size:"
+msgstr "Veľkosť ikon:"
+
+#: src/ng_config.c:170
+#, c-format
+msgid "%1.0f px"
+msgstr "%1.0f px"
+
+#: src/ng_config.c:184
+msgid "Background Opacity:"
+msgstr "Nepriehľadnosť pozadia:"
+
+#: src/ng_config.c:186
+msgid "%1.0f %"
+msgstr "%1.0f %"
+
+#: src/ng_config.c:194
+msgid "Show Background Box"
+msgstr "Zobraziť pozadie"
+
+#: src/ng_config.c:197
+msgid "Show Mouse-Over Animation"
+msgstr "Animácia pri nájazde myšou"
+
+#: src/ng_config.c:202
+msgid "Orientation"
+msgstr "Orientácia"
+
+#: src/ng_config.c:204
+msgid "Bottom Edge"
+msgstr "Spodný okraj"
+
+#: src/ng_config.c:206
+msgid "Top Edge"
+msgstr "Horný okraj"
+
+#: src/ng_config.c:208
+msgid "Left Edge"
+msgstr "Ľavý okraj"
+
+#: src/ng_config.c:210
+msgid "Right Edge"
+msgstr "Pravý okraj"
+
+#: src/ng_config.c:230 src/ng_config.c:249
+msgid "Zoom"
+msgstr "Priblíženie"
+
+#: src/ng_config.c:231
+msgid "Factor:"
+msgstr "Faktor:"
+
+#: src/ng_config.c:237
+msgid "Range:"
+msgstr "Šírka:"
+
+#: src/ng_config.c:243
+msgid "Duration:"
+msgstr "Trvanie:"
+
+#: src/ng_config.c:251 src/ng_config.c:279
+msgid "Bar Items"
+msgstr "Položky panela"
+
+#: src/ng_config.c:259 src/ng_config.c:540 src/ng_config_instances.c:104
+msgid "Delete"
+msgstr "Odstrániť"
+
+#: src/ng_config.c:261 src/ng_config.c:542 src/ng_config_instances.c:106
+msgid "Configure"
+msgstr "Nastaviť"
+
+#: src/ng_config.c:263
+msgid "Up"
+msgstr "Hore"
+
+#: src/ng_config.c:265
+msgid "Down"
+msgstr "Dole"
+
+#: src/ng_config.c:270 src/ng_config.c:538 src/ng_config_instances.c:102
+msgid "Add"
+msgstr "Pridať"
+
+#: src/ng_config.c:272
+msgid "Taskbar"
+msgstr "Správca úloh"
+
+#: src/ng_config.c:274
+msgid "Launcher"
+msgstr "Spúšťač"
+
+#: src/ng_config.c:276
+msgid "Gadcon"
+msgstr "Gadcon"
+
+#: src/ng_config.c:282 src/ng_config.c:301
+msgid "Auto Hide"
+msgstr "Automaticky skrývať"
+
+#: src/ng_config.c:286
+msgid "None"
+msgstr "Neskrývať"
+
+#: src/ng_config.c:289
+msgid "Autohide"
+msgstr "Automaticky skrývať"
+
+#: src/ng_config.c:292
+msgid "Hide when Window overlaps"
+msgstr "Skrývať pri prekrytí oknom"
+
+#: src/ng_config.c:295
+msgid "Hide on Fullscreen"
+msgstr "Skryť pri celej obrazovke"
+
+#: src/ng_config.c:299
+msgid "Show Bar when Urgent"
+msgstr "Zobraziť panel pri naliehavej notifikácii"
+
+#: src/ng_config.c:307
+msgid "Stacking"
+msgstr "Skladanie"
+
+#: src/ng_config.c:309
+msgid "Above All"
+msgstr "Nad všetkým"
+
+#: src/ng_config.c:311
+msgid "Below Fullscreen"
+msgstr "Pod celoobrazovkovým"
+
+#: src/ng_config.c:315 src/ng_config.c:322
+msgid "Other"
+msgstr "Ostatné"
+
+#: src/ng_config.c:316
+msgid "Ecomorph Features"
+msgstr "Funkcia Ecomorph"
+
+#: src/ng_config.c:318
+msgid "Show Icon Label"
+msgstr "Zobraziť text ikony"
+
+#: src/ng_config.c:530
+msgid "Launcher Settings"
+msgstr "Nastavenie spúšťača"
+
+#: src/ng_config.c:550
+msgid "Taskbar Settings"
+msgstr "Nastavenie správcu úloh"
+
+#: src/ng_config.c:552
+msgid "Don't Show Dialogs"
+msgstr "Nezobrazovať dialógy"
+
+#: src/ng_config.c:555
+msgid "Advanced Window Menu"
+msgstr "Pokročilé menu okna"
+
+#: src/ng_config.c:558
+msgid "Only Show Current Desk"
+msgstr "Zobraziť len aktuálnu plochu"
+
+#: src/ng_config.c:561
+msgid "Group Applications by Window Class"
+msgstr "Zoskupiť aplikaácie podľa triedy okna"
+
+#: src/ng_config.c:564
+msgid "Append new Applications on the right Side"
+msgstr "Pridávať nové aplikácie na pravom okraji"
+
+#: src/ng_config.c:570
+msgid "Iconified Applications"
+msgstr "Minimalizované aplikace"
+
+#: src/ng_config.c:572
+msgid "Not Shown"
+msgstr "Nezobraziť"
+
+#: src/ng_config.c:574
+msgid "Show"
+msgstr "Zobraziť"
+
+#: src/ng_config.c:576
+msgid "Only Iconified"
+msgstr "Len minimalizované"
+
+#: src/ng_config.c:645 src/ng_config.c:685
+msgid "Engage Bar Configuration"
+msgstr "Nastavenie panela Engage"
+
+#: src/ng_config.c:784
+msgid "Create new source"
+msgstr "Vytvoriť nový zdroj"
+
+#: src/ng_config.c:785
+msgid "Enter a name for this new Application Launcher:"
+msgstr "Zadajte názov tohto nového spúšťača aplikácií:"
+
+#: src/ng_config.c:794
+#, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"source?"
+msgstr ""
+"Vyžiadali ste si zmazanie \"%s\".<br><br>Naozaj chcete tento zdroj zmazať?"
+
+#: src/ng_config.c:798
+msgid "Are you sure you want to delete this source?"
+msgstr "Naozaj chcete tento zdroj zmazať?"
+
+#: src/ng_config_instances.c:64 src/ng_config_instances.c:94
+msgid "Engage Instances"
+msgstr "Inštancia Engage"
+
+#: src/ng_config_instances.c:164
+msgid "Bar"
+msgstr "Panel"
+
+#: src/ng_config_instances.c:271
+#, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"Instance?"
+msgstr ""
+"Vyžiadali ste si zmazanie \"%s\".<br><br>Naozaj chcete túto inštanciu zmazat?"
+
+#: src/ng_config_instances.c:275
+msgid "Are you sure you want to delete this Instance?"
+msgstr "Naozaj chcete zmazat túto inštanciu?"
+
