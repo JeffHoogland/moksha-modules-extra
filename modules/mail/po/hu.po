@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-22 20:51+0100\n"
+"POT-Creation-Date: 2024-11-30 10:25+0100\n"
 "PO-Revision-Date: 2008-03-10 16:44+0100\n"
 "Last-Translator: Lisovszki  <lisovszki@gmail.com>\n"
 "Language-Team: hungarian <hu@li.org>\n"
-"Language: \n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -160,14 +160,18 @@ msgstr "Törlés"
 msgid "Configure..."
 msgstr "Beállítás..."
 
-#: src/e_mod_main.c:189
+#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
 msgid "Mail"
 msgstr "Levelezés"
 
-#: src/e_mod_main.c:233
+#: src/e_mod_main.c:229
 #, fuzzy
 msgid "Settings"
 msgstr "Port beállítások"
+
+#: src/e_mod_main.c:687
+msgid "A new mail!"
+msgstr ""
 
 #~ msgid "Mail Configuration"
 #~ msgstr "Levelezés beállítása"

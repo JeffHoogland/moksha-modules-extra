@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-22 20:51+0100\n"
+"POT-Creation-Date: 2024-11-30 10:25+0100\n"
 "PO-Revision-Date: 2016-11-22 21:02+0100\n"
 "Last-Translator: Stefan Uram <uram@szm.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -157,19 +157,15 @@ msgstr "Odstrániť"
 msgid "Configure..."
 msgstr "Nastaviť..."
 
-#: src/e_mod_main.c:189
+#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
 msgid "Mail"
 msgstr "Pošta"
 
-#: src/e_mod_main.c:233
+#: src/e_mod_main.c:229
 msgid "Settings"
 msgstr "Nastavenie"
 
-#~ msgid "Mail Configuration"
-#~ msgstr "Nastavenie pošty"
+#: src/e_mod_main.c:687
+msgid "A new mail!"
+msgstr "Nový mail!"
 
-#~ msgid "Mailboxes"
-#~ msgstr "Poštové schránky"
-
-#~ msgid "Configuration"
-#~ msgstr "Nastavenia"

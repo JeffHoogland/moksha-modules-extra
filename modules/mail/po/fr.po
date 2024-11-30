@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mail\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-22 20:51+0100\n"
+"POT-Creation-Date: 2024-11-30 10:25+0100\n"
 "PO-Revision-Date: 2022-08-07 14:55+0200\n"
 "Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
 "Language-Team: French\n"
@@ -160,13 +160,17 @@ msgstr "Supprimer"
 msgid "Configure..."
 msgstr "Configurer..."
 
-#: src/e_mod_main.c:189
+#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
 msgid "Mail"
 msgstr "Courriel"
 
-#: src/e_mod_main.c:233
+#: src/e_mod_main.c:229
 msgid "Settings"
 msgstr "Configuration"
+
+#: src/e_mod_main.c:687
+msgid "A new mail!"
+msgstr ""
 
 #~ msgid "Mail Configuration"
 #~ msgstr "Configuration du courriel"

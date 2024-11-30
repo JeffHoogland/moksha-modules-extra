@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mail\n"
-"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2023-07-09 19:00+0300\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-11-30 10:25+0100\n"
 "PO-Revision-Date: 2023-07-09 19:00+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -156,10 +156,14 @@ msgstr "Выдаліць"
 msgid "Configure..."
 msgstr "Канфігураваць..."
 
-#: src/e_mod_main.c:189
+#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
 msgid "Mail"
 msgstr "Пошта"
 
-#: src/e_mod_main.c:233
+#: src/e_mod_main.c:229
 msgid "Settings"
 msgstr "Налады"
+
+#: src/e_mod_main.c:687
+msgid "A new mail!"
+msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-22 20:51+0100\n"
+"POT-Creation-Date: 2024-11-30 10:25+0100\n"
 "PO-Revision-Date: 2009-01-10 12:21+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -157,14 +157,18 @@ msgstr "Ta bort"
 msgid "Configure..."
 msgstr "Konfigurera..."
 
-#: src/e_mod_main.c:189
+#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
 msgid "Mail"
 msgstr "E-post"
 
-#: src/e_mod_main.c:233
+#: src/e_mod_main.c:229
 #, fuzzy
 msgid "Settings"
 msgstr "Portinställningar"
+
+#: src/e_mod_main.c:687
+msgid "A new mail!"
+msgstr ""
 
 #~ msgid "Mail Configuration"
 #~ msgstr "Konfiguration av e-post"

@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mail\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-22 20:51+0100\n"
+"POT-Creation-Date: 2024-11-30 10:25+0100\n"
 "PO-Revision-Date: 2011-10-16 11:34+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
-"Language: \n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -158,19 +158,15 @@ msgstr "Smazat"
 msgid "Configure..."
 msgstr "Nastavit..."
 
-#: src/e_mod_main.c:189
+#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
 msgid "Mail"
 msgstr "Mail"
 
-#: src/e_mod_main.c:233
+#: src/e_mod_main.c:229
 msgid "Settings"
 msgstr "Nastavení"
 
-#~ msgid "Mail Configuration"
-#~ msgstr "Nastavení mailu"
+#: src/e_mod_main.c:687
+msgid "A new mail!"
+msgstr "Nový mail!"
 
-#~ msgid "Mailboxes"
-#~ msgstr "Mailboxy"
-
-#~ msgid "Configuration"
-#~ msgstr "Konfigurace"

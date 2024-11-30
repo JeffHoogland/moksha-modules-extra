@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-22 20:51+0100\n"
+"POT-Creation-Date: 2024-11-30 10:25+0100\n"
 "PO-Revision-Date: 2009-06-01 08:05+0000\n"
 "Last-Translator: Lucky <lucky1.data@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -156,13 +156,17 @@ msgstr "Удалить"
 msgid "Configure..."
 msgstr "Настроить..."
 
-#: src/e_mod_main.c:189
+#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
 msgid "Mail"
 msgstr "Почта"
 
-#: src/e_mod_main.c:233
+#: src/e_mod_main.c:229
 msgid "Settings"
 msgstr "Настройки"
+
+#: src/e_mod_main.c:687
+msgid "A new mail!"
+msgstr ""
 
 #~ msgid "Mail Configuration"
 #~ msgstr "Настройка почты"

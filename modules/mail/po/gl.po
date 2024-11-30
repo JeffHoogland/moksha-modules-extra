@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mail\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-22 20:51+0100\n"
+"POT-Creation-Date: 2024-11-30 10:25+0100\n"
 "PO-Revision-Date: 2012-09-17 12:30+0200\n"
 "Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
 "Language-Team: http://trasno.net/ <proxecto@trasno.net>\n"
@@ -156,10 +156,14 @@ msgstr "Borrar"
 msgid "Configure..."
 msgstr "Configurar..."
 
-#: src/e_mod_main.c:189
+#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
 msgid "Mail"
 msgstr "Correo"
 
-#: src/e_mod_main.c:233
+#: src/e_mod_main.c:229
 msgid "Settings"
 msgstr "Preferencias"
+
+#: src/e_mod_main.c:687
+msgid "A new mail!"
+msgstr ""

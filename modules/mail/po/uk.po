@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mail.HEAD\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-11-22 20:51+0100\n"
+"POT-Creation-Date: 2024-11-30 10:25+0100\n"
 "PO-Revision-Date: 2011-02-06 07:33+0300\n"
 "Last-Translator: Korostil Daniel <ted.korostiled@gmail.com>\n"
 "Language-Team: translation@linux.org.ua\n"
@@ -158,14 +158,18 @@ msgstr "Вилучити"
 msgid "Configure..."
 msgstr "Налаштувати…"
 
-#: src/e_mod_main.c:189
+#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
 msgid "Mail"
 msgstr "Пошта"
 
-#: src/e_mod_main.c:233
+#: src/e_mod_main.c:229
 #, fuzzy
 msgid "Settings"
 msgstr "Налаштування"
+
+#: src/e_mod_main.c:687
+msgid "A new mail!"
+msgstr ""
 
 #~ msgid "Mail Configuration"
 #~ msgstr "Налаштування пошти"
