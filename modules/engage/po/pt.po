@@ -1,22 +1,22 @@
 # Portuguese translation for engage
 # This file is distributed under the same license as the enlightenment package.
 # Sérgio Marques <sarquespt@gmail.com>, 2010-2013.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: engage\n"
 "Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
 "POT-Creation-Date: 2024-11-27 20:04+0100\n"
-"PO-Revision-Date: 2021-10-31 21:50+0000\n"
+"PO-Revision-Date: 2024-12-01 15:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: src/e_mod_main.c:1863 src/e_mod_main.c:1901
 msgid "Engage"
@@ -68,7 +68,7 @@ msgstr "Minimizar"
 
 #: src/ng_gadcon.c:264
 msgid "Gadcon Config"
-msgstr "Gadcon Config"
+msgstr "Configuração Gadcon"
 
 #: src/ng_gadcon.c:303
 msgid "Available Gadgets"
@@ -96,7 +96,7 @@ msgstr "Configuração Engage"
 
 #: src/ng_config.c:167 src/ng_config.c:228
 msgid "Appearance"
-msgstr "Aparência"
+msgstr "Aspeto"
 
 #: src/ng_config.c:168
 msgid "Icon Size:"
@@ -112,9 +112,8 @@ msgid "Background Opacity:"
 msgstr "Opacidade do fundo:"
 
 #: src/ng_config.c:186
-#, fuzzy
 msgid "%1.0f %"
-msgstr "%1.0f \\%"
+msgstr "%1.0f %"
 
 #: src/ng_config.c:194
 msgid "Show Background Box"
@@ -130,19 +129,19 @@ msgstr "Orientação"
 
 #: src/ng_config.c:204
 msgid "Bottom Edge"
-msgstr "Em baixo"
+msgstr "Inferior"
 
 #: src/ng_config.c:206
 msgid "Top Edge"
-msgstr "Em cima"
+msgstr "Superior"
 
 #: src/ng_config.c:208
 msgid "Left Edge"
-msgstr "À esquerda"
+msgstr "Esquerda"
 
 #: src/ng_config.c:210
 msgid "Right Edge"
-msgstr "À direita"
+msgstr "Direita"
 
 #: src/ng_config.c:230 src/ng_config.c:249
 msgid "Zoom"
@@ -218,7 +217,7 @@ msgstr "Ocultar em ecrã inteiro"
 
 #: src/ng_config.c:299
 msgid "Show Bar when Urgent"
-msgstr "Mostrar barra se for urgente"
+msgstr "Mostrar barra quando urgente"
 
 #: src/ng_config.c:307
 msgid "Stacking"
@@ -226,11 +225,11 @@ msgstr "Empilhamento"
 
 #: src/ng_config.c:309
 msgid "Above All"
-msgstr "Por cima de tudo"
+msgstr "Acima de tudo"
 
 #: src/ng_config.c:311
 msgid "Below Fullscreen"
-msgstr "Por baixo de ecrã inteiro"
+msgstr "Abaixo do ecrã inteiro"
 
 #: src/ng_config.c:315 src/ng_config.c:322
 msgid "Other"
@@ -278,7 +277,7 @@ msgstr "Aplicações minimizadas"
 
 #: src/ng_config.c:572
 msgid "Not Shown"
-msgstr "Não mostrado"
+msgstr "Não exibido"
 
 #: src/ng_config.c:574
 msgid "Show"
@@ -290,7 +289,7 @@ msgstr "Apenas minimizado"
 
 #: src/ng_config.c:645 src/ng_config.c:685
 msgid "Engage Bar Configuration"
-msgstr "Definições da barra do Engage"
+msgstr "Definições da barra Engage"
 
 #: src/ng_config.c:784
 msgid "Create new source"
