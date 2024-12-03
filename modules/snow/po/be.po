@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow\n"
-"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2023-07-24 20:00+0300\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-12-03 18:27+0100\n"
 "PO-Revision-Date: 2023-07-23 20:00+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -15,38 +15,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_config.c:42
+#: src/e_mod_config.c:42
 msgid "Snow Configuration"
 msgstr "Канфігурацыя модуля Снег"
 
-#: ../src/e_mod_config.c:99
+#: src/e_mod_config.c:99
 msgid "General Settings"
 msgstr "Асноўныя параметры"
 
-#: ../src/e_mod_config.c:100
+#: src/e_mod_config.c:100
 msgid "Show Trees"
 msgstr "Паказваць дрэвы"
 
-#: ../src/e_mod_config.c:104
+#: src/e_mod_config.c:104
 msgid "Snow Density"
 msgstr "Шчыльнасць снегу"
 
-#: ../src/e_mod_config.c:106
+#: src/e_mod_config.c:106
 msgid "Sparse"
 msgstr "Рэдкі"
 
-#: ../src/e_mod_config.c:108
+#: src/e_mod_config.c:108
 msgid "Medium"
 msgstr "Сярэдні"
 
-#: ../src/e_mod_config.c:110
+#: src/e_mod_config.c:110
 msgid "Dense"
 msgstr "Густы"
 
-#: ../src/e_mod_main.c:33
-msgid "Appearance"
-msgstr "Знешні выгляд"
+#: src/e_mod_main.c:37
+msgid "Look"
+msgstr ""
 
-#: ../src/e_mod_main.c:35
+#: src/e_mod_main.c:39
 msgid "Snow"
 msgstr "Снег"
+
+#~ msgid "Appearance"
+#~ msgstr "Знешні выгляд"

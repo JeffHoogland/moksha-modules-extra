@@ -7,46 +7,50 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"POT-Creation-Date: 2024-12-03 18:27+0100\n"
 "PO-Revision-Date: 2009-04-11 14:49+0000\n"
 "Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_config.c:42
+#: src/e_mod_config.c:42
 msgid "Snow Configuration"
 msgstr "Configuración de Snow"
 
-#: ../src/e_mod_config.c:99
+#: src/e_mod_config.c:99
 msgid "General Settings"
 msgstr "Configuración general"
 
-#: ../src/e_mod_config.c:100
+#: src/e_mod_config.c:100
 msgid "Show Trees"
 msgstr "Mostrar árboles"
 
-#: ../src/e_mod_config.c:104
+#: src/e_mod_config.c:104
 msgid "Snow Density"
 msgstr "Densidad de nieve"
 
-#: ../src/e_mod_config.c:106
+#: src/e_mod_config.c:106
 msgid "Sparse"
 msgstr "Escasa"
 
-#: ../src/e_mod_config.c:108
+#: src/e_mod_config.c:108
 msgid "Medium"
 msgstr "Media"
 
-#: ../src/e_mod_config.c:110
+#: src/e_mod_config.c:110
 msgid "Dense"
 msgstr "Densa"
 
-#: ../src/e_mod_main.c:33
-msgid "Appearance"
-msgstr "Apariencia"
+#: src/e_mod_main.c:37
+msgid "Look"
+msgstr ""
 
-#: ../src/e_mod_main.c:35
+#: src/e_mod_main.c:39
 msgid "Snow"
 msgstr "Nieve"
+
+#~ msgid "Appearance"
+#~ msgstr "Apariencia"

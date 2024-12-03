@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-11-23 23:49+0100\n"
+"POT-Creation-Date: 2024-12-03 18:27+0100\n"
 "PO-Revision-Date: 2009-11-07 18:19+0000\n"
 "Last-Translator: MixCool <lars.thoms@mixcool.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -45,11 +45,11 @@ msgstr "Mittel"
 msgid "Dense"
 msgstr "Dicht"
 
-#: src/e_mod_main.c:33
+#: src/e_mod_main.c:37
 msgid "Look"
 msgstr "Aussehen"
 
-#: src/e_mod_main.c:35
+#: src/e_mod_main.c:39
 msgid "Snow"
 msgstr "Schnee"
 

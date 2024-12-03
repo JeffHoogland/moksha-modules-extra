@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: snow.HEAD\n"
-"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
-"POT-Creation-Date: 2010-10-17 11:01-0700\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-12-03 18:27+0100\n"
 "PO-Revision-Date: 2011-02-06 10:55+0300\n"
 "Last-Translator: Korostil Daniel <ted.korostiled@gmail.com>\n"
 "Language-Team: translation@linux.org.ua\n"
@@ -13,43 +13,43 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.6.1\n"
 
-#: ../src/e_mod_config.c:42
+#: src/e_mod_config.c:42
 msgid "Snow Configuration"
 msgstr "Налаштування"
 
-#: ../src/e_mod_config.c:99
+#: src/e_mod_config.c:99
 msgid "General Settings"
 msgstr "Загальні налаштування"
 
-#: ../src/e_mod_config.c:100
+#: src/e_mod_config.c:100
 msgid "Show Trees"
 msgstr "Показувати ялинки"
 
-#: ../src/e_mod_config.c:104
+#: src/e_mod_config.c:104
 msgid "Snow Density"
 msgstr "Густота"
 
-#: ../src/e_mod_config.c:106
+#: src/e_mod_config.c:106
 msgid "Sparse"
 msgstr "Розсіяний"
 
-#: ../src/e_mod_config.c:108
+#: src/e_mod_config.c:108
 msgid "Medium"
 msgstr "Середній"
 
-#: ../src/e_mod_config.c:110
+#: src/e_mod_config.c:110
 msgid "Dense"
 msgstr "Густий"
 
-#: ../src/e_mod_main.c:33
+#: src/e_mod_main.c:37
 msgid "Look"
 msgstr "Вигляд"
 
-#: ../src/e_mod_main.c:35
+#: src/e_mod_main.c:39
 msgid "Snow"
 msgstr "Сніг"
 
