@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Rain\n"
-"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2023-07-24 19:30+0300\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-12-03 18:24+0100\n"
 "PO-Revision-Date: 2023-07-24 19:30+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -15,38 +15,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_config.c:42
+#: src/e_mod_config.c:42
 msgid "Rain Module"
 msgstr "Модуль Дождж"
 
-#: ../src/e_mod_config.c:100
+#: src/e_mod_config.c:100
 msgid "General Settings"
 msgstr "Асноўныя параметры"
 
-#: ../src/e_mod_config.c:101
+#: src/e_mod_config.c:101
 msgid "Show Clouds"
 msgstr "Паказваць аблокі"
 
-#: ../src/e_mod_config.c:105
+#: src/e_mod_config.c:105
 msgid "Rain Density"
 msgstr "Шчыльнасць дажджу"
 
-#: ../src/e_mod_config.c:107
+#: src/e_mod_config.c:107
 msgid "Sprinkle"
 msgstr "Капае"
 
-#: ../src/e_mod_config.c:109
+#: src/e_mod_config.c:109
 msgid "Drizzle"
 msgstr "Імжыць"
 
-#: ../src/e_mod_config.c:111
+#: src/e_mod_config.c:111
 msgid "Downpour"
 msgstr "Залева"
 
-#: ../src/e_mod_main.c:33
-msgid "Appearance"
-msgstr "Знешні выгляд"
+#: src/e_mod_main.c:33
+msgid "Look"
+msgstr ""
 
-#: ../src/e_mod_main.c:35
+#: src/e_mod_main.c:35
 msgid "Rain"
 msgstr "Дождж"
+
+#~ msgid "Appearance"
+#~ msgstr "Знешні выгляд"

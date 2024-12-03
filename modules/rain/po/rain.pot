@@ -1,52 +1,54 @@
-# Czech translation.
-# This file is put in the public domain.
-# quaker66@gmail.com
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Enlightenment development team
+# This file is distributed under the same license as the rain package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Rain\n"
+"Project-Id-Version: rain 0.0.3\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-12-03 18:24+0100\n"
-"PO-Revision-Date: 2011-01-04 18:52+0100\n"
-"Last-Translator: quaker66 <quaker66@gmail.com>\n"
-"Language-Team: Czech <quaker66@gmail.com>\n"
-"Language: cs\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_config.c:42
 msgid "Rain Module"
-msgstr "Modul Déšť"
+msgstr ""
 
 #: src/e_mod_config.c:100
 msgid "General Settings"
-msgstr "Obecné nastavení"
+msgstr ""
 
 #: src/e_mod_config.c:101
 msgid "Show Clouds"
-msgstr "Zobrazit mraky"
+msgstr ""
 
 #: src/e_mod_config.c:105
 msgid "Rain Density"
-msgstr "Hustota deště"
+msgstr ""
 
 #: src/e_mod_config.c:107
 msgid "Sprinkle"
-msgstr "Přeháňka"
+msgstr ""
 
 #: src/e_mod_config.c:109
 msgid "Drizzle"
-msgstr "Mrholení"
+msgstr ""
 
 #: src/e_mod_config.c:111
 msgid "Downpour"
-msgstr "Liják"
+msgstr ""
 
 #: src/e_mod_main.c:33
 msgid "Look"
-msgstr "Vzhled"
+msgstr ""
 
 #: src/e_mod_main.c:35
 msgid "Rain"
-msgstr "Déšť"
-
+msgstr ""

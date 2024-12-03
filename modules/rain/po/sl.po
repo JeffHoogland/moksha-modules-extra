@@ -6,50 +6,51 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: rain\n"
-"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
-"POT-Creation-Date: 2011-02-17 15:00-0800\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-12-03 18:24+0100\n"
 "PO-Revision-Date: 2011-02-22 08:50+0100\n"
 "Last-Translator: r1to <renato.rener@gmail.com>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
 
-#: ../src/e_mod_config.c:42
+#: src/e_mod_config.c:42
 msgid "Rain Module"
 msgstr "Modul Dež"
 
-#: ../src/e_mod_config.c:100
+#: src/e_mod_config.c:100
 msgid "General Settings"
 msgstr "Splošne nastavitve"
 
-#: ../src/e_mod_config.c:101
+#: src/e_mod_config.c:101
 msgid "Show Clouds"
 msgstr "Prikaži oblake"
 
-#: ../src/e_mod_config.c:105
+#: src/e_mod_config.c:105
 msgid "Rain Density"
 msgstr "Gostota Dežja"
 
-#: ../src/e_mod_config.c:107
+#: src/e_mod_config.c:107
 msgid "Sprinkle"
 msgstr "Škropi"
 
-#: ../src/e_mod_config.c:109
+#: src/e_mod_config.c:109
 msgid "Drizzle"
 msgstr "Rosi"
 
-#: ../src/e_mod_config.c:111
+#: src/e_mod_config.c:111
 msgid "Downpour"
 msgstr "Lije"
 
-#: ../src/e_mod_main.c:33
+#: src/e_mod_main.c:33
 msgid "Look"
 msgstr "Izgled"
 
-#: ../src/e_mod_main.c:35
+#: src/e_mod_main.c:35
 msgid "Rain"
 msgstr "Dež"
-

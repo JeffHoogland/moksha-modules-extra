@@ -6,46 +6,50 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-08-25 17:14+0800\n"
+"POT-Creation-Date: 2024-12-03 18:24+0100\n"
 "PO-Revision-Date: 2008-11-29 23:41+0000\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_config.c:42
+#: src/e_mod_config.c:42
 msgid "Rain Module"
 msgstr "מודול הגשם"
 
-#: ../src/e_mod_config.c:100
+#: src/e_mod_config.c:100
 msgid "General Settings"
 msgstr "הגדרות כלליות"
 
-#: ../src/e_mod_config.c:101
+#: src/e_mod_config.c:101
 msgid "Show Clouds"
 msgstr "הצג עננים"
 
-#: ../src/e_mod_config.c:105
+#: src/e_mod_config.c:105
 msgid "Rain Density"
 msgstr "צפיפות הגשם"
 
-#: ../src/e_mod_config.c:107
+#: src/e_mod_config.c:107
 msgid "Sprinkle"
 msgstr "טפטוף"
 
-#: ../src/e_mod_config.c:109
+#: src/e_mod_config.c:109
 msgid "Drizzle"
 msgstr "גשם קל"
 
-#: ../src/e_mod_config.c:111
+#: src/e_mod_config.c:111
 msgid "Downpour"
 msgstr "מבול"
 
-#: ../src/e_mod_main.c:33
-msgid "Appearance"
-msgstr "חזות"
+#: src/e_mod_main.c:33
+msgid "Look"
+msgstr ""
 
-#: ../src/e_mod_main.c:35
+#: src/e_mod_main.c:35
 msgid "Rain"
 msgstr "גשם"
+
+#~ msgid "Appearance"
+#~ msgstr "חזות"
