@@ -80,4 +80,3 @@ msgstr "Tclock"
 #: src/e_mod_main.c:181
 msgid "Settings"
 msgstr "Nastavenia"
-
