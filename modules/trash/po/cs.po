@@ -7,34 +7,32 @@ msgstr ""
 "Project-Id-Version: trash\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-12-08 17:58+0100\n"
-"PO-Revision-Date: 2016-11-25 17:56+0100\n"
-"Last-Translator: Renato Rener <renato.rener@gmail.com>\n"
-"Language-Team: slovenian <renato.rener@gmail.com>\n"
-"Language: sl\n"
+"PO-Revision-Date: 2016-11-21 22:19+0100\n"
+"Last-Translator: Stefan Uram <uram@szm.sk>\n"
+"Language-Team: slovak <stefan@bodhi.sk>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;D_\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: sl\n"
 
 #: src/e_mod_config.c:44
 msgid "Trash module"
-msgstr "Modul Koš"
+msgstr "Modul koše"
 
 #: src/e_mod_config.c:85 src/e_mod_main.c:363
 msgid "Settings"
-msgstr "Nastavitve"
+msgstr "Nastavení"
 
 #: src/e_mod_config.c:87
 msgid "File manager to open the trash:"
-msgstr "Upravitelj datotek za odpiranje koša:"
+msgstr "Souborový manažer pro otvorení koše"
 
 #: src/e_mod_config.c:92
 msgid "Use pcmanfm -n for opening a new instance on the current desktop"
-msgstr "Uporabi pcmanfm -n za odpiranje novega primerka na trenutnem namizju"
+msgstr "Použít pcmanfm -n pro otevřní nové inštance v aktuálním desktopu"
 
 #: src/e_mod_main.c:152 src/e_mod_main.c:202
 msgid "Trash"
@@ -42,31 +40,31 @@ msgstr "Koš"
 
 #: src/e_mod_main.c:199
 msgid "Advanced"
-msgstr "Napredno"
+msgstr "Pokročilé"
 
 #: src/e_mod_main.c:353
 msgid "Empty Trash"
-msgstr "Izprazni Koš"
+msgstr "Vyprázdnit koš"
 
 #: src/e_mod_main.c:358
 msgid "Show trash"
-msgstr "Prikaži koš"
+msgstr "Zobraz obsah koše"
 
 #: src/e_mod_main.c:394
 msgid ""
 "<b>Remove all the files and folders from the trash?</><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
-"<b>Odstranimo vse datoteke in mape iz koša?</><br>Vsi predmeti v košu bodo "
-"nepopravljivo izgubljeni!!!"
+"<b>Odstranit všechny soubory a složky z koše?</><br>Všechny položky v koši budou "
+"nenávratne vymazány!!!"
 
 #: src/e_mod_main.c:396 src/e_mod_main.c:488
 msgid "Cancel"
-msgstr "Prekliči"
+msgstr "Zrušit"
 
 #: src/e_mod_main.c:396
 msgid "Empty trash"
-msgstr "Izprazni koš"
+msgstr "Vyprázdnit"
 
 #: src/e_mod_main.c:484
 msgid "Alert"
@@ -77,12 +75,10 @@ msgid ""
 "Some files can't be moved to trash <br>because they are not on the local "
 "filesystem.<br><br>The files will be deleted FOREVER!!!"
 msgstr ""
-"Nekaterih datotek se ne da premakniti v koš <br>kerniso na krajevnem "
-"datotečnem sistemu. <br><br>Te datoteke bodo izbrisane ZA VEDNO!!!"
+"Nekteré soubory nemohou být přesunuty do koše <br>protože nejsou uloženy v "
+"lokálním souborovém systému. <br><br>Tyto soubory budou nenávratne vymazány!!!"
 
 #: src/e_mod_main.c:488
 msgid "Delete Files"
-msgstr "Izbriši datoteke"
+msgstr "Vymazat soubory"
 
-#~ msgid "Setting"
-#~ msgstr "Nastavitev"

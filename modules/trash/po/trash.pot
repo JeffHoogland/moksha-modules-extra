@@ -1,88 +1,78 @@
-# Slovak translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Enlightenment development team
+# This file is distributed under the same license as the trash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: trash\n"
+"Project-Id-Version: trash 0.0.6\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-12-08 17:58+0100\n"
-"PO-Revision-Date: 2016-11-25 17:56+0100\n"
-"Last-Translator: Renato Rener <renato.rener@gmail.com>\n"
-"Language-Team: slovenian <renato.rener@gmail.com>\n"
-"Language: sl\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop;D_\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: sl\n"
 
 #: src/e_mod_config.c:44
 msgid "Trash module"
-msgstr "Modul Koš"
+msgstr ""
 
 #: src/e_mod_config.c:85 src/e_mod_main.c:363
 msgid "Settings"
-msgstr "Nastavitve"
+msgstr ""
 
 #: src/e_mod_config.c:87
 msgid "File manager to open the trash:"
-msgstr "Upravitelj datotek za odpiranje koša:"
+msgstr ""
 
 #: src/e_mod_config.c:92
 msgid "Use pcmanfm -n for opening a new instance on the current desktop"
-msgstr "Uporabi pcmanfm -n za odpiranje novega primerka na trenutnem namizju"
+msgstr ""
 
 #: src/e_mod_main.c:152 src/e_mod_main.c:202
 msgid "Trash"
-msgstr "Koš"
+msgstr ""
 
 #: src/e_mod_main.c:199
 msgid "Advanced"
-msgstr "Napredno"
+msgstr ""
 
 #: src/e_mod_main.c:353
 msgid "Empty Trash"
-msgstr "Izprazni Koš"
+msgstr ""
 
 #: src/e_mod_main.c:358
 msgid "Show trash"
-msgstr "Prikaži koš"
+msgstr ""
 
 #: src/e_mod_main.c:394
 msgid ""
 "<b>Remove all the files and folders from the trash?</><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
-"<b>Odstranimo vse datoteke in mape iz koša?</><br>Vsi predmeti v košu bodo "
-"nepopravljivo izgubljeni!!!"
 
 #: src/e_mod_main.c:396 src/e_mod_main.c:488
 msgid "Cancel"
-msgstr "Prekliči"
+msgstr ""
 
 #: src/e_mod_main.c:396
 msgid "Empty trash"
-msgstr "Izprazni koš"
+msgstr ""
 
 #: src/e_mod_main.c:484
 msgid "Alert"
-msgstr "Pozor"
+msgstr ""
 
 #: src/e_mod_main.c:485
 msgid ""
 "Some files can't be moved to trash <br>because they are not on the local "
 "filesystem.<br><br>The files will be deleted FOREVER!!!"
 msgstr ""
-"Nekaterih datotek se ne da premakniti v koš <br>kerniso na krajevnem "
-"datotečnem sistemu. <br><br>Te datoteke bodo izbrisane ZA VEDNO!!!"
 
 #: src/e_mod_main.c:488
 msgid "Delete Files"
-msgstr "Izbriši datoteke"
-
-#~ msgid "Setting"
-#~ msgstr "Nastavitev"
+msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trash\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2021-07-18 14:24+0200\n"
+"POT-Creation-Date: 2024-12-08 17:58+0100\n"
 "PO-Revision-Date: 2021-05-19 20:35+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
@@ -23,40 +23,36 @@ msgstr ""
 msgid "Trash module"
 msgstr "Módulo do lixo"
 
-#: src/e_mod_config.c:86
-msgid "Setting"
-msgstr "Configuração"
+#: src/e_mod_config.c:85 src/e_mod_main.c:363
+msgid "Settings"
+msgstr "Definições"
 
-#: src/e_mod_config.c:88
+#: src/e_mod_config.c:87
 msgid "File manager to open the trash:"
 msgstr "Gestor de ficheiros para abrir o lixo:"
 
-#: src/e_mod_config.c:95
+#: src/e_mod_config.c:92
 msgid "Use pcmanfm -n for opening a new instance on the current desktop"
 msgstr ""
 "Use o pcmanfm -n para abrir uma nova instância na área de trabalho atual"
 
-#: src/e_mod_main.c:153 src/e_mod_main.c:203
+#: src/e_mod_main.c:152 src/e_mod_main.c:202
 msgid "Trash"
 msgstr "Lixo"
 
-#: src/e_mod_main.c:200
+#: src/e_mod_main.c:199
 msgid "Advanced"
 msgstr "Avançado"
 
-#: src/e_mod_main.c:356
+#: src/e_mod_main.c:353
 msgid "Empty Trash"
 msgstr "Esvaziar o lixo"
 
-#: src/e_mod_main.c:361
+#: src/e_mod_main.c:358
 msgid "Show trash"
 msgstr "Mostrar o lixo"
 
-#: src/e_mod_main.c:366
-msgid "Settings"
-msgstr "Definições"
-
-#: src/e_mod_main.c:413
+#: src/e_mod_main.c:394
 msgid ""
 "<b>Remove all the files and folders from the trash?</><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
@@ -64,19 +60,19 @@ msgstr ""
 "<b>Remover todos os ficheiros e pastas do lixo?</><br>Todos os elementos "
 "atualmente no lixo serão irremediavelmente perdidos!!!"
 
-#: src/e_mod_main.c:415 src/e_mod_main.c:510
+#: src/e_mod_main.c:396 src/e_mod_main.c:488
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/e_mod_main.c:415
+#: src/e_mod_main.c:396
 msgid "Empty trash"
 msgstr "Esvaziar o lixo"
 
-#: src/e_mod_main.c:506
+#: src/e_mod_main.c:484
 msgid "Alert"
 msgstr "Alerta"
 
-#: src/e_mod_main.c:507
+#: src/e_mod_main.c:485
 msgid ""
 "Some files can't be moved to trash <br>because they are not on the local "
 "filesystem.<br><br>The files will be deleted FOREVER!!!"
@@ -85,6 +81,9 @@ msgstr ""
 "sistema de ficheiros local.<br><br>Os ficheiros serão eliminados PARA "
 "SEMPRE!!!"
 
-#: src/e_mod_main.c:510
+#: src/e_mod_main.c:488
 msgid "Delete Files"
 msgstr "Eliminar ficheiros"
+
+#~ msgid "Setting"
+#~ msgstr "Configuração"

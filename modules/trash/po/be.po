@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: trash\n"
-"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2023-07-24 20:30+0300\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-12-08 17:58+0100\n"
 "PO-Revision-Date: 2023-07-24 20:30+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -19,8 +19,8 @@ msgstr ""
 msgid "Trash module"
 msgstr "Модуль Сметніца"
 
-#: src/e_mod_config.c:85
-msgid "Setting"
+#: src/e_mod_config.c:85 src/e_mod_main.c:363
+msgid "Settings"
 msgstr "Налады"
 
 #: src/e_mod_config.c:87
@@ -29,56 +29,56 @@ msgstr "Кіраўнік файлаў для адкрыцця сметніцы:"
 
 #: src/e_mod_config.c:92
 msgid "Use pcmanfm -n for opening a new instance on the current desktop"
-msgstr "Выкарыстоўвайце pcmanfm -n для адкрыцця новай сметніцы на працоўным стале"
+msgstr ""
+"Выкарыстоўвайце pcmanfm -n для адкрыцця новай сметніцы на працоўным стале"
 
-#: src/e_mod_main.c:155 src/e_mod_main.c:205
+#: src/e_mod_main.c:152 src/e_mod_main.c:202
 msgid "Trash"
 msgstr "Сметніца"
 
-#: src/e_mod_main.c:202
+#: src/e_mod_main.c:199
 msgid "Advanced"
 msgstr "Дадатковыя"
 
-#: src/e_mod_main.c:355
+#: src/e_mod_main.c:353
 msgid "Empty Trash"
 msgstr "Спустошыць сметніцу"
 
-#: src/e_mod_main.c:360
+#: src/e_mod_main.c:358
 msgid "Show trash"
 msgstr "Паказаць смецце"
 
-#: src/e_mod_main.c:365
-msgid "Settings"
-msgstr "Налады"
-
-#: src/e_mod_main.c:412
+#: src/e_mod_main.c:394
 msgid ""
 "<b>Remove all the files and folders from the trash?</><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
-"<b>Выдаліць з сметніцы ўсе файлы ды папкі?</><br>Усё змесціва сметніцы "
-"будзе страчана незваротна!!!"
+"<b>Выдаліць з сметніцы ўсе файлы ды папкі?</><br>Усё змесціва сметніцы будзе "
+"страчана незваротна!!!"
 
-#: src/e_mod_main.c:414 src/e_mod_main.c:507
+#: src/e_mod_main.c:396 src/e_mod_main.c:488
 msgid "Cancel"
 msgstr "Скасаваць"
 
-#: src/e_mod_main.c:414
+#: src/e_mod_main.c:396
 msgid "Empty trash"
 msgstr "Спустошыць сметніцу"
 
-#: src/e_mod_main.c:503
+#: src/e_mod_main.c:484
 msgid "Alert"
 msgstr "Папярэджанне"
 
-#: src/e_mod_main.c:504
+#: src/e_mod_main.c:485
 msgid ""
 "Some files can't be moved to trash <br>because they are not on the local "
 "filesystem.<br><br>The files will be deleted FOREVER!!!"
 msgstr ""
-"Некаторыя файлы немагчыма  перамясціць у сметніцу, <br>таму што іх няма ў лакальнай "
-"файлавай сістэме. <br><br>Гэтыя файлы будуць выдалены НЕЗВАРОТНА!!!"
+"Некаторыя файлы немагчыма  перамясціць у сметніцу, <br>таму што іх няма ў "
+"лакальнай файлавай сістэме. <br><br>Гэтыя файлы будуць выдалены НЕЗВАРОТНА!!!"
 
-#: src/e_mod_main.c:507
+#: src/e_mod_main.c:488
 msgid "Delete Files"
 msgstr "Выдаліць файлы"
+
+#~ msgid "Setting"
+#~ msgstr "Налады"
