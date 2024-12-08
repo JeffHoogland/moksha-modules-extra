@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slideshow\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-03-06 18:18+0100\n"
+"POT-Creation-Date: 2024-12-06 14:17+0100\n"
 "PO-Revision-Date: 2011-10-15 12:44+0200\n"
 "Last-Translator: Štefan Uram <thewaiter@centrum.sk>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -93,30 +93,30 @@ msgstr "Použít tapetu na aktivní obrazovce"
 msgid "Set wallpaper on current monitor (Xinerama support)"
 msgstr "Nastavit tapetu na aktuálním monitoru (Podpora Xineramy)"
 
-#: src/e_mod_config.c:210 src/e_mod_main.c:267 src/e_mod_main.c:492
+#: src/e_mod_config.c:210 src/e_mod_main.c:256 src/e_mod_main.c:505
 msgid "Warning"
 msgstr "Upozornění"
 
-#: src/e_mod_config.c:210 src/e_mod_main.c:493
+#: src/e_mod_config.c:210 src/e_mod_main.c:506
 msgid "Day/Night file names are not defined!"
 msgstr "Soubory Den/Noc nejsou definovány!"
 
-#: src/e_mod_main.c:155
+#: src/e_mod_main.c:154
 msgid "Slideshow"
 msgstr "Slideshow"
 
-#: src/e_mod_main.c:196
+#: src/e_mod_main.c:193
 msgid "Settings"
 msgstr "Nastavení"
 
-#: src/e_mod_main.c:267
+#: src/e_mod_main.c:257
 msgid "Check Day/Night bg file names. They do not match!"
 msgstr "Skontrolujte soubory Den/Noc. Nezhodují se!"
 
-#: src/e_mod_main.c:712
+#: src/e_mod_main.c:725
 msgid "Picture Import Error"
 msgstr "Chyba importu tapety"
 
-#: src/e_mod_main.c:713
+#: src/e_mod_main.c:726
 msgid "Moksha was unable to import the picture<br>due to conversion errors."
 msgstr "Moksha není schopna importovat tapetu<br> v důsledku chyb konverze"

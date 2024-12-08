@@ -23,7 +23,7 @@ msgstr "Nastavení modulu TClock"
 
 #: src/e_mod_config.c:101
 msgid "Top"
-msgstr "Nahoře"
+msgstr "Horní řádek"
 
 #: src/e_mod_config.c:102
 msgid "Show Top Line"
@@ -39,7 +39,7 @@ msgstr "Přidat časový posun (např. +2)"
 
 #: src/e_mod_config.c:123
 msgid "Bottom"
-msgstr "Dole"
+msgstr "Dolní řádek"
 
 #: src/e_mod_config.c:125
 msgid "Show Bottom Line"
@@ -80,4 +80,3 @@ msgstr "TClock"
 #: src/e_mod_main.c:181
 msgid "Settings"
 msgstr "Nastavení"
-
