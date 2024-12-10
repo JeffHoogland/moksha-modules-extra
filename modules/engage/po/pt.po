@@ -1,28 +1,28 @@
 # Portuguese translation for engage
 # This file is distributed under the same license as the enlightenment package.
 # Sérgio Marques <sarquespt@gmail.com>, 2010-2013.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: engage\n"
 "Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
-"POT-Creation-Date: 2024-11-27 20:04+0100\n"
-"PO-Revision-Date: 2024-12-01 15:10+0000\n"
+"POT-Creation-Date: 2015-04-03 21:27+0000\n"
+"PO-Revision-Date: 2021-10-31 21:50+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/e_mod_main.c:1863 src/e_mod_main.c:1901
+#: src/e_mod_main.c:1705 src/e_mod_main.c:1863 src/e_mod_main.c:1890
 msgid "Engage"
 msgstr "Engage"
 
-#: src/ng_taskbar.c:635
+#: src/ng_taskbar.c:641
 msgid "No name!"
 msgstr "Sem nome!"
 
@@ -66,27 +66,27 @@ msgstr "Restaurar"
 msgid "Iconify"
 msgstr "Minimizar"
 
-#: src/ng_gadcon.c:264
+#: src/ng_gadcon.c:260
 msgid "Gadcon Config"
-msgstr "Configuração Gadcon"
+msgstr "Gadcon Config"
 
-#: src/ng_gadcon.c:303
+#: src/ng_gadcon.c:299
 msgid "Available Gadgets"
 msgstr "Gadgets disponíveis"
 
-#: src/ng_gadcon.c:310
+#: src/ng_gadcon.c:306
 msgid "Add Gadget"
 msgstr "Adicionar gadget"
 
-#: src/ng_gadcon.c:316
+#: src/ng_gadcon.c:312
 msgid "Selected Gadgets"
 msgstr "Gadgets selecionados"
 
-#: src/ng_gadcon.c:323
+#: src/ng_gadcon.c:319
 msgid "Remove Gadget"
 msgstr "Remover gadget"
 
-#: src/ng_gadcon.c:331 src/ng_gadcon.c:374 src/ng_gadcon.c:398
+#: src/ng_gadcon.c:327 src/ng_gadcon.c:370 src/ng_gadcon.c:394
 msgid "Description: Unavailable"
 msgstr "Descrição: Indisponível"
 
@@ -96,7 +96,7 @@ msgstr "Configuração Engage"
 
 #: src/ng_config.c:167 src/ng_config.c:228
 msgid "Appearance"
-msgstr "Aspeto"
+msgstr "Aparência"
 
 #: src/ng_config.c:168
 msgid "Icon Size:"
@@ -112,8 +112,8 @@ msgid "Background Opacity:"
 msgstr "Opacidade do fundo:"
 
 #: src/ng_config.c:186
-msgid "%1.0f %"
-msgstr "%1.0f %"
+msgid "%1.0f \\%"
+msgstr "%1.0f \\%"
 
 #: src/ng_config.c:194
 msgid "Show Background Box"
@@ -129,177 +129,177 @@ msgstr "Orientação"
 
 #: src/ng_config.c:204
 msgid "Bottom Edge"
-msgstr "Inferior"
+msgstr "Em baixo"
 
 #: src/ng_config.c:206
 msgid "Top Edge"
-msgstr "Superior"
+msgstr "Em cima"
 
 #: src/ng_config.c:208
 msgid "Left Edge"
-msgstr "Esquerda"
+msgstr "À esquerda"
 
 #: src/ng_config.c:210
 msgid "Right Edge"
-msgstr "Direita"
+msgstr "À direita"
 
-#: src/ng_config.c:230 src/ng_config.c:249
+#: src/ng_config.c:231 src/ng_config.c:250
 msgid "Zoom"
 msgstr "Ampliação"
 
-#: src/ng_config.c:231
+#: src/ng_config.c:232
 msgid "Factor:"
 msgstr "Fator:"
 
-#: src/ng_config.c:237
+#: src/ng_config.c:238
 msgid "Range:"
 msgstr "Intervalo:"
 
-#: src/ng_config.c:243
+#: src/ng_config.c:244
 msgid "Duration:"
 msgstr "Duração:"
 
-#: src/ng_config.c:251 src/ng_config.c:279
+#: src/ng_config.c:253 src/ng_config.c:281
 msgid "Bar Items"
 msgstr "Itens da barra"
 
-#: src/ng_config.c:259 src/ng_config.c:540 src/ng_config_instances.c:104
+#: src/ng_config.c:261 src/ng_config.c:547 src/ng_config_instances.c:104
 msgid "Delete"
 msgstr "Eliminar"
 
-#: src/ng_config.c:261 src/ng_config.c:542 src/ng_config_instances.c:106
+#: src/ng_config.c:263 src/ng_config.c:549 src/ng_config_instances.c:106
 msgid "Configure"
 msgstr "Configurar"
 
-#: src/ng_config.c:263
+#: src/ng_config.c:265
 msgid "Up"
 msgstr "Subir"
 
-#: src/ng_config.c:265
+#: src/ng_config.c:267
 msgid "Down"
 msgstr "Descer"
 
-#: src/ng_config.c:270 src/ng_config.c:538 src/ng_config_instances.c:102
+#: src/ng_config.c:272 src/ng_config.c:545 src/ng_config_instances.c:102
 msgid "Add"
 msgstr "Adicionar"
 
-#: src/ng_config.c:272
+#: src/ng_config.c:274
 msgid "Taskbar"
 msgstr "Barra de tarefas"
 
-#: src/ng_config.c:274
+#: src/ng_config.c:276
 msgid "Launcher"
 msgstr "Lançador"
 
-#: src/ng_config.c:276
+#: src/ng_config.c:278
 msgid "Gadcon"
 msgstr "Gadcon"
 
-#: src/ng_config.c:282 src/ng_config.c:301
+#: src/ng_config.c:284 src/ng_config.c:303
 msgid "Auto Hide"
 msgstr "Ocultar automaticamente"
 
-#: src/ng_config.c:286
+#: src/ng_config.c:288
 msgid "None"
 msgstr "Nenhum"
 
-#: src/ng_config.c:289
+#: src/ng_config.c:291
 msgid "Autohide"
 msgstr "Ocultar automaticamente"
 
-#: src/ng_config.c:292
+#: src/ng_config.c:294
 msgid "Hide when Window overlaps"
 msgstr "Ocultar quando a janela se sobrepõe"
 
-#: src/ng_config.c:295
+#: src/ng_config.c:297
 msgid "Hide on Fullscreen"
 msgstr "Ocultar em ecrã inteiro"
 
-#: src/ng_config.c:299
+#: src/ng_config.c:301
 msgid "Show Bar when Urgent"
-msgstr "Mostrar barra quando urgente"
+msgstr "Mostrar barra se for urgente"
 
-#: src/ng_config.c:307
+#: src/ng_config.c:309
 msgid "Stacking"
 msgstr "Empilhamento"
 
-#: src/ng_config.c:309
-msgid "Above All"
-msgstr "Acima de tudo"
-
 #: src/ng_config.c:311
-msgid "Below Fullscreen"
-msgstr "Abaixo do ecrã inteiro"
+msgid "Above All"
+msgstr "Por cima de tudo"
 
-#: src/ng_config.c:315 src/ng_config.c:322
+#: src/ng_config.c:313
+msgid "Below Fullscreen"
+msgstr "Por baixo de ecrã inteiro"
+
+#: src/ng_config.c:317 src/ng_config.c:324
 msgid "Other"
 msgstr "Outras"
 
-#: src/ng_config.c:316
+#: src/ng_config.c:318
 msgid "Ecomorph Features"
 msgstr "Funcionalidades Ecomorph"
 
-#: src/ng_config.c:318
+#: src/ng_config.c:320
 msgid "Show Icon Label"
 msgstr "Mostrar texto dos ícones"
 
-#: src/ng_config.c:530
+#: src/ng_config.c:537
 msgid "Launcher Settings"
 msgstr "Definições do lançador"
 
-#: src/ng_config.c:550
+#: src/ng_config.c:557
 msgid "Taskbar Settings"
 msgstr "Definições da barra de tarefas"
 
-#: src/ng_config.c:552
+#: src/ng_config.c:559
 msgid "Don't Show Dialogs"
 msgstr "Não mostrar diálogos"
 
-#: src/ng_config.c:555
+#: src/ng_config.c:562
 msgid "Advanced Window Menu"
 msgstr "Menu avançado"
 
-#: src/ng_config.c:558
+#: src/ng_config.c:565
 msgid "Only Show Current Desk"
 msgstr "Mostrar na área de trabalho atual"
 
-#: src/ng_config.c:561
+#: src/ng_config.c:568
 msgid "Group Applications by Window Class"
 msgstr "Agrupar aplicações por classe de janela"
 
-#: src/ng_config.c:564
+#: src/ng_config.c:571
 msgid "Append new Applications on the right Side"
 msgstr "Colocar novas aplicações no lado direito"
 
-#: src/ng_config.c:570
+#: src/ng_config.c:577
 msgid "Iconified Applications"
 msgstr "Aplicações minimizadas"
 
-#: src/ng_config.c:572
+#: src/ng_config.c:579
 msgid "Not Shown"
-msgstr "Não exibido"
+msgstr "Não mostrado"
 
-#: src/ng_config.c:574
+#: src/ng_config.c:581
 msgid "Show"
 msgstr "Mostrar"
 
-#: src/ng_config.c:576
+#: src/ng_config.c:583
 msgid "Only Iconified"
 msgstr "Apenas minimizado"
 
-#: src/ng_config.c:645 src/ng_config.c:685
+#: src/ng_config.c:652 src/ng_config.c:692
 msgid "Engage Bar Configuration"
-msgstr "Definições da barra Engage"
+msgstr "Definições da barra do Engage"
 
-#: src/ng_config.c:784
+#: src/ng_config.c:797
 msgid "Create new source"
 msgstr "Criar nova fonte"
 
-#: src/ng_config.c:785
+#: src/ng_config.c:798
 msgid "Enter a name for this new Application Launcher:"
 msgstr "Indique o nome para este lançador de aplicações:"
 
-#: src/ng_config.c:794
+#: src/ng_config.c:807
 #, c-format
 msgid ""
 "You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
@@ -308,7 +308,7 @@ msgstr ""
 "Solicitou a eliminação de \"%s\".<br><br>Tem a certeza que quer eliminar "
 "esta fonte?"
 
-#: src/ng_config.c:798
+#: src/ng_config.c:811
 msgid "Are you sure you want to delete this source?"
 msgstr "Tem a certeza que quer eliminar esta fonte?"
 
@@ -332,3 +332,6 @@ msgstr ""
 #: src/ng_config_instances.c:275
 msgid "Are you sure you want to delete this Instance?"
 msgstr "Tem a certeza que quer eliminar esta instância?"
+
+#~ msgid "Open folder with EFM"
+#~ msgstr "Abrir diretório no EFM"

@@ -6,23 +6,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
-"POT-Creation-Date: 2024-11-27 20:04+0100\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-23 11:50+0200\n"
 "PO-Revision-Date: 2014-05-13 01:47+0000\n"
 "Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
-"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-05-14 05:46+0000\n"
 "X-Generator: Launchpad (build 17002)\n"
 
-#: src/e_mod_main.c:1863 src/e_mod_main.c:1901
+#: src/e_mod_main.c:1705 src/e_mod_main.c:1863 src/e_mod_main.c:1890
 msgid "Engage"
 msgstr ""
 
-#: src/ng_taskbar.c:635
+#: src/ng_taskbar.c:641
 msgid "No name!"
 msgstr ""
 
@@ -66,27 +65,27 @@ msgstr ""
 msgid "Iconify"
 msgstr ""
 
-#: src/ng_gadcon.c:264
+#: src/ng_gadcon.c:260
 msgid "Gadcon Config"
 msgstr ""
 
-#: src/ng_gadcon.c:303
+#: src/ng_gadcon.c:299
 msgid "Available Gadgets"
 msgstr ""
 
-#: src/ng_gadcon.c:310
+#: src/ng_gadcon.c:306
 msgid "Add Gadget"
 msgstr ""
 
-#: src/ng_gadcon.c:316
+#: src/ng_gadcon.c:312
 msgid "Selected Gadgets"
 msgstr ""
 
-#: src/ng_gadcon.c:323
+#: src/ng_gadcon.c:319
 msgid "Remove Gadget"
 msgstr ""
 
-#: src/ng_gadcon.c:331 src/ng_gadcon.c:374 src/ng_gadcon.c:398
+#: src/ng_gadcon.c:327 src/ng_gadcon.c:370 src/ng_gadcon.c:394
 msgid "Description: Unavailable"
 msgstr ""
 
@@ -112,7 +111,7 @@ msgid "Background Opacity:"
 msgstr "Fono skaidrumas:"
 
 #: src/ng_config.c:186
-msgid "%1.0f %"
+msgid "%1.0f \\%"
 msgstr ""
 
 #: src/ng_config.c:194
@@ -143,170 +142,170 @@ msgstr "Kairysis kraštas"
 msgid "Right Edge"
 msgstr "Dešinysis kraštas"
 
-#: src/ng_config.c:230 src/ng_config.c:249
+#: src/ng_config.c:231 src/ng_config.c:250
 msgid "Zoom"
 msgstr ""
 
-#: src/ng_config.c:231
+#: src/ng_config.c:232
 msgid "Factor:"
 msgstr ""
 
-#: src/ng_config.c:237
+#: src/ng_config.c:238
 msgid "Range:"
 msgstr ""
 
-#: src/ng_config.c:243
+#: src/ng_config.c:244
 msgid "Duration:"
 msgstr "Trukmė:"
 
-#: src/ng_config.c:251 src/ng_config.c:279
+#: src/ng_config.c:253 src/ng_config.c:281
 msgid "Bar Items"
 msgstr "Juostos elementai"
 
-#: src/ng_config.c:259 src/ng_config.c:540 src/ng_config_instances.c:104
+#: src/ng_config.c:261 src/ng_config.c:547 src/ng_config_instances.c:104
 msgid "Delete"
 msgstr "Šalinti"
 
-#: src/ng_config.c:261 src/ng_config.c:542 src/ng_config_instances.c:106
+#: src/ng_config.c:263 src/ng_config.c:549 src/ng_config_instances.c:106
 msgid "Configure"
 msgstr "Konfigūruoti"
 
-#: src/ng_config.c:263
+#: src/ng_config.c:265
 msgid "Up"
 msgstr "Aukštyn"
 
-#: src/ng_config.c:265
+#: src/ng_config.c:267
 msgid "Down"
 msgstr "Žemyn"
 
-#: src/ng_config.c:270 src/ng_config.c:538 src/ng_config_instances.c:102
+#: src/ng_config.c:272 src/ng_config.c:545 src/ng_config_instances.c:102
 msgid "Add"
 msgstr "Pridėti"
 
-#: src/ng_config.c:272
+#: src/ng_config.c:274
 msgid "Taskbar"
 msgstr "Programų juosta"
 
-#: src/ng_config.c:274
+#: src/ng_config.c:276
 msgid "Launcher"
 msgstr "Leistukas"
 
-#: src/ng_config.c:276
+#: src/ng_config.c:278
 msgid "Gadcon"
 msgstr ""
 
-#: src/ng_config.c:282 src/ng_config.c:301
+#: src/ng_config.c:284 src/ng_config.c:303
 msgid "Auto Hide"
 msgstr "Automatinis slėpimasis"
 
-#: src/ng_config.c:286
+#: src/ng_config.c:288
 msgid "None"
 msgstr "Nėra"
 
-#: src/ng_config.c:289
+#: src/ng_config.c:291
 msgid "Autohide"
 msgstr "Slėptis automatiškai"
 
-#: src/ng_config.c:292
+#: src/ng_config.c:294
 msgid "Hide when Window overlaps"
 msgstr ""
 
-#: src/ng_config.c:295
+#: src/ng_config.c:297
 msgid "Hide on Fullscreen"
 msgstr ""
 
-#: src/ng_config.c:299
+#: src/ng_config.c:301
 msgid "Show Bar when Urgent"
 msgstr ""
 
-#: src/ng_config.c:307
+#: src/ng_config.c:309
 msgid "Stacking"
 msgstr ""
 
-#: src/ng_config.c:309
+#: src/ng_config.c:311
 msgid "Above All"
 msgstr "Virš visų"
 
-#: src/ng_config.c:311
+#: src/ng_config.c:313
 msgid "Below Fullscreen"
 msgstr ""
 
-#: src/ng_config.c:315 src/ng_config.c:322
+#: src/ng_config.c:317 src/ng_config.c:324
 msgid "Other"
 msgstr ""
 
-#: src/ng_config.c:316
+#: src/ng_config.c:318
 msgid "Ecomorph Features"
 msgstr ""
 
-#: src/ng_config.c:318
+#: src/ng_config.c:320
 msgid "Show Icon Label"
 msgstr "Rodyti piktogramos pavadinimą"
 
-#: src/ng_config.c:530
+#: src/ng_config.c:537
 msgid "Launcher Settings"
 msgstr "Leistuko nustatymai"
 
-#: src/ng_config.c:550
+#: src/ng_config.c:557
 msgid "Taskbar Settings"
 msgstr "Programų juostos nustatymai"
 
-#: src/ng_config.c:552
+#: src/ng_config.c:559
 msgid "Don't Show Dialogs"
 msgstr "Nerodyti dialogų"
 
-#: src/ng_config.c:555
+#: src/ng_config.c:562
 msgid "Advanced Window Menu"
 msgstr ""
 
-#: src/ng_config.c:558
+#: src/ng_config.c:565
 msgid "Only Show Current Desk"
 msgstr ""
 
-#: src/ng_config.c:561
+#: src/ng_config.c:568
 msgid "Group Applications by Window Class"
 msgstr "Grupuoti programas pagal langų grupes"
 
-#: src/ng_config.c:564
+#: src/ng_config.c:571
 msgid "Append new Applications on the right Side"
 msgstr ""
 
-#: src/ng_config.c:570
+#: src/ng_config.c:577
 msgid "Iconified Applications"
 msgstr "Suskleistos programos"
 
-#: src/ng_config.c:572
+#: src/ng_config.c:579
 msgid "Not Shown"
 msgstr "Nerodomos"
 
-#: src/ng_config.c:574
+#: src/ng_config.c:581
 msgid "Show"
 msgstr "Rodyti"
 
-#: src/ng_config.c:576
+#: src/ng_config.c:583
 msgid "Only Iconified"
 msgstr ""
 
-#: src/ng_config.c:645 src/ng_config.c:685
+#: src/ng_config.c:652 src/ng_config.c:692
 msgid "Engage Bar Configuration"
 msgstr "Engage juostos konfigūravimas"
 
-#: src/ng_config.c:784
+#: src/ng_config.c:797
 msgid "Create new source"
 msgstr ""
 
-#: src/ng_config.c:785
+#: src/ng_config.c:798
 msgid "Enter a name for this new Application Launcher:"
 msgstr ""
 
-#: src/ng_config.c:794
+#: src/ng_config.c:807
 #, c-format
 msgid ""
 "You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
 "source?"
 msgstr ""
 
-#: src/ng_config.c:798
+#: src/ng_config.c:811
 msgid "Are you sure you want to delete this source?"
 msgstr ""
 

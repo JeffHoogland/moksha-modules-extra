@@ -1813,10 +1813,9 @@ e_modapi_init(E_Module *m)
    char buf[PATH_MAX];
    ngi_config = NULL;
 
-   /* Location of message catalogs for localization */
-   snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
-   bindtextdomain(PACKAGE, buf);
-   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
    ngi_conf_gadcon_edd = E_CONFIG_DD_NEW("Ngi_Config_Gadcon", Config_Gadcon);
    E_CONFIG_VAL(ngi_conf_gadcon_edd, Config_Gadcon, name, STR);

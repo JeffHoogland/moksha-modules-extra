@@ -4,25 +4,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: trunk\n"
-"Report-Msgid-Bugs-To: hannes.janetzek@gmail.com\n"
-"POT-Creation-Date: 2024-11-27 20:04+0100\n"
+"Report-Msgid-Bugs-To: $MSGID_BUGS_ADDRESS\n"
+"POT-Creation-Date: 2013-08-23 11:50+0200\n"
 "PO-Revision-Date: 2015-01-31 14:50+0100\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: српски <xfce4@xfce4.org>\n"
-"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2013-08-25 05:04+0000\n"
 "X-Generator: Gtranslator 2.91.6\n"
+"Language: \n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: src/e_mod_main.c:1863 src/e_mod_main.c:1901
+#: src/e_mod_main.c:1705 src/e_mod_main.c:1863 src/e_mod_main.c:1890
 msgid "Engage"
 msgstr "Енгеџа"
 
-#: src/ng_taskbar.c:635
+#: src/ng_taskbar.c:641
 msgid "No name!"
 msgstr "Без имена!"
 
@@ -66,27 +66,27 @@ msgstr "Поништи умањење"
 msgid "Iconify"
 msgstr "Умањи"
 
-#: src/ng_gadcon.c:264
+#: src/ng_gadcon.c:260
 msgid "Gadcon Config"
 msgstr "Поставке Гадкона"
 
-#: src/ng_gadcon.c:303
+#: src/ng_gadcon.c:299
 msgid "Available Gadgets"
 msgstr "Доступне справице"
 
-#: src/ng_gadcon.c:310
+#: src/ng_gadcon.c:306
 msgid "Add Gadget"
 msgstr "Додај справицу"
 
-#: src/ng_gadcon.c:316
+#: src/ng_gadcon.c:312
 msgid "Selected Gadgets"
 msgstr "Означене справице"
 
-#: src/ng_gadcon.c:323
+#: src/ng_gadcon.c:319
 msgid "Remove Gadget"
 msgstr "Уклони справицу"
 
-#: src/ng_gadcon.c:331 src/ng_gadcon.c:374 src/ng_gadcon.c:398
+#: src/ng_gadcon.c:327 src/ng_gadcon.c:370 src/ng_gadcon.c:394
 msgid "Description: Unavailable"
 msgstr "Опис: није доступан"
 
@@ -112,8 +112,7 @@ msgid "Background Opacity:"
 msgstr "Прозирност позадине:"
 
 #: src/ng_config.c:186
-#, fuzzy
-msgid "%1.0f %"
+msgid "%1.0f \\%"
 msgstr "%1.0f \\%"
 
 #: src/ng_config.c:194
@@ -144,163 +143,163 @@ msgstr "Лева ивица"
 msgid "Right Edge"
 msgstr "Десна ивица"
 
-#: src/ng_config.c:230 src/ng_config.c:249
+#: src/ng_config.c:231 src/ng_config.c:250
 msgid "Zoom"
 msgstr "Увећање"
 
-#: src/ng_config.c:231
+#: src/ng_config.c:232
 msgid "Factor:"
 msgstr "Множилац:"
 
-#: src/ng_config.c:237
+#: src/ng_config.c:238
 msgid "Range:"
 msgstr "Опсег:"
 
-#: src/ng_config.c:243
+#: src/ng_config.c:244
 msgid "Duration:"
 msgstr "Трајање:"
 
-#: src/ng_config.c:251 src/ng_config.c:279
+#: src/ng_config.c:253 src/ng_config.c:281
 msgid "Bar Items"
 msgstr "Ставке траке"
 
-#: src/ng_config.c:259 src/ng_config.c:540 src/ng_config_instances.c:104
+#: src/ng_config.c:261 src/ng_config.c:547 src/ng_config_instances.c:104
 msgid "Delete"
 msgstr "Обриши"
 
-#: src/ng_config.c:261 src/ng_config.c:542 src/ng_config_instances.c:106
+#: src/ng_config.c:263 src/ng_config.c:549 src/ng_config_instances.c:106
 msgid "Configure"
 msgstr "Подесите"
 
-#: src/ng_config.c:263
+#: src/ng_config.c:265
 msgid "Up"
 msgstr "Горе"
 
-#: src/ng_config.c:265
+#: src/ng_config.c:267
 msgid "Down"
 msgstr "Доле"
 
-#: src/ng_config.c:270 src/ng_config.c:538 src/ng_config_instances.c:102
+#: src/ng_config.c:272 src/ng_config.c:545 src/ng_config_instances.c:102
 msgid "Add"
 msgstr "Додај"
 
-#: src/ng_config.c:272
+#: src/ng_config.c:274
 msgid "Taskbar"
 msgstr "Трака задатака"
 
-#: src/ng_config.c:274
+#: src/ng_config.c:276
 msgid "Launcher"
 msgstr "Покретач"
 
-#: src/ng_config.c:276
+#: src/ng_config.c:278
 msgid "Gadcon"
 msgstr "Гадкон"
 
-#: src/ng_config.c:282 src/ng_config.c:301
+#: src/ng_config.c:284 src/ng_config.c:303
 msgid "Auto Hide"
 msgstr "Самостално скривање"
 
-#: src/ng_config.c:286
+#: src/ng_config.c:288
 msgid "None"
 msgstr "Ништа"
 
-#: src/ng_config.c:289
+#: src/ng_config.c:291
 msgid "Autohide"
 msgstr "Самоскривање"
 
-#: src/ng_config.c:292
+#: src/ng_config.c:294
 msgid "Hide when Window overlaps"
 msgstr "Сакриј када се прозори преклапајау"
 
-#: src/ng_config.c:295
+#: src/ng_config.c:297
 msgid "Hide on Fullscreen"
 msgstr "Сакриј при приказу преко целог екрана"
 
-#: src/ng_config.c:299
+#: src/ng_config.c:301
 msgid "Show Bar when Urgent"
 msgstr "Приказуј траку при хитности"
 
-#: src/ng_config.c:307
+#: src/ng_config.c:309
 msgid "Stacking"
 msgstr "Гомилање"
 
-#: src/ng_config.c:309
+#: src/ng_config.c:311
 msgid "Above All"
 msgstr "Изнад свега"
 
-#: src/ng_config.c:311
+#: src/ng_config.c:313
 msgid "Below Fullscreen"
 msgstr "Испод приказа целог екрана"
 
-#: src/ng_config.c:315 src/ng_config.c:322
+#: src/ng_config.c:317 src/ng_config.c:324
 msgid "Other"
 msgstr "Друго"
 
-#: src/ng_config.c:316
+#: src/ng_config.c:318
 msgid "Ecomorph Features"
 msgstr "Особине Екоморфа"
 
-#: src/ng_config.c:318
+#: src/ng_config.c:320
 msgid "Show Icon Label"
 msgstr "Прикажи натпис иконе"
 
-#: src/ng_config.c:530
+#: src/ng_config.c:537
 msgid "Launcher Settings"
 msgstr "Поставке покретача"
 
-#: src/ng_config.c:550
+#: src/ng_config.c:557
 msgid "Taskbar Settings"
 msgstr "Поставке траке алата"
 
-#: src/ng_config.c:552
+#: src/ng_config.c:559
 msgid "Don't Show Dialogs"
 msgstr "Не приказуј прозоре поставки"
 
-#: src/ng_config.c:555
+#: src/ng_config.c:562
 msgid "Advanced Window Menu"
 msgstr "Напредни изборник прозора"
 
-#: src/ng_config.c:558
+#: src/ng_config.c:565
 msgid "Only Show Current Desk"
 msgstr "Прикажи само тренутну површ"
 
-#: src/ng_config.c:561
+#: src/ng_config.c:568
 msgid "Group Applications by Window Class"
 msgstr "Удружуј програме по разреду прозора"
 
-#: src/ng_config.c:564
+#: src/ng_config.c:571
 msgid "Append new Applications on the right Side"
 msgstr "Додај нове програме у продужетку на десној страни"
 
-#: src/ng_config.c:570
+#: src/ng_config.c:577
 msgid "Iconified Applications"
 msgstr "Умањени програми"
 
-#: src/ng_config.c:572
+#: src/ng_config.c:579
 msgid "Not Shown"
 msgstr "Није приказано"
 
-#: src/ng_config.c:574
+#: src/ng_config.c:581
 msgid "Show"
 msgstr "Прикажи"
 
-#: src/ng_config.c:576
+#: src/ng_config.c:583
 msgid "Only Iconified"
 msgstr "Само умањене"
 
-#: src/ng_config.c:645 src/ng_config.c:685
+#: src/ng_config.c:652 src/ng_config.c:692
 msgid "Engage Bar Configuration"
 msgstr "Поставке траке Енгеџа"
 
-#: src/ng_config.c:784
+#: src/ng_config.c:797
 msgid "Create new source"
 msgstr "Направи нови избор"
 
-#: src/ng_config.c:785
+#: src/ng_config.c:798
 msgid "Enter a name for this new Application Launcher:"
 msgstr "Унесите назив за овај нови покретач програма"
 
-#: src/ng_config.c:794
+#: src/ng_config.c:807
 #, c-format
 msgid ""
 "You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
@@ -309,7 +308,7 @@ msgstr ""
 "Захтевали сте брисање „%s“<br><br>Да ли сте сигурни да желите обрисати овај "
 "извор?"
 
-#: src/ng_config.c:798
+#: src/ng_config.c:811
 msgid "Are you sure you want to delete this source?"
 msgstr "Да ли сте сигурни да желите обрисати овај извор?"
 
