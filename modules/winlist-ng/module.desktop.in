@@ -10,4 +10,5 @@ Comment[gl]=<hilight>Módulo para alternar as xanelas</hilight><br>Configúreo d
 Comment[it]=Modulo commutazione finestre<br>Per configurarlo: Pannello di configurazione → Estensioni → Winlist NG
 Comment[fr]=Module de commutation Winlist.<br>Configuration : Panneau de contrôle → Extensions → Winlist NG
 Comment[pt]=<hilight>Módulo para alternar as janelas</hilight><br>Configure-o via: <br> Painel de configuração > Extensões > Winlist NG
+Comment[sk]=<hilight>Modul prepínania okien</hilight><br>Nastavenie cez: <br> Panel nastavení > Rozšírenia > Winlist NG
 X-Enlightenment-ModuleType=core

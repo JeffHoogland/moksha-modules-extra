@@ -1,0 +1,91 @@
+# Russian translation of Winlist-NG module.
+# This file is put in the public domain.
+# Štefan Uram <thewaiter@bodhilinux.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: winlist-ng\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-12-12 21:06+0100\n"
+"PO-Revision-Date: 2023-07-25 21:00+0300\n"
+"Last-Translator: Štefan Uram <thewaiter@bodhilinux.com>\n"
+"Language-Team: Slovak\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: src/e_mod_main.c:176
+msgid "Winlist NG"
+msgstr "Winlist NG"
+
+#: src/e_mod_main.c:213
+msgid "Winlist NG Module"
+msgstr "Modul Winlist NG"
+
+#: src/e_mod_main.c:214
+msgid "a replacement for the standard winlist"
+msgstr "Náhrada štandardného zoznamu okien"
+
+#: src/e_mod_keybindings.c:4
+msgid "NG Winlist"
+msgstr "NG Winlist"
+
+#: src/e_mod_keybindings.c:5
+msgid "Switch To Next Window"
+msgstr "Prepnúť na ďalšie okno"
+
+#: src/e_mod_keybindings.c:6
+msgid "Switch To Previous Window"
+msgstr "Prepnúť na predchádzajúce okno"
+
+#: src/e_mod_keybindings.c:7
+msgid "Show Windows From All Desks"
+msgstr "Zobraziť okná zo všetkých plôch"
+
+#: src/e_mod_keybindings.c:8
+msgid "Show Windows From Other Zones"
+msgstr "Zobraziť okná zo všetkých zón"
+
+#: src/ng_config.c:47
+msgid "Winlist NG Configuration"
+msgstr "Konfigurácia Winlist NG"
+
+#: src/ng_config.c:105
+msgid "Fade Animation"
+msgstr "Efekt stmievania"
+
+#: src/ng_config.c:116
+msgid "Size"
+msgstr "Veľkosť"
+
+#: src/ng_config.c:117
+msgid "Icon Size:"
+msgstr "Veľkosť ikony:"
+
+#: src/ng_config.c:119
+#, c-format
+msgid "%1.0f px"
+msgstr "%1.0f px"
+
+#: src/ng_config.c:124
+msgid "Zooming"
+msgstr "Priblíženie"
+
+#: src/ng_config.c:125
+msgid "Zoomfactor:"
+msgstr "Hodnota priblíženia:"
+
+#: src/ng_config.c:127 src/ng_config.c:132
+#, c-format
+msgid "%0.1f"
+msgstr "%0.1f"
+
+#: src/ng_config.c:130
+msgid "Zoom Range:"
+msgstr "Rozsah priblíženia:"
+
+#: src/ng_winlist.c:727
+msgid "No name!"
+msgstr "Bez mena!"
