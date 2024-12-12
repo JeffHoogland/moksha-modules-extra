@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: winlist-ng VERSION\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-12-22 06:23+0800\n"
+"POT-Creation-Date: 2024-12-12 21:06+0100\n"
 "PO-Revision-Date: 2012-12-22 06:24+0800\n"
 "Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -16,14 +16,78 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_main.c:179
+#: src/e_mod_main.c:176
 msgid "Winlist NG"
 msgstr "Winlist NG"
 
-#: ../src/e_mod_main.c:216
+#: src/e_mod_main.c:213
 msgid "Winlist NG Module"
 msgstr "Winlist NG 模块"
 
-#: ../src/e_mod_main.c:217
+#: src/e_mod_main.c:214
 msgid "a replacement for the standard winlist"
 msgstr "一个标准窗口列表的替代品"
+
+#: src/e_mod_keybindings.c:4
+#, fuzzy
+msgid "NG Winlist"
+msgstr "Winlist NG"
+
+#: src/e_mod_keybindings.c:5
+msgid "Switch To Next Window"
+msgstr ""
+
+#: src/e_mod_keybindings.c:6
+msgid "Switch To Previous Window"
+msgstr ""
+
+#: src/e_mod_keybindings.c:7
+msgid "Show Windows From All Desks"
+msgstr ""
+
+#: src/e_mod_keybindings.c:8
+msgid "Show Windows From Other Zones"
+msgstr ""
+
+#: src/ng_config.c:47
+#, fuzzy
+msgid "Winlist NG Configuration"
+msgstr "Winlist NG 模块"
+
+#: src/ng_config.c:105
+msgid "Fade Animation"
+msgstr ""
+
+#: src/ng_config.c:116
+msgid "Size"
+msgstr ""
+
+#: src/ng_config.c:117
+msgid "Icon Size:"
+msgstr ""
+
+#: src/ng_config.c:119
+#, c-format
+msgid "%1.0f px"
+msgstr ""
+
+#: src/ng_config.c:124
+msgid "Zooming"
+msgstr ""
+
+#: src/ng_config.c:125
+msgid "Zoomfactor:"
+msgstr ""
+
+#: src/ng_config.c:127 src/ng_config.c:132
+#, c-format
+msgid "%0.1f"
+msgstr ""
+
+#: src/ng_config.c:130
+msgid "Zoom Range:"
+msgstr ""
+
+#: src/ng_winlist.c:727
+msgid "No name!"
+msgstr ""

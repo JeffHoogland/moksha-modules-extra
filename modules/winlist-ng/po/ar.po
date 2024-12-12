@@ -6,17 +6,29 @@ msgid ""
 msgstr ""
 "Project-Id-Version: winlist-ng module\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2011-01-06 23:35+0100\n"
+"POT-Creation-Date: 2024-12-12 21:06+0100\n"
 "PO-Revision-Date: 2012-01-24 20:44+0300\n"
 "Last-Translator: سمير حسين <almusalimalmusalimah@gmail.com>\n"
 "Language-Team: Arabic <almusalimalmusalimah@gmail.com>\n"
-"Language: de\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Arabic\n"
 "X-Poedit-Country: SAUDI ARABIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
+
+#: src/e_mod_main.c:176
+msgid "Winlist NG"
+msgstr "Winlist NG"
+
+#: src/e_mod_main.c:213
+msgid "Winlist NG Module"
+msgstr "وحدة Winlist NG"
+
+#: src/e_mod_main.c:214
+msgid "a replacement for the standard winlist"
+msgstr "بديل لِـ winlist القياسية"
 
 #: src/e_mod_keybindings.c:4
 msgid "NG Winlist"
@@ -37,18 +49,6 @@ msgstr "اعرض النوافذ من كل اﻷسطح"
 #: src/e_mod_keybindings.c:8
 msgid "Show Windows From Other Zones"
 msgstr "اعرض النوافذ من مناطق أخرى"
-
-#: src/e_mod_main.c:179
-msgid "Winlist NG"
-msgstr "Winlist NG"
-
-#: src/e_mod_main.c:216
-msgid "Winlist NG Module"
-msgstr "وحدة Winlist NG"
-
-#: src/e_mod_main.c:217
-msgid "a replacement for the standard winlist"
-msgstr "بديل لِـ winlist القياسية"
 
 #: src/ng_config.c:47
 msgid "Winlist NG Configuration"
@@ -79,8 +79,7 @@ msgstr "تقريب"
 msgid "Zoomfactor:"
 msgstr "عامل التقريب:"
 
-#: src/ng_config.c:127
-#: src/ng_config.c:132
+#: src/ng_config.c:127 src/ng_config.c:132
 #, c-format
 msgid "%0.1f"
 msgstr "%0.1f"
@@ -89,7 +88,6 @@ msgstr "%0.1f"
 msgid "Zoom Range:"
 msgstr "مدى التقريب:"
 
-#: src/ng_winlist.c:730
+#: src/ng_winlist.c:727
 msgid "No name!"
 msgstr "بلا اسم!"
-

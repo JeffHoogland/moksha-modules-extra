@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: winlist-ng\n"
-"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2023-07-25 21:30+0300\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-12-12 21:06+0100\n"
 "PO-Revision-Date: 2023-07-25 21:30+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -14,6 +14,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:176
+msgid "Winlist NG"
+msgstr "Winlist NG"
+
+#: src/e_mod_main.c:213
+msgid "Winlist NG Module"
+msgstr "Модуль Winlist NG"
+
+#: src/e_mod_main.c:214
+msgid "a replacement for the standard winlist"
+msgstr "замена да стандартнага спіска вокнаў"
 
 #: src/e_mod_keybindings.c:4
 msgid "NG Winlist"
@@ -34,18 +46,6 @@ msgstr "Паказаць вокны са ўсіх сталоў"
 #: src/e_mod_keybindings.c:8
 msgid "Show Windows From Other Zones"
 msgstr "Паказаць вокны з іншых зон"
-
-#: src/e_mod_main.c:179
-msgid "Winlist NG"
-msgstr "Winlist NG"
-
-#: src/e_mod_main.c:216
-msgid "Winlist NG Module"
-msgstr "Модуль Winlist NG"
-
-#: src/e_mod_main.c:217
-msgid "a replacement for the standard winlist"
-msgstr "замена да стандартнага спіска вокнаў"
 
 #: src/ng_config.c:47
 msgid "Winlist NG Configuration"
@@ -85,6 +85,6 @@ msgstr "%0.1f"
 msgid "Zoom Range:"
 msgstr "Дыяпазон:"
 
-#: src/ng_winlist.c:730
+#: src/ng_winlist.c:727
 msgid "No name!"
 msgstr "Няма назвы!"

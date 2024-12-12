@@ -1,90 +1,92 @@
-# Galician translation of winlist-ng
-# This file is put in the public domain.
-# Aníbal Garrido <khany@member.trisquel.info>, 2012.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Enlightenment development team
+# This file is distributed under the same license as the winlist-ng package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: winlist-ng\n"
+"Project-Id-Version: winlist-ng 0.1.0\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-12-12 21:06+0100\n"
-"PO-Revision-Date: 2012-09-17 12:30+0200\n"
-"Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
-"Language-Team: http://trasno.net/ <proxecto@trasno.net>\n"
-"Language: gl\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_main.c:176
 msgid "Winlist NG"
-msgstr "Winlist NG"
+msgstr ""
 
 #: src/e_mod_main.c:213
 msgid "Winlist NG Module"
-msgstr "Módulo Winlist NG"
+msgstr ""
 
 #: src/e_mod_main.c:214
 msgid "a replacement for the standard winlist"
-msgstr "un substituto para o winlist estándar"
+msgstr ""
 
 #: src/e_mod_keybindings.c:4
 msgid "NG Winlist"
-msgstr "NG Winlist"
+msgstr ""
 
 #: src/e_mod_keybindings.c:5
 msgid "Switch To Next Window"
-msgstr "Cambiar á seguinte xanela"
+msgstr ""
 
 #: src/e_mod_keybindings.c:6
 msgid "Switch To Previous Window"
-msgstr "Cambiar á xanela anterior"
+msgstr ""
 
 #: src/e_mod_keybindings.c:7
 msgid "Show Windows From All Desks"
-msgstr "Amosar xanelas de tódolos escritorios"
+msgstr ""
 
 #: src/e_mod_keybindings.c:8
 msgid "Show Windows From Other Zones"
-msgstr "Amosa-las xanelas de outras zonas"
+msgstr ""
 
 #: src/ng_config.c:47
 msgid "Winlist NG Configuration"
-msgstr "Configuración de Winlist NG"
+msgstr ""
 
 #: src/ng_config.c:105
 msgid "Fade Animation"
-msgstr "Animación de esvaecer"
+msgstr ""
 
 #: src/ng_config.c:116
 msgid "Size"
-msgstr "Tamaño:"
+msgstr ""
 
 #: src/ng_config.c:117
 msgid "Icon Size:"
-msgstr "Tamaño da icona:"
+msgstr ""
 
 #: src/ng_config.c:119
 #, c-format
 msgid "%1.0f px"
-msgstr "%1.0f px"
+msgstr ""
 
 #: src/ng_config.c:124
 msgid "Zooming"
-msgstr "Ampliación"
+msgstr ""
 
 #: src/ng_config.c:125
 msgid "Zoomfactor:"
-msgstr "Factor do zoom:"
+msgstr ""
 
 #: src/ng_config.c:127 src/ng_config.c:132
 #, c-format
 msgid "%0.1f"
-msgstr "%0.1f"
+msgstr ""
 
 #: src/ng_config.c:130
 msgid "Zoom Range:"
-msgstr "Rango do zoom:"
+msgstr ""
 
 #: src/ng_winlist.c:727
 msgid "No name!"
-msgstr "Sen nome!"
+msgstr ""

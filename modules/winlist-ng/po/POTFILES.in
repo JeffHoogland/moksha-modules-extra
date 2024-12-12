@@ -1,2 +1,5 @@
 src/e_mod_main.c
 src/e_mod_main.h
+src/e_mod_keybindings.c
+src/ng_config.c
+src/ng_winlist.c
