@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the enlightenment package.
 # Adaptado ao acordo ortográfico de 1990
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: photo\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-09-02 18:13+0200\n"
-"PO-Revision-Date: 2021-05-19 18:34+0100\n"
+"PO-Revision-Date: 2024-12-09 23:11+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2012-12-07 16:20+0000\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_main.c:56 src/e_mod_main.c:63 src/e_mod_main.c:70
 #: src/e_mod_main.c:77 src/e_mod_main.c:84 src/e_mod_main.c:91
@@ -61,7 +61,7 @@ msgid ""
 msgstr ""
 "<hilight>Módulo de fotos: configuração atualizada</hilight><br><br>A "
 "configuração do módulo de fotos<br>foi atualizada.<br>As suas definições "
-"foram removidas.<br>Desculpe o incómodo.<br><br>(%d -> %d)"
+"foram removidas.<br>Lamentamos o incómodo.<br><br>(%d -> %d)"
 
 #: src/photo_config.c:78 src/photo_config.c:92
 msgid "Photo Module version "
@@ -76,7 +76,7 @@ msgid ""
 msgstr ""
 "<hilight>Módulo de fotos: configuração revertida</hilight><br><br>A "
 "configuração do módulo foi revertida.<br>As suas definições foram removidas."
-"<br>Desculpe qualquer inconveniente.<br><br>(%d -> %d)"
+"<br>Lamentamos o incómodo.<br><br>(%d -> %d)"
 
 #: src/photo_config_dialog.c:63
 msgid "Photo Configuration"
@@ -133,7 +133,7 @@ msgstr "Esquerda"
 #: src/photo_config_dialog.c:267 src/photo_config_dialog.c:273
 #: src/photo_config_dialog_item.c:196 src/photo_config_dialog_item.c:202
 msgid "click"
-msgstr "(clique)"
+msgstr "clique"
 
 #: src/photo_config_dialog.c:271 src/photo_config_dialog_item.c:200
 msgid "Middle"
@@ -302,13 +302,13 @@ msgid "Photo Module Error"
 msgstr "Erro no módulo de fotos"
 
 #: src/photo_item.c:1037
-#, fuzzy
 msgid "Picture Import Error"
-msgstr "Diretórios de imagens"
+msgstr "Erro ao importar imagem"
 
 #: src/photo_item.c:1038
 msgid "Moksha was unable to import the picture<br>due to conversion errors."
 msgstr ""
+"O Moksha não conseguiu importar a imagem<br>devido a erros de conversão."
 
 #: src/photo_menu.c:34
 msgid "Module Settings"
@@ -320,7 +320,7 @@ msgstr "Definições"
 
 #: src/photo_menu.c:49
 msgid "Pause slideshow"
-msgstr "Parar apresentação"
+msgstr "Interromper apresentação"
 
 #: src/photo_menu.c:54
 msgid "Resume slideshow"
@@ -372,4 +372,3 @@ msgstr ""
 "rápido :)<br><br>Cada vez que carregar imagens que não tenham sido abertas "
 "no módulo, será criada uma miniatura.<br>Durante a criação, não será capaz "
 "de ver as fotos.<br>Espero conseguir alterar isto :)"
-

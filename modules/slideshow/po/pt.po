@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the enlightenment package.
 # Adaptado ao acordo ortográfico de 1990
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-03-06 18:18+0100\n"
-"PO-Revision-Date: 2021-05-19 19:55+0100\n"
+"PO-Revision-Date: 2024-12-09 23:03+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <>\n"
 "Language: pt\n"
@@ -17,20 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_config.c:40
 msgid "Slideshow Settings"
 msgstr "Definições do módulo"
 
 #: src/e_mod_config.c:111
-#, fuzzy
 msgid "Cycles Time"
-msgstr "Duração do ciclo"
+msgstr "Duração dos ciclos"
 
 #: src/e_mod_config.c:113
 msgid "Disable Timer"
-msgstr "Desativar temporizador"
+msgstr "Desativar o temporizador"
 
 #: src/e_mod_config.c:116
 #, c-format
@@ -39,30 +38,29 @@ msgstr "%3.0f segundos"
 
 #: src/e_mod_config.c:121
 msgid "Day/Night backgrounds"
-msgstr ""
+msgstr "Imagens de fundo diurnas/noturnas"
 
 #: src/e_mod_config.c:123
-#, fuzzy
 msgid "Disable Scheduler"
-msgstr "Desativar temporizador"
+msgstr "Desativar o programador"
 
 #: src/e_mod_config.c:125
 #, c-format
 msgid "%1.0f hr"
-msgstr ""
+msgstr "%1.0f hr."
 
 #: src/e_mod_config.c:128
 #, c-format
 msgid "%1.0f min"
-msgstr ""
+msgstr "%1.0f min."
 
 #: src/e_mod_config.c:131
 msgid "Day bg file: (Start at slider time e.g. 6:00 am)"
-msgstr ""
+msgstr "Ficheiro diurno: (Iniciar à hora definida, por exemplo, 6:00)"
 
 #: src/e_mod_config.c:135
 msgid "Night bg file: (12 hours later at 6:00 pm)"
-msgstr ""
+msgstr "Ficheiro noturno: (12 horas mais tarde, às 18:00)"
 
 #: src/e_mod_config.c:141
 msgid "Directory"
@@ -94,15 +92,15 @@ msgstr "Definir papel de parede do ecrã atual"
 
 #: src/e_mod_config.c:162
 msgid "Set wallpaper on current monitor (Xinerama support)"
-msgstr "Definir papel de parede no monitor atual (xinerama)"
+msgstr "Definir papel de parede no monitor atual (Suporte a Xinerama)"
 
 #: src/e_mod_config.c:210 src/e_mod_main.c:267 src/e_mod_main.c:492
 msgid "Warning"
-msgstr ""
+msgstr "Aviso"
 
 #: src/e_mod_config.c:210 src/e_mod_main.c:493
 msgid "Day/Night file names are not defined!"
-msgstr ""
+msgstr "Os nomes dos ficheiros Diurnos/Noturnos não estão definidos!"
 
 #: src/e_mod_main.c:155
 msgid "Slideshow"
@@ -114,12 +112,12 @@ msgstr "Definições"
 
 #: src/e_mod_main.c:267
 msgid "Check Day/Night bg file names. They do not match!"
-msgstr ""
+msgstr "Verificar os nomes dos ficheiros Diurnos/Noturnos. Não coincidem!"
 
 #: src/e_mod_main.c:712
 msgid "Picture Import Error"
-msgstr ""
+msgstr "Erro ao importar imagem"
 
 #: src/e_mod_main.c:713
 msgid "Moksha was unable to import the picture<br>due to conversion errors."
-msgstr ""
+msgstr "O Moksha não conseguiu importar a imagem<br>devido a erros de conversão."
