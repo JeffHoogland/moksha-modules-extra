@@ -45,7 +45,10 @@ i18n.merge_file(
 )
 
 #### Edje cc ####
+edje_cc = get_option('edje-cc')
+if edje_cc == ''
 edje_cc = find_program('edje_cc')
+endif
 
 #### module sources ####
 subdir('src')
