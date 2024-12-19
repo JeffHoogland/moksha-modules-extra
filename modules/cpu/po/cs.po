@@ -23,23 +23,23 @@ msgstr "Procesor"
 
 #: src/e_mod_main.c:379
 msgid "Fast (0.5 sec)"
-msgstr "Rychlý (0.5 sec)"
+msgstr "Rychlý (0.5 sek)"
 
 #: src/e_mod_main.c:386
 msgid "Medium (1 sec)"
-msgstr "Střední (1 sec)"
+msgstr "Střední (1 sek)"
 
 #: src/e_mod_main.c:393
 msgid "Normal (2 sec)"
-msgstr "Normální (2 sec)"
+msgstr "Normální (2 sek)"
 
 #: src/e_mod_main.c:400
 msgid "Slow (5 sec)"
-msgstr "Pomalý (5 sec)"
+msgstr "Pomalý (5 sek)"
 
 #: src/e_mod_main.c:407
 msgid "Very Slow (30 sec)"
-msgstr "Velmi pomalý (30 sec)"
+msgstr "Velmi pomalý (30 sek)"
 
 #: src/e_mod_main.c:414
 msgid "Time Between Updates"
