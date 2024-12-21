@@ -397,7 +397,7 @@ e_modapi_shutdown(__UNUSED__ E_Module *m)
 
    if (slide_config->config_dialog)
      e_object_del(E_OBJECT(slide_config->config_dialog));
- 
+
    _slide_conf_free();
    
    E_CONFIG_DD_FREE(conf_item_edd);
@@ -452,7 +452,7 @@ _slide_conf_new(char *dir)
    slide_config = E_NEW(Config, 1);
    /* update the version */
    slide_config->version = MOD_CONFIG_FILE_VERSION;
-   
+
    ci = E_NEW(Config_Item, 1);
 
    ci->id = eina_stringshare_add("0");
@@ -467,7 +467,7 @@ _slide_conf_new(char *dir)
    ci->random_order = 0;
    ci->all_desks = 0;
    slide_config->items = eina_list_append(slide_config->items, ci);
-   
+
    /* save the config to disk */
    e_config_save_queue();
 }
@@ -512,7 +512,7 @@ _slide_cb_check_time(void *data)
 
    set_time = inst->ci->hours * 3600 + inst->ci->minutes * 60;
    now = timeinfo->tm_hour * 3600 + timeinfo->tm_min * 60;
-   
+
    if (now >= set_time && now < set_time + 12 * 3600)
       _slide_set_bg(inst, inst->ci->file_day);
    else 
