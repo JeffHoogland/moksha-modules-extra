@@ -235,7 +235,7 @@ _mail_pop_server_data (void *data __UNUSED__, int type __UNUSED__, void *event)
               len = snprintf (out, sizeof (out), "TOP %d 0 \r\n", pc->config->iterator);
               ecore_con_server_send (ev->server, out, len);
               pc->config->iterator++;
-              pc->state=4;
+              pc->state = 4;
               pc->config->parse = 1;
             }
           else
@@ -255,7 +255,7 @@ _mail_pop_server_data (void *data __UNUSED__, int type __UNUSED__, void *event)
             tmp = heystack;
             counts = 0;
 
-            //Decoding text:  base64 from coreutils package needs, or qprint for QP //
+            // Decoding text: base64 from coreutils package needs, or qprint for QP //
             if ((!strncmp(heystack, "=?utf-8?", 8)) || (!strncmp(heystack, "=?UTF-8?", 8)))
               {
                 counts = 1;                                     // =?UTF-8 occurence found  
