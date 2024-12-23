@@ -233,34 +233,33 @@ _mail_cb_mouse_down (void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED
       m = e_gadcon_client_util_menu_items_append (inst->gcc, m, 0);
 
       if ((inst->ci->boxes) && (eina_list_count (inst->ci->boxes) > 0))
-      {
-       mi = NULL;
-       snprintf (buf, sizeof (buf), "%s/module.edj",
-       e_module_dir_get (mail_config->module));
+        {
+          mi = NULL;
+          snprintf (buf, sizeof (buf), "%s/module.edj",
+          e_module_dir_get (mail_config->module));
 
-       for (l = inst->ci->boxes; l; l = l->next)
-       {
-        Config_Box *cb;
+          for (l = inst->ci->boxes; l; l = l->next)
+            {
+              Config_Box *cb;
 
-        cb = l->data;
-        if (!cb)
-        continue;
-        
-            mi = e_menu_item_new_relative (m, mi);
-            snprintf (buf, sizeof (buf), "%s: %d/%d", cb->name, cb->num_new,
-                      cb->num_total);
-            e_menu_item_label_set (mi, buf);
+              cb = l->data;
+              if (!cb)
+                continue;
 
-            if ((cb->exec) && (cb->use_exec))
-            e_menu_item_callback_set (mi, _mail_menu_cb_exec, cb);
+              mi = e_menu_item_new_relative (m, mi);
+              snprintf (buf, sizeof (buf), "%s: %d/%d", cb->name, cb->num_new,
+                        cb->num_total);
+              e_menu_item_label_set (mi, buf);
+              if ((cb->exec) && (cb->use_exec))
+                e_menu_item_callback_set (mi, _mail_menu_cb_exec, cb);
+            }
+
+          if (mi)
+            {
+              mi = e_menu_item_new_relative(m, mi);
+              e_menu_item_separator_set(mi, 1); 
+            }
        }
-
-       if (mi)
-       {
-         mi = e_menu_item_new_relative(m, mi);
-         e_menu_item_separator_set(mi, 1); 
-       }
-     }
 
       e_gadcon_canvas_zone_geometry_get (inst->gcc->gadcon, &x, &y, &w, &h);
       e_menu_activate_mouse (m,
@@ -286,7 +285,7 @@ _mail_cb_mouse_in (void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED__
   char         path[PATH_MAX];
   Config_Box  *cb;
   int          i = 0;
-  
+
   if (!inst)
     return;
   edje_object_signal_emit (inst->mail_obj, "label_active", "");
@@ -305,9 +304,9 @@ _mail_cb_mouse_in (void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED__
        if (!cb) continue;
        if ((!inst->ci->show_popup_empty) && (!cb->num_new)) continue;
        snprintf(buf, sizeof (buf), "<%s>", cb->name); 
-       
+
        e_ilist_append (list, NULL, NULL, buf, 1, NULL, NULL, NULL, NULL);
-       
+
        for (k = cb->senders; k; k = k->next)
          {
            snprintf(buf, sizeof (buf), "%d. %s", counter,  
@@ -317,7 +316,7 @@ _mail_cb_mouse_in (void *data, Evas * e __UNUSED__, Evas_Object * obj __UNUSED__
          }
        i++;
     }
-    
+
   if (e_ilist_count (list))
     {
        Evas_Coord mw, mh;
@@ -614,17 +613,17 @@ _mail_cb_check (void *data)
         continue;
       switch (cb->type)
         {
-        case MAIL_TYPE_MDIR:
+          case MAIL_TYPE_MDIR:
+            break;
+          case MAIL_TYPE_MBOX:
+            have_mbox = 1;
+            break;
+          case MAIL_TYPE_POP:
+            have_pop = 1;
+            break;
+          case MAIL_TYPE_IMAP:
+            have_imap = 1;
           break;
-        case MAIL_TYPE_MBOX:
-          have_mbox = 1;
-          break;
-        case MAIL_TYPE_POP:
-          have_pop = 1;
-          break;
-        case MAIL_TYPE_IMAP:
-          have_imap = 1;
-        break;
         }
     }
 
@@ -654,7 +653,7 @@ void
 _mail_set_text (void *data)
 {
   Instance *inst = data;
-  
+
   Eina_List *l;
   char buf[256], cmd[256];
   int total_mails = 0;
@@ -670,7 +669,7 @@ _mail_set_text (void *data)
          return;
          
       total_mails += cb->num_new;
-      
+
       if ((cb->num_new > cb->count_old) && (eina_list_count(cb->senders) > 0))
       { 
           snprintf(buf, sizeof (buf), "%s:\n%s",  cb->name, 
@@ -693,7 +692,7 @@ _mail_set_text (void *data)
         }
       cb->count_old = cb->num_new;
     } 
-    
+
    if (total_mails > 0)
      {
        snprintf (buf, sizeof (buf), "%d", total_mails);

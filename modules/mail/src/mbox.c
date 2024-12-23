@@ -6,7 +6,7 @@ static Eina_List *mboxes;
 
 static void _mail_mbox_check_mail_parser (Config_Box *cb);
 static void _mail_mbox_check_mail_monitor (void *data, Ecore_File_Monitor * monitor,
-					   Ecore_File_Event event, const char *path);
+                                           Ecore_File_Event event, const char *path);
 
 void
 _mail_mbox_add_mailbox (void *data, void *data2)
@@ -42,22 +42,22 @@ _mail_mbox_check_monitors ()
 
       mb = l->data;
       if (!mb)
-	continue;
+        continue;
 
       if (mb->config->monitor)
-	{      
-	  if (!mb->monitor)
-	    mb->monitor =
-	      ecore_file_monitor_add (mb->config->new_path, _mail_mbox_check_mail_monitor, mb);
-	}
+        {      
+          if (!mb->monitor)
+            mb->monitor =
+              ecore_file_monitor_add (mb->config->new_path, _mail_mbox_check_mail_monitor, mb);
+        }
       else
-	{
-	  if (mb->monitor)
-	    {
-	      ecore_file_monitor_del (mb->monitor);
-	    }
-	  mb->monitor = NULL;
-	}
+        {
+          if (mb->monitor)
+            {
+              ecore_file_monitor_del (mb->monitor);
+            }
+          mb->monitor = NULL;
+        }
       break;
     }
 }
@@ -77,11 +77,11 @@ _mail_mbox_del_mailbox (void *data)
 
       mb = l->data;
       if (!mb)
-	continue;
+        continue;
       if (mb->config != cb)
-	continue;
+        continue;
       if (mb->monitor)
-	ecore_file_monitor_del (mb->monitor);
+        ecore_file_monitor_del (mb->monitor);
       mboxes = eina_list_remove (mboxes, mb);
       free (mb);
       mb = NULL;
@@ -100,7 +100,7 @@ _mail_mbox_shutdown ()
 
       mb = mboxes->data;
       if (mb->monitor)
-	ecore_file_monitor_del (mb->monitor);
+        ecore_file_monitor_del (mb->monitor);
       mboxes = eina_list_remove_list (mboxes, mboxes);
       free (mb);
       mb = NULL;
@@ -124,31 +124,31 @@ void _mail_mbox_check_mail (void *data)
   
       mb = l->data;
       if (!mb)
-	continue;
+        continue;
       mb->data = inst;
 
       cb = mb->config;
       if (!cb)
-	continue;
+        continue;
 
       num_new_prev = cb->num_new;
       _mail_mbox_check_mail_parser(cb);
       
       /* Only launch the program if the number of new mails increased.
-	 This is hacky but better than launching it every time there's 
-	 unread/new mail imho */
+         This is hacky but better than launching it every time there's 
+         unread/new mail imho */
 
       _mail_set_text (mb->data);
       if ((mb->config->num_new > 0) && (mb->config->num_new > num_new_prev) 
-	  && (mb->config->use_exec) && (mb->config->exec))
-	_mail_start_exe (mb->config);
+          && (mb->config->use_exec) && (mb->config->exec))
+        _mail_start_exe (mb->config);
     }
 }
 
 /* PRIVATES */
 static void
 _mail_mbox_check_mail_monitor (void *data, Ecore_File_Monitor * monitor __UNUSED__,
-			       Ecore_File_Event event __UNUSED__, const char *path __UNUSED__)
+                               Ecore_File_Event event __UNUSED__, const char *path __UNUSED__)
 {
   MboxClient *mb;
   Config_Box *cb;
@@ -190,26 +190,26 @@ _mail_mbox_check_mail_parser (Config_Box *cb)
       if (buf[0] == '\n')
         header = 0;
       else if (!strncmp (buf, "From ", 5))
-	{
-	  header = 1;
-	  cb->num_total++;
-	  cb->num_new++;
-	}
+        {
+          header = 1;
+          cb->num_total++;
+          cb->num_new++;
+        }
       else if (header)
-	{
-	  if ((!strncmp (buf, "Status: ", 8)) && (strchr (buf, 'R')))
-	    cb->num_new--;
-	  /* Support for Mozilla/Thunderbird mbox format */
-	  else if (!strncmp (buf, "X-Mozilla-Status: ", 18))
-	    {
-	      if (!strstr (buf, "0000"))
-		{
-		  cb->num_new--;
-		  if (strstr (buf, "0009"))
-		    cb->num_total--;
-		}
-	    }
-	}
+        {
+          if ((!strncmp (buf, "Status: ", 8)) && (strchr (buf, 'R')))
+            cb->num_new--;
+          /* Support for Mozilla/Thunderbird mbox format */
+          else if (!strncmp (buf, "X-Mozilla-Status: ", 18))
+            {
+              if (!strstr (buf, "0000"))
+                {
+                  cb->num_new--;
+                  if (strstr (buf, "0009"))
+                    cb->num_total--;
+                }
+            }
+        }
     }
   fclose (f);
 }
