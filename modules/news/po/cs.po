@@ -2,15 +2,16 @@
 # This file is put in the public domain.
 # quaker66@gmail.com
 # Vít Pelčák <vit@pelcak.org>, 2011.
+# Štefan Uram <thewaiter@bodhilinux.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: News\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2016-02-07 19:00+0100\n"
 "PO-Revision-Date: 2011-10-16 11:34+0200\n"
-"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
+"Last-Translator: Štefan Uram <thewaiter@bodhilinux.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
-"Language: \n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -139,7 +140,7 @@ msgstr "Upozornění při varování / chybě"
 
 #: src/news_config_dialog.c:287
 msgid "Show on timeout ?"
-msgstr "Zobrazit při vypršení času ?"
+msgstr "Zobrazit při vypršení času?"
 
 #: src/news_config_dialog.c:309
 msgid "Unread feeds first"
@@ -251,7 +252,7 @@ msgstr "Serverové informace"
 
 #: src/news_config_dialog_feed.c:407
 msgid "Do allow the server to overwrite the informations you entered ?"
-msgstr "Povolit serveru přepsat zadané informace ?"
+msgstr "Povolit serveru přepsat zadané informace?"
 
 #: src/news_config_dialog_feeds.c:82
 msgid "News Feeds Configuration"
@@ -264,12 +265,12 @@ msgstr "Kategorie"
 #: src/news_config_dialog_feeds.c:301 src/news_config_dialog_feeds.c:375
 #: src/news_config_dialog_item_content.c:283
 msgid "Move Up"
-msgstr ""
+msgstr "Posun nahoru"
 
 #: src/news_config_dialog_feeds.c:304 src/news_config_dialog_feeds.c:378
 #: src/news_config_dialog_item_content.c:287
 msgid "Move Down"
-msgstr ""
+msgstr "Posun dolů"
 
 #: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
 msgid "Add"
@@ -313,7 +314,7 @@ msgstr ""
 
 #: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
 msgid "News Module - Are you sure ?"
-msgstr "Modul Novinky - Jste si jistí ?"
+msgstr "Modul Novinky - Jste si jistí?"
 
 #: src/news_config_dialog_item.c:40
 msgid "News Gadget Configuration"
@@ -349,11 +350,11 @@ msgstr "Otevřít čtečku v"
 
 #: src/news_config_dialog_item.c:123
 msgid "the feed viewer"
-msgstr "prohlížeči čteček"
+msgstr "Prohlížeči čteček"
 
 #: src/news_config_dialog_item.c:125
 msgid "my favorite browser"
-msgstr "mém oblíbeném prohlížeči"
+msgstr "Můj oblíbený prohlížeč"
 
 #: src/news_config_dialog_item.c:127
 msgid "Browser opens home url"
@@ -372,7 +373,6 @@ msgid "News Gadget Content Configuration"
 msgstr "Nastavení obsahu gadgetu"
 
 #: src/news_config_dialog_item_content.c:258
-#, fuzzy
 msgid "Available Feeds"
 msgstr "Dostupné čtečky"
 
@@ -480,34 +480,10 @@ msgid "Feeds in this gadget"
 msgstr "Čtečky v tomto gadgetu"
 
 #: src/news_viewer.c:388
-#, fuzzy
 msgid "Set as read"
-msgstr "Označit vše jako přečtené"
+msgstr "Označit jako přečtené"
 
 #: src/news_viewer.c:438
 msgid "Articles in selected feed"
 msgstr "Články ve vybrané čtečce"
 
-#~ msgid "Newsfeeds"
-#~ msgstr "Zdroje novinek"
-
-#~ msgid "Configure this feed"
-#~ msgstr "Konfigurovat čtečku"
-
-#~ msgid "Update all feeds"
-#~ msgstr "Aktualizovat všechny"
-
-#~ msgid "Configure gadget"
-#~ msgstr "Konfigurovat gadget"
-
-#~ msgid "Configure gadget content"
-#~ msgstr "Konfigurovat obsah gadgetu"
-
-#~ msgid "Main Configuration"
-#~ msgstr "Hlavní nastavení"
-
-#~ msgid "Feeds Configuration"
-#~ msgstr "Nastavení čteček"
-
-#~ msgid "Configuration"
-#~ msgstr "Nastavení"
