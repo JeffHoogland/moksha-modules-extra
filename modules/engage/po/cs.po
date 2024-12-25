@@ -27,7 +27,7 @@ msgstr "Beze jména!"
 
 #: ../src/ng_launcher.c:275
 msgid "Open folder with EFM"
-msgstr ""
+msgstr "Otevřít adresář ve file manažeru"
 
 #: ../src/ng_launcher.c:561
 msgid "Configure Bar"
@@ -116,7 +116,7 @@ msgstr "Zobrazit pozadí"
 
 #: ../src/ng_config.c:194
 msgid "Show Mouse-Over Animation"
-msgstr ""
+msgstr "Zobrazit animaci při nájezdu myší"
 
 #: ../src/ng_config.c:199
 msgid "Orientation"
@@ -306,30 +306,3 @@ msgstr ""
 #: ../src/ng_config_instances.c:275
 msgid "Are you sure you want to delete this Instance?"
 msgstr "Opravdu chcete smazat tuto Itask NG instanci?"
-
-#~ msgid "Reflection Opacity:"
-#~ msgstr "Neprůhlednost zrcadlení:"
-
-#~ msgid "%1.0f"
-#~ msgstr "%1.0f"
-
-#~ msgid "Itask-NG"
-#~ msgstr "Itask-NG"
-
-#~ msgid "Itask NG"
-#~ msgstr "Itask NG"
-
-#~ msgid "Zoom only one icon"
-#~ msgstr "Přiblížit pouze jednu ikonu"
-
-#~ msgid "Hide Timeout:"
-#~ msgstr "Časový limit skrytí:"
-
-#~ msgid "Lock Deskflip on Edge"
-#~ msgstr "Zamknout přepnutí plochy na okraji"
-
-#~ msgid "Are you sure you want to delete this Itask NG source?"
-#~ msgstr "Opravdu chcete smazat tento Itask NG zdroj?"
-
-#~ msgid "Itask NG - Instances"
-#~ msgstr "Itask NG - Instance"
