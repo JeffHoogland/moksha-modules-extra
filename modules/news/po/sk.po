@@ -1,14 +1,15 @@
 # Slovak translation for enlightenment
 # This file is distributed under the same license as the enlightenment package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
-#
+# Štefan Uram <thewaiter@bodhilinux.com>, 2024.
+
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2016-02-07 19:00+0100\n"
 "PO-Revision-Date: 2009-06-13 18:16+0000\n"
-"Last-Translator: milboy <Unknown>\n"
+"Last-Translator: Štefan Uram <thewaiter@bodhilinux.com>, 2024\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -120,7 +121,7 @@ msgstr "Nikdy"
 
 #: src/news_config_dialog.c:259
 msgid "Only on urgent feeds"
-msgstr "Iba pri  naliehavých čítačkách"
+msgstr "Iba pri naliehavých čítačkách"
 
 #: src/news_config_dialog.c:265
 msgid "On all feeds"
@@ -262,12 +263,12 @@ msgstr "Kategórie"
 #: src/news_config_dialog_feeds.c:301 src/news_config_dialog_feeds.c:375
 #: src/news_config_dialog_item_content.c:283
 msgid "Move Up"
-msgstr ""
+msgstr "Posun hore"
 
 #: src/news_config_dialog_feeds.c:304 src/news_config_dialog_feeds.c:378
 #: src/news_config_dialog_item_content.c:287
 msgid "Move Down"
-msgstr ""
+msgstr "Posun dole"
 
 #: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
 msgid "Add"
@@ -311,7 +312,7 @@ msgstr ""
 
 #: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
 msgid "News Module - Are you sure ?"
-msgstr "Nový modul - Ste si istý ?"
+msgstr "Nový modul - Ste si istý?"
 
 #: src/news_config_dialog_item.c:40
 msgid "News Gadget Configuration"
@@ -347,11 +348,11 @@ msgstr "Čítačka otvorená v"
 
 #: src/news_config_dialog_item.c:123
 msgid "the feed viewer"
-msgstr "prehliadač čítačiek"
+msgstr "Prehliadač čítačiek"
 
 #: src/news_config_dialog_item.c:125
 msgid "my favorite browser"
-msgstr "môj obľúbený prehliadač"
+msgstr "Môj obľúbený prehliadač"
 
 #: src/news_config_dialog_item.c:127
 msgid "Browser opens home url"
@@ -370,13 +371,12 @@ msgid "News Gadget Content Configuration"
 msgstr "Nastavenie obsahu nového gadgetu"
 
 #: src/news_config_dialog_item_content.c:258
-#, fuzzy
 msgid "Available Feeds"
 msgstr "Dostupné čítačky"
 
 #: src/news_config_dialog_item_content.c:267
 msgid "Add this Feed"
-msgstr "Pridať túto číatačku"
+msgstr "Pridať túto čítačku"
 
 #: src/news_config_dialog_item_content.c:274
 msgid "Selected Feeds"
@@ -392,7 +392,7 @@ msgstr "Nastavenie jazyka čítačky noviniek"
 
 #: src/news_config_dialog_langs.c:123
 msgid "Welcome to News Module !"
-msgstr "Vitajte v modeli novinky !"
+msgstr "Vitajte v modeli novinky!"
 
 #: src/news_config_dialog_langs.c:125
 msgid "Please select the languages that you are able to read"
@@ -427,7 +427,7 @@ msgstr "Zadaná <hilight>url</hilight> nie je správna"
 
 #: src/news_feed.c:880
 msgid "You need to enter a <hilight>name</hilight> !"
-msgstr "Je potrebné zadať <hilight>názov</hilight> !"
+msgstr "Je potrebné zadať <hilight>názov</hilight>!"
 
 #: src/news_feed.c:888
 msgid ""
@@ -438,28 +438,26 @@ msgstr ""
 "kategóriou"
 
 #: src/news_menu.c:131
-#, fuzzy
 msgid "Set all as read"
 msgstr "Označiť všetky čítačky ako prečítané"
 
 #: src/news_menu.c:137 src/news_viewer.c:380
 msgid "Update"
-msgstr ""
+msgstr "Aktualizovať"
 
 #: src/news_menu.c:148
 msgid "Gadget"
-msgstr ""
+msgstr "Gadget"
 
 #: src/news_menu.c:158
 msgid "Main"
-msgstr ""
+msgstr "Hlavný"
 
 #: src/news_menu.c:163
 msgid "Settings"
-msgstr ""
+msgstr "Nastavenie"
 
 #: src/news_menu.c:168
-#, fuzzy
 msgid "Gadget Contents"
 msgstr "Konfigurovať obsah gadgetu"
 
@@ -480,28 +478,10 @@ msgid "Feeds in this gadget"
 msgstr "Čítačky v tomto gadgete"
 
 #: src/news_viewer.c:388
-#, fuzzy
 msgid "Set as read"
-msgstr "Označiť všetky čítačky ako prečítané"
+msgstr "Označiť ako prečítané"
 
 #: src/news_viewer.c:438
 msgid "Articles in selected feed"
 msgstr "Články vo vybranej čítačke"
 
-#~ msgid "Configure this feed"
-#~ msgstr "KOnfigurovať čítačku"
-
-#~ msgid "Update all feeds"
-#~ msgstr "Aktualizovať všetky čítačky"
-
-#~ msgid "Configure gadget"
-#~ msgstr "Konfigurovať gadget"
-
-#~ msgid "Main Configuration"
-#~ msgstr "Hlavné nastavenie"
-
-#~ msgid "Feeds Configuration"
-#~ msgstr "Nastavenie čítačiek"
-
-#~ msgid "Configuration"
-#~ msgstr "Onfigurácia"
