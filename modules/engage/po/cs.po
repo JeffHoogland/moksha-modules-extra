@@ -305,4 +305,4 @@ msgstr ""
 
 #: ../src/ng_config_instances.c:275
 msgid "Are you sure you want to delete this Instance?"
-msgstr "Opravdu chcete smazat tuto Itask NG instanci?"
+msgstr "Opravdu chcete smazat tuto instanci?"
