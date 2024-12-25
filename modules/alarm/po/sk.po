@@ -69,7 +69,7 @@ msgstr "Automaticky odstrániť budíky"
 
 #: src/e_mod_config_alarm.c:68
 msgid "Alarm Configuration : Setup an alarm"
-msgstr "Konfigurácia Budíka"
+msgstr "Konfigurácia Budíka : Nastavenie budíka"
 
 #: src/e_mod_config_alarm.c:186
 msgid "Informations"
@@ -207,7 +207,7 @@ msgstr "Odstrániť budík"
 
 #: src/e_mod_config_alarm.c:384 src/e_mod_config_alarm.c:404
 msgid "No [default]"
-msgstr "No [predvolené]"
+msgstr "Nie [predvolené]"
 
 #: src/e_mod_config_alarm.c:386 src/e_mod_config_alarm.c:406
 msgid "Yes"
@@ -302,7 +302,7 @@ msgstr "Pridať budík"
 
 #: src/e_mod_main.c:828
 msgid "Settings"
-msgstr ""
+msgstr "Nastavenie"
 
 #: src/e_mod_main.c:854
 #, c-format
