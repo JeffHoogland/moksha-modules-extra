@@ -1,33 +1,34 @@
 # Slovak translation for enlightenment
 # This file is distributed under the same license as the enlightenment package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
-#
+# Štefan Uram <thewaiter@bodhilinux.com>, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"Project-Id-Version: Photo\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2009-11-05 16:07+0800\n"
-"PO-Revision-Date: 2009-08-05 11:11+0000\n"
-"Last-Translator: milboy <Unknown>\n"
+"PO-Revision-Date: 2024-12-26 08:18+0100\n"
+"Last-Translator: Štefan Uram <thewaiter@bodhilinux.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2009-11-12 04:51+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Generator: Poedit 2.3\n"
+"Language: sk\n"
 
 #: ../src/e_mod_main.c:53 ../src/e_mod_main.c:60 ../src/e_mod_main.c:67
 #: ../src/e_mod_main.c:74 ../src/e_mod_main.c:81 ../src/e_mod_main.c:88
 msgid "Photo Module"
-msgstr "Foto modul"
+msgstr "Foto rámik"
 
 #: ../src/e_mod_main.c:53
 msgid "E Canvas init failed !"
-msgstr "Načítanie E plátna zlyhalo !"
+msgstr "Načítanie E plátna zlyhalo!"
 
 #: ../src/e_mod_main.c:60
 msgid "Theme init failed !"
-msgstr "Načítanie témy zlyhalo !"
+msgstr "Načítanie témy zlyhalo!"
 
 #: ../src/e_mod_main.c:67
 msgid "Config init failed"
@@ -47,7 +48,7 @@ msgstr "Načítanie informačného podsystému zlyhalo"
 
 #: ../src/e_mod_main.c:181
 msgid "Photo"
-msgstr "Fotografie"
+msgstr "Fotografia"
 
 #: ../src/photo_config.c:65
 #, c-format
@@ -57,8 +58,8 @@ msgid ""
 "removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
 msgstr ""
 "<hilight>Foto modul : Konfigurácia aktualizovaná</hilight><br><br>Vaša "
-"konfigurácia modulu<br>bola aktualizovaná.<br>Vaše nastavenie bolo "
-"vymazané.<br>Ospravedlnujeme sa za vzniknuté problémy<br><br>(%d -> %d)"
+"konfigurácia modulu<br>bola aktualizovaná.<br>Vaše nastavenie bolo vymazané."
+"<br>Ospravedlňujeme sa za vzniknuté problémy<br><br>(%d -> %d)"
 
 #: ../src/photo_config.c:71 ../src/photo_config.c:85
 msgid "Photo Module version "
@@ -146,7 +147,7 @@ msgstr "Okná s upozornením"
 
 #: ../src/photo_config_dialog.c:320
 msgid "Picture loader popup"
-msgstr ""
+msgstr "Oznámenia počas nahrávania fotografií"
 
 #: ../src/photo_config_dialog.c:323
 msgid "Never"
@@ -302,13 +303,13 @@ msgstr "Chyba Photo modulu"
 #: ../src/photo_item.c:413
 #, c-format
 msgid ""
-"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file "
-"!<br>Photo module needs e17setroot util from e_utils package to set you're "
+"<hilight>e17setroot needed</hilight><br><br>%s is not an edje file !"
+"<br>Photo module needs e17setroot util from e_utils package to set you're "
 "picture as backgroundPlease install it and try again"
 msgstr ""
-"<hilight>potrebný e17setroot</hilight><br><br>%s nie je edje súbor "
-"!<br>Modul Photo potrebuje e17setroot utilitu z eutils balíčku k nastaveniu "
-"obrázku ako pozadia! Prosím nainštalujte ho a zkúste opäť."
+"<hilight>Potrebný e17setroot</hilight><br><br>%s nie je edje súbor !"
+"<br>Modul Photo potrebuje e17setroot utilitu z eutils balíčka k nastaveniu "
+"obrázku ako pozadia! Prosím nainštalujte ho a skúste opäť"
 
 #: ../src/photo_item.c:452
 #, c-format
@@ -327,15 +328,15 @@ msgid ""
 "for images in Photo module configuration panel (Advanced view)"
 msgstr ""
 "<hilight>Prohliadač %s nebol nájdený !</hilight><br><br>Môžete to zmeniť v "
-"nastavení modulu (Pokročilý pohľad)"
+"nastavení modulu (Pokročilý náhľad)"
 
 #: ../src/photo_menu.c:30
 msgid "Pause slideshow"
-msgstr "Pozastaviť slideshow"
+msgstr "Pozastaviť prezentáciu"
 
 #: ../src/photo_menu.c:35
 msgid "Resume slideshow"
-msgstr "Pokračovať v slideshow"
+msgstr "Pokračovať v prezentácii"
 
 #: ../src/photo_menu.c:54
 msgid "Picture informations"
@@ -372,7 +373,7 @@ msgid ""
 msgstr ""
 "<hilight>Adresár %s nenájdený.</hilight><br><br>Môžete zmeniť adresáre v "
 "konfiguračnom paneli.<br>Môžu byť jpeg alebo png.<br><br>Po importe môžete "
-"dalej prohliadať<br>súbory, ale nebude možné ich použiť ako pozadie.<br><br>"
+"dalej prehliadať<br>súbory, ale nebude možné ich použiť ako pozadie.<br><br>"
 
 #: ../src/photo_picture_local.c:593
 msgid "Photo Module Information"
@@ -388,8 +389,8 @@ msgid ""
 "picture in Photo.<br>I hope i'll be able to change that :)"
 msgstr ""
 "<hilight>Vytváram náhľady</hilight><br><br>Z niektorých obrázkov budú "
-"vytvorené náhľady v <hilight>úloha na pozadí</hilight>.<br>Môže to chvíľu "
-"trvať, ale potom bude nahrávánie rychlejšie a ľahšie :)<br><br>Vždy, keď "
-"nahráte nové obrázky,<br>budú vytvorené náhľady.<br><br>Pri vytváraní "
+"vytvorené náhľady <hilight>na pozadí</hilight>.<br>Môže to chvíľu trvať, ale "
+"potom bude nahrávánie rychlejšie a ľahšie :)<br><br>Vždy, keď nahráte nové "
+"obrázky,<br>budú vytvorené náhľady.<br><br>Počas vytvárania náhľadov "
 "nebudete môcť prehliadať žiadne obrázky v module.<br>Dúfam, že to bude možné "
-"zmeniť :)"
+"v budúcnosti zmeniť :)"
