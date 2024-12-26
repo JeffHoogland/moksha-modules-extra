@@ -71,31 +71,31 @@ msgstr "Subadresář pro použití jako pozadí"
 
 #: src/e_mod_config.c:152
 msgid "Fill and Stretch Options"
-msgstr ""
+msgstr "Možnosti roztažení a výplně"
 
 #: src/e_mod_config.c:154
 msgid "Stretch"
-msgstr ""
+msgstr "Roztáhnout"
 
 #: src/e_mod_config.c:158
 msgid "Center"
-msgstr ""
+msgstr "Na střed"
 
 #: src/e_mod_config.c:162
 msgid "Tile"
-msgstr ""
+msgstr "Dlaždice"
 
 #: src/e_mod_config.c:167
 msgid "Within"
-msgstr ""
+msgstr "Uvnitř"
 
 #: src/e_mod_config.c:171
 msgid "Fill"
-msgstr ""
+msgstr "Vyplnit"
 
 #: src/e_mod_config.c:175
 msgid "Pan"
-msgstr ""
+msgstr "Panorama"
 
 #: src/e_mod_config.c:181
 msgid "Extra"
