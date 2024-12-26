@@ -319,7 +319,7 @@ _slide_config_item_get(const char *id)
    ci->disable_timer = 0;
    ci->disable_sched = 1;
    ci->all_desks = 0;
-   ci->method = 0;
+   ci->method = 4;
    snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
    ci->dir = eina_stringshare_add(buf);
    ci->file_day = eina_stringshare_add("");
@@ -468,7 +468,7 @@ _slide_conf_new(char *dir)
    ci->disable_sched = 1;
    ci->random_order = 0;
    ci->all_desks = 0;
-   ci->method = 0;
+   ci->method = 4;
    slide_config->items = eina_list_append(slide_config->items, ci);
 
    /* save the config to disk */
