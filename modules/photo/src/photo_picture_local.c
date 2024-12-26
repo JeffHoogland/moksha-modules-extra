@@ -601,7 +601,7 @@ _thumb_generate_cb(void *data, Evas_Object *obj, void *event_info __UNUSED__)
                              D_("<hilight>Creating thumbs</hilight><br><br>"
                                "Some pictures are being thumbed in a <hilight>background task</hilight>.<br>"
                                "It can take a while, but after, loading will be faster and lighter :)<br><br>"
-                               "Each time wou will load pictures that haven't been loaded in Photo module before,<br>"
+                               "Each time you will load pictures that haven't been loaded in Photo module before,<br>"
                                "they will be thumbed.<br><br>"
                                "While creating popups, you will not be able to see any picture in Photo.<br>"
                                "I hope i'll be able to change that :)"));

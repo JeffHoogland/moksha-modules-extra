@@ -217,7 +217,7 @@ char *photo_picture_infos_get(Picture *p)
      }
    else
      {
-        snprintf(buf_ext, sizeof(buf_ext), "This file does not exist anymore on the disk !");
+        snprintf(buf_ext, sizeof(buf_ext), "This file does not exist anymore on the disk!");
      }
 
    snprintf(buf, sizeof(buf),

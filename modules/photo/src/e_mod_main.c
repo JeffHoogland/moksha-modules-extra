@@ -53,14 +53,14 @@ e_modapi_init(E_Module *m)
 
    if (!_e_canvas_init())
      {
-        e_module_dialog_show(m, D_("Photo Module"), D_("E Canvas init failed !"));
+        e_module_dialog_show(m, D_("Photo Module"), D_("E Canvas init failed!"));
         e_modapi_shutdown(m);
         return NULL;
      }
 
    if (!_theme_init())
      {
-        e_module_dialog_show(m, D_("Photo Module"), D_("Theme init failed !"));
+        e_module_dialog_show(m, D_("Photo Module"), D_("Theme init failed!"));
         e_modapi_shutdown(m);
         return NULL;
      }
