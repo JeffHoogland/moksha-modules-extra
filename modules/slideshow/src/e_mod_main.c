@@ -727,7 +727,7 @@ _edj_cc_exit(void *data, int type __UNUSED__, void *event)
      {
         e_util_dialog_show(D_("Picture Import Error"),
                            D_("Moksha was unable to import the picture<br>"
-                             "due to conversion errors."));
+                              "due to conversion errors."));
         r = 0;
      }
 
@@ -750,10 +750,10 @@ _import_edj_gen(Instance *inst)
    int cr, cg, cb, ca;
    FILE *f;
    size_t len, off;
-   
+
    Ecore_Evas *ee = ecore_evas_new(NULL, 0, 0, 800, 600, NULL);
    Evas *evas = ecore_evas_get(ee);
-   
+
    in_file = inst->in_file;
    file = ecore_file_file_get(in_file);
    fstrip = ecore_file_strip_ext(file);
@@ -772,7 +772,7 @@ _import_edj_gen(Instance *inst)
    for (num = 1; ecore_file_exists(buf) && num < 100; num++)
      snprintf(buf + off, sizeof(buf) - off, "-%d.edj", num);
    free(fstrip);
-   
+
    cr = 255;//color.r;
    cg = 255;//color.g;
    cb = 255;//color.b;
