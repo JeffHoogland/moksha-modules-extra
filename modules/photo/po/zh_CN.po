@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo module (e17)\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-02 18:13+0200\n"
+"POT-Creation-Date: 2024-12-26 08:26+0100\n"
 "PO-Revision-Date: 2012-12-22 06:13+0800\n"
 "Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -24,11 +24,13 @@ msgid "Photo Module"
 msgstr "Photo 模块"
 
 #: src/e_mod_main.c:56
-msgid "E Canvas init failed !"
+#, fuzzy
+msgid "E Canvas init failed!"
 msgstr "画布初始化失败！"
 
 #: src/e_mod_main.c:63
-msgid "Theme init failed !"
+#, fuzzy
+msgid "Theme init failed!"
 msgstr "主题初始化失败！"
 
 #: src/e_mod_main.c:70
@@ -352,10 +354,11 @@ msgid "Photo Module Information"
 msgstr "图像模块信息"
 
 #: src/photo_picture_local.c:601
+#, fuzzy
 msgid ""
 "<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
 "a <hilight>background task</hilight>.<br>It can take a while, but after, "
-"loading will be faster and lighter :)<br><br>Each time wou will load "
+"loading will be faster and lighter :)<br><br>Each time you will load "
 "pictures that haven't been loaded in Photo module before,<br>they will be "
 "thumbed.<br><br>While creating popups, you will not be able to see any "
 "picture in Photo.<br>I hope i'll be able to change that :)"
@@ -364,4 +367,3 @@ msgstr ""
 "运行</hilight>。<br>这可能需要一点时间，但是之后查看就会快很多 :)<br><br>每次"
 "你打开图片时，除非是查看原始文件，否则都会显示<br>缩略图。<br><br>在生成弹出"
 "消息时，不会显示任何图片。<br>我希望这一点能够有所改善 :)"
-

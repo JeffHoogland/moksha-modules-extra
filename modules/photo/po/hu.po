@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-02 18:13+0200\n"
+"POT-Creation-Date: 2024-12-26 08:26+0100\n"
 "PO-Revision-Date: 2008-02-02 23:21+0100\n"
 "Last-Translator: Lisovszki  <lisovszki@gmail.com>\n"
 "Language-Team: hungarian <hu@li.org>\n"
@@ -24,11 +24,13 @@ msgid "Photo Module"
 msgstr "Fénykép modul"
 
 #: src/e_mod_main.c:56
-msgid "E Canvas init failed !"
+#, fuzzy
+msgid "E Canvas init failed!"
 msgstr "E Vászon indítás nem sikerült!"
 
 #: src/e_mod_main.c:63
-msgid "Theme init failed !"
+#, fuzzy
+msgid "Theme init failed!"
 msgstr "Téma indítás nem sikerült!"
 
 #: src/e_mod_main.c:70
@@ -361,7 +363,7 @@ msgstr "Fénykép modul információ"
 msgid ""
 "<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
 "a <hilight>background task</hilight>.<br>It can take a while, but after, "
-"loading will be faster and lighter :)<br><br>Each time wou will load "
+"loading will be faster and lighter :)<br><br>Each time you will load "
 "pictures that haven't been loaded in Photo module before,<br>they will be "
 "thumbed.<br><br>While creating popups, you will not be able to see any "
 "picture in Photo.<br>I hope i'll be able to change that :)"
@@ -370,4 +372,3 @@ msgstr ""
 "feladat</hilight><br> a while ez után: és<br><br> Minden idő betöltéskor t "
 "betöltve in Fénykép modul ez előtt:<br><br><br> létrehozás te nem eddig "
 "bármely in Fénykép<br> I i eddig változtatás"
-

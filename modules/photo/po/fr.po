@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo module\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-02 18:13+0200\n"
+"POT-Creation-Date: 2024-12-26 08:26+0100\n"
 "PO-Revision-Date: 2010-09-10 09:55+0400\n"
 "Last-Translator: batden <batden@orange.fr>\n"
 "Language-Team: French <pourunmondesansgourou@gmail.com>\n"
@@ -25,11 +25,13 @@ msgid "Photo Module"
 msgstr "Module Photo"
 
 #: src/e_mod_main.c:56
-msgid "E Canvas init failed !"
+#, fuzzy
+msgid "E Canvas init failed!"
 msgstr "Échec de l'Initialisation du canevas de E !"
 
 #: src/e_mod_main.c:63
-msgid "Theme init failed !"
+#, fuzzy
+msgid "Theme init failed!"
 msgstr "Échec de l'initialisation du thème !"
 
 #: src/e_mod_main.c:70
@@ -360,10 +362,11 @@ msgid "Photo Module Information"
 msgstr "Information du module photo"
 
 #: src/photo_picture_local.c:601
+#, fuzzy
 msgid ""
 "<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
 "a <hilight>background task</hilight>.<br>It can take a while, but after, "
-"loading will be faster and lighter :)<br><br>Each time wou will load "
+"loading will be faster and lighter :)<br><br>Each time you will load "
 "pictures that haven't been loaded in Photo module before,<br>they will be "
 "thumbed.<br><br>While creating popups, you will not be able to see any "
 "picture in Photo.<br>I hope i'll be able to change that :)"
@@ -375,4 +378,3 @@ msgstr ""
 "seront chargées,<br>elles seront miniaturisées.<br><br>Pendant la création "
 "des pop-up, il est impossible de regarder des images dans Photo.<br>J'espère "
 "que je pourrais arranger ça :)"
-

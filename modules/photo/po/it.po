@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-02 18:13+0200\n"
+"POT-Creation-Date: 2024-12-26 08:26+0100\n"
 "PO-Revision-Date: 2012-12-19 13:24+0100\n"
 "Last-Translator: Massimo Maiurana <maiurana@gmail.com>\n"
 "Language-Team: none\n"
@@ -21,11 +21,13 @@ msgid "Photo Module"
 msgstr "Modulo Photo"
 
 #: src/e_mod_main.c:56
-msgid "E Canvas init failed !"
+#, fuzzy
+msgid "E Canvas init failed!"
 msgstr "Fallita inizializzazione canvas!"
 
 #: src/e_mod_main.c:63
-msgid "Theme init failed !"
+#, fuzzy
+msgid "Theme init failed!"
 msgstr "Fallita inizializzazione tema!"
 
 #: src/e_mod_main.c:70
@@ -356,10 +358,11 @@ msgid "Photo Module Information"
 msgstr "Informazioni modulo Photo"
 
 #: src/photo_picture_local.c:601
+#, fuzzy
 msgid ""
 "<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
 "a <hilight>background task</hilight>.<br>It can take a while, but after, "
-"loading will be faster and lighter :)<br><br>Each time wou will load "
+"loading will be faster and lighter :)<br><br>Each time you will load "
 "pictures that haven't been loaded in Photo module before,<br>they will be "
 "thumbed.<br><br>While creating popups, you will not be able to see any "
 "picture in Photo.<br>I hope i'll be able to change that :)"
@@ -371,4 +374,3 @@ msgstr ""
 "sono<br>mai state caricate prima in Photo per esse verrà<br>creata una "
 "miniatura.<br><br>Durante la creazione dei popup non si potrà "
 "vedere<br>nessuna immagine in Photo.<br>Spero di poter risolvere questo :)"
-

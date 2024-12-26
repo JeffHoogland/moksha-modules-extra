@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: photo 0.1.0\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-02 18:13+0200\n"
+"POT-Creation-Date: 2024-12-26 08:26+0100\n"
 "PO-Revision-Date: 2012-12-10 10:21+0000\n"
 "Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
@@ -24,11 +24,13 @@ msgid "Photo Module"
 msgstr "Modulo pri fotoj"
 
 #: src/e_mod_main.c:56
-msgid "E Canvas init failed !"
+#, fuzzy
+msgid "E Canvas init failed!"
 msgstr "Pravalorizado de E-Canvas fiaskis!"
 
 #: src/e_mod_main.c:63
-msgid "Theme init failed !"
+#, fuzzy
+msgid "Theme init failed!"
 msgstr "Pravalorizado de etoso fiaskis!"
 
 #: src/e_mod_main.c:70
@@ -358,10 +360,11 @@ msgid "Photo Module Information"
 msgstr "Informo pri la modulo de fotoj"
 
 #: src/photo_picture_local.c:601
+#, fuzzy
 msgid ""
 "<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
 "a <hilight>background task</hilight>.<br>It can take a while, but after, "
-"loading will be faster and lighter :)<br><br>Each time wou will load "
+"loading will be faster and lighter :)<br><br>Each time you will load "
 "pictures that haven't been loaded in Photo module before,<br>they will be "
 "thumbed.<br><br>While creating popups, you will not be able to see any "
 "picture in Photo.<br>I hope i'll be able to change that :)"
@@ -373,4 +376,3 @@ msgstr ""
 "ili estos<br> miniaturigitaj.<br><br>Dum kreado de ŝprucfenestroj, vi ne "
 "povas vidi iun ajn<br>bildon en Foto.<br>Mi esperas, ke mi povos ŝanĝi "
 "tion :)"
-
