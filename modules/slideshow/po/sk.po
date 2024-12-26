@@ -69,31 +69,31 @@ msgstr "Podadresár používaný pre pozadia"
 
 #: src/e_mod_config.c:152
 msgid "Fill and Stretch Options"
-msgstr ""
+msgstr "Možnosti zobrazenia"
 
 #: src/e_mod_config.c:154
 msgid "Stretch"
-msgstr ""
+msgstr "Roztiahnuť"
 
 #: src/e_mod_config.c:158
 msgid "Center"
-msgstr ""
+msgstr "Na stred"
 
 #: src/e_mod_config.c:162
 msgid "Tile"
-msgstr ""
+msgstr "Dlaždice"
 
 #: src/e_mod_config.c:167
 msgid "Within"
-msgstr ""
+msgstr "Vo vnútri"
 
 #: src/e_mod_config.c:171
 msgid "Fill"
-msgstr ""
+msgstr "Vyplniť"
 
 #: src/e_mod_config.c:175
 msgid "Pan"
-msgstr ""
+msgstr "Panoráma"
 
 #: src/e_mod_config.c:181
 msgid "Extra"
