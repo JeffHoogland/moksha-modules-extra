@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slideshow\n"
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-03-06 18:18+0100\n"
+"POT-Creation-Date: 2024-12-26 20:47+0100\n"
 "PO-Revision-Date: 2010-09-11 14:03+0200\n"
 "Last-Translator: Massimo Maiurana <maiurana@inwind.it>\n"
 "Language-Team: none\n"
@@ -15,107 +15,135 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: src/e_mod_config.c:40
+#: src/e_mod_config.c:41
 msgid "Slideshow Settings"
 msgstr "Impostazioni di Slideshow"
 
-#: src/e_mod_config.c:111
+#: src/e_mod_config.c:113
 #, fuzzy
 msgid "Cycles Time"
 msgstr "Durata singola visualizzazione"
 
-#: src/e_mod_config.c:113
+#: src/e_mod_config.c:115
 msgid "Disable Timer"
 msgstr "Disabilita timer"
 
-#: src/e_mod_config.c:116
+#: src/e_mod_config.c:118
 #, c-format
 msgid "%3.0f seconds"
 msgstr "%3.0f secondi"
 
-#: src/e_mod_config.c:121
+#: src/e_mod_config.c:123
 msgid "Day/Night backgrounds"
 msgstr ""
 
-#: src/e_mod_config.c:123
+#: src/e_mod_config.c:125
 #, fuzzy
 msgid "Disable Scheduler"
 msgstr "Disabilita timer"
 
-#: src/e_mod_config.c:125
+#: src/e_mod_config.c:127
 #, c-format
 msgid "%1.0f hr"
 msgstr ""
 
-#: src/e_mod_config.c:128
+#: src/e_mod_config.c:130
 #, c-format
 msgid "%1.0f min"
 msgstr ""
 
-#: src/e_mod_config.c:131
+#: src/e_mod_config.c:133
 msgid "Day bg file: (Start at slider time e.g. 6:00 am)"
 msgstr ""
 
-#: src/e_mod_config.c:135
+#: src/e_mod_config.c:137
 msgid "Night bg file: (12 hours later at 6:00 pm)"
 msgstr ""
 
-#: src/e_mod_config.c:141
+#: src/e_mod_config.c:143
 msgid "Directory"
 msgstr "Directory"
 
-#: src/e_mod_config.c:143
+#: src/e_mod_config.c:145
 msgid "Sub-directory to use for backgrounds"
 msgstr "Sottodirectory per gli sfondi"
 
-#: src/e_mod_config.c:150
+#: src/e_mod_config.c:152
+msgid "Fill and Stretch Options"
+msgstr ""
+
+#: src/e_mod_config.c:154
+msgid "Stretch"
+msgstr ""
+
+#: src/e_mod_config.c:158
+msgid "Center"
+msgstr ""
+
+#: src/e_mod_config.c:162
+msgid "Tile"
+msgstr ""
+
+#: src/e_mod_config.c:167
+msgid "Within"
+msgstr ""
+
+#: src/e_mod_config.c:171
+msgid "Fill"
+msgstr ""
+
+#: src/e_mod_config.c:175
+msgid "Pan"
+msgstr ""
+
+#: src/e_mod_config.c:181
 msgid "Extra"
 msgstr "Extra"
 
-#: src/e_mod_config.c:151
+#: src/e_mod_config.c:182
 msgid "Randomize order"
 msgstr "Ordina in modo casuale"
 
-#: src/e_mod_config.c:154
+#: src/e_mod_config.c:185
 msgid "Set wallpaper on all desktops"
 msgstr "Imposta sfondo su tutti i desktop"
 
-#: src/e_mod_config.c:156
+#: src/e_mod_config.c:187
 msgid "Set wallpaper on current desktop"
 msgstr "Imposta sfondo sul desktop attuale"
 
-#: src/e_mod_config.c:158
+#: src/e_mod_config.c:189
 msgid "Set wallpaper on current screen"
 msgstr "Imposta sfondo sullo schermo attuale"
 
-#: src/e_mod_config.c:162
+#: src/e_mod_config.c:193
 msgid "Set wallpaper on current monitor (Xinerama support)"
 msgstr "Imposta sfondo sul monitor attuale (supporto Xinerama)"
 
-#: src/e_mod_config.c:210 src/e_mod_main.c:267 src/e_mod_main.c:492
+#: src/e_mod_config.c:242 src/e_mod_main.c:256 src/e_mod_main.c:508
 msgid "Warning"
 msgstr ""
 
-#: src/e_mod_config.c:210 src/e_mod_main.c:493
+#: src/e_mod_config.c:242 src/e_mod_main.c:509
 msgid "Day/Night file names are not defined!"
 msgstr ""
 
-#: src/e_mod_main.c:155
+#: src/e_mod_main.c:154
 msgid "Slideshow"
 msgstr "Slideshow"
 
-#: src/e_mod_main.c:196
+#: src/e_mod_main.c:193
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: src/e_mod_main.c:267
+#: src/e_mod_main.c:257
 msgid "Check Day/Night bg file names. They do not match!"
 msgstr ""
 
-#: src/e_mod_main.c:712
+#: src/e_mod_main.c:728
 msgid "Picture Import Error"
 msgstr ""
 
-#: src/e_mod_main.c:713
+#: src/e_mod_main.c:729
 msgid "Moksha was unable to import the picture<br>due to conversion errors."
 msgstr ""
