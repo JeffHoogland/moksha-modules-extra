@@ -47,4 +47,4 @@ msgstr "Čas mezi aktualizacemi"
 
 #: src/e_mod_main.c:420
 msgid "Merge CPU's into single Statistic"
-msgstr "Sloučit CPU do jedné štatistiky"
+msgstr "Sloučit CPU do jedné statistiky"
