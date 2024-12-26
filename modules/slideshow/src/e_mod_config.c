@@ -7,9 +7,10 @@ struct _E_Config_Dialog_Data
    int disable_sched;
    int random_order;
    int all_desks;
+   int method;
    double poll_time, hours, minutes;
    char *dir; 
-   char *file_day; 
+   char *file_day;
    char *file_night;
 };
 
@@ -56,7 +57,8 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
    cfdata->disable_sched = ci->disable_sched;
    cfdata->random_order = ci->random_order;
    cfdata->all_desks = ci->all_desks;
-   
+   cfdata->method = ci->method;
+
    if (ci->dir)
      cfdata->dir = strdup(ci->dir);
    else
@@ -104,7 +106,7 @@ _free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 static Evas_Object *
 _basic_create(__UNUSED__ E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cfdata)
 {
-   Evas_Object *o, *ob, *of, *ot;
+   Evas_Object *o, *ob, *of, *ot, *ord;
    E_Radio_Group *rg;
 
    o = e_widget_list_add (evas, 0, 0);
@@ -146,6 +148,35 @@ _basic_create(__UNUSED__ E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data 
    e_widget_table_object_append (ot, ob, 0, 1, 1, 1, 1, 0, 1, 0);
    e_widget_framelist_object_append (of, ot);
    e_widget_list_object_append (o, of, 1, 1, 0.5);
+   
+   of = e_widget_frametable_add(evas, D_("Fill and Stretch Options"), 1);
+   rg = e_widget_radio_group_new(&(cfdata->method));
+   ord = e_widget_radio_icon_add(evas, D_("Stretch"),
+                                 "enlightenment/wallpaper_stretch",
+                                 24, 24, IMPORT_STRETCH, rg);
+   e_widget_frametable_object_append(of, ord, 0, 0, 1, 1, 1, 0, 1, 0);
+   ord = e_widget_radio_icon_add(evas, D_("Center"),
+                                 "enlightenment/wallpaper_center",
+                                 24, 24, IMPORT_CENTER, rg);
+   e_widget_frametable_object_append(of, ord, 1, 0, 1, 1, 1, 0, 1, 0);
+   ord = e_widget_radio_icon_add(evas, D_("Tile"),
+                                 "enlightenment/wallpaper_tile",
+                                 24, 24, IMPORT_TILE, rg);
+   e_widget_frametable_object_append(of, ord, 2, 0, 1, 1, 1, 0, 1, 0);
+   
+   ord = e_widget_radio_icon_add(evas, D_("Within"),
+                                 "enlightenment/wallpaper_scale_aspect_in",
+                                 24, 24, IMPORT_SCALE_ASPECT_IN, rg);
+   e_widget_frametable_object_append(of, ord, 0, 1, 1, 1, 1, 0, 1, 0);
+   ord = e_widget_radio_icon_add(evas, D_("Fill"),
+                                 "enlightenment/wallpaper_scale_aspect_out",
+                                 24, 24, IMPORT_SCALE_ASPECT_OUT, rg);
+   e_widget_frametable_object_append(of, ord, 1, 1, 1, 1, 1, 0, 1, 0);
+   ord = e_widget_radio_icon_add(evas, D_("Pan"),
+                                 "enlightenment/wallpaper_pan",
+                                 24, 24, IMPORT_PAN, rg);
+   e_widget_frametable_object_append(of, ord, 2, 1, 1, 1, 1, 0, 1, 0);
+   e_widget_list_object_append(o, of, 1, 1, 0.5);
 
    of = e_widget_framelist_add (evas, D_ ("Extra"), 0);
    ob = e_widget_check_add (evas, D_ ("Randomize order"), &(cfdata->random_order));
@@ -181,6 +212,7 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    ci->disable_sched = cfdata->disable_sched;
    ci->random_order = cfdata->random_order;
    ci->all_desks = cfdata->all_desks;
+   ci->method = cfdata->method;
 
    if (ci->dir) eina_stringshare_del (ci->dir);
    if (cfdata->dir)

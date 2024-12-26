@@ -319,6 +319,7 @@ _slide_config_item_get(const char *id)
    ci->disable_timer = 0;
    ci->disable_sched = 1;
    ci->all_desks = 0;
+   ci->method = 0;
    snprintf(buf, sizeof (buf), "%s/.e/e/backgrounds", e_user_homedir_get());
    ci->dir = eina_stringshare_add(buf);
    ci->file_day = eina_stringshare_add("");
@@ -359,6 +360,7 @@ e_modapi_init(E_Module *m)
    E_CONFIG_VAL(D, T, disable_sched, INT);
    E_CONFIG_VAL(D, T, random_order, INT);
    E_CONFIG_VAL(D, T, all_desks, INT);
+   E_CONFIG_VAL(D, T, method, INT);
    conf_edd = E_CONFIG_DD_NEW("Slideshow_Config", Config);
 #undef T
 #undef D
@@ -466,6 +468,7 @@ _slide_conf_new(char *dir)
    ci->disable_sched = 1;
    ci->random_order = 0;
    ci->all_desks = 0;
+   ci->method = 0;
    slide_config->items = eina_list_append(slide_config->items, ci);
 
    /* save the config to disk */
@@ -737,15 +740,20 @@ _edj_cc_exit(void *data, int type __UNUSED__, void *event)
 static void
 _import_edj_gen(Instance *inst)
 {
+   Evas_Object *img;
    Eina_Bool anim = EINA_FALSE;
    int fd, num = 1;
    int w = 0, h = 0;
-   const char *in_file, *file;
+   const char *in_file, *file, *locale;
    char buf[PATH_MAX], cmd[PATH_MAX + PATH_MAX + 40], tmpn[PATH_MAX], ipart[PATH_MAX], enc[128];
    char *imgdir = NULL, *fstrip;
+   int cr, cg, cb, ca;
    FILE *f;
    size_t len, off;
-
+   
+   Ecore_Evas *ee = ecore_evas_new(NULL, 0, 0, 800, 600, NULL);
+   Evas *evas = ecore_evas_get(ee);
+   
    in_file = inst->in_file;
    file = ecore_file_file_get(in_file);
    fstrip = ecore_file_strip_ext(file);
@@ -764,6 +772,11 @@ _import_edj_gen(Instance *inst)
    for (num = 1; ecore_file_exists(buf) && num < 100; num++)
      snprintf(buf + off, sizeof(buf) - off, "-%d.edj", num);
    free(fstrip);
+   
+   cr = 255;//color.r;
+   cg = 255;//color.g;
+   cb = 255;//color.b;
+   ca = 255;//color.a;
 
    if (num == 100)
      {
@@ -796,21 +809,186 @@ _import_edj_gen(Instance *inst)
         free(imgdir);
      }
 
+   img = evas_object_image_add(evas);
+   evas_object_image_file_set(img, in_file, NULL);
+   evas_object_image_size_get(img, &w, &h);
+   evas_object_del(img);
+
    fstrip = strdupa(e_util_filename_escape(file));
    snprintf(enc, sizeof(enc), "LOSSY %i", 90);
-   fprintf(f,
-             "images { image: \"%s\" %s; }\n"
-             "collections {\n"
-             "group { name: \"e/desktop/background\";\n"
-             "%s"
-             "data { item: \"style\" \"0\"; }\n"
-             "max: %i %i;\n"
-             "parts {\n"
-             "part { name: \"bg\"; mouse_events: 0;\n"
-             "description { state: \"default\" 0.0;\n"
-             "image { normal: \"%s\"; scale_hint: STATIC; }\n"
-             "} } } } }\n"
-             , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n", w, h, fstrip);
+   
+   switch (inst->ci->method)
+     {
+      case IMPORT_STRETCH:
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "%s"
+                "data { item: \"style\" \"0\"; }\n"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "image { normal: \"%s\"; scale_hint: STATIC; }\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n", w, h, fstrip);
+        break;
+
+      case IMPORT_TILE:
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "data { item: \"style\" \"1\"; }\n"
+                "%s"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "image { normal: \"%s\"; }\n"
+                "fill { size {\n"
+                "relative: 0.0 0.0;\n"
+                "offset: %i %i;\n"
+                "} } } } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n", w, h, fstrip, w, h);
+        break;
+
+      case IMPORT_CENTER:
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "data { item: \"style\" \"2\"; }\n"
+                "%s"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"col\"; type: RECT; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "color: %i %i %i %i;\n"
+                "} }\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "min: %i %i; max: %i %i;\n"
+                "image { normal: \"%s\"; }\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n", w, h, cr, cg, cb, ca, w, h, w, h, fstrip);
+        break;
+
+      case IMPORT_SCALE_ASPECT_IN:
+        locale = e_intl_language_get();
+        setlocale(LC_NUMERIC, "C");
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "data { item: \"style\" \"3\"; }\n"
+                "%s"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"col\"; type: RECT; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "color: %i %i %i %i;\n"
+                "} }\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "aspect: %1.9f %1.9f; aspect_preference: BOTH;\n"
+                "image { normal: \"%s\";  scale_hint: STATIC; }\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n",
+                w, h, cr, cg, cb, ca, (double)w / (double)h, (double)w / (double)h, fstrip);
+        setlocale(LC_NUMERIC, locale);
+        break;
+
+      case IMPORT_SCALE_ASPECT_OUT:
+        locale = e_intl_language_get();
+        setlocale(LC_NUMERIC, "C");
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "data { item: \"style\" \"4\"; }\n"
+                "%s"
+                "max: %i %i;\n"
+                "parts {\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "aspect: %1.9f %1.9f; aspect_preference: NONE;\n"
+                "image { normal: \"%s\";  scale_hint: STATIC; }\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n",
+                w, h, (double)w / (double)h, (double)w / (double)h, fstrip);
+        setlocale(LC_NUMERIC, locale);
+        break;
+
+      case IMPORT_PAN:
+        locale = e_intl_language_get();
+        setlocale(LC_NUMERIC, "C");
+        fprintf(f,
+                "images { image: \"%s\" %s; }\n"
+                "collections {\n"
+                "group { name: \"e/desktop/background\";\n"
+                "data { item: \"style\" \"4\"; }\n"
+                "%s"
+                "max: %i %i;\n"
+                "script {\n"
+                "public cur_anim; public cur_x; public cur_y; public prev_x;\n"
+                "public prev_y; public total_x; public total_y; \n"
+                "public pan_bg(val, Float:v) {\n"
+                "new Float:x, Float:y, Float:px, Float: py;\n"
+
+                "px = get_float(prev_x); py = get_float(prev_y);\n"
+                "if (get_int(total_x) > 1) {\n"
+                "x = float(get_int(cur_x)) / (get_int(total_x) - 1);\n"
+                "x = px - (px - x) * v;\n"
+                "} else { x = 0.0; v = 1.0; }\n"
+                "if (get_int(total_y) > 1) {\n"
+                "y = float(get_int(cur_y)) / (get_int(total_y) - 1);\n"
+                "y = py - (py - y) * v;\n"
+                "} else { y = 0.0; v = 1.0; }\n"
+
+                "set_state_val(PART:\"bg\", STATE_ALIGNMENT, x, y);\n"
+
+                "if (v >= 1.0) {\n"
+                "set_int(cur_anim, 0); set_float(prev_x, x);\n"
+                "set_float(prev_y, y); return 0;\n"
+                "}\n"
+                "return 1;\n"
+                "}\n"
+                "public message(Msg_Type:type, id, ...) {\n"
+                "if ((type == MSG_FLOAT_SET) && (id == 0)) {\n"
+                "new ani;\n"
+
+                "get_state_val(PART:\"bg\", STATE_ALIGNMENT, prev_x, prev_y);\n"
+                "set_int(cur_x, round(getfarg(3))); set_int(total_x, round(getfarg(4)));\n"
+                "set_int(cur_y, round(getfarg(5))); set_int(total_y, round(getfarg(6)));\n"
+
+                "ani = get_int(cur_anim); if (ani > 0) cancel_anim(ani);\n"
+                "ani = anim(getfarg(2), \"pan_bg\", 0); set_int(cur_anim, ani);\n"
+                "} } }\n"
+                "parts {\n"
+                "part { name: \"bg\"; mouse_events: 0;\n"
+                "description { state: \"default\" 0.0;\n"
+                "aspect: %1.9f %1.9f; aspect_preference: NONE;\n"
+                "image { normal: \"%s\";  scale_hint: STATIC; }\n"
+                "} } }\n"
+                "programs { program {\n"
+                " name: \"init\";\n"
+                " signal: \"load\";\n"
+                " source: \"\";\n"
+                " script { custom_state(PART:\"bg\", \"default\", 0.0);\n"
+                " set_state(PART:\"bg\", \"custom\", 0.0);\n"
+                " set_float(prev_x, 0.0); set_float(prev_y, 0.0);\n"
+                "} } } } }\n"
+                , fstrip, enc, anim ? "" : "data.item: \"noanimation\" \"1\";\n",
+                w, h, (double)w / (double)h, (double)w / (double)h, fstrip);
+        setlocale(LC_NUMERIC, locale);
+        break;
+
+      default:
+        /* won't happen */
+        break;
+     }
 
    fclose(f);
 

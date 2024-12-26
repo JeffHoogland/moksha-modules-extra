@@ -20,6 +20,13 @@
 #define MOD_CONFIG_FILE_GENERATION 0
 #define MOD_CONFIG_FILE_VERSION    ((MOD_CONFIG_FILE_EPOCH * 1000000) + MOD_CONFIG_FILE_GENERATION)
 
+#define IMPORT_STRETCH          0
+#define IMPORT_TILE             1
+#define IMPORT_CENTER           2
+#define IMPORT_SCALE_ASPECT_IN  3
+#define IMPORT_SCALE_ASPECT_OUT 4
+#define IMPORT_PAN              5
+
 typedef struct _Config Config;
 typedef struct _Config_Item Config_Item;
 
@@ -40,6 +47,7 @@ struct _Config_Item
    int disable_sched;
    int random_order;
    int all_desks;
+   int method;
    double poll_time, hours, minutes;
    const char *dir, *file_day, *file_night;
 };
