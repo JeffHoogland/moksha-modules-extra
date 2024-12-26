@@ -33,7 +33,7 @@ msgstr "Hustota dažďa"
 
 #: src/e_mod_config.c:107
 msgid "Sprinkle"
-msgstr "Prehánka"
+msgstr "Prehánky"
 
 #: src/e_mod_config.c:109
 msgid "Drizzle"
