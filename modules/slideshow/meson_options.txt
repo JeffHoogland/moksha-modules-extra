@@ -1,0 +1,8 @@
+option('edje-cc',
+       type       : 'string',
+       description: 'A path to a edje_cc. Defaults to system edje_cc')
+
+option('nls',
+       type: 'boolean',
+       value: true,
+       description: 'enable localization (default=true)')
