@@ -1,5 +1,5 @@
-# Portuguese translation for slideshow
-# This file is distributed under the same license as the enlightenment package.
+# Portuguese translation for the Slideshow Module.
+# This file is put in the public domain.
 # Adaptado ao acordo ortográfico de 1990
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.

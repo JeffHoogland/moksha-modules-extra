@@ -1,5 +1,4 @@
-# translation of slideshow.po to Slovenian
-# Slovenian translation of Slideshov_sl.
+# Slovenian translation for the Slideshow Module.
 # This file is put in the public domain.
 #
 # r1to <renato.rener@gmail.com>, 2011.

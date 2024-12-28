@@ -1,5 +1,5 @@
-# Indonesian translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Indonesian translation for the Slideshow Module.
+# This file is put in the public domain.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 #
 msgid ""

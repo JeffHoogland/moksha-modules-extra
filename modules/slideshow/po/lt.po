@@ -1,6 +1,5 @@
-# Lithuanian translation for enlightenment
-# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the same license as the enlightenment package.
+# Lithuanian translation for the Slideshow Module.
+# This file is put in the public domain.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
 #
 msgid ""

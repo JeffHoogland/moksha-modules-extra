@@ -1,6 +1,5 @@
-# translation of slideshow.po to hungarian
-# Copyright (C) 200-2009 Enlightenment development team
-# This file is distributed under the same license as the PACKAGE package.
+# Hungarian for the Slideshow Module.
+# This file is put in the public domain.
 #
 # Lisovszki  <lisovszki@gmail.com>, 2008.
 msgid ""

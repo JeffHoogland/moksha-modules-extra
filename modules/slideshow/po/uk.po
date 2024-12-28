@@ -1,3 +1,4 @@
+# Ukrainian translation for the Slideshow Module.
 # This file is put in the public domain.
 # Daniel Korostil <ted.korostiled@gmail.com>, 2009.
 # Korostil Daniel <ted.korostiled@gmail.com>, 2011.

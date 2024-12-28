@@ -1,4 +1,4 @@
-# Italian translation for E17 slideshow module.
+# Italian translation for the Slideshow Module.
 # This file is put in the public domain.
 # Massimo Maiurana <maiurana@inwind.it>, 2005.
 #

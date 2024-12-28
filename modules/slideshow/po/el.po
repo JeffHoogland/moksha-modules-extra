@@ -1,5 +1,4 @@
-# translation of el.po to Greek
-# French translation for Slideshow module for Enlightenment DR0.17
+# Greek for the Slideshow Module.
 # This file is put in the public domain.
 # Chidambar 'ilLogict' Zinnoury <illogict@online.fr>, 2006.
 #

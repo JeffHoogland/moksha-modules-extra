@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# Japenese translation for the Slideshow Module.
 # This file is put in the public domain.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # Yasufumi Haga <yasufumi.haga@nifty.com>, 2006.

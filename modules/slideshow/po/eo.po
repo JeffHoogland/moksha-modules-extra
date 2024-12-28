@@ -1,4 +1,4 @@
-# translation of eo.po to
+# Esperanto translation for the Slideshow Module.
 # This file is put in the public domain.
 # Olivier M.<olivierweb@ifrance.com>
 #

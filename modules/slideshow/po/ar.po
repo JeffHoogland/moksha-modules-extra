@@ -1,5 +1,6 @@
-# Arabic translation for slideshow.
+# Arabic translation for the Slideshow Module.
 # This file is put in the public domain.
+#
 # sameeer hussain <almusalimalmusalimah> 2011.
 #
 msgid ""
