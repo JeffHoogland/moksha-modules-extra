@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Enlightenment development team
+# Copyright (C) YEAR Bodhi Linux team
 # This file is distributed under the same license as the slideshow package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
