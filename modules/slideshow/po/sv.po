@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Slideshow module for E17 N/A\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-26 20:47+0100\n"
 "PO-Revision-Date: 2006-07-28 14:54+0200\n"
 "Last-Translator: Anders Trobäck <enlightenment@troback.com>\n"
