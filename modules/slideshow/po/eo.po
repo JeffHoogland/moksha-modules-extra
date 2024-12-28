@@ -5,7 +5,7 @@
 # Olivier <eliovir@nospam.gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: eo\n"
+"Project-Id-Version: slideshow\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-26 20:47+0100\n"
 "PO-Revision-Date: 2012-11-26 09:51+0000\n"

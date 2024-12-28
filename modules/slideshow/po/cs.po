@@ -5,7 +5,7 @@
 # Štefan Uram <thewaiter@centrum.sk>, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version: Slideshow\n"
+"Project-Id-Version: slideshow\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-26 20:47+0100\n"
 "PO-Revision-Date: 2011-10-15 12:44+0200\n"

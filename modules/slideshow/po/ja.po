@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Slideshow\n"
+"Project-Id-Version: slideshow\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-26 20:47+0100\n"
 "PO-Revision-Date: 2008-03-20 16:14+0900\n"

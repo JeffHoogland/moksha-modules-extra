@@ -3,7 +3,7 @@
 # Korostil Daniel <ted.korostiled@gmail.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: slideshow.HEAD\n"
+"Project-Id-Version: slideshow\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-26 20:47+0100\n"
 "PO-Revision-Date: 2011-02-06 10:54+0300\n"
