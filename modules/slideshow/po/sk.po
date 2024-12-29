@@ -1,15 +1,16 @@
 # Slovak translation  for the Slideshow Module.
 # This file is put in the public domain.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+# Stefan Uram <thewaiter@centrum.sk>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-26 20:47+0100\n"
-"PO-Revision-Date: 2009-06-09 17:58+0000\n"
+"PO-Revision-Date: 2024-12-26 20:47+0100\n"
 "Last-Translator: Stefan Uram <thewaiter@centrum.sk>\n"
-"Language-Team: Slovak <sk@li.org>\n"
+"Language-Team: Slovak\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

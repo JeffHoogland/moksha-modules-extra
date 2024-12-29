@@ -1,6 +1,7 @@
 # Indonesian translation for the Slideshow Module.
 # This file is put in the public domain.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+# madziuleq, 2009.
 #
 msgid ""
 msgstr ""
@@ -9,7 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2024-12-26 20:47+0100\n"
 "PO-Revision-Date: 2009-03-02 08:02+0000\n"
 "Last-Translator: madziuleq <Unknown>\n"
-"Language-Team: Indonesian <id@li.org>\n"
+"Language-Team: Indonesian\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

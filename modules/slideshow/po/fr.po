@@ -1,8 +1,8 @@
 # French translation for the Slideshow module.
 # This file is put in the public domain.
+#
 # Chidambar 'ilLogict' Zinnoury <illogict@online.fr>, 2006.
 # batden <batden@orange.fr>, 2009, 2010, 2011.
-# similar <similar@orange.fr>, 2024.
 #
 msgid ""
 msgstr ""

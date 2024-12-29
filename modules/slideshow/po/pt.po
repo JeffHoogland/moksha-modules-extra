@@ -1,6 +1,5 @@
 # Portuguese translation for the Slideshow Module.
-# This file is put in the public domain.
-# Adaptado ao acordo ortográfico de 1990
+#
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
 #

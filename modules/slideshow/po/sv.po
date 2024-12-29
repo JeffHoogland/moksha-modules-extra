@@ -1,8 +1,7 @@
 # Swedish translation  for the Slideshow Module.
 # This file is put in the public domain.
-# Anders Trobäck <enlightenment@troback.com>, 2006.
-# , fuzzy
 #
+# Anders Trobäck <enlightenment@troback.com>, 2006.
 #
 msgid ""
 msgstr ""
