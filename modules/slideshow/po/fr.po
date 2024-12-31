@@ -1,13 +1,13 @@
 # French translation for the Slideshow module.
 # This file is put in the public domain.
+#
 # Chidambar 'ilLogict' Zinnoury <illogict@online.fr>, 2006.
 # batden <batden@orange.fr>, 2009, 2010, 2011.
-# similar <similar@orange.fr>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Slideshow module\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"Project-Id-Version: slideshow\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-26 20:47+0100\n"
 "PO-Revision-Date: 2024-03-07 08:50+0100\n"
 "Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
