@@ -391,7 +391,7 @@ static void
 _trash_cb_menu_empty(void *data __UNUSED__, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    e_confirm_dialog_show("", NULL,
-      D_("<b>Remove all the files and folders from the trash?</><br>"
+      D_("<b>Remove all the files and folders from the trash?</b><br>"
          "All the elements currently in the trash will be irreparably lost!!!"),
       D_("Cancel"), D_("Empty trash"), 
       NULL, _trash_cb_menu_empty_ok, NULL, NULL, NULL, NULL);
