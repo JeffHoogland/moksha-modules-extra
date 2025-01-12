@@ -53,7 +53,7 @@ msgid ""
 "<b>Remove all the files and folders from the trash?</><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
-"<b>Выдаліць з сметніцы ўсе файлы ды папкі?</><br>Усё змесціва сметніцы будзе "
+"<b>Выдаліць з сметніцы ўсе файлы ды папкі?</b><br>Усё змесціва сметніцы будзе "
 "страчана незваротна!!!"
 
 #: src/e_mod_main.c:396 src/e_mod_main.c:488

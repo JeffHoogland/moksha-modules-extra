@@ -57,7 +57,7 @@ msgid ""
 "<b>Remove all the files and folders from the trash?</><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
-"<b>Alle bestanden en mappen uit de prullenbak verwijderen?</><br>Alle "
+"<b>Alle bestanden en mappen uit de prullenbak verwijderen?</b><br>Alle "
 "elementen in de prullenbak zullen onherroepelijk verloren gaan!"
 
 #: src/e_mod_main.c:396 src/e_mod_main.c:488

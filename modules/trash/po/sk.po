@@ -55,7 +55,7 @@ msgid ""
 "<b>Remove all the files and folders from the trash?</><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
-"<b>Odstrániť všetky súbory a zložky z koša?</><br>Všetky položky v koši budú "
+"<b>Odstrániť všetky súbory a zložky z koša?</b><br>Všetky položky v koši budú "
 "nenávratne vymazané!!!"
 
 #: src/e_mod_main.c:396 src/e_mod_main.c:488
