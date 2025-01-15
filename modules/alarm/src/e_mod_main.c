@@ -987,9 +987,9 @@ e_modapi_init(E_Module *m)
    char buf[PATH_MAX];
    Eina_List *l;
 
-   snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
-   bindtextdomain(PACKAGE, buf);
-   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
    _alarms_edd = E_CONFIG_DD_NEW("Alarm_Alarm", Alarm);
 #undef T
@@ -1043,7 +1043,7 @@ e_modapi_init(E_Module *m)
                          "Your settings and alarms were removed<br>"
                          "Sorry for the inconvenience<br><br>"
                          "(%d -> %d)"), alarm_config->config_version, CONFIG_VERSION);
-             e_module_dialog_show(alarm_config->module, D_("Alarm Module version " MODULE_VERSION), buf);
+             e_module_dialog_show(alarm_config->module, D_("Alarm Module version"), buf);
              alarm_config = NULL;
           }
         else
@@ -1057,7 +1057,7 @@ e_modapi_init(E_Module *m)
                               "Your settings and alarms were removed<br>"
                               "Sorry for the inconvenience<br><br>"
                               "(%d ->%d)"), alarm_config->config_version, CONFIG_VERSION);
-                  e_module_dialog_show(alarm_config->module, D_("Alarm Module version " MODULE_VERSION), buf);
+                  e_module_dialog_show(alarm_config->module, D_("Alarm Module version"), buf);
                   alarm_config = NULL;
                }
           }
