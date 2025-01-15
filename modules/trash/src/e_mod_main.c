@@ -188,9 +188,9 @@ e_modapi_init(E_Module *m)
 {
    char buf[PATH_MAX];
    
-   snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
-   bindtextdomain(PACKAGE, buf);
-   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
    snprintf(buf, sizeof(buf), "%s/e-module-trash.edj", e_module_dir_get(m));
    icon = eina_stringshare_add(buf);
