@@ -1,16 +1,16 @@
-# Norwegian Bokmal translation for enlightenment
-# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Norwegian Bokmal translation for the Alarm Module.
+# This file is put in the public domain.
+#
+# Bjørn Olav Samdal <bjornsam@ulrik.uio.no>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-01 10:13+0200\n"
+"Project-Id-Version: Alarm\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-22 19:44-0500\n"
 "PO-Revision-Date: 2009-11-01 15:04+0000\n"
 "Last-Translator: Bjørn Olav Samdal <bjornsam@ulrik.uio.no>\n"
-"Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"Language-Team: Norwegian Bokmal\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -309,8 +309,9 @@ msgid ""
 msgstr ""
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-msgid "Alarm Module version "
-msgstr ""
+#, fuzzy
+msgid "Alarm Module version"
+msgstr "Alarmoppsett"
 
 #: src/e_mod_main.c:1054
 #, c-format

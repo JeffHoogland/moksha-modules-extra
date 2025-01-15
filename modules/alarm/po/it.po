@@ -1,15 +1,16 @@
-# Italian translation for E17 alarm module.
+# Italian translation for the Alarm Module.
 # This file is put in the public domain.
+#
 # Massimo Maiurana <maiurana@inwind.it>, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Alarm\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-01 10:13+0200\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-22 19:44-0500\n"
 "PO-Revision-Date: 2010-09-10 12:39+0200\n"
 "Last-Translator: Massimo Maiurana <maiurana@inwind.it>\n"
-"Language-Team: none\n"
+"Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -327,7 +328,8 @@ msgstr ""
 "l'inconveniente<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-msgid "Alarm Module version "
+#, fuzzy
+msgid "Alarm Module version"
 msgstr "Modulo Alarm versione "
 
 #: src/e_mod_main.c:1054

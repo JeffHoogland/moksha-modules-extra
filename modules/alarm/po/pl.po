@@ -1,15 +1,16 @@
-# Polish translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Polish translation for the Alarm Module.
+# This file is put in the public domain.
+#
 # Stanislaw Gackowski <s.gackowski@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-01 10:13+0200\n"
+"Project-Id-Version: Alarm\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-22 19:44-0500\n"
 "PO-Revision-Date: 2009-06-07 22:33+0000\n"
 "Last-Translator: Stanislaw Gackowski <launchpad@soeb.eu>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"Language-Team: Polish\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -325,7 +326,8 @@ msgstr ""
 "alarmy były usunięte<br>Przeprasamy za niedogodności<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-msgid "Alarm Module version "
+#, fuzzy
+msgid "Alarm Module version"
 msgstr "Wersja modułu alarmu "
 
 #: src/e_mod_main.c:1054

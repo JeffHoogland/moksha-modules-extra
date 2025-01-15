@@ -1,17 +1,17 @@
-# translation of alarm.po to Slovenian
-# Slovenian translation of sl.
+# Slovenian translation for the Alarm Module.
 # This file is put in the public domain.
 #
 # Renato Rener <renato.rener@gmail.com>, 2011.
 # r1to <renato.rener@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: alarm\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-01 10:13+0200\n"
+"Project-Id-Version: Alarm\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-22 19:44-0500\n"
 "PO-Revision-Date: 2011-02-22 08:40+0100\n"
 "Last-Translator: r1to <renato.rener@gmail.com>\n"
-"Language-Team: Slovenian <sl@li.org>\n"
+"Language-Team: Slovenian \n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -328,11 +328,12 @@ msgid ""
 msgstr ""
 "<hilight>Alarm·modul·:·Nastavitve posodobljene</hilight><br><br>Vaše "
 "nastavitve modula za·alarm·<br>so bile posodobljene<br>Vaše nastavitve in "
-"alarmi so bili odstranjeni<br>Opravičujemo se za neprijetnosti<br><br>(%d·->·"
-"%d)"
+"alarmi so bili odstranjeni<br>Opravičujemo se za neprijetnosti<br><br>(%d·-"
+">·%d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-msgid "Alarm Module version "
+#, fuzzy
+msgid "Alarm Module version"
 msgstr "Modul Alarm različica "
 
 #: src/e_mod_main.c:1054

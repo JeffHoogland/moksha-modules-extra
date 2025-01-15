@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: alarm\n"
+"Project-Id-Version: Alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-22 19:44-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -307,7 +307,7 @@ msgid ""
 msgstr ""
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-msgid "Alarm Module version"
+msgid "Alarm Module version "
 msgstr ""
 
 #: src/e_mod_main.c:1054

@@ -1,13 +1,14 @@
-# Swedish translation of Alarm module for E17.
+# Swedish translation for the Alarm Module.
 # This file is put in the public domain.
+#
 # Anders Trobäck <enlightenment@troback.com>, 2006.
 # Daniel Nylander <yeager@ubuntu.com>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Alarm module for E17 N/A\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-01 10:13+0200\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-22 19:44-0500\n"
 "PO-Revision-Date: 2009-01-10 12:03+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish\n"
@@ -326,7 +327,8 @@ msgstr ""
 "alarm togs bort<br>Ursäkta för detta<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-msgid "Alarm Module version "
+#, fuzzy
+msgid "Alarm Module version"
 msgstr "Alarmmodul version "
 
 #: src/e_mod_main.c:1054

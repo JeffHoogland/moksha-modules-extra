@@ -1,16 +1,16 @@
-# Dutch translation for enlightenment
-# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Dutch translation for the Alarm Module.
+# This file is put in the public domain.
+#
+# Yentl <y.v.t@scarlet.be>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-01 10:13+0200\n"
+"Project-Id-Version: Alarm\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-22 19:44-0500\n"
 "PO-Revision-Date: 2009-07-17 09:06+0000\n"
 "Last-Translator: Yentl <y.v.t@scarlet.be>\n"
-"Language-Team: Dutch <nl@li.org>\n"
+"Language-Team: Dutch\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -329,7 +329,8 @@ msgstr ""
 "alarmen zijn verwijderd<br>Sorry voor het ongemak<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-msgid "Alarm Module version "
+#, fuzzy
+msgid "Alarm Module version"
 msgstr "Alarm Module Versie "
 
 #: src/e_mod_main.c:1054

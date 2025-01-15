@@ -1,16 +1,16 @@
-# Hebrew translation for enlightenment
-# Copyright (C) 2008 Enlightenment development team
-# This file is distributed under the same license as the enlightenment package.
+# Hebrew translation for the Alarm Module.
+# This file is put in the public domain.
+#
 # Yaron <sh.yaron@gmail.com>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-01 10:13+0200\n"
+"Project-Id-Version: Alarm\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-22 19:44-0500\n"
 "PO-Revision-Date: 2008-11-29 21:05+0000\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <he@li.org>\n"
+"Language-Team: Hebrew\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -323,7 +323,8 @@ msgstr ""
 "הנעימות<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-msgid "Alarm Module version "
+#, fuzzy
+msgid "Alarm Module version"
 msgstr "מודול התזכורות גירסה "
 
 #: src/e_mod_main.c:1054

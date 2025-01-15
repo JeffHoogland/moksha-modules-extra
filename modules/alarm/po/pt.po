@@ -1,14 +1,15 @@
-# Portuguese translation for alarm
-# This file is distributed under the same license as the enlightenment package.
+# Portuguese translation for the Alarm Module.
+# This file is put in the public domain.
+#
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
 # Adaptado ao acordo ortográfico de 1990
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: alarm\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-09-01 10:13+0200\n"
+"Project-Id-Version: Alarm\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-22 19:44-0500\n"
 "PO-Revision-Date: 2024-11-25 11:44+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
@@ -329,7 +330,8 @@ msgstr ""
 "foram removidos<br>Desculpe o incómodo<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-msgid "Alarm Module version "
+#, fuzzy
+msgid "Alarm Module version"
 msgstr "Versão do módulo de alarme "
 
 #: src/e_mod_main.c:1054
