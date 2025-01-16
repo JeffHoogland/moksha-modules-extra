@@ -1,0 +1,8 @@
+configure.ac file contained AC_SEARCH_LIBS([strerror],[cposix])
+
+I am unsure if I need this check in meson
+
+Also:
+
+Generating net.edj with a custom command
+Warning: Image 'bd.png' not used
