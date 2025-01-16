@@ -50,10 +50,9 @@ e_modapi_init(E_Module *m)
    Population *pop;
    char buf[PATH_MAX];
 
-   /* Set up module's message catalogue */
-   snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
-   bindtextdomain(PACKAGE, buf);
-   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
    pop = _population_init(m);
 
