@@ -28,10 +28,9 @@ e_modapi_init(E_Module *m)
    Snow *snow;
    char buf[PATH_MAX];
 
-   /* Set up module's message catalogue */
-   snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
-   bindtextdomain(PACKAGE, buf);
-   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
    snprintf(buf, sizeof(buf), "%s/e-module-snow.edj", e_module_dir_get(m));
    e_configure_registry_category_add("appearance", 10, D_("Look"), NULL, 
