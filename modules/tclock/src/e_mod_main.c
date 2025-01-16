@@ -412,8 +412,6 @@ EAPI E_Module_Api e_modapi = { E_MODULE_API_VERSION, "TClock" };
 EAPI void *
 e_modapi_init(E_Module *m)
 {
-   char buf[PATH_MAX];
-
 #if HAVE_LOCALE_H
    setlocale(LC_ALL, "");
 #endif

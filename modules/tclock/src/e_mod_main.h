@@ -11,6 +11,7 @@
 # define D_(string) (string)
 #endif
 #define N_(string) (string)
+
 #define RESOLUTION_MINUTE 0
 #define RESOLUTION_SECOND 1
 
