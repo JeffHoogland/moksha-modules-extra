@@ -7,6 +7,13 @@ add_project_arguments('-D__UNUSED__=__attribute__((unused))', language: 'c')
 
 gettext_domain = 'e-module-' + meson.project_name()
 
+### Checks for library functions.
+cc = meson.get_compiler('c')
+
+if not cc.has_function('strdup')
+  error('The required function strdup() is not available.')
+endif
+
 #### Enlightenment ####
 dep_e = dependency('enlightenment')
 e_modules_dir = dep_e.get_variable('modules')
@@ -28,7 +35,6 @@ config_dir = include_directories('.')
 dep_intl = []
 if get_option('nls')
    config_h.set('HAVE_GETTEXT', '1')
-   cc = meson.get_compiler('c')
    dep_intl = cc.find_library('intl', required : false)
    subdir('po')
 endif
