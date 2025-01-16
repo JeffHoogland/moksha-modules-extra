@@ -15,21 +15,13 @@ if not cc.has_function('strdup')
 endif
 
 ### Check for needed headers ###
-has_sys_time_h = cc.has_header('sys/time.h')
-has_locale_h = cc.has_header('locale.h')
+have_sys_time_h = cc.has_header('sys/time.h')
+have_time_h = cc.has_header('time.h')
+have_locale_h = cc.has_header('locale.h')
 
-if has_sys_time_h
-  message('Found header: sys/time.h')
-else
+if not have_time_h
   error('Missing required header: sys/time.h')
 endif
-
-if has_locale_h
-  message('Found header: locale.h')
-else
-  error('Missing required header: locale.h')
-endif
-
 
 #### Enlightenment ####
 dep_e = dependency('enlightenment')
@@ -45,6 +37,25 @@ config_h = configuration_data()
 config_h.set_quoted('PACKAGE', meson.project_name())
 config_h.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
 config_h.set_quoted('LOCALEDOMAIN', gettext_domain)
+
+if have_sys_time_h and have_time_h
+  config_h.set('TIME_WITH_SYS_TIME', 1)
+else
+  config_h.set('TIME_WITH_SYS_TIME', 0)
+endif
+
+if have_sys_time_h
+  config_h.set('HAVE_SYS_TIME_H', 1)
+else
+  config_h.set('HAVE_SYS_TIME_H', 0)
+endif
+
+if have_locale_h
+  config_h.set('HAVE_LOCALE_H', 1)
+else
+  config_h.set('HAVE_LOCALE_H', 0)
+endif
+
 config_h.set('__UNUSED__', '__attribute__((unused))')
 config_dir = include_directories('.')
 
