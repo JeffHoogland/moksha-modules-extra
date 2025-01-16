@@ -13,10 +13,6 @@ if not cc.has_function('sqrt')
   error('The required function sqrt() is not available.')
 endif
 
-if not cc.has_function('strdup')
-  error('The required function strdup() is not available.')
-endif
-
 #### Enlightenment ####
 dep_e = dependency('enlightenment')
 e_modules_dir = dep_e.get_variable('modules')

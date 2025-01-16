@@ -9,6 +9,10 @@ gettext_domain = 'e-module-' + meson.project_name()
 ### Checks for library functions.
 cc = meson.get_compiler('c')
 
+if not cc.has_function('strdup')
+  error('The required function strdup() is not available.')
+endif
+
 ### Unsure if this is necessary. This check was in the congigure.ac file
 c_library = cc.find_library('c', required: false)
 posix_library = cc.find_library('posix', required: false)
