@@ -417,9 +417,9 @@ e_modapi_init(E_Module *m)
 #if HAVE_LOCALE_H
    setlocale(LC_ALL, "");
 #endif
-   snprintf(buf, sizeof(buf), "%s/locale", m->dir);
-   bindtextdomain(PACKAGE, buf);
-   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
    conf_item_edd = E_CONFIG_DD_NEW("TClock_Config_Item", Config_Item);
 #undef T
