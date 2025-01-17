@@ -1,11 +1,19 @@
-#define D_(str) dgettext(PACKAGE, str)
-
 #ifndef E_MOD_MAIN_H
 #define E_MOD_MAIN_H
 
 #include <e.h>
 #include <Efreet.h>
 
+#include "config.h"
+#ifdef HAVE_GETTEXT
+# include <libintl.h>
+# define D_(string) dgettext(LOCALEDOMAIN, string)
+#else
+# define bindtextdomain(domain,dir)
+# define bind_textdomain_codeset(domain,codeset)
+# define D_(string) (string)
+#endif
+#define N_(string) (string)
 
 typedef struct _Config      Config;
 typedef struct _Config_Item Config_Item;

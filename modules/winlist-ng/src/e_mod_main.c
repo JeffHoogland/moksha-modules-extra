@@ -76,11 +76,9 @@ EAPI void *
 e_modapi_init(E_Module *m)
 {
    char buf[4096];
-
-   /* Location of message catalogs for localization */
-   snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
-   bindtextdomain(PACKAGE, buf);
-   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
    conf_item_edd = E_CONFIG_DD_NEW("Ngw_Config_Item", Config_Item);
 #undef T
