@@ -1,8 +1,8 @@
 # Portuguese translation for the Alarm Module.
-# This file is put in the public domain.
-#
+# Copyright (C) YEAR Bodhi Linux
+# This file is distributed under the same license as the alarm package.
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2025.
 # Adaptado ao acordo ortográfico de 1990
 #
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-22 19:44-0500\n"
-"PO-Revision-Date: 2024-11-25 11:44+0000\n"
+"PO-Revision-Date: 2025-01-17 16:24+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: src/e_mod_config.c:52
 msgid "Alarm Configuration"
@@ -330,9 +330,8 @@ msgstr ""
 "foram removidos<br>Desculpe o incómodo<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
-msgstr "Versão do módulo de alarme "
+msgstr "Versão do módulo de alarme"
 
 #: src/e_mod_main.c:1054
 #, c-format
