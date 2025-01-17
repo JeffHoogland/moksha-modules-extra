@@ -7,9 +7,6 @@ add_project_arguments('-D__UNUSED__=__attribute__((unused))', language: 'c')
 
 gettext_domain = 'e-module-' + meson.project_name()
 
-### Checks for library functions.
-cc = meson.get_compiler('c')
-
 if not cc.has_function('strdup')
   error('The required function strdup() is not available.')
 endif

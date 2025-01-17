@@ -34,7 +34,6 @@ config_dir = include_directories('.')
 dep_intl = []
 if get_option('nls')
    config_h.set('HAVE_GETTEXT', '1')
-   cc = meson.get_compiler('c')
    dep_intl = cc.find_library('intl', required : false)
    subdir('po')
 endif
