@@ -19,12 +19,28 @@ lib_install_dir = join_paths(mod_install_dir, e_module_arch)
 #### config.h ####
 config_h = configuration_data()
 config_h.set_quoted('PACKAGE', meson.project_name())
+config_h.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
+config_h.set_quoted('LOCALEDOMAIN', gettext_domain)
 config_h.set('__UNUSED__', '__attribute__((unused))')
 config_dir = include_directories('.')
 
+#### i18n ####
+dep_intl = []
+if get_option('nls')
+   config_h.set('HAVE_GETTEXT', '1')
+   cc = meson.get_compiler('c')
+   dep_intl = cc.find_library('intl', required : false)
+   subdir('po')
+endif
+
 #### module.desktop ####
-install_data('module.desktop',
-  install_dir : mod_install_dir
+i18n.merge_file(
+  input: 'module.desktop.in',
+  output: 'module.desktop',
+  type: 'desktop',
+  po_dir: 'po',
+  install: true,
+  install_dir: mod_install_dir
 )
 
 ##### edje_cc binary compiler tool

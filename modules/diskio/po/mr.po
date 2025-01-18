@@ -1,0 +1,29 @@
+# Marathi translations for diskio package.
+# This file is put in the public domain.
+#
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: diskio\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-18 17:43-0500\n"
+"PO-Revision-Date: 2025-01-18 17:43-0500\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: Marathi\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:282
+msgid "DiskIO"
+msgstr ""
+
+#: src/e_mod_main.c:352
+msgid "DiskIO Configuration Updated"
+msgstr ""
+
+#: src/e_mod_main.c:390
+msgid "Settings"
+msgstr ""

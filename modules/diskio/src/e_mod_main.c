@@ -56,6 +56,10 @@ e_modapi_init(E_Module *m)
 {
    char buf[PATH_MAX];
 
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
+
    snprintf(buf, sizeof(buf), "%s/e-module-diskio.edj", m->dir);
 
    conf_item_edd = E_CONFIG_DD_NEW("Config_Item", Config_Item);
