@@ -1,1 +1,3 @@
 This module is a port of the e16 epplet E-Screenshot by Tom Gilbert.
+
+Emprint is a necessary run-time dependency (located in this repo at lib/emprint).
