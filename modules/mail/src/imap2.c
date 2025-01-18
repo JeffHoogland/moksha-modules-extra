@@ -315,8 +315,8 @@ _mail_imap_server_data (void *data __UNUSED__, int type __UNUSED__, void *event)
         while (pos < (size - 1))
           {
             if ((*(reply + pos) == '\r') && (*(reply + pos + 1) == '\n'))
-             data2 = reply + pos + 2;
-             pos++;
+              data2 = reply + pos + 2;
+            pos++;
           }
         ic->prev.size = size - (data2 - reply);
         ic->prev.data = malloc (ic->prev.size);
