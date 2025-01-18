@@ -10,6 +10,7 @@ Name[fr]=Sélecteur
 Name[gl]=Selector de xanelas
 Name[hu]=Ablak választó
 Name[pt]=Seletor de janelas
+Name[sk]=Výber okien
 Name[ru]=Выбор окна
 Icon=e-module-winselector
 X-Enlightenment-ModuleType=utils
@@ -24,6 +25,7 @@ Comment[it]=Questo modulo fornisce accesso a tutte le finestre tramite menù.
 Comment[gl]=Este módulo proporciona un acceso a tódalas xanelas a través dun menú.
 Comment[hu]=Ez a modul elérhetõséget biztosít számunkra az összes megnyitott ablakhoz, amelyeket egy listába rendez.
 Comment[pt]=Módulo que disponibiliza o acesso a um menu com todas as janelas.
+Comment[sk]=Modul poskytuje prístup ku všetkým oknám cez menu.
 Comment[ru]=Модуль предоставляет доступ ко всем открытым окнам.
 
 
