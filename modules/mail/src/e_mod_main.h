@@ -10,9 +10,9 @@
 # define D_(string) (string)
 #endif
 
+#ifndef PRINT_LOTS_OF_DEBUG
 #define PRINT_LOTS_OF_DEBUG 0
-
-//int start;
+#endif
 
 typedef enum 
 {
