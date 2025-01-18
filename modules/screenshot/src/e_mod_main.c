@@ -80,9 +80,9 @@ e_modapi_init(E_Module *m)
 #if HAVE_LOCALE_H
    setlocale(LC_ALL, "");
 #endif
-   snprintf(buf, sizeof(buf), "%s/locale", m->dir);
-   bindtextdomain(PACKAGE, buf);
-   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
    snprintf(buf, sizeof(buf), "%s/e-module-screenshot.edj", m->dir);
 
