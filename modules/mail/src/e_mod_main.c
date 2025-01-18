@@ -418,11 +418,9 @@ EAPI E_Module_Api e_modapi = {
 EAPI void *
 e_modapi_init (E_Module * m)
 {
-  char buf[PATH_MAX];
-
-  snprintf (buf, sizeof (buf), "%s/locale", e_module_dir_get (m));
-  bindtextdomain (PACKAGE, buf);
-  bind_textdomain_codeset (PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
   conf_box_edd = E_CONFIG_DD_NEW ("Mail_Box_Config", Config_Box);
 #undef T
