@@ -1,5 +1,23 @@
-To install Enlightenment Photo module, just do
+To build using meson
+====================
+meson setup build
+cd build
+ninja
+ninja install
 
-./autogen.sh
-make
-make install
+
+Or without chdir
+================
+meson setup build
+ninja -C build
+ninja -C build install
+
+
+Uninstall
+=========
+ninja -C build uninstall
+
+
+Clean build
+===========
+rm -rf build/

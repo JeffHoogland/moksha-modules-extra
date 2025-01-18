@@ -40,11 +40,9 @@ static void _theme_shutdown(void);
 EAPI void *
 e_modapi_init(E_Module *m)
 {
-   char buf[4096];
-
-   snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(m));
-   bindtextdomain(PACKAGE, buf);
-   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
    photo = E_NEW(Photo, 1);
    photo->module = m;

@@ -75,7 +75,7 @@ int photo_config_init(void)
                         "Your settings were removed<br>"
                         "Sorry for the inconvenience<br><br>"
                         "(%d -> %d)"), photo->config->version, CONFIG_VERSION);
-             e_module_dialog_show(photo->module, D_("Photo Module version " MODULE_VERSION), buf);
+             e_module_dialog_show(photo->module, D_("Photo Module version "), buf);
              photo->config = NULL;
           }
         else
@@ -89,7 +89,7 @@ int photo_config_init(void)
                              "Your settings were removed<br>"
                              "Sorry for the inconvenience<br><br>"
                              "(%d ->%d)"), photo->config->version, CONFIG_VERSION);
-                  e_module_dialog_show(photo->module, D_("Photo Module version " MODULE_VERSION), buf);
+                  e_module_dialog_show(photo->module, D_("Photo Module version "), buf);
                   photo->config = NULL;
                }
           }
