@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: Marathi\n"
 "Language: mr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_main.c:282
@@ -26,4 +26,4 @@ msgstr ""
 
 #: src/e_mod_main.c:390
 msgid "Settings"
-msgstr ""
+msgstr "मॉडेल"
