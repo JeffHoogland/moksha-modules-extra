@@ -12,6 +12,7 @@ int photo_config_init(void)
 {
    Eina_List *l;
    char buf[4096];
+   char *pictures_dir;
 
    _photo_dir_edd = E_CONFIG_DD_NEW("Photo_Local_Dir", Picture_Local_Dir);
 #undef T
@@ -114,9 +115,11 @@ int photo_config_init(void)
         c->bg_color_g  = PHOTO_BG_COLOR_G_DEFAULT;
         c->bg_color_b  = PHOTO_BG_COLOR_B_DEFAULT;
         c->bg_color_a  = PHOTO_BG_COLOR_A_DEFAULT;
+        pictures_dir   = photo_util_pictures_dir();
         c->local.dirs  = eina_list_append(c->local.dirs,
-                                         photo_picture_local_dir_new((char *)e_module_dir_get(photo->module),
-                                                                     1, 0));
+                                          photo_picture_local_dir_new(pictures_dir,
+                                          1, 0));
+        E_FREE(pictures_dir);
         c->local.auto_reload = PICTURE_LOCAL_AUTO_RELOAD_DEFAULT;
         c->local.popup = PICTURE_LOCAL_POPUP_DEFAULT;
         c->local.thumb_msg = 1;

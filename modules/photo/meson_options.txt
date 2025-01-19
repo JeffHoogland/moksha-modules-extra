@@ -6,3 +6,7 @@ option('nls',
        type: 'boolean',
        value: true,
        description: 'enable localization (default=true)')
+
+option('photos',
+       type       : 'string',
+       description: 'Initial Photo folder, defaults to XDG_PICTURES_DIR')

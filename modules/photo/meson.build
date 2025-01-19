@@ -26,6 +26,7 @@ lib_install_dir = join_paths(mod_install_dir, e_module_arch)
 #### config.h ####
 config_h = configuration_data()
 config_h.set_quoted('PACKAGE', meson.project_name())
+config_h.set_quoted('PHOTO_LOCAL_DIR', get_option('photos'))
 config_h.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
 config_h.set_quoted('LOCALEDOMAIN', gettext_domain)
 config_h.set('__UNUSED__', '__attribute__((unused))')
