@@ -1,15 +1,16 @@
-# Bulgarian translations for cpu package.
+# Bulgarian translations for the Cpu module.
 # This file is put in the public domain.
+#
 #  <luchezar.petkov@gmail.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cpu 0.0.1\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 08:24+0100\n"
+"Project-Id-Version: cpu\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 05:01-0500\n"
 "PO-Revision-Date: 2009-09-11 09:10+0000\n"
 "Last-Translator: vlood <vlood.vassilev@gmail.com>\n"
-"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"Language-Team: Bulgarian\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

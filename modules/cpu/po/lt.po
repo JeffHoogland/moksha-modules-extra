@@ -1,13 +1,13 @@
-# Lithuanian translation for enlightenment
-# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# Lithuanian translations for the Cpu module.
+# This file is put in the public domain.
+#
+# Joshas <Unknown>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 08:24+0100\n"
+"Project-Id-Version: cpu\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 05:01-0500\n"
 "PO-Revision-Date: 2010-01-11 20:22+0000\n"
 "Last-Translator: Joshas <Unknown>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"

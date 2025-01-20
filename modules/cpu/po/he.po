@@ -1,12 +1,13 @@
-# Hebrew translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Hebrew translations for the Cpu module.
+# This file is put in the public domain.
+#
 # Yaron <sh.yaron@gmail.com>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 08:24+0100\n"
+"Project-Id-Version: cpu\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 05:01-0500\n"
 "PO-Revision-Date: 2008-11-29 21:06+0000\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"

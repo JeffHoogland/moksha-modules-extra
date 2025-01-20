@@ -1,12 +1,14 @@
-# Czech translation.
+# Czech translations for the Cpu module.
 # This file is put in the public domain.
+#
 # quaker66@gmail.com
 # Vít Pelčák <vit@pelcak.org>, 2011.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Cpu\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 08:24+0100\n"
+"Project-Id-Version: cpu\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 05:01-0500\n"
 "PO-Revision-Date: 2011-10-15 13:18+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
