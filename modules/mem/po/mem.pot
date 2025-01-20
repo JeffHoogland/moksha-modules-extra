@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mem\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 15:35-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_config.c:43
+msgid "Mem Settings"
+msgstr ""
+
+#: src/e_mod_config.c:92
+msgid "General Settings"
+msgstr ""
+
+#: src/e_mod_config.c:94
+msgid "Always Show Text"
+msgstr ""
+
+#: src/e_mod_config.c:96
+msgid "Show Text On Mouse Over"
+msgstr ""
+
+#: src/e_mod_config.c:98
+msgid "Show Text As Percent"
+msgstr ""
+
+#: src/e_mod_config.c:102
+msgid "Ignore Buffers"
+msgstr ""
+
+#: src/e_mod_config.c:105
+msgid "Ignore Cached"
+msgstr ""
+
+#: src/e_mod_config.c:109
+msgid "Check Interval:"
+msgstr ""
+
+#: src/e_mod_config.c:112
+#, c-format
+msgid "%1.0f seconds"
+msgstr ""
+
+#: src/e_mod_main.c:107
+msgid "Mem"
+msgstr ""
+
+#: src/e_mod_main.c:161
+msgid "Settings"
+msgstr ""
