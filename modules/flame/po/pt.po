@@ -1,82 +1,82 @@
-# Portuguese translation for flame
-# This file is distributed under the same license as the enlightenment package.
+# Portuguese translations for the Flame module.
+# This file is put in the public domain.
+#
 # Adaptado ao acordo ortográfico de 1990
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: flame\n"
-"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
-"POT-Creation-Date: 2010-10-17 11:00-0700\n"
+"Project-Id-Version: Flame\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2021-05-19 15:45+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese <>\n"
+"Language-Team: Portuguese\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.3\n"
-"Language: pt\n"
 
-#: ../src/e_mod_main.c:61
+#: src/e_mod_main.c:60
 msgid "Look"
 msgstr "Aspeto"
 
-#: ../src/e_mod_main.c:63
+#: src/e_mod_main.c:62
 msgid "Flame"
 msgstr "Chama"
 
-#: ../src/e_mod_config.c:47
+#: src/e_mod_config.c:47
 msgid "Flame Configuration"
 msgstr "Configuração da chama"
 
-#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:177
+#: src/e_mod_config.c:94 src/e_mod_config.c:178
 msgid "Flame Color"
 msgstr "Cor da chama"
 
-#: ../src/e_mod_config.c:96
+#: src/e_mod_config.c:96
 msgid "Gold"
 msgstr "Dourada"
 
-#: ../src/e_mod_config.c:98
+#: src/e_mod_config.c:98
 msgid "Fire"
 msgstr "Fogo"
 
-#: ../src/e_mod_config.c:100
+#: src/e_mod_config.c:100
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ../src/e_mod_config.c:102
+#: src/e_mod_config.c:102
 msgid "Matrix"
 msgstr "Matrix"
 
-#: ../src/e_mod_config.c:104
+#: src/e_mod_config.c:104
 msgid "Ice"
 msgstr "Gelo"
 
-#: ../src/e_mod_config.c:106
+#: src/e_mod_config.c:106
 msgid "White"
 msgstr "Branco"
 
-#: ../src/e_mod_config.c:108
+#: src/e_mod_config.c:108
 msgid "Custom"
 msgstr "Personalizada"
 
-#: ../src/e_mod_config.c:179
+#: src/e_mod_config.c:180
 msgid "Red Amount"
 msgstr "Intensidade de vermelhos"
 
-#: ../src/e_mod_config.c:182 ../src/e_mod_config.c:189
-#: ../src/e_mod_config.c:196
+#: src/e_mod_config.c:183 src/e_mod_config.c:190 src/e_mod_config.c:197
 #, c-format
 msgid "%1.0f"
 msgstr "%1.0f"
 
-#: ../src/e_mod_config.c:186
+#: src/e_mod_config.c:187
 msgid "Blue Amount"
 msgstr "Intensidade de azuis"
 
-#: ../src/e_mod_config.c:193
+#: src/e_mod_config.c:194
 msgid "Green Amount"
 msgstr "Intensidade de verdes"

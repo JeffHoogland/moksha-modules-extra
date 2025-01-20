@@ -1,24 +1,26 @@
-# Czech translation.
+# Czech translation translations for the Flame module.
 # This file is put in the public domain.
+#
 # quaker66@gmail.com
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Flame\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-30 10:18+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2011-01-04 18:56+0100\n"
 "Last-Translator: quaker66 <quaker66@gmail.com>\n"
-"Language-Team: Czech <quaker66@gmail.com>\n"
+"Language-Team: Czech\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:61
+#: src/e_mod_main.c:60
 msgid "Look"
 msgstr "Vzhled"
 
-#: src/e_mod_main.c:63
+#: src/e_mod_main.c:62
 msgid "Flame"
 msgstr "Plamen"
 
@@ -74,4 +76,3 @@ msgstr "Množství modré"
 #: src/e_mod_config.c:194
 msgid "Green Amount"
 msgstr "Množství zelené"
-
