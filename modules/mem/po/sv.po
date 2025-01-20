@@ -1,14 +1,15 @@
-# Swedish translation of Mem module for E17.
+# Swedish translation for the Memory module.
 # This file is put in the public domain.
+#
 # Anders Trobäck <enlightenment@troback.com>, 2006.
 # Daniel Nylander <yeager@ubuntu.com>, 2009.
 #
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mem module for E17 N/A\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2023-07-07 21:12+0200\n"
+"Project-Id-Version: Mem\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 15:35-0500\n"
 "PO-Revision-Date: 2009-01-10 12:40+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish\n"
@@ -34,32 +35,32 @@ msgstr "Visa alltid text"
 msgid "Show Text On Mouse Over"
 msgstr "Visa text när musen är över"
 
-#: src/e_mod_config.c:99
+#: src/e_mod_config.c:98
 msgid "Show Text As Percent"
 msgstr "Visa text som procent"
 
-#: src/e_mod_config.c:104
+#: src/e_mod_config.c:102
 msgid "Ignore Buffers"
 msgstr "Ignorera buffertar"
 
-#: src/e_mod_config.c:108
+#: src/e_mod_config.c:105
 msgid "Ignore Cached"
 msgstr "Ignorera cachat"
 
-#: src/e_mod_config.c:112
+#: src/e_mod_config.c:109
 msgid "Check Interval:"
 msgstr "Kontrollintervall:"
 
-#: src/e_mod_config.c:115
+#: src/e_mod_config.c:112
 #, c-format
 msgid "%1.0f seconds"
 msgstr ""
 
-#: src/e_mod_main.c:108
+#: src/e_mod_main.c:107
 msgid "Mem"
 msgstr "Minne"
 
-#: src/e_mod_main.c:162
+#: src/e_mod_main.c:161
 #, fuzzy
 msgid "Settings"
 msgstr "Allmänna inställningar"
