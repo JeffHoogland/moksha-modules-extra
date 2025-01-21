@@ -23,7 +23,7 @@ msgstr "DiscoES"
 
 #: src/e_mod_main.c:352
 msgid "DiskIO Configuration Updated"
-msgstr ""
+msgstr "Configuración actualizada de DiscoES"
 
 #: src/e_mod_main.c:390
 msgid "Settings"
