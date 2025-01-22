@@ -20,9 +20,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_config.c:43
-#, fuzzy
 msgid "Mem Settings"
-msgstr "Preferencias generales"
+msgstr "Preferencias Mem"
 
 #: src/e_mod_config.c:92
 msgid "General Settings"
@@ -62,9 +61,8 @@ msgid "Mem"
 msgstr "Mem"
 
 #: src/e_mod_main.c:161
-#, fuzzy
 msgid "Settings"
-msgstr "Preferencias generales"
+msgstr "Preferencias"
 
 #~ msgid "Mem Configuration"
 #~ msgstr "Configuración de Mem"

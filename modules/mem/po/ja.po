@@ -62,18 +62,3 @@ msgstr ""
 #, fuzzy
 msgid "Settings"
 msgstr "一般の設定"
-
-#~ msgid "Mem Configuration"
-#~ msgstr "mem の設定"
-
-#~ msgid "Configuration"
-#~ msgstr "設定"
-
-#~ msgid "Enlightenment Mem Monitor Module"
-#~ msgstr "Enlightenment メモリ監視モジュール"
-
-#~ msgid "This module is used to monitor memory."
-#~ msgstr "これはメモリを監視するためのモジュールです."
-
-#~ msgid "Show Graph"
-#~ msgstr "グラフを表示する"

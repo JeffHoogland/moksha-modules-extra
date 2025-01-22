@@ -19,9 +19,8 @@ msgstr ""
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/e_mod_config.c:43
-#, fuzzy
 msgid "Mem Settings"
-msgstr "Opće Postavke"
+msgstr "Mem Postavke"
 
 #: src/e_mod_config.c:92
 msgid "General Settings"
@@ -61,9 +60,8 @@ msgid "Mem"
 msgstr "Mem"
 
 #: src/e_mod_main.c:161
-#, fuzzy
 msgid "Settings"
-msgstr "Opće Postavke"
+msgstr "Postavke"
 
 #~ msgid "Mem Configuration"
 #~ msgstr "Konfiguracija Mem"

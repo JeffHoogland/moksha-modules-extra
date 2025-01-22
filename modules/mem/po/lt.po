@@ -64,9 +64,3 @@ msgstr "Atmintis"
 #, fuzzy
 msgid "Settings"
 msgstr "Bendros nuostatos"
-
-#~ msgid "Mem Configuration"
-#~ msgstr "Atminties konfigūracija"
-
-#~ msgid "Configuration"
-#~ msgstr "Konfigūracija"
