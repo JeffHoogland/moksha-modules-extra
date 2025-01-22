@@ -1,12 +1,13 @@
-# Dutch translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Dutch translation for the Rain module.
+# This file is put in the public domain.
+#
+# Yentl <y.v.t@scarlet.be>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-03 18:24+0100\n"
+"Project-Id-Version: rain\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 15:21-0500\n"
 "PO-Revision-Date: 2009-07-16 17:49+0000\n"
 "Last-Translator: Yentl <y.v.t@scarlet.be>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -43,13 +44,10 @@ msgstr "Motregen"
 msgid "Downpour"
 msgstr "Stortbui"
 
-#: src/e_mod_main.c:33
+#: src/e_mod_main.c:32
 msgid "Look"
 msgstr ""
 
-#: src/e_mod_main.c:35
+#: src/e_mod_main.c:34
 msgid "Rain"
 msgstr "Regen"
-
-#~ msgid "Appearance"
-#~ msgstr "Weergave"

@@ -1,15 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
+# Japanese translation for the Rain module.
 # This file is put in the public domain.
+#
 # Yasufumi Haga <yasufumi.haga@nifty.com>, 2006
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Rain\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-03 18:24+0100\n"
+"Project-Id-Version: rain\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 15:21-0500\n"
 "PO-Revision-Date: 2010-01-19 16:45+0000\n"
 "Last-Translator: jugger Yamamoto <Unknown>\n"
-"Language-Team: none\n"
+"Language-Team: Japanese\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,23 +46,10 @@ msgstr "小雨"
 msgid "Downpour"
 msgstr "大雨"
 
-#: src/e_mod_main.c:33
+#: src/e_mod_main.c:32
 msgid "Look"
 msgstr ""
 
-#: src/e_mod_main.c:35
+#: src/e_mod_main.c:34
 msgid "Rain"
 msgstr "雨"
-
-#~ msgid "Appearance"
-#~ msgstr "外観"
-
-#~ msgid "Enlightenment Rain Module"
-#~ msgstr "Enlightenment rain モジュール"
-
-#~ msgid ""
-#~ "This is a simple module to display some rain on the desktop.<br>It can "
-#~ "display clouds too, if you like clouds."
-#~ msgstr ""
-#~ "デスクトップにちょっと雨を降らせる簡単なモジュールです.<br>なんなら雨雲も"
-#~ "出せますよ."

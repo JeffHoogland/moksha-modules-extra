@@ -1,16 +1,16 @@
-# translation of rain.po to Slovenian
-# Slovenian translation of Rain_sl.
+#Slovenian translation for the Rain module.
 # This file is put in the public domain.
 #
 # r1to <renato.rener@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: rain\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-03 18:24+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 15:21-0500\n"
 "PO-Revision-Date: 2011-02-22 08:50+0100\n"
 "Last-Translator: r1to <renato.rener@gmail.com>\n"
-"Language-Team: Slovenian <sl@li.org>\n"
+"Language-Team: Slovenian\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,10 +47,10 @@ msgstr "Rosi"
 msgid "Downpour"
 msgstr "Lije"
 
-#: src/e_mod_main.c:33
+#: src/e_mod_main.c:32
 msgid "Look"
 msgstr "Izgled"
 
-#: src/e_mod_main.c:35
+#: src/e_mod_main.c:34
 msgid "Rain"
 msgstr "Dež"

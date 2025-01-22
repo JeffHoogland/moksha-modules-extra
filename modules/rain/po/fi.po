@@ -1,15 +1,16 @@
-# Rain module (e17), Finnish translation
+# Finnish translation for the Rain module.
 # This file is put in the public domain.
+# 
 # Jani väyrynen <janivayrynen@gmail.com>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Rain module (e17)\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-03 18:24+0100\n"
+"Project-Id-Version: rain\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 15:21-0500\n"
 "PO-Revision-Date: 2008-01-23 01:50+0200\n"
 "Last-Translator: Jani väyrynen <janivayrynen@gmail.com>\n"
-"Language-Team: Finnish <janivayrynen@gmail.com>\n"
+"Language-Team: Finnish\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,13 +44,10 @@ msgstr "Normaali sade"
 msgid "Downpour"
 msgstr "Kaatosade"
 
-#: src/e_mod_main.c:33
+#: src/e_mod_main.c:32
 msgid "Look"
 msgstr ""
 
-#: src/e_mod_main.c:35
+#: src/e_mod_main.c:34
 msgid "Rain"
 msgstr "Sade"
-
-#~ msgid "Appearance"
-#~ msgstr "Ulkonäkö"
