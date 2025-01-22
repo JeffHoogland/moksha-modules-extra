@@ -1,15 +1,16 @@
 # Tclock module (e17), Finnish translation
 # This file is put in the public domain.
+#
 # Jani väyrynen <janivayrynen@gmail.com>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Tclock module (e17)\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 09:44+0100\n"
+"Project-Id-Version: tclock\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 08:09-0500\n"
 "PO-Revision-Date: 2008-01-23 01:50+0200\n"
 "Last-Translator: Jani väyrynen <janivayrynen@gmail.com>\n"
-"Language-Team: Finnish <janivayrynen@gmail.com>\n"
+"Language-Team: Finnish\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

@@ -1,15 +1,16 @@
 # Hebrew translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# This file is put in the public domain.
+#
 # Yaron <sh.yaron@gmail.com>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 09:44+0100\n"
+"Project-Id-Version: tclock\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 08:09-0500\n"
 "PO-Revision-Date: 2009-09-11 08:37+0000\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <he@li.org>\n"
+"Language-Team: Hebrew\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

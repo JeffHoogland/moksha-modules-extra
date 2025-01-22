@@ -1,37 +1,38 @@
-# Russian translation of tclock module for E17.
+# Russian translation for the Tclock Module.
 # This file is put in the public domain.
+#
 # Danny Moshnakov <admin@moshnakov.org>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: tclock 0.1\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 09:44+0100\n"
+"Project-Id-Version: tclock\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 08:09-0500\n"
 "PO-Revision-Date: 2009-10-03 16:23+0000\n"
 "Last-Translator: dpetrov83 <Unknown>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=koi8-r\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2009-11-12 04:52+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/e_mod_config.c:42
 msgid "Tclock Settings"
-msgstr "Настройки Tclock"
+msgstr "п²п╟я│я┌я─п╬п╧п╨п╦ Tclock"
 
 #: src/e_mod_config.c:101
 msgid "Top"
-msgstr "Верхняя строчка"
+msgstr "п▓п╣я─я┘п╫я▐я▐ я│я┌я─п╬я┤п╨п╟"
 
 #: src/e_mod_config.c:102
 msgid "Show Top Line"
-msgstr "Показывать верхнюю строчку"
+msgstr "п÷п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╡п╣я─я┘п╫я▌я▌ я│я┌я─п╬я┤п╨я┐"
 
 #: src/e_mod_config.c:109
 msgid "Consult strftime(3) for format syntax"
-msgstr "Смотрите strftime(3) для синтакса формата"
+msgstr "п║п╪п╬я┌я─п╦я┌п╣ strftime(3) п╢п╩я▐ я│п╦п╫я┌п╟п╨я│п╟ я└п╬я─п╪п╟я┌п╟"
 
 #: src/e_mod_config.c:112
 msgid "Add time offset (e.g.+2)"
@@ -39,19 +40,19 @@ msgstr ""
 
 #: src/e_mod_config.c:123
 msgid "Bottom"
-msgstr "Нижняя строчка"
+msgstr "п²п╦п╤п╫я▐я▐ я│я┌я─п╬я┤п╨п╟"
 
 #: src/e_mod_config.c:125
 msgid "Show Bottom Line"
-msgstr "Показывать нижнюю строчку"
+msgstr "п÷п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╫п╦п╤п╫я▌я▌ я│я┌я─п╬я┤п╨я┐"
 
 #: src/e_mod_config.c:135
 msgid "Tool Tip"
-msgstr "Подсказка"
+msgstr "п÷п╬п╢я│п╨п╟п╥п╨п╟"
 
 #: src/e_mod_config.c:137
 msgid "Show Tooltip"
-msgstr "Показывать подсказку"
+msgstr "п÷п╬п╨п╟п╥я▀п╡п╟я┌я▄ п©п╬п╢я│п╨п╟п╥п╨я┐"
 
 #: src/e_mod_config.c:148
 msgid "Font size"
@@ -60,12 +61,12 @@ msgstr ""
 #: src/e_mod_config.c:150
 #, fuzzy
 msgid "Top line"
-msgstr "Показывать верхнюю строчку"
+msgstr "п÷п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╡п╣я─я┘п╫я▌я▌ я│я┌я─п╬я┤п╨я┐"
 
 #: src/e_mod_config.c:155
 #, fuzzy
 msgid "Bottom line"
-msgstr "Показывать нижнюю строчку"
+msgstr "п÷п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╫п╦п╤п╫я▌я▌ я│я┌я─п╬я┤п╨я┐"
 
 #: src/e_mod_config.c:163
 msgid "Label color"
@@ -81,34 +82,34 @@ msgstr "TClock"
 
 #: src/e_mod_main.c:181
 msgid "Settings"
-msgstr "Настройки"
+msgstr "п²п╟я│я┌я─п╬п╧п╨п╦"
 
 #~ msgid "Tclock Configuration"
-#~ msgstr "Конфигурация Tclock"
+#~ msgstr "п п╬п╫я└п╦пЁя┐я─п╟я├п╦я▐ Tclock"
 
 #~ msgid "Configuration"
-#~ msgstr "Конфигурация"
+#~ msgstr "п п╬п╫я└п╦пЁя┐я─п╟я├п╦я▐"
 
 #~ msgid "Resolution"
-#~ msgstr "Резолюция"
+#~ msgstr "п═п╣п╥п╬п╩я▌я├п╦я▐"
 
 #~ msgid "1 Minute"
-#~ msgstr "1 Минута"
+#~ msgstr "1 п°п╦п╫я┐я┌п╟"
 
 #~ msgid "1 Second"
-#~ msgstr "1 Секунда"
+#~ msgstr "1 п║п╣п╨я┐п╫п╢п╟"
 
 #~ msgid "Date"
-#~ msgstr "Дата"
+#~ msgstr "п■п╟я┌п╟"
 
 #~ msgid "Show Date"
-#~ msgstr "Показывать Дату"
+#~ msgstr "п÷п╬п╨п╟п╥я▀п╡п╟я┌я▄ п■п╟я┌я┐"
 
 #~ msgid "Time"
-#~ msgstr "Время"
+#~ msgstr "п▓я─п╣п╪я▐"
 
 #~ msgid "Simple Digital Clock"
-#~ msgstr "Простые Дигитальные Часы"
+#~ msgstr "п÷я─п╬я│я┌я▀п╣ п■п╦пЁп╦я┌п╟п╩я▄п╫я▀п╣ п╖п╟я│я▀"
 
 #~ msgid "Displays a digital clock on the desktop"
-#~ msgstr "Отображает дигитальные часы на рабочем столе"
+#~ msgstr "п·я┌п╬п╠я─п╟п╤п╟п╣я┌ п╢п╦пЁп╦я┌п╟п╩я▄п╫я▀п╣ я┤п╟я│я▀ п╫п╟ я─п╟п╠п╬я┤п╣п╪ я│я┌п╬п╩п╣"

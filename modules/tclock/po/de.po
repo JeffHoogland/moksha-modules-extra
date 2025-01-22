@@ -1,16 +1,15 @@
-# translation of tclock.
-# Copyright (C) 2008 Enlightenment development team
-# This file is distributed under the same license as the tclock package.
+# translation for the Tclock Module.
+# This file is put in the public domain.
+#
 # Andreas Volz <andreas.volz@tux-style.de>, 2008.
 # MixCool <lars.thoms@mixcool.de>, 2009.
 # Fabian Nowak <timystery@arcor.de>, 2010.
 #
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: tclock 0.3.2\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 09:44+0100\n"
+"Project-Id-Version: tclock\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 08:09-0500\n"
 "PO-Revision-Date: 2009-11-07 18:19+0000\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German\n"
