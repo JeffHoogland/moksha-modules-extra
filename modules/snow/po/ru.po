@@ -1,15 +1,16 @@
-# Russian translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Russian translation for the Snow Module.
+# This file is put in the public domain.
+# 
+# Roman Azarenko aka BasicXP <x12ozmouse@ya.ru>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-03 18:27+0100\n"
+"Project-Id-Version: snow\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 10:11-0500\n"
 "PO-Revision-Date: 2009-04-17 18:46+0000\n"
 "Last-Translator: Roman Azarenko aka BasicXP <x12ozmouse@ya.ru>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,11 +44,11 @@ msgstr "Средний снег"
 msgid "Dense"
 msgstr "Сильный снег"
 
-#: src/e_mod_main.c:37
+#: src/e_mod_main.c:36
 msgid "Look"
 msgstr ""
 
-#: src/e_mod_main.c:39
+#: src/e_mod_main.c:38
 msgid "Snow"
 msgstr "Снег"
 

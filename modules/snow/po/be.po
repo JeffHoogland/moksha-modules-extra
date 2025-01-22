@@ -1,12 +1,13 @@
 # Belarusian translation of Snow module.
 # This file is put in the public domain.
+# 
 # R0bur <robursw@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Snow\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-03 18:27+0100\n"
+"Project-Id-Version: snow\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 10:11-0500\n"
 "PO-Revision-Date: 2023-07-23 20:00+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -43,11 +44,11 @@ msgstr "Сярэдні"
 msgid "Dense"
 msgstr "Густы"
 
-#: src/e_mod_main.c:37
+#: src/e_mod_main.c:36
 msgid "Look"
 msgstr ""
 
-#: src/e_mod_main.c:39
+#: src/e_mod_main.c:38
 msgid "Snow"
 msgstr "Снег"
 
