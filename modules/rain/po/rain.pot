@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Enlightenment development team
-# This file is distributed under the same license as the rain package.
+# This file is put in the public domain.
+# 
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: rain 0.0.3\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-03 18:24+0100\n"
+"Project-Id-Version: rain\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 15:21-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: LANGUAGE\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_config.c:42
@@ -45,10 +45,10 @@ msgstr ""
 msgid "Downpour"
 msgstr ""
 
-#: src/e_mod_main.c:33
+#: src/e_mod_main.c:32
 msgid "Look"
 msgstr ""
 
-#: src/e_mod_main.c:35
+#: src/e_mod_main.c:34
 msgid "Rain"
 msgstr ""
