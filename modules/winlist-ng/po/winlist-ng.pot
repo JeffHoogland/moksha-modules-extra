@@ -1,31 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Enlightenment development team
-# This file is distributed under the same license as the winlist-ng package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is put in the public domain.
+#
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: winlist-ng 0.1.0\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-12 21:06+0100\n"
+"Project-Id-Version: winlist-ng\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 18:14-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:176
+#: src/e_mod_main.c:174
 msgid "Winlist NG"
 msgstr ""
 
-#: src/e_mod_main.c:213
+#: src/e_mod_main.c:211
 msgid "Winlist NG Module"
 msgstr ""
 
-#: src/e_mod_main.c:214
+#: src/e_mod_main.c:212
 msgid "a replacement for the standard winlist"
 msgstr ""
 

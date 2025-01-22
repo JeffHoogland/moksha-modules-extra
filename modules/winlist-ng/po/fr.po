@@ -1,12 +1,12 @@
-# French translation for Winlist-NG.
-# This file is put in the public domain.
-# similar <similar@orange.fr>, 2022.
+#French #This file is put in the public domain.
+#
+#similar <similar@orange.fr>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: winlist-ng\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-12 21:06+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 18:14-0500\n"
 "PO-Revision-Date: 2022-08-07 17:16+0200\n"
 "Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
 "Language-Team: French\n"
@@ -18,15 +18,15 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: src/e_mod_main.c:176
+#: src/e_mod_main.c:174
 msgid "Winlist NG"
 msgstr "Winlist NG"
 
-#: src/e_mod_main.c:213
+#: src/e_mod_main.c:211
 msgid "Winlist NG Module"
 msgstr "Module Winlist NG"
 
-#: src/e_mod_main.c:214
+#: src/e_mod_main.c:212
 msgid "a replacement for the standard winlist"
 msgstr "une alternative à la liste de commutation standard"
 

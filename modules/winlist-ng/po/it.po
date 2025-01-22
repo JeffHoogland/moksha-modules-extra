@@ -1,29 +1,30 @@
-# Italian translation for E17 winlist-ng module
+# Italian translations for the Winlist-ng Module.
 # This file is put in the public domain.
+#
 # Massimo Maiurana <maiurana@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: winlist-ng\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-12 21:06+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 18:14-0500\n"
 "PO-Revision-Date: 2012-08-25 21:57+0200\n"
 "Last-Translator: Massimo Maiurana <maiurana@gmail.com>\n"
-"Language-Team: none\n"
+"Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:176
+#: src/e_mod_main.c:174
 msgid "Winlist NG"
 msgstr "Winlist NG"
 
-#: src/e_mod_main.c:213
+#: src/e_mod_main.c:211
 msgid "Winlist NG Module"
 msgstr "Modulo Winlist NG"
 
-#: src/e_mod_main.c:214
+#: src/e_mod_main.c:212
 msgid "a replacement for the standard winlist"
 msgstr "un'alternativa per la lista finestre standard"
 
