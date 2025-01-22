@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Enlightenment development team
-# This file is distributed under the same license as the trash package.
+# This file is put in the public domain.
+#
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: trash 0.0.6\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-08 17:58+0100\n"
+"Project-Id-Version: trash\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 05:23-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_config.c:44
@@ -51,7 +51,7 @@ msgstr ""
 
 #: src/e_mod_main.c:394
 msgid ""
-"<b>Remove all the files and folders from the trash?</><br>All the elements "
+"<b>Remove all the files and folders from the trash?</b><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
 
