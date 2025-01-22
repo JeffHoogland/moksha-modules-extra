@@ -1,15 +1,16 @@
-# Slovak translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Czech translation for the Trash module.
+# This file is put in the public domain.
+#
+# Stefan Uram <uram@szm.sk>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: trash\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-08 17:58+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 05:23-0500\n"
 "PO-Revision-Date: 2016-11-21 22:19+0100\n"
 "Last-Translator: Stefan Uram <uram@szm.sk>\n"
-"Language-Team: slovak <stefan@bodhi.sk>\n"
+"Language-Team: Slovakian\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,12 +52,13 @@ msgid "Show trash"
 msgstr "Zobraz obsah koše"
 
 #: src/e_mod_main.c:394
+#, fuzzy
 msgid ""
-"<b>Remove all the files and folders from the trash?</><br>All the elements "
+"<b>Remove all the files and folders from the trash?</b><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
-"<b>Odstranit všechny soubory a složky z koše?</b><br>Všechny položky v koši budou "
-"nenávratne vymazány!!!"
+"<b>Odstranit všechny soubory a složky z koše?</b><br>Všechny položky v koši "
+"budou nenávratne vymazány!!!"
 
 #: src/e_mod_main.c:396 src/e_mod_main.c:488
 msgid "Cancel"
@@ -76,9 +78,9 @@ msgid ""
 "filesystem.<br><br>The files will be deleted FOREVER!!!"
 msgstr ""
 "Nekteré soubory nemohou být přesunuty do koše <br>protože nejsou uloženy v "
-"lokálním souborovém systému. <br><br>Tyto soubory budou nenávratne vymazány!!!"
+"lokálním souborovém systému. <br><br>Tyto soubory budou nenávratne "
+"vymazány!!!"
 
 #: src/e_mod_main.c:488
 msgid "Delete Files"
 msgstr "Vymazat soubory"
-

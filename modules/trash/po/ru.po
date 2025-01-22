@@ -1,12 +1,13 @@
 # Russian translation of Trash module.
 # This file is put in the public domain.
+#
 # R0bur <robursw@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: trash\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-08 17:58+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 05:23-0500\n"
 "PO-Revision-Date: 2023-07-24 20:30+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian\n"
@@ -50,8 +51,9 @@ msgid "Show trash"
 msgstr "Показать корзину"
 
 #: src/e_mod_main.c:394
+#, fuzzy
 msgid ""
-"<b>Remove all the files and folders from the trash?</><br>All the elements "
+"<b>Remove all the files and folders from the trash?</b><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
 "<b>Удалить из корзины все файлы и папки?</b><br>Всё содержимое корзины будет "

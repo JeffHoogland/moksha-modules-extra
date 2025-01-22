@@ -1,12 +1,13 @@
-# Portuguese translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Portuguese translation for the Trash module.
+# This file is put in the public domain.
+#
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: trash\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-08 17:58+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 05:23-0500\n"
 "PO-Revision-Date: 2021-05-19 20:35+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
@@ -53,8 +54,9 @@ msgid "Show trash"
 msgstr "Mostrar o lixo"
 
 #: src/e_mod_main.c:394
+#, fuzzy
 msgid ""
-"<b>Remove all the files and folders from the trash?</><br>All the elements "
+"<b>Remove all the files and folders from the trash?</b><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
 "<b>Remover todos os ficheiros e pastas do lixo?</b><br>Todos os elementos "

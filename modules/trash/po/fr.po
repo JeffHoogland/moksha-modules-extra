@@ -1,4 +1,4 @@
-# French translation for Trash.
+# French translation for the Trash module.
 # This file is put in the public domain.
 #
 # similar <similar@orange.fr>, 2021.
@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Trash module\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-08 17:58+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 05:23-0500\n"
 "PO-Revision-Date: 2021-07-18 08:37+0200\n"
 "Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
 "Language-Team: French\n"
@@ -53,8 +53,9 @@ msgid "Show trash"
 msgstr "Afficher la corbeille"
 
 #: src/e_mod_main.c:394
+#, fuzzy
 msgid ""
-"<b>Remove all the files and folders from the trash?</><br>All the elements "
+"<b>Remove all the files and folders from the trash?</b><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
 msgstr ""
 "<b>Supprimer tous les fichiers de la corbeille ?</b><br>Tous les éléments "
