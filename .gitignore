@@ -1,4 +1,5 @@
 *~
+*debian
 *.ddeb
 *.buildinfo
 *.changes
