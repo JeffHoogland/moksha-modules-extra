@@ -51,6 +51,7 @@ endif
 
 #### module sources ####
 subdir('src')
+subdir('images')
 
 #### write config file ####
 configure_file(output: 'config.h', configuration: config_h)
