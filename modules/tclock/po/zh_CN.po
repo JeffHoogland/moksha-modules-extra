@@ -60,12 +60,10 @@ msgid "Font size"
 msgstr ""
 
 #: src/e_mod_config.c:150
-#, fuzzy
 msgid "Top line"
 msgstr "显示上边线"
 
 #: src/e_mod_config.c:155
-#, fuzzy
 msgid "Bottom line"
 msgstr "显示下边线"
 

@@ -61,12 +61,10 @@ msgid "Font size"
 msgstr ""
 
 #: src/e_mod_config.c:150
-#, fuzzy
 msgid "Top line"
 msgstr "Mostra línea superior"
 
 #: src/e_mod_config.c:155
-#, fuzzy
 msgid "Bottom line"
 msgstr "Mostrar línea inferior"
 

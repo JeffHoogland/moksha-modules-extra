@@ -59,12 +59,10 @@ msgid "Font size"
 msgstr ""
 
 #: src/e_mod_config.c:150
-#, fuzzy
 msgid "Top line"
 msgstr "Lijn van de bovenkant weergeven"
 
 #: src/e_mod_config.c:155
-#, fuzzy
 msgid "Bottom line"
 msgstr "Lijn van de onderkant weergeven"
 

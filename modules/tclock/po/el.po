@@ -57,12 +57,10 @@ msgid "Font size"
 msgstr ""
 
 #: src/e_mod_config.c:150
-#, fuzzy
 msgid "Top line"
 msgstr "Εμφάνιση πάνω γραμμής"
 
 #: src/e_mod_config.c:155
-#, fuzzy
 msgid "Bottom line"
 msgstr "Εμφάνιση κάτω γραμμής"
 

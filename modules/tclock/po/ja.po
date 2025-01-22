@@ -59,12 +59,10 @@ msgid "Font size"
 msgstr ""
 
 #: src/e_mod_config.c:150
-#, fuzzy
 msgid "Top line"
 msgstr "上段を表示する"
 
 #: src/e_mod_config.c:155
-#, fuzzy
 msgid "Bottom line"
 msgstr "下段を表示する"
 

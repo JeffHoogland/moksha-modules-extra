@@ -34,7 +34,6 @@ msgid "Show Top Line"
 msgstr "أعرض السطر العلوي"
 
 #: src/e_mod_config.c:109
-#, fuzzy
 msgid "Consult strftime(3) for format syntax"
 msgstr "أدخل strftime(3) لتشكيل الهجاء"
 
@@ -63,12 +62,10 @@ msgid "Font size"
 msgstr ""
 
 #: src/e_mod_config.c:150
-#, fuzzy
 msgid "Top line"
 msgstr "أعرض السطر العلوي"
 
 #: src/e_mod_config.c:155
-#, fuzzy
 msgid "Bottom line"
 msgstr "أعرض السطر السفلي"
 
