@@ -54,7 +54,6 @@ msgid "Show trash"
 msgstr "Prullenbak tonen"
 
 #: src/e_mod_main.c:394
-#, fuzzy
 msgid ""
 "<b>Remove all the files and folders from the trash?</b><br>All the elements "
 "currently in the trash will be irreparably lost!!!"
