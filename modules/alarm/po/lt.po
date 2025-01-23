@@ -113,7 +113,6 @@ msgid "Tuesday"
 msgstr "Antradienis"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "Trečiadienis"
 
@@ -329,7 +328,6 @@ msgstr ""
 "žadintuvai buvo pašalinti<br>Atsiprašome už nepatogumus<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Žadintuvo modulio versija "
 
@@ -344,6 +342,3 @@ msgstr ""
 "hilight><br><br>Jūsų žadintuvo modulio konfigūracija<br>buvo pakeista "
 "senesne<br>Jūsų nuostatos ir žadintuvai buvo pašalinti<br>Atsiprašome už "
 "nepatogumus<br><br>(%d -> %d)"
-
-#~ msgid "Configuration"
-#~ msgstr "Konfigūracija"

@@ -112,7 +112,6 @@ msgid "Tuesday"
 msgstr "星期二"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "星期三"
 
@@ -315,7 +314,6 @@ msgstr ""
 "<br>您的设置和闹钟已被删除<br>很抱歉给您带来不便<br><br>(%d ->%d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "闹钟模块版本 "
 
@@ -328,6 +326,3 @@ msgid ""
 msgstr ""
 "<hilight>闹钟模块：配置已降级</hilight><br><br>您的闹钟模块的配置<br>已降级"
 "<br>您的设置和闹钟已被删除<br>很抱歉给您带来不便<br><br>(%d ->%d)"
-
-#~ msgid "Configuration"
-#~ msgstr "配置"

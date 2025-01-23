@@ -110,7 +110,6 @@ msgid "Tuesday"
 msgstr "火曜日"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "水曜日"
 
@@ -324,7 +323,6 @@ msgstr ""
 "た.<br>ご了承下さい.<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "アラームモジュールのバージョン "
 
@@ -338,6 +336,3 @@ msgstr ""
 "<hilight>アラームモジュール: 古い設定に戻っています.</hilight><br><br>アラー"
 "ムモジュールの設定が古い設定に戻っています.<br>そのため設定内容とアラームは削"
 "除されました.<br>ご了承下さい.<br><br>(%d ->%d)"
-
-#~ msgid "Configuration"
-#~ msgstr "設定"

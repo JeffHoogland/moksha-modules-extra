@@ -111,7 +111,6 @@ msgid "Tuesday"
 msgstr "Wtorek"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "Środa"
 
@@ -326,7 +325,6 @@ msgstr ""
 "alarmy były usunięte<br>Przeprasamy za niedogodności<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Wersja modułu alarmu "
 
@@ -340,6 +338,3 @@ msgstr ""
 "<hilight>Moduł alarmu : konfiguracja dezaktualizowana</hilight><br><br>Twoja "
 "konfiguracja modułu alarmu<br>była dezaktualizowana<br>Twoje ustawienia i "
 "alarmy były usunięte<br>Przeprasamy za niedogodności<br><br>(%d -> %d)"
-
-#~ msgid "Configuration"
-#~ msgstr "Konfiguracja"

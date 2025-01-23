@@ -113,7 +113,6 @@ msgid "Tuesday"
 msgstr "Τρίτη"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "Τετάρτη"
 
@@ -311,7 +310,6 @@ msgid ""
 msgstr ""
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Έκδοση Αρθρώματος Ειδοποίησης "
 
@@ -322,6 +320,3 @@ msgid ""
 "configuration of Alarm module<br>has been downgraded<br>Your settings and "
 "alarms were removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
 msgstr ""
-
-#~ msgid "Configuration"
-#~ msgstr "Ρύθμιση"

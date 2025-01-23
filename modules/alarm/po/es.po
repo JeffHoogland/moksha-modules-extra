@@ -112,7 +112,6 @@ msgid "Tuesday"
 msgstr "Martes"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "Miercoles"
 
@@ -327,7 +326,6 @@ msgstr ""
 "alarmas se han eliminado<br>Disculpe los inconvenientes<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Versión del módulo de alarma "
 
@@ -341,6 +339,3 @@ msgstr ""
 "<hilight>Módulo de alarma: configuración revertida</hilight><br><br>Su "
 "configuracion del módulo de alarma<br>ha sido revertida<br>Su configuración "
 "y alarmas se han eliminado<br>Disculpe los inconvenientes<br><br>(%d ->%d)"
-
-#~ msgid "Configuration"
-#~ msgstr "Configuración"

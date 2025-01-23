@@ -345,6 +345,3 @@ msgstr ""
 "configuration du module d'alarme<br>a du être remise à son état antérieur."
 "<br>Vos réglages et alarmes ont été supprimés.<br>Désolé pour le "
 "désagrément<br><br>(%d ->%d)."
-
-#~ msgid "Configuration"
-#~ msgstr "Configuration de l'alarme"

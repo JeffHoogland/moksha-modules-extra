@@ -113,7 +113,6 @@ msgid "Tuesday"
 msgstr "kedd"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "szerda"
 
@@ -329,7 +328,6 @@ msgstr ""
 "beállítások el lettek távolítva. <br>Elnézést kérünk.<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Emlékeztető modul verziója"
 
@@ -343,6 +341,3 @@ msgstr ""
 "<hilight>Emlékeztető modul: Beállítások viszaállítva</hilight><br><br>Az "
 "emlékeztető modulod beállításai<br> vissza lettek állítva.<br> A korábbi "
 "beállítások el lettek távolítva. <br>Elnézést kérünk.<br><br>(%d -> %d)"
-
-#~ msgid "Configuration"
-#~ msgstr "Beállítás"

@@ -113,7 +113,6 @@ msgid "Tuesday"
 msgstr "Salı"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "Çarşamba"
 
@@ -329,7 +328,6 @@ msgstr ""
 "kaldırıldı<br>Rahatsızlık için özür dileriz<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Alarm modülü sürümü "
 
@@ -343,6 +341,3 @@ msgstr ""
 "<hilight>Alarm modülü : Yapılandırma düşürüldü</hilight><br><br>Alarm modülü "
 "yapılandırmanız<br>düşürüldü<br>Ayarlarınız ve alarmlarınız "
 "silindi<br>Rahatsızlıktan dolayı üzgünüz<br><br>(%d ->%d)"
-
-#~ msgid "Configuration"
-#~ msgstr "Yapılandırma"

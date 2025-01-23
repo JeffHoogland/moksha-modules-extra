@@ -113,7 +113,6 @@ msgid "Tuesday"
 msgstr "Mardo"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "Merkredo"
 
@@ -329,7 +328,6 @@ msgstr ""
 "forigitaj<br>Bonvole pardonu pro la ĝeno<br><br>(%d → %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Versio de la modulo Vekhorloĝo "
 

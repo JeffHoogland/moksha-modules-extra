@@ -327,7 +327,6 @@ msgstr ""
 "upomínky byly odebrány.<br>Omlouváme se za vzniklé potíže.<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Verze modulu upomínky"
 

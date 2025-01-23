@@ -116,7 +116,6 @@ msgid "Tuesday"
 msgstr "الثلاثاء"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "اﻷربعاء"
 
@@ -328,7 +327,6 @@ msgstr ""
 "> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "إصدار وحدة المنبه"
 
@@ -342,6 +340,3 @@ msgstr ""
 "<hilight>وحدة المنبه : اﻹعدادات خُفّضت</hilight><br><br>إعداداتك لوحدة "
 "المنبه<br>خُفّضت<br>إعداداتك و كذلك المنبهات أُزيلت<br>نأسف ﻹزعاجك<br><br>(%d -"
 ">%d)"
-
-#~ msgid "Configuration"
-#~ msgstr "الإعدادات"

@@ -112,8 +112,7 @@ msgstr "Maandag"
 msgid "Tuesday"
 msgstr "Dinsdag"
 
-#: src/e_mod_config_alarm.c:222
-#, fuzzy
+#: src/e_mod_config_alarm.c:22
 msgid "Wednesday"
 msgstr "Woensdag"
 
@@ -329,7 +328,6 @@ msgstr ""
 "alarmen zijn verwijderd<br>Sorry voor het ongemak<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Alarm Module Versie "
 
@@ -343,6 +341,3 @@ msgstr ""
 "<hilight>Alarm module gedowngrade</hilight><br><br>Jouw configuratie van de "
 "Alarm Module<br>is gedowngrade<br>Jouw instellingen en alarmen zijn "
 "verwijderd<br>Sorry voor het ongemak<br><br>(%d -> %d)"
-
-#~ msgid "Configuration"
-#~ msgstr "Configuratie"

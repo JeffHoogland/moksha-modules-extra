@@ -111,7 +111,6 @@ msgid "Tuesday"
 msgstr "Tiistai"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "Keskiviikko"
 
@@ -328,7 +327,6 @@ msgstr ""
 "%d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Hälytysmoduulin versio "
 
@@ -343,6 +341,3 @@ msgstr ""
 "hilight><br><br>Hälytysmoduulisi asetukset<br>on alipäivitetty<br>Asetuksesi "
 "ja hälytyksesi poistettiin<br>Pahoittelut aiheutetusta vaivasta<br><br>(%d -"
 "> %d)"
-
-#~ msgid "Configuration"
-#~ msgstr "Asetukset"

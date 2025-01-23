@@ -113,7 +113,6 @@ msgid "Tuesday"
 msgstr "화요일"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "수요일"
 
@@ -328,7 +327,6 @@ msgstr ""
 "죄송합니다<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "알람 모듈 버전 "
 
@@ -342,6 +340,3 @@ msgstr ""
 "<hilight>알람 모듈 : 구성 다운그레이드됨</hilight><br><br>알람 모듈의 구성이"
 "<br>업그레이드되었습니다<br>설정과 알람이 모두 제거되었습니다<br>불편을 드려 "
 "죄송합니다<br><br>(%d -> %d)"
-
-#~ msgid "Configuration"
-#~ msgstr "구성"

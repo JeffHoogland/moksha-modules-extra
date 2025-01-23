@@ -115,7 +115,6 @@ msgid "Tuesday"
 msgstr "Dimarts"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "Dimecres"
 
@@ -152,7 +151,6 @@ msgid "Tomorrow"
 msgstr "Demà"
 
 #: src/e_mod_config_alarm.c:284
-#, fuzzy
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
 "in the information / schedule of your alarm"
@@ -332,7 +330,6 @@ msgstr ""
 "i alarmes han estat borrades<br>Disculpa els inconvenients<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Versió Mòdul Alarma"
 
@@ -347,6 +344,3 @@ msgstr ""
 "configuració del mòdul d'Alarma<br>ha estat desactualitzada<br>Les "
 "preferències i alarmes seran borrades<br>Disculpa els "
 "inconvenients<br><br>(%d -> %d)"
-
-#~ msgid "Configuration"
-#~ msgstr "Configuració"

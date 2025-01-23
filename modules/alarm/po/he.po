@@ -110,8 +110,7 @@ msgstr "יום שני"
 msgid "Tuesday"
 msgstr "יום שלישי"
 
-#: src/e_mod_config_alarm.c:222
-#, fuzzy
+#: src/e_mod_config_alarm.c:222#, fuzzy
 msgid "Wednesday"
 msgstr "יום רביעי"
 
@@ -323,7 +322,6 @@ msgstr ""
 "הנעימות<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "מודול התזכורות גירסה "
 
@@ -337,6 +335,3 @@ msgstr ""
 "<hilight>מודול התזכורות : גירסת התצורה נסוגה</hilight><br><br>גרסת תצורת "
 "מודול התזכורות שלך<br>נסוגה<br>ההגדרות והתזכורות שלך הוסרו<br>סליחה על אי "
 "הנעימות<br><br>(%d ->%d)"
-
-#~ msgid "Configuration"
-#~ msgstr "תצורה"

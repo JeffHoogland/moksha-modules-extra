@@ -116,7 +116,6 @@ msgid "Tuesday"
 msgstr "Вівторок"
 
 #: src/e_mod_config_alarm.c:222
-#, fuzzy
 msgid "Wednesday"
 msgstr "Середа"
 
@@ -332,7 +331,6 @@ msgstr ""
 "вилучено<br>Вибачте за незручності<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
-#, fuzzy
 msgid "Alarm Module version"
 msgstr "Версія будильника"
 
@@ -347,5 +345,3 @@ msgstr ""
 "налаштування будильника<br>понижено версією<br>Ваші налаштування і "
 "будильники вилучено<br>Вибачте за незручності<br><br>(%d -> %d)"
 
-#~ msgid "Configuration"
-#~ msgstr "Налаштування"
