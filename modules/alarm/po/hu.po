@@ -2,12 +2,12 @@
 # This file is put in the public domain.
 #
 # Lisovszki Sándor <lisovszki@gmail.com>, 2008.
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: hu\n"
+"Project-Id-Version: alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-22 19:44-0500\n"
+"POT-Creation-Date: 2025-01-22 22:17-0500\n"
 "PO-Revision-Date: 2008-07-18 17:23+0200\n"
 "Last-Translator: Lisovszki Sándor <lisovszki@gmail.com>\n"
 "Language-Team: Hungarian\n"
@@ -75,7 +75,7 @@ msgid "Alarm Configuration : Setup an alarm"
 msgstr "Emlékeztető beállítás : Emlékeztető hozzáadása"
 
 #: src/e_mod_config_alarm.c:186
-msgid "Informations"
+msgid "Information"
 msgstr "Információk"
 
 #: src/e_mod_config_alarm.c:190

@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Alarm\n"
+"Project-Id-Version: alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-22 19:44-0500\n"
+"POT-Creation-Date: 2025-01-22 22:17-0500\n"
 "PO-Revision-Date: 2009-11-01 15:04+0000\n"
 "Last-Translator: Bjørn Olav Samdal <bjornsam@ulrik.uio.no>\n"
 "Language-Team: Norwegian Bokmal\n"
@@ -75,7 +75,7 @@ msgid "Alarm Configuration : Setup an alarm"
 msgstr "Alarmoppsett : Lag nytt alarmoppsett"
 
 #: src/e_mod_config_alarm.c:186
-msgid "Informations"
+msgid "Information"
 msgstr "Informasjoner"
 
 #: src/e_mod_config_alarm.c:190

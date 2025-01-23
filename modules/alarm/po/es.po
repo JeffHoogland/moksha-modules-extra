@@ -6,15 +6,15 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Alarm\n"
+"Project-Id-Version: alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-22 19:44-0500\n"
+"POT-Creation-Date: 2025-01-22 22:17-0500\n"
 "PO-Revision-Date: 2009-04-11 14:01+0000\n"
 "Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_config.c:52
@@ -74,7 +74,7 @@ msgid "Alarm Configuration : Setup an alarm"
 msgstr "Configuración de alarma: crear una alarma"
 
 #: src/e_mod_config_alarm.c:186
-msgid "Informations"
+msgid "Information"
 msgstr "Informaciones"
 
 #: src/e_mod_config_alarm.c:190
