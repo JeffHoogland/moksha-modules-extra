@@ -7,6 +7,6 @@ custom_target('ng.edj',
               input      : 'ng.edc',
               output     : 'ng.edj',
               command    : cmd,
-              install_dir: join_paths(mod_install_dir, 'themes'),
+              install_dir: mod_install_dir,
               install    : true
              )
