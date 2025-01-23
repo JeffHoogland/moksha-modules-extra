@@ -1,5 +1,5 @@
-# Spanish translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Spanish translation for the Net Module.
+# This file is put in the public domain.
 #
 # chilicuil <Unknown>, 2008.
 # Francisco Perez Lopez, 2008.
@@ -7,9 +7,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 09:52+0100\n"
+"Project-Id-Version: net\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2009-04-11 14:34+0000\n"
 "Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
 "Language-Team: Spanish\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_configure.c:44
-#, fuzzy
+
 msgid "Net Module Settings"
 msgstr "Configuración del módulo Net"
 
@@ -64,7 +64,6 @@ msgid "Net"
 msgstr "Net"
 
 #: src/e_mod_net.c:161
-#, fuzzy
 msgid "Settings"
 msgstr "Preferencias de dispositivos"
 

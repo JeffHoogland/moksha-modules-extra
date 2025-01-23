@@ -1,12 +1,16 @@
-# translation of el.po to Greek
+# Greek translation for the Net Module.
+# This file is put in the public domain.
+#
+# unknown, 2008
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: el\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 09:52+0100\n"
+"Project-Id-Version: net\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2008-11-09 15:36+0200\n"
-"Last-Translator: \n"
-"Language-Team: Greek <en@li.org>\n"
+"Last-Translator: unknown\n"
+"Language-Team: Greek\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +21,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 
 #: src/e_mod_configure.c:44
-#, fuzzy
+
 msgid "Net Module Settings"
 msgstr "Ρύθμιση Αρθρώματος Δικτύου"
 
@@ -62,7 +66,6 @@ msgid "Net"
 msgstr "Δίκτυο"
 
 #: src/e_mod_net.c:161
-#, fuzzy
 msgid "Settings"
 msgstr "Ρυθμίσεις Συσκευής"
 

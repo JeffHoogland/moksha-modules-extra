@@ -1,22 +1,23 @@
-# Russian translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Russian translation for the Net Module.
+# This file is put in the public domain.
+#
+# Lucky <lucky1.data@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 09:52+0100\n"
+"Project-Id-Version: net\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2009-06-01 07:56+0000\n"
 "Last-Translator: Lucky <lucky1.data@gmail.com>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_configure.c:44
-#, fuzzy
+
 msgid "Net Module Settings"
 msgstr "Настройка модуля сети"
 
@@ -61,7 +62,6 @@ msgid "Net"
 msgstr "Сеть"
 
 #: src/e_mod_net.c:161
-#, fuzzy
 msgid "Settings"
 msgstr "Настройки оборудования"
 

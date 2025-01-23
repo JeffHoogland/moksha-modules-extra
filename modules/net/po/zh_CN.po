@@ -1,24 +1,23 @@
-# Simplified Chinese translation of net in e17
-# Copyright (C) 2008-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the e17 net module.
+# Simplified Chinesetranslation for the Net Module.
+# This file is put in the public domain.
 #
 # Aron Xu <aronmalache@163.com>, 2008, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Net e17\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 09:52+0100\n"
+"Project-Id-Version: net\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2009-06-05 22:30+0000\n"
 "Last-Translator: Aron Xu <aronmalache@163.com>\n"
-"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
+"Language-Team: Chinese/Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_configure.c:44
-#, fuzzy
+
 msgid "Net Module Settings"
 msgstr "网络模块配置"
 
@@ -63,7 +62,6 @@ msgid "Net"
 msgstr "Net"
 
 #: src/e_mod_net.c:161
-#, fuzzy
 msgid "Settings"
 msgstr "设备设置"
 

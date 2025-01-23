@@ -1,16 +1,16 @@
-# Lithuanian translation for enlightenment
-# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# Lithuanian translation for the Net Module.
+# This file is put in the public domain.
+#
+# Joshas, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-24 09:52+0100\n"
+"Project-Id-Version: net\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2010-01-20 20:57+0000\n"
 "Last-Translator: Joshas <Unknown>\n"
-"Language-Team: Lithuanian <lt@li.org>\n"
+"Language-Team: Lithuanian\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: src/e_mod_configure.c:44
-#, fuzzy
+
 msgid "Net Module Settings"
 msgstr "Tinklo modulio konfigūracija"
 
@@ -64,7 +64,6 @@ msgid "Net"
 msgstr "Tinklas"
 
 #: src/e_mod_net.c:161
-#, fuzzy
 msgid "Settings"
 msgstr "Įrenginio nuostatos"
 
