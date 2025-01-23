@@ -1,15 +1,17 @@
-# Slovak translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Slovakian translation for Photo module.
+# This file is put in the public domain.
+#
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 # Štefan Uram <thewaiter@bodhilinux.com>, 2024.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Photo\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-26 08:26+0100\n"
+"Project-Id-Version: photo\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2011-10-15 13:00+0200\n"
 "Last-Translator: Štefan Uram <thewaiter@bodhilinux.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language-Team: Slovakian\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,40 +19,40 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/e_mod_main.c:56 src/e_mod_main.c:63 src/e_mod_main.c:70
-#: src/e_mod_main.c:77 src/e_mod_main.c:84 src/e_mod_main.c:91
+#: src/e_mod_main.c:54 src/e_mod_main.c:61 src/e_mod_main.c:68
+#: src/e_mod_main.c:75 src/e_mod_main.c:82 src/e_mod_main.c:89
 msgid "Photo Module"
 msgstr "Foto rámik"
 
-#: src/e_mod_main.c:56
+#: src/e_mod_main.c:54
 msgid "E Canvas init failed!"
 msgstr "Načítanie E plátna zlyhalo!"
 
-#: src/e_mod_main.c:63
+#: src/e_mod_main.c:61
 msgid "Theme init failed!"
 msgstr "Načítanie témy zlyhalo!"
 
-#: src/e_mod_main.c:70
+#: src/e_mod_main.c:68
 msgid "Config init failed"
 msgstr "Načítanie konfigurácie zlyhalo"
 
-#: src/e_mod_main.c:77
+#: src/e_mod_main.c:75
 msgid "Picture subsystem init failed"
 msgstr "Načítanie podsystému obrázkov zlyhalo"
 
-#: src/e_mod_main.c:84
+#: src/e_mod_main.c:82
 msgid "Popup warn subsystem init failed"
 msgstr "Načítanie podsystému varovania zlyhalo"
 
-#: src/e_mod_main.c:91
+#: src/e_mod_main.c:89
 msgid "Popup info subsystem init failed"
 msgstr "Načítanie informačného podsystému zlyhalo"
 
-#: src/e_mod_main.c:184
+#: src/e_mod_main.c:182
 msgid "Photo"
 msgstr "Fotografia"
 
-#: src/photo_config.c:72
+#: src/photo_config.c:73
 #, c-format
 msgid ""
 "<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
@@ -61,11 +63,11 @@ msgstr ""
 "konfigurácia modulu<br>bola aktualizovaná.<br>Vaše nastavenie bolo vymazané."
 "<br>Ospravedlňujeme sa za vzniknuté problémy<br><br>(%d -> %d)"
 
-#: src/photo_config.c:78 src/photo_config.c:92
+#: src/photo_config.c:79 src/photo_config.c:93
 msgid "Photo Module version "
 msgstr "Verzia foto modulu "
 
-#: src/photo_config.c:86
+#: src/photo_config.c:87
 #, c-format
 msgid ""
 "<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "

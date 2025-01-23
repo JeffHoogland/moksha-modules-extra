@@ -1,59 +1,57 @@
-# Photo module (e17), Simplified Chinese translation
-# Copyright (C) 2008-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the e17 photo module.
+# Simplified Chinese translation translation for Photo module.
+# This file is put in the public domain.
+#
 #
 # Aron Xu <aronmalache@163.com>, 2008.
 # Careone <zzbusagain@yahoo.com.cn>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Photo module (e17)\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-26 08:26+0100\n"
+"Project-Id-Version: photo\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2012-12-22 06:13+0800\n"
 "Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
-"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Language-Team: Chinese (simplified)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:56 src/e_mod_main.c:63 src/e_mod_main.c:70
-#: src/e_mod_main.c:77 src/e_mod_main.c:84 src/e_mod_main.c:91
+#: src/e_mod_main.c:54 src/e_mod_main.c:61 src/e_mod_main.c:68
+#: src/e_mod_main.c:75 src/e_mod_main.c:82 src/e_mod_main.c:89
 msgid "Photo Module"
 msgstr "Photo 模块"
 
-#: src/e_mod_main.c:56
-#, fuzzy
+#: src/e_mod_main.c:54
 msgid "E Canvas init failed!"
 msgstr "画布初始化失败！"
 
-#: src/e_mod_main.c:63
-#, fuzzy
+#: src/e_mod_main.c:61
 msgid "Theme init failed!"
 msgstr "主题初始化失败！"
 
-#: src/e_mod_main.c:70
+#: src/e_mod_main.c:68
 msgid "Config init failed"
 msgstr "配置初始化失败！"
 
-#: src/e_mod_main.c:77
+#: src/e_mod_main.c:75
 msgid "Picture subsystem init failed"
 msgstr "图像子系统初始化失败！"
 
-#: src/e_mod_main.c:84
+#: src/e_mod_main.c:82
 msgid "Popup warn subsystem init failed"
 msgstr "弹出警告子系统初始化失败！"
 
-#: src/e_mod_main.c:91
+#: src/e_mod_main.c:89
 msgid "Popup info subsystem init failed"
 msgstr "弹出信息子系统初始化失败！"
 
-#: src/e_mod_main.c:184
+#: src/e_mod_main.c:182
 msgid "Photo"
 msgstr "照片"
 
-#: src/photo_config.c:72
+#: src/photo_config.c:73
 #, c-format
 msgid ""
 "<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
@@ -63,11 +61,11 @@ msgstr ""
 "<hilight>图像模块：配置已升级</hilight><br><br>你的图像模块配置<br>已升级<br>"
 "你的设置已被清除<br>非常抱歉给您带来不便<br><br>(%d -> %d)"
 
-#: src/photo_config.c:78 src/photo_config.c:92
+#: src/photo_config.c:79 src/photo_config.c:93
 msgid "Photo Module version "
 msgstr "图像模块版本 "
 
-#: src/photo_config.c:86
+#: src/photo_config.c:87
 #, c-format
 msgid ""
 "<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
@@ -300,7 +298,6 @@ msgid "Photo Module Error"
 msgstr "图像模板错误"
 
 #: src/photo_item.c:1037
-#, fuzzy
 msgid "Picture Import Error"
 msgstr "图片目录"
 
@@ -354,7 +351,6 @@ msgid "Photo Module Information"
 msgstr "图像模块信息"
 
 #: src/photo_picture_local.c:601
-#, fuzzy
 msgid ""
 "<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
 "a <hilight>background task</hilight>.<br>It can take a while, but after, "

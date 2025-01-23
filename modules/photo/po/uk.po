@@ -1,58 +1,59 @@
+# Ukrainian translation for the Photo module.
 # This file is put in the public domain.
+#
 # Daniel Korostil <ted.korostiled@gmail.com>, 2009.
 # Korostil Daniel <ted.korostiled@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: photo.HEAD\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-26 08:26+0100\n"
+"Project-Id-Version: photo\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2011-02-06 09:43+0300\n"
 "Last-Translator: Korostil Daniel <ted.korostiled@gmail.com>\n"
-"Language-Team: translation@linux.org.ua\n"
+"Language-Team: Ukrainian\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.6.1\n"
 
-#: src/e_mod_main.c:56 src/e_mod_main.c:63 src/e_mod_main.c:70
-#: src/e_mod_main.c:77 src/e_mod_main.c:84 src/e_mod_main.c:91
+#: src/e_mod_main.c:54 src/e_mod_main.c:61 src/e_mod_main.c:68
+#: src/e_mod_main.c:75 src/e_mod_main.c:82 src/e_mod_main.c:89
 msgid "Photo Module"
 msgstr "Світлина"
 
-#: src/e_mod_main.c:56
-#, fuzzy
+#: src/e_mod_main.c:54
 msgid "E Canvas init failed!"
 msgstr "Не вдалось запустити полотно !"
 
-#: src/e_mod_main.c:63
-#, fuzzy
+#: src/e_mod_main.c:61
 msgid "Theme init failed!"
 msgstr "Не вдалось запустити тему !"
 
-#: src/e_mod_main.c:70
+#: src/e_mod_main.c:68
 msgid "Config init failed"
 msgstr "Не вдалось запустити налаштування"
 
-#: src/e_mod_main.c:77
+#: src/e_mod_main.c:75
 msgid "Picture subsystem init failed"
 msgstr "Не вдалось запустити підсистему малюнків"
 
-#: src/e_mod_main.c:84
+#: src/e_mod_main.c:82
 msgid "Popup warn subsystem init failed"
 msgstr "Не вдалось запустити підсистему виринань застережень"
 
-#: src/e_mod_main.c:91
+#: src/e_mod_main.c:89
 msgid "Popup info subsystem init failed"
 msgstr "Не вдалось запустити підсистему виринань інформації"
 
-#: src/e_mod_main.c:184
+#: src/e_mod_main.c:182
 msgid "Photo"
 msgstr "Світлина"
 
-#: src/photo_config.c:72
+#: src/photo_config.c:73
 #, c-format
 msgid ""
 "<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
@@ -63,11 +64,11 @@ msgstr ""
 "світлини<br>оновлено<br>Ваші налаштування вилучено<br>Вибачте за "
 "незручності<br><br>(%d -> %d)"
 
-#: src/photo_config.c:78 src/photo_config.c:92
+#: src/photo_config.c:79 src/photo_config.c:93
 msgid "Photo Module version "
 msgstr "Версія світлини"
 
-#: src/photo_config.c:86
+#: src/photo_config.c:87
 #, c-format
 msgid ""
 "<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
@@ -287,7 +288,7 @@ msgid "Mouse actions"
 msgstr "Дії миші"
 
 #: src/photo_item.c:415 src/photo_item.c:475
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<hilight>File %s doesn't exist.</hilight><br><br>This file is in the picture "
 "list, but it seems you removed<br>it from disk. It can't be set as "
@@ -302,7 +303,6 @@ msgid "Photo Module Error"
 msgstr "Помилка світлини"
 
 #: src/photo_item.c:1037
-#, fuzzy
 msgid "Picture Import Error"
 msgstr "Фототеки"
 
@@ -358,7 +358,6 @@ msgid "Photo Module Information"
 msgstr "Інформація про світлину"
 
 #: src/photo_picture_local.c:601
-#, fuzzy
 msgid ""
 "<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
 "a <hilight>background task</hilight>.<br>It can take a while, but after, "

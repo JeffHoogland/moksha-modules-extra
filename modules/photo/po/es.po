@@ -1,56 +1,55 @@
-# Spanish translation for photo
-# This file is distributed under the same license as the enlightenment package.
+# Spanish translation for Photo module.
+# This file is put in the public domain.
+#
 # DiegoJ <diegojromerolopez@gmail.com>, 2008.
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: photo\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-26 08:26+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2012-11-08 02:06+0100\n"
 "Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
-"Language-Team: Enlightenment Team\n"
+"Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:56 src/e_mod_main.c:63 src/e_mod_main.c:70
-#: src/e_mod_main.c:77 src/e_mod_main.c:84 src/e_mod_main.c:91
+#: src/e_mod_main.c:54 src/e_mod_main.c:61 src/e_mod_main.c:68
+#: src/e_mod_main.c:75 src/e_mod_main.c:82 src/e_mod_main.c:89
 msgid "Photo Module"
 msgstr "Módulo foto"
 
-#: src/e_mod_main.c:56
-#, fuzzy
+#: src/e_mod_main.c:54
 msgid "E Canvas init failed!"
 msgstr "¡Y falló la inicialización del lienzo!"
 
-#: src/e_mod_main.c:63
-#, fuzzy
+#: src/e_mod_main.c:61
 msgid "Theme init failed!"
 msgstr "¡Falló la inicialización del tema!"
 
-#: src/e_mod_main.c:70
+#: src/e_mod_main.c:68
 msgid "Config init failed"
 msgstr "¡Falló la inicialización de configuración!"
 
-#: src/e_mod_main.c:77
+#: src/e_mod_main.c:75
 msgid "Picture subsystem init failed"
 msgstr "¡Falló la inicialización del subsistema de imagen!"
 
-#: src/e_mod_main.c:84
+#: src/e_mod_main.c:82
 msgid "Popup warn subsystem init failed"
 msgstr "¡Falló la inicialización del subsistema de avisos emergentes!"
 
-#: src/e_mod_main.c:91
+#: src/e_mod_main.c:89
 msgid "Popup info subsystem init failed"
 msgstr "Falló la inicialización del subsistema de notificaciones emergentes"
 
-#: src/e_mod_main.c:184
+#: src/e_mod_main.c:182
 msgid "Photo"
 msgstr "Foto"
 
-#: src/photo_config.c:72
+#: src/photo_config.c:73
 #, c-format
 msgid ""
 "<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
@@ -61,11 +60,11 @@ msgstr ""
 "Configuración del módulo de fotos<br>fue actualizada<br>Sus preferencias "
 "fueron eliminadas<br>Disculpe las molestias<br><br>(%d -> %d)"
 
-#: src/photo_config.c:78 src/photo_config.c:92
+#: src/photo_config.c:79 src/photo_config.c:93
 msgid "Photo Module version "
 msgstr "Módulo Photo versión "
 
-#: src/photo_config.c:86
+#: src/photo_config.c:87
 #, c-format
 msgid ""
 "<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
@@ -300,7 +299,6 @@ msgid "Photo Module Error"
 msgstr "Error del módulo de fotos"
 
 #: src/photo_item.c:1037
-#, fuzzy
 msgid "Picture Import Error"
 msgstr "Directorios de imágenes"
 
@@ -356,7 +354,6 @@ msgid "Photo Module Information"
 msgstr "Información del módulo de fotos"
 
 #: src/photo_picture_local.c:601
-#, fuzzy
 msgid ""
 "<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
 "a <hilight>background task</hilight>.<br>It can take a while, but after, "

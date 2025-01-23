@@ -1,56 +1,55 @@
-# Galician translation of Photo
+# Galician translation for Photo module.
 # This file is put in the public domain.
+#
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Photo\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-12-26 08:26+0100\n"
+"Project-Id-Version: photo\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2012-11-07 23:08+0100\n"
 "Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
-"Language-Team: http://trasno.net/ <proxecto@trasno.net>\n"
+"Language-Team: Galicia\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:56 src/e_mod_main.c:63 src/e_mod_main.c:70
-#: src/e_mod_main.c:77 src/e_mod_main.c:84 src/e_mod_main.c:91
+#: src/e_mod_main.c:54 src/e_mod_main.c:61 src/e_mod_main.c:68
+#: src/e_mod_main.c:75 src/e_mod_main.c:82 src/e_mod_main.c:89
 msgid "Photo Module"
 msgstr "Módulo Foto"
 
-#: src/e_mod_main.c:56
-#, fuzzy
+#: src/e_mod_main.c:54
 msgid "E Canvas init failed!"
 msgstr "Fallou a inicialización de E Canvas !"
 
-#: src/e_mod_main.c:63
-#, fuzzy
+#: src/e_mod_main.c:61
 msgid "Theme init failed!"
 msgstr "Fallou a inicialización do tema !"
 
-#: src/e_mod_main.c:70
+#: src/e_mod_main.c:68
 msgid "Config init failed"
 msgstr "Fallou a inicialización da configuración!"
 
-#: src/e_mod_main.c:77
+#: src/e_mod_main.c:75
 msgid "Picture subsystem init failed"
 msgstr "Fallou a inicialización do subsistema de imaxes!"
 
-#: src/e_mod_main.c:84
+#: src/e_mod_main.c:82
 msgid "Popup warn subsystem init failed"
 msgstr "Fallou a inicialización do subsistema de avisos emerxentes!"
 
-#: src/e_mod_main.c:91
+#: src/e_mod_main.c:89
 msgid "Popup info subsystem init failed"
 msgstr "Fallou a inicialización do subsistema de notificacións emerxentes!"
 
-#: src/e_mod_main.c:184
+#: src/e_mod_main.c:182
 msgid "Photo"
 msgstr "Foto"
 
-#: src/photo_config.c:72
+#: src/photo_config.c:73
 #, c-format
 msgid ""
 "<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
@@ -61,11 +60,11 @@ msgstr ""
 "configuración do módulo Foto<br>actualizouse<br>As súas preferencias "
 "elimináronse.<br>Desculpe as molestias<br><br>(%d -> %d)"
 
-#: src/photo_config.c:78 src/photo_config.c:92
+#: src/photo_config.c:79 src/photo_config.c:93
 msgid "Photo Module version "
 msgstr "Versión do módulo Foto"
 
-#: src/photo_config.c:86
+#: src/photo_config.c:87
 #, c-format
 msgid ""
 "<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
@@ -300,7 +299,6 @@ msgid "Photo Module Error"
 msgstr "Erro do módulo Foto"
 
 #: src/photo_item.c:1037
-#, fuzzy
 msgid "Picture Import Error"
 msgstr "Directorio das imaxes"
 
@@ -356,7 +354,6 @@ msgid "Photo Module Information"
 msgstr "Información do Módulo Foto"
 
 #: src/photo_picture_local.c:601
-#, fuzzy
 msgid ""
 "<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
 "a <hilight>background task</hilight>.<br>It can take a while, but after, "
