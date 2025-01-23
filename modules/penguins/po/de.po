@@ -1,15 +1,16 @@
-# German translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# German translation for the Penguins Module.
+# This file is put in the public domain.
+#
+# MixCool <lars.thoms@mixcool.de>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-11-23 23:46+0100\n"
+"Project-Id-Version: penguins\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2009-11-07 18:16+0000\n"
 "Last-Translator: MixCool <lars.thoms@mixcool.de>\n"
-"Language-Team: German <de@li.org>\n"
+"Language-Team: German\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,11 +48,11 @@ msgstr "Transparenz:"
 msgid "Select population:"
 msgstr "Bevölkerung auswählen:"
 
-#: src/e_mod_main.c:61
+#: src/e_mod_main.c:60
 msgid "Look"
 msgstr "Aussehen"
 
-#: src/e_mod_main.c:62
+#: src/e_mod_main.c:61
 msgid "Penguins"
 msgstr "Pinguine"
 

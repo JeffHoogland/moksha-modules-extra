@@ -1,57 +1,60 @@
-# translation of penguins.po to hungarian
-# Copyright (C) YEAR Enlightenment development team
-# This file is distributed under the same license as the PACKAGE package.
+# Hungarian translation for the Penguins Module.
+# This file is put in the public domain.
 #
 # Lisovszki  <lisovszki@gmail.com>, 2008.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: penguins\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-08-28 16:31+0800\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2008-02-02 22:32+0100\n"
 "Last-Translator: Lisovszki  <lisovszki@gmail.com>\n"
-"Language-Team: hungarian <hu@li.org>\n"
+"Language-Team: Hungarian\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../src/e_mod_config.c:42
+#: src/e_mod_config.c:42
 msgid "Population Settings"
 msgstr "Népesség beállítása"
 
-#: ../src/e_mod_config.c:92
+#: src/e_mod_config.c:92
 msgid "Number of penguins:"
 msgstr "Pingvinek száma"
 
-#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:104
+#: src/e_mod_config.c:94 src/e_mod_config.c:104
 #, c-format
 msgid "%1.0f"
 msgstr "%1.0f"
 
-#: ../src/e_mod_config.c:97
+#: src/e_mod_config.c:97
 msgid "Zoom factor:"
 msgstr "Nagyítás faktor:"
 
-#: ../src/e_mod_config.c:99
+#: src/e_mod_config.c:99
 #, c-format
 msgid "%1.1f X"
 msgstr "%1.1f X"
 
-#: ../src/e_mod_config.c:102
+#: src/e_mod_config.c:102
 msgid "Transparency:"
 msgstr "Átlátszóság:"
 
-#. Lista
-#: ../src/e_mod_config.c:108
+#: src/e_mod_config.c:108
 msgid "Select population:"
 msgstr "Népesség kijelölése:"
 
-#: ../src/e_mod_main.c:62
-msgid "Appearance"
-msgstr "Megjelenés"
+#: src/e_mod_main.c:60
+msgid "Look"
+msgstr ""
 
-#: ../src/e_mod_main.c:63
+#: src/e_mod_main.c:61
 msgid "Penguins"
 msgstr "Pingvinek"
+
+#~ msgid "Appearance"
+#~ msgstr "Megjelenés"

@@ -1,12 +1,13 @@
-# Belarusian translation of Penguins module
+# Belarusian translation for the Penguins Module.
 # This file is put in the public domain.
+#
 # R0bur <robursw@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Penguins\n"
-"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2023-07-17 16:00+0300\n"
+"Project-Id-Version: penguins\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2023-07-17 16:00+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -15,41 +16,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_config.c:42
+#: src/e_mod_config.c:42
 msgid "Population Settings"
 msgstr "Налады папуляцыі"
 
-#: ../src/e_mod_config.c:92
+#: src/e_mod_config.c:92
 msgid "Number of penguins:"
 msgstr "Колькасць пінгвінаў:"
 
-#: ../src/e_mod_config.c:94 ../src/e_mod_config.c:104
+#: src/e_mod_config.c:94 src/e_mod_config.c:104
 #, c-format
 msgid "%1.0f"
 msgstr "%1.0f"
 
-#: ../src/e_mod_config.c:97
+#: src/e_mod_config.c:97
 msgid "Zoom factor:"
 msgstr "Каэфіцыент маштабавання:"
 
-#: ../src/e_mod_config.c:99
+#: src/e_mod_config.c:99
 #, c-format
 msgid "%1.1f X"
 msgstr "%1.1f X"
 
-#: ../src/e_mod_config.c:102
+#: src/e_mod_config.c:102
 msgid "Transparency:"
 msgstr "Празрыстасць:"
 
-#. Lista
-#: ../src/e_mod_config.c:108
+#: src/e_mod_config.c:108
 msgid "Select population:"
 msgstr "Выбар папуляцыі:"
 
-#: ../src/e_mod_main.c:62
-msgid "Appearance"
-msgstr "Знешні выгляд"
+#: src/e_mod_main.c:60
+msgid "Look"
+msgstr ""
 
-#: ../src/e_mod_main.c:63
+#: src/e_mod_main.c:61
 msgid "Penguins"
 msgstr "Пінгвіны"
+
+#~ msgid "Appearance"
+#~ msgstr "Знешні выгляд"
