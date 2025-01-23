@@ -188,7 +188,7 @@ msgid "%1.0f pix"
 msgstr "%1.0f بكسل"
 
 #: ../src/photo_config_dialog.c:353
-msgid "Automaticly reload directories"
+msgid "Automatically reload directories"
 msgstr "أعد تحميل المجلدات تلقائيا"
 
 #: ../src/photo_config_dialog.c:356
@@ -200,7 +200,7 @@ msgid "Show label"
 msgstr "اعرض العنوان"
 
 #: ../src/photo_config_dialog.h:38
-msgid "Show informations"
+msgid "Show information"
 msgstr "اعرض المعلومات"
 
 #: ../src/photo_config_dialog.h:40
@@ -295,7 +295,7 @@ msgstr "إجراءات الفأرة"
 
 #: ../src/photo_item.c:389
 #, c-format
-msgid "<hilight>File %s doesnt exists.</hilight><br><br>This file is in Photo module picture list, but it seems you removed it from the disk<br>It cant be set as background, sorry."
+msgid "<hilight>File %s doesn't exists.</hilight><br><br>This file is in Photo module picture list, but it seems you removed it from the disk<br>It cant be set as background, sorry."
 msgstr "<hilight>لا يوجد الملف %s أساسا.</hilight><br><br>هذا الملف موجود في قائمة صور وحدة الصور  ، لكنك على ما يبدو قد أزلته من القرص<br>نأسف ، لا يمكن ضبطها كخلفية."
 
 #: ../src/photo_item.c:392
@@ -313,7 +313,7 @@ msgstr "<hilight>يُحتاج e17setroot لـ</hilight><br><br> كما أن %s �
 
 #: ../src/photo_item.c:452
 #, c-format
-msgid "<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's module picture list, but it seems you removed it from the disk.<br>It cant be set opened in a viewer, sorry."
+msgid "<hilight>File %s doesn't exists !</hilight><br><br>This file is in Photo's module picture list, but it seems you removed it from the disk.<br>It cant be set opened in a viewer, sorry."
 msgstr "<hilight>الملف %s غير موجود أساسا !</hilight><br><br>هذا الملف موجود في قائمة صورة وحدة الصور  ، لكنك على ما يبدو أنك قد أزلته من القرص.<br>نأسف ، لا يمكن جعلها مفتوحة في العارض."
 
 #: ../src/photo_item.c:472
@@ -330,7 +330,7 @@ msgid "Resume slideshow"
 msgstr "واصل العرض"
 
 #: ../src/photo_menu.c:55
-msgid "Picture informations"
+msgid "Picture information"
 msgstr "معلومات الصورة"
 
 #: ../src/photo_menu.c:63
@@ -352,7 +352,7 @@ msgstr "تاريخي"
 
 #: ../src/photo_picture_local.c:253
 #, c-format
-msgid "<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the picture's folders in main configuration panel<br>They can be jpeg or png<br><br>After import, if you can remove these files and the pictures still can<br>be viewed, but you wont be able to set them as wallpaper anymore<br><br>"
+msgid "<hilight>Directory %s doesn't exists.</hilight><br><br>You can change the picture's folders in main configuration panel<br>They can be jpeg or png<br><br>After import, if you can remove these files and the pictures still can<br>be viewed, but you won't be able to set them as wallpaper anymore<br><br>"
 msgstr "<hilight>المجلد %s غير موجود أساسا.</hilight><br><br>يمكنك تغيير مجلدات الصور في لوحة اﻹعدادا الرئيسية<br>من الممكن أن تكون بأحد الصيغتين jpeg أو png<br><br>بعد اﻹستيراد ، إذا كان بإمكانك حذف هذه الملفات لكن لا زال بإمكانك استعراض الصور <br>فلن يكون بمقدورك تعيينها كخلفية نهائيا<br><br>"
 
 #: ../src/photo_picture_local.c:591

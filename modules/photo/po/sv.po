@@ -177,7 +177,7 @@ msgid "%1.0f pix"
 msgstr ""
 
 #: src/photo_config_dialog.c:350
-msgid "Automaticly reload directories"
+msgid "Automatically reload directories"
 msgstr ""
 
 #: src/photo_config_dialog.c:353
@@ -189,7 +189,7 @@ msgid "Show label"
 msgstr ""
 
 #: src/photo_config_dialog.h:38
-msgid "Show informations"
+msgid "Show information"
 msgstr ""
 
 #: src/photo_config_dialog.h:40 src/photo_menu.c:63
@@ -319,7 +319,7 @@ msgid "Historic"
 msgstr ""
 
 #: src/photo_menu.c:79
-msgid "Picture informations"
+msgid "Picture information"
 msgstr ""
 
 #: src/photo_menu.c:87
@@ -329,10 +329,10 @@ msgstr ""
 #: src/photo_picture_local.c:256
 #, c-format
 msgid ""
-"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"<hilight>Directory %s doesn't exists.</hilight><br><br>You can change the "
 "picture's folders in main configuration panel<br>They can be jpeg or "
 "png<br><br>After import, if you can remove these files and the pictures "
-"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"still can<br>be viewed, but you won't be able to set them as wallpaper "
 "anymore<br><br>"
 msgstr ""
 

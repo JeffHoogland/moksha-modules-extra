@@ -76,7 +76,7 @@ int photo_menu_show(Photo_Item *pi)
    e_menu_item_separator_set(mi, 1);
 
    mi = e_menu_item_new_relative(m, mi);
-   e_menu_item_label_set(mi, D_("Picture informations"));
+   e_menu_item_label_set(mi, D_("Picture information"));
    photo_util_menu_icon_set(mi, PHOTO_THEME_ICON_INFOS);
    e_menu_item_callback_set(mi, _cb_picture_info, pi);
    mi = e_menu_item_new_relative(m, mi);

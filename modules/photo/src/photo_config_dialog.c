@@ -347,7 +347,7 @@ _advanced_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_D
                             NULL, &(cfdata->pictures_thumb_size), 80);
    e_widget_frametable_object_append(of, ob, 1, 2, 1, 1, 1, 0, 1, 0);
 
-   ob = e_widget_check_add(evas, D_("Automaticly reload directories"),
+   ob = e_widget_check_add(evas, D_("Automatically reload directories"),
                            &(cfdata->local.auto_reload));
    e_widget_frametable_object_append(of, ob, 0, 3, 2, 1, 1, 1, 1, 1);
    ob = e_widget_label_add(evas, D_("when add / modify directory list"));

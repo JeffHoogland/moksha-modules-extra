@@ -6,7 +6,7 @@ if (list->loader.popup)                                                \
 list->loader.popup =                                                   \
   photo_popup_warn_add(POPUP_WARN_TYPE_NEWS, buf,                      \
                        PICTURE_LOCAL_POPUP_LOADER_TIME + dtime,        \
-                       _popup_loader_close, _popup_loader_desactivate, \
+                       _popup_loader_close, _popup_loader_deactivate, \
                        NULL);
 
 #define POPUP_THUMBNAILING(list, buf, dtime)                           \
@@ -15,7 +15,7 @@ if (list->thumb.popup)                                                 \
 list->thumb.popup =                                                    \
   photo_popup_warn_add(POPUP_WARN_TYPE_NEWS, buf,                      \
                        PICTURE_LOCAL_POPUP_THUMB_TIME + dtime,         \
-                       _popup_thumb_close, _popup_thumb_desactivate,   \
+                       _popup_thumb_close, _popup_thumb_deactivate,   \
                        NULL);
 
 
@@ -71,9 +71,9 @@ static void _thumb_generate_cb(void *data, Evas_Object *obj, void *event_info __
 static void _thumb_generate_stop(void);
 
 static int  _popup_loader_close(Popup_Warn *popw __UNUSED__, void *data __UNUSED__);
-static void _popup_loader_desactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__);
+static void _popup_loader_deactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__);
 static int  _popup_thumb_close(Popup_Warn *popw __UNUSED__, void *data __UNUSED__);
-static void _popup_thumb_desactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__);
+static void _popup_thumb_deactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__);
 
 
 /*
@@ -253,11 +253,11 @@ Picture_Local_Dir *photo_picture_local_dir_new(char *path, int recursive, int re
      {
         char buf[4096];
         snprintf(buf, sizeof(buf),
-                 D_("<hilight>Directory %s doesnt exists.</hilight><br><br>"
+                 D_("<hilight>Directory %s doesn't exists.</hilight><br><br>"
                    "You can change the picture's folders in main configuration panel<br>"
                    "They can be jpeg or png<br><br>"
                    "After import, if you can remove these files and the pictures still can<br>"
-                   "be viewed, but you wont be able to set them as wallpaper anymore<br><br>"),
+                   "be viewed, but you won't be able to set them as wallpaper anymore<br><br>"),
                  path);
         e_module_dialog_show(photo->module, D_("Photo Module Error"), buf);
         return NULL;
@@ -701,7 +701,7 @@ _popup_loader_close(Popup_Warn *popw __UNUSED__, void *data __UNUSED__)
 }
 
 static void
-_popup_loader_desactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__)
+_popup_loader_deactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__)
 {
    if (photo->config->local.popup != PICTURE_LOCAL_POPUP_NEVER)
      photo->config->local.popup--;
@@ -716,7 +716,7 @@ _popup_thumb_close(Popup_Warn *popw __UNUSED__, void *data __UNUSED__)
 }
 
 static void
-_popup_thumb_desactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__)
+_popup_thumb_deactivate(Popup_Warn *popw __UNUSED__, void *data __UNUSED__)
 {
    if (photo->config->local.popup != PICTURE_LOCAL_POPUP_NEVER)
      photo->config->local.popup--;

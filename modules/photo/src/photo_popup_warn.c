@@ -7,7 +7,7 @@ static void _try_close(Popup_Warn *popw);
 
 static Eina_Bool  _cb_timer(void *data);
 static void _cb_edje_close(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__);
-static void _cb_edje_desactivate(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__);
+static void _cb_edje_deactivate(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__);
 /*
  * Public functions
  */
@@ -35,7 +35,7 @@ void photo_popup_warn_shutdown(void)
    _popups_warn = NULL;
 }
 
-Popup_Warn *photo_popup_warn_add(int type, const char *text, int timer, int (*func_close) (Popup_Warn *popw, void *data), void (*func_desactivate) (Popup_Warn *popw, void *data), void *data)
+Popup_Warn *photo_popup_warn_add(int type, const char *text, int timer, int (*func_close) (Popup_Warn *popw, void *data), void (*func_deactivate) (Popup_Warn *popw, void *data), void *data)
 {
    E_Zone *zone;
    Popup_Warn *popw;
@@ -63,8 +63,8 @@ Popup_Warn *photo_popup_warn_add(int type, const char *text, int timer, int (*fu
    photo_util_edje_set(popw->face, PHOTO_THEME_POPW);
    edje_object_signal_callback_add(popw->face, "close", "popup",
                    _cb_edje_close, popw);
-   edje_object_signal_callback_add(popw->face, "desactivate", "popup",
-                   _cb_edje_desactivate, popw);
+   edje_object_signal_callback_add(popw->face, "deactivate", "popup",
+                   _cb_edje_deactivate, popw);
    edje_object_part_text_set(popw->face, "text", text);
    edje_object_part_geometry_get(popw->face, "text_border",
                  NULL, NULL, &fw, NULL);
@@ -88,16 +88,16 @@ Popup_Warn *photo_popup_warn_add(int type, const char *text, int timer, int (*fu
    if (timer)
      popw->timer = ecore_timer_add(timer, _cb_timer, popw);
 
-   /* close and desactivate functions */
+   /* close and deactivate functions */
    popw->func_close = func_close;
-   if (func_desactivate)
+   if (func_deactivate)
      {
-       int show_desactivate = 1;
+       int show_deactivate = 1;
 
-       popw->func_desactivate = func_desactivate;
+       popw->func_deactivate = func_deactivate;
        edje_object_message_send(popw->face, EDJE_MESSAGE_INT,
-                   POPUP_WARN_EDJE_MESSAGE_SHOW_DESACTIVATE,
-                   &show_desactivate);
+                   POPUP_WARN_EDJE_MESSAGE_SHOW_DEACTIVATE,
+                   &show_deactivate);
     }
 
    /* attach data */
@@ -218,11 +218,11 @@ _cb_edje_close(void *data, Evas_Object *obj __UNUSED__, const char *emission __U
 }
 
 static void
-_cb_edje_desactivate(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
+_cb_edje_deactivate(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    Popup_Warn *popw;
 
    popw = data;
-   if (popw->func_desactivate)
-     popw->func_desactivate(popw, popw->data);
+   if (popw->func_deactivate)
+     popw->func_deactivate(popw, popw->data);
 }

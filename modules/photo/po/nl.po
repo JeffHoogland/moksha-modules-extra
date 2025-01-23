@@ -181,7 +181,7 @@ msgid "%1.0f pix"
 msgstr "%1.0f pix"
 
 #: ../src/photo_config_dialog.c:353
-msgid "Automaticly reload directories"
+msgid "Automatically reload directories"
 msgstr "Automatisch mappen herladen"
 
 #: ../src/photo_config_dialog.c:356
@@ -193,7 +193,7 @@ msgid "Show label"
 msgstr "Label tonen"
 
 #: ../src/photo_config_dialog.h:38
-msgid "Show informations"
+msgid "Show information"
 msgstr "Informaties tonen"
 
 #: ../src/photo_config_dialog.h:40 ../src/photo_menu.c:44
@@ -285,7 +285,7 @@ msgstr "Muisacties"
 #: ../src/photo_item.c:389
 #, c-format
 msgid ""
-"<hilight>File %s doesnt exists.</hilight><br><br>This file is in Photo "
+"<hilight>File %s doesn't exists.</hilight><br><br>This file is in Photo "
 "module picture list, but it seems you removed it from the disk<br>It cant be "
 "set as background, sorry."
 msgstr ""
@@ -313,7 +313,7 @@ msgstr ""
 #: ../src/photo_item.c:452
 #, c-format
 msgid ""
-"<hilight>File %s doesnt exists !</hilight><br><br>This file is in Photo's "
+"<hilight>File %s doesn't exists !</hilight><br><br>This file is in Photo's "
 "module picture list, but it seems you removed it from the disk.<br>It cant "
 "be set opened in a viewer, sorry."
 msgstr ""
@@ -340,7 +340,7 @@ msgid "Resume slideshow"
 msgstr "Diavoorstelling verderzetten"
 
 #: ../src/photo_menu.c:54
-msgid "Picture informations"
+msgid "Picture information"
 msgstr "Foto informatie"
 
 #: ../src/photo_menu.c:62
@@ -366,10 +366,10 @@ msgstr "Historiek"
 #: ../src/photo_picture_local.c:253
 #, c-format
 msgid ""
-"<hilight>Directory %s doesnt exists.</hilight><br><br>You can change the "
+"<hilight>Directory %s doesn't exists.</hilight><br><br>You can change the "
 "picture's folders in main configuration panel<br>They can be jpeg or "
 "png<br><br>After import, if you can remove these files and the pictures "
-"still can<br>be viewed, but you wont be able to set them as wallpaper "
+"still can<br>be viewed, but you won't be able to set them as wallpaper "
 "anymore<br><br>"
 msgstr ""
 "<hilight>Map %s bestaat niet.</hilight><br><br>Je kan de afbeeldingsmap "

@@ -35,7 +35,7 @@ ob = e_widget_label_add(evas, first);                                     \
 e_widget_frametable_object_append(of, ob, col, line, 1, 1, 1, 1, 1, 1);   \
 ob = e_widget_label_add(evas, D_("Show label"));                           \
 e_widget_frametable_object_append(of, ob, col, line+1, 1, 1, 1, 1, 1, 1); \
-ob = e_widget_label_add(evas, D_("Show informations"));                    \
+ob = e_widget_label_add(evas, D_("Show information"));                    \
 e_widget_frametable_object_append(of, ob, col, line+2, 1, 1, 1, 1, 1, 1); \
 ob = e_widget_label_add(evas, D_("Previous picture"));                     \
 e_widget_frametable_object_append(of, ob, col, line+3, 1, 1, 1, 1, 1, 1); \
