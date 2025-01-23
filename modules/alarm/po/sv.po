@@ -151,7 +151,7 @@ msgstr "Imorgon"
 #: src/e_mod_config_alarm.c:284
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
-"in the informations / schedule of your alarm"
+"in the information / schedule of your alarm"
 msgstr ""
 "<hilight>Fel, alarmet lades inte till!</hilight><br><br>Det finns ett fel i "
 "informationen / schemaläggningen av ditt alarm"

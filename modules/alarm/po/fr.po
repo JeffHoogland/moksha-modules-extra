@@ -154,10 +154,10 @@ msgstr "Demain"
 #: src/e_mod_config_alarm.c:284
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
-"in the informations / schedule of your alarm"
+"in the information / schedule of your alarm"
 msgstr ""
 "<hilight>Erreur, aucune alarme n'a été ajoutée !</hilight><br><br>Il y a une "
-"erreur dans les informations ou le planning de votre alarme."
+"erreur dans les information ou le planning de votre alarme."
 
 #: src/e_mod_config_alarm.c:289
 msgid ""

@@ -150,7 +150,7 @@ msgstr "Завтра"
 #: src/e_mod_config_alarm.c:284
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
-"in the informations / schedule of your alarm"
+"in the information / schedule of your alarm"
 msgstr ""
 "<hilight>Ошибка, Будильник не добавлен !</hilight><br><br>Ошибка в "
 "информации / расписании вашего будильника"

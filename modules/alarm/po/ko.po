@@ -152,7 +152,7 @@ msgstr "내일"
 #: src/e_mod_config_alarm.c:284
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
-"in the informations / schedule of your alarm"
+"in the information / schedule of your alarm"
 msgstr ""
 "<hilight>오류, 알람이 추가되지 못했습니다 !</hilight><br><br>정보에 오류가 있"
 "습니다 / 알람의 일정"

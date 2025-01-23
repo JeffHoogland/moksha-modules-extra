@@ -155,7 +155,7 @@ msgstr "Demà"
 #, fuzzy
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
-"in the informations / schedule of your alarm"
+"in the information / schedule of your alarm"
 msgstr ""
 "<hilight>Error, La alarma no ha estat afegida !</hilight><br><br>Això és un "
 "error en les informacions/ schedule de la teva alarma"

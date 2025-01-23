@@ -282,7 +282,7 @@ _common_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
           case ALARM_ADD_ERROR_UNKNOWN:
              snprintf(buf, sizeof(buf),
                       D_("<hilight>Error, The alarm was not added !</hilight><br><br>"
-                         "There is an error in the informations / schedule of your alarm"));
+                         "There is an error in the information / schedule of your alarm"));
              break;
           case ALARM_ADD_ERROR_NAME:
              snprintf(buf, sizeof(buf),
