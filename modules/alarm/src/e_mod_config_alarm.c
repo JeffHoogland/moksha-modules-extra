@@ -183,7 +183,7 @@ _common_create_widgets(E_Config_Dialog *cfd  __UNUSED__, Evas *evas, E_Config_Di
    Evas_Object *of, *of2, *ob;
    E_Radio_Group *rg;
 
-   of = e_widget_frametable_add(evas, D_("Informations"), 0);
+   of = e_widget_frametable_add(evas, D_("Information"), 0);
 
    ob = e_widget_check_add(evas, D_("Active"), &(cfdata->state));
    e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1);
