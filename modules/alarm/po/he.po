@@ -110,7 +110,7 @@ msgstr "יום שני"
 msgid "Tuesday"
 msgstr "יום שלישי"
 
-#: src/e_mod_config_alarm.c:222#, fuzzy
+#: src/e_mod_config_alarm.c:222
 msgid "Wednesday"
 msgstr "יום רביעי"
 
