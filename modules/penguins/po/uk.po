@@ -1,3 +1,4 @@
+# Ukrainian
 # This file is put in the public domain.
 # Daniel Korostil <ted.korostiled@gmail.com>, 2009.
 # Korostil Daniel <ted.korostiled@gmail.com>, 2011.
@@ -8,7 +9,7 @@ msgstr ""
 "POT-Creation-Date: 2010-10-17 11:00-0700\n"
 "PO-Revision-Date: 2011-02-06 09:34+0300\n"
 "Last-Translator: Korostil Daniel <ted.korostiled@gmail.com>\n"
-"Language-Team: translation@linux.org.ua\n"
+"Language-Team: Ukrainian\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
