@@ -337,6 +337,8 @@ EAPI E_Module_Api e_modapi =
 EAPI void *
 e_modapi_init(E_Module *m)
 {
+   char buf[PATH_MAX];
+   
    /* Set up module locales*/
    bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
    bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
