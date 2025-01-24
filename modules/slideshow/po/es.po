@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-26 20:47+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-24 09:06-0500\n"
 "PO-Revision-Date: 2009-04-11 14:49+0000\n"
 "Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
 "Language-Team: Spanish\n"
@@ -17,14 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_config.c:41
-#, fuzzy
 msgid "Slideshow Settings"
-msgstr "Mostrar diapositivas"
+msgstr "Configuración de presentación de dispositivas"
 
 #: src/e_mod_config.c:113
-#, fuzzy
 msgid "Cycles Time"
-msgstr "Período"
+msgstr "Tiempo de ciclos"
 
 #: src/e_mod_config.c:115
 msgid "Disable Timer"
@@ -40,7 +38,6 @@ msgid "Day/Night backgrounds"
 msgstr ""
 
 #: src/e_mod_config.c:125
-#, fuzzy
 msgid "Disable Scheduler"
 msgstr "Deshabilitar temporizador"
 
