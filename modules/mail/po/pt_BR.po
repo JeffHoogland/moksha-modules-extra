@@ -1,15 +1,16 @@
-# Brazilian Portuguese translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Brazilian Portuguese translation for the Mail module.
+# This file is put in the public domain.
+#
 # Enrico Nicoletto <liverig@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-30 10:25+0100\n"
+"Project-Id-Version: mail\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2009-01-10 19:08+0000\n"
 "Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,7 +113,6 @@ msgid "Inbox"
 msgstr "Entrada"
 
 #: src/e_mod_config.c:54
-#, fuzzy
 msgid "Mail Settings"
 msgstr "Configurações da caixa de correio"
 
@@ -157,16 +157,15 @@ msgstr "Excluir"
 msgid "Configure..."
 msgstr "Configurar..."
 
-#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
+#: src/e_mod_main.c:185 src/e_mod_main.c:680 src/e_mod_main.c:683
 msgid "Mail"
 msgstr "Correio"
 
 #: src/e_mod_main.c:229
-#, fuzzy
 msgid "Settings"
 msgstr "Configurações da porta"
 
-#: src/e_mod_main.c:687
+#: src/e_mod_main.c:684
 msgid "A new mail!"
 msgstr ""
 

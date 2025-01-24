@@ -1,16 +1,17 @@
-# Japanese translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Japanese translation for the Mail module.
+# This file is put in the public domain.
+#
 # Yuki Kodama <Unknown>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-30 10:25+0100\n"
+"Project-Id-Version: mail\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2016-12-06 16:45+0900\n"
 "Last-Translator: BALLOON a.k.a. Fu-sen. <balloonakafusen+bodhi at gmail."
 "com>\n"
-"Language-Team: Japanese <ja@li.org>\n"
+"Language-Team: Japanese\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,7 +114,6 @@ msgid "Inbox"
 msgstr "受信ボックス :"
 
 #: src/e_mod_config.c:54
-#, fuzzy
 msgid "Mail Settings"
 msgstr "メールボックス設定"
 
@@ -158,16 +158,15 @@ msgstr "削除"
 msgid "Configure..."
 msgstr "設定..."
 
-#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
+#: src/e_mod_main.c:185 src/e_mod_main.c:680 src/e_mod_main.c:683
 msgid "Mail"
 msgstr "メール"
 
 #: src/e_mod_main.c:229
-#, fuzzy
 msgid "Settings"
 msgstr "ポート番号設定"
 
-#: src/e_mod_main.c:687
+#: src/e_mod_main.c:684
 msgid "A new mail!"
 msgstr ""
 

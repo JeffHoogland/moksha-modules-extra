@@ -1,19 +1,20 @@
-# French translation for Mail.
+# French translation for the Mail module.
 # This file is put in the public domain.
+#
 # batden <batden@orange.fr>, 2009, 2010.
 # similar <similar@orange.fr>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mail\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-30 10:25+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2022-08-07 14:55+0200\n"
 "Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
 "Language-Team: French\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -160,7 +161,7 @@ msgstr "Supprimer"
 msgid "Configure..."
 msgstr "Configurer..."
 
-#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
+#: src/e_mod_main.c:185 src/e_mod_main.c:680 src/e_mod_main.c:683
 msgid "Mail"
 msgstr "Courriel"
 
@@ -168,7 +169,7 @@ msgstr "Courriel"
 msgid "Settings"
 msgstr "Configuration"
 
-#: src/e_mod_main.c:687
+#: src/e_mod_main.c:684
 msgid "A new mail!"
 msgstr ""
 

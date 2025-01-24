@@ -1,17 +1,16 @@
-# translation of el.po to Greek
-# Mail module (e17), French translation
+# Greek translation for the Mail module.
 # This file is put in the public domain.
-# Galatsanos Panagiotis <Unknown>, 2009.
 #
+# Galatsanos Panagiotis <Unknown>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: el\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-30 10:25+0100\n"
+"Project-Id-Version: mail\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2009-02-08 20:56+0000\n"
 "Last-Translator: Galatsanos Panagiotis <Unknown>\n"
-"Language-Team: Greek <en@li.org>\n"
+"Language-Team: Greek\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -114,7 +113,6 @@ msgid "Inbox"
 msgstr "Εισερχόμενα"
 
 #: src/e_mod_config.c:54
-#, fuzzy
 msgid "Mail Settings"
 msgstr "Ρυθμίσεις Γραμματοκιβωτίου"
 
@@ -159,16 +157,15 @@ msgstr "Διαγραφή"
 msgid "Configure..."
 msgstr "Ρύθμιση..."
 
-#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
+#: src/e_mod_main.c:185 src/e_mod_main.c:680 src/e_mod_main.c:683
 msgid "Mail"
 msgstr "Ταχυδρομείο"
 
 #: src/e_mod_main.c:229
-#, fuzzy
 msgid "Settings"
 msgstr "Ρυθμίσεις Πόρτας"
 
-#: src/e_mod_main.c:687
+#: src/e_mod_main.c:684
 msgid "A new mail!"
 msgstr ""
 

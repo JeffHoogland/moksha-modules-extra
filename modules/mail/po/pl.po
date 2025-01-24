@@ -1,15 +1,16 @@
-# Polish translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Polish translation for the Mail module.
+# This file is put in the public domain.
+#
 # Stanislaw Gackowski <launchpad@soeb.eu>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-30 10:25+0100\n"
+"Project-Id-Version: mail\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2009-06-06 22:33+0000\n"
 "Last-Translator: Stanislaw Gackowski <launchpad@soeb.eu>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"Language-Team: Polish\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,7 +113,6 @@ msgid "Inbox"
 msgstr "Odebrane"
 
 #: src/e_mod_config.c:54
-#, fuzzy
 msgid "Mail Settings"
 msgstr "Ustawienia skrzynki pocztowej"
 
@@ -157,16 +157,15 @@ msgstr "Usuń"
 msgid "Configure..."
 msgstr "Konfiguruj..."
 
-#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
+#: src/e_mod_main.c:185 src/e_mod_main.c:680 src/e_mod_main.c:683
 msgid "Mail"
 msgstr "Poczta"
 
 #: src/e_mod_main.c:229
-#, fuzzy
 msgid "Settings"
 msgstr "Ustawienia portu"
 
-#: src/e_mod_main.c:687
+#: src/e_mod_main.c:684
 msgid "A new mail!"
 msgstr ""
 

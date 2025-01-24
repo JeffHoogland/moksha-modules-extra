@@ -1,15 +1,16 @@
-# Russian translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Russian translation for the Mail module.
+# This file is put in the public domain.
+#
+# Lucky <lucky1.data@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-30 10:25+0100\n"
+"Project-Id-Version: mail\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2009-06-01 08:05+0000\n"
 "Last-Translator: Lucky <lucky1.data@gmail.com>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -156,7 +157,7 @@ msgstr "Удалить"
 msgid "Configure..."
 msgstr "Настроить..."
 
-#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
+#: src/e_mod_main.c:185 src/e_mod_main.c:680 src/e_mod_main.c:683
 msgid "Mail"
 msgstr "Почта"
 
@@ -164,7 +165,7 @@ msgstr "Почта"
 msgid "Settings"
 msgstr "Настройки"
 
-#: src/e_mod_main.c:687
+#: src/e_mod_main.c:684
 msgid "A new mail!"
 msgstr ""
 

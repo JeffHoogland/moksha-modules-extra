@@ -1,16 +1,17 @@
-# Esperanto translation for E17 mail module.
+# Esperanto translation for the Mail module.
 # This file is put in the public domain.
+#
 # Olivier M. <olivierweb@ifrance.com>, 2008.
 # William Theaker <Wsttrollboy@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mail\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-30 10:25+0100\n"
+"Project-Id-Version: mail\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2012-12-05 16:51+0000\n"
 "Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
-"Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
+"Language-Team: Esperanto\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -159,7 +160,7 @@ msgstr "Forigi"
 msgid "Configure..."
 msgstr "Agordi..."
 
-#: src/e_mod_main.c:185 src/e_mod_main.c:683 src/e_mod_main.c:686
+#: src/e_mod_main.c:185 src/e_mod_main.c:680 src/e_mod_main.c:683
 msgid "Mail"
 msgstr "Retpoŝto"
 
@@ -167,6 +168,6 @@ msgstr "Retpoŝto"
 msgid "Settings"
 msgstr "Agordoj"
 
-#: src/e_mod_main.c:687
+#: src/e_mod_main.c:684
 msgid "A new mail!"
 msgstr ""
