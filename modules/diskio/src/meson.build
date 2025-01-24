@@ -3,7 +3,7 @@ module = shared_module('module',
    'e_mod_config.c',
 
 
-   dependencies : [dep_e],
+   dependencies : [dep_e, dep_intl],
    install_dir: lib_install_dir,
    include_directories: config_dir,
    install: true,
