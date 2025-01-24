@@ -1,4 +1,4 @@
-# Greek for the Slideshow Module.
+# Greek translation for the Slideshow module.
 # This file is put in the public domain.
 #
 # Chidambar 'ilLogict' Zinnoury <illogict@online.fr>, 2006.
@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-26 20:47+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-24 09:06-0500\n"
 "PO-Revision-Date: 2008-11-25 11:03+0200\n"
-"Last-Translator: \n"
+"Last-Translator: Chidambar 'ilLogict' Zinnoury <illogict@online.fr>\n"
 "Language-Team: Greek\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,6 @@ msgid "Day/Night backgrounds"
 msgstr ""
 
 #: src/e_mod_config.c:125
-#, fuzzy
 msgid "Disable Scheduler"
 msgstr "Απενεργοποίηση Χρονομετρητή"
 

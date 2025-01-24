@@ -1,4 +1,5 @@
-# Portuguese translation for the Slideshow Module.
+# Portuguese translation for the Slideshow module.
+# This file is put in the public domain.
 #
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
@@ -6,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-26 20:47+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-24 09:06-0500\n"
 "PO-Revision-Date: 2024-12-28 17:39+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
@@ -147,4 +148,5 @@ msgstr "Erro ao importar imagem"
 
 #: src/e_mod_main.c:729
 msgid "Moksha was unable to import the picture<br>due to conversion errors."
-msgstr "O Moksha não conseguiu importar a imagem<br>devido a erros de conversão."
+msgstr ""
+"O Moksha não conseguiu importar a imagem<br>devido a erros de conversão."

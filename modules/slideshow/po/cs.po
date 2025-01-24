@@ -1,13 +1,13 @@
-# Czech translation. for the Slideshow Module.
+# Czech translation for the Slideshow module.
 # This file is put in the public domain.
 #
 # Štefan Uram <thewaiter@centrum.sk>
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-26 20:47+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-24 09:06-0500\n"
 "PO-Revision-Date: 2024-12-26 20:47+0100\n"
 "Last-Translator: Štefan Uram <thewaiter@centrum.sk>\n"
 "Language-Team: Czech\n"

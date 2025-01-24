@@ -1,4 +1,4 @@
-# Japanese translation for the Slideshow Module.
+# Japanese translation for the Slideshow module.
 # This file is put in the public domain.
 #
 # Yasufumi Haga <yasufumi.haga@nifty.com>, 2006.
@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-26 20:47+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-24 09:06-0500\n"
 "PO-Revision-Date: 2008-03-20 16:14+0900\n"
 "Last-Translator: Yasufumi Haga <yasufumi.haga@nifty.com>\n"
 "Language-Team: Japanese\n"
@@ -17,12 +17,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_config.c:41
-#, fuzzy
 msgid "Slideshow Settings"
 msgstr "スライドショーの設定"
 
 #: src/e_mod_config.c:113
-#, fuzzy
 msgid "Cycles Time"
 msgstr "切替間隔"
 
@@ -40,7 +38,6 @@ msgid "Day/Night backgrounds"
 msgstr ""
 
 #: src/e_mod_config.c:125
-#, fuzzy
 msgid "Disable Scheduler"
 msgstr "背景を切り替えない"
 
@@ -115,7 +112,6 @@ msgid "Set wallpaper on current desktop"
 msgstr "現在のデスクトップに壁紙を設定する"
 
 #: src/e_mod_config.c:189
-#, fuzzy
 msgid "Set wallpaper on current screen"
 msgstr "現在のデスクトップに壁紙を設定する"
 

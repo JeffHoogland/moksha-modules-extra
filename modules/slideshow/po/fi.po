@@ -1,4 +1,4 @@
-# Finnish translation for the Slideshow Module.
+# Finnish translation for the Slideshow module.
 # This file is put in the public domain.
 #
 # Jani väyrynen <janivayrynen@gmail.com>, 2008.
@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-26 20:47+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-24 09:06-0500\n"
 "PO-Revision-Date: 2008-01-23 01:50+0200\n"
 "Last-Translator: Jani väyrynen <janivayrynen@gmail.com>\n"
 "Language-Team: Finnish\n"
@@ -22,7 +22,6 @@ msgid "Slideshow Settings"
 msgstr "Kuvaesitys"
 
 #: src/e_mod_config.c:113
-#, fuzzy
 msgid "Cycles Time"
 msgstr "Kiertoaika"
 
@@ -40,7 +39,6 @@ msgid "Day/Night backgrounds"
 msgstr ""
 
 #: src/e_mod_config.c:125
-#, fuzzy
 msgid "Disable Scheduler"
 msgstr "Poista ajastin käytöstä"
 
@@ -115,7 +113,6 @@ msgid "Set wallpaper on current desktop"
 msgstr "Aseta taustakuvaksi nykyiselle työpöydälle"
 
 #: src/e_mod_config.c:189
-#, fuzzy
 msgid "Set wallpaper on current screen"
 msgstr "Aseta taustakuvaksi nykyiselle työpöydälle"
 

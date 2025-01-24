@@ -1,4 +1,4 @@
-# Esperanto translation for the Slideshow Module.
+# Esperanto translation for the Slideshow module.
 # This file is put in the public domain.
 #
 # Olivier <eliovir@nospam.gmail.com>, 2009.
@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-26 20:47+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-24 09:06-0500\n"
 "PO-Revision-Date: 2012-11-26 09:51+0000\n"
 "Last-Translator: Eliovir <Unknown>\n"
 "Language-Team: Esperanto\n"
@@ -23,7 +23,6 @@ msgid "Slideshow Settings"
 msgstr "Agordoj de Bildoprezento"
 
 #: src/e_mod_config.c:113
-#, fuzzy
 msgid "Cycles Time"
 msgstr "Cikla tempo"
 
@@ -41,7 +40,6 @@ msgid "Day/Night backgrounds"
 msgstr ""
 
 #: src/e_mod_config.c:125
-#, fuzzy
 msgid "Disable Scheduler"
 msgstr "Malŝalti tempmezurilon"
 

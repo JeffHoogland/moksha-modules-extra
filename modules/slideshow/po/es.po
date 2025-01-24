@@ -1,4 +1,4 @@
-# Spanish translation for the Slideshow Module.
+# Spanish translation for the Slideshow module.
 # This file is put in the public domain.
 #
 # DiegoJ <diegojromerolopez@gmail.com>, 2009.

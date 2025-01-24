@@ -1,4 +1,4 @@
-# Galician translation for the Slideshow Module.
+# Galician translation for the Slideshow module.
 # This file is put in the public domain.
 #
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.
@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-26 20:47+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-24 09:06-0500\n"
 "PO-Revision-Date: 2012-09-17 12:30+0200\n"
 "Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
 "Language-Team: Galician\n"
@@ -21,7 +21,6 @@ msgid "Slideshow Settings"
 msgstr "Preferencias das diapositivas"
 
 #: src/e_mod_config.c:113
-#, fuzzy
 msgid "Cycles Time"
 msgstr "Período"
 
@@ -39,7 +38,6 @@ msgid "Day/Night backgrounds"
 msgstr ""
 
 #: src/e_mod_config.c:125
-#, fuzzy
 msgid "Disable Scheduler"
 msgstr "Deshabilitar temporizador"
 

@@ -1,4 +1,4 @@
-# Indonesian translation for the Slideshow Module.
+# Indonesian translation for the Slideshow module.
 # This file is put in the public domain.
 #
 # madziuleq, 2009.
@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-12-26 20:47+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-24 09:06-0500\n"
 "PO-Revision-Date: 2009-03-02 08:02+0000\n"
 "Last-Translator: madziuleq <Unknown>\n"
 "Language-Team: Indonesian\n"
@@ -22,7 +22,6 @@ msgid "Slideshow Settings"
 msgstr "Slideshow"
 
 #: src/e_mod_config.c:113
-#, fuzzy
 msgid "Cycles Time"
 msgstr "Durasi"
 
@@ -40,7 +39,6 @@ msgid "Day/Night backgrounds"
 msgstr ""
 
 #: src/e_mod_config.c:125
-#, fuzzy
 msgid "Disable Scheduler"
 msgstr "Non-aktifkan Penghitung Waktu"
 
