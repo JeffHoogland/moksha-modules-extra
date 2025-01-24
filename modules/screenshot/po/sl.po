@@ -1,106 +1,106 @@
-# Slovenian translation of screenshot.
+# Slovenian ttranslation for the Screenshot module.
 # This file is put in the public domain.
-# r1to <renato.rener@gmail.com>, 2011.
-# , fuzzy
 #
+# r1to <renato.rener@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: screenshot 1.0\n"
-"Report-Msgid-Bugs-To: http://trac.enlightenment.org/e\n"
-"POT-Creation-Date: 2011-02-22 20:01-0800\n"
+"Project-Id-Version: screenshot\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 05:01-0500\n"
 "PO-Revision-Date: 2011-02-24 16:55+0100\n"
 "Last-Translator: r1to <renato.rener@gmail.com>\n"
-"Language-Team: Slovenian <sl@li.org>\n"
+"Language-Team: Slovenian\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_config.c:47
+#: src/e_mod_config.c:47
 msgid "Screenshot Settings"
 msgstr "Nastavitve Zajema zaslona"
 
-#: ../src/e_mod_config.c:98 ../src/e_mod_config.c:179
+#: src/e_mod_config.c:98 src/e_mod_config.c:179
 msgid "General Settings"
 msgstr "Splošne nastavitve"
 
-#: ../src/e_mod_config.c:99 ../src/e_mod_config.c:180
+#: src/e_mod_config.c:99 src/e_mod_config.c:180
 msgid "Beep when taking screenshot"
 msgstr "Zapiskaj ko zajemaš"
 
-#: ../src/e_mod_config.c:102 ../src/e_mod_config.c:183
+#: src/e_mod_config.c:102 src/e_mod_config.c:183
 msgid "Delay Time:"
 msgstr "Časovni razmak:"
 
-#: ../src/e_mod_config.c:109 ../src/e_mod_config.c:196 ../src/e_mod_main.c:390
+#: src/e_mod_config.c:109 src/e_mod_config.c:196 src/e_mod_main.c:385
 msgid "Capture Mode"
 msgstr "Način zajemanja"
 
-#: ../src/e_mod_config.c:111 ../src/e_mod_config.c:198 ../src/e_mod_main.c:369
+#: src/e_mod_config.c:111 src/e_mod_config.c:198 src/e_mod_main.c:364
 msgid "Whole Screen"
 msgstr "Cel zaslon"
 
-#: ../src/e_mod_config.c:113 ../src/e_mod_config.c:200 ../src/e_mod_main.c:376
+#: src/e_mod_config.c:113 src/e_mod_config.c:200 src/e_mod_main.c:371
 msgid "Select Window"
 msgstr "Izberi okno"
 
-#: ../src/e_mod_config.c:115 ../src/e_mod_config.c:202 ../src/e_mod_main.c:383
+#: src/e_mod_config.c:115 src/e_mod_config.c:202 src/e_mod_main.c:378
 msgid "Select Region"
 msgstr "Izberi območje"
 
-#: ../src/e_mod_config.c:119 ../src/e_mod_config.c:206
+#: src/e_mod_config.c:119 src/e_mod_config.c:206
 msgid "File Settings"
 msgstr "Nastavitve datotek"
 
-#: ../src/e_mod_config.c:120 ../src/e_mod_config.c:207
+#: src/e_mod_config.c:120 src/e_mod_config.c:207
 msgid "Always prompt for filename"
 msgstr "Vedno vprašaj po imenu"
 
-#: ../src/e_mod_config.c:123 ../src/e_mod_config.c:210
+#: src/e_mod_config.c:123 src/e_mod_config.c:210
 msgid "Save Directory:"
 msgstr "Mapa za shranjevanje:"
 
-#: ../src/e_mod_config.c:127 ../src/e_mod_config.c:214
+#: src/e_mod_config.c:127 src/e_mod_config.c:214
 msgid "Filename:"
 msgstr "Ime datoteke:"
 
-#: ../src/e_mod_config.c:133 ../src/e_mod_config.c:220
+#: src/e_mod_config.c:133 src/e_mod_config.c:220
 msgid "Application Settings"
 msgstr "Nastavitve programa"
 
-#: ../src/e_mod_config.c:134 ../src/e_mod_config.c:221
+#: src/e_mod_config.c:134 src/e_mod_config.c:221
 msgid "Launch application after taking screenshot"
 msgstr "Po zajemanju zaženi program"
 
-#: ../src/e_mod_config.c:139 ../src/e_mod_config.c:237
+#: src/e_mod_config.c:139 src/e_mod_config.c:237
 msgid "Thumbnail Settings"
 msgstr "Nastavitve sličic"
 
-#: ../src/e_mod_config.c:140 ../src/e_mod_config.c:238
+#: src/e_mod_config.c:140 src/e_mod_config.c:238
 msgid "Generate thumbnail from screenshot"
 msgstr "Ustvari sličico iz zajete slike"
 
-#: ../src/e_mod_config.c:189
+#: src/e_mod_config.c:189
 msgid "Image Quality:"
 msgstr "Kvaliteta slike:"
 
-#: ../src/e_mod_config.c:225
+#: src/e_mod_config.c:225
 msgid "Application:"
 msgstr "Program:"
 
-#: ../src/e_mod_config.c:241
+#: src/e_mod_config.c:241
 msgid "Size:"
 msgstr "Velikost:"
 
-#: ../src/e_mod_config.c:246
+#: src/e_mod_config.c:246
 msgid "(Percentage of original image to use for thumbnail)"
 msgstr "(Odstotek od originalne slike za ustvariti sličico)"
 
-#: ../src/e_mod_main.c:91 ../src/e_mod_main.c:266
+#: src/e_mod_main.c:92 src/e_mod_main.c:262
 msgid "Screenshot"
 msgstr "Zajem zaslona"
 
-#: ../src/e_mod_main.c:121
+#: src/e_mod_main.c:122
 msgid ""
 "Screenshot Module Configuration data needed upgrading. Your old "
 "configuration<br> has been wiped and a new set of defaults initialized. "
@@ -118,7 +118,7 @@ msgstr ""
 "<br>Te·nove·nastavitve·bodo·to·popravile<br>Sedaj·lahko·ponovno·nastavite·stvari·po·svoje<br>Opravičujemo "
 "se za neprijetnosti.<br>"
 
-#: ../src/e_mod_main.c:139
+#: src/e_mod_main.c:140
 msgid ""
 "Your Screenshot Module configuration is NEWER than the Screenshot Module "
 "version. This is very<br>strange. This should not happen unless you "
@@ -134,22 +134,22 @@ msgstr ""
 "<br>To·je·slabo·in<br>preventivno·so·bile·naložene·privzete·nastavitve<br>Opravičujemo·se·za·neprijetnosti."
 "<br>"
 
-#: ../src/e_mod_main.c:161 ../src/e_mod_main.c:176
+#: src/e_mod_main.c:162 src/e_mod_main.c:177
 msgid "Take Screenshot"
 msgstr "Zajemi zaslon"
 
-#: ../src/e_mod_main.c:304
+#: src/e_mod_main.c:301
 msgid "Screenshot Configuration Updated"
 msgstr "Nastavitve modula Zajem zaslona posodobljene"
 
-#: ../src/e_mod_main.c:394
+#: src/e_mod_main.c:389
 msgid "Settings"
 msgstr "Nastavitve"
 
-#: ../src/e_mod_main.c:465
+#: src/e_mod_main.c:473
 msgid "Screenshot Module"
 msgstr "Modul Zajem zaslona"
 
-#: ../src/e_mod_main.c:466
+#: src/e_mod_main.c:474
 msgid "Enter a new filename for this screenshot"
 msgstr "Vnesi novo ime datoteke za ta zajem zaslona"

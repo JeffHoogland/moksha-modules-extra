@@ -1,12 +1,13 @@
-# Belarusian translation for Screenshot module
+# Belarusian translation for the Screenshot module.
 # This file is put in the public domain.
+#
 # R0bur <robursw@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: screenshot\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2023-06-30 20:00+0300\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 05:01-0500\n"
 "PO-Revision-Date: 2023-06-30 20:00+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -15,91 +16,91 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/e_mod_config.c:48
+#: src/e_mod_config.c:47
 msgid "Screenshot Settings"
 msgstr "Налады Screenshot"
 
-#: ../src/e_mod_config.c:99 ../src/e_mod_config.c:180
+#: src/e_mod_config.c:98 src/e_mod_config.c:179
 msgid "General Settings"
 msgstr "Асноўныя параметры"
 
-#: ../src/e_mod_config.c:100 ../src/e_mod_config.c:181
+#: src/e_mod_config.c:99 src/e_mod_config.c:180
 msgid "Beep when taking screenshot"
 msgstr "Гудок у момант здымку экрана"
 
-#: ../src/e_mod_config.c:103 ../src/e_mod_config.c:184
+#: src/e_mod_config.c:102 src/e_mod_config.c:183
 msgid "Delay Time:"
 msgstr "Затрымка:"
 
-#: ../src/e_mod_config.c:110 ../src/e_mod_config.c:197 ../src/e_mod_main.c:389
+#: src/e_mod_config.c:109 src/e_mod_config.c:196 src/e_mod_main.c:385
 msgid "Capture Mode"
 msgstr "Рэжым здымку"
 
-#: ../src/e_mod_config.c:112 ../src/e_mod_config.c:199 ../src/e_mod_main.c:364
+#: src/e_mod_config.c:111 src/e_mod_config.c:198 src/e_mod_main.c:364
 msgid "Whole Screen"
 msgstr "Увесь экран"
 
-#: ../src/e_mod_config.c:114 ../src/e_mod_config.c:201 ../src/e_mod_main.c:371
+#: src/e_mod_config.c:113 src/e_mod_config.c:200 src/e_mod_main.c:371
 msgid "Select Window"
 msgstr "Выбраць акно"
 
-#: ../src/e_mod_config.c:116 ../src/e_mod_config.c:203 ../src/e_mod_main.c:378
+#: src/e_mod_config.c:115 src/e_mod_config.c:202 src/e_mod_main.c:378
 msgid "Select Region"
 msgstr "Выбраць рэгіён"
 
-#: ../src/e_mod_config.c:120 ../src/e_mod_config.c:207
+#: src/e_mod_config.c:119 src/e_mod_config.c:206
 msgid "File Settings"
 msgstr "Налады файлаў"
 
-#: ../src/e_mod_config.c:121 ../src/e_mod_config.c:208
+#: src/e_mod_config.c:120 src/e_mod_config.c:207
 msgid "Always prompt for filename"
 msgstr "Заўсёды пытаць пра імя файла"
 
-#: ../src/e_mod_config.c:124 ../src/e_mod_config.c:211
+#: src/e_mod_config.c:123 src/e_mod_config.c:210
 msgid "Save Directory:"
 msgstr "Каталог для захавання:"
 
-#: ../src/e_mod_config.c:128 ../src/e_mod_config.c:215
+#: src/e_mod_config.c:127 src/e_mod_config.c:214
 msgid "Filename:"
 msgstr "Імя файла:"
 
-#: ../src/e_mod_config.c:134 ../src/e_mod_config.c:221
+#: src/e_mod_config.c:133 src/e_mod_config.c:220
 msgid "Application Settings"
 msgstr "Налады праграмы"
 
-#: ../src/e_mod_config.c:135 ../src/e_mod_config.c:222
+#: src/e_mod_config.c:134 src/e_mod_config.c:221
 msgid "Launch application after taking screenshot"
 msgstr "Запускаць праграму пасля здымку экрана"
 
-#: ../src/e_mod_config.c:140 ../src/e_mod_config.c:238
+#: src/e_mod_config.c:139 src/e_mod_config.c:237
 msgid "Thumbnail Settings"
 msgstr "Параметры мініяцюры"
 
-#: ../src/e_mod_config.c:141 ../src/e_mod_config.c:239
+#: src/e_mod_config.c:140 src/e_mod_config.c:238
 msgid "Generate thumbnail from screenshot"
 msgstr "Ствараць мініяцюру з здымку экрана"
 
-#: ../src/e_mod_config.c:190
+#: src/e_mod_config.c:189
 msgid "Image Quality:"
 msgstr "Якасць відарыса:"
 
-#: ../src/e_mod_config.c:226
+#: src/e_mod_config.c:225
 msgid "Application:"
 msgstr "Праграма:"
 
-#: ../src/e_mod_config.c:242
+#: src/e_mod_config.c:241
 msgid "Size:"
 msgstr "Памер:"
 
-#: ../src/e_mod_config.c:247
+#: src/e_mod_config.c:246
 msgid "(Percentage of original image to use for thumbnail)"
 msgstr "(Адсоткаў ад зыходнага відарыса для мініяцюры)"
 
-#: ../src/e_mod_main.c:91 ../src/e_mod_main.c:266
+#: src/e_mod_main.c:92 src/e_mod_main.c:262
 msgid "Screenshot"
 msgstr ""
 
-#: ../src/e_mod_main.c:121
+#: src/e_mod_main.c:122
 msgid ""
 "Screenshot Module Configuration data needed upgrading. Your old "
 "configuration<br> has been wiped and a new set of defaults initialized. "
@@ -109,15 +110,15 @@ msgid ""
 "lacks. This new set of defaults will fix<br>that by adding it in. You can re-"
 "configure things now to your<br>liking. Sorry for the inconvenience.<br>"
 msgstr ""
-"Screenshot Module: спатрэбілася абнавіць налады. Старыя значэнні былі<br>"
-"выдалены, пасля чаго былі наладжаны перадвызначаныя значэнні.<br>"
-"Гэта будзе адбывацца рэгулярна, таму не трэба рабіць справаздачу пра памылкі.<br>"
-"Так адбываецца таму, што модулю патрэбныя новыя перадвызначаныя налады,<br>"
-"каб выкарыстоўваць функцыі, якіх няма ў старых наладах.<br>"
-"Новыя перадвызначаныя значэнні выправят гэта. Зараз вы можаце<br>"
-"наладзіць модуль як пажадаеце.<br>Выбачайце за нязручнасці.<br>"
+"Screenshot Module: спатрэбілася абнавіць налады. Старыя значэнні "
+"былі<br>выдалены, пасля чаго былі наладжаны перадвызначаныя значэнні."
+"<br>Гэта будзе адбывацца рэгулярна, таму не трэба рабіць справаздачу пра "
+"памылкі.<br>Так адбываецца таму, што модулю патрэбныя новыя перадвызначаныя "
+"налады,<br>каб выкарыстоўваць функцыі, якіх няма ў старых наладах.<br>Новыя "
+"перадвызначаныя значэнні выправят гэта. Зараз вы можаце<br>наладзіць модуль "
+"як пажадаеце.<br>Выбачайце за нязручнасці.<br>"
 
-#: ../src/e_mod_main.c:139
+#: src/e_mod_main.c:140
 msgid ""
 "Your Screenshot Module configuration is NEWER than the Screenshot Module "
 "version. This is very<br>strange. This should not happen unless you "
@@ -127,27 +128,27 @@ msgid ""
 "to<br>defaults. Sorry for the inconvenience.<br>"
 msgstr ""
 "Вашы налады модуля Screenshot БОЛЬШ НОВЫЯ, чым версія модуля. Гэта "
-"вельмі<br>дзіўна. Так не павінна быць, калі толькі вы не пераходзілі<br> на старую "
-"версію ці скапіявалі налады адтуль,<br>дзе выкарыстоўвалася больш "
-"новая версія. Гэта дрэнна, і<br>таму на ўсялякі выпадак вашы налады скінуты да "
-"перадвызначаных значэнняў.<br>Выбачайце за нязручнасці.<br>"
+"вельмі<br>дзіўна. Так не павінна быць, калі толькі вы не пераходзілі<br> на "
+"старую версію ці скапіявалі налады адтуль,<br>дзе выкарыстоўвалася больш "
+"новая версія. Гэта дрэнна, і<br>таму на ўсялякі выпадак вашы налады скінуты "
+"да перадвызначаных значэнняў.<br>Выбачайце за нязручнасці.<br>"
 
-#: ../src/e_mod_main.c:161 ../src/e_mod_main.c:176
+#: src/e_mod_main.c:162 src/e_mod_main.c:177
 msgid "Take Screenshot"
 msgstr "Зрабіць здымак экрана"
 
-#: ../src/e_mod_main.c:304
+#: src/e_mod_main.c:301
 msgid "Screenshot Configuration Updated"
 msgstr "Канфігурацыя модуля Screenshot абноўлена"
 
-#: ../src/e_mod_main.c:393
+#: src/e_mod_main.c:389
 msgid "Settings"
 msgstr "Налады"
 
-#: ../src/e_mod_main.c:467
+#: src/e_mod_main.c:473
 msgid "Screenshot Module"
 msgstr "Модуль Screenshot"
 
-#: ../src/e_mod_main.c:468
+#: src/e_mod_main.c:474
 msgid "Enter a new filename for this screenshot"
 msgstr "Увядзіце новае імя файла для гэтага здымка экрана"

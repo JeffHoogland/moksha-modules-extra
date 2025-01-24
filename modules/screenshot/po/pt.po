@@ -1,23 +1,24 @@
-# Portuguese translation for screenshot
-# This file is distributed under the same license as the enlightenment package.
+# Portuguese translation for the Screenshot module.
+# This file is put in the public domain.
+#
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Screenshot\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-07-16 07:55+0400\n"
+"Project-Id-Version: screenshot\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 05:01-0500\n"
 "PO-Revision-Date: 2021-05-19 19:46+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese <>\n"
+"Language-Team: Portuguese\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 2.3\n"
-"Language: pt\n"
 
 #: src/e_mod_config.c:47
 msgid "Screenshot Settings"
@@ -35,7 +36,7 @@ msgstr "Reproduzir som ao capturar"
 msgid "Delay Time:"
 msgstr "Tempo de espera:"
 
-#: src/e_mod_config.c:109 src/e_mod_config.c:196 src/e_mod_main.c:389
+#: src/e_mod_config.c:109 src/e_mod_config.c:196 src/e_mod_main.c:385
 msgid "Capture Mode"
 msgstr "Modo de captura"
 
@@ -99,34 +100,59 @@ msgstr "Tamanho:"
 msgid "(Percentage of original image to use for thumbnail)"
 msgstr "(Percentagem da imagem a utilizar como miniatura)"
 
-#: src/e_mod_main.c:91 src/e_mod_main.c:266
+#: src/e_mod_main.c:92 src/e_mod_main.c:262
 msgid "Screenshot"
 msgstr "Captura de ecrã"
 
-#: src/e_mod_main.c:121
-msgid "Screenshot Module Configuration data needed upgrading. Your old configuration<br> has been wiped and a new set of defaults initialized. This<br>will happen regularly during development, so don't report a<br>bug. This simply means Screenshot module needs new configuration<br>data by default for usable functionality that your old<br>configuration simply lacks. This new set of defaults will fix<br>that by adding it in. You can re-configure things now to your<br>liking. Sorry for the inconvenience.<br>"
-msgstr "A configuração do módulo tem que ser atualizada. A sua configuração foi apagada e foram iniciados novos valores padrão.<br>Isto irá ocorrer regularmente durante o desenvolvimento e não deve reportar qualquer erro.<br>Isto significa que o módulo precisa de novos dados de configuração que a sua antiga configuração não possuía.<br>Este conjunto de valores corrige a configuração.<br> Mais tarde poderá configurar o módulo ao seu gosto. <br>Desculpe o incómodo.<br>"
+#: src/e_mod_main.c:122
+msgid ""
+"Screenshot Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means Screenshot module needs new configuration<br>data by "
+"default for usable functionality that your old<br>configuration simply "
+"lacks. This new set of defaults will fix<br>that by adding it in. You can re-"
+"configure things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+"A configuração do módulo tem que ser atualizada. A sua configuração foi "
+"apagada e foram iniciados novos valores padrão.<br>Isto irá ocorrer "
+"regularmente durante o desenvolvimento e não deve reportar qualquer erro."
+"<br>Isto significa que o módulo precisa de novos dados de configuração que a "
+"sua antiga configuração não possuía.<br>Este conjunto de valores corrige a "
+"configuração.<br> Mais tarde poderá configurar o módulo ao seu gosto. "
+"<br>Desculpe o incómodo.<br>"
 
-#: src/e_mod_main.c:139
-msgid "Your Screenshot Module configuration is NEWER than the Screenshot Module version. This is very<br>strange. This should not happen unless you downgraded<br>the Screenshot Module or copied the configuration from a place where<br>a newer version of the Screenshot Module was running. This is bad and<br>as a precaution your configuration has been now restored to<br>defaults. Sorry for the inconvenience.<br>"
-msgstr "A configuração do seu módulo é mais recente que a do módulo.<br>Isto é muito estranho e só acontece se reverter o seu módulo ou caso tenha copiado a configuração de um local em que está instalada uma versão mais recente.<br>Isto é mau e por precaução, a sua configuração foi reiniciada.<br>Desculpe o incómodo.<br>"
+#: src/e_mod_main.c:140
+msgid ""
+"Your Screenshot Module configuration is NEWER than the Screenshot Module "
+"version. This is very<br>strange. This should not happen unless you "
+"downgraded<br>the Screenshot Module or copied the configuration from a place "
+"where<br>a newer version of the Screenshot Module was running. This is bad "
+"and<br>as a precaution your configuration has been now restored "
+"to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+"A configuração do seu módulo é mais recente que a do módulo.<br>Isto é muito "
+"estranho e só acontece se reverter o seu módulo ou caso tenha copiado a "
+"configuração de um local em que está instalada uma versão mais recente."
+"<br>Isto é mau e por precaução, a sua configuração foi reiniciada."
+"<br>Desculpe o incómodo.<br>"
 
-#: src/e_mod_main.c:161 src/e_mod_main.c:176
+#: src/e_mod_main.c:162 src/e_mod_main.c:177
 msgid "Take Screenshot"
 msgstr "Capturar"
 
-#: src/e_mod_main.c:304
+#: src/e_mod_main.c:301
 msgid "Screenshot Configuration Updated"
 msgstr "A configuração do módulo foi atualizada"
 
-#: src/e_mod_main.c:393
+#: src/e_mod_main.c:389
 msgid "Settings"
 msgstr "Definições"
 
-#: src/e_mod_main.c:467
+#: src/e_mod_main.c:473
 msgid "Screenshot Module"
 msgstr "Módulo de capturas"
 
-#: src/e_mod_main.c:468
+#: src/e_mod_main.c:474
 msgid "Enter a new filename for this screenshot"
 msgstr "Indique o nome para esta captura"
