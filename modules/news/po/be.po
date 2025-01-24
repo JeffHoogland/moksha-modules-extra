@@ -1,12 +1,13 @@
-# Belarusian translation of News module
+# Belarusian translation of the News module.
 # This file is put in the public domain.
+#
 # R0bur <robursw@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: News\n"
-"Report-Msgid-Bugs-To:  ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2023-07-15 19:30+0300\n"
+"Project-Id-Version: news\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2023-07-15 19:30+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -15,27 +16,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:52
+#: src/e_mod_main.c:54
 msgid "Config init failed"
 msgstr "Памылка канфігурацыі"
 
-#: src/e_mod_main.c:53
+#: src/e_mod_main.c:55
 msgid "Parser init failed"
 msgstr "Не ўдалося ініцыялізаваць сінтаксічны аналізатар"
 
-#: src/e_mod_main.c:54
+#: src/e_mod_main.c:56
 msgid "Feeds init failed"
 msgstr "Не ўдалося ініцыялізаваць каналы"
 
-#: src/e_mod_main.c:55
+#: src/e_mod_main.c:57
 msgid "Viewer init failed"
 msgstr "Не ўдалося ініцыялізаваць сродак прагляду"
 
-#: src/e_mod_main.c:56
+#: src/e_mod_main.c:58
 msgid "Popup subsystem init failed"
 msgstr "Памылка ініцыялізацыі падсістэмы ўсплываючых вокнаў"
 
-#: src/e_mod_main.c:219
+#: src/e_mod_main.c:221
 msgid "News"
 msgstr "Навіны"
 
@@ -47,8 +48,8 @@ msgid ""
 "removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
 msgstr ""
 "<hilight>Модуль Навіны : Абнавілася канфігурацыя</hilight><br><br>Ваша "
-"канфігурацыя модуля Навіны<br>абнавілася<br>Вашыя налады былі выдалены"
-"<br>Выбачайце за нязручнасці<br><br>(%d -> %d)"
+"канфігурацыя модуля Навіны<br>абнавілася<br>Вашыя налады былі "
+"выдалены<br>Выбачайце за нязручнасці<br><br>(%d -> %d)"
 
 #: src/news_config.c:112
 #, c-format
@@ -58,15 +59,15 @@ msgid ""
 "removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
 msgstr ""
 "<hilight>Модуль Навіны : Зніжана версія канфігурацыі</hilight><br><br>Версія "
-"канфігурацыі модуля Навіны<br>зніжана<br>Вашыя налады былі выдалены"
-"<br>Выбачайце за нязручнасці<br><br>(%d -> %d)"
+"канфігурацыі модуля Навіны<br>зніжана<br>Вашыя налады былі "
+"выдалены<br>Выбачайце за нязручнасці<br><br>(%d -> %d)"
 
 #: src/news_config_dialog.c:90
 msgid "News Main Configuration"
 msgstr "Асноўныя налады навін"
 
 #: src/news_config_dialog.c:192 src/news_config_dialog.c:230
-#: src/news_config_dialog_feeds.c:358 src/news_menu.c:153
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:141
 msgid "Feeds"
 msgstr "Каналы"
 
@@ -75,7 +76,7 @@ msgid "Sort lists by name (disable Move action)"
 msgstr "Сартаваць спісы па назвах (адключае Перамяшчэнне)"
 
 #: src/news_config_dialog.c:199 src/news_config_dialog.c:307
-#: src/news_viewer.c:307
+#: src/news_viewer.c:308
 msgid "News Viewer"
 msgstr "Прагляд навін"
 
@@ -183,19 +184,19 @@ msgstr "Канфігурацыя катэгорый навін"
 msgid "Icon"
 msgstr "Значок"
 
-#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:411
 msgid "Name"
 msgstr "Назва"
 
-#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:544
 msgid "Select an Icon"
 msgstr "Выберыце значок"
 
-#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:569
 msgid "OK"
 msgstr "Добра"
 
-#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:570
 msgid "Cancel"
 msgstr "Скасаваць"
 
@@ -207,47 +208,47 @@ msgstr "Неабходна спачатку <hilight>стварыць катэг
 msgid "News Feed Configuration"
 msgstr "Канфігурацыя канала навін"
 
-#: src/news_config_dialog_feed.c:329
+#: src/news_config_dialog_feed.c:330
 msgid "Basic informations"
 msgstr "Асноўныя звесткі"
 
-#: src/news_config_dialog_feed.c:345
+#: src/news_config_dialog_feed.c:346
 msgid "Name :"
 msgstr "Назва :"
 
-#: src/news_config_dialog_feed.c:349
+#: src/news_config_dialog_feed.c:350
 msgid "Feed url :"
 msgstr "URL канала :"
 
-#: src/news_config_dialog_feed.c:353
+#: src/news_config_dialog_feed.c:354
 msgid "Mark as important feed"
 msgstr "Пазначыць канал як важны"
 
-#: src/news_config_dialog_feed.c:358
+#: src/news_config_dialog_feed.c:359
 msgid "Category"
 msgstr "Катэгорыя"
 
-#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+#: src/news_config_dialog_feed.c:369 src/news_config_dialog_feed.c:413
 msgid "Language"
 msgstr "Мова"
 
-#: src/news_config_dialog_feed.c:391
+#: src/news_config_dialog_feed.c:392
 msgid "Advanced informations"
 msgstr "Дадатковыя звесткі"
 
-#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+#: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
 msgid "Description"
 msgstr "Апісанне"
 
-#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+#: src/news_config_dialog_feed.c:398 src/news_config_dialog_feed.c:417
 msgid "Home url"
 msgstr "Хатні url"
 
-#: src/news_config_dialog_feed.c:405
+#: src/news_config_dialog_feed.c:406
 msgid "Server informations"
 msgstr "Звесткі сервера"
 
-#: src/news_config_dialog_feed.c:407
+#: src/news_config_dialog_feed.c:408
 msgid "Do allow the server to overwrite the informations you entered ?"
 msgstr "Дазволіць серверу перапісваць уведзеныя звесткі?"
 
@@ -413,7 +414,8 @@ msgid ""
 "the same name<br>in one category."
 msgstr ""
 "Канал з <hilight>назвай</hilight> %s <hilight>ужо існуе</hilight><br>ў "
-"катэгорыі %s<br><br>Нельга мець каналы з аднолькавымі назвамі ў адной катэгорыі."
+"катэгорыі %s<br><br>Нельга мець каналы з аднолькавымі назвамі ў адной "
+"катэгорыі."
 
 #: src/news_feed.c:311
 msgid "You need to select a <hilight>language</hilight>."
@@ -431,30 +433,30 @@ msgstr "Неабходна ўвесці <hilight>назву</hilight>!"
 msgid ""
 "The <hilight>name</hilight> you entered is <hilight>already used</"
 "hilight><br>by another category"
-msgstr 
+msgstr ""
 "Уведзеная <hilight>назва ўжо выкарыстоўваецца</hilight> ў іншай катэгорыі"
 
-#: src/news_menu.c:131
+#: src/news_menu.c:119
 msgid "Set all as read"
 msgstr "Пазначыць усе як прачытаныя"
 
-#: src/news_menu.c:137 src/news_viewer.c:380
+#: src/news_menu.c:125 src/news_viewer.c:383
 msgid "Update"
 msgstr "Абнавіць"
 
-#: src/news_menu.c:148
+#: src/news_menu.c:136
 msgid "Gadget"
 msgstr "Гаджэт"
 
-#: src/news_menu.c:158
+#: src/news_menu.c:146
 msgid "Main"
 msgstr "Асноўныя"
 
-#: src/news_menu.c:163
+#: src/news_menu.c:151
 msgid "Settings"
 msgstr "Налады"
 
-#: src/news_menu.c:168
+#: src/news_menu.c:156
 msgid "Gadget Contents"
 msgstr "Змесціва гаджэта"
 
@@ -470,14 +472,14 @@ msgstr "Модуль Навіны"
 msgid "News Module Error"
 msgstr "Памылка модуля Навіны"
 
-#: src/news_viewer.c:372
+#: src/news_viewer.c:375
 msgid "Feeds in this gadget"
 msgstr "Каналы ў гэтым гаджэце"
 
-#: src/news_viewer.c:388
+#: src/news_viewer.c:391
 msgid "Set as read"
 msgstr "Прачытана"
 
-#: src/news_viewer.c:438
+#: src/news_viewer.c:441
 msgid "Articles in selected feed"
 msgstr "Артыкулы на выбраным канале"

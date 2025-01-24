@@ -1,41 +1,42 @@
-# News module (e17), Finnish translation
+# Finnish translation of the News module.
 # This file is put in the public domain.
+#
 # Jani väyrynen <janivayrynen@gmail.com>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: News module (e17)\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-02-07 19:00+0100\n"
+"Project-Id-Version: news\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2008-01-23 01:50+0200\n"
 "Last-Translator: Jani väyrynen <janivayrynen@gmail.com>\n"
-"Language-Team: Finnish <janivayrynen@gmail.com>\n"
+"Language-Team: Finnish\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:52
+#: src/e_mod_main.c:54
 msgid "Config init failed"
 msgstr "Asetusten asetus epäonnistui"
 
-#: src/e_mod_main.c:53
+#: src/e_mod_main.c:55
 msgid "Parser init failed"
 msgstr "Parsimen käynnistys epäonnistui"
 
-#: src/e_mod_main.c:54
+#: src/e_mod_main.c:56
 msgid "Feeds init failed"
 msgstr "Syötteen avaaminen epäonnistui"
 
-#: src/e_mod_main.c:55
+#: src/e_mod_main.c:57
 msgid "Viewer init failed"
 msgstr "Katselimen käynnistys epäonnistui"
 
-#: src/e_mod_main.c:56
+#: src/e_mod_main.c:58
 msgid "Popup subsystem init failed"
 msgstr "Ponnahdusalijärjestelmän käynnistys epäonnistui"
 
-#: src/e_mod_main.c:219
+#: src/e_mod_main.c:221
 msgid "News"
 msgstr "Uutiset"
 
@@ -66,7 +67,7 @@ msgid "News Main Configuration"
 msgstr "Uutisten pääasetukset"
 
 #: src/news_config_dialog.c:192 src/news_config_dialog.c:230
-#: src/news_config_dialog_feeds.c:358 src/news_menu.c:153
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:141
 msgid "Feeds"
 msgstr "Syötteet"
 
@@ -75,7 +76,7 @@ msgid "Sort lists by name (disable Move action)"
 msgstr "Lajittele listat nimen perusteella (poista siirtotoiminto käytöstä)"
 
 #: src/news_config_dialog.c:199 src/news_config_dialog.c:307
-#: src/news_viewer.c:307
+#: src/news_viewer.c:308
 msgid "News Viewer"
 msgstr "Uutiskatselin"
 
@@ -183,19 +184,19 @@ msgstr "Uutiskategorian asetukset"
 msgid "Icon"
 msgstr "Kuvake"
 
-#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:411
 msgid "Name"
 msgstr "Nimi"
 
-#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:544
 msgid "Select an Icon"
 msgstr "Valitse kuvake"
 
-#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:569
 msgid "OK"
 msgstr "OK"
 
-#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:570
 msgid "Cancel"
 msgstr "Peruuta"
 
@@ -207,47 +208,47 @@ msgstr "Sinun täytyy <hilight>luoda kategoria</hilight> ensin"
 msgid "News Feed Configuration"
 msgstr "Uutissyötteen asetukset"
 
-#: src/news_config_dialog_feed.c:329
+#: src/news_config_dialog_feed.c:330
 msgid "Basic informations"
 msgstr "Perustiedot"
 
-#: src/news_config_dialog_feed.c:345
+#: src/news_config_dialog_feed.c:346
 msgid "Name :"
 msgstr "Nimi:"
 
-#: src/news_config_dialog_feed.c:349
+#: src/news_config_dialog_feed.c:350
 msgid "Feed url :"
 msgstr "Syötteen url:"
 
-#: src/news_config_dialog_feed.c:353
+#: src/news_config_dialog_feed.c:354
 msgid "Mark as important feed"
 msgstr "Merkitse tärkeäksi syötteeksi"
 
-#: src/news_config_dialog_feed.c:358
+#: src/news_config_dialog_feed.c:359
 msgid "Category"
 msgstr "kategoria"
 
-#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+#: src/news_config_dialog_feed.c:369 src/news_config_dialog_feed.c:413
 msgid "Language"
 msgstr "Kieli"
 
-#: src/news_config_dialog_feed.c:391
+#: src/news_config_dialog_feed.c:392
 msgid "Advanced informations"
 msgstr "Lisätiedot"
 
-#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+#: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
 msgid "Description"
 msgstr "Kuvaus"
 
-#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+#: src/news_config_dialog_feed.c:398 src/news_config_dialog_feed.c:417
 msgid "Home url"
 msgstr "Koti-url"
 
-#: src/news_config_dialog_feed.c:405
+#: src/news_config_dialog_feed.c:406
 msgid "Server informations"
 msgstr "Palvelimen tiedot"
 
-#: src/news_config_dialog_feed.c:407
+#: src/news_config_dialog_feed.c:408
 msgid "Do allow the server to overwrite the informations you entered ?"
 msgstr "Anna palvelimen ylikirjoittaa antamasi tiedot?"
 
@@ -370,7 +371,6 @@ msgid "News Gadget Content Configuration"
 msgstr "Uutisvempaimen sisällön asetukset"
 
 #: src/news_config_dialog_item_content.c:258
-#, fuzzy
 msgid "Available Feeds"
 msgstr "Käytettävissä olevat syötteet"
 
@@ -437,29 +437,27 @@ msgstr ""
 "<hilight>Nimi</hilight>, jonka annoit, on jo toisen kategorian "
 "<hilight>käytössä</hilight>"
 
-#: src/news_menu.c:131
-#, fuzzy
+#: src/news_menu.c:119
 msgid "Set all as read"
 msgstr "Merkitse kaikki syötteet luetuksi"
 
-#: src/news_menu.c:137 src/news_viewer.c:380
+#: src/news_menu.c:125 src/news_viewer.c:383
 msgid "Update"
 msgstr ""
 
-#: src/news_menu.c:148
+#: src/news_menu.c:136
 msgid "Gadget"
 msgstr ""
 
-#: src/news_menu.c:158
+#: src/news_menu.c:146
 msgid "Main"
 msgstr ""
 
-#: src/news_menu.c:163
+#: src/news_menu.c:151
 msgid "Settings"
 msgstr ""
 
-#: src/news_menu.c:168
-#, fuzzy
+#: src/news_menu.c:156
 msgid "Gadget Contents"
 msgstr "Muokkaa vempaimen sisältöä"
 
@@ -475,16 +473,15 @@ msgstr "Uutismoduuli"
 msgid "News Module Error"
 msgstr "Uutismoduulin virhe"
 
-#: src/news_viewer.c:372
+#: src/news_viewer.c:375
 msgid "Feeds in this gadget"
 msgstr "Tämän vempaimen syötteet"
 
-#: src/news_viewer.c:388
-#, fuzzy
+#: src/news_viewer.c:391
 msgid "Set as read"
 msgstr "Merkitse kaikki syötteet luetuksi"
 
-#: src/news_viewer.c:438
+#: src/news_viewer.c:441
 msgid "Articles in selected feed"
 msgstr "Artikkelit valitussa syötteessä"
 

@@ -1,16 +1,16 @@
-# Esperanto tranlation of news.
-# Copyright (C) 2008 Enlightenment development team
-# This file is distributed under the same license as the news package.
+# Esperanto translation of the News module.
+# This file is put in the public domain.
+#
 # Olivier M. <olivierweb@ifrance.com>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eo\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-02-07 19:00+0100\n"
+"Project-Id-Version: news\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2012-12-10 10:22+0000\n"
 "Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
-"Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
+"Language-Team: Esperanto\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,27 +18,27 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-12-11 04:49+0000\n"
 "X-Generator: Launchpad (build 16356)\n"
 
-#: src/e_mod_main.c:52
+#: src/e_mod_main.c:54
 msgid "Config init failed"
 msgstr "Pravalorizado de agordoj fiaskis"
 
-#: src/e_mod_main.c:53
+#: src/e_mod_main.c:55
 msgid "Parser init failed"
 msgstr "Pravalorizado de sintaksa analizilo fiaskis"
 
-#: src/e_mod_main.c:54
+#: src/e_mod_main.c:56
 msgid "Feeds init failed"
 msgstr "Pravalorizado de abonfluoj fiaskis"
 
-#: src/e_mod_main.c:55
+#: src/e_mod_main.c:57
 msgid "Viewer init failed"
 msgstr "Pravalorizado de legilo fiaskis"
 
-#: src/e_mod_main.c:56
+#: src/e_mod_main.c:58
 msgid "Popup subsystem init failed"
 msgstr "Pravalorizado de subsistemo de ŝprucfenestro fiaskis"
 
-#: src/e_mod_main.c:219
+#: src/e_mod_main.c:221
 msgid "News"
 msgstr "Novaĵoj"
 
@@ -69,7 +69,7 @@ msgid "News Main Configuration"
 msgstr "Ĉefaj agordoj de la novaĵoj"
 
 #: src/news_config_dialog.c:192 src/news_config_dialog.c:230
-#: src/news_config_dialog_feeds.c:358 src/news_menu.c:153
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:141
 msgid "Feeds"
 msgstr "Fluoj"
 
@@ -78,7 +78,7 @@ msgid "Sort lists by name (disable Move action)"
 msgstr "Ordigi listojn laŭ nomo (malŝalti Movi-agon)"
 
 #: src/news_config_dialog.c:199 src/news_config_dialog.c:307
-#: src/news_viewer.c:307
+#: src/news_viewer.c:308
 msgid "News Viewer"
 msgstr "Novaĵlegilo"
 
@@ -186,19 +186,19 @@ msgstr "Agordoj pri la kategorioj de novaĵoj"
 msgid "Icon"
 msgstr "Piktogramo"
 
-#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:411
 msgid "Name"
 msgstr "Nomo"
 
-#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:544
 msgid "Select an Icon"
 msgstr "Elektu piktogramon"
 
-#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:569
 msgid "OK"
 msgstr "Bone"
 
-#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:570
 msgid "Cancel"
 msgstr "Rezigni"
 
@@ -210,47 +210,47 @@ msgstr "Vi devas <hilight>krei kategorion</hilight> unue"
 msgid "News Feed Configuration"
 msgstr "Agordoj pri la abonfluo"
 
-#: src/news_config_dialog_feed.c:329
+#: src/news_config_dialog_feed.c:330
 msgid "Basic informations"
 msgstr "Bazaj informoj"
 
-#: src/news_config_dialog_feed.c:345
+#: src/news_config_dialog_feed.c:346
 msgid "Name :"
 msgstr "Nomo:"
 
-#: src/news_config_dialog_feed.c:349
+#: src/news_config_dialog_feed.c:350
 msgid "Feed url :"
 msgstr "Abonflua adreso:"
 
-#: src/news_config_dialog_feed.c:353
+#: src/news_config_dialog_feed.c:354
 msgid "Mark as important feed"
 msgstr "Marki kiel grava abonfluo"
 
-#: src/news_config_dialog_feed.c:358
+#: src/news_config_dialog_feed.c:359
 msgid "Category"
 msgstr "Kategorio"
 
-#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+#: src/news_config_dialog_feed.c:369 src/news_config_dialog_feed.c:413
 msgid "Language"
 msgstr "Lingvo"
 
-#: src/news_config_dialog_feed.c:391
+#: src/news_config_dialog_feed.c:392
 msgid "Advanced informations"
 msgstr "Plidetalaj informoj"
 
-#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+#: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
 msgid "Description"
 msgstr "Priskribo"
 
-#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+#: src/news_config_dialog_feed.c:398 src/news_config_dialog_feed.c:417
 msgid "Home url"
 msgstr "Hejma URL"
 
-#: src/news_config_dialog_feed.c:405
+#: src/news_config_dialog_feed.c:406
 msgid "Server informations"
 msgstr "Informoj pri serviloj"
 
-#: src/news_config_dialog_feed.c:407
+#: src/news_config_dialog_feed.c:408
 msgid "Do allow the server to overwrite the informations you entered ?"
 msgstr "Ĉu permesi la servilon anstataŭigi la informojn, kiujn vi tajpis?"
 
@@ -439,27 +439,27 @@ msgstr ""
 "La <hilight>nomo</hilight>, kiun vi tajpis, <hilight>jam estas uzata</"
 "hilight><br>de alia kategorio"
 
-#: src/news_menu.c:131
+#: src/news_menu.c:119
 msgid "Set all as read"
 msgstr "Difini ĉiujn kiel legitajn"
 
-#: src/news_menu.c:137 src/news_viewer.c:380
+#: src/news_menu.c:125 src/news_viewer.c:383
 msgid "Update"
 msgstr "Ĝisdatigi"
 
-#: src/news_menu.c:148
+#: src/news_menu.c:136
 msgid "Gadget"
 msgstr "Akcesoraĵo"
 
-#: src/news_menu.c:158
+#: src/news_menu.c:146
 msgid "Main"
 msgstr "Ĉefa"
 
-#: src/news_menu.c:163
+#: src/news_menu.c:151
 msgid "Settings"
 msgstr "Agordoj"
 
-#: src/news_menu.c:168
+#: src/news_menu.c:156
 msgid "Gadget Contents"
 msgstr "Enhavo de akcesoraĵo"
 
@@ -475,14 +475,14 @@ msgstr "Modulo pri novaĵoj"
 msgid "News Module Error"
 msgstr "Eraro de la modulo pri novaĵoj"
 
-#: src/news_viewer.c:372
+#: src/news_viewer.c:375
 msgid "Feeds in this gadget"
 msgstr "Abonfluoj en ĉi tiu akcesoraĵo"
 
-#: src/news_viewer.c:388
+#: src/news_viewer.c:391
 msgid "Set as read"
 msgstr "Difini kiel legitan"
 
-#: src/news_viewer.c:438
+#: src/news_viewer.c:441
 msgid "Articles in selected feed"
 msgstr "Artikoloj en la elektita abonfluo"

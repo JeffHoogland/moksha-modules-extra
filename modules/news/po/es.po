@@ -1,43 +1,42 @@
-# Spanish translation for news
-# This file is distributed under the same license as the enlightenment package.
+# Spanish translation of the News module.
+# This file is put in the public domain.
+#
 # Francisco Perez Lopez, 2008.
-# Paco Molinero <paco@byasl.com>, 2009.
-# DiegoJ <diegojromerolopez@gmail.com>,2009.
-# Aníbal Garrido <khany@member.trisquel.info>, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: news\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2016-02-07 19:00+0100\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
 "PO-Revision-Date: 2012-11-15 13:35+0100\n"
 "Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
-"Language-Team: Enlightenment Team\n"
+"Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:52
+#: src/e_mod_main.c:54
 msgid "Config init failed"
 msgstr "¡Ha fallado la inicialización de configuración!"
 
-#: src/e_mod_main.c:53
+#: src/e_mod_main.c:55
 msgid "Parser init failed"
 msgstr "Falló la inicialización del analizador"
 
-#: src/e_mod_main.c:54
+#: src/e_mod_main.c:56
 msgid "Feeds init failed"
 msgstr "Falló la inicialización de los canales"
 
-#: src/e_mod_main.c:55
+#: src/e_mod_main.c:57
 msgid "Viewer init failed"
 msgstr "Fallón la inicialización del visor"
 
-#: src/e_mod_main.c:56
+#: src/e_mod_main.c:58
 msgid "Popup subsystem init failed"
 msgstr "Falló la inicialización del subsistema de emergentes"
 
-#: src/e_mod_main.c:219
+#: src/e_mod_main.c:221
 msgid "News"
 msgstr "News"
 
@@ -68,7 +67,7 @@ msgid "News Main Configuration"
 msgstr "Configuración principal de noticia"
 
 #: src/news_config_dialog.c:192 src/news_config_dialog.c:230
-#: src/news_config_dialog_feeds.c:358 src/news_menu.c:153
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:141
 msgid "Feeds"
 msgstr "Canales de noticias"
 
@@ -77,7 +76,7 @@ msgid "Sort lists by name (disable Move action)"
 msgstr "Organizar listas por nombre (deshabilitar Mover)"
 
 #: src/news_config_dialog.c:199 src/news_config_dialog.c:307
-#: src/news_viewer.c:307
+#: src/news_viewer.c:308
 msgid "News Viewer"
 msgstr "Visor de noticias"
 
@@ -185,19 +184,19 @@ msgstr "Configuración de categorías de noticias"
 msgid "Icon"
 msgstr "Icono"
 
-#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:410
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:411
 msgid "Name"
 msgstr "Nombre"
 
-#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:543
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:544
 msgid "Select an Icon"
 msgstr "Seleccionar un icono"
 
-#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:568
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:569
 msgid "OK"
 msgstr "Aceptar"
 
-#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:569
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:570
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -209,47 +208,47 @@ msgstr "Primero necesita <hilight>crear una categoría</hilight>"
 msgid "News Feed Configuration"
 msgstr "Configuración de canal de noticias"
 
-#: src/news_config_dialog_feed.c:329
+#: src/news_config_dialog_feed.c:330
 msgid "Basic informations"
 msgstr "Información básica"
 
-#: src/news_config_dialog_feed.c:345
+#: src/news_config_dialog_feed.c:346
 msgid "Name :"
 msgstr "Nombre:"
 
-#: src/news_config_dialog_feed.c:349
+#: src/news_config_dialog_feed.c:350
 msgid "Feed url :"
 msgstr "URL del canal:"
 
-#: src/news_config_dialog_feed.c:353
+#: src/news_config_dialog_feed.c:354
 msgid "Mark as important feed"
 msgstr "Marcar como canal importante"
 
-#: src/news_config_dialog_feed.c:358
+#: src/news_config_dialog_feed.c:359
 msgid "Category"
 msgstr "Categoría"
 
-#: src/news_config_dialog_feed.c:368 src/news_config_dialog_feed.c:412
+#: src/news_config_dialog_feed.c:369 src/news_config_dialog_feed.c:413
 msgid "Language"
 msgstr "Idioma"
 
-#: src/news_config_dialog_feed.c:391
+#: src/news_config_dialog_feed.c:392
 msgid "Advanced informations"
 msgstr "Informaciones avanzadas"
 
-#: src/news_config_dialog_feed.c:393 src/news_config_dialog_feed.c:414
+#: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
 msgid "Description"
 msgstr "Descripción"
 
-#: src/news_config_dialog_feed.c:397 src/news_config_dialog_feed.c:416
+#: src/news_config_dialog_feed.c:398 src/news_config_dialog_feed.c:417
 msgid "Home url"
 msgstr "Dirección de inicio"
 
-#: src/news_config_dialog_feed.c:405
+#: src/news_config_dialog_feed.c:406
 msgid "Server informations"
 msgstr "Información del servidor"
 
-#: src/news_config_dialog_feed.c:407
+#: src/news_config_dialog_feed.c:408
 msgid "Do allow the server to overwrite the informations you entered ?"
 msgstr "¿Permitir al servidor sobrescribir la información que ha introducido?"
 
@@ -438,27 +437,27 @@ msgstr ""
 "El <hilight>nombre</hilight> introducido <hilight>ya existe</hilight><br>en "
 "otra categoría"
 
-#: src/news_menu.c:131
+#: src/news_menu.c:119
 msgid "Set all as read"
 msgstr "Marcar todo como leído"
 
-#: src/news_menu.c:137 src/news_viewer.c:380
+#: src/news_menu.c:125 src/news_viewer.c:383
 msgid "Update"
 msgstr "Actualizar"
 
-#: src/news_menu.c:148
+#: src/news_menu.c:136
 msgid "Gadget"
 msgstr "Gadget"
 
-#: src/news_menu.c:158
+#: src/news_menu.c:146
 msgid "Main"
 msgstr "Principal"
 
-#: src/news_menu.c:163
+#: src/news_menu.c:151
 msgid "Settings"
 msgstr "Preferencias"
 
-#: src/news_menu.c:168
+#: src/news_menu.c:156
 msgid "Gadget Contents"
 msgstr "Contenidos del Gadget"
 
@@ -474,15 +473,15 @@ msgstr "Módulo de noticias"
 msgid "News Module Error"
 msgstr "Error del módulo de noticias"
 
-#: src/news_viewer.c:372
+#: src/news_viewer.c:375
 msgid "Feeds in this gadget"
 msgstr "Canales en este gadget"
 
-#: src/news_viewer.c:388
+#: src/news_viewer.c:391
 msgid "Set as read"
 msgstr "Marcar como leído"
 
-#: src/news_viewer.c:438
+#: src/news_viewer.c:441
 msgid "Articles in selected feed"
 msgstr "Artículos en el canal seleccionado"
 
