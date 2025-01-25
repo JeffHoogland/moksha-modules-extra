@@ -1,0 +1,19 @@
+This is a global todo list since it covers several or potentially all modules
+
+Several of these modules throw a lintian image-file-in-usr-lib warning.
+
+This is because they install one or more image files within /usr/lib.
+specifically, at that module install location. But according to the
+Filesystem Hierarchy Standard, architecture-independent files should be
+placed within /usr/share instead. Ideally, we should also change the code and the
+meson.build to that. Perhaps each module could have a folder at
+/usr/share/enlightenment/data/modules/
+or whatever ...
+
+Currently these are the modules with this issue
+	moksha-module-snow:   image-file-in-usr-lib
+	moksha-module-news:   image-file-in-usr-lib
+	moksha-module-rain:   image-file-in-usr-lib
+	moksha-module-photo:  image-file-in-usr-lib
+	moksha-module-engage: image-file-in-usr-lib
+
