@@ -7,7 +7,7 @@ static void _try_close(News_Popup *popw);
 
 static Eina_Bool  _cb_timer(void *data);
 static void _cb_edje_close(void *data, Evas_Object *obj, const char *emission, const char *source);
-static void _cb_edje_desactivate(void *data, Evas_Object *obj, const char *emission, const char *source);
+static void _cb_edje_deactivate(void *data, Evas_Object *obj, const char *emission, const char *source);
 /*
  * Public functions
  */
@@ -37,7 +37,7 @@ news_popup_shutdown(void)
 
 News_Popup *
 news_popup_add(int type, const char *title __UNUSED__, const char *text __UNUSED__, int timer,
-               int (*func_close) (News_Popup *popw, void *data), void (*func_desactivate) (News_Popup *popw, void *data), void *data)
+               int (*func_close) (News_Popup *popw, void *data), void (*func_deactivate) (News_Popup *popw, void *data), void *data)
 {
   E_Zone *zone;
   News_Popup *popw;
@@ -68,8 +68,8 @@ news_popup_add(int type, const char *title __UNUSED__, const char *text __UNUSED
   news_theme_edje_set(popw->face, NEWS_THEME_POPW);
   edje_object_signal_callback_add(popw->face, "close", "popup",
 				  _cb_edje_close, popw);
-  edje_object_signal_callback_add(popw->face, "desactivate", "popup",
-				  _cb_edje_desactivate, popw);
+  edje_object_signal_callback_add(popw->face, "deactivate", "popup",
+				  _cb_edje_deactivate, popw);
   // TODO
 
   /* log */
@@ -93,16 +93,16 @@ news_popup_add(int type, const char *title __UNUSED__, const char *text __UNUSED
   if (timer)
     popw->timer = ecore_timer_add(timer, _cb_timer, popw);
 
-  /* close and desactivate functions */
+  /* close and deactivate functions */
   popw->func_close = func_close;
-  if (func_desactivate)
+  if (func_deactivate)
     {
-      int show_desactivate = 1;
+      int show_deactivate = 1;
 
-      popw->func_desactivate = func_desactivate;
+      popw->func_deactivate = func_deactivate;
       edje_object_message_send(popw->face, EDJE_MESSAGE_INT,
-			       NEWS_POPUP_EDJE_MESSAGE_SHOW_DESACTIVATE,
-			       &show_desactivate);
+			       NEWS_POPUP_EDJE_MESSAGE_SHOW_DEACTIVATE,
+			       &show_deactivate);
     }
 
   /* attach data */
@@ -226,11 +226,11 @@ _cb_edje_close(void *data, Evas_Object *obj __UNUSED__, const char *emission __U
 }
 
 static void
-_cb_edje_desactivate(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
+_cb_edje_deactivate(void *data, Evas_Object *obj __UNUSED__, const char *emission __UNUSED__, const char *source __UNUSED__)
 {
    News_Popup *popw;
 
    popw = data;
-   if (popw->func_desactivate)
-     popw->func_desactivate(popw, popw->data);
+   if (popw->func_deactivate)
+     popw->func_deactivate(popw, popw->data);
 }

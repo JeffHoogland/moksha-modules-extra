@@ -134,7 +134,7 @@ typedef enum _News_Feed_Popup_News_Active
 "http://meneame.net/", 1, \
 "http://feeds.feedburner.com/meneame/published"
 #define NEWS_FEED_ITEM_FEED_NEWS \
-"News module svn", 1, "en", 1, "Enlightenment News module developement feed, to follow subversion commits (svn://oooo.zapto.org/News)", 1, \
+"News module svn", 1, "en", 1, "Enlightenment News module development feed, to follow subversion commits (svn://oooo.zapto.org/News)", 1, \
 "http://oooo.zapto.org?page=projets/news", 1, \
 "http://oooo.zapto.org/projets/news/rss/"
 #define NEWS_FEED_ITEM_FEED_OSNEWS \

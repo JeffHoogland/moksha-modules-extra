@@ -24,7 +24,7 @@ typedef enum _News_Popup_Type
 #define NEWS_POPUP_TIMER_S_MIN 2
 #define NEWS_POPUP_TIMER_S_MAX 60
 
-#define NEWS_POPUP_EDJE_MESSAGE_SHOW_DESACTIVATE 0
+#define NEWS_POPUP_EDJE_MESSAGE_SHOW_DEACTIVATE 0
 #define NEWS_POPUP_EDJE_MESSAGE_TYPE 1
 
 #define NEWS_POPUP_OVERLAP_BORDER 15
@@ -40,7 +40,7 @@ struct _News_Popup
 
    Ecore_Timer *timer;
    int (*func_close) (News_Popup *popw, void *data);
-   void (*func_desactivate) (News_Popup *popw, void *data);
+   void (*func_deactivate) (News_Popup *popw, void *data);
   void *data;
 
    int timer_org;
@@ -50,7 +50,7 @@ struct _News_Popup
 int              news_popup_init(void);
 void             news_popup_shutdown(void);
 
-News_Popup *news_popup_add(int type, const char *title, const char *text, int timer, int (*func_close) (News_Popup *popw, void *data), void (func_desactivate) (News_Popup *popw, void *data), void *data);
+News_Popup *news_popup_add(int type, const char *title, const char *text, int timer, int (*func_close) (News_Popup *popw, void *data), void (func_deactivate) (News_Popup *popw, void *data), void *data);
 void             news_popup_del(News_Popup *popw);
 
 #endif

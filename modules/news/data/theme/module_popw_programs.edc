@@ -10,7 +10,7 @@ program { "disable_click";
 	signal: "mouse,up,1";
 	source: "disable";
 	script {
-		emit("desactivate", "popup");
+		emit("deactivate", "popup");
 	}
 	after: "disable_click_1";
 }
