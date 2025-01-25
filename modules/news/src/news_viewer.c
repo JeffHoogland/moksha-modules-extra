@@ -852,7 +852,7 @@ _vcontent_feed_infos_set(News_Viewer *nv)
              case NEWS_PARSE_ERROR_TYPE_UNKNOWN:
              snprintf(buf_error, sizeof(buf_error),
                       "<br><color=#ff0000>An error happened during the parse of this feed !<br>"
-                      "You can report error at moksha@bodhilinux.com to get it fixed</><br><br>");
+                      "You can report error at moksha@bodhilinux.com to get it fixed</color><br><br>");
              break;
           }
         if (f->doc->parse.last_time)
