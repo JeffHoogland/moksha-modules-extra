@@ -57,7 +57,7 @@ news_util_browser_open(const char *url)
       news_util_message_error_show("<hilight>xdg-open not found !</hilight><br><vr>"
             "News module uses the xdg-open script from freedesktop.org<br>"
             "to open urls.<br>"
-            "You need to install the <hilight>xdg-utils package</hilight>, wich includes that script.");
+            "You need to install the <hilight>xdg-utils package</hilight>, which includes that script.");
       return 0;
    }
 

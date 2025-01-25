@@ -327,7 +327,7 @@ _common_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dia
 {
    Evas_Object *of, *ob;
 
-   of = e_widget_frametable_add(evas, D_("Basic informations"), 0);
+   of = e_widget_frametable_add(evas, D_("Basic information"), 0);
 
    ob = e_widget_button_add(evas, "", NULL,
                             _icon_select, cfdata, NULL);
@@ -389,7 +389,7 @@ _advanced_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data 
    _common_create_widgets(cfd, evas, cfdata, o);
 
 
-   of = e_widget_framelist_add(evas, D_("Advanced informations"), 0);
+   of = e_widget_framelist_add(evas, D_("Advanced information"), 0);
 
    ob = e_widget_label_add(evas, D_("Description"));
    e_widget_framelist_object_append(of, ob);
@@ -403,9 +403,9 @@ _advanced_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data 
    e_widget_table_object_append(o, of, 0, 1, 3, 1, 1, 1, 1, 1);
 
 
-   of = e_widget_framelist_add(evas, D_("Server informations"), 0);
+   of = e_widget_framelist_add(evas, D_("Server information"), 0);
 
-   ob = e_widget_label_add(evas, D_("Do allow the server to overwrite the informations you entered ?"));
+   ob = e_widget_label_add(evas, D_("Do allow the server to overwrite the information you entered ?"));
    e_widget_framelist_object_append(of, ob);
 
    ob = e_widget_check_add(evas, D_("Name"), &(cfdata->name_ovrw));

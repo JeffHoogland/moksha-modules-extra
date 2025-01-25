@@ -62,7 +62,7 @@ struct _News_Item
 
    /* TODO: a counter from 10 to 0 incremented every retry
       for any feed linked to this item.
-      when it reaches 0, we look at the feed(s) wich failed
+      when it reaches 0, we look at the feed(s) which failed
       and we alert the user via a popup
       (if all feeds have failed, special popup "connection pb") */
    int loading_state;

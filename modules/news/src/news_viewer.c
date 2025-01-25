@@ -788,7 +788,7 @@ _varticles_refresh(News_Viewer *nv)
 
    /* select a feed,
       of if no articles are selected
-      show feed informations in vcontent */
+      show feed information in vcontent */
    if (toselect_pos != -1)
      {
         e_widget_ilist_selected_set(ilist, toselect_pos);
@@ -851,7 +851,7 @@ _vcontent_feed_infos_set(News_Viewer *nv)
              case NEWS_PARSE_ERROR_BROKEN_FEED:
              case NEWS_PARSE_ERROR_TYPE_UNKNOWN:
              snprintf(buf_error, sizeof(buf_error),
-                      "<br><color=#ff0000>An error happend during the parse of this feed !<br>"
+                      "<br><color=#ff0000>An error happened during the parse of this feed !<br>"
                       "You can report error at ooookiwi@gmail.com to get it fixed</><br><br>");
              break;
           }

@@ -520,7 +520,7 @@ news_feed_attach(News_Feed *f, News_Feed_Ref *ref, News_Item *ni)
 }
 
 /*
- * Detach a feed from the item wich its attached to
+ * Detach a feed from the item which its attached to
  * 
  * If @p really is 0, only detach the feed from the item, but keep feed ref
  * If @p really is 1, remove the feed ref too
