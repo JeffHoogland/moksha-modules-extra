@@ -210,9 +210,9 @@ char *photo_picture_infos_get(Picture *p)
         date_ascii = (char *)ctime(&date);
         date_ascii[strlen(date_ascii) - 1] = ' ';
         snprintf(buf_ext, sizeof(buf_ext),
-                 "<underline=on underline_color=#000>Date :</> %s<br>"
-                 "<underline=on underline_color=#000>Resolution :</> %dx%d  "
-                 "<underline=on underline_color=#000>Size :</> %.2fM",
+                 "<underline=on underline_color=#000>Date :</underline> %s<br>"
+                 "<underline=on underline_color=#000>Resolution :</underline> %dx%d  "
+                 "<underline=on underline_color=#000>Size :</underline> %.2fM",
                  date_ascii, w, h, (float)ecore_file_size(p->path) / 1000000.0);
      }
    else
@@ -221,7 +221,7 @@ char *photo_picture_infos_get(Picture *p)
      }
 
    snprintf(buf, sizeof(buf),
-            "<underline=on underline_color=#000>Picture path :</> %s<br>"
+            "<underline=on underline_color=#000>Picture path :</underline> %s<br>"
             "<br>"
             "%s",
             p->path,

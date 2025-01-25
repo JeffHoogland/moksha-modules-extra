@@ -866,7 +866,7 @@ _vcontent_feed_infos_set(News_Viewer *nv)
                     type = "RSS"; 
                   break;
                   case NEWS_FEED_TYPE_ATOM:
-                    type = "ATOM <color=#ff0000>(not supported for now)</>"; break;
+                    type = "ATOM <color=#ff0000>(not supported for now)</color>"; break;
                   default:
                   type = "UNKNOWN";
                }
@@ -882,19 +882,19 @@ _vcontent_feed_infos_set(News_Viewer *nv)
           {
              if (f->doc->server.nb_tries > 1)
                snprintf(buf_conn, sizeof(buf_conn),
-                        "<color=#ff0000>Trying to update the feed ... (%d)</><br>",
+                        "<color=#ff0000>Trying to update the feed ... (%d)</color><br>",
                         f->doc->server.nb_tries);
              else
                snprintf(buf_conn, sizeof(buf_conn),
-                        "<color=#ff0000>Trying to update the feed ...</><br>");
+                        "<color=#ff0000>Trying to update the feed ...</color><br>");
           }
         if (f->doc->unread_count)
           {
-             snprintf(buf_unread, sizeof(buf_unread), "<color=#ff0000>%d unread articles</>%s",
+             snprintf(buf_unread, sizeof(buf_unread), "<color=#ff0000>%d unread articles</color>%s",
                       f->doc->unread_count,
                       (f->doc->unread_count >= NEWS_FEED_UNREAD_COUNT_MAX) ? "<br>"
                       "<color=#ff0000>Its the maximum number of articles a feed can have.<br>"
-                      "The oldest articles you didn't red are not keeped anymore.</>"
+                      "The oldest articles you didn't red are not keeped anymore.</color>"
                       : "");
           }
      }
