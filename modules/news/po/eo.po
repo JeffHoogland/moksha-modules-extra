@@ -211,7 +211,7 @@ msgid "News Feed Configuration"
 msgstr "Agordoj pri la abonfluo"
 
 #: src/news_config_dialog_feed.c:330
-msgid "Basic informations"
+msgid "Basic information"
 msgstr "Bazaj informoj"
 
 #: src/news_config_dialog_feed.c:346
@@ -235,7 +235,7 @@ msgid "Language"
 msgstr "Lingvo"
 
 #: src/news_config_dialog_feed.c:392
-msgid "Advanced informations"
+msgid "Advanced information"
 msgstr "Plidetalaj informoj"
 
 #: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
@@ -247,11 +247,11 @@ msgid "Home url"
 msgstr "Hejma URL"
 
 #: src/news_config_dialog_feed.c:406
-msgid "Server informations"
+msgid "Server information"
 msgstr "Informoj pri serviloj"
 
 #: src/news_config_dialog_feed.c:408
-msgid "Do allow the server to overwrite the informations you entered ?"
+msgid "Do allow the server to overwrite the information you entered ?"
 msgstr "Ĉu permesi la servilon anstataŭigi la informojn, kiujn vi tajpis?"
 
 #: src/news_config_dialog_feeds.c:82

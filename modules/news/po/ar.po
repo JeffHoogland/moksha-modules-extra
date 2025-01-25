@@ -210,7 +210,7 @@ msgid "News Feed Configuration"
 msgstr "إعدادات خلاصة اﻷخبار"
 
 #: src/news_config_dialog_feed.c:330
-msgid "Basic informations"
+msgid "Basic information"
 msgstr "المعلومات اﻷساسية"
 
 #: src/news_config_dialog_feed.c:346
@@ -234,7 +234,7 @@ msgid "Language"
 msgstr "اللغة"
 
 #: src/news_config_dialog_feed.c:392
-msgid "Advanced informations"
+msgid "Advanced information"
 msgstr "معلومات متقدمة"
 
 #: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
@@ -246,11 +246,11 @@ msgid "Home url"
 msgstr "رابط الصفحة الرئيسية"
 
 #: src/news_config_dialog_feed.c:406
-msgid "Server informations"
+msgid "Server information"
 msgstr "معلومات الخادم"
 
 #: src/news_config_dialog_feed.c:408
-msgid "Do allow the server to overwrite the informations you entered ?"
+msgid "Do allow the server to overwrite the information you entered ?"
 msgstr "اسمح للخادم بإعادة الكتابة على المعلومات التي ادخلتها ؟"
 
 #: src/news_config_dialog_feeds.c:82

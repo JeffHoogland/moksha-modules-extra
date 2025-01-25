@@ -211,7 +211,7 @@ msgid "News Feed Configuration"
 msgstr "Konfigurácia noviniek čítačky"
 
 #: src/news_config_dialog_feed.c:330
-msgid "Basic informations"
+msgid "Basic information"
 msgstr "Základné informácie"
 
 #: src/news_config_dialog_feed.c:346
@@ -235,7 +235,7 @@ msgid "Language"
 msgstr "Jazyk"
 
 #: src/news_config_dialog_feed.c:392
-msgid "Advanced informations"
+msgid "Advanced information"
 msgstr "Pokročilé informácie"
 
 #: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
@@ -247,11 +247,11 @@ msgid "Home url"
 msgstr "Domáca url"
 
 #: src/news_config_dialog_feed.c:406
-msgid "Server informations"
+msgid "Server information"
 msgstr "Serverové informácie"
 
 #: src/news_config_dialog_feed.c:408
-msgid "Do allow the server to overwrite the informations you entered ?"
+msgid "Do allow the server to overwrite the information you entered ?"
 msgstr "Povoliť serveru prepísanie informácií ktoré ste zadali?"
 
 #: src/news_config_dialog_feeds.c:82

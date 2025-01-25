@@ -208,7 +208,7 @@ msgid "News Feed Configuration"
 msgstr "תצורת הזנת החדשות"
 
 #: src/news_config_dialog_feed.c:330
-msgid "Basic informations"
+msgid "Basic information"
 msgstr "פריטי מידע בסיסי"
 
 #: src/news_config_dialog_feed.c:346
@@ -232,7 +232,7 @@ msgid "Language"
 msgstr "שפה"
 
 #: src/news_config_dialog_feed.c:392
-msgid "Advanced informations"
+msgid "Advanced information"
 msgstr "פריטי מידע מתקדם"
 
 #: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
@@ -244,11 +244,11 @@ msgid "Home url"
 msgstr "כתובת הבית"
 
 #: src/news_config_dialog_feed.c:406
-msgid "Server informations"
+msgid "Server information"
 msgstr "פריטי מידע השרת"
 
 #: src/news_config_dialog_feed.c:408
-msgid "Do allow the server to overwrite the informations you entered ?"
+msgid "Do allow the server to overwrite the information you entered ?"
 msgstr "אפשר לשרת לשכתב על פריטי המידע שהזנת ?"
 
 #: src/news_config_dialog_feeds.c:82

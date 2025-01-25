@@ -204,7 +204,7 @@ msgid "News Feed Configuration"
 msgstr "Настройка новостной ленты"
 
 #: src/news_config_dialog_feed.c:330
-msgid "Basic informations"
+msgid "Basic information"
 msgstr "Основная информация"
 
 #: src/news_config_dialog_feed.c:346
@@ -228,7 +228,7 @@ msgid "Language"
 msgstr "Язык"
 
 #: src/news_config_dialog_feed.c:392
-msgid "Advanced informations"
+msgid "Advanced information"
 msgstr "Дополнительная информация"
 
 #: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
@@ -240,11 +240,11 @@ msgid "Home url"
 msgstr "Домашний url"
 
 #: src/news_config_dialog_feed.c:406
-msgid "Server informations"
+msgid "Server information"
 msgstr "Данные сервера"
 
 #: src/news_config_dialog_feed.c:408
-msgid "Do allow the server to overwrite the informations you entered ?"
+msgid "Do allow the server to overwrite the information you entered ?"
 msgstr "Разрешить серверу переписывать введённую информацию?"
 
 #: src/news_config_dialog_feeds.c:82

@@ -209,7 +209,7 @@ msgid "News Feed Configuration"
 msgstr "Uutissyötteen asetukset"
 
 #: src/news_config_dialog_feed.c:330
-msgid "Basic informations"
+msgid "Basic information"
 msgstr "Perustiedot"
 
 #: src/news_config_dialog_feed.c:346
@@ -233,7 +233,7 @@ msgid "Language"
 msgstr "Kieli"
 
 #: src/news_config_dialog_feed.c:392
-msgid "Advanced informations"
+msgid "Advanced information"
 msgstr "Lisätiedot"
 
 #: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
@@ -245,11 +245,11 @@ msgid "Home url"
 msgstr "Koti-url"
 
 #: src/news_config_dialog_feed.c:406
-msgid "Server informations"
+msgid "Server information"
 msgstr "Palvelimen tiedot"
 
 #: src/news_config_dialog_feed.c:408
-msgid "Do allow the server to overwrite the informations you entered ?"
+msgid "Do allow the server to overwrite the information you entered ?"
 msgstr "Anna palvelimen ylikirjoittaa antamasi tiedot?"
 
 #: src/news_config_dialog_feeds.c:82

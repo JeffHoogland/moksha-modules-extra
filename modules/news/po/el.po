@@ -211,7 +211,7 @@ msgid "News Feed Configuration"
 msgstr "Ρύθμιση Ροής Ειδήσεων"
 
 #: src/news_config_dialog_feed.c:330
-msgid "Basic informations"
+msgid "Basic information"
 msgstr "Βασικές πληροφορίες"
 
 #: src/news_config_dialog_feed.c:346
@@ -235,7 +235,7 @@ msgid "Language"
 msgstr "Γλώσσα"
 
 #: src/news_config_dialog_feed.c:392
-msgid "Advanced informations"
+msgid "Advanced information"
 msgstr "Προχωρημένες πληροφορίες"
 
 #: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
@@ -247,11 +247,11 @@ msgid "Home url"
 msgstr "Αρχική Σελίδα"
 
 #: src/news_config_dialog_feed.c:406
-msgid "Server informations"
+msgid "Server information"
 msgstr "Πληροφορίες εξυπηρετητή"
 
 #: src/news_config_dialog_feed.c:408
-msgid "Do allow the server to overwrite the informations you entered ?"
+msgid "Do allow the server to overwrite the information you entered ?"
 msgstr ""
 "Να επιτρέψεις στον Εξυπηρετητή να κάνει αντικατάσταση των πληροφοριών που "
 "εισάγατε ?"

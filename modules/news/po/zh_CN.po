@@ -204,7 +204,7 @@ msgid "News Feed Configuration"
 msgstr "新闻 Feed 配置"
 
 #: src/news_config_dialog_feed.c:330
-msgid "Basic informations"
+msgid "Basic information"
 msgstr "基本信息"
 
 #: src/news_config_dialog_feed.c:346
@@ -228,7 +228,7 @@ msgid "Language"
 msgstr "语言"
 
 #: src/news_config_dialog_feed.c:392
-msgid "Advanced informations"
+msgid "Advanced information"
 msgstr "高级信息"
 
 #: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
@@ -240,11 +240,11 @@ msgid "Home url"
 msgstr "主目录url"
 
 #: src/news_config_dialog_feed.c:406
-msgid "Server informations"
+msgid "Server information"
 msgstr "服务器信息"
 
 #: src/news_config_dialog_feed.c:408
-msgid "Do allow the server to overwrite the informations you entered ?"
+msgid "Do allow the server to overwrite the information you entered ?"
 msgstr ""
 
 #: src/news_config_dialog_feeds.c:82

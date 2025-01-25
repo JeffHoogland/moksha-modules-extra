@@ -210,7 +210,7 @@ msgid "News Feed Configuration"
 msgstr "Hír csatorna beállítások"
 
 #: src/news_config_dialog_feed.c:330
-msgid "Basic informations"
+msgid "Basic information"
 msgstr "Alap információk"
 
 #: src/news_config_dialog_feed.c:346
@@ -234,7 +234,7 @@ msgid "Language"
 msgstr "Nyelv"
 
 #: src/news_config_dialog_feed.c:392
-msgid "Advanced informations"
+msgid "Advanced information"
 msgstr "Speciális információk"
 
 #: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
@@ -246,11 +246,11 @@ msgid "Home url"
 msgstr "Saját könyvtár url"
 
 #: src/news_config_dialog_feed.c:406
-msgid "Server informations"
+msgid "Server information"
 msgstr "Kiszolgáló információk"
 
 #: src/news_config_dialog_feed.c:408
-msgid "Do allow the server to overwrite the informations you entered ?"
+msgid "Do allow the server to overwrite the information you entered ?"
 msgstr ""
 "Engedélyezed a szerverne, hogy felülírja az információkat, amiket megadtál?"
 
