@@ -1,5 +1,14 @@
-To install Enlightenment News module, just do
+COMPILING and INSTALLING
+========================
+meson . build
+ninja -C build
+sudo ninja -C build install
 
-./autogen.sh
-make
-make install
+Uninstall
+=========
+ninja -C build uninstall
+
+
+Clean build
+===========
+rm -rf build/
