@@ -1,4 +1,4 @@
-feeds_install_dir = join_paths(meson.project_source_root(), 'images/feeds')
+feeds_install_dir = join_paths(mod_install_dir, 'images/feeds')
 install_data([ 'afp.png',            'courrierinternational.png', 'freshmeat.png',
                'meneame.png',        'barrapunto.png',            'default.png',  
                'futurasciences.png', 'news.png',                  'bbcworld.png', 
