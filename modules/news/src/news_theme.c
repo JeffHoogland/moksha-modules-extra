@@ -1,6 +1,6 @@
 #include "News.h"
 
-static char _theme[4096];
+static char _theme[PATH_MAX];
 
 /*
  * Public functions

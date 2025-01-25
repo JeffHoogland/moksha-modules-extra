@@ -48,7 +48,7 @@ int
 news_util_browser_open(const char *url)
 {
    Ecore_Exe *exe;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    if (!url) return 0;
 

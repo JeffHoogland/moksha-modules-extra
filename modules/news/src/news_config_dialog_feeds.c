@@ -506,7 +506,7 @@ _cb_feed_list(void *data)
 {
    E_Config_Dialog_Data *cfdata;
    News_Feed *f;
-   char buf[4096];
+   char buf[PATH_MAX];
    
    f = data;
    cfdata = news->config_dialog_feeds->cfdata;

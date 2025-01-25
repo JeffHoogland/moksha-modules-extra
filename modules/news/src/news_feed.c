@@ -145,7 +145,7 @@ news_feed_all_restore(void)
    News_Config *c;
    News_Feed_Category *cat;
    News_Feed *feed;
-   char buf[4096];
+   char buf[PATH_MAX];
    
    c = news->config;
    news_feed_all_delete();
@@ -1222,7 +1222,7 @@ _cb_feed_server_add(void *data, int type __UNUSED__, void *event)
 {
    News_Feed_Document *doc;
    Ecore_Con_Event_Server_Add *ev;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    doc = data;
    ev = event;

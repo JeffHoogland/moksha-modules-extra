@@ -107,7 +107,7 @@ _free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 static void
 _fill_data(E_Config_Dialog_Data *cfdata, News_Feed_Category *cat)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
 
    cfdata->cat = cat;
 

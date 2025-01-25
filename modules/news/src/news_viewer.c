@@ -172,7 +172,7 @@ news_viewer_refresh(News_Viewer *nv)
    NEWS_ITEM_FEEDS_FOREACH_BEG_LIST(feed_refs);
    {
       Evas_Object *ic = NULL;
-      char buf[4096];
+      char buf[PATH_MAX];
       
       if (!_feed->doc) continue;
       DD(("UI NEED REFRESH = %d (%s)",
@@ -294,7 +294,7 @@ _dialog_create(News_Viewer *nv)
 {
    Evas_Modifier_Mask mask;
    E_Dialog    *dia;
-   char buf[4096];
+   char buf[PATH_MAX];
    Eina_Bool kg;
 
    snprintf(buf, sizeof(buf), "_e_mod_news_viewer_%d", nv->item->gcc->id);
@@ -362,7 +362,7 @@ _dialog_content_create(News_Viewer *nv)
    Evas_Textblock_Style *tb_style;
    Evas *evas;
    Evas_Object *o, *o2, *ob, *of, *icon;
-   char buf[4096];
+   char buf[PATH_MAX];
    char buf2[1024] = "";
    int w, h;
 
@@ -587,7 +587,7 @@ _dialog_cb_article_selected(void *data)
 {
    News_Viewer *nv;
    News_Feed_Article *art;
-   char buf_date[4096] = "Not dated";
+   char buf_date[PATH_MAX] = "Not dated";
 
    art = data;
    if (!art) return;
@@ -763,7 +763,7 @@ _varticles_refresh(News_Viewer *nv)
         for (l=articles; l; l=eina_list_next(l))
           {
              News_Feed_Article *art;
-             char buf_date[4096] = "";
+             char buf_date[PATH_MAX] = "";
              
              art = l->data;
              /* append the article to the article ilist */
@@ -835,7 +835,7 @@ _vcontent_feed_infos_set(News_Viewer *nv)
    char buf_infos[1024] = "";
    char buf_conn[200] = "";
    char buf_unread[1024] = "No unread articles";
-   char buf[4096];
+   char buf[PATH_MAX];
 
    evas_object_textblock_clear(nv->vcontent.tb);
    f = nv->vfeeds.selected;

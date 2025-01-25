@@ -40,7 +40,7 @@ static const E_Gadcon_Client_Class _gadcon_class =
 EAPI void *
 e_modapi_init(E_Module *m)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
 
    /* Set up module locales*/
    bindtextdomain(LOCALEDOMAIN, LOCALEDIR);

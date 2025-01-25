@@ -70,7 +70,7 @@ news_menu_browser_show(News_Item *ni)
 {
    E_Menu *mn;
    E_Menu_Item *mi;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    mn = e_menu_new();
    e_menu_post_deactivate_callback_set(mn, _cb_browser_deactivate_post, ni);

@@ -112,7 +112,7 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dial
    Evas_Object *ob;
    Lang_Choice *choice;
    Eina_List *l;
-   char buf[4096];
+   char buf[PATH_MAX];
    int line;
    int count;
 
