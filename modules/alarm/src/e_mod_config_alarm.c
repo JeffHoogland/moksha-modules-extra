@@ -276,7 +276,7 @@ _common_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 
    if (!al)
      {
-        char buf[4096];
+        char buf[PATH_MAX];
         switch (error)
           {
           case ALARM_ADD_ERROR_UNKNOWN:
@@ -456,7 +456,7 @@ _cb_alarm_test(void *data, void *data2)
 {
    E_Config_Dialog *cfd;
    E_Config_Dialog_Data *cfdata;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    cfd = data;
    cfdata = data2;

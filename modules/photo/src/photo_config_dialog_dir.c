@@ -24,7 +24,7 @@ int  photo_config_dialog_dir_show(Picture_Local_Dir *dir)
 {
    E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    v = E_NEW(E_Config_Dialog_View, 1);
    
@@ -140,7 +140,7 @@ static int
 _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata) 
 {
    Picture_Local_Dir *dir;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    dir = photo_picture_local_dir_new(cfdata->path,
                                      cfdata->recursive, cfdata->read_hidden);

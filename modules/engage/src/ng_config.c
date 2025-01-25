@@ -62,7 +62,7 @@ ngi_configure_module(Config_Item *ci)
    E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
    Eina_List *l;
-   char buf[4096];
+   char buf[PATH_MAX];
    char path[128];
    Config_Item *ci2;
    int i = 0;
@@ -611,7 +611,7 @@ _cb_box_config(void *data, void *data2 __UNUSED__)
 
    //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    int selected = e_widget_ilist_selected_get(cfdata->ilist);
 
@@ -669,7 +669,7 @@ ngi_configure_box(Ngi_Box *box)
 {
    //~ E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    v = E_NEW(E_Config_Dialog_View, 1);
 
@@ -739,7 +739,7 @@ _cb_box_down(void *data, void *data2 __UNUSED__)
 static void
 _load_box_tlist(E_Config_Dialog_Data *cfdata)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
 
    e_widget_ilist_clear(cfdata->ilist);
 
@@ -789,7 +789,7 @@ _cb_add(void *data, void *data2 __UNUSED__)
 static void
 _cb_del(void *data, void *data2 __UNUSED__)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    snprintf(buf, sizeof(buf), D_("You requested to delete \"%s\".<br><br>"
                                  "Are you sure you want to delete this source?"),
@@ -803,7 +803,7 @@ _cb_del(void *data, void *data2 __UNUSED__)
 static void
 _cb_config(void *data, void *data2 __UNUSED__)
 {
-   char path[4096];
+   char path[PATH_MAX];
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
    snprintf(path, sizeof(path), "%s/.e/e/applications/bar/%s/.order",
             e_user_homedir_get(), cfdata->app_dir);
@@ -816,8 +816,8 @@ _cb_config(void *data, void *data2 __UNUSED__)
 static void
 _cb_entry_ok(void *data, char *text)
 {
-   char buf[4096];
-   char tmp[4096];
+   char buf[PATH_MAX];
+   char tmp[PATH_MAX];
    FILE *f;
 
    snprintf(buf, sizeof(buf), "%s/.e/e/applications/bar/%s",
@@ -849,7 +849,7 @@ static void
 _cb_confirm_dialog_yes(void *data)
 {
    E_Config_Dialog_Data *cfdata = (E_Config_Dialog_Data *)data;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    snprintf(buf, sizeof(buf), "%s/.e/e/applications/bar/%s", e_user_homedir_get(), cfdata->app_dir);
 
@@ -863,7 +863,7 @@ static void
 _load_ilist(E_Config_Dialog_Data *cfdata)
 {
    Eina_List *dirs, *l;
-   char buf[4096], *file;
+   char buf[PATH_MAX], *file;
    int selnum = -1;
    const char *home;
    int i = 0;

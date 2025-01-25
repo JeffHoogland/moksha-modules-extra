@@ -186,7 +186,7 @@ static Evas_Object *
 _gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    o = edje_object_add(evas);
    snprintf(buf, sizeof(buf), "%s/e-module-photo.edj",
@@ -224,7 +224,7 @@ static void _e_canvas_shutdown(void)
 
 static int _theme_init(void)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    const char *path;
    char *version;
 

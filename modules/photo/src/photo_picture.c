@@ -170,7 +170,7 @@ Evas_Object *photo_picture_object_get(Picture *pic, Evas *evas)
 
 const char *photo_picture_name_get(char *url)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    char *name, *ext;
    int name_l;
 
@@ -194,7 +194,7 @@ const char *photo_picture_name_get(char *url)
 
 char *photo_picture_infos_get(Picture *p)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    char buf_ext[2048];
    int w = 0, h = 0;
 
@@ -233,7 +233,7 @@ char *photo_picture_infos_get(Picture *p)
 void photo_picture_setbg_add(const char *name)
 {
    if (!name) return;
-   char buf[4096];
+   char buf[PATH_MAX];
    const char *home;
 
    home = e_user_homedir_get();

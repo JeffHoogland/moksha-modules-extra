@@ -671,7 +671,7 @@ _set_description(void *data, const char *name)
    E_Config_Dialog_Data *cfdata = NULL;
    E_Module *mod = NULL;
    Efreet_Desktop *desk = NULL;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    if (!(cfdata = data))
      return;

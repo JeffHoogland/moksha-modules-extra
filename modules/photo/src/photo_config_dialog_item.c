@@ -32,7 +32,7 @@ int  photo_config_dialog_item_show(Photo_Item *pi)
 {
    E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    v = E_NEW(E_Config_Dialog_View, 1);
 

@@ -28,7 +28,7 @@ _config_mem_module (Config_Item * ci)
   E_Config_Dialog *cfd;
   E_Config_Dialog_View *v;
   E_Container *con;
-  char buf[4096];
+  char buf[PATH_MAX];
 
   v = E_NEW (E_Config_Dialog_View, 1);
 

@@ -14,14 +14,14 @@
 }
 #define news_util_message_show(args...)                            \
 {                                                                  \
-   char __tmpbuf[4096];                                            \
+   char __tmpbuf[PATH_MAX];                                            \
                                                                    \
    snprintf(__tmpbuf, sizeof(__tmpbuf), ##args);                   \
    e_module_dialog_show(news->module, D_("News Module"), __tmpbuf); \
 }
 #define news_util_message_error_show(args...)                            \
 {                                                                        \
-   char __tmpbuf[4096];                                                  \
+   char __tmpbuf[PATH_MAX];                                                  \
                                                                          \
    snprintf(__tmpbuf, sizeof(__tmpbuf), ##args);                         \
    e_module_dialog_show(news->module, D_("News Module Error"), __tmpbuf); \

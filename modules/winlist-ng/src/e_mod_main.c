@@ -75,7 +75,7 @@ EAPI E_Module_Api e_modapi = { E_MODULE_API_VERSION, "Ngw_Winlist" };
 EAPI void *
 e_modapi_init(E_Module *m)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    /* Set up module locales*/
    bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
    bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");

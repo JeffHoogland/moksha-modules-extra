@@ -377,7 +377,7 @@ alarm_alarm_duplicate(Alarm *al)
 int
 alarm_alarm_ring(Alarm *al, int test)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    int ret = 1;
 
    alarm_config->alarms_state = ALARM_STATE_RINGING;
@@ -639,7 +639,7 @@ _alarm_snooze(Alarm *al)
    E_Dialog *dia;
    Evas_Object *o, *ob;
    Evas *evas;
-   char buf[4096];
+   char buf[PATH_MAX];
    int w, h;
 
    if (al->snooze.dia)

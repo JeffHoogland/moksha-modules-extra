@@ -164,7 +164,7 @@ static Evas_Object *
 _gc_icon(const E_Gadcon_Client_Class *client_class __UNUSED__, Evas *evas)
 {
    Evas_Object *o;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    if (!calendar_conf->module) return NULL;
    snprintf(buf, sizeof(buf), "%s/e-module-calendar.edj",

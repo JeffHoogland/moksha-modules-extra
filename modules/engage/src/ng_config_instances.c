@@ -248,7 +248,7 @@ static void
 _cb_delete(void *data, void *data2 __UNUSED__)
 {
    Ngi_Del_Confirm_Data *d;
-   char buf[4096];
+   char buf[PATH_MAX];
    Config_Item *ci;
 
    d = E_NEW(Ngi_Del_Confirm_Data, 1);

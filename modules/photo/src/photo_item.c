@@ -385,7 +385,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
    E_Zone *zone;
    Ecore_Exe *exe = NULL;
    const char *file = NULL;
-   char buf[4096];
+   char buf[PATH_MAX];
    Import *import;
 
    zone = e_zone_current_get(e_container_current_get(e_manager_current_get()));
@@ -443,7 +443,7 @@ int  photo_item_action_setbg(Photo_Item *pi)
     //   moksha version 0.4.1.17979
     if (file)
        {
-         snprintf(buf, 4096, "enlightenment_remote -default-bg-set \"%s\"", file);
+         snprintf(buf, PATH_MAX, "enlightenment_remote -default-bg-set \"%s\"", file);
          exe = ecore_exe_pipe_run(buf, ECORE_EXE_USE_SH, NULL);
        }
     if (exe)
@@ -461,7 +461,7 @@ int photo_item_action_viewer(Photo_Item *pi)
 {
    Picture *p;
    const char *file = NULL;
-   char buf[4096];
+   char buf[PATH_MAX];
    Ecore_Exe *exe;
 
    p = photo_item_picture_current_get(pi);
@@ -481,7 +481,7 @@ int photo_item_action_viewer(Photo_Item *pi)
 
    if (ecore_file_app_installed(photo->config->pictures_viewer))
      {
-        snprintf(buf, 4096, "%s \"%s\"", photo->config->pictures_viewer, file);
+        snprintf(buf, PATH_MAX, "%s \"%s\"", photo->config->pictures_viewer, file);
         DITEM(("Action viewer: %s", buf));
         exe = e_util_exe_safe_run(buf, NULL);
         if (exe)
@@ -489,7 +489,7 @@ int photo_item_action_viewer(Photo_Item *pi)
      }
    else if (ecore_file_app_installed("xdg-open"))
      {
-        snprintf(buf, 4096, "%s \"%s\"", "xdg-open", file);
+        snprintf(buf, PATH_MAX, "%s \"%s\"", "xdg-open", file);
         DITEM(("Action viewer Fallback: %s", buf));
         exe = e_util_exe_safe_run(buf, NULL);
         if (exe)

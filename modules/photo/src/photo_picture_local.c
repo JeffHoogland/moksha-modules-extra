@@ -251,7 +251,7 @@ Picture_Local_Dir *photo_picture_local_dir_new(char *path, int recursive, int re
 
    if (!ecore_file_is_dir(path))
      {
-        char buf[4096];
+        char buf[PATH_MAX];
         snprintf(buf, sizeof(buf),
                  D_("<hilight>Directory %s doesn't exists.</hilight><br><br>"
                    "You can change the picture's folders in main configuration panel<br>"

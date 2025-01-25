@@ -1740,8 +1740,8 @@ ngi_bar_config_new(int container_num, int zone_num)
 {
    Config_Item *cfg;
    Config_Box *cfg_box;
-   char buf[4096];
-   char tmp[4096];
+   char buf[PATH_MAX];
+   char tmp[PATH_MAX];
    FILE *f;
    char *app_dir = "engage";
 

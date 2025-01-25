@@ -26,7 +26,7 @@ int photo_menu_show(Photo_Item *pi)
 {
    E_Menu *m;
    E_Menu_Item *mi;
-   char buf[4096];
+   char buf[PATH_MAX];
 
    m = e_menu_new();
 

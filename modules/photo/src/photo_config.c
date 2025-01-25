@@ -11,7 +11,7 @@ static E_Config_DD *_photo_item_edd = NULL;
 int photo_config_init(void)
 {
    Eina_List *l;
-   char buf[4096];
+   char buf[PATH_MAX];
    char *pictures_dir;
 
    _photo_dir_edd = E_CONFIG_DD_NEW("Photo_Local_Dir", Picture_Local_Dir);

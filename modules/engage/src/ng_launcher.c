@@ -27,7 +27,7 @@ static Eina_Bool  _cb_icons_update(void *data, int type, void *event);
 void
 ngi_launcher_new(Ng *ng, Config_Box *cfg)
 {
-   char buf[4096];
+   char buf[PATH_MAX];
    Ecore_Event_Handler *h;
    Ngi_Box *box = ngi_box_new(ng);
 
@@ -487,7 +487,7 @@ static void
 _menu_cb_configure_launcher(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    Ngi_Box *box = (Ngi_Box *)data;
-   char path[4096];
+   char path[PATH_MAX];
 
    if (!box)
      return;

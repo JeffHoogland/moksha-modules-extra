@@ -145,7 +145,7 @@ _flame_init (E_Module * m __UNUSED__)
       f->conf->b = 0;
       f->conf->palette_type = GOLD_PALETTE;
     }
-  E_CONFIG_LIMIT (f->conf->height, 4, 4096);
+  E_CONFIG_LIMIT (f->conf->height, 4, PATH_MAX);
   E_CONFIG_LIMIT (f->conf->hspread, 1, 100);
   E_CONFIG_LIMIT (f->conf->vspread, 1, 100);
   E_CONFIG_LIMIT (f->conf->variance, 1, 100);
