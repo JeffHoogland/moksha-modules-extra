@@ -1,0 +1,2 @@
+subdir('categories')
+subdir('feeds')

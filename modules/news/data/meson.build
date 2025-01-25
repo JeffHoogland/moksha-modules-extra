@@ -1,0 +1,2 @@
+subdir('images')
+subdir('theme')
