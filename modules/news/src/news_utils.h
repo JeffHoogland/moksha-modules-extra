@@ -7,7 +7,7 @@
 
 #define news_util_debug(args...)                             \
 {                                                            \
-   char __tmpbuf[4096];                                      \
+   char __tmpbuf[PATH_MAX];                                      \
                                                              \
    snprintf(__tmpbuf, sizeof(__tmpbuf), ##args);             \
    e_module_dialog_show(news->module, D_("News Module DEBUG DEBUG DEBUG DEBUG"), __tmpbuf); \
