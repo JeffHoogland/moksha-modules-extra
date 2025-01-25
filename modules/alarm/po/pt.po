@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-22 22:17-0500\n"
-"PO-Revision-Date: 2025-01-17 16:24+0000\n"
+"PO-Revision-Date: 2025-01-25 18:02+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_config.c:52
 msgid "Alarm Configuration"
@@ -78,7 +78,7 @@ msgstr "Configuração do alarme: definir um alarme"
 
 #: src/e_mod_config_alarm.c:186
 msgid "Information"
-msgstr "Informaçõ"
+msgstr "Informação"
 
 #: src/e_mod_config_alarm.c:190
 msgid "Name"
@@ -156,23 +156,23 @@ msgid ""
 "in the information / schedule of your alarm"
 msgstr ""
 "<hilight>Erro, o alarme não foi adicionado!</hilight><br><br>Existe um erro "
-"nas informações ou no agendamento do alarme"
+"nas informações/horário do seu alarme"
 
 #: src/e_mod_config_alarm.c:289
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>You have to enter "
 "a name for the alarm"
 msgstr ""
-"<hilight>Erro, o alarme não foi adicionado!</hilight><br><br>Deve indicar o "
-"nome do alarme"
+"<hilight>Erro, o alarme não foi adicionado!</hilight><br><br>Tem de "
+"introduzir um nome para o alarme"
 
 #: src/e_mod_config_alarm.c:294
 msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>You have to "
 "select at least one day in the week"
 msgstr ""
-"<hilight>Erro, o alarme não foi adicionado!</hilight><br><br>Tem que "
-"selecionar, pelo menos, um dia da semana"
+"<hilight>Erro, o alarme não foi adicionado!</hilight><br><br>Tem de "
+"selecionar pelo menos um dia da semana"
 
 #: src/e_mod_config_alarm.c:299
 msgid ""
@@ -182,7 +182,7 @@ msgid ""
 "month on 2 numbers<br>DD is the day on 2 numbers<br>"
 msgstr ""
 "<hilight>Erro, o alarme não foi adicionado!</hilight><br><br>A data que "
-"indicou para ao alarme tem uma sintaxe incorreta<br><br>Tem que respeitar "
+"introduziu para ao alarme tem uma sintaxe incorreta<br><br>Tem que respeitar "
 "este formato:<br> AAAA/MM/DD<br>AAAA é o ano com 4 dígitos<br>MM é o mês com "
 "2 dígitos<br>DD é o dia em 2 dígitos<br>"
 
@@ -191,8 +191,8 @@ msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
 "entered is before now"
 msgstr ""
-"<hilight>Erro, o alarme não foi adicionado !</hilight><br><br>A data "
-"indicada antecede a de hoje"
+"<hilight>Erro, o alarme não foi adicionado !</hilight><br><br>A data que "
+"introduziu é anterior a esta"
 
 #: src/e_mod_config_alarm.c:313 src/e_mod_main.c:421
 msgid "Alarm Module Error"
@@ -245,9 +245,9 @@ msgid ""
 "the alarms<br>via the 'Active' check button on the<br>main Alarm "
 "configuration panel."
 msgstr ""
-"<hilight>O teste de alarme foi bem SUCEDIDO!</hilight><br><br>NÃO SE ESQUEÇA "
-"de ATIVAR os alarmes<br>através da caixa \"Ativo\" no<br>painel de "
-"configuração do alarme."
+"<hilight>O teste de alarme foi bem SUCEDIDO!</hilight><br><br>MAS NÃO SE "
+"ESQUEÇA de ATIVAR os alarmes<br>através do botão de seleção 'Ativo' "
+"no<br>painel de configuração do alarme."
 
 #: src/e_mod_config_alarm.c:477
 msgid "<hilight>Alarm test SUCCEED !</hilight>"
@@ -316,7 +316,7 @@ msgstr "Adiar %.14s de %.2d:%.2d"
 
 #: src/e_mod_main.c:868
 msgid "Snooze (No alarm to delay)"
-msgstr "Silenciar (nenhum alarme a adiar)"
+msgstr "Adiar (nenhum alarme para atrasar )"
 
 #: src/e_mod_main.c:1040
 #, c-format
@@ -327,7 +327,7 @@ msgid ""
 msgstr ""
 "<hilight>Módulo de alarme: configuração atualizada</hilight><br><br>A "
 "configuração do módulo<br>foi atualizada<br>As suas definições e alarmes "
-"foram removidos<br>Desculpe o incómodo<br><br>(%d -> %d)"
+"foram removidos<br>Pedimos desculpa pelo incómodo<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
 msgid "Alarm Module version"
@@ -342,4 +342,5 @@ msgid ""
 msgstr ""
 "<hilight>Módulo de alarme: configuração revertida</hilight><br><br>A "
 "configuração do módulo<br>foi revertida para uma versão anterior<br>As suas "
-"definições e alarmes foram removidos<br>Desculpe o incómodo<br><br>(%d -> %d)"
+"definições e alarmes foram removidos<br>Pedimos desculpa pelo "
+"incómodo<br><br>(%d -> %d)"
