@@ -1,36 +1,37 @@
-# Slovak translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Slovakian translations for the Calendar module.
+# This file is put in the public domain.
+#
+# helix84, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2024-11-27 19:55+0100\n"
+"Project-Id-Version: calendar\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-26 11:58-0500\n"
 "PO-Revision-Date: 2009-03-24 12:34+0000\n"
 "Last-Translator: helix84 <Unknown>\n"
-"Language-Team: Slovak <sk@li.org>\n"
+"Language-Team: Slovakian\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:598
+#: src/e_mod_main.c:594
 msgid "Sunday"
 msgstr "Nedeľa"
 
-#: src/e_mod_main.c:605
+#: src/e_mod_main.c:601
 msgid "Monday"
 msgstr "Pondelok"
 
-#: src/e_mod_main.c:612
+#: src/e_mod_main.c:608
 msgid "First Day of Week"
 msgstr "Prvý deň v týždni"
 
-#: src/e_mod_main.c:694 src/e_mod_main.c:711
+#: src/e_mod_main.c:689 src/e_mod_main.c:706
 msgid "Calendar"
 msgstr "Kalendár"
 
-#: src/e_mod_main.c:695 src/e_mod_main.c:711
+#: src/e_mod_main.c:690 src/e_mod_main.c:706
 msgid "Monthview Popup (Show/Hide)"
 msgstr "Vyskakovacie zobrazenie mesiaca (Zobraziť/skryť)"

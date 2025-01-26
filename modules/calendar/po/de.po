@@ -1,36 +1,37 @@
-# German translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# German translations for the Calendar module.
+# This file is put in the public domain.
+#
 # meica <Unknown>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2010-11-23 23:32+0100\n"
+"Project-Id-Version: calendar\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-26 11:58-0500\n"
 "PO-Revision-Date: 2008-12-29 10:27+0000\n"
 "Last-Translator: meica <Unknown>\n"
-"Language-Team: German <de@li.org>\n"
+"Language-Team: German\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:600
+#: src/e_mod_main.c:594
 msgid "Sunday"
 msgstr "Sonntag"
 
-#: src/e_mod_main.c:607
+#: src/e_mod_main.c:601
 msgid "Monday"
 msgstr "Montag"
 
-#: src/e_mod_main.c:616
+#: src/e_mod_main.c:608
 msgid "First Day of Week"
 msgstr "Erster Tag der Woche"
 
-#: src/e_mod_main.c:699 src/e_mod_main.c:716
+#: src/e_mod_main.c:689 src/e_mod_main.c:706
 msgid "Calendar"
 msgstr "Kalender"
 
-#: src/e_mod_main.c:700 src/e_mod_main.c:716
+#: src/e_mod_main.c:690 src/e_mod_main.c:706
 msgid "Monthview Popup (Show/Hide)"
 msgstr "Monatsansichts-Popup (zeigen/verstecken)"
