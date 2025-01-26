@@ -3,13 +3,14 @@
 #
 # Chidambar 'ilLogict' Zinnoury <illogict@online.fr>, 2006.
 # batden <batden@orange.fr>, 2009, 2010, 2011.
+# similar <similar@orange.fr>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-24 09:06-0500\n"
-"PO-Revision-Date: 2024-03-07 08:50+0100\n"
+"PO-Revision-Date: 2025-01-26 12:01+0100\n"
 "Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
 "Language-Team: French\n"
 "Language: fr\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_config.c:41
 msgid "Slideshow Settings"
@@ -73,31 +74,31 @@ msgstr "Chemin des fonds d'écran"
 
 #: src/e_mod_config.c:152
 msgid "Fill and Stretch Options"
-msgstr ""
+msgstr "Options de remplissage et d'étirage"
 
 #: src/e_mod_config.c:154
 msgid "Stretch"
-msgstr ""
+msgstr "Étirer"
 
 #: src/e_mod_config.c:158
 msgid "Center"
-msgstr ""
+msgstr "Centrer"
 
 #: src/e_mod_config.c:162
 msgid "Tile"
-msgstr ""
+msgstr "Répéter"
 
 #: src/e_mod_config.c:167
 msgid "Within"
-msgstr ""
+msgstr "Contenir"
 
 #: src/e_mod_config.c:171
 msgid "Fill"
-msgstr ""
+msgstr "Remplir"
 
 #: src/e_mod_config.c:175
 msgid "Pan"
-msgstr ""
+msgstr "Pano"
 
 #: src/e_mod_config.c:181
 msgid "Extra"
@@ -141,8 +142,7 @@ msgstr "Configuration"
 
 #: src/e_mod_main.c:257
 msgid "Check Day/Night bg file names. They do not match!"
-msgstr ""
-"Vérifier les noms des fichiers de jour / nuit. Ils ne correspondent pas !"
+msgstr "Vérifier les noms des fichiers de jour / nuit. Ils ne correspondent pas !"
 
 #: src/e_mod_main.c:728
 msgid "Picture Import Error"
@@ -168,5 +168,4 @@ msgstr "Moksha n'a pu importer l'image<br>à cause d'erreurs de conversion."
 #~ msgstr "Module diaporama d'Enlightenment"
 
 #~ msgid "This module is VERY simple and is used to cycle desktop backgrounds"
-#~ msgstr ""
-#~ "Ce module est TRÈS simple et permet d'avoir un diaporama de fonds d'écran."
+#~ msgstr "Ce module est TRÈS simple et permet d'avoir un diaporama de fonds d'écran."
