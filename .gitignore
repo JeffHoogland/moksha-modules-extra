@@ -4,6 +4,8 @@
 *.buildinfo
 *.changes
 *.deb
+*/po/messages.mo
+*/po/messages.pot
 */*.edj
 */*.spec
 */ABOUT-NLS
