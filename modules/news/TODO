@@ -1,6 +1,20 @@
 gmake install CFLAGS="-g -Wall -Werror -DDEBUG -DDEBUG_MAIN -DDEBUG_CONFIG -DDEBUG_ITEM -DDEBUG_FEED -DDEBUG_PARSE -DDEBUG_BROWSER -DDEBUG_POPUP_WARN -DDEBUG_VIEWER"
 
 ----------------------------------------------------
+BODHI NOTES
+----------------------------------------------------
+
+NEWS https needs to be working:
+Broken links fixed if possible or removed
+
+Suggested links to add
+
+https://www.theguardian.com/us/rss
+https://bodhilinux.boards.net/rss/public
+https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en
+https://xkcd.com/rss.xml
+
+----------------------------------------------------
 BUGS
 ----------------------------------------------------
 
