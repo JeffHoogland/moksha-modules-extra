@@ -298,9 +298,9 @@ _fill_data(E_Config_Dialog_Data *cfdata, News_Feed *f)
         cfdata->language_ovrw = NEWS_FEED_LANGUAGE_OVRW_DEFAULT;
         cfdata->description = strdup("");
         cfdata->description_ovrw = NEWS_FEED_DESCRIPTION_OVRW_DEFAULT;
-        cfdata->url_home = strdup("http://");
+        cfdata->url_home = strdup("https://");
         cfdata->url_home_ovrw = NEWS_FEED_URL_HOME_OVRW_DEFAULT;
-        cfdata->url_feed = strdup("http://");
+        cfdata->url_feed = strdup("https://");
         snprintf(buf, sizeof(buf), "%s/%s",
                  e_module_dir_get(news->module), NEWS_FEED_ITEM_FEED_ICON_DEFAULT);
         cfdata->icon = strdup(buf);
