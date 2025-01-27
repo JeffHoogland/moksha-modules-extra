@@ -114,7 +114,7 @@ msgstr "Nepriehľadnosť pozadia:"
 
 #: src/ng_config.c:186
 msgid "%1.0f %"
-msgstr "%1.0f \\%"
+msgstr "%1.0f %"
 
 #: src/ng_config.c:194
 msgid "Show Background Box"
