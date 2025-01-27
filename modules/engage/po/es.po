@@ -8,13 +8,14 @@ msgstr ""
 "Project-Id-Version: engage\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-27 05:53-0500\n"
-"PO-Revision-Date: 2012-11-08 02:06+0100\n"
+"PO-Revision-Date: 2025-01-27 12:15-0600\n"
 "Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_main.c:1862 src/e_mod_main.c:1900
 msgid "Engage"
@@ -26,7 +27,7 @@ msgstr "¡Sin nombre!"
 
 #: src/ng_launcher.c:275
 msgid "Open Directory"
-msgstr ""
+msgstr "Abrir directorio"
 
 #: src/ng_launcher.c:561
 msgid "Configure Bar"
@@ -65,9 +66,8 @@ msgid "Iconify"
 msgstr "Minimizar"
 
 #: src/ng_gadcon.c:264
-#, fuzzy
 msgid "Gadcon Config"
-msgstr "Gadcon"
+msgstr "Configuración de Gadcon"
 
 #: src/ng_gadcon.c:303
 msgid "Available Gadgets"
@@ -200,21 +200,19 @@ msgstr "Ocultar automáticamente"
 
 #: src/ng_config.c:286
 msgid "None"
-msgstr ""
+msgstr "Ninguno"
 
 #: src/ng_config.c:289
-#, fuzzy
 msgid "Autohide"
 msgstr "Ocultar automáticamente"
 
 #: src/ng_config.c:292
 msgid "Hide when Window overlaps"
-msgstr ""
+msgstr "Ocultar cuando la ventana se superponga"
 
 #: src/ng_config.c:295
-#, fuzzy
 msgid "Hide on Fullscreen"
-msgstr "Por debajo de la pantalla completa"
+msgstr "Ocultar en pantalla completa"
 
 #: src/ng_config.c:299
 msgid "Show Bar when Urgent"
@@ -222,7 +220,7 @@ msgstr "Mostrar barra cuando sea urgente"
 
 #: src/ng_config.c:307
 msgid "Stacking"
-msgstr "Escalar"
+msgstr "Apilando"
 
 #: src/ng_config.c:309
 msgid "Above All"
@@ -253,9 +251,8 @@ msgid "Taskbar Settings"
 msgstr "Preferencias de la barra de herramientas"
 
 #: src/ng_config.c:552
-#, fuzzy
 msgid "Don't Show Dialogs"
-msgstr "No mostrar los diálogos"
+msgstr "No mostrar cajas de diálogo"
 
 #: src/ng_config.c:555
 msgid "Advanced Window Menu"
@@ -279,15 +276,15 @@ msgstr "Aplicaciones minimizadas"
 
 #: src/ng_config.c:572
 msgid "Not Shown"
-msgstr ""
+msgstr "No mostrado"
 
 #: src/ng_config.c:574
 msgid "Show"
-msgstr ""
+msgstr "Mostrar"
 
 #: src/ng_config.c:576
 msgid "Only Iconified"
-msgstr ""
+msgstr "Sólo minimizado"
 
 #: src/ng_config.c:645 src/ng_config.c:685
 msgid "Engage Bar Configuration"
