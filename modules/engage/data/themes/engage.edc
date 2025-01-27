@@ -4,13 +4,13 @@
 #define NO_COLOR "#FFFFFF00"
 #define VISIBLE "#FFFFFF"
 
-images.image: "itask_im0.png" COMP;
-images.image: "itask_im1.png" COMP;
-images.image: "itask_im2.png" COMP;
-images.image: "itask_im3.png" COMP;
+//~ images.image: "itask_im0.png" COMP;
+//~ images.image: "itask_im1.png" COMP;
+//~ images.image: "itask_im2.png" COMP;
+//~ images.image: "itask_im3.png" COMP;
 images.image: "itask_im4.png" COMP;
 images.image: "itask_im5.png" COMP;
-images.image: "itask_im6.png" COMP;
+//~ images.image: "itask_im6.png" COMP;
 images.image: "bg.png" COMP;
 
 collections {
