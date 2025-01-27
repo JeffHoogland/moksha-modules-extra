@@ -29,7 +29,7 @@ msgstr "Bez mena!"
 
 #: src/ng_launcher.c:275
 msgid "Open Directory"
-msgstr ""
+msgstr "Otoviť adresár"
 
 #: src/ng_launcher.c:561
 msgid "Configure Bar"
@@ -68,9 +68,8 @@ msgid "Iconify"
 msgstr "Minimalizovať"
 
 #: src/ng_gadcon.c:264
-#, fuzzy
 msgid "Gadcon Config"
-msgstr "Gadcon"
+msgstr "Nastavenie gadgetu"
 
 #: src/ng_gadcon.c:303
 msgid "Available Gadgets"
@@ -203,21 +202,19 @@ msgstr "Automaticky skrývať"
 
 #: src/ng_config.c:286
 msgid "None"
-msgstr ""
+msgstr "Žiadne"
 
 #: src/ng_config.c:289
-#, fuzzy
 msgid "Autohide"
 msgstr "Automaticky skrývať"
 
 #: src/ng_config.c:292
 msgid "Hide when Window overlaps"
-msgstr ""
+msgstr "Skrývať pri prekrytí oknom"
 
 #: src/ng_config.c:295
-#, fuzzy
 msgid "Hide on Fullscreen"
-msgstr "Pod celoobrazovkovým"
+msgstr "Skryť pri celej obrazovke"
 
 #: src/ng_config.c:299
 msgid "Show Bar when Urgent"
@@ -256,9 +253,8 @@ msgid "Taskbar Settings"
 msgstr "Nastavenie správcu úloh"
 
 #: src/ng_config.c:552
-#, fuzzy
 msgid "Don't Show Dialogs"
-msgstr "Nezobrazovať dialógy"
+msgstr "Nezobrazovať nastavenia"
 
 #: src/ng_config.c:555
 msgid "Advanced Window Menu"
@@ -282,15 +278,15 @@ msgstr "Ikonifikované aplikacie"
 
 #: src/ng_config.c:572
 msgid "Not Shown"
-msgstr ""
+msgstr "Nezobraziť"
 
 #: src/ng_config.c:574
 msgid "Show"
-msgstr ""
+msgstr "Zobraziť"
 
 #: src/ng_config.c:576
 msgid "Only Iconified"
-msgstr ""
+msgstr "Len minimalizované"
 
 #: src/ng_config.c:645 src/ng_config.c:685
 msgid "Engage Bar Configuration"
@@ -337,5 +333,3 @@ msgstr ""
 msgid "Are you sure you want to delete this Instance?"
 msgstr "Naozaj chcete vymazat túto inštanciu?"
 
-#~ msgid "Open folder with EFM"
-#~ msgstr "Otvoriť adresár ve súborovom manažéri"
