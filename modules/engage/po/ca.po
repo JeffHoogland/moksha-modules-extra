@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: engage\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2025-01-27 05:53-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-28 16:48+0100\n"
 "PO-Revision-Date: 2015-02-20 08:38+0000\n"
 "Last-Translator: JoanColl <Unknown>\n"
 "Language-Team: Catalan\n"
@@ -113,8 +113,8 @@ msgid "Background Opacity:"
 msgstr "Opacitat del fons:"
 
 #: src/ng_config.c:186
-msgid "%1.0f %"
-msgstr "%1.0f \\%"
+msgid "%1.0f"
+msgstr "%1.0f"
 
 #: src/ng_config.c:194
 msgid "Show Background Box"

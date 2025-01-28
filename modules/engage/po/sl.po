@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: engage\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2025-01-27 05:53-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-28 16:48+0100\n"
 "PO-Revision-Date: 2011-02-24 16:58+0100\n"
 "Last-Translator: r1to <renato.rener@gmail.com>\n"
 "Language-Team: Slovenian\n"
@@ -112,8 +112,9 @@ msgid "Background Opacity:"
 msgstr "Prozornost ozadja"
 
 #: src/ng_config.c:186
-msgid "%1.0f %"
-msgstr "%1.0f·\\%"
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
 
 #: src/ng_config.c:194
 msgid "Show Background Box"
@@ -340,12 +341,11 @@ msgstr ""
 msgid "Are you sure you want to delete this Instance?"
 msgstr "Ali ste prepričani da hočete izbrisati ta primerek?"
 
+#~ msgid "%1.0f %"
+#~ msgstr "%1.0f·\\%"
+
 #~ msgid "Reflection Opacity:"
 #~ msgstr "Prozornost zrcaljenja"
-
-#, c-format
-#~ msgid "%1.0f"
-#~ msgstr "%1.0f"
 
 #~ msgid "Itask-NG"
 #~ msgstr "Itask-NG"

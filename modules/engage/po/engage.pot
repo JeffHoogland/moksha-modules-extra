@@ -1,20 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
 # This file is put in the public domain.
-#
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: engage\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2025-01-27 05:53-0500\n"
+"Project-Id-Version: e-module-engage\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-28 16:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_main.c:1862 src/e_mod_main.c:1900
@@ -111,7 +110,8 @@ msgid "Background Opacity:"
 msgstr ""
 
 #: src/ng_config.c:186
-msgid "%1.0f %"
+#, c-format
+msgid "%1.0f"
 msgstr ""
 
 #: src/ng_config.c:194

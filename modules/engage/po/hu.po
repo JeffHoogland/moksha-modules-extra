@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: engage\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2025-01-27 05:53-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-28 16:48+0100\n"
 "PO-Revision-Date: 2013-12-25 16:26+0100\n"
 "Last-Translator: rezso <rezso@rezso.net>\n"
 "Language-Team: Hungarian\n"
@@ -118,13 +118,13 @@ msgid "Background Opacity:"
 msgstr "Háttér átlátszatlansága:"
 
 #: src/ng_config.c:186
-msgid "%1.0f %"
-msgstr "%1.0f \\%"
+msgid "%1.0f"
+msgstr "%1.0f"
 
 #: src/ng_config.c:194
 #, fuzzy
 msgid "Show Background Box"
-msgstr " L                      Üzenetdoboz mutatása/rejtése"
+msgstr "Üzenetdoboz mutatása/rejtése"
 
 #: src/ng_config.c:197
 #, fuzzy

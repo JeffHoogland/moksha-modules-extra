@@ -1,15 +1,15 @@
 # French translation for the Engage module.
 # This file is put in the public domain.
-#
+# 
 # batden <batden@orange.fr>, 2010, 2011.
 # dazibao <dazibao@sfr.fr>, 2011.
 # similar <similar@orange.fr>, 2020.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: engage\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2025-01-27 05:53-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-28 16:48+0100\n"
 "PO-Revision-Date: 2020-12-16 07:42+0100\n"
 "Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
 "Language-Team: French\n"
@@ -115,8 +115,8 @@ msgid "Background Opacity:"
 msgstr "Opacité du fond :"
 
 #: src/ng_config.c:186
-msgid "%1.0f %"
-msgstr "%1.0f \\%"
+msgid "%1.0f"
+msgstr "%1.0f"
 
 #: src/ng_config.c:194
 msgid "Show Background Box"
