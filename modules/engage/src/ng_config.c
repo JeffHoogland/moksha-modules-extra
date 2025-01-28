@@ -183,7 +183,7 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dial
      {
         ob = e_widget_label_add (evas, D_("Background Opacity:"));
         e_widget_framelist_object_append (of, ob);
-        ob = e_widget_slider_add (evas, 1, 0, D_("%1.0f \%"), 0, 255,
+        ob = e_widget_slider_add (evas, 1, 0, D_("%1.0f"), 0, 255,
                                   1.0, 0, NULL, &(cfdata->alpha), 100);
         e_widget_on_change_hook_set(ob, _cb_slider_change, cfdata);
         e_widget_framelist_object_append (of, ob);
