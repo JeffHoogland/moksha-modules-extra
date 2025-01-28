@@ -21,3 +21,11 @@ ninja -C build uninstall
 Clean build
 ===========
 rm -rf build/
+
+Debugging
+=========
+
+To see debug messages in the module add: 
+    "-DDEBUG -DDEBUG_MAIN -DDEBUG_CONFIG -DDEBUG_ITEM -DDEBUG_PICTURE -DDEBUG_PICTURE_LOCAL -DDEBUG_PICTURE_NET -DDEBUG_POPUP_WARN -DDEBUG_POPUP_INFO"
+
+to your CFLAGS before you compile.
