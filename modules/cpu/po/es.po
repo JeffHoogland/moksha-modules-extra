@@ -3,6 +3,7 @@
 #
 # chilicuil <Unknown>, 2008.
 # DiegoJ <diegojromerolopez@gmail.com>, 2009.
+# Alejandro Díaz <escuelaslinux@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
@@ -10,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 05:01-0500\n"
 "PO-Revision-Date: 2009-04-11 13:57+0000\n"
-"Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
+"Last-Translator: Alejandro Díaz <escuelaslinux@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -47,4 +48,4 @@ msgstr "Tasa de actualización"
 
 #: src/e_mod_main.c:420
 msgid "Merge CPU's into single Statistic"
-msgstr ""
+msgstr "Fusionar CPUs en una única estadística"
