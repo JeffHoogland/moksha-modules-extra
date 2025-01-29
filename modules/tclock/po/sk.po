@@ -76,7 +76,7 @@ msgstr "Klikni pre výber farby"
 
 #: src/e_mod_main.c:141
 msgid "TClock"
-msgstr "Tclock"
+msgstr "TClock"
 
 #: src/e_mod_main.c:181
 msgid "Settings"
