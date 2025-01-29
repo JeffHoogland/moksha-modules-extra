@@ -18,7 +18,7 @@ msgstr ""
 
 #: src/e_mod_config.c:42
 msgid "Snow Configuration"
-msgstr "Nastavenie modulu sneženie"
+msgstr "Nastavenie modulu Sneh"
 
 #: src/e_mod_config.c:99
 msgid "General Settings"
