@@ -19,7 +19,7 @@ msgstr ""
 
 #: src/e_mod_main.c:282
 msgid "DiskIO"
-msgstr ""
+msgstr "DiskIO"
 
 #: src/e_mod_main.c:352
 msgid "DiskIO Configuration Updated"
