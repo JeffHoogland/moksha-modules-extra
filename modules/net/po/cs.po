@@ -21,7 +21,7 @@ msgstr ""
 
 #: src/e_mod_configure.c:44
 msgid "Net Module Settings"
-msgstr "Nastavení modulu Net"
+msgstr "Nastavení modulu Síť"
 
 #: src/e_mod_configure.c:116
 msgid "General Settings"
