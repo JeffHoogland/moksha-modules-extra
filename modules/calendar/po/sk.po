@@ -34,4 +34,4 @@ msgstr "Kalendár"
 
 #: src/e_mod_main.c:690 src/e_mod_main.c:706
 msgid "Monthview Popup (Show/Hide)"
-msgstr "Vyskakovacie zobrazenie mesiaca (Zobraziť/skryť)"
+msgstr "Vyskakovacie zobrazenie (Zobraziť/skryť)"

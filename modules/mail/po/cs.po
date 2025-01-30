@@ -133,7 +133,7 @@ msgstr "Zobrazit všechny boxy v popup"
 
 #: src/e_mod_config.c:103
 msgid "Play sound when mail arrives"
-msgstr ""
+msgstr "Přehrát zvuk při novém mailu"
 
 #: src/e_mod_config.c:105
 msgid "Check Interval"
