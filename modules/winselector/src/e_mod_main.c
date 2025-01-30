@@ -325,7 +325,7 @@ _win_menu_item_create(E_Border *bd, E_Menu *m)
    if ((title) && (title[0]))
      e_menu_item_label_set(mi, title);
    else
-     e_menu_item_label_set(mi, "No name!!");
+     e_menu_item_label_set(mi, "No name!");
    /* ref the border as we implicitly unref it in the callback */
    e_object_ref(E_OBJECT(bd));
 /*   e_object_breadcrumb_add(E_OBJECT(bd), "clients_menu");*/
