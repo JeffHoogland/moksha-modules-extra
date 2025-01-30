@@ -29,7 +29,7 @@ msgstr "Bez mena!"
 
 #: src/ng_launcher.c:275
 msgid "Open Directory"
-msgstr "Otoviť adresár"
+msgstr "Otvoriť adresár"
 
 #: src/ng_launcher.c:561
 msgid "Configure Bar"
@@ -77,7 +77,7 @@ msgstr "Dostupné gadgety"
 
 #: src/ng_gadcon.c:310
 msgid "Add Gadget"
-msgstr "Pridat gadget"
+msgstr "Pridať gadget"
 
 #: src/ng_gadcon.c:316
 msgid "Selected Gadgets"
@@ -89,7 +89,7 @@ msgstr "Odstrániť gadget"
 
 #: src/ng_gadcon.c:331 src/ng_gadcon.c:374 src/ng_gadcon.c:398
 msgid "Description: Unavailable"
-msgstr "Popis: nedostupný"
+msgstr "Popis: Nedostupný"
 
 #: src/ng_config.c:98
 msgid "Engage Configuration"
@@ -101,7 +101,7 @@ msgstr "Vzhľad"
 
 #: src/ng_config.c:168
 msgid "Icon Size:"
-msgstr "Veľkosť ikon:"
+msgstr "Veľkosť ikony:"
 
 #: src/ng_config.c:170
 #, c-format
@@ -218,7 +218,7 @@ msgstr "Skryť pri celej obrazovke"
 
 #: src/ng_config.c:299
 msgid "Show Bar when Urgent"
-msgstr "Zobraziť panel pri urgentnom upozornení"
+msgstr "Zobraziť panel pri urgencii"
 
 #: src/ng_config.c:307
 msgid "Stacking"
@@ -238,7 +238,7 @@ msgstr "Ostatné"
 
 #: src/ng_config.c:316
 msgid "Ecomorph Features"
-msgstr "Funkcia Ecomorphu"
+msgstr "Funkcia Ecomorph"
 
 #: src/ng_config.c:318
 msgid "Show Icon Label"
