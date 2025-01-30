@@ -59,7 +59,7 @@ msgstr "Efekt stmívání"
 
 #: src/ng_config.c:116
 msgid "Size"
-msgstr "Velkost"
+msgstr "Velikost"
 
 #: src/ng_config.c:117
 msgid "Icon Size:"
