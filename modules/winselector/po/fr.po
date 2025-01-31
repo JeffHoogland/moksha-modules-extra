@@ -17,6 +17,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: src/e_mod_main.c:140
+msgid "Winselector"
+msgstr ""
+
 #: src/e_mod_main.c:283
 msgid "No windows"
 msgstr "Pas de fenêtre"

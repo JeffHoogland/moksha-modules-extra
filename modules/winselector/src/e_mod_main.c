@@ -137,7 +137,7 @@ _gc_orient (E_Gadcon_Client * gcc, E_Gadcon_Orient orient __UNUSED__)
 static const char *
 _gc_label (const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
-  return "Winselector";
+  return D_("Winselector");
 }
 
 static Evas_Object *
