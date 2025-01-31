@@ -1,0 +1,26 @@
+# Esperanto translations for the Winselector module.
+# This file is put in the public domain.
+#
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: winselector\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-30 16:58-0500\n"
+"PO-Revision-Date: 2025-01-30 16:58-0500\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: Esperanto\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/e_mod_main.c:283
+msgid "No windows"
+msgstr "Neniu fenestro"
+
+#: src/e_mod_main.c:328
+msgid "No name!"
+msgstr ""
