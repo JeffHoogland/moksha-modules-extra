@@ -19,7 +19,7 @@ msgstr ""
 
 #: src/e_mod_main.c:140
 msgid "Winselector"
-msgstr ""
+msgstr "Winselector"
 
 #: src/e_mod_main.c:283
 msgid "No windows"
@@ -27,4 +27,4 @@ msgstr "Žiadne okná"
 
 #: src/e_mod_main.c:328
 msgid "No name!"
-msgstr ""
+msgstr "Bez mena!"
