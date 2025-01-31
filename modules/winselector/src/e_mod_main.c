@@ -280,7 +280,7 @@ _win_menu_pre_cb(void *data, E_Menu *m)
      {
         /* FIXME here we want nothing, but that crashes!!! */
         mi = e_menu_item_new(m);
-        e_menu_item_label_set(mi, "(No Windows)");
+        e_menu_item_label_set(mi,  D_("No windows"));
         return;
      }
 
@@ -325,7 +325,7 @@ _win_menu_item_create(E_Border *bd, E_Menu *m)
    if ((title) && (title[0]))
      e_menu_item_label_set(mi, title);
    else
-     e_menu_item_label_set(mi, "No name!");
+     e_menu_item_label_set(mi, D_("No name!"));
    /* ref the border as we implicitly unref it in the callback */
    e_object_ref(E_OBJECT(bd));
 /*   e_object_breadcrumb_add(E_OBJECT(bd), "clients_menu");*/
@@ -825,6 +825,9 @@ EAPI E_Module_Api e_modapi = {
 EAPI void *
 e_modapi_init (E_Module * m)
 {
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
    winsel_module = m;
    e_gadcon_provider_register (&_gadcon_class);
    return winsel_module;
