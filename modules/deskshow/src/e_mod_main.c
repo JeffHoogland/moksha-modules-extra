@@ -7,7 +7,7 @@ static void             _gc_orient(E_Gadcon_Client * gcc, E_Gadcon_Orient orient
 static const char      *_gc_label(const E_Gadcon_Client_Class *client_class);
 static                  Evas_Object *_gc_icon(const E_Gadcon_Client_Class *client_class, Evas * evas);
 static const char      *_gc_id_new(const E_Gadcon_Client_Class *client_class);
-static Eina_Bool              _deskshow_cb_event_desk_show(void *data, int type, void *event);
+static Eina_Bool        _deskshow_cb_event_desk_show(void *data, int type, void *event);
 
 /* and actually define the gadcon class that this module provides (just 1) */
 static const E_Gadcon_Client_Class _gadcon_class = {
