@@ -1,7 +1,7 @@
 # Slovak translations for the Winselector module.
 # This file is put in the public domain.
 #
-# Automatically generated, 2025.
+# the_waiter <thewaiter@bodhilinux.com>, 2025.
 #
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-30 16:58-0500\n"
 "PO-Revision-Date: 2025-01-30 16:58-0500\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: the_waiter <thewaiter@bodhilinux.com>\n"
 "Language-Team: Slovakian\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
