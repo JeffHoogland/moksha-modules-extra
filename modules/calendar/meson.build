@@ -7,7 +7,7 @@ add_project_arguments('-D__UNUSED__=__attribute__((unused))', language: 'c')
 
 gettext_domain = 'e-module-' + meson.project_name()
 
-#### Enlightenemnt ####
+#### Enlightenment ####
 dep_e = dependency('enlightenment')
 e_modules_dir = dep_e.get_variable('modules')
 e_release = dep_e.get_variable('release')
