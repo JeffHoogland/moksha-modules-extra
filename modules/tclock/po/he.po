@@ -1,4 +1,4 @@
-# Hebrew translation for enlightenment
+# Hebrew translation for the Tclock Module.
 # This file is put in the public domain.
 #
 # Yaron <sh.yaron@gmail.com>, 2008.

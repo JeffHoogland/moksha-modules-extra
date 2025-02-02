@@ -1,4 +1,4 @@
-# Faroese translation for enlightenment
+# Faroese translation for the Tclock Module.
 # This file is put in the public domain.
 #
 # Gunleif Joensen, 2009.

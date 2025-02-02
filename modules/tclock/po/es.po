@@ -1,5 +1,4 @@
-# Spanish translation for enlightenment
-# Spanish
+# Spanish translation for the Tclock Module.
 # This file is put in the public domain.
 #
 # Paco Molinero <paco@byasl.com>, 2008.

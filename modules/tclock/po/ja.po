@@ -1,4 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
 # Japanese translation for the Tclock Module.
 # This file is put in the public domain.
 #

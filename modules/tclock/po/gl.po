@@ -1,4 +1,4 @@
-# Galician translation of tclock
+# Galician translation for the Tclock Module.
 # This file is put in the public domain.
 #
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.

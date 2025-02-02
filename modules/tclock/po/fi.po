@@ -1,4 +1,4 @@
-# Tclock module (e17), Finnish translation
+# Finnish translation for the Tclock Module.
 # This file is put in the public domain.
 #
 # Jani väyrynen <janivayrynen@gmail.com>, 2008.

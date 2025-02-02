@@ -1,4 +1,4 @@
-# translation for the Tclock Module.
+# German translation for the Tclock Module.
 # This file is put in the public domain.
 #
 # Andreas Volz <andreas.volz@tux-style.de>, 2008.

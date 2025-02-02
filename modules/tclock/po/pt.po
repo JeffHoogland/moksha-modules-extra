@@ -1,5 +1,6 @@
-# Portuguese translation for the Tclock Module.
-# This file is distributed under the same license as the enlightenment package.
+# Portuguese Portuguese translation for the Tclock Module.
+# This file is put in the public domain.
+#
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2024.
 # Adaptado ao acordo ortográfico de 1990

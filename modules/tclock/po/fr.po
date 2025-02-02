@@ -1,4 +1,4 @@
-# French translation for the Tclock module.
+# French translation for the Tclock Module.
 # This file is put in the public domain.
 #
 # batden <batden@orange.fr>, 2009.
