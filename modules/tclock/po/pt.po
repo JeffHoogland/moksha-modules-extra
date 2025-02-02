@@ -1,4 +1,4 @@
-# Portuguese Portuguese translation for the Tclock Module.
+# Portuguese translation for the Tclock Module.
 # This file is put in the public domain.
 #
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
