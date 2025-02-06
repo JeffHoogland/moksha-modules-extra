@@ -1,0 +1,23 @@
+To build using meson
+====================
+meson setup build
+cd build
+ninja
+ninja install
+
+
+Or without chdir
+================
+meson setup build
+ninja -C build
+ninja -C build install
+
+
+Uninstall
+=========
+ninja -C build uninstall
+
+
+Clean build
+===========
+rm -rf build/
