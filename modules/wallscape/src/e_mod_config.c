@@ -1212,8 +1212,8 @@ wp_browser_new(E_Container *con)
    // preview
    info->preview = e_livethumb_add(info->win->evas);
    e_livethumb_vsize_set(info->preview, zone->w, zone->h);
-   //~ edje_extern_object_aspect_set(info->preview, EDJE_ASPECT_CONTROL_NEITHER,
-                                 //~ zone->w, zone->h);
+   evas_object_size_hint_aspect_set(info->preview, EDJE_ASPECT_CONTROL_NEITHER,
+                                 zone->w, zone->h);
    edje_object_part_swallow(info->bg, "e.swallow.preview", info->preview);
    evas_object_show(info->preview);
 
