@@ -1332,11 +1332,11 @@ wp_broser_free(Info *info)
 E_Config_Dialog *
 wp_conf_show(E_Container *con, const char *params __UNUSED__)
 {
-   if (global_info)
-     {
-        e_win_show(global_info->win);
-        e_win_raise(global_info->win);
-     }
+   if (global_info) return NULL;
+     //~ {
+        //~ e_win_show(global_info->win);
+        //~ e_win_raise(global_info->win);
+     //~ }
    global_info = wp_browser_new(con);
 
    return NULL;
