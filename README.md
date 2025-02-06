@@ -22,5 +22,6 @@ Module List:
 - Snow
 - Tclock
 - Trash
+- Wallscape
 - Winlist-ng
 - Winselector
