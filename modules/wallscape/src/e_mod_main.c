@@ -21,7 +21,7 @@ e_modapi_init(E_Module *m)
 {
    bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
    bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
-   
+
    e_configure_registry_category_add("appearance", 10, D_("Look"), NULL, "preferences-look");
    e_configure_registry_item_add("appearance/wallscape", 10, D_("Wallscape"), NULL, "preferences-desktop-wallpaper", wp_conf_show);
    e_configure_registry_category_add("internal", -1, D_("Internal"), NULL, "enlightenment/internal");
@@ -34,8 +34,8 @@ e_modapi_init(E_Module *m)
 //				       e_int_config_wallpaper_handler_test, NULL);
 //   if (import_hdl)
 //     {
-//	e_fm2_mime_handler_mime_add(import_hdl, "image/png");
-//	e_fm2_mime_handler_mime_add(import_hdl, "image/jpeg");
+//       e_fm2_mime_handler_mime_add(import_hdl, "image/png");
+//       e_fm2_mime_handler_mime_add(import_hdl, "image/jpeg");
 //     }
 
    conf_module = m;
@@ -50,8 +50,8 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
    /* remove module-supplied menu additions */
    if (maug)
      {
-	e_int_menus_menu_augmentation_del("config/1", maug);
-	maug = NULL;
+       e_int_menus_menu_augmentation_del("config/1", maug);
+       maug = NULL;
      }
 //   while ((cfd = e_config_dialog_get("E", "appearance/wallpaper2")))
 //     e_object_del(E_OBJECT(cfd));
