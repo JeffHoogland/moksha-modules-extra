@@ -16,7 +16,7 @@ typedef struct _Item Item;
 struct _Info
 {
    E_Win *win;
-   Evas_Object *bg, *preview, *mini, *button, *box, *sframe, *span;
+   Evas_Object *bg, *preview, *mini, *button, *box, *sframe, *span, *theme_bg;
    char *bg_file;
    int iw, ih;
    Eina_List *dirs;
@@ -994,9 +994,15 @@ _apply(void *data, void *data2 __UNUSED__)
              e_bg_del(cfbg->container, cfbg->zone, cfbg->desk_x, cfbg->desk_y);
           }
         if ((info->use_theme_bg) || (!info->bg_file))
-          e_bg_default_set(NULL);
+          {
+            e_bg_default_set(NULL);
+            e_widget_check_checked_set(info->theme_bg, 1);
+          }
         else
-          e_bg_default_set(info->bg_file);
+          {
+            e_bg_default_set(info->bg_file);
+            e_widget_check_checked_set(info->theme_bg, 0);
+          }
      }
    else if (info->mode == 1)
      {
@@ -1033,8 +1039,8 @@ _close(void *data __UNUSED__, void *data2 __UNUSED__)
 static void
 _ok(void *data, void *data2 __UNUSED__)
 {
-  _apply(data, data2);
-  wp_conf_hide();
+   _apply(data, data2);
+   wp_conf_hide();
 }
 
 /* buttons cb for future usage
@@ -1153,8 +1159,18 @@ wp_browser_new(E_Container *con)
           }
         info->bg_file = strdup(cfbg->file);
      }
+
    if ((!info->bg_file) && (e_config->desktop_default_background))
      info->bg_file = strdup(e_config->desktop_default_background);
+
+   if (info->bg_file)
+     {
+        const char *f;
+
+        f = e_theme_edje_file_get("base/theme/backgrounds",
+                                  "e/desktop/background");
+        if (!strcmp(info->bg_file, f)) info->use_theme_bg = 1;
+     }
    else
      info->use_theme_bg = 1;
 
@@ -1271,6 +1287,12 @@ wp_browser_new(E_Container *con)
          (e_util_container_zone_number_get(1, 0))))
      e_widget_disabled_set(o2, EINA_TRUE);
    evas_object_show(o2);
+
+   o2 = e_widget_check_add(info->win->evas, D_("Use Theme Wallpaper"),
+                           &info->use_theme_bg);
+   evas_object_smart_callback_add(o2, "changed", _wp_changed, info);
+   info->theme_bg = o2;
+   e_widget_list_object_append(o, o2, 1, 0, 0.5);
 
    e_widget_list_object_append(ob, o, 1, 0, 0.5);
    evas_object_show(o);
