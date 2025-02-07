@@ -205,11 +205,11 @@ _e_smart_reconfigure_do(void *data)
              redo = 1;
           }
         if (redo)
-	  {
-	     recursion = 1;
-	     _e_smart_reconfigure_do(obj);
-	     recursion = 0;
-	  }
+          {
+            recursion = 1;
+            _e_smart_reconfigure_do(obj);
+            recursion = 0;
+          }
         changed = 1;
      }
 
@@ -1037,6 +1037,7 @@ _ok(void *data, void *data2 __UNUSED__)
   wp_conf_hide();
 }
 
+/* buttons cb for future usage
 static void
 _wp_add(void *data, void *data2 __UNUSED__)
 {
@@ -1052,6 +1053,8 @@ _wp_delete(void *data, void *data2 __UNUSED__)
 
    edje_object_signal_emit(info->bg, "e,action,panel,hide", "e");
 }
+
+*/
 
 static void
 _wp_changed(void *data, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
@@ -1273,7 +1276,9 @@ wp_browser_new(E_Container *con)
    evas_object_show(o);
 
    o = e_widget_list_add(info->win->evas, 1, 0);
-
+   
+   /* Buttons for future usage
+    * 
    o2 =  e_widget_button_add(info->win->evas, D_("Add"), NULL,
                              _wp_add, info, NULL);
    e_widget_list_object_append(o, o2, 1, 0, 0.5);
@@ -1282,7 +1287,7 @@ wp_browser_new(E_Container *con)
    o2 =  e_widget_button_add(info->win->evas, D_("Delete"), NULL,
                              _wp_delete, info, NULL);
    e_widget_list_object_append(o, o2, 1, 0, 0.5);
-   evas_object_show(o2);
+   evas_object_show(o2); */
 
    e_widget_list_object_append(ob, o, 1, 0, 0.5);
    evas_object_show(o);
