@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: e-module-wallscape\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-06 17:36+0100\n"
-"PO-Revision-Date: 2025-02-06 17:36+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-02-07 21:06+0200\n"
+"Last-Translator: diekrz2\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -18,47 +18,47 @@ msgstr ""
 
 #: src/e_mod_config.c:724 src/e_mod_config.c:917
 msgid "Theme Wallpaper"
-msgstr ""
+msgstr "Sfondo tema"
 
 #: src/e_mod_config.c:1108
 msgid "Loading files..."
-msgstr ""
+msgstr "Caricamento dei file..."
 
 #: src/e_mod_config.c:1175
 msgid "Wallpaper Settings"
-msgstr ""
+msgstr "Impostazioni Sfondo"
 
 #: src/e_mod_config.c:1190
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: src/e_mod_config.c:1196
 msgid "Apply"
-msgstr ""
+msgstr "Applica"
 
 #: src/e_mod_config.c:1202
 msgid "Close"
-msgstr ""
+msgstr "Chiudi"
 
 #: src/e_mod_config.c:1253
 msgid "All Desktops"
-msgstr ""
+msgstr "Tutti i Desktop"
 
 #: src/e_mod_config.c:1259
 msgid "This Desktop"
-msgstr ""
+msgstr "Questo Desktop"
 
 #: src/e_mod_config.c:1264
 msgid "This Screen"
-msgstr ""
+msgstr "Questo Schermo"
 
 #: src/e_mod_config.c:1277
 msgid "Add"
-msgstr ""
+msgstr "Aggiungi"
 
 #: src/e_mod_config.c:1282
 msgid "Delete"
-msgstr ""
+msgstr "Elimina"
 
 #: src/e_mod_main.c:25
 msgid "Look"
@@ -66,8 +66,8 @@ msgstr ""
 
 #: src/e_mod_main.c:26 src/e_mod_main.c:30 src/e_mod_main.c:94
 msgid "Wallscape"
-msgstr ""
+msgstr "Wallscape"
 
 #: src/e_mod_main.c:27
 msgid "Internal"
-msgstr ""
+msgstr "Interno"
