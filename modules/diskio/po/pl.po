@@ -1,0 +1,30 @@
+# Polish translations for diskio package.
+# This file is put in the public domain.
+#
+# diekrz2, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: diskio\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-18 17:43-0500\n"
+"PO-Revision-Date: 2025-02-07 21:38-0500\n"
+"Last-Translator: diekrz2\n"
+"Language-Team: none\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/e_mod_main.c:282
+msgid "DiskIO"
+msgstr "DiskIO"
+
+#: src/e_mod_main.c:352
+msgid "DiskIO Configuration Updated"
+msgstr "Konfiguracja DiskIO została zaktualizowana"
+
+#: src/e_mod_main.c:390
+msgid "Settings"
+msgstr "Ustawienia"
