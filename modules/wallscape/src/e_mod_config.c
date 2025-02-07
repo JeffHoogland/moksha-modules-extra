@@ -995,6 +995,12 @@ _apply(void *data, void *data2 __UNUSED__)
           }
         if ((info->use_theme_bg) || (!info->bg_file))
           {
+            const char *f = e_theme_edje_file_get("base/theme/backgrounds",
+                                              "e/desktop/background");
+
+            edje_object_file_set(info->mini, f, "e/desktop/background");
+            edje_object_part_text_set(info->bg, "e.text.filename",
+                                       D_("Theme Wallpaper"));
             e_bg_default_set(NULL);
             e_widget_check_checked_set(info->theme_bg, 1);
           }
@@ -1026,6 +1032,7 @@ _apply(void *data, void *data2 __UNUSED__)
           e_bg_del(cfbg->container, cfbg->zone, cfbg->desk_x, cfbg->desk_y);
         e_bg_add(info->con_num, info->zone_num, -1, -1, info->bg_file);
      }
+
    e_bg_update();
    e_config_save_queue();
 }
