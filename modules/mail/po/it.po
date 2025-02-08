@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: mail\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2010-09-10 12:43+0200\n"
-"Last-Translator: Massimo Maiurana <maiurana@inwind.it>\n"
-"Language-Team: Italian\n"
+"PO-Revision-Date: 2025-02-08 12:32+0200\n"
+"Last-Translator: diekrz2\n"
+"Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,7 +54,7 @@ msgstr "Mbox"
 
 #: src/e_mod_config_box.c:193
 msgid "Monitor Mbox file permanently"
-msgstr "Monitorizza file Mbox permanentemente"
+msgstr "Monitora file Mbox permanentemente"
 
 #: src/e_mod_config_box.c:210
 msgid "Port Settings"
@@ -82,7 +82,7 @@ msgstr "Locale:"
 
 #: src/e_mod_config_box.c:238
 msgid "Mailbox Settings"
-msgstr "Impostazioni account"
+msgstr "Impostazioni Mailbox"
 
 #: src/e_mod_config_box.c:239
 msgid "Name:"
@@ -118,7 +118,7 @@ msgstr "Impostazioni di Mail"
 
 #: src/e_mod_config.c:97
 msgid "Always Show Labels"
-msgstr "Mostra etichette"
+msgstr "Mostra sempre le etichette"
 
 #: src/e_mod_config.c:99
 msgid "Show Mailbox Popup"
@@ -130,7 +130,7 @@ msgstr "Mostra tutte le caselle nel popup"
 
 #: src/e_mod_config.c:103
 msgid "Play sound when mail arrives"
-msgstr ""
+msgstr "Segnale acustico all'arrivo della posta"
 
 #: src/e_mod_config.c:105
 msgid "Check Interval"
@@ -167,4 +167,4 @@ msgstr "Impostazioni"
 
 #: src/e_mod_main.c:684
 msgid "A new mail!"
-msgstr ""
+msgstr "Hai una nuova mail!"
