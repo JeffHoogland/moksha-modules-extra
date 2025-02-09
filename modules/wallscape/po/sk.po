@@ -53,9 +53,8 @@ msgid "This Screen"
 msgstr "Táto obrazovka"
 
 #: src/e_mod_config.c:1298
-#, fuzzy
 msgid "Use Theme Wallpaper"
-msgstr "Tapeta"
+msgstr "Použiť tapetu témy"
 
 #: src/e_mod_main.c:25
 msgid "Look"
@@ -69,8 +68,3 @@ msgstr "Wallscape"
 msgid "Internal"
 msgstr "Internal"
 
-#~ msgid "Add"
-#~ msgstr "Pridať"
-
-#~ msgid "Delete"
-#~ msgstr "Vymazať"
