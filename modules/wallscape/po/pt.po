@@ -1,73 +1,74 @@
 # Portuguese translations for e-module-wallscape package.
 # This file is put in the public domain.
-# Automatically generated, 2025.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: e-module-wallscape\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-06 17:36+0100\n"
-"PO-Revision-Date: 2025-02-06 17:36+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-02-09 00:18+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: Portuguese\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_config.c:724 src/e_mod_config.c:917
 msgid "Theme Wallpaper"
-msgstr ""
+msgstr "Papel de parede"
 
 #: src/e_mod_config.c:1108
 msgid "Loading files..."
-msgstr ""
+msgstr "A carregar ficheiros..."
 
 #: src/e_mod_config.c:1175
 msgid "Wallpaper Settings"
-msgstr ""
+msgstr "Definições"
 
 #: src/e_mod_config.c:1190
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: src/e_mod_config.c:1196
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 #: src/e_mod_config.c:1202
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #: src/e_mod_config.c:1253
 msgid "All Desktops"
-msgstr ""
+msgstr "Todas as áreas de trabalho"
 
 #: src/e_mod_config.c:1259
 msgid "This Desktop"
-msgstr ""
+msgstr "Esta área de trabalho"
 
 #: src/e_mod_config.c:1264
 msgid "This Screen"
-msgstr ""
+msgstr "Este ecrã"
 
 #: src/e_mod_config.c:1277
 msgid "Add"
-msgstr ""
+msgstr "Adicionar"
 
 #: src/e_mod_config.c:1282
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: src/e_mod_main.c:25
 msgid "Look"
-msgstr ""
+msgstr "Ver"
 
 #: src/e_mod_main.c:26 src/e_mod_main.c:30 src/e_mod_main.c:94
 msgid "Wallscape"
-msgstr ""
+msgstr "Wallscape"
 
 #: src/e_mod_main.c:27
 msgid "Internal"
-msgstr ""
+msgstr "Interno"
