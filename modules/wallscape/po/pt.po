@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: e-module-wallscape\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-09 22:02+0100\n"
-"PO-Revision-Date: 2025-02-09 00:18+0000\n"
+"PO-Revision-Date: 2025-02-09 21:17+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_config.c:724 src/e_mod_config.c:917 src/e_mod_config.c:1003
 msgid "Theme Wallpaper"
-msgstr "Papel de parede"
+msgstr "Papel de parede do tema"
 
 #: src/e_mod_config.c:1124
 msgid "Loading files..."
@@ -54,9 +54,8 @@ msgid "This Screen"
 msgstr "Este ecrã"
 
 #: src/e_mod_config.c:1298
-#, fuzzy
 msgid "Use Theme Wallpaper"
-msgstr "Papel de parede"
+msgstr "Utilizar papel de parede do tema"
 
 #: src/e_mod_main.c:25
 msgid "Look"
