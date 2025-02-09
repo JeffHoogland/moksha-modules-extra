@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: e-module-wallscape\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2025-02-06 17:36+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-09 22:02+0100\n"
 "PO-Revision-Date: 2025-02-07 13:55+0100\n"
 "Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
 "Language-Team: none\n"
@@ -18,49 +18,46 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.5\n"
 
-#: src/e_mod_config.c:724 src/e_mod_config.c:917
+#: src/e_mod_config.c:724 src/e_mod_config.c:917 src/e_mod_config.c:1003
 msgid "Theme Wallpaper"
 msgstr "Fond d'écran du thème"
 
-#: src/e_mod_config.c:1108
+#: src/e_mod_config.c:1124
 msgid "Loading files..."
 msgstr "Chargement des fichiers..."
 
-#: src/e_mod_config.c:1175
+#: src/e_mod_config.c:1201
 msgid "Wallpaper Settings"
 msgstr "Paramétrage du fond d'écran"
 
-#: src/e_mod_config.c:1190
+#: src/e_mod_config.c:1216
 msgid "OK"
 msgstr "OK"
 
-#: src/e_mod_config.c:1196
+#: src/e_mod_config.c:1222
 msgid "Apply"
 msgstr "Appliquer"
 
-#: src/e_mod_config.c:1202
+#: src/e_mod_config.c:1228
 msgid "Close"
 msgstr "Fermer"
 
-#: src/e_mod_config.c:1253
+#: src/e_mod_config.c:1279
 msgid "All Desktops"
 msgstr "Tous les bureaux"
 
-#: src/e_mod_config.c:1259
+#: src/e_mod_config.c:1285
 msgid "This Desktop"
 msgstr "Ce bureau"
 
-#: src/e_mod_config.c:1264
+#: src/e_mod_config.c:1290
 msgid "This Screen"
 msgstr "Cet écran"
 
-#: src/e_mod_config.c:1277
-msgid "Add"
-msgstr "Ajouter"
-
-#: src/e_mod_config.c:1282
-msgid "Delete"
-msgstr "Effacer"
+#: src/e_mod_config.c:1298
+#, fuzzy
+msgid "Use Theme Wallpaper"
+msgstr "Fond d'écran du thème"
 
 #: src/e_mod_main.c:25
 msgid "Look"
@@ -73,3 +70,9 @@ msgstr "Murale"
 #: src/e_mod_main.c:27
 msgid "Internal"
 msgstr "Interne"
+
+#~ msgid "Add"
+#~ msgstr "Ajouter"
+
+#~ msgid "Delete"
+#~ msgstr "Effacer"
