@@ -43,8 +43,25 @@ i18n.merge_file(
   install_dir: mod_install_dir
 )
 
+#### Edje cc ####
+edje_cc = get_option('edje-cc')
+if edje_cc == ''
+edje_cc = find_program('edje_cc')
+endif
+
 #### module sources ####
 subdir('src')
+
+cmd = [ edje_cc,
+        '-id', join_paths(meson.project_source_root(), 'images'),
+        '@INPUT@', '@OUTPUT@']
+custom_target('e-module-wallscape.edj',
+              input      : 'e-module-wallscape.edc',
+              output     : 'e-module-wallscape.edj',
+              command    : cmd,
+              install_dir: mod_install_dir,
+              install    : true
+             )
 
 #### write config file ####
 configure_file(output: 'config.h', configuration: config_h)

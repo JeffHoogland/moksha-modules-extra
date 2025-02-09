@@ -36,5 +36,5 @@ Comment[pt_BR]=
 Comment[ru]=
 Comment[sk]=Alternatívny nástroj pre nastavenie tapety.
 Comment[tr]=
-Icon=preferences-desktop-wallpaper
+Icon=e-module-wallscape
 X-Enlightenment-ModuleType=settings
