@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-22 22:17-0500\n"
-"PO-Revision-Date: 2009-06-07 22:33+0000\n"
-"Last-Translator: Stanislaw Gackowski <launchpad@soeb.eu>\n"
-"Language-Team: Polish\n"
+"PO-Revision-Date: 2025-02-10 13:21+0100\n"
+"Last-Translator: diekrz2\n"
+"Language-Team: none\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,15 +50,15 @@ msgstr "Ustawienia alarmu"
 
 #: src/e_mod_config.c:234
 msgid "Show next alarm"
-msgstr "Pokaż dalszy alarm"
+msgstr "Pokaż przyszły alarm"
 
 #: src/e_mod_config.c:239
 msgid "Alarms Defaults"
-msgstr "Domyślne alarmów"
+msgstr "Ustawienia domyślne"
 
 #: src/e_mod_config.c:241 src/e_mod_config_alarm.c:397
 msgid "Open popup"
-msgstr "Otwórz okno"
+msgstr "Otwórz powiadomienie"
 
 #: src/e_mod_config.c:244
 msgid "Run program"
@@ -70,7 +70,7 @@ msgstr "Automatycznie usuwaj alarmy"
 
 #: src/e_mod_config_alarm.c:68
 msgid "Alarm Configuration : Setup an alarm"
-msgstr "Konfiguracja alarmu: włącz alarm"
+msgstr "Konfiguracja alarmu: ustaw alarm"
 
 #: src/e_mod_config_alarm.c:186
 msgid "Information"
@@ -151,7 +151,7 @@ msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
 "in the information / schedule of your alarm"
 msgstr ""
-"<hilight>Błąd, alarm nie był dodany !</hilight><br><br>Wystąpił błąd w "
+"<hilight>Błąd, alarm został dodany !</hilight><br><br>Wystąpił błąd w "
 "informacjach / harmonogramu twojego alarmu"
 
 #: src/e_mod_config_alarm.c:289
@@ -159,7 +159,7 @@ msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>You have to enter "
 "a name for the alarm"
 msgstr ""
-"<hilight>Błąd, alarm nie był dodany !</hilight><br><br>Musisz podać nazwę "
+"<hilight>Błąd, alarm nie został dodany !</hilight><br><br>Musisz podać nazwę "
 "alarmu"
 
 #: src/e_mod_config_alarm.c:294
@@ -167,7 +167,7 @@ msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>You have to "
 "select at least one day in the week"
 msgstr ""
-"<hilight>Błąd, alarm nie był dodany !</hilight><br><br>Musizs wybrać "
+"<hilight>Błąd, alarm nie został dodany !</hilight><br><br>Musizs wybrać "
 "przynajmniej jeden dzień tygodnia"
 
 #: src/e_mod_config_alarm.c:299
@@ -177,7 +177,7 @@ msgid ""
 "format :<br>   YYYY/MM/DD<br>YYYY is the year on 4 numbers<br>MM is the "
 "month on 2 numbers<br>DD is the day on 2 numbers<br>"
 msgstr ""
-"<hilight>Błąd, alarm nie był dodany !</hilight><br><br>Data którą podałeś "
+"<hilight>Błąd, alarm nie został dodany !</hilight><br><br>Data którą podałeś "
 "dla alarmu ma nieprawidłowy format<br><br>Musisz ją podać według tego "
 "szablonu :<br> RRRR/MM/DD<br>RRRR jest 4 cyfrowym rokiem<br>MM jest 2 "
 "cyfrowym miesiącem<br>DD jest 2 cyfrowym dniem<br>"
@@ -187,7 +187,7 @@ msgid ""
 "<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
 "entered is before now"
 msgstr ""
-"<hilight>Błąd, alarm nie był dodany !</hilight><br><br>Data którą podałeś "
+"<hilight>Błąd, alarm nie został dodany !</hilight><br><br>Data którą podałeś "
 "już minęła"
 
 #: src/e_mod_config_alarm.c:313 src/e_mod_main.c:421
@@ -208,7 +208,7 @@ msgstr "Usuń alarm"
 
 #: src/e_mod_config_alarm.c:384 src/e_mod_config_alarm.c:404
 msgid "No [default]"
-msgstr "Nie [standardowo]"
+msgstr "Nie [domyślne]"
 
 #: src/e_mod_config_alarm.c:386 src/e_mod_config_alarm.c:406
 msgid "Yes"
@@ -221,7 +221,7 @@ msgstr "Nie"
 
 #: src/e_mod_config_alarm.c:393 src/e_mod_config_alarm.c:413
 msgid "Yes [default]"
-msgstr "Tak [standardowo]"
+msgstr "Tak [domyślne]"
 
 #: src/e_mod_config_alarm.c:417
 msgid "Run a program"
@@ -254,7 +254,7 @@ msgstr "<hilight>Test alarm się NIEUDAŁ !</hilight>"
 
 #: src/e_mod_config_alarm.c:484
 msgid "Alarm Module Test Report"
-msgstr "Raport test modułu alarmu"
+msgstr "Raport testu modułu alarm"
 
 #: src/e_mod_main.c:393
 #, c-format
@@ -263,20 +263,20 @@ msgstr "<hilight>Alarm : %s</hilight><br><br>%s"
 
 #: src/e_mod_main.c:396
 msgid "Alarm Module Popup"
-msgstr "Okno modułu alarmu"
+msgstr "Powiadomienie modułu alarm"
 
 #: src/e_mod_main.c:419
 msgid ""
 "<hilight>Failed !</hilight><br><br>Alarm couln't launch the program you "
 "specified"
 msgstr ""
-"<hilight>Alarm zawiódł !</hilight><br><br>Alarm nie mógł włączyć program "
+"<hilight>Alarm zawiódł !</hilight><br><br>Alarm nie mógł uruchomić programu "
 "który podałeś"
 
 #: src/e_mod_main.c:653 src/e_mod_main.c:846
 #, c-format
 msgid "Snooze %s"
-msgstr "Wyciszenie %s"
+msgstr "Odłóż o %s"
 
 #: src/e_mod_main.c:657
 #, c-format
@@ -302,16 +302,16 @@ msgstr "Dodaj alarm"
 
 #: src/e_mod_main.c:828
 msgid "Settings"
-msgstr ""
+msgstr "Ustawienia"
 
 #: src/e_mod_main.c:854
 #, c-format
 msgid "Snooze %.14s of %.2d:%.2d"
-msgstr "Wyciszenie %.14s z %.2d:%.2d"
+msgstr "Odłóż o %.14s z %.2d:%.2d"
 
 #: src/e_mod_main.c:868
 msgid "Snooze (No alarm to delay)"
-msgstr "Wyciszenie (żaden alarm do przesunięcia)"
+msgstr "Odłóż o (żaden alarm do przesunięcia)"
 
 #: src/e_mod_main.c:1040
 #, c-format
@@ -320,9 +320,9 @@ msgid ""
 "configuration of alarm module<br>has been upgraded<br>Your settings and "
 "alarms were removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
 msgstr ""
-"<hilight>Moduł alarmu : konfiguracja zaktualizowana</hilight><br><br>Twoja "
-"konfiguracja modułu alarmu<br>była zaktualizowana<br>Twoje ustawienia i "
-"alarmy były usunięte<br>Przeprasamy za niedogodności<br><br>(%d -> %d)"
+"<hilight>Moduł alarmu : konfiguracja została zaktualizowana</hilight><br><br>Twoja "
+"konfiguracja modułu alarmu<br>została zaktualizowana<br>Twoje ustawienia i "
+"alarmy zostały usunięte<br>Przeprasamy za niedogodności<br><br>(%d -> %d)"
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
 msgid "Alarm Module version"
@@ -336,5 +336,5 @@ msgid ""
 "alarms were removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
 msgstr ""
 "<hilight>Moduł alarmu : konfiguracja dezaktualizowana</hilight><br><br>Twoja "
-"konfiguracja modułu alarmu<br>była dezaktualizowana<br>Twoje ustawienia i "
-"alarmy były usunięte<br>Przeprasamy za niedogodności<br><br>(%d -> %d)"
+"konfiguracja modułu alarmu<br>została dezaktualizowana<br>Twoje ustawienia i "
+"alarmy zostały usunięte<br>Przeprasamy za niedogodności<br><br>(%d -> %d)"
