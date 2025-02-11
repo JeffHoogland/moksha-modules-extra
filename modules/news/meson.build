@@ -33,14 +33,9 @@ if get_option('nls')
    subdir('po')
 endif
 
-#### module.desktop    ####
-i18n.merge_file(
-  input: 'module.desktop.in',
-  output: 'module.desktop',
-  type: 'desktop',
-  po_dir: 'po',
-  install: true,
-  install_dir: mod_install_dir
+#### module.desktop ####
+install_data('module.desktop',
+  install_dir : mod_install_dir
 )
 
 #### module sources    ####
