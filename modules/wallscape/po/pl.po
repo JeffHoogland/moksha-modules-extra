@@ -54,9 +54,8 @@ msgid "This Screen"
 msgstr "Ten ekran"
 
 #: src/e_mod_config.c:1298
-#, fuzzy
 msgid "Use Theme Wallpaper"
-msgstr "Tapeta"
+msgstr "Tło pulpitu z wystroju"
 
 #: src/e_mod_main.c:25
 msgid "Look"
@@ -69,9 +68,3 @@ msgstr "Wallscape"
 #: src/e_mod_main.c:27
 msgid "Internal"
 msgstr "Wewnętrzny"
-
-#~ msgid "Add"
-#~ msgstr "Dodaj"
-
-#~ msgid "Delete"
-#~ msgstr "Usuń"

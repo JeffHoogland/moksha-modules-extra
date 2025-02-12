@@ -53,9 +53,8 @@ msgid "This Screen"
 msgstr "Questo Schermo"
 
 #: src/e_mod_config.c:1298
-#, fuzzy
 msgid "Use Theme Wallpaper"
-msgstr "Sfondo tema"
+msgstr "Usa sfondo del tema"
 
 #: src/e_mod_main.c:25
 msgid "Look"

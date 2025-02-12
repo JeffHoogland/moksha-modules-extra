@@ -55,9 +55,8 @@ msgid "This Screen"
 msgstr "Cet écran"
 
 #: src/e_mod_config.c:1298
-#, fuzzy
 msgid "Use Theme Wallpaper"
-msgstr "Fond d'écran du thème"
+msgstr "Utiliser le fond d'écran du thème""
 
 #: src/e_mod_main.c:25
 msgid "Look"
@@ -70,9 +69,3 @@ msgstr "Murale"
 #: src/e_mod_main.c:27
 msgid "Internal"
 msgstr "Interne"
-
-#~ msgid "Add"
-#~ msgstr "Ajouter"
-
-#~ msgid "Delete"
-#~ msgstr "Effacer"
