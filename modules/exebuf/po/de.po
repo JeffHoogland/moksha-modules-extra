@@ -1,0 +1,144 @@
+# German translations for exebuf package
+# German messages for exebuf.
+# Copyright (C) 2011 Enlightenment development team
+# This file is distributed under the same license as the exebuf package.
+# Fabian Nowak <timystery@arcor.de>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: exebuf 0.0.1\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-05-14 17:25+0900\n"
+"PO-Revision-Date: 2011-01-16 20:53+0100\n"
+"Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/exebuf_config.c:50
+msgid "Run Command Settings"
+msgstr "Einstellungen"
+
+#: src/exebuf_config.c:111 src/exebuf_config.c:196
+msgid "General"
+msgstr "Allgemein"
+
+#: src/exebuf_config.c:112 src/exebuf_config.c:181
+msgid "Maximum Apps to List"
+msgstr "Maximale Anzahl an Anwendungen in Liste"
+
+#: src/exebuf_config.c:114 src/exebuf_config.c:119 src/exebuf_config.c:124
+#: src/exebuf_config.c:183 src/exebuf_config.c:188 src/exebuf_config.c:193
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/exebuf_config.c:117 src/exebuf_config.c:186
+msgid "Maximum Exes to List"
+msgstr "Maximale Anzahl an ausführbaren Dateien in Liste"
+
+#: src/exebuf_config.c:122 src/exebuf_config.c:191
+msgid "Maximum History to List"
+msgstr "Maximale Anzahl an schon einmal ausgeführten Einträgen in Liste"
+
+#: src/exebuf_config.c:129 src/exebuf_config.c:211
+msgid "Animations"
+msgstr "Animationen"
+
+#: src/exebuf_config.c:130 src/exebuf_config.c:201
+msgid "Animate"
+msgstr "Animieren"
+
+#: src/exebuf_config.c:204
+msgid "Speed"
+msgstr "Geschwindigkeit"
+
+#: src/exebuf_config.c:207 src/exebuf_config.c:238 src/exebuf_config.c:243
+#, c-format
+msgid "%1.2f"
+msgstr "%1.2f"
+
+#: src/exebuf_config.c:216
+msgid "Minimum Width"
+msgstr "Minimale Breite"
+
+#: src/exebuf_config.c:218 src/exebuf_config.c:223 src/exebuf_config.c:228
+#: src/exebuf_config.c:233
+#, c-format
+msgid "%4.0f"
+msgstr "%4.0f"
+
+#: src/exebuf_config.c:221
+msgid "Minimum Height"
+msgstr "Minimale Höhe"
+
+#: src/exebuf_config.c:226
+msgid "Maximum Width"
+msgstr "Maximale Breite"
+
+#: src/exebuf_config.c:231
+msgid "Maximum Height"
+msgstr "Maximale Höhe"
+
+#: src/exebuf_config.c:236
+msgid "X-Axis Alignment"
+msgstr "Ausrichtung entlang der X-Aches"
+
+#: src/exebuf_config.c:241
+msgid "Y-Axis Alignment"
+msgstr "Ausrichtung entlang der Y-Achse"
+
+#: src/exebuf_config.c:246
+msgid "Geometry"
+msgstr "Geometrie"
+
+#: src/exebuf_config.c:251
+msgid "Command (CTRL+RETURN to utilize)"
+msgstr "Befehl (Strg+Enter zum Ausführen)"
+
+#: src/exebuf_config.c:255
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/e_mod_main.c:85
+msgid ""
+"Exebuf Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means the module needs new configuration<br>data by default for "
+"usable functionality that your old<br>configuration simply lacks. This new "
+"set of defaults will fix<br>that by adding it in. You can re-configure "
+"things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+
+#: src/e_mod_main.c:105
+msgid ""
+"Your Exebuf Module configuration is NEWER than the module version. This is "
+"very<br>strange. This should not happen unless you downgraded<br>the module "
+"or copied the configuration from a place where<br>a newer version of the "
+"module was running. This is bad and<br>as a precaution your configuration "
+"has been now restored to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Launch"
+msgstr "Starten"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Run Command Dialog"
+msgstr "Befehl ausführen"
+
+#: src/e_mod_main.c:136 src/e_mod_main.c:139 src/e_mod_main.c:299
+msgid "Run Command"
+msgstr "Befehl ausführen"
+
+#: src/e_mod_main.c:138
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: src/e_mod_main.c:249
+msgid "Exebuf Configuration Updated"
+msgstr "Einstellungen zur Befehlsauführung wurden aktualisiert"

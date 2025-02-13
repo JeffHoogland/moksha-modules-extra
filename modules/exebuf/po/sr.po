@@ -1,0 +1,154 @@
+#
+# Саша Петровић <salepetronije@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-05-14 17:25+0900\n"
+"PO-Revision-Date: 2012-12-21 20:19+0000\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
+"Language-Team: српски <xfce-i18n@xfce.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-12-22 06:15+0000\n"
+"X-Generator: Launchpad (build 16378)\n"
+
+#: src/exebuf_config.c:50
+msgid "Run Command Settings"
+msgstr "Покрени поставке наредби"
+
+#: src/exebuf_config.c:111 src/exebuf_config.c:196
+msgid "General"
+msgstr "Опште"
+
+#: src/exebuf_config.c:112 src/exebuf_config.c:181
+msgid "Maximum Apps to List"
+msgstr "Највећи број програм на списку"
+
+#: src/exebuf_config.c:114 src/exebuf_config.c:119 src/exebuf_config.c:124
+#: src/exebuf_config.c:183 src/exebuf_config.c:188 src/exebuf_config.c:193
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/exebuf_config.c:117 src/exebuf_config.c:186
+msgid "Maximum Exes to List"
+msgstr "Највећи број наредби на списку"
+
+#: src/exebuf_config.c:122 src/exebuf_config.c:191
+msgid "Maximum History to List"
+msgstr "Највећи број ставки у историји"
+
+#: src/exebuf_config.c:129 src/exebuf_config.c:211
+msgid "Animations"
+msgstr "Анимације"
+
+#: src/exebuf_config.c:130 src/exebuf_config.c:201
+msgid "Animate"
+msgstr "Анимирај"
+
+#: src/exebuf_config.c:204
+msgid "Speed"
+msgstr "Брзина"
+
+#: src/exebuf_config.c:207 src/exebuf_config.c:238 src/exebuf_config.c:243
+#, c-format
+msgid "%1.2f"
+msgstr "%1.2f"
+
+#: src/exebuf_config.c:216
+msgid "Minimum Width"
+msgstr "Најмања ширина"
+
+#: src/exebuf_config.c:218 src/exebuf_config.c:223 src/exebuf_config.c:228
+#: src/exebuf_config.c:233
+#, c-format
+msgid "%4.0f"
+msgstr "%4.0f"
+
+#: src/exebuf_config.c:221
+msgid "Minimum Height"
+msgstr "Најмања висина"
+
+#: src/exebuf_config.c:226
+msgid "Maximum Width"
+msgstr "Највећа ширина"
+
+#: src/exebuf_config.c:231
+msgid "Maximum Height"
+msgstr "Највећа висина"
+
+#: src/exebuf_config.c:236
+msgid "X-Axis Alignment"
+msgstr "Х поравнање"
+
+#: src/exebuf_config.c:241
+msgid "Y-Axis Alignment"
+msgstr "Y поравнање"
+
+#: src/exebuf_config.c:246
+msgid "Geometry"
+msgstr "Геометрија"
+
+#: src/exebuf_config.c:251
+msgid "Command (CTRL+RETURN to utilize)"
+msgstr "Наредба(КТРЛ+Врати за употребу)"
+
+#: src/exebuf_config.c:255
+msgid "Terminal"
+msgstr "Терминал"
+
+#: src/e_mod_main.c:85
+msgid ""
+"Exebuf Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means the module needs new configuration<br>data by default for "
+"usable functionality that your old<br>configuration simply lacks. This new "
+"set of defaults will fix<br>that by adding it in. You can re-configure "
+"things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+"Поставке Егзебаф саставнице требеају бити надограђене. Ваше старе поставке "
+"су обрисане,<br> и нови скуп задатих поставки покрент. Ово<br>ће се дешавати "
+"редовно током развоја, зато немојте пријавити<br>грешку.Ово једноставно "
+"значи да саставница захтева<br> нове задате поставке за рад, које "
+"ваше<br>старе поставке немају. Овај нови скуп задатих поставки ће<br>то "
+"поправити њиховим додавањем. Сада можете подесити ствари по својој<br>вољи. "
+"Извините збохг непријатности.<br>"
+
+#: src/e_mod_main.c:105
+msgid ""
+"Your Exebuf Module configuration is NEWER than the module version. This is "
+"very<br>strange. This should not happen unless you downgraded<br>the module "
+"or copied the configuration from a place where<br>a newer version of the "
+"module was running. This is bad and<br>as a precaution your configuration "
+"has been now restored to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+"Ваше поставке Егзебаф саставнице су НОВИЈЕ од издања саставнице. Ово је "
+"врло<br>чудно. То се не би требало дешавати, осим ако сте "
+"разградили<br>саставницу, или умножили поставке са места где<br> ради новије "
+"издање саставнице. Ово је лоће, и,<br>као предострожност, ваше поставке су "
+"враћене на<br>почетне вредности. Извините због непријатности. <br>"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Launch"
+msgstr "Покрени"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Run Command Dialog"
+msgstr "Покрени наредбено прозорче"
+
+#: src/e_mod_main.c:136 src/e_mod_main.c:139 src/e_mod_main.c:299
+msgid "Run Command"
+msgstr "Изврши наредбу"
+
+#: src/e_mod_main.c:138
+msgid "Advanced"
+msgstr "Напредно"
+
+#: src/e_mod_main.c:249
+msgid "Exebuf Configuration Updated"
+msgstr "Егзебаф поставке су надограђене"

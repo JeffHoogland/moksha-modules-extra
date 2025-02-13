@@ -1,0 +1,154 @@
+# Arabic translation for exebuf.
+# This file is put in the public domain.
+# sameeer hussain <almusalimalmusalimah> 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: exebuf module\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-05-14 17:25+0900\n"
+"PO-Revision-Date: 2012-01-24 20:44+0300\n"
+"Last-Translator: سمير حسين <almusalimalmusalimah@gmail.com>\n"
+"Language-Team: Arabic <almualimalmusalimah@gmail.com>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Arabic\n"
+"X-Poedit-Country: SAUDI ARABIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: src/exebuf_config.c:50
+msgid "Run Command Settings"
+msgstr "إعدادات أمر التشغيل"
+
+#: src/exebuf_config.c:111 src/exebuf_config.c:196
+msgid "General"
+msgstr "عام"
+
+#: src/exebuf_config.c:112 src/exebuf_config.c:181
+msgid "Maximum Apps to List"
+msgstr "أقصى عدد من التطبيقات للقائمة"
+
+#: src/exebuf_config.c:114 src/exebuf_config.c:119 src/exebuf_config.c:124
+#: src/exebuf_config.c:183 src/exebuf_config.c:188 src/exebuf_config.c:193
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/exebuf_config.c:117 src/exebuf_config.c:186
+msgid "Maximum Exes to List"
+msgstr "أقصى عدد من التطبيقات القابلة للتنفيد للقائمة"
+
+#: src/exebuf_config.c:122 src/exebuf_config.c:191
+msgid "Maximum History to List"
+msgstr "أقصى عدد تواريخ للقائمة"
+
+#: src/exebuf_config.c:129 src/exebuf_config.c:211
+msgid "Animations"
+msgstr "متحركة"
+
+#: src/exebuf_config.c:130 src/exebuf_config.c:201
+msgid "Animate"
+msgstr "حرِّك"
+
+#: src/exebuf_config.c:204
+msgid "Speed"
+msgstr "السرعة"
+
+#: src/exebuf_config.c:207 src/exebuf_config.c:238 src/exebuf_config.c:243
+#, c-format
+msgid "%1.2f"
+msgstr "%1.2f"
+
+#: src/exebuf_config.c:216
+msgid "Minimum Width"
+msgstr "أدنى عرض"
+
+#: src/exebuf_config.c:218 src/exebuf_config.c:223 src/exebuf_config.c:228
+#: src/exebuf_config.c:233
+#, c-format
+msgid "%4.0f"
+msgstr "%4.0f"
+
+#: src/exebuf_config.c:221
+msgid "Minimum Height"
+msgstr "أدنى ارتفاع"
+
+#: src/exebuf_config.c:226
+msgid "Maximum Width"
+msgstr "أقصى عرض"
+
+#: src/exebuf_config.c:231
+msgid "Maximum Height"
+msgstr "أقصى ارتفاع"
+
+#: src/exebuf_config.c:236
+msgid "X-Axis Alignment"
+msgstr "محاذاة على المحور السيني"
+
+#: src/exebuf_config.c:241
+msgid "Y-Axis Alignment"
+msgstr "محاذاة على المحور الصادي"
+
+#: src/exebuf_config.c:246
+msgid "Geometry"
+msgstr "هندسي"
+
+#: src/exebuf_config.c:251
+msgid "Command (CTRL+RETURN to utilize)"
+msgstr "أمر (CTRL+RETURN ليُنَفَّذ)"
+
+#: src/exebuf_config.c:255
+msgid "Terminal"
+msgstr "الطرفية"
+
+#: src/e_mod_main.c:85
+msgid ""
+"Exebuf Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means the module needs new configuration<br>data by default for "
+"usable functionality that your old<br>configuration simply lacks. This new "
+"set of defaults will fix<br>that by adding it in. You can re-configure "
+"things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+"بيانات إعدادات وحدة Exebuf بحاجة للترقية. إعداداتك القديمة<br> أزيلت و واحدة "
+"أخرى جديدة و افتراضية قد هيئت .<br>سيحدث هذا بانتظام أثناء التطوير ، لذا لا "
+"تبلغ بوجود<br>علة. هذا يعني بكل بساطة أن الوحدة تحتاج لبيانات إعدادات جديدة "
+"<br>إفتراضيا لتحصل على أداء أفضل<br>كانت إعداداتك القديمة تفتقر لتوفيره. هذه "
+"اﻹعدادات الجديدة ستصلح<br>ذلك عبر إضافتها فيها. يمكنك اﻵن إعادة إعداد اﻷشياء "
+"حسب<br>رغبتك. نأسف ﻹزعاجك.<br>"
+
+#: src/e_mod_main.c:105
+msgid ""
+"Your Exebuf Module configuration is NEWER than the module version. This is "
+"very<br>strange. This should not happen unless you downgraded<br>the module "
+"or copied the configuration from a place where<br>a newer version of the "
+"module was running. This is bad and<br>as a precaution your configuration "
+"has been now restored to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+"إعداداتك لوحدة Exebuf أحدث من إصدارة الوحدة. هذا غريب<br>جدا. لا يجب لهذا أن "
+"يحدث إلا إذا خفضت<br>إصدار الوحدة أو نسختَ اﻹعدادات من مكان آخر<br>يحتوي نسخة "
+"جديدة من الوحدة تعمل عليه. هذا سيء<br>و كإجراء إحترازي فإن إعداداتك ستعاد "
+"إلى<br>اﻹفتراضيات. نأسف ﻹزعاجك.<br>"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Launch"
+msgstr "أطلق"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Run Command Dialog"
+msgstr "نافذة حوار أمر التشغيل"
+
+#: src/e_mod_main.c:136 src/e_mod_main.c:139 src/e_mod_main.c:299
+msgid "Run Command"
+msgstr "أمر التشغيل"
+
+#: src/e_mod_main.c:138
+msgid "Advanced"
+msgstr "متقدم"
+
+#: src/e_mod_main.c:249
+msgid "Exebuf Configuration Updated"
+msgstr "إعدادات Exebuf حُدِّثت"

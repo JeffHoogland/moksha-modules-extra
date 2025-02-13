@@ -1,0 +1,156 @@
+# Portuguese translation for exebuf module.
+# This file is put in the public domain.
+# Sérgio Marques <smarquespt@gmail.com>, 2012
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Exebuf\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-05-14 17:25+0900\n"
+"PO-Revision-Date: 2012-08-24 14:45+0100\n"
+"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: Portugal\n"
+
+#: src/exebuf_config.c:50
+msgid "Run Command Settings"
+msgstr "Definições"
+
+#: src/exebuf_config.c:111 src/exebuf_config.c:196
+msgid "General"
+msgstr "Geral"
+
+#: src/exebuf_config.c:112 src/exebuf_config.c:181
+msgid "Maximum Apps to List"
+msgstr "Número máximo de aplicações a listar"
+
+#: src/exebuf_config.c:114 src/exebuf_config.c:119 src/exebuf_config.c:124
+#: src/exebuf_config.c:183 src/exebuf_config.c:188 src/exebuf_config.c:193
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/exebuf_config.c:117 src/exebuf_config.c:186
+msgid "Maximum Exes to List"
+msgstr "Número máximo de executáveis a listar"
+
+#: src/exebuf_config.c:122 src/exebuf_config.c:191
+msgid "Maximum History to List"
+msgstr "Número máximo de histórico a listar"
+
+#: src/exebuf_config.c:129 src/exebuf_config.c:211
+msgid "Animations"
+msgstr "Animações"
+
+#: src/exebuf_config.c:130 src/exebuf_config.c:201
+msgid "Animate"
+msgstr "Animar"
+
+#: src/exebuf_config.c:204
+msgid "Speed"
+msgstr "Velocidade"
+
+#: src/exebuf_config.c:207 src/exebuf_config.c:238 src/exebuf_config.c:243
+#, c-format
+msgid "%1.2f"
+msgstr "%1.2f"
+
+#: src/exebuf_config.c:216
+msgid "Minimum Width"
+msgstr "Largura mínima"
+
+#: src/exebuf_config.c:218 src/exebuf_config.c:223 src/exebuf_config.c:228
+#: src/exebuf_config.c:233
+#, c-format
+msgid "%4.0f"
+msgstr "%4.0f"
+
+#: src/exebuf_config.c:221
+msgid "Minimum Height"
+msgstr "Altura mínima"
+
+#: src/exebuf_config.c:226
+msgid "Maximum Width"
+msgstr "Largura máxima"
+
+#: src/exebuf_config.c:231
+msgid "Maximum Height"
+msgstr "Altura máxima"
+
+#: src/exebuf_config.c:236
+msgid "X-Axis Alignment"
+msgstr "Alinhamento do eixo X"
+
+#: src/exebuf_config.c:241
+msgid "Y-Axis Alignment"
+msgstr "AAlinhamento do eixo Y"
+
+#: src/exebuf_config.c:246
+msgid "Geometry"
+msgstr "Geometria"
+
+#: src/exebuf_config.c:251
+msgid "Command (CTRL+RETURN to utilize)"
+msgstr "Comando (CTRL+RETURN para utilizar)"
+
+#: src/exebuf_config.c:255
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/e_mod_main.c:85
+msgid ""
+"Exebuf Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means the module needs new configuration<br>data by default for "
+"usable functionality that your old<br>configuration simply lacks. This new "
+"set of defaults will fix<br>that by adding it in. You can re-configure "
+"things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+"A configuração do Exebuf tem de ser atualizada. A sua configuração será "
+"removida e será iniciada uma nova.<br>Isto irá acontecer recorrentemente "
+"durante o ciclo de desenvolvimento e não deve reportar qualquer erro.<br>O "
+"módulo precisava de novos dados para funcionar corretamente e a sua antiga "
+"configuração não os possuia.<br>Este conjunto de valores corrige a "
+"configuração e posteriormente pode configurar o módulo ao seu gosto."
+"<br>Desculpe qualquer inconveniente.<br>"
+
+#: src/e_mod_main.c:105
+msgid ""
+"Your Exebuf Module configuration is NEWER than the module version. This is "
+"very<br>strange. This should not happen unless you downgraded<br>the module "
+"or copied the configuration from a place where<br>a newer version of the "
+"module was running. This is bad and<br>as a precaution your configuration "
+"has been now restored to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+"A sua versão do Exebuf é mais recente do que a do módulo<br>Esta situação é "
+"estranha e não deveria acontecer a menos que você tivesse revertido o módulo "
+"para uma versão inferior ou tenha copiado a configuração de um local em que "
+"esteja a ser executada uma versão mais recente do módulo.<br>Isto é mau e "
+"por precaução, a sua configuração foi reiniciada.<br>Desculpe qualquer "
+"inconveniente.<br>"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Launch"
+msgstr "Iniciar"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Run Command Dialog"
+msgstr "Diálogo de Execução"
+
+#: src/e_mod_main.c:136 src/e_mod_main.c:139 src/e_mod_main.c:299
+msgid "Run Command"
+msgstr "Executar comando"
+
+#: src/e_mod_main.c:138
+msgid "Advanced"
+msgstr "Avançado"
+
+#: src/e_mod_main.c:249
+msgid "Exebuf Configuration Updated"
+msgstr "Configuração Exebuf atualizada"

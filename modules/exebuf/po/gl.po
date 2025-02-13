@@ -1,0 +1,155 @@
+# Galician translation of exebuf
+# This file is put in the public domain.
+# Aníbal Garrido <khany@member.trisquel.info>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: exebuf\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-05-14 17:25+0900\n"
+"PO-Revision-Date: 2012-09-17 12:30+0200\n"
+"Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
+"Language-Team: http://trasno.net/ <proxecto@trasno.net>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/exebuf_config.c:50
+msgid "Run Command Settings"
+msgstr "Preferencias da execución do comando"
+
+#: src/exebuf_config.c:111 src/exebuf_config.c:196
+msgid "General"
+msgstr "Xeral"
+
+#: src/exebuf_config.c:112 src/exebuf_config.c:181
+msgid "Maximum Apps to List"
+msgstr "Máximo de aplicativos a listar"
+
+#: src/exebuf_config.c:114 src/exebuf_config.c:119 src/exebuf_config.c:124
+#: src/exebuf_config.c:183 src/exebuf_config.c:188 src/exebuf_config.c:193
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/exebuf_config.c:117 src/exebuf_config.c:186
+msgid "Maximum Exes to List"
+msgstr "Máximo de executábeis a listar"
+
+#: src/exebuf_config.c:122 src/exebuf_config.c:191
+msgid "Maximum History to List"
+msgstr "Máximo historial a listar"
+
+#: src/exebuf_config.c:129 src/exebuf_config.c:211
+msgid "Animations"
+msgstr "Animacións"
+
+#: src/exebuf_config.c:130 src/exebuf_config.c:201
+msgid "Animate"
+msgstr "Animar"
+
+#: src/exebuf_config.c:204
+msgid "Speed"
+msgstr "Velocidade"
+
+#: src/exebuf_config.c:207 src/exebuf_config.c:238 src/exebuf_config.c:243
+#, c-format
+msgid "%1.2f"
+msgstr "%1.2f"
+
+#: src/exebuf_config.c:216
+msgid "Minimum Width"
+msgstr "Largura mínima"
+
+#: src/exebuf_config.c:218 src/exebuf_config.c:223 src/exebuf_config.c:228
+#: src/exebuf_config.c:233
+#, c-format
+msgid "%4.0f"
+msgstr "%4.0f"
+
+#: src/exebuf_config.c:221
+msgid "Minimum Height"
+msgstr "Altura mínima"
+
+#: src/exebuf_config.c:226
+msgid "Maximum Width"
+msgstr "Largura máxima"
+
+#: src/exebuf_config.c:231
+msgid "Maximum Height"
+msgstr "Altura máxima"
+
+#: src/exebuf_config.c:236
+msgid "X-Axis Alignment"
+msgstr "Aliñamento do eixo X"
+
+#: src/exebuf_config.c:241
+msgid "Y-Axis Alignment"
+msgstr "Aliñamento do eixo Y"
+
+#: src/exebuf_config.c:246
+msgid "Geometry"
+msgstr "Xeometría"
+
+#: src/exebuf_config.c:251
+msgid "Command (CTRL+RETURN to utilize)"
+msgstr "Comando (CTRL+RETURN para utilizar)"
+
+#: src/exebuf_config.c:255
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/e_mod_main.c:85
+msgid ""
+"Exebuf Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means the module needs new configuration<br>data by default for "
+"usable functionality that your old<br>configuration simply lacks. This new "
+"set of defaults will fix<br>that by adding it in. You can re-configure "
+"things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+"A configuración do módulo Exebuf require actualizarse. A súa configuración "
+"anterior<br> foi eliminada e un novo conxunto predeterminado foi "
+"inicializado. Isto<br>ocorrerá regularmente durante o desenvolvemento, polo "
+"que non informe dun<br>erro. Simplemente significa que o módulo necesita uns "
+"novos <br>datos de configuración predeterminados para unha funcionalidade "
+"correcta da que a súa<br>configuración anterior carece. Engadindo este novo "
+"conxunto de preferencias predeterminado arranxarase <br>isto. Agora pode "
+"reconfigurar as cousas<br>ó seu gusto. Desculpe as molestias.<br>"
+
+#: src/e_mod_main.c:105
+msgid ""
+"Your Exebuf Module configuration is NEWER than the module version. This is "
+"very<br>strange. This should not happen unless you downgraded<br>the module "
+"or copied the configuration from a place where<br>a newer version of the "
+"module was running. This is bad and<br>as a precaution your configuration "
+"has been now restored to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+"A súa configuración do módulo Exebuf é MÁIS NOVA que a versión do módulo. "
+"Isto e moi<br>estraño. Non debería ocorrer a menos que haxa revertido<br>o "
+"módulo  ou no caso de copiar a configuración dun sitio onde<br>se estaba "
+"executando unha versión máis nova deste módulo. Isto e malo e<br>como "
+"precaución a súa configuración foi restaurada ós seus "
+"valores<br>predeterminados. Desculpas polas molestias.<br>"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Launch"
+msgstr "Iniciar"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Run Command Dialog"
+msgstr "Diálogo de execución do comando"
+
+#: src/e_mod_main.c:136 src/e_mod_main.c:139 src/e_mod_main.c:299
+msgid "Run Command"
+msgstr "Executar comando"
+
+#: src/e_mod_main.c:138
+msgid "Advanced"
+msgstr "Avanzado"
+
+#: src/e_mod_main.c:249
+msgid "Exebuf Configuration Updated"
+msgstr "Configuración de Exebuf actualizada"

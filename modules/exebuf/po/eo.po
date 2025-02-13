@@ -1,0 +1,156 @@
+# Esperanto translation for enlightenment
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-05-14 17:25+0900\n"
+"PO-Revision-Date: 2012-12-05 11:48+0000\n"
+"Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
+"Language-Team: Esperanto <eo@li.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-12-06 04:41+0000\n"
+"X-Generator: Launchpad (build 16341)\n"
+
+#: src/exebuf_config.c:50
+msgid "Run Command Settings"
+msgstr "Agordoj pri rulo de komandoj"
+
+#: src/exebuf_config.c:111 src/exebuf_config.c:196
+msgid "General"
+msgstr "Ĝenerala"
+
+#: src/exebuf_config.c:112 src/exebuf_config.c:181
+msgid "Maximum Apps to List"
+msgstr "Maksimuma nombro da listendaj aplikaĵoj"
+
+#: src/exebuf_config.c:114 src/exebuf_config.c:119 src/exebuf_config.c:124
+#: src/exebuf_config.c:183 src/exebuf_config.c:188 src/exebuf_config.c:193
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/exebuf_config.c:117 src/exebuf_config.c:186
+msgid "Maximum Exes to List"
+msgstr "Maksimuma nombro da listendaj plenumeblaĵoj"
+
+#: src/exebuf_config.c:122 src/exebuf_config.c:191
+msgid "Maximum History to List"
+msgstr "Maksimuma nombro da listendaj kronologieroj"
+
+#: src/exebuf_config.c:129 src/exebuf_config.c:211
+msgid "Animations"
+msgstr "Animacioj"
+
+#: src/exebuf_config.c:130 src/exebuf_config.c:201
+msgid "Animate"
+msgstr "Animaciigi"
+
+#: src/exebuf_config.c:204
+msgid "Speed"
+msgstr "Rapido"
+
+#: src/exebuf_config.c:207 src/exebuf_config.c:238 src/exebuf_config.c:243
+#, c-format
+msgid "%1.2f"
+msgstr "%1.2f"
+
+#: src/exebuf_config.c:216
+msgid "Minimum Width"
+msgstr "Minimuma larĝo"
+
+#: src/exebuf_config.c:218 src/exebuf_config.c:223 src/exebuf_config.c:228
+#: src/exebuf_config.c:233
+#, c-format
+msgid "%4.0f"
+msgstr "%4.0f"
+
+#: src/exebuf_config.c:221
+msgid "Minimum Height"
+msgstr "Minimuma alto"
+
+#: src/exebuf_config.c:226
+msgid "Maximum Width"
+msgstr "Maksimuma larĝo"
+
+#: src/exebuf_config.c:231
+msgid "Maximum Height"
+msgstr "Maksimuma alto"
+
+#: src/exebuf_config.c:236
+msgid "X-Axis Alignment"
+msgstr "Laŭliniigo de X-akso"
+
+#: src/exebuf_config.c:241
+msgid "Y-Axis Alignment"
+msgstr "Laŭliniigo de Y-akso"
+
+#: src/exebuf_config.c:246
+msgid "Geometry"
+msgstr "Geometrio"
+
+#: src/exebuf_config.c:251
+msgid "Command (CTRL+RETURN to utilize)"
+msgstr "Komando (Stir+Revenbutono uzenda)"
+
+#: src/exebuf_config.c:255
+msgid "Terminal"
+msgstr "Terminalo"
+
+#: src/e_mod_main.c:85
+msgid ""
+"Exebuf Module Configuration data needed upgrading. Your old "
+"configuration<br> has been wiped and a new set of defaults initialized. "
+"This<br>will happen regularly during development, so don't report a<br>bug. "
+"This simply means the module needs new configuration<br>data by default for "
+"usable functionality that your old<br>configuration simply lacks. This new "
+"set of defaults will fix<br>that by adding it in. You can re-configure "
+"things now to your<br>liking. Sorry for the inconvenience.<br>"
+msgstr ""
+"La datumoj por la agordoj de la modulo pri Exebuf postulas ĝisdatigojn. Viaj "
+"malnovaj agordoj<br> estis viŝitaj kaj nova aro da aprioroj estis "
+"pravalorizitaj. Tio okazos ofte dum<br> la programado, do ne raportu cimon. "
+"Tio simple signifas, ke la modulo<br> postulas novajn datumojn de agordoj "
+"apriore por uzeblaj trajtoj,<br> kiujn viaj agordoj mankas. Ĉi tiu nova aro "
+"da aprioroj korektos tion, aldonante ĝin.<br> Vi povas laŭvole agordi denove "
+"nun. Pardonu pro la ĝeno.<br>"
+
+#: src/e_mod_main.c:105
+msgid ""
+"Your Exebuf Module configuration is NEWER than the module version. This is "
+"very<br>strange. This should not happen unless you downgraded<br>the module "
+"or copied the configuration from a place where<br>a newer version of the "
+"module was running. This is bad and<br>as a precaution your configuration "
+"has been now restored to<br>defaults. Sorry for the inconvenience.<br>"
+msgstr ""
+"Viaj agordoj de la modulo pri Exebuf estas PLI NOVAJ ol la modulo mem. Tio "
+"estas ege<br> strange. Tio ne devus okazi krom se vi malpromociis la modulon "
+"aŭ kopiis la agordojn<br> el loko, kie nova versio de la modulo funkciis. "
+"Tio estas malbone kaj viaj<br> agordoj estis restaŭritaj al aprioroj, kiel "
+"antaŭzorgo. Pardonu pro la ĝeno.<br>"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Launch"
+msgstr "Lanĉi"
+
+#: src/e_mod_main.c:132 src/e_mod_main.c:160
+msgid "Run Command Dialog"
+msgstr "Ruli dialogon de komandoj"
+
+#: src/e_mod_main.c:136 src/e_mod_main.c:139 src/e_mod_main.c:299
+msgid "Run Command"
+msgstr "Ruli komandon"
+
+#: src/e_mod_main.c:138
+msgid "Advanced"
+msgstr "Progresita"
+
+#: src/e_mod_main.c:249
+msgid "Exebuf Configuration Updated"
+msgstr "La agordoj de Exebuf estas ĝisdatigitaj"
