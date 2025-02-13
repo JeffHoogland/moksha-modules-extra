@@ -1,0 +1,549 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Enlightenment development team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Echievements\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-01-05 08:10+0000\n"
+"PO-Revision-Date: 2012-12-20 22:33+0100\n"
+"Last-Translator: Thomas Gstädtner <thomas@gstaedtner.net>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+
+#: src/e_mod_config.c:64 src/e_mod_config.c:201
+msgid "%d %B %Y - %r"
+msgstr ""
+
+#: src/e_mod_config.c:65 src/e_mod_config.c:202
+#, c-format
+msgid "Achieved: %s"
+msgstr "Erreicht: %s"
+
+#: src/e_mod_config.c:69 src/e_mod_config.c:206
+msgid "Not achieved"
+msgstr "Nicht erreicht"
+
+#: src/e_mod_config.c:72 src/e_mod_config.c:209
+#, c-format
+msgid "Progress: %u/%u"
+msgstr "Fortschritt> %u/%u"
+
+#: src/e_mod_config.c:108
+msgid "My Trophies"
+msgstr "Meine Trophäen"
+
+#: src/e_mod_config.c:127
+msgid "All Trophies"
+msgstr "Alle Trophäen"
+
+#: src/e_mod_config.c:138 src/e_mod_config.c:151
+#, c-format
+msgid "%u Echievement Point"
+msgid_plural "%u Echievement Points"
+msgstr[0] "%u Echievement Punkt"
+msgstr[1] "%u Echievement Punkte"
+
+#: src/e_mod_config.c:177 src/e_mod_main.c:98
+msgid "Echievements"
+msgstr "Echievements"
+
+#: src/e_mod_main.c:96
+msgid "Extensions"
+msgstr "Erweiterungen"
+
+#: src/echievements.c:96
+#, c-format
+msgid "Echievement: %s"
+msgstr "Echievement: %s"
+
+#: src/echievements.x:232
+msgid "Shelves Everywhere"
+msgstr "Modulablagen Überall"
+
+# Clearly not translating that! :P
+#: src/echievements.x:233
+msgid "Nothing Else Matters"
+msgstr "Nothing Else Matters"
+
+# Not translating that either!
+#: src/echievements.x:234
+#, fuzzy
+msgid "Fear Of The Dark"
+msgstr "Fear Of The Dark"
+
+#: src/echievements.x:235
+msgid "Cave Dweller"
+msgstr "Höhlenmensch"
+
+#: src/echievements.x:236
+msgid "Window Enthusiast"
+msgstr "Fensterenthusiast"
+
+#: src/echievements.x:237
+msgid "Window Lover"
+msgstr "Fensterliebhaber"
+
+#: src/echievements.x:238
+msgid "Window Stalker"
+msgstr "Fenster-Stalker"
+
+#: src/echievements.x:239
+msgid "Window Mover"
+msgstr "Fensterschieber"
+
+#: src/echievements.x:240
+msgid "Window OCD"
+msgstr "Fensterfetischist"
+
+#: src/echievements.x:241
+msgid "Mouse Runner"
+msgstr "Maus Sprinter"
+
+#: src/echievements.x:242
+msgid "Mouse Marathoner"
+msgstr "Maus Athlet"
+
+#: src/echievements.x:243
+msgid "Mouse Hero"
+msgstr "Maus Held"
+
+# This is a much more common pop-reference in Germany.
+#: src/echievements.x:244
+msgid "Mighty Mouse"
+msgstr "Speedy Gonzales"
+
+#: src/echievements.x:245
+msgid "Window Hauler"
+msgstr "Fensterschlepper"
+
+#: src/echievements.x:246
+#, fuzzy
+msgid "Window Slinger"
+msgstr "Fensterbauer"
+
+#: src/echievements.x:247
+msgid "Window Sherpa"
+msgstr "Fenster-Sherpa"
+
+#: src/echievements.x:248
+msgid "Physicist"
+msgstr "Physiker"
+
+#: src/echievements.x:249
+msgid "Quickdraw"
+msgstr "Schnellschuß"
+
+#: src/echievements.x:250
+msgid "Opaque"
+msgstr "Undurchsichtig"
+
+#: src/echievements.x:251
+msgid "Keyboard User"
+msgstr "Tastaturnutzer"
+
+#: src/echievements.x:252
+msgid "Keyboard Tapper"
+msgstr "Tastaturabnutzer"
+
+#: src/echievements.x:253
+msgid "Keyboard Abuser"
+msgstr "Tastaturmissbraucher"
+
+#: src/echievements.x:254
+msgid "Keyboard Ninja"
+msgstr "Tastaturninja"
+
+#: src/echievements.x:255
+msgid "Clicker"
+msgstr "Klicker"
+
+#: src/echievements.x:256
+msgid "Super Clicker"
+msgstr "Superklicker"
+
+#: src/echievements.x:257
+msgid "Super Duper Clicker"
+msgstr "Superduperklicker"
+
+#: src/echievements.x:258
+msgid "Click Maniac"
+msgstr "Klick-Wahnsinniger"
+
+#: src/echievements.x:259
+msgid "Sleeper"
+msgstr "Schläfer"
+
+#: src/echievements.x:260
+msgid "Halter"
+msgstr "Ausschalter"
+
+#: src/echievements.x:261
+msgid "Edgy"
+msgstr "Kantig"
+
+#: src/echievements.x:262
+msgid "Edgier"
+msgstr "Kantiger"
+
+#: src/echievements.x:263
+msgid "Edgiest"
+msgstr "Am Kantigsten"
+
+# yes, I can do cheap name-wordplays, too... :P
+#: src/echievements.x:264
+msgid "Edgar"
+msgstr "Immanuel Kant"
+
+#: src/echievements.x:265
+msgid "Wheely"
+msgstr "Gerädert"
+
+# find something better
+#: src/echievements.x:266
+#, fuzzy
+msgid "Rollin'"
+msgstr "Rundherum"
+
+#: src/echievements.x:267
+msgid "Roly Poly"
+msgstr "Drehwurm"
+
+#: src/echievements.x:268
+msgid "Signaller"
+msgstr "Signalgeber"
+
+#: src/echievements.x:269
+msgid "Signal Controller"
+msgstr "Signalsteurer"
+
+#: src/echievements.x:270
+msgid "Signal Master"
+msgstr "Signalmeister"
+
+#: src/echievements.x:271
+msgid "Sigurd"
+msgstr "Siegfried"
+
+#: src/echievements.x:272
+msgid "Not So Incognito"
+msgstr "Nicht wirklich Incognito"
+
+#: src/echievements.x:273
+msgid "Dualist"
+msgstr "Doppelt hält besser"
+
+#: src/echievements.x:274
+msgid "Thrice"
+msgstr "Flotter Dreier"
+
+#: src/echievements.x:275
+msgid "Going HD"
+msgstr "Hochauflösend"
+
+#: src/echievements.x:276
+msgid "Real Estate Mogul"
+msgstr "Großgrundbesitzer"
+
+#: src/echievements.x:277
+msgid "Maximum Definition"
+msgstr "Maximal aufgelöst"
+
+#: src/echievements.x:278
+msgid "Terminologist"
+msgstr "Terminologist"
+
+#: src/echievements.x:279
+msgid "Life On The Edge"
+msgstr "Leben am Rande des Abgrunds"
+
+#: src/echievements.x:280
+msgid "Bilingual"
+msgstr "Zweisprachig"
+
+#: src/echievements.x:281
+msgid "Polyglot"
+msgstr "Polyglott"
+
+#: src/echievements.x:282
+msgid "Gadgeteer"
+msgstr "Spielkind"
+
+#: src/echievements.x:283
+msgid "Inspector Gadget"
+msgstr "Inspektor Gadget"
+
+# ok, this one's lame in german, but I didn't find anything better
+#: src/echievements.x:284
+msgid "Gadget Hackwrench"
+msgstr "Trixi"
+
+#: src/echievements.x:285
+msgid "Security Conscious"
+msgstr "Sicherheitsbewusst"
+
+#: src/echievements.x:286
+msgid "Security Nut"
+msgstr "Paranoid"
+
+#: src/echievements.x:287
+msgid "Chief Of Security"
+msgstr "Sicherheitschef"
+
+#: src/echievements.x:288
+msgid "Tiled"
+msgstr "Gefliest"
+
+#: src/echievements.x:289
+msgid "Persistent"
+msgstr "Ausdauernd"
+
+# didn't find anything equally funny in german :(
+# but everyone here using E should know it anyway
+#: src/echievements.x:290
+msgid "Never Gonna Give You Up"
+msgstr "Never Gonna Give You Up"
+
+#: src/echievements.x:295
+msgid "Have a shelf in every position"
+msgstr "Eine Modulablage in jeder Position"
+
+#: src/echievements.x:296
+msgid "Use E17 with no shelves"
+msgstr "Verwende E17 ohne Modulablagen"
+
+#: src/echievements.x:297
+msgid "Set backlight level to 100%"
+msgstr "Stelle Hintergrundbeleuchtung auf 100%"
+
+#: src/echievements.x:298
+msgid "Set backlight level to 0%"
+msgstr "Stelle Hintergrundbeleuchtung auf 0%"
+
+#: src/echievements.x:299
+msgid "Open 100 windows"
+msgstr "Öffne 100 Fenster"
+
+#: src/echievements.x:300
+msgid "Open 1000 windows"
+msgstr "Öffne 1000 Fenster"
+
+#: src/echievements.x:301
+msgid "Open 10000 windows"
+msgstr "Öffne 10000 Fenster"
+
+#: src/echievements.x:302
+msgid "Move 50 windows"
+msgstr "Verschiebe 50 Fenster"
+
+#: src/echievements.x:303
+msgid "Move 250 windows"
+msgstr "Verschiebe 250 Fenster"
+
+#: src/echievements.x:304
+msgid "Mouse over 250,000 pixels"
+msgstr "Maus über 250.000 Pixel"
+
+#: src/echievements.x:305
+msgid "Mouse over 1,000,000 pixels"
+msgstr "Maus über 1.000.000 Pixel"
+
+#: src/echievements.x:306
+msgid "Mouse over 10,000,000 pixels"
+msgstr "Maus über 10.000.000 Pixel"
+
+#: src/echievements.x:307
+msgid "Mouse over 100,000,000 pixels"
+msgstr "Maus über 100.000.000 Pixel"
+
+#: src/echievements.x:308
+msgid "Move windows 250,000 pixels"
+msgstr "Verschiebe Fenster 250.000 Pixel weit"
+
+#: src/echievements.x:309
+msgid "Move windows 1,000,000 pixels"
+msgstr "Verschiebe Fenster 1.000.000 Pixel weit"
+
+#: src/echievements.x:310
+msgid "Move windows 10,000,000 pixels"
+msgstr "Verschiebe Fenster 10.000.000 Pixel weit"
+
+#: src/echievements.x:311
+msgid "Load the Physics module"
+msgstr "Lade das Physik-Modul"
+
+#: src/echievements.x:312
+msgid "Load the Quickaccess module"
+msgstr "Lade das Schnellzugriff-Modul"
+
+#: src/echievements.x:313
+msgid "Unload the Composite module"
+msgstr "Entlade das Composite-Modul"
+
+#: src/echievements.x:314
+msgid "Change 5 key bindings"
+msgstr "Ändere 5 Tastenbelegungen"
+
+#: src/echievements.x:315
+msgid "Change 10 key bindings"
+msgstr "Ändere 10 Tastenbelegungen"
+
+#: src/echievements.x:316
+msgid "Change 20 key bindings"
+msgstr "Ändere 20 Tastenbelegungen"
+
+#: src/echievements.x:317
+msgid "Change 30 key bindings"
+msgstr "Ändere 30 Tastenbelegungen"
+
+#: src/echievements.x:318
+msgid "Change 5 mouse bindings"
+msgstr "Ändere 5 Mausbelegungen"
+
+#: src/echievements.x:319
+msgid "Change 10 mouse bindings"
+msgstr "Ändere 10 Mausbelegungen"
+
+#: src/echievements.x:320
+msgid "Change 20 mouse bindings"
+msgstr "Ändere 20 Mausbelegungen"
+
+#: src/echievements.x:321
+msgid "Change 30 mouse bindings"
+msgstr "Ändere 30 Mausbelegungen"
+
+#: src/echievements.x:322
+msgid "Change 2 ACPI bindings"
+msgstr "Ändere 2 ACPI-Belegungen"
+
+#: src/echievements.x:323
+msgid "Change 5 ACPI bindings"
+msgstr "Ändere 5 ACPI-Belegungen"
+
+#: src/echievements.x:324
+msgid "Change 2 Edge bindings"
+msgstr "Ändere 2 Kantenbelegungen"
+
+#: src/echievements.x:325
+msgid "Change 4 Edge bindings"
+msgstr "Ändere 4 Kantenbelegungen"
+
+#: src/echievements.x:326
+msgid "Change 6 Edge bindings"
+msgstr "Ändere 6 Kantenbelegungen"
+
+#: src/echievements.x:327
+msgid "Change 8 Edge bindings"
+msgstr "Ändere 8 Kantenbelegungen"
+
+#: src/echievements.x:328
+msgid "Change 3 Mouse Wheel bindings"
+msgstr "Ändere 3 Mausradbelegungen"
+
+#: src/echievements.x:329
+msgid "Change 6 Mouse Wheel bindings"
+msgstr "Ändere 6 Mausradbelegungen"
+
+#: src/echievements.x:330
+msgid "Change 10 Mouse Wheel bindings"
+msgstr "Ändere 10 Mausradbelegungen"
+
+#: src/echievements.x:331
+msgid "Change 5 Edje Signal Bindings"
+msgstr "Ändere 5 Signalbelegungen"
+
+#: src/echievements.x:332
+msgid "Change 10 Edje Signal Bindings"
+msgstr "Ändere 10 Signalbelegungen"
+
+#: src/echievements.x:333
+msgid "Change 20 Edje Signal Bindings"
+msgstr "Ändere 20 Signalbelegungen"
+
+#: src/echievements.x:334
+msgid "Change 30 Edje Signal Bindings"
+msgstr "Ändere 30 Signalbelegungen"
+
+#: src/echievements.x:335
+msgid "Watch porn while using E17"
+msgstr "Schaue Pornos während E17 läuft"
+
+#: src/echievements.x:336
+msgid "Connect two monitors simultaneously"
+msgstr "Schließe gleichzeitig zwei Monitore an"
+
+#: src/echievements.x:337
+msgid "Connect three monitors simultaneously"
+msgstr "Schließe gleichzeitig drei Monitore an"
+
+#: src/echievements.x:338
+msgid "Have 1080p on a single monitor"
+msgstr "1080p Auflösung auf einem Monitor"
+
+#: src/echievements.x:339
+msgid "At least 3,384,320 pixels"
+msgstr "Mindestens 3.384.320 Pixel"
+
+#: src/echievements.x:340
+msgid "Dual 1080p monitors"
+msgstr "Zwei 1080p Monitore"
+
+#: src/echievements.x:341
+msgid "Open a Terminology window"
+msgstr "Öffne ein Terminology-Fenster"
+
+#: src/echievements.x:342
+msgid "Load a module which taints E17"
+msgstr "Lade ein Modul welches E17 beschmutzt."
+
+#: src/echievements.x:343
+msgid "Have two languages available"
+msgstr "Habe zwei Sprachen verfügbar"
+
+#: src/echievements.x:344
+msgid "Have four languages available"
+msgstr "Habe vier Sprachen verfügbar"
+
+#: src/echievements.x:345
+msgid "Have 5 gadgets on the desktop"
+msgstr "Platziere 5 Helfer auf der Arbeitsfläche"
+
+#: src/echievements.x:346
+msgid "Have 10 gadgets on the desktop"
+msgstr "Platziere 10 Helfer auf der Arbeitsfläche"
+
+#: src/echievements.x:347
+msgid "Have 15 gadgets on the desktop"
+msgstr "Platziere 15 Helfer auf der Arbeitsfläche"
+
+#: src/echievements.x:348
+msgid "Desklock 5 times in an hour"
+msgstr "Sperre den Bildschirm 5 mal in einer Stunde"
+
+#: src/echievements.x:349
+msgid "Desklock 10 times in an hour"
+msgstr "Sperre den Bildschirm 10 mal in einer Stunde"
+
+#: src/echievements.x:350
+msgid "Desklock 20 times in an hour"
+msgstr "Sperre den Bildschirm 20 mal in einer Stunde"
+
+#: src/echievements.x:351
+msgid "Load the Tiling module"
+msgstr "Lade das Tiling-Modul"
+
+#: src/echievements.x:352
+msgid "Keep a window open for 24 hours"
+msgstr "Halte ein Fenster für 24 Stunden offen"
+
+#: src/echievements.x:353
+msgid "Keep a window open for 168 hours"
+msgstr "Halte ein Fenster für 168 Stunden offen"

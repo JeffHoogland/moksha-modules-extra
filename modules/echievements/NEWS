@@ -1,0 +1,9 @@
+CHANGES SINCE V2:
+=================
+
+	* use border hook for new window achievements so we don't get multiples
+	* fix module_init_end handler to detect if echievements was loaded late
+	* switch config version macros to match new version scheme
+	* Updated README
+	* Updated COPYING; Echievements is BSD-2
+
