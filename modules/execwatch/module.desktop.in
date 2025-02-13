@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Link
+Name=Execwatch
+Name[eo]=KomandAtentilo
+Name[de]=Befehlsbeobachtung
+Icon=e-module-execwatch
+X-Enlightenment-ModuleType=utils
+Comment=Shows the last state of a periodic executed cmd. Useful as an update checker or for checking if a remote host is available (through ping).
+Comment[ru]=Показывает последний результат периодической комманды. Полезен для циклических проверок или проверок доступности другого хоста (через пинг).
+Comment[cs]=Zobrazuje poslední stav periodicky spouštěného příkazu. Užitečný jako kontrola aktualizací nebo jestli je dostupný vzdálený PC(přes ping).
+Comment[el]=Εμφανίζει την τελευταία κατάσταση μιας περιοδικά εκτελεσμένης εντολής. Χρήσιμο για τον έλεγχο αν ένας απομακρυσμένος Η/Υ είναι διαθέσιμος (μέσω ping).
+Comment[eo]=<br>Vidigi la lastan staton de ofte plenumita komando. Utila kiel kontrolilo de ĝisdatigo aŭ por kontroli ĉu fora servilo disponeblas (pere de ping).
+Comment[es]=Muestra el último estado de un comando ejecutado periódicamente. Útil como comprobador de actualizaciones o para verificar la disponibilidad de un servidor remoto (a través de ping).
+Comment[fr]=Affiche le dernier état d'une commande exécutée périodiquement. Utile pour le contrôle de mises à jour ou de la disponibilité d'un hôte distant (via ping).
+Comment[gl]=Mostra o último estado dun comando executado periodicamente. Útil como comprobador de actualizacións ou para verificar a dispoñibilidade dun servidor remoto (a través de ping).
+Comment[hu]=Egy időszakonként lefuttatott parancs legutóbbi állapotát mutatja meg. Ideális egy frissítéskezelőhöz, vagy mondjuk egy távoli kiszolgáló ellenőrzéséhez.
+Comment[it]=Mostra l'ultimo stato di un comando eseguito periodicamente. Utile per il controlo di aggiornamenti o per il controllo della disponibilità di un host remoto (tramite ping).
+Comment[pt]=Mostra o último estado de um comando periódico. Útil como um verificador de atualizações ou para verificar a disponibilidade de um servidor remoto
+Comment[de]=Zeigt den letzten Zustand eines periodisch ausgeführten Befehls. Sinnvoll zum Überprüfen auf Aktualisierungen oder auf Verfügbarkeit eines Hosts (mittels Ping).

@@ -1,0 +1,266 @@
+/*
+* vim:ts=8:sw=3:sts=8:noexpandtab:cino=>5n-3f0^-2{2
+*/
+
+#define EXECWATCH_ICON(icon_name) \
+images { image: icon_name".png" COMP; } \
+group \
+{ \
+   name: "modules/execwatch/icons/"icon_name; \
+   min: 40 40; \
+   max: 128 128; \
+   parts \
+     { \
+	part \
+	  { \
+	     name: "icon_status"; \
+	     description \
+	       { \
+		  state: "default" 0.0; \
+		  aspect: 1.0 1.0; \
+		  aspect_preference: BOTH; \
+		  image { normal: icon_name".png"; } \
+		  fill { smooth: 1; } \
+	       } \
+	  } \
+     } \
+}
+
+styles
+{
+   style
+     {
+        name: "cmd_style";
+        base: "font=Sans:style=Mono font_size=10 text_class=tb_plain align=left color=#fff style=outline_soft_shadow shadow_color=#00000032 wrap=word";
+        tag:  "br" "\n";
+     }
+}
+
+collections
+{
+   group
+     {
+	name: "modules/execwatch/main";
+        min: 40 40;
+	parts
+	  {
+	     part
+	       {
+		  name: "base";
+		  type: RECT;
+		  mouse_events: 1;
+		  description
+		    {
+		       state: "default" 0.0;
+		       color: 0 0 0 0;
+		       rel1 { offset: 0 0; }
+		       rel2 { offset: -1 -1; }
+		    }
+	       }
+	     part
+	       {
+		  name: "icon_custom";
+		  type: SWALLOW;
+		  mouse_events: 0;
+		  description
+		    {
+		       state: "default" 0.0;
+		       visible: 0;
+		    }
+		  description
+		    {
+		       state: "display_icon_custom" 0.0;
+		       visible: 1;
+		    }
+		  description
+		    {
+		       state: "display_command_output" 0.0;
+		       visible: 0;
+		    }
+	       }
+	     part
+	       {
+		  name: "icon_status";
+		  type: SWALLOW;
+		  mouse_events: 0;
+		  description
+		    {
+		       state: "default" 0.0;
+		       visible: 1;
+		       aspect_preference: BOTH;
+		       align: 0.0 0.0;
+		       rel1
+			 {
+			    relative: 0.0 0.0;
+			    offset:   0   0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 1.0;
+			    offset:   -1  -1;
+			 }
+		    }
+		  description
+		    {
+		       state: "display_icon_custom" 0.0;
+		       visible: 1;
+		       aspect_preference: BOTH;
+		       rel1
+			 {
+			    relative: 0.5 0.0;
+			    offset:   0   0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 0.5;
+			    offset:   -1  -1;
+			 }
+		    }
+		  description
+		    {
+		       state: "display_command_output" 0.0;
+		       visible: 0;
+		    }
+	       }
+	     part
+	       {
+                  name: "command_output_background";
+                  type: RECT;
+                  mouse_events: 0;
+                  description
+                    {
+                       state: "default" 0.0;
+                       visible: 0;
+                    }
+                  description
+                    {
+                       state: "display_command_output" 0.0;
+                       visible: 1;
+                       color: 0 0 0 50;
+		       aspect_preference: BOTH;
+		       rel1
+			 {
+			    relative: 0.0 0.0;
+			    offset:   0   0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 1.0;
+			    offset:   -1  -1;
+			 }
+                    }
+               }
+	     part
+	       {
+                  name: "command_output";
+                  type: TEXTBLOCK;
+                  effect: OUTLINE_SOFT_SHADOW;
+                  mouse_events: 0;
+                  description
+                    {
+                       state: "default" 0.0;
+                       visible: 0;
+                    }
+                  description
+                    {
+                       state: "display_command_output" 0.0;
+                       visible: 1;
+		       aspect_preference: BOTH;
+		       rel1
+			 {
+			    relative: 0.0 0.0;
+			    offset:   0   0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 1.0;
+			    offset:   -1  -1;
+			 }
+
+                       text
+                         {
+                            style: "cmd_style";
+                            min: 0 1;
+                         }
+                    }
+
+               }
+	     part
+	       {
+		  name: "display_name";
+		  type: TEXT;
+		  effect: OUTLINE_SOFT_SHADOW;
+		  mouse_events: 0;
+		  description
+		    {
+		       state: "default" 0.0;
+		       rel1
+			 {
+			    relative: 0.0 1.0;
+			    offset:   -1  -1;
+			    to_x:     "base";
+			 }
+		       rel2
+		         {
+			    relative: 1.0 1.0;
+			    offset:   -1  -10;
+			 }
+		       color:  255 255 255 255;
+		       color2: 0 0 0 96;
+		       color3: 0 0 0 32;
+		       color_class: "module_label";
+		       text
+		         {
+			    text:  "";
+			    font:  "Sans:style=Bold";
+			    size:  8;
+			    min:   1 1;
+			    align: 0.5 0.5;
+			    text_class: "module_normal";
+			 }
+		    }
+	       }
+	  }
+	programs
+	  {
+	     program
+	       {
+		  name: "display_icon_status";
+		  signal: "e,visibility,display_icon_status";
+		  source: "e";
+		  action: STATE_SET "default" 0.0;
+		  target: "icon_status";
+		  target: "icon_custom";
+		  target: "command_output_background";
+		  target: "command_output";
+	       }
+	     program
+	       {
+		  name: "display_icon_custom";
+		  signal: "e,visibility,display_icon_custom";
+		  source: "e";
+		  action: STATE_SET "display_icon_custom" 0.0;
+		  target: "icon_status";
+		  target: "icon_custom";
+		  target: "command_output_background";
+		  target: "command_output";
+	       }
+	     program
+	       {
+		  name: "display_command_output";
+		  signal: "e,visibility,display_cmd_output";
+		  source: "e";
+		  action: STATE_SET "display_command_output" 0.0;
+		  target: "icon_status";
+		  target: "icon_custom";
+		  target: "command_output_background";
+		  target: "command_output";
+	       }
+	  }
+     }
+
+   EXECWATCH_ICON("cmd_edit")
+   EXECWATCH_ICON("cmd_exec")
+   EXECWATCH_ICON("cmd_ok")
+   EXECWATCH_ICON("cmd_error")
+}
