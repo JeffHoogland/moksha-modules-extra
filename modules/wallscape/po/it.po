@@ -58,7 +58,7 @@ msgstr "Usa sfondo del tema"
 
 #: src/e_mod_main.c:25
 msgid "Look"
-msgstr ""
+msgstr "Aspetto"
 
 #: src/e_mod_main.c:26 src/e_mod_main.c:30 src/e_mod_main.c:94
 msgid "Wallscape"
