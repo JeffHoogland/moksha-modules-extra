@@ -1,0 +1,65 @@
+# Slovak translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-12-08 13:47+0900\n"
+"PO-Revision-Date: 2009-04-29 09:24+0000\n"
+"Last-Translator: kayle.sk <webmaster@kayle.sk>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_config.c:44
+#, fuzzy
+msgid "Wlan Settings"
+msgstr "Všeobecné nastavenia"
+
+#: src/e_mod_config.c:122
+msgid "General Settings"
+msgstr "Všeobecné nastavenia"
+
+#: src/e_mod_config.c:124
+msgid "Always Show Text"
+msgstr "Vždy zobraziť text"
+
+#: src/e_mod_config.c:126
+msgid "Show Text On Mouse Over"
+msgstr "Zobraziť text ak je kurzor nad ikonou"
+
+#: src/e_mod_config.c:129
+msgid "Show Text As Percent"
+msgstr "Zobraziť text ako percentá"
+
+#: src/e_mod_config.c:133
+msgid "Check Interval:"
+msgstr "Interval kontroly:"
+
+#: src/e_mod_config.c:136
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f sekúnd"
+
+#: src/e_mod_config.c:143
+msgid "Device Settings"
+msgstr "Nastavenia zariadenia"
+
+#: src/e_mod_main.c:110
+msgid "Wlan"
+msgstr "WLAN"
+
+#: src/e_mod_main.c:164
+#, fuzzy
+msgid "Settings"
+msgstr "Nastavenia zariadenia"
+
+#~ msgid "Wlan Configuration"
+#~ msgstr "Nastavenie WLAN"
+
+#~ msgid "Configuration"
+#~ msgstr "Nastavenia"

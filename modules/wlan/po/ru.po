@@ -1,0 +1,67 @@
+# Russian translation for enlightenment
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-12-08 13:47+0900\n"
+"PO-Revision-Date: 2009-09-25 08:45+0000\n"
+"Last-Translator: Sergey Sedov <Unknown>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-11-12 04:51+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/e_mod_config.c:44
+#, fuzzy
+msgid "Wlan Settings"
+msgstr "Основные параметры"
+
+#: src/e_mod_config.c:122
+msgid "General Settings"
+msgstr "Основные параметры"
+
+#: src/e_mod_config.c:124
+msgid "Always Show Text"
+msgstr "Всегда отображать текстовые подписи"
+
+#: src/e_mod_config.c:126
+msgid "Show Text On Mouse Over"
+msgstr "Отображать текстовые подписи при наведении указателя мыши"
+
+#: src/e_mod_config.c:129
+msgid "Show Text As Percent"
+msgstr "Отображать значения в процентах"
+
+#: src/e_mod_config.c:133
+msgid "Check Interval:"
+msgstr "Интервал проверки:"
+
+#: src/e_mod_config.c:136
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f секунд(ы)"
+
+#: src/e_mod_config.c:143
+msgid "Device Settings"
+msgstr "Настройки оборудования"
+
+#: src/e_mod_main.c:110
+msgid "Wlan"
+msgstr "Беспроводная сеть"
+
+#: src/e_mod_main.c:164
+#, fuzzy
+msgid "Settings"
+msgstr "Настройки оборудования"
+
+#~ msgid "Wlan Configuration"
+#~ msgstr "Настройки беспроводного соединения"
+
+#~ msgid "Configuration"
+#~ msgstr "Настройки"

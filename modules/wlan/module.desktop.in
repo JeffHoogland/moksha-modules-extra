@@ -1,0 +1,20 @@
+[Desktop Entry]
+Type=Link
+Name=Wlan
+Name[de]=WLAN
+Name[eo]=Sendrata loka reto
+Name[el]=Ασύρματο Δίκτυο
+Name[pt]=Rede sem fios
+Icon=e-module-wlan
+Comment=Gadget to monitor a wlan device.
+Comment[ru]=Гаджет для мониторинга карты беспроводной сети.
+Comment[cs]=Gadget k monitorování wlan zařízení.
+Comment[de]=Drahtloses Netzwerk beobachten
+Comment[eo]=Elrigardi aparaton de sendrata loka reto.
+Comment[es]=Módulo para administrar un dispositivo de red sin hilos.
+Comment[gl]=Módulo para administrar un dispositivo de rede sen fíos.
+Comment[hu]=Modul a wlan monitorozásához.
+Comment[it]=Modulo per il monitoraggio di un dispositivo di rete wireless.
+Comment[fr]=Affiche l'utilisation du réseau local sans fil.
+Comment[el]=Συστατικό για την παρακολούθηση μιας συσκευής ασύρματου δικτύου.
+Comment[pt]=Módulo de monitorização dos dispositivos de rede sem fios

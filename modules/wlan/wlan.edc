@@ -1,0 +1,459 @@
+images
+{
+   image: "wlan.png" COMP;
+   image: "qual_00.png" COMP;
+   image: "qual_01.png" COMP;
+   image: "qual_02.png" COMP;
+   image: "qual_03.png" COMP;
+   image: "qual_04.png" COMP;
+   image: "qual_05.png" COMP;
+   image: "qual_06.png" COMP;
+   image: "qual_07.png" COMP;
+   image: "qual_08.png" COMP;
+   image: "qual_09.png" COMP;
+   image: "qual_10.png" COMP;
+   image: "level_00.png" COMP;
+   image: "level_01.png" COMP;
+   image: "level_02.png" COMP;
+   image: "level_03.png" COMP;
+   image: "level_04.png" COMP;
+   image: "level_05.png" COMP;
+   image: "level_06.png" COMP;
+   image: "level_07.png" COMP;
+   image: "level_08.png" COMP;
+   image: "level_09.png" COMP;
+   image: "level_10.png" COMP;
+}
+
+collections
+{
+   group
+     {
+	name: "modules/wlan/main";
+	min: 4 4;
+	max: 128 128;
+	script 
+	  {
+	   public message(Msg_Type:type, id, ...) 
+	       {
+		  if ((type == MSG_FLOAT) && (id == 1)) 
+		    {
+		       new Float:value;
+		       
+		       value = getfarg(2);
+		       set_state(PART:"qual_meter", "default", value);
+		    }
+		  if ((type == MSG_FLOAT) && (id == 2)) 
+		    {
+		       new Float:value;
+		       
+		       value = getfarg(2);
+		       set_state(PART:"level_meter", "default", value);
+		    }		  
+	       }	     
+	  }
+	
+	parts
+	  {
+	     part
+	       {
+		  name: "fade_clip";
+		  type: RECT;
+		  description
+		    {
+		       state: "default" 0.0;
+		       color: 255 255 255 255;
+		       rel1
+			 {
+			    relative: 0.0 0.0;
+			    offset: 0 0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 1.0;
+			    offset: -1 -1;
+			 }
+		    }
+	       }
+	     part
+	       {
+		  name: "wlan";
+		  type: IMAGE;
+		  clip_to: "fade_clip";
+		  description
+		    {
+		       state:    "default" 0.0;
+		       color: 255 255 255 200;
+		       aspect:   1.0 1.0;
+		       aspect_preference: BOTH;
+		       align: 0.5 0.5;
+		       
+		       rel1
+			 {
+			    relative: 0.0 0.0;
+			    offset: 0 0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 1.0;
+			    offset: -1 -1;
+			 }
+		       image
+			 {
+			    normal: "wlan.png";
+			 }
+		       color: 255 255 255 192;
+		    }
+	       }
+	     part
+	       {
+		  name: "qual_meter";
+		  type: IMAGE;
+		  clip_to: "fade_clip";
+		  description
+		    {
+		       state: "default" 0.0;
+		       rel1
+			 {
+			    relative: 0.0 0.0;
+			    offset: 0 0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 0.25;
+			    offset: -1 -1;
+			 }
+		       image
+			 {
+			    normal: "qual_00.png";
+			 }
+		       color: 255 255 255 192;
+		    }
+		  description
+		    {
+		       state: "default" 0.1;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "qual_01.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.2;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "qual_02.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.3;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "qual_03.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.4;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "qual_04.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.5;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "qual_05.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.6;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "qual_06.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.7;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "qual_07.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.8;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "qual_08.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.9;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "qual_09.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 1.0;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "qual_10.png";
+			 }
+		    }
+	       }
+	     part 
+	       {
+		  name: "qual_label";
+		  type: TEXT;
+//		  clip_to: "fade_clip";
+		  effect: SOFT_SHADOW;
+		  description 
+		    {
+		       state: "default" 0.0;
+		       color: 255 255 255 0;
+		       color3: 0 0 0 0;
+		       visible: 0;
+		       rel1 
+			 {
+			    relative: 0.5 0.0;
+			    offset: 0 0;
+			    to: "qual_meter";
+			 }
+		       rel2 
+			 {
+			    relative: 0.5 1.0;
+			    offset: -1 -1;
+			    to: "qual_meter";
+			 }
+		       text 
+			 {
+			    text: "Quality:";
+			    font: "Sans:style=Mono";
+			    size: 9;
+			    min: 1 1;
+			    align: 0.5 1.0;
+			    text_class: "module_small";
+			 }
+		    }
+		  description 
+		    {
+		       state: "visible" 0.0;
+		       inherit: "default" 0.0;
+		       visible: 1;
+		       color: 255 255 255 255;
+		       color3: 0 0 0 42;
+		       color_class: "module_label";
+		    }
+	       }
+	     part
+	       {
+		  name: "level_meter";
+		  type: IMAGE;
+		  clip_to: "fade_clip";
+		  description
+		    {
+		       state: "default" 0.0;
+		       rel1
+			 {
+			    relative: 0.0 0.75;
+			    offset: 0 0;
+			 }
+		       rel2
+			 {
+			    relative: 1.0 1.0;
+			    offset: -1 -1;
+			 }
+		       image
+			 {
+			    normal: "level_00.png";
+			 }
+		       color: 255 255 255 192;
+		    }
+		  description
+		    {
+		       state: "default" 0.1;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "level_01.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.2;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "level_02.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.3;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "level_03.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.4;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "level_04.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.5;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "level_05.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.6;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "level_06.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.7;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "level_07.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.8;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "level_08.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 0.9;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "level_09.png";
+			 }
+		    }
+		  description
+		    {
+		       state: "default" 1.0;
+		       inherit: "default" 0.0;
+		       image
+			 {
+			    normal: "level_10.png";
+			 }
+		    }
+	       }
+	     part 
+	       {
+		  name: "level_label";
+		  type: TEXT;
+//		  clip_to: "fade_clip";
+		  effect: SOFT_SHADOW;
+		  description 
+		    {
+		       state: "default" 0.0;
+		       color: 255 255 255 0;
+		       color3: 0 0 0 0;
+		       visible: 0;
+		       rel1 
+			 {
+			    relative: 0.5 0.0;
+			    offset: 0 0;
+			    to: "level_meter";
+			 }
+		       rel2 
+			 {
+			    relative: 0.5 1.0;
+			    offset: -1 -1;
+			    to: "level_meter";
+			 }
+		       text 
+			 {
+			    text: "Level:";
+			    font: "Sans:style=Mono";
+			    size: 9;
+			    min: 1 1;
+			    align: 0.5 1.0;
+			    text_class: "module_small";
+			 }
+		    }
+		  description 
+		    {
+		       state: "visible" 0.0;
+		       inherit: "default" 0.0;
+		       visible: 1;
+		       color: 255 255 255 255;
+		       color3: 0 0 0 42;
+		       color_class: "module_label";
+		    }
+	       }	     
+	  }
+	programs 
+	  {
+	     program 
+	       {
+		  name: "go_active";
+		  signal: "label_active";
+		  source: "";
+		  action: STATE_SET "visible" 0.0;
+		  transition: SINUSOIDAL 0.5;
+		  target: "qual_label";
+		  target: "level_label";
+	       }
+	     program 
+	       {
+		  name: "go_passive2";
+		  signal: "label_passive2";
+		  source: "";
+		  action: ACTION_STOP;
+		  target: "go_active";
+	       }
+	     program 
+	       {
+		  name: "go_passive";
+		  signal: "label_passive";
+		  source: "";
+		  action: STATE_SET "default" 0.0;
+		  transition: SINUSOIDAL 1.0;		  
+		  target: "qual_label";
+		  target: "level_label";
+	       }
+	  }
+     }
+}
