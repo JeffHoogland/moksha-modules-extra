@@ -1,19 +1,23 @@
 # moksha-modules-extra
+
 Optional additional modules for the [Moksha desktop](https://github.com/JeffHoogland/moksha)
 
-Module List:
+## Module List:
 
 - Alarm
 - Calendar
 - Cpu
 - Deskshow
 - Diskio
+- Echievements (not yet ported)
 - Engage
+- Exebuf       (not yet ported)
+- Execwatch    (not yet ported)
 - Flame
 - Mail
 - Mem
 - Net
-- News
+- News         (broken)
 - Penguins
 - Photo
 - Rain
@@ -25,3 +29,10 @@ Module List:
 - Wallscape
 - Winlist-ng
 - Winselector
+- Wlan         (not yet ported)
+
+## Obsolete Modules
+
+- Forecast     (Replaced by [Forecast2.0](https://github.com/BodhiDev/Forecast2.0))
+- Places       (Moved to Moksha)
+- Share        (broken)
