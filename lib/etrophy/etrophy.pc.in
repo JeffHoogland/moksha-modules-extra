@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+vmaj=@VMAJ@
+
+Name: etrophy
+Description: Etrophy is library to manage scores, trophies and unlockables for games.
+@pkgconfig_requires_private@: @requirement_etrophy@
+Version: @VERSION@
+Libs: -L${libdir} -letrophy
+Cflags: -I${includedir}/etrophy-@VMAJ@

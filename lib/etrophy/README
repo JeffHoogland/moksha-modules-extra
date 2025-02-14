@@ -1,0 +1,39 @@
+Etrophy 0.5.0
+
+******************************************************************************
+
+ FOR ANY ISSUES PLEASE EMAIL:
+ enlightenment-devel@lists.sourceforge.net
+
+******************************************************************************
+
+Requirements:
+-------------
+
+Must:
+  libc
+  elementary 1.7
+
+Etrophy is a library that manages scores, trophies and unlockables. It will
+store them and provide views to display them. Could be used by games based
+on EFL.
+
+------------------------------------------------------------------------------
+
+COMPILING AND INSTALLING:
+
+  $ ./configure
+  $ make
+(as root unless you are installing in your users directories):
+  $ make install
+
+----
+
+DOCS
+
+To generate documentation, doxygen is required.
+
+  $ make doc
+
+will create a etrophy/doc/html directory.
+You could start looking at index.html.
