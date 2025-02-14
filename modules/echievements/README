@@ -3,3 +3,12 @@ Echievements
 
 Echievements provides achievements for E17. It is a module that serves as
 nothing more than a very entertaining time-waster.
+
+Dependencies
+============
+
+In addition to the normal enlightenment and EFL dependencie, this module
+uses:
+
+- enotify (a part of the old e_dbus library)
+- etrophy a library that to manages scores and more
