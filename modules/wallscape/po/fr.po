@@ -56,7 +56,7 @@ msgstr "Cet écran"
 
 #: src/e_mod_config.c:1298
 msgid "Use Theme Wallpaper"
-msgstr "Utiliser le fond d'écran du thème""
+msgstr "Utiliser le fond d'écran du thème"
 
 #: src/e_mod_main.c:25
 msgid "Look"
