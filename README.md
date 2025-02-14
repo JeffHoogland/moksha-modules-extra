@@ -9,10 +9,7 @@ Optional additional modules for the [Moksha desktop](https://github.com/JeffHoog
 - Cpu
 - Deskshow
 - Diskio
-- Echievements (not yet ported)
 - Engage
-- Exebuf       (not yet ported)
-- Execwatch    (not yet ported)
 - Flame
 - Mail
 - Mem
@@ -29,10 +26,13 @@ Optional additional modules for the [Moksha desktop](https://github.com/JeffHoog
 - Wallscape
 - Winlist-ng
 - Winselector
-- Wlan         (not yet ported)
 
 ## Obsolete Modules
 
+- Echievements (not yet ported)
+- Exebuf       (not yet ported)
+- Execwatch    (not yet ported)
 - Forecast     (Replaced by [Forecast2.0](https://github.com/BodhiDev/Forecast2.0))
 - Places       (Moved to Moksha)
 - Share        (broken)
+- Wlan         (not yet ported)
