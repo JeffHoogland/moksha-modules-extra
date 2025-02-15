@@ -9,13 +9,14 @@ msgstr ""
 "Project-Id-Version: cpu\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 05:01-0500\n"
-"PO-Revision-Date: 2010-11-26 17:51+0100\n"
-"Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
+"PO-Revision-Date: 2025-02-15 19:44+0100\n"
+"Last-Translator: Christian Becker (xpistian) <xpistianbecker@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_main.c:132
 msgid "Cpu"
@@ -47,4 +48,4 @@ msgstr "Aktualisierungsgeschwindigkeit"
 
 #: src/e_mod_main.c:420
 msgid "Merge CPU's into single Statistic"
-msgstr ""
+msgstr "CPUs in einer Statistik zusammenfassen"
