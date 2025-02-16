@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: engage\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 16:48+0100\n"
-"PO-Revision-Date: 2008-09-02 17:25+0200\n"
-"Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
+"PO-Revision-Date: 2025-02-16 10:22+0100\n"
+"Last-Translator: Christian Becker (xpistian) <xpistianbecker@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_main.c:1862 src/e_mod_main.c:1900
 msgid "Engage"
@@ -29,11 +29,11 @@ msgstr "Kein Name!"
 
 #: src/ng_launcher.c:275
 msgid "Open Directory"
-msgstr ""
+msgstr "Verzeichnis öffnen"
 
 #: src/ng_launcher.c:561
 msgid "Configure Bar"
-msgstr "Engage Einstellungen"
+msgstr "Taskleiste konfigurieren"
 
 #: src/ng_launcher.c:565
 msgid "Lock Dragging"
@@ -68,9 +68,8 @@ msgid "Iconify"
 msgstr "Zu Icon minimieren"
 
 #: src/ng_gadcon.c:264
-#, fuzzy
 msgid "Gadcon Config"
-msgstr "Bereich für Helfer"
+msgstr "Gadcon Konfiguration"
 
 #: src/ng_gadcon.c:303
 msgid "Available Gadgets"
@@ -94,7 +93,7 @@ msgstr "Beschreibung: Nicht verfügbar"
 
 #: src/ng_config.c:98
 msgid "Engage Configuration"
-msgstr "Einstellungen für Engage"
+msgstr "Engage-Konfiguration"
 
 #: src/ng_config.c:167 src/ng_config.c:228
 msgid "Appearance"
@@ -110,7 +109,6 @@ msgid "%1.0f px"
 msgstr "%1.0f px"
 
 #: src/ng_config.c:184
-#, fuzzy
 msgid "Background Opacity:"
 msgstr "Hintergrundtransparenz:"
 
@@ -120,11 +118,11 @@ msgstr "%1.0f"
 
 #: src/ng_config.c:194
 msgid "Show Background Box"
-msgstr "Hintergrundbox zeigen"
+msgstr "Hintergrundbox anzeigen"
 
 #: src/ng_config.c:197
 msgid "Show Mouse-Over Animation"
-msgstr ""
+msgstr "Animation bei überfahren mit der Maus anzeigen"
 
 #: src/ng_config.c:202
 msgid "Orientation"
@@ -132,19 +130,19 @@ msgstr "Ausrichtung"
 
 #: src/ng_config.c:204
 msgid "Bottom Edge"
-msgstr ""
+msgstr "Unterer Rand"
 
 #: src/ng_config.c:206
 msgid "Top Edge"
-msgstr ""
+msgstr "Oberer Rand"
 
 #: src/ng_config.c:208
 msgid "Left Edge"
-msgstr ""
+msgstr "Linker Rand"
 
 #: src/ng_config.c:210
 msgid "Right Edge"
-msgstr ""
+msgstr "Rechter Rand"
 
 #: src/ng_config.c:230 src/ng_config.c:249
 msgid "Zoom"
@@ -164,15 +162,15 @@ msgstr "Dauer:"
 
 #: src/ng_config.c:251 src/ng_config.c:279
 msgid "Bar Items"
-msgstr "Leisteninhalte"
+msgstr "Leisteneinträge"
 
 #: src/ng_config.c:259 src/ng_config.c:540 src/ng_config_instances.c:104
 msgid "Delete"
-msgstr "Entfernen"
+msgstr "Löschen"
 
 #: src/ng_config.c:261 src/ng_config.c:542 src/ng_config_instances.c:106
 msgid "Configure"
-msgstr "Einstellen"
+msgstr "Konfigurieren"
 
 #: src/ng_config.c:263
 msgid "Up"
@@ -188,7 +186,7 @@ msgstr "Hinzufügen"
 
 #: src/ng_config.c:272
 msgid "Taskbar"
-msgstr "Taskbar"
+msgstr "Taskleiste"
 
 #: src/ng_config.c:274
 msgid "Launcher"
@@ -196,7 +194,7 @@ msgstr "Starter"
 
 #: src/ng_config.c:276
 msgid "Gadcon"
-msgstr "Bereich für Helfer"
+msgstr "Gadcon"
 
 #: src/ng_config.c:282 src/ng_config.c:301
 msgid "Auto Hide"
@@ -204,25 +202,23 @@ msgstr "Automatisch verbergen"
 
 #: src/ng_config.c:286
 msgid "None"
-msgstr ""
+msgstr "Keine"
 
 #: src/ng_config.c:289
-#, fuzzy
 msgid "Autohide"
 msgstr "Automatisch verbergen"
 
 #: src/ng_config.c:292
 msgid "Hide when Window overlaps"
-msgstr ""
+msgstr "Verstecken, wenn das Fenster überlappt"
 
 #: src/ng_config.c:295
-#, fuzzy
 msgid "Hide on Fullscreen"
-msgstr "Unterhalb Vollbild"
+msgstr "Bei Vollbild verbergen"
 
 #: src/ng_config.c:299
 msgid "Show Bar when Urgent"
-msgstr "Leiste zeigen bei wichtigen Ereignissen"
+msgstr "Leiste anzeigen bei dringenden Ereignissen"
 
 #: src/ng_config.c:307
 msgid "Stacking"
@@ -242,11 +238,11 @@ msgstr "Weitere Einstellungen"
 
 #: src/ng_config.c:316
 msgid "Ecomorph Features"
-msgstr "\"Ecomorphe\" Eigenschaften"
+msgstr "Ecomorph-Merkmale"
 
 #: src/ng_config.c:318
 msgid "Show Icon Label"
-msgstr "Icon-Beschriftung zeigen"
+msgstr "Icon-Beschriftung anzeigen"
 
 #: src/ng_config.c:530
 msgid "Launcher Settings"
@@ -254,12 +250,11 @@ msgstr "Startereinstellungen"
 
 #: src/ng_config.c:550
 msgid "Taskbar Settings"
-msgstr "Taskbar-Einstellungen"
+msgstr "Taskleisten-Einstellungen"
 
 #: src/ng_config.c:552
-#, fuzzy
 msgid "Don't Show Dialogs"
-msgstr "Dialoge nicht zeigen"
+msgstr "Dialoge nicht anzeigen"
 
 #: src/ng_config.c:555
 msgid "Advanced Window Menu"
@@ -267,7 +262,7 @@ msgstr "Erweitertes Fenstermenü"
 
 #: src/ng_config.c:558
 msgid "Only Show Current Desk"
-msgstr "Nur die aktuelle Arbeitsfläche zeigen"
+msgstr "Nur die aktuelle Arbeitsfläche anzeigen"
 
 #: src/ng_config.c:561
 msgid "Group Applications by Window Class"
@@ -275,7 +270,7 @@ msgstr "Anwendungen nach Fensterklasse gruppieren"
 
 #: src/ng_config.c:564
 msgid "Append new Applications on the right Side"
-msgstr "Neue Anwendungen an der \"rechten\" Seite anhängen"
+msgstr "Neue Anwendungen an der rechten Seite hinzufügen"
 
 #: src/ng_config.c:570
 msgid "Iconified Applications"
@@ -283,38 +278,40 @@ msgstr "Zu Icon verkleinerte Anwendungen"
 
 #: src/ng_config.c:572
 msgid "Not Shown"
-msgstr ""
+msgstr "Nicht angezeigt"
 
 #: src/ng_config.c:574
 msgid "Show"
-msgstr ""
+msgstr "Anzeigen"
 
 #: src/ng_config.c:576
 msgid "Only Iconified"
-msgstr ""
+msgstr "Nur als Icons"
 
 #: src/ng_config.c:645 src/ng_config.c:685
 msgid "Engage Bar Configuration"
-msgstr "Einstellungen für Engage-Taskbar"
+msgstr "Konfiguration der Engage-Taskleiste"
 
 #: src/ng_config.c:784
 msgid "Create new source"
-msgstr "Neue Anwendungen-Liste erstellen"
+msgstr "Neue Quelle erstellen"
 
 #: src/ng_config.c:785
 msgid "Enter a name for this new Application Launcher:"
-msgstr "Geben Sie einen neuen Namen für diesen Anwendungsstarter an:"
+msgstr "Namen für diesen neuen Anwendungsstarter angeben:"
 
 #: src/ng_config.c:794
 #, c-format
 msgid ""
 "You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
 "source?"
-msgstr "Sie möchten \"%s\" löschen.<br><br>Sind Sie wirklich sicher?"
+msgstr ""
+"Sie möchten \"%s\" löschen.<br><br>Sind Sie sicher, dass diese Quelle "
+"löschen wollen?"
 
 #: src/ng_config.c:798
 msgid "Are you sure you want to delete this source?"
-msgstr "Möchten Sie diese Anwendungen-Liste wirklich löschen?"
+msgstr "Möchten Sie diese Quelle wirklich löschen?"
 
 #: src/ng_config_instances.c:64 src/ng_config_instances.c:94
 msgid "Engage Instances"
@@ -329,7 +326,9 @@ msgstr "Leiste"
 msgid ""
 "You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
 "Instance?"
-msgstr "Sie möchten \"%s\" löschen.<br><br>Sind Sie wirklich sicher?"
+msgstr ""
+"Sie möchten \"%s\" löschen.<br><br>Sind Sie sicher, dass sie diese Instanz "
+"löschen wollen?"
 
 #: src/ng_config_instances.c:275
 msgid "Are you sure you want to delete this Instance?"
