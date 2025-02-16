@@ -1,15 +1,15 @@
 # Russian translations for diskio package.
 # This file is put in the public domain.
 #
-# Automatically generated, 2025.
+# R0bur <robursw@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: diskio\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-18 17:43-0500\n"
-"PO-Revision-Date: 2025-01-18 17:43-0500\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-02-15 18:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr "ДискВВ"
 
 #: src/e_mod_main.c:352
 msgid "DiskIO Configuration Updated"
-msgstr ""
+msgstr "Конфигурация ДискВВ обновлена"
 
 #: src/e_mod_main.c:390
 msgid "Settings"

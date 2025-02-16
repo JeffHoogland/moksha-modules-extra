@@ -2,14 +2,15 @@
 # This file is put in the public domain.
 #
 # Lucky <lucky1.data@gmail.com>, 2009.
+# R0bur <robursw@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: penguins\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2009-06-01 07:51+0000\n"
-"Last-Translator: Lucky <lucky1.data@gmail.com>\n"
+"PO-Revision-Date: 2025-02-15 18:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +23,7 @@ msgstr "Настройки популяции"
 
 #: src/e_mod_config.c:92
 msgid "Number of penguins:"
-msgstr "Число пингвинов:"
+msgstr "Количество пингвинов:"
 
 #: src/e_mod_config.c:94 src/e_mod_config.c:104
 #, c-format
@@ -31,7 +32,7 @@ msgstr "%1.0f"
 
 #: src/e_mod_config.c:97
 msgid "Zoom factor:"
-msgstr "Фактор зума:"
+msgstr "Коэф-т масштаба:"
 
 #: src/e_mod_config.c:99
 #, c-format
@@ -48,7 +49,7 @@ msgstr "Выбор популяции:"
 
 #: src/e_mod_main.c:60
 msgid "Look"
-msgstr ""
+msgstr "Внешний вид"
 
 #: src/e_mod_main.c:61
 msgid "Penguins"
