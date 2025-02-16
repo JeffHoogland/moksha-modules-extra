@@ -7,8 +7,7 @@ git clone https://git.enlightenment.org/enlightenment/enlightenment-module-extra
 git clone https://github.com/BodhiDev/Forecast2.0
 git clone https://github.com/thewaiter/launcher-dictionary
 git clone https://github.com/rbtylee/launcher-spellchecker
-# Private repo, uncomment if you have access and need
-# git clone https://github.com/thewaiter/Launcher-Places
+git clone https://github.com/thewaiter/Launcher-Places
 git clone https://github.com/rbtylee/moksha-moon-module
 git clone https://github.com/rbtylee/emodule-productivity
 git clone https://github.com/thewaiter/separator
