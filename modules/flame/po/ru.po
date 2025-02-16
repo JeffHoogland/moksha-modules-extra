@@ -2,14 +2,15 @@
 # This file is put in the public domain.
 #
 # Roman Azarenko aka BasicXP <x12ozmouse@ya.ru>, 2009.
+# R0bur <robursw@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Flame\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2009-04-17 18:57+0000\n"
-"Last-Translator: Roman Azarenko aka BasicXP <x12ozmouse@ya.ru>\n"
+"PO-Revision-Date: 2025-02-15 18:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +19,7 @@ msgstr ""
 
 #: src/e_mod_main.c:60
 msgid "Look"
-msgstr ""
+msgstr "Внешний вид"
 
 #: src/e_mod_main.c:62
 msgid "Flame"

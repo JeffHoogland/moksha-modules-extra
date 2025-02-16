@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: photo\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2023-07-17 16:30+0300\n"
+"PO-Revision-Date: 2025-02-15 18:00+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -306,7 +306,7 @@ msgstr "Каталоги с изображениями"
 
 #: src/photo_item.c:1038
 msgid "Moksha was unable to import the picture<br>due to conversion errors."
-msgstr ""
+msgstr "Moksha не смог импортировать изображение<br>из-за ошибок конвертации."
 
 #: src/photo_menu.c:34
 msgid "Module Settings"

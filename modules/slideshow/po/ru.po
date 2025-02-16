@@ -2,14 +2,15 @@
 # This file is put in the public domain.
 #
 # alukard404, 2009.
+# R0bur <robursw@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: slideshow\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-24 09:06-0500\n"
-"PO-Revision-Date: 2010-01-01 21:38+0000\n"
-"Last-Translator: alukard404 <Unknown>\n"
+"PO-Revision-Date: 2025-02-15 18:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +21,7 @@ msgstr ""
 
 #: src/e_mod_config.c:41
 msgid "Slideshow Settings"
-msgstr "Слайдшоу"
+msgstr "Настройки Слайдшоу"
 
 #: src/e_mod_config.c:113
 msgid "Cycles Time"
@@ -37,65 +38,65 @@ msgstr "%3.0f секунд"
 
 #: src/e_mod_config.c:123
 msgid "Day/Night backgrounds"
-msgstr ""
+msgstr "Фоны дня/ночи"
 
 #: src/e_mod_config.c:125
 msgid "Disable Scheduler"
-msgstr "Выключить таймер"
+msgstr "Выключить планировщик"
 
 #: src/e_mod_config.c:127
 #, c-format
 msgid "%1.0f hr"
-msgstr ""
+msgstr "%1.0f ч"
 
 #: src/e_mod_config.c:130
 #, c-format
 msgid "%1.0f min"
-msgstr ""
+msgstr "%1.0f мин"
 
 #: src/e_mod_config.c:133
 msgid "Day bg file: (Start at slider time e.g. 6:00 am)"
-msgstr ""
+msgstr "Файл дневного фона: (используется с заданного времени)"
 
 #: src/e_mod_config.c:137
 msgid "Night bg file: (12 hours later at 6:00 pm)"
-msgstr ""
+msgstr "Файл ночного фона: (через 12 часов после заданного времени)"
 
 #: src/e_mod_config.c:143
 msgid "Directory"
-msgstr "Директория"
+msgstr "Каталог"
 
 #: src/e_mod_config.c:145
 msgid "Sub-directory to use for backgrounds"
-msgstr "Подпапка для использования фоновых рисунков"
+msgstr "Подкаталог для фоновых рисунков"
 
 #: src/e_mod_config.c:152
 msgid "Fill and Stretch Options"
-msgstr ""
+msgstr "Варианты заполнения и растяжения"
 
 #: src/e_mod_config.c:154
 msgid "Stretch"
-msgstr ""
+msgstr "Растянуть"
 
 #: src/e_mod_config.c:158
 msgid "Center"
-msgstr ""
+msgstr "По центру"
 
 #: src/e_mod_config.c:162
 msgid "Tile"
-msgstr ""
+msgstr "Замостить"
 
 #: src/e_mod_config.c:167
 msgid "Within"
-msgstr ""
+msgstr "Внутри"
 
 #: src/e_mod_config.c:171
 msgid "Fill"
-msgstr ""
+msgstr "Заполнить"
 
 #: src/e_mod_config.c:175
 msgid "Pan"
-msgstr ""
+msgstr "Сдвиг"
 
 #: src/e_mod_config.c:181
 msgid "Extra"
@@ -111,7 +112,7 @@ msgstr "Установить обои на все рабочие столы"
 
 #: src/e_mod_config.c:187
 msgid "Set wallpaper on current desktop"
-msgstr "Установить обои на текущий рабочие столы"
+msgstr "Установить обои на текущий рабочий стол"
 
 #: src/e_mod_config.c:189
 msgid "Set wallpaper on current screen"
@@ -123,11 +124,11 @@ msgstr "Установить обои на текущем мониторе (по
 
 #: src/e_mod_config.c:242 src/e_mod_main.c:256 src/e_mod_main.c:508
 msgid "Warning"
-msgstr ""
+msgstr "Предупреждение"
 
 #: src/e_mod_config.c:242 src/e_mod_main.c:509
 msgid "Day/Night file names are not defined!"
-msgstr ""
+msgstr "Имена файлов для дня/ночи не заданы!"
 
 #: src/e_mod_main.c:154
 msgid "Slideshow"
@@ -135,19 +136,19 @@ msgstr "Слайдшоу"
 
 #: src/e_mod_main.c:193
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: src/e_mod_main.c:257
 msgid "Check Day/Night bg file names. They do not match!"
-msgstr ""
+msgstr "Проверьте имена файлов фонов дня/ночи. Они не подходят!"
 
 #: src/e_mod_main.c:728
 msgid "Picture Import Error"
-msgstr ""
+msgstr "Ошибка импорта изображения"
 
 #: src/e_mod_main.c:729
 msgid "Moksha was unable to import the picture<br>due to conversion errors."
-msgstr ""
+msgstr "Moksha не смог импортировать изображение<br>из-за ошибки конвертации."
 
 #~ msgid "Slideshow Configuration"
 #~ msgstr "Настройки Слайдшоу"

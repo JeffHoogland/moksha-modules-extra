@@ -1,14 +1,14 @@
 # Russian translations for e-module-wallscape package.
 # This file is put in the public domain.
-# Automatically generated, 2025.
+# R0bur <robursw@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: e-module-wallscape\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-09 22:02+0100\n"
-"PO-Revision-Date: 2025-02-06 17:36+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-02-06 18:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -19,52 +19,52 @@ msgstr ""
 
 #: src/e_mod_config.c:724 src/e_mod_config.c:917 src/e_mod_config.c:1003
 msgid "Theme Wallpaper"
-msgstr ""
+msgstr "Обои темы"
 
 #: src/e_mod_config.c:1124
 msgid "Loading files..."
-msgstr ""
+msgstr "Загрузка файлов..."
 
 #: src/e_mod_config.c:1201
 msgid "Wallpaper Settings"
-msgstr ""
+msgstr "Настройка обоев"
 
 #: src/e_mod_config.c:1216
 msgid "OK"
-msgstr ""
+msgstr "ОК"
 
 #: src/e_mod_config.c:1222
 msgid "Apply"
-msgstr ""
+msgstr "Применить"
 
 #: src/e_mod_config.c:1228
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: src/e_mod_config.c:1279
 msgid "All Desktops"
-msgstr ""
+msgstr "Все рабочие столы"
 
 #: src/e_mod_config.c:1285
 msgid "This Desktop"
-msgstr ""
+msgstr "Этот рабочий стол"
 
 #: src/e_mod_config.c:1290
 msgid "This Screen"
-msgstr ""
+msgstr "Этот экран"
 
 #: src/e_mod_config.c:1298
 msgid "Use Theme Wallpaper"
-msgstr ""
+msgstr "Использовать обои темы"
 
 #: src/e_mod_main.c:25
 msgid "Look"
-msgstr ""
+msgstr "Внешний вид"
 
 #: src/e_mod_main.c:26 src/e_mod_main.c:30 src/e_mod_main.c:94
 msgid "Wallscape"
-msgstr ""
+msgstr "Мурал"
 
 #: src/e_mod_main.c:27
 msgid "Internal"
-msgstr ""
+msgstr "Внутреннее"

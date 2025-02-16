@@ -2,14 +2,15 @@
 # This file is put in the public domain.
 #
 # Koptev Oleg <koptev.oleg@gmail.com>, 2009
+# R0bur <robursw@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: cpu\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 05:01-0500\n"
-"PO-Revision-Date: 2009-05-15 19:37+0400\n"
-"Last-Translator: Koptev Oleg <koptev.oleg@gmail.com>\n"
+"PO-Revision-Date: 2025-02-15 18:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -49,4 +50,4 @@ msgstr "Время между обновлениями"
 
 #: src/e_mod_main.c:420
 msgid "Merge CPU's into single Statistic"
-msgstr ""
+msgstr "Консолидировать показатели всех процессоров"

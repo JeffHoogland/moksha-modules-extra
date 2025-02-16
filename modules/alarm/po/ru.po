@@ -2,14 +2,15 @@
 # This file is put in the public domain.
 #
 # Lucky <lucky1.data@gmail.com>, 2009.
+# R0bur <robursw@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-22 22:17-0500\n"
-"PO-Revision-Date: 2009-06-05 07:21+0000\n"
-"Last-Translator: Lucky <lucky1.data@gmail.com>\n"
+"PO-Revision-Date: 2025-02-15 18:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -303,7 +304,7 @@ msgstr "Добавить будильник"
 
 #: src/e_mod_main.c:828
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: src/e_mod_main.c:854
 #, c-format

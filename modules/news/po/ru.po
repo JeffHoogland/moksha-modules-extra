@@ -3,14 +3,15 @@
 #
 # Peter Belyaev <kapone2002@yandex.ru>, 2009.
 # Igor Murzov <e-mail@date.by>, 2012.
+# R0bur <robursw@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: news\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2012-11-14 02:47+0400\n"
-"Last-Translator: Igor Murzov <e-mail@date.by>\n"
+"PO-Revision-Date: 2025-02-15 18:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -48,6 +49,9 @@ msgid ""
 "configuration of news module<br>has been upgraded<br>Your settings were "
 "removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
 msgstr ""
+"<hilight>Модуль Новости : Конфигурация обновлена</hilight><br><br>Ваша "
+"конфигурация модуля Новости<br>была обновлена<br>Ваши настройки были "
+"удалены<br>Извините за неудобства<br><br>(%d -> %d)"
 
 #: src/news_config.c:112
 #, c-format
@@ -56,6 +60,9 @@ msgid ""
 "configuration of News module<br>has been downgraded<br>Your settings were "
 "removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
 msgstr ""
+"<hilight>Модуль Новости : Конфигурация восстановлена</hilight><br><br>Ваша "
+"конфигурация модуля Новости<br>была восстановлена<br>Ваши настройки были "
+"удалены<br>Извините за неудобства<br><br>(%d ->%d)"
 
 #: src/news_config_dialog.c:90
 msgid "News Main Configuration"
@@ -455,7 +462,7 @@ msgstr "Содержимое гаджета"
 
 #: src/news_utils.h:13
 msgid "News Module DEBUG DEBUG DEBUG DEBUG"
-msgstr ""
+msgstr "Модуль Новости ОТЛАДКА ОТЛАДКА ОТЛАДКА"
 
 #: src/news_utils.h:20
 msgid "News Module"
