@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-22 22:17-0500\n"
-"PO-Revision-Date: 2025-02-16 17:04+0000\n"
+"PO-Revision-Date: 2025-02-16 19:25+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -46,7 +46,7 @@ msgstr "Configurar"
 
 #: src/e_mod_config.c:169
 msgid "Duplicate"
-msgstr "Duplicado"
+msgstr "Duplicar"
 
 #: src/e_mod_config.c:222
 msgid "Alarm Options"
@@ -74,7 +74,7 @@ msgstr "Remover alarmes automaticamente"
 
 #: src/e_mod_config_alarm.c:68
 msgid "Alarm Configuration : Setup an alarm"
-msgstr "Configuração do alarme: definir um alarme"
+msgstr "Configuração do alarme : Configurar um alarme"
 
 #: src/e_mod_config_alarm.c:186
 msgid "Information"
