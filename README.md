@@ -32,7 +32,7 @@ Optional additional modules for the [Moksha desktop](https://github.com/JeffHoog
 - Echievements (not yet ported)
 - Exebuf       (not yet ported)
 - Execwatch    (not yet ported)
-- Forecast     (Replaced by [Forecast2.0](https://github.com/BodhiDev/Forecast2.0))
+- Forecasts    (Replaced by [Forecast2.0](https://github.com/BodhiDev/Forecast2.0))
 - Places       (Moved to Moksha)
 - Share        (broken)
 - Wlan         (not yet ported)
