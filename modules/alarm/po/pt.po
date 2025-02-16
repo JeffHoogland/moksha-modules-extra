@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-22 22:17-0500\n"
-"PO-Revision-Date: 2025-01-25 18:02+0000\n"
+"PO-Revision-Date: 2025-02-16 17:04+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_config.c:52
 msgid "Alarm Configuration"
-msgstr "Configuração do Alarme"
+msgstr "Configuração do alarme"
 
 #: src/e_mod_config.c:152 src/e_mod_main.c:182
 msgid "Alarm"
@@ -46,7 +46,7 @@ msgstr "Configurar"
 
 #: src/e_mod_config.c:169
 msgid "Duplicate"
-msgstr "Duplicar"
+msgstr "Duplicado"
 
 #: src/e_mod_config.c:222
 msgid "Alarm Options"
@@ -156,7 +156,7 @@ msgid ""
 "in the information / schedule of your alarm"
 msgstr ""
 "<hilight>Erro, o alarme não foi adicionado!</hilight><br><br>Existe um erro "
-"nas informações/horário do seu alarme"
+"na informação/horário do seu alarme"
 
 #: src/e_mod_config_alarm.c:289
 msgid ""
@@ -192,7 +192,7 @@ msgid ""
 "entered is before now"
 msgstr ""
 "<hilight>Erro, o alarme não foi adicionado !</hilight><br><br>A data que "
-"introduziu é anterior a esta"
+"introduziu é anterior a hoje"
 
 #: src/e_mod_config_alarm.c:313 src/e_mod_main.c:421
 msgid "Alarm Module Error"
@@ -295,7 +295,7 @@ msgstr "%1.0f minutos"
 
 #: src/e_mod_main.c:667
 msgid "Ok"
-msgstr "Aceitar"
+msgstr "Ok"
 
 #: src/e_mod_main.c:668
 msgid "Close"
@@ -316,7 +316,7 @@ msgstr "Adiar %.14s de %.2d:%.2d"
 
 #: src/e_mod_main.c:868
 msgid "Snooze (No alarm to delay)"
-msgstr "Adiar (nenhum alarme para atrasar )"
+msgstr "Adiar (nenhum alarme para atrasar)"
 
 #: src/e_mod_main.c:1040
 #, c-format
