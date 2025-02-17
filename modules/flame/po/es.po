@@ -9,17 +9,18 @@ msgstr ""
 "Project-Id-Version: Flame\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2009-04-11 14:19+0000\n"
-"Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
+"PO-Revision-Date: 2025-02-16 17:30-0600\n"
+"Last-Translator: Alejandro Díaz <escuelaslinux@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_main.c:60
 msgid "Look"
-msgstr ""
+msgstr "Aspecto"
 
 #: src/e_mod_main.c:62
 msgid "Flame"
