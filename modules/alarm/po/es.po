@@ -9,13 +9,14 @@ msgstr ""
 "Project-Id-Version: alarm\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-22 22:17-0500\n"
-"PO-Revision-Date: 2009-04-11 14:01+0000\n"
-"Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
+"PO-Revision-Date: 2025-02-16 17:28-0600\n"
+"Last-Translator: Alejandro Díaz <escuelaslinux@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_config.c:52
 msgid "Alarm Configuration"
@@ -243,7 +244,7 @@ msgid ""
 "configuration panel."
 msgstr ""
 "<hilight>¡Prueba de alarma SUPERADA!</hilight><br><br>Pero NO OLVIDE ACTIVAR "
-"las alarmas<br>usando el botón \"Activar\" en la<br>alarma principal"
+"las alarmas<br>usando el botón \"Activar\" en la<br>alarma principal."
 
 #: src/e_mod_config_alarm.c:477
 msgid "<hilight>Alarm test SUCCEED !</hilight>"
@@ -303,7 +304,7 @@ msgstr "Añadir una alarma"
 
 #: src/e_mod_main.c:828
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
 
 #: src/e_mod_main.c:854
 #, c-format
@@ -327,7 +328,7 @@ msgstr ""
 
 #: src/e_mod_main.c:1046 src/e_mod_main.c:1060
 msgid "Alarm Module version"
-msgstr "Versión del módulo de alarma "
+msgstr "Versión del módulo de alarma"
 
 #: src/e_mod_main.c:1054
 #, c-format
