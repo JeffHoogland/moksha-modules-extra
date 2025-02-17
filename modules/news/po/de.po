@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: news\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2009-12-05 10:48+0000\n"
-"Last-Translator: MixCool <lars.thoms@mixcool.de>\n"
+"PO-Revision-Date: 2025-02-17 08:58+0100\n"
+"Last-Translator: Christian Becker (xpistian) <xpistianbecker@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2009-12-06 04:44+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_main.c:54
 msgid "Config init failed"
@@ -36,7 +36,7 @@ msgstr "Betrachterinitialisierung fehlgeschlagen"
 
 #: src/e_mod_main.c:58
 msgid "Popup subsystem init failed"
-msgstr "Popupsysteminitialisierung fehlgeschlagen"
+msgstr "Popup-Subsysteminitialisierung fehlgeschlagen"
 
 #: src/e_mod_main.c:221
 msgid "News"
@@ -49,6 +49,10 @@ msgid ""
 "configuration of news module<br>has been upgraded<br>Your settings were "
 "removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
 msgstr ""
+"<hilight>Nachrichtenmodul : Konfiguration aktualisiert</hilight><br><br>Ihre "
+"Konfiguration des Nachrichtenmoduls<br>wurde aktualisiert<br>Ihre "
+"Einstellungen wurden entfernt<br>Entschuldigen Sie die Umstände<br><br>(%d -"
+">%d)"
 
 #: src/news_config.c:112
 #, c-format
@@ -57,6 +61,10 @@ msgid ""
 "configuration of News module<br>has been downgraded<br>Your settings were "
 "removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
 msgstr ""
+"<hilight>Nachrichtenmodul : Konfiguration herabgestuft</hilight><br><br>Ihre "
+"Konfiguration des Nachrichtenmoduls<br>wurde herabgestuft<br>Ihre "
+"Einstellungen wurden entfernt<br>Entschuldigen Sie die Umstände<br><br>(%d -"
+">%d)"
 
 #: src/news_config_dialog.c:90
 msgid "News Main Configuration"
@@ -69,7 +77,7 @@ msgstr "Feeds"
 
 #: src/news_config_dialog.c:194 src/news_config_dialog.c:238
 msgid "Sort lists by name (disable Move action)"
-msgstr "Listen nach Namen sortieren (deaktiviert Verschiebeaktion)"
+msgstr "Listen nach Namen sortieren (deaktiviert Verschieben)"
 
 #: src/news_config_dialog.c:199 src/news_config_dialog.c:307
 #: src/news_viewer.c:308
@@ -97,7 +105,7 @@ msgstr "Timer"
 #: src/news_config_dialog.c:234
 #, c-format
 msgid "%1.0f min"
-msgstr "%1.0f Minute(n)"
+msgstr "%1.0f min"
 
 #: src/news_config_dialog.c:243
 msgid "Browser"
@@ -121,7 +129,7 @@ msgstr "Nur bei dringenden Meldungen"
 
 #: src/news_config_dialog.c:265
 msgid "On all feeds"
-msgstr "Bei allen Meldungen"
+msgstr "Bei allen Feeds"
 
 #: src/news_config_dialog.c:274 src/news_config_dialog.c:294
 #, c-format
@@ -134,7 +142,7 @@ msgstr "Popup-Meldung bei Warnung / Fehler"
 
 #: src/news_config_dialog.c:287
 msgid "Show on timeout ?"
-msgstr "Bei Zeitüberschreitung zeigen?"
+msgstr "Bei Zeitüberschreitung anzeigen?"
 
 #: src/news_config_dialog.c:309
 msgid "Unread feeds first"
@@ -166,7 +174,7 @@ msgstr "Aktivieren"
 
 #: src/news_config_dialog.c:342
 msgid "Host"
-msgstr "Rechner"
+msgstr "Host"
 
 #: src/news_config_dialog.c:346
 msgid "Port"
@@ -174,7 +182,7 @@ msgstr "Port"
 
 #: src/news_config_dialog_category.c:50
 msgid "News Category Configuration"
-msgstr "Einstellungen zur Nachrichtenkategorie"
+msgstr "Konfiguration der Nachrichtenkategorie"
 
 #: src/news_config_dialog_category.c:135
 msgid "Icon"
@@ -250,7 +258,7 @@ msgstr "Darf der Server die eingegebenen Informationen überschreiben?"
 
 #: src/news_config_dialog_feeds.c:82
 msgid "News Feeds Configuration"
-msgstr "Newsfeed-Einstellung"
+msgstr "Newsfeed-Konfiguration"
 
 #: src/news_config_dialog_feeds.c:290
 msgid "Categories"
@@ -259,12 +267,12 @@ msgstr "Kategorien"
 #: src/news_config_dialog_feeds.c:301 src/news_config_dialog_feeds.c:375
 #: src/news_config_dialog_item_content.c:283
 msgid "Move Up"
-msgstr ""
+msgstr "Nach oben"
 
 #: src/news_config_dialog_feeds.c:304 src/news_config_dialog_feeds.c:378
 #: src/news_config_dialog_item_content.c:287
 msgid "Move Down"
-msgstr ""
+msgstr "Nach unten"
 
 #: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
 msgid "Add"
@@ -292,7 +300,7 @@ msgstr "Auswählen"
 
 #: src/news_config_dialog_feeds.c:346
 msgid "Empty the lists"
-msgstr "Die Listen leeren"
+msgstr "Listen leeren"
 
 #: src/news_config_dialog_feeds.c:349
 msgid "Restore default lists"
@@ -304,7 +312,7 @@ msgid ""
 "<hilight>remove them first</hilight>"
 msgstr ""
 "Es gibt <hilight>Feeds</hilight> in dieser Kategorie.<br>Sie müssen diese "
-"<hilight>zuest entfernen</hilight>"
+"<hilight>zuerst entfernen</hilight>"
 
 #: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
 msgid "News Module - Are you sure ?"
@@ -320,7 +328,7 @@ msgstr "Ansicht"
 
 #: src/news_config_dialog_item.c:107
 msgid "Show one icon for all feeds"
-msgstr "Ein Symbol für alle Feeds zeigen"
+msgstr "Ein Symbol für alle Feeds anzeigen"
 
 #: src/news_config_dialog_item.c:109
 msgid "Show all feeds"
@@ -332,11 +340,11 @@ msgstr "Ungelesene Feeds azeigen"
 
 #: src/news_config_dialog_item.c:113
 msgid "Show all feeds marked as important"
-msgstr "Alle als wichtig markierten Feeds zeigen"
+msgstr "Alle als wichtig gekennzeichneten Feeds anzeigen"
 
 #: src/news_config_dialog_item.c:115
 msgid "Show unread feeds marked as important"
-msgstr "Alle ungelesenen wichtigen Feeds zeigen"
+msgstr "Alle ungelesenen als wichtig gekennzeichneten Feeds anzeigen"
 
 #: src/news_config_dialog_item.c:120
 msgid "Feed open in"
@@ -348,11 +356,11 @@ msgstr "dem Feed-Betrachter"
 
 #: src/news_config_dialog_item.c:125
 msgid "my favorite browser"
-msgstr "meinem bevorzugten Browser"
+msgstr "mein bevorzugter Browser"
 
 #: src/news_config_dialog_item.c:127
 msgid "Browser opens home url"
-msgstr "Browser öffnen Home-URL"
+msgstr "Browser öffnet Home-URL"
 
 #: src/news_config_dialog_item.c:129
 msgid "instead of feed url"
@@ -364,7 +372,7 @@ msgstr "Auf alle Nachrichtenhelfer anwenden"
 
 #: src/news_config_dialog_item_content.c:53
 msgid "News Gadget Content Configuration"
-msgstr "Inhalte des Nachrichtenhelfers"
+msgstr "Konfiguration der Helferinhalte"
 
 #: src/news_config_dialog_item_content.c:258
 msgid "Available Feeds"
@@ -409,9 +417,9 @@ msgid ""
 "hilight><br>in the %s category<br><br>Its not possible to have feeds with "
 "the same name<br>in one category."
 msgstr ""
-"Ein Feed mit dem <hilight>Namen</hilight> %s ist <hilight>bereits vorhanden</"
-"hilight> in der Kategorie %s.<br>br>Es können keine Feeds mit gleichem Namen "
-"in einer Kategorie sein."
+"Ein Feed mit dem <hilight>Namen</hilight> %s ist in der Kategorie "
+"%s<hilight>bereits vorhanden</hilight>.<br><br>Es können keine Feeds mit "
+"gleichem Namen in einer Kategorie sein."
 
 #: src/news_feed.c:311
 msgid "You need to select a <hilight>language</hilight>."
@@ -430,12 +438,12 @@ msgid ""
 "The <hilight>name</hilight> you entered is <hilight>already used</"
 "hilight><br>by another category"
 msgstr ""
-"Der eingegebene <hilight>Name</hilight> wird <hilight>bereits verwendet</"
-"hilight> von einer anderen Kategorie"
+"Der eingegebene <hilight>Name</hilight> wird von einer anderen Kategorie "
+"<hilight>bereits verwendet</hilight>"
 
 #: src/news_menu.c:119
 msgid "Set all as read"
-msgstr "Alles als gelesen markieren"
+msgstr "Alle als gelesen markieren"
 
 #: src/news_menu.c:125 src/news_viewer.c:383
 msgid "Update"
@@ -455,7 +463,7 @@ msgstr "Einstellungen"
 
 #: src/news_menu.c:156
 msgid "Gadget Contents"
-msgstr "Inhalte"
+msgstr "Helferinhalte"
 
 #: src/news_utils.h:13
 msgid "News Module DEBUG DEBUG DEBUG DEBUG"
@@ -475,7 +483,7 @@ msgstr "Feeds in diesem Helfer"
 
 #: src/news_viewer.c:391
 msgid "Set as read"
-msgstr "Alles als gelesen markieren"
+msgstr "Als gelesen markieren"
 
 #: src/news_viewer.c:441
 msgid "Articles in selected feed"
