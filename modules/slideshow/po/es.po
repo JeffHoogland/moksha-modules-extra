@@ -8,13 +8,14 @@ msgstr ""
 "Project-Id-Version: slideshow\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-24 09:06-0500\n"
-"PO-Revision-Date: 2009-04-11 14:49+0000\n"
-"Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
+"PO-Revision-Date: 2025-02-16 17:52-0600\n"
+"Last-Translator: Alejandro Díaz <escuelaslinux@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_config.c:41
 msgid "Slideshow Settings"
@@ -35,7 +36,7 @@ msgstr "%3.0f segundos"
 
 #: src/e_mod_config.c:123
 msgid "Day/Night backgrounds"
-msgstr ""
+msgstr "Fondos día/noche"
 
 #: src/e_mod_config.c:125
 msgid "Disable Scheduler"
@@ -44,20 +45,20 @@ msgstr "Deshabilitar temporizador"
 #: src/e_mod_config.c:127
 #, c-format
 msgid "%1.0f hr"
-msgstr ""
+msgstr "%1.0f hr"
 
 #: src/e_mod_config.c:130
 #, c-format
 msgid "%1.0f min"
-msgstr ""
+msgstr "%1.0f min"
 
 #: src/e_mod_config.c:133
 msgid "Day bg file: (Start at slider time e.g. 6:00 am)"
-msgstr ""
+msgstr "Archivo fondo de día: (Comenzar en el control deslizante de tiempo Ej. 6:00 am)"
 
 #: src/e_mod_config.c:137
 msgid "Night bg file: (12 hours later at 6:00 pm)"
-msgstr ""
+msgstr "Archivo fondo de noche: (12 horas después a las 6:00 pm)"
 
 #: src/e_mod_config.c:143
 msgid "Directory"
@@ -65,35 +66,35 @@ msgstr "Carpeta"
 
 #: src/e_mod_config.c:145
 msgid "Sub-directory to use for backgrounds"
-msgstr "Subdirectory para usar para fondos"
+msgstr "Subdirectorio para usar para fondos"
 
 #: src/e_mod_config.c:152
 msgid "Fill and Stretch Options"
-msgstr ""
+msgstr "Opciones de Llenar y Estirar"
 
 #: src/e_mod_config.c:154
 msgid "Stretch"
-msgstr ""
+msgstr "Estirar"
 
 #: src/e_mod_config.c:158
 msgid "Center"
-msgstr ""
+msgstr "Centrar"
 
 #: src/e_mod_config.c:162
 msgid "Tile"
-msgstr ""
+msgstr "Mosaico"
 
 #: src/e_mod_config.c:167
 msgid "Within"
-msgstr ""
+msgstr "Dentro"
 
 #: src/e_mod_config.c:171
 msgid "Fill"
-msgstr ""
+msgstr "Llenar"
 
 #: src/e_mod_config.c:175
 msgid "Pan"
-msgstr ""
+msgstr "Panorámica"
 
 #: src/e_mod_config.c:181
 msgid "Extra"
@@ -121,11 +122,11 @@ msgstr "Poner fondo de pantalla en monitor actual (soporte para Xinerama)"
 
 #: src/e_mod_config.c:242 src/e_mod_main.c:256 src/e_mod_main.c:508
 msgid "Warning"
-msgstr ""
+msgstr "dvertencia"
 
 #: src/e_mod_config.c:242 src/e_mod_main.c:509
 msgid "Day/Night file names are not defined!"
-msgstr ""
+msgstr "¡Nombres de archivo Día/Noche no están definidos!"
 
 #: src/e_mod_main.c:154
 msgid "Slideshow"
@@ -133,19 +134,19 @@ msgstr "Mostrar diapositivas"
 
 #: src/e_mod_main.c:193
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
 
 #: src/e_mod_main.c:257
 msgid "Check Day/Night bg file names. They do not match!"
-msgstr ""
+msgstr "Verifique los archivos de nombre día/noche. ¡No concuerdan!"
 
 #: src/e_mod_main.c:728
 msgid "Picture Import Error"
-msgstr ""
+msgstr "Error de importación de imagen."
 
 #: src/e_mod_main.c:729
 msgid "Moksha was unable to import the picture<br>due to conversion errors."
-msgstr ""
+msgstr "Moksha fue incapaz de importar la imagen<br>debido a errores de conversión."
 
 #~ msgid "Slideshow Configuration"
 #~ msgstr "Configuración de cambio de diapositivas"
