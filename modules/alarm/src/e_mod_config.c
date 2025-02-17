@@ -3,16 +3,16 @@
 
 struct _E_Config_Dialog_Data
 {
-   int    time_format;
+   int              time_format;
 
-   Evas_Object *alarms_ilist;
+   Evas_Object     *alarms_ilist;
    E_Config_Dialog *alarms_cfd;
-   int    alarms_active;
-   int    alarms_autoremove_default;
-   int    alarms_details;
-   int    alarms_open_popup_default;
-   int    alarms_run_program_default;
-   char  *alarms_program_default;
+   int              alarms_active;
+   int              alarms_autoremove_default;
+   int              alarms_details;
+   int              alarms_open_popup_default;
+   int              alarms_run_program_default;
+   char            *alarms_program_default;
 };
 
 static void        *_create_data(E_Config_Dialog *cfd);
@@ -37,9 +37,9 @@ alarm_config_module(void)
    E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
    char buf[PATH_MAX];
-   
+
    v = E_NEW(E_Config_Dialog_View, 1);
-   
+
    v->create_cfdata = _create_data;
    v->free_cfdata = _free_data;
    v->basic.apply_cfdata = _basic_apply_data;
