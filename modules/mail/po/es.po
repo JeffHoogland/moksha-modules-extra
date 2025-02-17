@@ -9,13 +9,14 @@ msgstr ""
 "Project-Id-Version: mail\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2012-11-08 02:06+0100\n"
+"PO-Revision-Date: 2025-02-16 17:33-0600\n"
 "Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_config_box.c:68
 msgid "Mailbox Configuration"
@@ -131,7 +132,7 @@ msgstr "Mostrar todos los buzones en ventanas emergentes"
 
 #: src/e_mod_config.c:103
 msgid "Play sound when mail arrives"
-msgstr ""
+msgstr "Reproducir sonido cuando llegue correo"
 
 #: src/e_mod_config.c:105
 msgid "Check Interval"
@@ -168,7 +169,7 @@ msgstr "Preferencias"
 
 #: src/e_mod_main.c:684
 msgid "A new mail!"
-msgstr ""
+msgstr "¡Un nuevo correo!"
 
 #~ msgid "Mail Configuration"
 #~ msgstr "Configuración de correo"
