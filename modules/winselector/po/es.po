@@ -8,18 +8,19 @@ msgstr ""
 "Project-Id-Version: winselector\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-30 16:58-0500\n"
-"PO-Revision-Date: 2025-01-30 16:58-0500\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-02-16 18:04-0600\n"
+"Last-Translator: Alejandro Díaz <escuelaslinux@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_main.c:140
 msgid "Winselector"
-msgstr ""
+msgstr "Winselector"
 
 #: src/e_mod_main.c:283
 msgid "No windows"
@@ -27,4 +28,4 @@ msgstr "Ninguna ventana"
 
 #: src/e_mod_main.c:328
 msgid "No name!"
-msgstr ""
+msgstr "¡Sin nombre!"
