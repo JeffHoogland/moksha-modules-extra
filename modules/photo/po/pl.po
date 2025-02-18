@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: photo\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2009-08-26 08:56+0000\n"
-"Last-Translator: Andrzej MoST (Marcin Ostajewski) <Unknown>\n"
-"Language-Team: Polish\n"
+"PO-Revision-Date: 2025-02-18 16:11+0100\n"
+"Last-Translator: diekrz2\n"
+"Language-Team: none\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: src/e_mod_main.c:54 src/e_mod_main.c:61 src/e_mod_main.c:68
 #: src/e_mod_main.c:75 src/e_mod_main.c:82 src/e_mod_main.c:89
 msgid "Photo Module"
-msgstr "Moduł zdjęć"
+msgstr "Moduł Photo"
 
 #: src/e_mod_main.c:54
 msgid "E Canvas init failed!"
@@ -37,7 +37,7 @@ msgstr "Inicializacja konfiguracji zawiodła!"
 
 #: src/e_mod_main.c:75
 msgid "Picture subsystem init failed"
-msgstr "Inicializacja podsystemu obrazków nie powiodła się!"
+msgstr "Inicializacja podsystemu obrazów nie powiodła się!"
 
 #: src/e_mod_main.c:82
 msgid "Popup warn subsystem init failed"
@@ -49,7 +49,7 @@ msgstr "Inicializacja podsystemu informowania nie powiodła się"
 
 #: src/e_mod_main.c:182
 msgid "Photo"
-msgstr "Zdjęcie"
+msgstr "Photo"
 
 #: src/photo_config.c:73
 #, c-format
@@ -59,12 +59,12 @@ msgid ""
 "removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
 msgstr ""
 "<hilight>Moduł zdjęć : konfiguracja zaktualizowana</hilight><br><br>Twoja "
-"konfiguracja modułu zdjęć<br>była zaktualizowana<br>Twoja ustawienia były "
+"konfiguracja modułu zdjęć<br>została zaktualizowana<br>Twoje ustawienia zostały "
 "usunięte<br>Przepraszamy ze niedogodności<br><br>(%d -> %d)"
 
 #: src/photo_config.c:79 src/photo_config.c:93
 msgid "Photo Module version "
-msgstr "Wersja modułu zdjęć "
+msgstr "Wersja modułu Photo "
 
 #: src/photo_config.c:87
 #, c-format
@@ -74,16 +74,16 @@ msgid ""
 "removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
 msgstr ""
 "<hilight>Moduł zdjęć : konfiguracja dezaktualizowana</hilight><br><br>Twoja "
-"konfiguracja modułu zdjęć<br>była dezaktualizowana<br>Twoja ustawienia były "
+"konfiguracja modułu zdjęć<br>została dezaktualizowana<br>Twoje ustawienia zostały "
 "usunięte<br>Przepraszamy ze niedogodności<br><br>(%d -> %d)"
 
 #: src/photo_config_dialog.c:63
 msgid "Photo Configuration"
-msgstr "Konfiguracja zdjęcia"
+msgstr "Konfiguracja Photo"
 
 #: src/photo_config_dialog.c:217
 msgid "Picture directories"
-msgstr "Foldery obrazków"
+msgstr "Foldery obrazów"
 
 #: src/photo_config_dialog.c:232
 msgid "Add"
@@ -99,7 +99,7 @@ msgstr "Konfiguruj"
 
 #: src/photo_config_dialog.c:239
 msgid "Reload picture directories"
-msgstr "Odśwież foldery obrazków"
+msgstr "Odśwież foldery obrazów"
 
 #: src/photo_config_dialog.c:242
 msgid "Stop loading"
@@ -172,7 +172,7 @@ msgstr "Usuń wygenerowane tła"
 
 #: src/photo_config_dialog.c:335
 msgid "Pictures viewer"
-msgstr "Przeglądarka obrazków"
+msgstr "Przeglądarka obrazów"
 
 #: src/photo_config_dialog.c:341
 msgid "Images Quality"
@@ -225,7 +225,7 @@ msgstr "Pokaż menu"
 
 #: src/photo_config_dialog_dir.c:38
 msgid "Photo Directory Configuration"
-msgstr "Konfiguracja folderu zdjęcia"
+msgstr "Konfiguracja folderu Photo"
 
 #: src/photo_config_dialog_dir.c:118
 msgid "Directory"
@@ -245,7 +245,7 @@ msgstr "Otwórz ukryte pliki"
 
 #: src/photo_config_dialog_dir.c:158
 msgid "Photo Module Warning"
-msgstr "Ostrzeżenie modułu zdjęć"
+msgstr "Ostrzeżenie modułu Photo"
 
 #: src/photo_config_dialog_item.c:48
 msgid "Photo Item Configuration"
@@ -253,7 +253,7 @@ msgstr "Konfiguracja przedmiotu zdjęcia"
 
 #: src/photo_config_dialog_item.c:113
 msgid "Timer between pictures change"
-msgstr "Czas przejścia zdjęcia"
+msgstr "Czas przejścia obrazów"
 
 #: src/photo_config_dialog_item.c:115
 msgid "Activate"
@@ -293,28 +293,28 @@ msgid ""
 "background, sorry."
 msgstr ""
 "<hilight>Plik %s nie istnieje.</hilight><br><br>Ten plik jest w liście "
-"obrazków modułu zdjęć, ale wygląda na to że był usunięty<br>Przepraszamy, "
+"obrazów, ale wygląda na to że został usunięty<br>Przepraszamy, "
 "ale nie można go ustawić jako tło."
 
 #: src/photo_item.c:418 src/photo_item.c:478 src/photo_picture_local.c:262
 msgid "Photo Module Error"
-msgstr "Błąd modułu zdjęć"
+msgstr "Błąd modułu Photo"
 
 #: src/photo_item.c:1037
 msgid "Picture Import Error"
-msgstr "Foldery obrazków"
+msgstr "Błąd przy importowaniu obrazów"
 
 #: src/photo_item.c:1038
 msgid "Moksha was unable to import the picture<br>due to conversion errors."
-msgstr ""
+msgstr "Moksha nie mogła zaimportować zdjęcia<br>z powodu błędów konwersji."
 
 #: src/photo_menu.c:34
 msgid "Module Settings"
-msgstr "Domyślne ustawienie"
+msgstr "Ustawienia modułu"
 
 #: src/photo_menu.c:40
 msgid "Settings"
-msgstr ""
+msgstr "Ustawienia"
 
 #: src/photo_menu.c:49
 msgid "Pause slideshow"
@@ -346,13 +346,13 @@ msgid ""
 "anymore<br><br>"
 msgstr ""
 "<hilight>Folder %s nie istnieje.</hilight><br><br>Możesz zmienić foldery "
-"obrazka w głównym panelu konfiguracyjnym<br>Mogą być jpeg lub png<br><br>Po "
-"importowaniu, możesz usunąć te pliki a obrazki będzie stale "
-"można<br>przeglądać, ale nie będzie można je ustawić jako tapetę<br><br>"
+"obrazów w głównym panelu konfiguracyjnym<br>Mogą być jpeg lub png<br><br>Po "
+"importowaniu, możesz usunąć te pliki a obrazy będzie można stale "
+"<br>przeglądać, lecz nie będzie można ich ustawić jako tapetę<br><br>"
 
 #: src/photo_picture_local.c:600
 msgid "Photo Module Information"
-msgstr "Informacje o modułu zdjęć"
+msgstr "Informacje modułu Photo"
 
 #: src/photo_picture_local.c:601
 msgid ""
@@ -363,3 +363,9 @@ msgid ""
 "thumbed.<br><br>While creating popups, you will not be able to see any "
 "picture in Photo.<br>I hope i'll be able to change that :)"
 msgstr ""
+"<hilight>Tworzenie miniatur</hilight><br><br>Niektóre zdjęcia są miniaturyzowane w "
+"<hilight> w tle zadań<hilight>.<br>Może to potrwać chwilę, ale później, "
+"ładowanie będzie szybsze i lżejsze :)<br><br>Za każdym razem, gdy załadujesz "
+"zdjęcia, które nie zostały wcześniej załadowane w module Photo,<br>zostaną one"
+"miniaturyzowane.<br><br>Podczas tworzenia wyskakujących okienek nie będziesz mógł zobaczyć żadnego "
+"zdjęcia w Photo.<br>Mam nadzieję, że będę w stanie to zmienić :)"
