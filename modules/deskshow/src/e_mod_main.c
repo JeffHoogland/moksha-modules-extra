@@ -100,7 +100,7 @@ _gc_orient(E_Gadcon_Client *gcc, E_Gadcon_Orient orient __UNUSED__)
 static const char *
 _gc_label (const E_Gadcon_Client_Class *client_class __UNUSED__)
 {
-   return "Deskshow";
+   return D_("Deskshow");
 }
 
 static Evas_Object *
@@ -164,6 +164,9 @@ EAPI E_Module_Api e_modapi = {
 EAPI void *
 e_modapi_init (E_Module * m)
 {
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
+   
    desk_module = m;
    e_gadcon_provider_register(&_gadcon_class);
    return desk_module;
