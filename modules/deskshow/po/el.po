@@ -1,5 +1,6 @@
-# Greek translations for deskshow package.
+# Greek translations for the Deskshow Module.
 # This file is put in the public domain.
+#
 # Automatically generated, 2025.
 #
 msgid ""

@@ -1,5 +1,6 @@
-# Czech translations for deskshow package.
+# Czech translations for the Deskshow Module.
 # This file is put in the public domain.
+#
 #
 # Automatically generated, 2025.
 #

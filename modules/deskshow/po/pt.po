@@ -1,7 +1,7 @@
-# Portuguese translations for deskshow package.
+# Portuguese translations for the Deskshow Module.
 # This file is put in the public domain.
+#
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2025.
-# Automatically generated, 2025.
 #
 msgid ""
 msgstr ""

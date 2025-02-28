@@ -1,6 +1,7 @@
 # Portuguese translations for deskshow package
 # Traduções em português brasileiro para o pacote deskshow.
 # This file is put in the public domain.
+#
 # Automatically generated, 2025.
 #
 msgid ""

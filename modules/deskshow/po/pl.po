@@ -1,5 +1,6 @@
-# Polish translations for deskshow package.
+# Polish translations for the Deskshow Module.
 # This file is put in the public domain.
+#
 # Automatically generated, 2025.
 #
 msgid ""
