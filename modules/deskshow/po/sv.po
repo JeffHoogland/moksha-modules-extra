@@ -1,11 +1,12 @@
 # Swedish translations for deskshow package.
 # This file is put in the public domain.
+#
 # Automatically generated, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: deskshow\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-02-24 09:48+0100\n"
 "PO-Revision-Date: 2025-02-24 09:48+0100\n"
 "Last-Translator: Automatically generated\n"
