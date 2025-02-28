@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: e-module-wallscape\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-09 22:02+0100\n"
-"PO-Revision-Date: 2025-02-09 21:17+0000\n"
+"PO-Revision-Date: 2025-02-28 01:17+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -63,7 +63,7 @@ msgstr "Ver"
 
 #: src/e_mod_main.c:26 src/e_mod_main.c:30 src/e_mod_main.c:94
 msgid "Wallscape"
-msgstr "Wallscape"
+msgstr "Mural"
 
 #: src/e_mod_main.c:27
 msgid "Internal"
