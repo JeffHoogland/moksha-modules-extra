@@ -1,4 +1,4 @@
-# French translation for the e-module-deskshow package.
+# French translation for the deskshow package.
 # This file is put in the public domain.
 # similar <similar@orange.fr>, 2025.
 #

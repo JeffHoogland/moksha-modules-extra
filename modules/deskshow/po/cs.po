@@ -1,4 +1,4 @@
-# Czech translations for e-module-deskshow package.
+# Czech translations for deskshow package.
 # This file is put in the public domain.
 # Automatically generated, 2025.
 #

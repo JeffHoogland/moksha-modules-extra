@@ -1,11 +1,11 @@
-# Chinese translations for e-module-deskshow package
-# e-module-deskshow 软件包的简体中文翻译.
+# Chinese translations for deskshow package
+# deskshow 软件包的简体中文翻译.
 # This file is put in the public domain.
 # Automatically generated, 2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: e-module-deskshow\n"
+"Project-Id-Version: deskshow\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-24 09:48+0100\n"
 "PO-Revision-Date: 2025-02-24 09:48+0100\n"
