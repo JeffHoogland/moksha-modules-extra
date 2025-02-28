@@ -1,6 +1,5 @@
-# French translation for the deskshow package.
+# French translation for the Deskshow Module.
 # This file is put in the public domain.
-#
 #
 # similar <similar@orange.fr>, 2025.
 #

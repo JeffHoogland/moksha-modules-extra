@@ -1,8 +1,7 @@
 # Slovak translations for the Deskshow Module.
 # This file is put in the public domain.
 #
-#
-# Automatically generated, 2025.
+# Štefan Uram <thewaiter@bodhilinux.com>\n"
 #
 msgid ""
 msgstr ""
@@ -11,7 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2025-02-24 09:48+0100\n"
 "PO-Revision-Date: 2025-02-24 09:48+0100\n"
 "Last-Translator: Štefan Uram <thewaiter@bodhilinux.com>\n"
-"Language-Team: Bodhi\n"
+"Language-Team: Slovak\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
