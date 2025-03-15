@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: diskio\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-18 17:43-0500\n"
-"PO-Revision-Date: 2025-01-19 22:43+0000\n"
+"PO-Revision-Date: 2025-03-15 09:04-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
@@ -16,15 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_main.c:282
 msgid "DiskIO"
-msgstr ""
+msgstr "DiskIO"
 
 #: src/e_mod_main.c:352
 msgid "DiskIO Configuration Updated"
-msgstr ""
+msgstr "Configuração do DiskIO atualizada"
 
 #: src/e_mod_main.c:390
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"

@@ -1,0 +1,374 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: photo\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
+"PO-Revision-Date: 2025-03-15 14:28-0300\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: src/e_mod_main.c:54 src/e_mod_main.c:61 src/e_mod_main.c:68
+#: src/e_mod_main.c:75 src/e_mod_main.c:82 src/e_mod_main.c:89
+msgid "Photo Module"
+msgstr "Módulo Foto"
+
+#: src/e_mod_main.c:54
+msgid "E Canvas init failed!"
+msgstr "Inicialização do E Canvas falhou!"
+
+#: src/e_mod_main.c:61
+msgid "Theme init failed!"
+msgstr "Inicialização do Tema falhou!"
+
+#: src/e_mod_main.c:68
+msgid "Config init failed"
+msgstr "Inicialização da Configuração falhou"
+
+#: src/e_mod_main.c:75
+msgid "Picture subsystem init failed"
+msgstr "Inicialização do subsistema de Figuras falhou"
+
+#: src/e_mod_main.c:82
+msgid "Popup warn subsystem init failed"
+msgstr "Inicialização do subsistema de alerta de Popup falhou"
+
+#: src/e_mod_main.c:89
+msgid "Popup info subsystem init failed"
+msgstr "Inicialização do subsistema de informações de Popup falhou"
+
+#: src/e_mod_main.c:182
+msgid "Photo"
+msgstr "Foto"
+
+#: src/photo_config.c:73
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>Módulo Foto : Configuração atualizada</hilight><br><br>Sua "
+"configuração do módulo Foto<br>foi atualizada<br>Suas configurações foram "
+"removidas<br>Desculpe pela inconveniência<br><br>(%d -> %d)"
+
+#: src/photo_config.c:79 src/photo_config.c:93
+msgid "Photo Module version "
+msgstr "Versáo do módulo Foto "
+
+#: src/photo_config.c:87
+#, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>Módulo Foto : Configuração revertida</hilight><br><br>Sua "
+"configuração do módulo Foto<br>foi revertida<br>Suas configurações foram "
+"removidas<br>Desculpe pela inconveniência<br><br>(%d -> %d)"
+
+#: src/photo_config_dialog.c:63
+msgid "Photo Configuration"
+msgstr "Configuração do Foto"
+
+#: src/photo_config_dialog.c:217
+msgid "Picture directories"
+msgstr "Diretórios de Figuras"
+
+#: src/photo_config_dialog.c:232
+msgid "Add"
+msgstr "Adicionar"
+
+#: src/photo_config_dialog.c:234
+msgid "Delete"
+msgstr "Remover"
+
+#: src/photo_config_dialog.c:236
+msgid "Configure"
+msgstr "Configurar"
+
+#: src/photo_config_dialog.c:239
+msgid "Reload picture directories"
+msgstr "Recarregar diretórios de Figuras"
+
+#: src/photo_config_dialog.c:242
+msgid "Stop loading"
+msgstr "Parar de carregar"
+
+#: src/photo_config_dialog.c:249 src/photo_config_dialog_item.c:126
+msgid "Appearance"
+msgstr "Aparência"
+
+#: src/photo_config_dialog.c:251 src/photo_config_dialog_item.c:135
+msgid "Always show label"
+msgstr "Sempre mostrar etiqueta"
+
+#: src/photo_config_dialog.c:253
+msgid "Nice transitions"
+msgstr "Transições legais"
+
+#: src/photo_config_dialog.c:259
+msgid "Default Mouse actions"
+msgstr "Ações padrão do Mouse"
+
+#: src/photo_config_dialog.c:261 src/photo_config_dialog_item.c:190
+msgid "Over"
+msgstr "Sobre"
+
+#: src/photo_config_dialog.c:265 src/photo_config_dialog_item.c:194
+msgid "Left"
+msgstr "Esquerda"
+
+#: src/photo_config_dialog.c:267 src/photo_config_dialog.c:273
+#: src/photo_config_dialog_item.c:196 src/photo_config_dialog_item.c:202
+msgid "click"
+msgstr "Clicar"
+
+#: src/photo_config_dialog.c:271 src/photo_config_dialog_item.c:200
+msgid "Middle"
+msgstr "Meio"
+
+#: src/photo_config_dialog.c:276 src/photo_config_dialog_item.c:141
+msgid "No"
+msgstr "Não"
+
+#: src/photo_config_dialog.c:315
+msgid "Popups"
+msgstr "Popups"
+
+#: src/photo_config_dialog.c:317
+msgid "Picture loader popup"
+msgstr "Popup de carregar Figura"
+
+#: src/photo_config_dialog.c:320
+msgid "Never"
+msgstr "Nunca"
+
+#: src/photo_config_dialog.c:322
+msgid "Summary"
+msgstr "Resumo"
+
+#: src/photo_config_dialog.c:324
+msgid "Verbose"
+msgstr "Com detalhes"
+
+#: src/photo_config_dialog.c:329
+msgid "Miscellaneous"
+msgstr "Miscelânea"
+
+#: src/photo_config_dialog.c:331
+msgid "Remove generated backgrounds"
+msgstr "Remover fundos gerados"
+
+#: src/photo_config_dialog.c:335
+msgid "Pictures viewer"
+msgstr "Visualizador de Figuras"
+
+#: src/photo_config_dialog.c:341
+msgid "Images Quality"
+msgstr "Qualidade das Imagens"
+
+#: src/photo_config_dialog.c:343
+#, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f pix"
+
+#: src/photo_config_dialog.c:350
+msgid "Automatically reload directories"
+msgstr "Recarregar diretórios automaticamente"
+
+#: src/photo_config_dialog.c:353
+msgid "when add / modify directory list"
+msgstr "quando adicionar / modificar lista de diretórios"
+
+#: src/photo_config_dialog.h:36
+msgid "Show label"
+msgstr "Mostrar etiqueta"
+
+#: src/photo_config_dialog.h:38
+msgid "Show information"
+msgstr "Mostrar informação"
+
+#: src/photo_config_dialog.h:40 src/photo_menu.c:63
+msgid "Previous picture"
+msgstr "Figura anterior"
+
+#: src/photo_config_dialog.h:42 src/photo_menu.c:59
+msgid "Next picture"
+msgstr "Próxima Figura"
+
+#: src/photo_config_dialog.h:44
+msgid "Pause"
+msgstr "Pausa"
+
+#: src/photo_config_dialog.h:46 src/photo_menu.c:83
+msgid "Set as background"
+msgstr "Definir como fundo"
+
+#: src/photo_config_dialog.h:48
+msgid "Open viewer"
+msgstr "Abrir visualizador"
+
+#: src/photo_config_dialog.h:50
+msgid "Show menu"
+msgstr "Mostrar menu"
+
+#: src/photo_config_dialog_dir.c:38
+msgid "Photo Directory Configuration"
+msgstr "Configuração do diretório do Foto"
+
+#: src/photo_config_dialog_dir.c:118
+msgid "Directory"
+msgstr "Diretório"
+
+#: src/photo_config_dialog_dir.c:127
+msgid "Loading options"
+msgstr "Opções de carregamento"
+
+#: src/photo_config_dialog_dir.c:129
+msgid "Recursive"
+msgstr "Recursivo"
+
+#: src/photo_config_dialog_dir.c:131
+msgid "Read hidden files"
+msgstr "Ler arquivos escondidos"
+
+#: src/photo_config_dialog_dir.c:158
+msgid "Photo Module Warning"
+msgstr "Alerta do módulo Foto"
+
+#: src/photo_config_dialog_item.c:48
+msgid "Photo Item Configuration"
+msgstr "Configuração do Item Foto"
+
+#: src/photo_config_dialog_item.c:113
+msgid "Timer between pictures change"
+msgstr "Tempo entre mudança de Figuras"
+
+#: src/photo_config_dialog_item.c:115
+msgid "Activate"
+msgstr "Ativar"
+
+#: src/photo_config_dialog_item.c:118
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f segundos"
+
+#: src/photo_config_dialog_item.c:128
+msgid "Alpha"
+msgstr "Alfa"
+
+#: src/photo_config_dialog_item.c:131
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/photo_config_dialog_item.c:139
+msgid "Yes"
+msgstr "Sim"
+
+#: src/photo_config_dialog_item.c:143 src/photo_config_dialog_item.c:205
+msgid "Default setting"
+msgstr "Configuração padrão"
+
+#: src/photo_config_dialog_item.c:188
+msgid "Mouse actions"
+msgstr "Ações do Mouse"
+
+#: src/photo_item.c:415 src/photo_item.c:475
+#, c-format
+msgid ""
+"<hilight>File %s doesn't exist.</hilight><br><br>This file is in the picture "
+"list, but it seems you removed<br>it from disk. It can't be set as "
+"background, sorry."
+msgstr ""
+"<hilight>O arquivo %s não existe.</hilight><br><br>Este arquivo está na "
+"lista de figuras, mas parece que você o removeu<br>do disco. Este arquivo "
+"não pode ser definido como fundo, desculpe."
+
+#: src/photo_item.c:418 src/photo_item.c:478 src/photo_picture_local.c:262
+msgid "Photo Module Error"
+msgstr "Erro no módulo Foto"
+
+#: src/photo_item.c:1037
+msgid "Picture Import Error"
+msgstr "Erro ao importar Figura"
+
+#: src/photo_item.c:1038
+msgid "Moksha was unable to import the picture<br>due to conversion errors."
+msgstr ""
+"Moksha não foi capaz de importar a figura<br>devido a erros de conversão."
+
+#: src/photo_menu.c:34
+msgid "Module Settings"
+msgstr "Configurações do módulo"
+
+#: src/photo_menu.c:40
+msgid "Settings"
+msgstr "Configurações"
+
+#: src/photo_menu.c:49
+msgid "Pause slideshow"
+msgstr "Parar apresentação"
+
+#: src/photo_menu.c:54
+msgid "Resume slideshow"
+msgstr "Continuar apresentação"
+
+#: src/photo_menu.c:69
+msgid "Historic"
+msgstr "Histórico"
+
+#: src/photo_menu.c:79
+msgid "Picture information"
+msgstr "Informação da figura"
+
+#: src/photo_menu.c:87
+msgid "Open in"
+msgstr "Abrir em"
+
+#: src/photo_picture_local.c:256
+#, c-format
+msgid ""
+"<hilight>Directory %s doesn't exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you won't be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr ""
+"<hilight>Diretório %s não existe.</hilight><br><br>Você pode modificar os "
+"diretórios de figuras no painel de configuração principal<br>Os arquivos "
+"podem ser jpeg ou png<br><br>Depois da importação, você pode remover estes "
+"arquivos e as figuras ainda poderão<br>ser visualizadas, mas você não será "
+"mais capaz de defini-las como fundo.<br><br>"
+
+#: src/photo_picture_local.c:600
+msgid "Photo Module Information"
+msgstr "Informação do módulo Foto"
+
+#: src/photo_picture_local.c:601
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time you will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr ""
+"<hilight>Criando thumbs</hilight><br><br>Algumas figuras estão sendo "
+"convertidas para thumbs em uma <hilight>tarefa em segundo plano</hilight>."
+"<br>Pode demorar um pouco, mas após isso o carregamento será mais rápido e "
+"leve :)<br><br>Sempre que você for carregar figuras que nunca tenham sido "
+"carregadas no módulo Foto,<br>elas serão convertidas em thumbs.<br><br>Ao "
+"criar popups, você não será capaz de ver qualquer figura no Foto.<br>O "
+"desenvolvedor espera ser capaz de mudar isso :)"
