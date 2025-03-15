@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: tclock\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-22 08:09-0500\n"
-"PO-Revision-Date: 2009-09-12 15:27+0000\n"
+"PO-Revision-Date: 2025-03-15 14:43-0300\n"
 "Last-Translator: André Gondim <andregondim@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2009-11-12 04:52+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_config.c:42
 msgid "Tclock Settings"
-msgstr ""
+msgstr "Configurações do TClock"
 
 #: src/e_mod_config.c:101
 msgid "Top"
@@ -36,7 +36,7 @@ msgstr "Consulte strftime(3) para formato de sintaxe"
 
 #: src/e_mod_config.c:112
 msgid "Add time offset (e.g.+2)"
-msgstr ""
+msgstr "Adicionar fuso horário (ex. +2)"
 
 #: src/e_mod_config.c:123
 msgid "Bottom"
@@ -56,23 +56,23 @@ msgstr "Mostrar dica"
 
 #: src/e_mod_config.c:148
 msgid "Font size"
-msgstr ""
+msgstr "Tamanho da fonte"
 
 #: src/e_mod_config.c:150
 msgid "Top line"
-msgstr "Mostrar linha superior"
+msgstr "Linha superior"
 
 #: src/e_mod_config.c:155
 msgid "Bottom line"
-msgstr "Mostrar linha inferior"
+msgstr "Linha inferior"
 
 #: src/e_mod_config.c:163
 msgid "Label color"
-msgstr ""
+msgstr "Cor da etiqueta"
 
 #: src/e_mod_config.c:165
 msgid "Click for the color selector"
-msgstr ""
+msgstr "Clique para o seletor de cores"
 
 #: src/e_mod_main.c:141
 msgid "TClock"

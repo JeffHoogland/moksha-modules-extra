@@ -8,6 +8,7 @@ Name[eo]=Reto
 Name[fr]=Réseau
 Name[hu]=Hálózat
 Name[pt]=Rede
+Name[pt_BR]=Rede
 Name[ru]=Сеть
 Name[sk]=Sieť
 Icon=e-module-net
@@ -21,6 +22,7 @@ Comment[fr]=Moniteur réseau.
 Comment[hu]=A hálózatot követhetjük nyomon (feltöltés/letöltés sebessége)a modullal.
 Comment[it]=Monitor delle interfacce di rete.
 Comment[pt]=Módulo para monitorizar as interfaces de rede.
+Comment[pt_BR]=Módulo para monitorar as interfaces de rede.
 Comment[ru]=Монитор сетевого интерфейса.
 Comment[sk]=Monitoruje sieťové pripojenie.
 

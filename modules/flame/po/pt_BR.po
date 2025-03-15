@@ -8,17 +8,18 @@ msgstr ""
 "Project-Id-Version: Flame\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2009-02-26 23:20+0000\n"
+"PO-Revision-Date: 2025-03-15 09:24-0300\n"
 "Last-Translator: Ricardo Ichizo <n1ghtcr4wler@gmail.com>\n"
 "Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_main.c:60
 msgid "Look"
-msgstr ""
+msgstr "Aparência"
 
 #: src/e_mod_main.c:62
 msgid "Flame"
@@ -26,7 +27,7 @@ msgstr "Chama"
 
 #: src/e_mod_config.c:47
 msgid "Flame Configuration"
-msgstr "Configuração da Chama"
+msgstr "Configuração do Chama"
 
 #: src/e_mod_config.c:94 src/e_mod_config.c:178
 msgid "Flame Color"

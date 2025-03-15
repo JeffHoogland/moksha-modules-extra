@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: Mem\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 15:35-0500\n"
-"PO-Revision-Date: 2009-01-10 19:27+0000\n"
+"PO-Revision-Date: 2025-03-15 09:31-0300\n"
 "Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_config.c:43
-#, fuzzy
 msgid "Mem Settings"
-msgstr "Configurações gerais"
+msgstr "Configurações do Mem"
 
 #: src/e_mod_config.c:92
 msgid "General Settings"
@@ -43,11 +43,11 @@ msgstr "Ignorar buffers"
 
 #: src/e_mod_config.c:105
 msgid "Ignore Cached"
-msgstr "Ignorar com cache"
+msgstr "Ignorar no cache"
 
 #: src/e_mod_config.c:109
 msgid "Check Interval:"
-msgstr "Intervalo de checagem"
+msgstr "Intervalo de verificação"
 
 #: src/e_mod_config.c:112
 #, c-format
@@ -59,9 +59,8 @@ msgid "Mem"
 msgstr "Mem"
 
 #: src/e_mod_main.c:161
-#, fuzzy
 msgid "Settings"
-msgstr "Configurações gerais"
+msgstr "Configurações"
 
 #~ msgid "Mem Configuration"
 #~ msgstr "Configuração do mem"

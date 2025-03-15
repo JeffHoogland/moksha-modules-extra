@@ -7,6 +7,7 @@ Name[eo]=Memoro
 Name[fr]=Mémoire
 Name[hu]=Memória
 Name[pt]=Memória
+Name[pt_BR]=Memória
 Name[ru]=Память
 Icon=e-module-mem
 X-Enlightenment-ModuleType=system
@@ -19,6 +20,7 @@ Comment[fr]=Affiche l'utilisation de la mémoire.
 Comment[hu]=A fizikai memória foglaltságát jelzi ki.
 Comment[it]=Usato per il monitoraggio dell'utilizzo della memoria.
 Comment[pt]=Utilizado para monitorizar a memória utilizada.
+Comment[pt_BR]=Módulo para monitorar a memória utilizada.
 Comment[ru]=Используется для мониторинга использования памяти.
 Comment[sk]=Zobrazí využiie pamäte.
 

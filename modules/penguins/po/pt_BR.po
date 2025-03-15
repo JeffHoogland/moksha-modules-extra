@@ -8,13 +8,14 @@ msgstr ""
 "Project-Id-Version: penguins\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-20 12:05-0500\n"
-"PO-Revision-Date: 2009-01-10 20:15+0000\n"
+"PO-Revision-Date: 2025-03-15 13:24-0300\n"
 "Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/e_mod_config.c:42
 msgid "Population Settings"
@@ -22,7 +23,7 @@ msgstr "Configurações de população"
 
 #: src/e_mod_config.c:92
 msgid "Number of penguins:"
-msgstr "Número de pinguins"
+msgstr "Número de pinguins:"
 
 #: src/e_mod_config.c:94 src/e_mod_config.c:104
 #, c-format
@@ -31,7 +32,7 @@ msgstr "%1.0f"
 
 #: src/e_mod_config.c:97
 msgid "Zoom factor:"
-msgstr "Fator de ampliação:"
+msgstr "Fator de zoom:"
 
 #: src/e_mod_config.c:99
 #, c-format
@@ -48,7 +49,7 @@ msgstr "Selecionar população:"
 
 #: src/e_mod_main.c:60
 msgid "Look"
-msgstr ""
+msgstr "Aparência"
 
 #: src/e_mod_main.c:61
 msgid "Penguins"

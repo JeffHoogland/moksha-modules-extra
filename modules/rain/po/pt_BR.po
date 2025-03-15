@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: rain\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 15:21-0500\n"
+"PO-Revision-Date: 2025-03-15 14:06-0300\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: src/e_mod_config.c:42
+msgid "Rain Module"
+msgstr "Módulo Chuva"
+
+#: src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "Configurações gerais"
+
+#: src/e_mod_config.c:101
+msgid "Show Clouds"
+msgstr "Mostrar nuvens"
+
+#: src/e_mod_config.c:105
+msgid "Rain Density"
+msgstr "Densidade da chuva"
+
+#: src/e_mod_config.c:107
+msgid "Sprinkle"
+msgstr "Garoa"
+
+#: src/e_mod_config.c:109
+msgid "Drizzle"
+msgstr "Chuvisco"
+
+#: src/e_mod_config.c:111
+msgid "Downpour"
+msgstr "Toró"
+
+#: src/e_mod_main.c:32
+msgid "Look"
+msgstr "Aparência"
+
+#: src/e_mod_main.c:34
+msgid "Rain"
+msgstr "Chuva"

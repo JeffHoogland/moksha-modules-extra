@@ -11,6 +11,7 @@ Name[gl]=Correo electrónico
 Name[hu]=E-mail modul
 Name[pl]=Poczta
 Name[pt]=Correio eletrónico
+Name[pt_BR]=Correio eletrônico
 Name[ru]=Почта
 Name[sk]=E-mail modul
 Icon=e-module-mail
@@ -28,6 +29,7 @@ Comment[hu]=E-mail értesítő modul. Kezeli a POP3, IMAP, maildir, és a mbox p
 Comment[it]=Modulo per notificare l'arrivo di posta. Controlla caselle POP3, IMAP, maildir e mbox.
 Comment[pl]=Gadżet powiadomień dla poczty. Sprawdza skrzynki pocztowe POP3, IMAP, maildir i mbox.
 Comment[pt]=Módulo para notificar a existência de novas mensagens eletrónicas. Funciona com caixas de correio POP3, IMAP, maildir e mbox.
+Comment[pt_BR]=Módulo para notificar a existência de novas mensagens eletrônicas. Funciona com caixas de correio POP3, IMAP, maildir e mbox.
 Comment[ru]=Гаджет для уведомления о получении почты. Проверяет почтовые ящики POP3, IMAP, Maildir и Mbox.
 
 
