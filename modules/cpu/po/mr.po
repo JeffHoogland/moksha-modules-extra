@@ -1,0 +1,59 @@
+# Translation file for cpu module
+# This file is put in the public domain.
+#
+# Saurabh Landge <Lsaurabh.94@gmail.com>, 2025.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: cpu\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 05:01-0500\n"
+"PO-Revision-Date: 2025-03-17 14:24+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: mr_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: src/e_mod_main.c:132
+
+msgid "Cpu"
+msgstr "सीपीयू"
+
+#: src/e_mod_main.c:379
+
+msgid "Fast (0.5 sec)"
+msgstr "जलद (०.५ सेकंद)"
+
+#: src/e_mod_main.c:386
+
+msgid "Medium (1 sec)"
+msgstr "मध्यम (१ सेकंद)"
+
+#: src/e_mod_main.c:393
+
+msgid "Normal (2 sec)"
+msgstr "सामान्य (२ सेकंद)"
+
+#: src/e_mod_main.c:400
+
+msgid "Slow (5 sec)"
+msgstr "हळू (५ सेकंद)"
+
+#: src/e_mod_main.c:407
+
+msgid "Very Slow (30 sec)"
+msgstr "खूप हळू (३० सेकंद)"
+
+#: src/e_mod_main.c:414
+
+msgid "Time Between Updates"
+msgstr "अपडेट्समधील वेळ"
+
+#: src/e_mod_main.c:420
+
+msgid "Merge CPU's into single Statistic"
+msgstr "सीपीयू सिंगल स्टॅटिस्टिकमध्ये विलीन करा"
