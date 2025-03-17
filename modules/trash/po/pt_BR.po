@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: trash\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 05:23-0500\n"
+"PO-Revision-Date: 2025-03-15 14:47-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: src/e_mod_config.c:44
+msgid "Trash module"
+msgstr "Módulo Lixo"
+
+#: src/e_mod_config.c:85 src/e_mod_main.c:363
+msgid "Settings"
+msgstr "Configurações"
+
+#: src/e_mod_config.c:87
+msgid "File manager to open the trash:"
+msgstr "Gerenciador de arquivos para abrir o lixo:"
+
+#: src/e_mod_config.c:92
+msgid "Use pcmanfm -n for opening a new instance on the current desktop"
+msgstr ""
+"Usar pcmanfm -n para abrir uma nova instância na Área de Trabalho atual"
+
+#: src/e_mod_main.c:152 src/e_mod_main.c:202
+msgid "Trash"
+msgstr "Lixo"
+
+#: src/e_mod_main.c:199
+msgid "Advanced"
+msgstr "Avançado"
+
+#: src/e_mod_main.c:353
+msgid "Empty Trash"
+msgstr "Esvaziar Lixo"
+
+#: src/e_mod_main.c:358
+msgid "Show trash"
+msgstr "Mostrar Lixo"
+
+#: src/e_mod_main.c:394
+msgid ""
+"<b>Remove all the files and folders from the trash?</b><br>All the elements "
+"currently in the trash will be irreparably lost!!!"
+msgstr ""
+"<b>Remover todos os arquivos e diretórios do lixo?</b><br>Todos os itens "
+"atualmente no lixo serão perdidos irreparavelmente!!!"
+
+#: src/e_mod_main.c:396 src/e_mod_main.c:488
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/e_mod_main.c:396
+msgid "Empty trash"
+msgstr "Esvaziar lixo"
+
+#: src/e_mod_main.c:484
+msgid "Alert"
+msgstr "Alerta"
+
+#: src/e_mod_main.c:485
+msgid ""
+"Some files can't be moved to trash <br>because they are not on the local "
+"filesystem.<br><br>The files will be deleted FOREVER!!!"
+msgstr ""
+"Alguns arquivos não podem ser movidos para o lixo<br>porque eles não estão "
+"no sistema de arquivos local.<br><br>Os arquivos serão apagados PARA "
+"SEMPRE!!!"
+
+#: src/e_mod_main.c:488
+msgid "Delete Files"
+msgstr "Remover Arquivos"
