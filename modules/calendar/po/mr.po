@@ -1,0 +1,39 @@
+# Translation to Marathi for calendar module
+# This file is put in the public domain.
+#
+# Saurabh Landge <Lsaurabh.94@gmail.com>, 2025.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: calendar\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-26 11:58-0500\n"
+"PO-Revision-Date: 2025-03-17 14:18+0530\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: mr_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: src/e_mod_main.c:594
+msgid "Sunday"
+msgstr "रविवार"
+
+#: src/e_mod_main.c:601
+msgid "Monday"
+msgstr "सोमवार"
+
+#: src/e_mod_main.c:608
+msgid "First Day of Week"
+msgstr "आठवड्याचा पहिला दिवस"
+
+#: src/e_mod_main.c:689 src/e_mod_main.c:706
+msgid "Calendar"
+msgstr "कॅलेंडर"
+
+#: src/e_mod_main.c:690 src/e_mod_main.c:706
+msgid "Monthview Popup (Show/Hide)"
+msgstr "मंथव्ह्यू पॉपअप (दाखवा/लपवा)"

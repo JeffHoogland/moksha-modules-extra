@@ -1,0 +1,94 @@
+# Marathi translation for Flame module
+# This file is put in the public domain.
+#
+# Saurabh Landge <Lsaurabh.94@gmail.com>, 2025.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: flame\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
+"PO-Revision-Date: 2025-03-17 14:47+0530\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: mr_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: src/e_mod_main.c:60
+
+msgid "Look"
+msgstr "पहा"
+
+#: src/e_mod_main.c:62
+
+msgid "Flame"
+msgstr "ज्योत"
+
+#: src/e_mod_config.c:47
+
+msgid "Flame Configuration"
+msgstr "ज्वाला कॉन्फिगरेशन"
+
+#: src/e_mod_config.c:94 src/e_mod_config.c:178
+
+msgid "Flame Color"
+msgstr "ज्वाला रंग"
+
+#: src/e_mod_config.c:96
+
+msgid "Gold"
+msgstr "सोने"
+
+#: src/e_mod_config.c:98
+
+msgid "Fire"
+msgstr "आग"
+
+#: src/e_mod_config.c:100
+
+msgid "Plasma"
+msgstr "प्लाजमा"
+
+#: src/e_mod_config.c:102
+
+msgid "Matrix"
+msgstr "मॅट्रिक्स"
+
+#: src/e_mod_config.c:104
+
+msgid "Ice"
+msgstr "बर्फ"
+
+#: src/e_mod_config.c:106
+
+msgid "White"
+msgstr "पांढरा"
+
+#: src/e_mod_config.c:108
+
+msgid "Custom"
+msgstr "सानुकूल"
+
+#: src/e_mod_config.c:180
+
+msgid "Red Amount"
+msgstr "लाल रक्कम"
+
+#: src/e_mod_config.c:183 src/e_mod_config.c:190 src/e_mod_config.c:197
+, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/e_mod_config.c:187
+
+msgid "Blue Amount"
+msgstr "निळा रक्कम"
+
+#: src/e_mod_config.c:194
+
+msgid "Green Amount"
+msgstr "हिरवी रक्कम"

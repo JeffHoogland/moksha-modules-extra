@@ -1,0 +1,406 @@
+# Marathi Translation for engage module
+# This file is put in the public domain.
+# Saurabh Landge <Lsaurabh.94@gmail.com>, 2025.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: e-module-engage\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-28 16:46+0100\n"
+"PO-Revision-Date: 2025-03-17 14:43+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: mr_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: src/e_mod_main.c:1862 src/e_mod_main.c:1900
+
+msgid "Engage"
+msgstr "गुंतवा"
+
+#: src/ng_taskbar.c:635
+
+msgid "No name!"
+msgstr "जेनेरिक नाव[संपादन]"
+
+#: src/ng_launcher.c:275
+
+msgid "Open Directory"
+msgstr "निर्देशिका उघडा"
+
+#: src/ng_launcher.c:561
+
+msgid "Configure Bar"
+msgstr "बार कॉन्फिगर करा"
+
+#: src/ng_launcher.c:565
+
+msgid "Lock Dragging"
+msgstr "लॉक ड्रॅगिंग"
+
+#: src/ng_launcher.c:574
+
+msgid "Applications"
+msgstr "अर्ज"
+
+#: src/ng_launcher.c:578
+
+msgid "Edit Icon"
+msgstr "आयकन संपादित करा"
+
+#: src/ng_border_menu.c:30
+
+msgid "Fullscreen"
+msgstr "पूर्णस्क्रीन"
+
+#: src/ng_border_menu.c:45
+
+msgid "Close"
+msgstr "बंद"
+
+#: src/ng_border_menu.c:66
+
+msgid "Maximized"
+msgstr "वाढवलेले"
+
+#: src/ng_border_menu.c:86
+
+msgid "Uniconify"
+msgstr "युनिकॉनिफाय"
+
+#: src/ng_border_menu.c:88
+
+msgid "Iconify"
+msgstr "आयकॉनिफाय करा"
+
+#: src/ng_gadcon.c:264
+
+msgid "Gadcon Config"
+msgstr "गॅडकॉन कॉन्फिगरेशन"
+
+#: src/ng_gadcon.c:303
+
+msgid "Available Gadgets"
+msgstr "उपलब्ध गॅझेट्स"
+
+#: src/ng_gadcon.c:310
+
+msgid "Add Gadget"
+msgstr "गॅझेट जोडा"
+
+#: src/ng_gadcon.c:316
+
+msgid "Selected Gadgets"
+msgstr "निवडलेले गॅझेट"
+
+#: src/ng_gadcon.c:323
+
+msgid "Remove Gadget"
+msgstr "गॅझेट काढा"
+
+#: src/ng_gadcon.c:331 src/ng_gadcon.c:374 src/ng_gadcon.c:398
+
+msgid "Description: Unavailable"
+msgstr "वर्णन: उपलब्ध नाही"
+
+#: src/ng_config.c:98
+
+msgid "Engage Configuration"
+msgstr "एंगेज कॉन्फिगरेशन"
+
+#: src/ng_config.c:167 src/ng_config.c:228
+
+msgid "Appearance"
+msgstr "देखावा"
+
+#: src/ng_config.c:168
+
+msgid "Icon Size:"
+msgstr "आयकॉन आकार:"
+
+#: src/ng_config.c:170
+, c-format
+msgid "%1.0f px"
+msgstr "%1.0f पिक्सेल"
+
+#: src/ng_config.c:184
+
+msgid "Background Opacity:"
+msgstr "पार्श्वभूमीची अपारदर्शकता:"
+
+#: src/ng_config.c:186
+, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/ng_config.c:194
+
+msgid "Show Background Box"
+msgstr "पार्श्वभूमी बॉक्स दाखवा"
+
+#: src/ng_config.c:197
+
+msgid "Show Mouse-Over Animation"
+msgstr "माऊस-ओव्हर अ‍ॅनिमेशन दाखवा"
+
+#: src/ng_config.c:202
+
+msgid "Orientation"
+msgstr "अभिमुखता"
+
+#: src/ng_config.c:204
+
+msgid "Bottom Edge"
+msgstr "तळाची कडे"
+
+#: src/ng_config.c:206
+
+msgid "Top Edge"
+msgstr "टॉप एज"
+
+#: src/ng_config.c:208
+
+msgid "Left Edge"
+msgstr "डावा कडा"
+
+#: src/ng_config.c:210
+
+msgid "Right Edge"
+msgstr "उजवी धार"
+
+#: src/ng_config.c:230 src/ng_config.c:249
+
+msgid "Zoom"
+msgstr "झूम करा"
+
+#: src/ng_config.c:231
+
+msgid "Factor:"
+msgstr "घटक:"
+
+#: src/ng_config.c:237
+
+msgid "Range:"
+msgstr "श्रेणी:"
+
+#: src/ng_config.c:243
+
+msgid "Duration:"
+msgstr "कालावधी:"
+
+#: src/ng_config.c:251 src/ng_config.c:279
+
+msgid "Bar Items"
+msgstr "बार आयटम"
+
+#: src/ng_config.c:259 src/ng_config.c:540 src/ng_config_instances.c:104
+
+msgid "Delete"
+msgstr "हटवा"
+
+#: src/ng_config.c:261 src/ng_config.c:542 src/ng_config_instances.c:106
+
+msgid "Configure"
+msgstr "कॉन्फिगर करा"
+
+#: src/ng_config.c:263
+
+msgid "Up"
+msgstr "वर"
+
+#: src/ng_config.c:265
+
+msgid "Down"
+msgstr "खाली"
+
+#: src/ng_config.c:270 src/ng_config.c:538 src/ng_config_instances.c:102
+
+msgid "Add"
+msgstr "जोडा"
+
+#: src/ng_config.c:272
+
+msgid "Taskbar"
+msgstr "टास्कबार"
+
+#: src/ng_config.c:274
+
+msgid "Launcher"
+msgstr "लाँचर"
+
+#: src/ng_config.c:276
+
+msgid "Gadcon"
+msgstr "गॅडकॉन"
+
+#: src/ng_config.c:282 src/ng_config.c:301
+
+msgid "Auto Hide"
+msgstr "ऑटो लपवा"
+
+#: src/ng_config.c:286
+
+msgid "None"
+msgstr "काहीही नाही"
+
+#: src/ng_config.c:289
+
+msgid "Autohide"
+msgstr "ऑटोलाइड"
+
+#: src/ng_config.c:292
+
+msgid "Hide when Window overlaps"
+msgstr "विंडो ओव्हरलॅप झाल्यावर लपवा"
+
+#: src/ng_config.c:295
+
+msgid "Hide on Fullscreen"
+msgstr "फुलस्क्रीनवर लपवा"
+
+#: src/ng_config.c:299
+
+msgid "Show Bar when Urgent"
+msgstr "जेव्हा अर्जंट असेल तेव्हा बार दाखवा"
+
+#: src/ng_config.c:307
+
+msgid "Stacking"
+msgstr "स्टॅकिंग"
+
+#: src/ng_config.c:309
+
+msgid "Above All"
+msgstr "सर्वात वर"
+
+#: src/ng_config.c:311
+
+msgid "Below Fullscreen"
+msgstr "पूर्णस्क्रीनच्या खाली"
+
+#: src/ng_config.c:315 src/ng_config.c:322
+
+msgid "Other"
+msgstr "इतर"
+
+#: src/ng_config.c:316
+
+msgid "Ecomorph Features"
+msgstr "इकॉर्मॉफ वैशिष्ट्ये"
+
+#: src/ng_config.c:318
+
+msgid "Show Icon Label"
+msgstr "आयकॉन लेबल दाखवा"
+
+#: src/ng_config.c:530
+
+msgid "Launcher Settings"
+msgstr "लाँचर सेटिंग्ज"
+
+#: src/ng_config.c:550
+
+msgid "Taskbar Settings"
+msgstr "टास्कबार सेटिंग्ज"
+
+#: src/ng_config.c:552
+
+msgid "Don't Show Dialogs"
+msgstr "संवाद दाखवू नका"
+
+#: src/ng_config.c:555
+
+msgid "Advanced Window Menu"
+msgstr "प्रगत विंडो मेनू"
+
+#: src/ng_config.c:558
+
+msgid "Only Show Current Desk"
+msgstr "फक्त सध्याचा डेस्क दाखवा"
+
+#: src/ng_config.c:561
+
+msgid "Group Applications by Window Class"
+msgstr "विंडो क्लासनुसार गट अनुप्रयोग"
+
+#: src/ng_config.c:564
+
+msgid "Append new Applications on the right Side"
+msgstr "उजव्या बाजूला नवीन अनुप्रयोग जोडा."
+
+#: src/ng_config.c:570
+
+msgid "Iconified Applications"
+msgstr "आयकॉनिफाइड अॅप्लिकेशन्स"
+
+#: src/ng_config.c:572
+
+msgid "Not Shown"
+msgstr "दाखवलेले नाही"
+
+#: src/ng_config.c:574
+
+msgid "Show"
+msgstr "दाखवा"
+
+#: src/ng_config.c:576
+
+msgid "Only Iconified"
+msgstr "फक्त आयकॉन केलेले"
+
+#: src/ng_config.c:645 src/ng_config.c:685
+
+msgid "Engage Bar Configuration"
+msgstr "एंगेज बार कॉन्फिगरेशन"
+
+#: src/ng_config.c:784
+
+msgid "Create new source"
+msgstr "नवीन स्रोत तयार करा"
+
+#: src/ng_config.c:785
+
+msgid "Enter a name for this new Application Launcher:"
+msgstr "या नवीन अ‍ॅप्लिकेशन लाँचरसाठी नाव एंटर करा:"
+
+#: src/ng_config.c:794
+, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"source?"
+msgstr ""
+"तुम्ही \"%s\" हटवण्याची विनंती केली आहे.<br><br> तुम्हाला हा स्रोत नक्की हटवायचा आहे "
+"का?"
+
+#: src/ng_config.c:798
+
+msgid "Are you sure you want to delete this source?"
+msgstr "तुम्हाला हा स्रोत नक्की हटवायचा आहे का?"
+
+#: src/ng_config_instances.c:64 src/ng_config_instances.c:94
+
+msgid "Engage Instances"
+msgstr "प्रसंगांमध्ये व्यस्त रहा"
+
+#: src/ng_config_instances.c:164
+
+msgid "Bar"
+msgstr "बार"
+
+#: src/ng_config_instances.c:271
+, c-format
+msgid ""
+"You requested to delete \"%s\".<br><br>Are you sure you want to delete this "
+"Instance?"
+msgstr ""
+"तुम्ही \"%s\" हटवण्याची विनंती केली आहे.<br><br> तुम्हाला हे उदाहरण नक्की हटवायचे आहे "
+"का?"
+
+#: src/ng_config_instances.c:275
+
+msgid "Are you sure you want to delete this Instance?"
+msgstr "तुम्हाला हे उदाहरण नक्की हटवायचे आहे का?"
