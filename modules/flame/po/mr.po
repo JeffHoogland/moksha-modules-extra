@@ -79,7 +79,7 @@ msgid "Red Amount"
 msgstr "लाल रक्कम"
 
 #: src/e_mod_config.c:183 src/e_mod_config.c:190 src/e_mod_config.c:197
-, c-format
+#, c-format
 msgid "%1.0f"
 msgstr "%1.0f"
 
