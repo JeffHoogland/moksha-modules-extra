@@ -110,12 +110,12 @@ msgid "Schedule"
 msgstr "वेळापत्रक"
 
 #: src/e_mod_config_alarm.c:205
-, c-format
+#, c-format
 msgid "%1.0f hour"
 msgstr "%1.0f तास"
 
 #: src/e_mod_config_alarm.c:208
-, c-format
+#, c-format
 msgid "%1.0f minute"
 msgstr "%1.0f मिनिट"
 
@@ -310,9 +310,9 @@ msgid "Alarm Module Test Report"
 msgstr "अलार्म मॉड्यूल चाचणी अहवाल"
 
 #: src/e_mod_main.c:393
-, c-format
+#, c-format
 msgid "<hilight>Alarm : %s</hilight><br><br>%s"
-msgstr "<hilight>अलार्म : %s</hilight><br><br> {१}"
+msgstr "<hilight>अलार्म : %s</hilight><br><br> %s"
 
 #: src/e_mod_main.c:396
 
@@ -329,17 +329,17 @@ msgstr ""
 "नाही."
 
 #: src/e_mod_main.c:653 src/e_mod_main.c:846
-, c-format
+#, c-format
 msgid "Snooze %s"
 msgstr "स्नूझ करा %s"
 
 #: src/e_mod_main.c:657
-, c-format
+#, c-format
 msgid "%1.0f hours"
 msgstr "%1.0f तास"
 
 #: src/e_mod_main.c:660
-, c-format
+#, c-format
 msgid "%1.0f minutes"
 msgstr "%1.0f मिनिटे"
 
@@ -364,9 +364,9 @@ msgid "Settings"
 msgstr "सेटिंग्ज"
 
 #: src/e_mod_main.c:854
-, c-format
+#fuzzy, c-format
 msgid "Snooze %.14s of %.2d:%.2d"
-msgstr "%.2d पैकी %.14s स्नूझ करा:%.2d"
+msgstr "%.14s पैकी %.2d स्नूझ करा:%.2d"
 
 #: src/e_mod_main.c:868
 
@@ -374,7 +374,7 @@ msgid "Snooze (No alarm to delay)"
 msgstr "स्नूझ करा (विलंब करण्यासाठी कोणताही अलार्म नाही)"
 
 #: src/e_mod_main.c:1040
-, c-format
+#, c-format
 msgid ""
 "<hilight>Alarm module : Configuration Upgraded</hilight><br><br>Your "
 "configuration of alarm module<br>has been upgraded<br>Your settings and "
@@ -390,7 +390,7 @@ msgid "Alarm Module version"
 msgstr "अलार्म मॉड्यूल आवृत्ती"
 
 #: src/e_mod_main.c:1054
-, c-format
+#, c-format
 msgid ""
 "<hilight>Alarm module : Configuration Downgraded</hilight><br><br>Your "
 "configuration of Alarm module<br>has been downgraded<br>Your settings and "
