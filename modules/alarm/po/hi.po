@@ -1,0 +1,400 @@
+# Hindi translation for alarm module
+# This file is put in the public domain.
+#
+# Saurabh Landge <Lsaurabh.94@gmail.com>, 2025.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: alarm\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 22:17-0500\n"
+"PO-Revision-Date: 2025-03-23 18:15+0530\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: src/e_mod_config.c:52
+
+msgid "Alarm Configuration"
+msgstr "अलार्म कॉन्फ़िगरेशन"
+
+#: src/e_mod_config.c:152 src/e_mod_main.c:182
+
+msgid "Alarm"
+msgstr "खतरे की घंटी"
+
+#: src/e_mod_config.c:154 src/e_mod_config_alarm.c:188
+
+msgid "Active"
+msgstr "सक्रिय"
+
+#: src/e_mod_config.c:163
+
+msgid "Add"
+msgstr "जोड़ें"
+
+#: src/e_mod_config.c:165
+
+msgid "Delete"
+msgstr "विलोपन"
+
+#: src/e_mod_config.c:167
+
+msgid "Configure"
+msgstr "कॉन्फ़िगर"
+
+#: src/e_mod_config.c:169
+
+msgid "Duplicate"
+msgstr "डुप्लिकेट"
+
+#: src/e_mod_config.c:222
+
+msgid "Alarm Options"
+msgstr "अलार्म विकल्प"
+
+#: src/e_mod_config.c:234
+
+msgid "Show next alarm"
+msgstr "अगला अलार्म दिखाएं"
+
+#: src/e_mod_config.c:239
+
+msgid "Alarms Defaults"
+msgstr "अलार्म डिफ़ॉल्ट"
+
+#: src/e_mod_config.c:241 src/e_mod_config_alarm.c:397
+
+msgid "Open popup"
+msgstr "पॉपअप खोलें"
+
+#: src/e_mod_config.c:244
+
+msgid "Run program"
+msgstr "प्रोग्राम चलाएँ"
+
+#: src/e_mod_config.c:251
+
+msgid "Auto-Remove alarms"
+msgstr "स्वचालित रूप से अलार्म हटाएँ"
+
+#: src/e_mod_config_alarm.c:68
+
+msgid "Alarm Configuration : Setup an alarm"
+msgstr "अलार्म कॉन्फ़िगरेशन : अलार्म सेटअप करें"
+
+#: src/e_mod_config_alarm.c:186
+
+msgid "Information"
+msgstr "लिंक जानकारी"
+
+#: src/e_mod_config_alarm.c:190
+
+msgid "Name"
+msgstr "नाम"
+
+#: src/e_mod_config_alarm.c:195
+
+msgid "Description"
+msgstr "विवरण"
+
+#: src/e_mod_config_alarm.c:203
+
+msgid "Schedule"
+msgstr "अनुसूची"
+
+#: src/e_mod_config_alarm.c:205
+#, c-format
+msgid "%1.0f hour"
+msgstr "%1.0f घंटा"
+
+#: src/e_mod_config_alarm.c:208
+#, c-format
+msgid "%1.0f minute"
+msgstr "%1.0f मिनट"
+
+#: src/e_mod_config_alarm.c:214
+
+msgid "Days of the week"
+msgstr "सप्ताह के दिन"
+
+#: src/e_mod_config_alarm.c:218
+
+msgid "Monday"
+msgstr "सोमवार"
+
+#: src/e_mod_config_alarm.c:220
+
+msgid "Tuesday"
+msgstr "मंगलवार"
+
+#: src/e_mod_config_alarm.c:222
+
+msgid "Wednesday"
+msgstr "बुधवार"
+
+#: src/e_mod_config_alarm.c:224
+
+msgid "Thursday"
+msgstr "गुरूवार"
+
+#: src/e_mod_config_alarm.c:226
+
+msgid "Friday"
+msgstr "शुक्रवार"
+
+#: src/e_mod_config_alarm.c:228
+
+msgid "Saturday"
+msgstr "शानिवार"
+
+#: src/e_mod_config_alarm.c:230
+
+msgid "Sunday"
+msgstr "रविवार"
+
+#: src/e_mod_config_alarm.c:235
+
+msgid "One day"
+msgstr "%li दिन"
+
+#: src/e_mod_config_alarm.c:239
+
+msgid "Date (YYYY/MM/DD)"
+msgstr "दिनांक (वर्ष/माह/दिवस)"
+
+#: src/e_mod_config_alarm.c:244
+
+msgid "Today"
+msgstr "आज"
+
+#: src/e_mod_config_alarm.c:246
+
+msgid "Tomorrow"
+msgstr "कल"
+
+#: src/e_mod_config_alarm.c:284
+
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>There is an error "
+"in the information / schedule of your alarm"
+msgstr ""
+"<hilight>त्रुटि, अलार्म नहीं जोड़ा गया!</hilight><br><br> आपके अलार्म की जानकारी/शेड्यूल"
+"में त्रुटि है"
+
+#: src/e_mod_config_alarm.c:289
+
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>You have to enter "
+"a name for the alarm"
+msgstr ""
+"<hilight>त्रुटि, अलार्म नहीं जोड़ा गया!</hilight><br><br> आपको अलार्म के लिए एक नाम "
+"दर्ज करना होगा"
+
+#: src/e_mod_config_alarm.c:294
+
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>You have to "
+"select at least one day in the week"
+msgstr ""
+"<hilight>त्रुटि, अलार्म नहीं जोड़ा गया!</hilight><br><br> आपको सप्ताह में कम से कम एक "
+"दिन चुनना होगा"
+
+#: src/e_mod_config_alarm.c:299
+
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
+"entered for the alarm has incorrect syntax<br><br>You have to respect this "
+"format :<br>   YYYY/MM/DD<br>YYYY is the year on 4 numbers<br>MM is the "
+"month on 2 numbers<br>DD is the day on 2 numbers<br>"
+msgstr ""
+"<hilight>त्रुटि, अलार्म नहीं जोड़ा गया!</hilight><br><br> अलार्म के लिए आपके द्वारा "
+"दर्ज की गई तारीख का सिंटैक्स गलत है<br><br> आपको इस प्रारूप का सम्मान करना होगा:<br> "
+"YYYY/MM/DD<br> YYYY 4 अंकों पर वर्ष है<br> MM 2 संख्याओं पर महीना है<br> DD 2 अंकों "
+"पर दिन है<br>"
+
+#: src/e_mod_config_alarm.c:309
+
+msgid ""
+"<hilight>Error, The alarm was not added !</hilight><br><br>The date you "
+"entered is before now"
+msgstr ""
+"<hilight>त्रुटि, अलार्म नहीं जोड़ा गया!</hilight><br><br> आपने जो तारीख दर्ज की है "
+"वह अब से पहले की है"
+
+#: src/e_mod_config_alarm.c:313 src/e_mod_main.c:421
+
+msgid "Alarm Module Error"
+msgstr "अलार्म मॉड्यूल त्रुटि"
+
+#: src/e_mod_config_alarm.c:348 src/e_mod_config_alarm.c:435
+
+msgid "Test this alarm"
+msgstr "इस अलार्म का परीक्षण करें"
+
+#: src/e_mod_config_alarm.c:375
+
+msgid "Ring Options"
+msgstr "रिंग विकल्प"
+
+#: src/e_mod_config_alarm.c:377
+
+msgid "Remove alarm"
+msgstr "अलार्म हटाएँ"
+
+#: src/e_mod_config_alarm.c:384 src/e_mod_config_alarm.c:404
+
+msgid "No [default]"
+msgstr "नहीं [डीफॉल्ट]"
+
+#: src/e_mod_config_alarm.c:386 src/e_mod_config_alarm.c:406
+
+msgid "Yes"
+msgstr "हाँ"
+
+#: src/e_mod_config_alarm.c:391 src/e_mod_config_alarm.c:411
+#: src/e_mod_config_alarm.c:422
+
+msgid "No"
+msgstr "नहीं"
+
+#: src/e_mod_config_alarm.c:393 src/e_mod_config_alarm.c:413
+
+msgid "Yes [default]"
+msgstr "हां [डिफ़ॉल्ट]"
+
+#: src/e_mod_config_alarm.c:417
+
+msgid "Run a program"
+msgstr "प्रोग्राम चलाएँ"
+
+#: src/e_mod_config_alarm.c:424
+
+msgid "Run default one"
+msgstr "डिफ़ॉल्ट एक चलाएँ"
+
+#: src/e_mod_config_alarm.c:426
+
+msgid "Run this program"
+msgstr "यह प्रोग्राम चलाएँ"
+
+#: src/e_mod_config_alarm.c:471
+
+msgid ""
+"<hilight>Alarm test SUCCEED !</hilight><br><br>But DONT FORGET to ACTIVATE "
+"the alarms<br>via the 'Active' check button on the<br>main Alarm "
+"configuration panel."
+msgstr ""
+"<hilight>अलार्म परीक्षण सफल!</hilight><br><br> लेकिन अलार्म सक्रिय करना न भूलें<br> "
+"'सक्रिय' चेक बटन के माध्यम से<br> मुख्य अलार्म कॉन्फ़िगरेशन पैनल."
+
+#: src/e_mod_config_alarm.c:477
+
+msgid "<hilight>Alarm test SUCCEED !</hilight>"
+msgstr "<hilight>अलार्म परीक्षण सफल!</hilight>"
+
+#: src/e_mod_config_alarm.c:482
+
+msgid "<hilight>Alarm test FAILED !</hilight>"
+msgstr "<hilight>अलार्म परीक्षण विफल!</hilight>"
+
+#: src/e_mod_config_alarm.c:484
+
+msgid "Alarm Module Test Report"
+msgstr "अलार्म मॉड्यूल परीक्षण रिपोर्ट"
+
+#: src/e_mod_main.c:393
+#, c-format
+msgid "<hilight>Alarm : %s</hilight><br><br>%s"
+msgstr "<hilight>अलार्म : %s</hilight><br><br> %s"
+
+#: src/e_mod_main.c:396
+
+msgid "Alarm Module Popup"
+msgstr "अलार्म मॉड्यूल पॉपअप"
+
+#: src/e_mod_main.c:419
+
+msgid ""
+"<hilight>Failed !</hilight><br><br>Alarm couln't launch the program you "
+"specified"
+msgstr ""
+"<hilight>असफल !</hilight><br><br> अलार्म आपके द्वारा निर्दिष्ट प्रोग्राम लॉन्च नहीं "
+"कर सका"
+
+#: src/e_mod_main.c:653 src/e_mod_main.c:846
+#, c-format
+msgid "Snooze %s"
+msgstr "स्नूज़ %s"
+
+#: src/e_mod_main.c:657
+#, c-format
+msgid "%1.0f hours"
+msgstr "%1.0f घंटे"
+
+#: src/e_mod_main.c:660
+#, c-format
+msgid "%1.0f minutes"
+msgstr "%1.0f मिनट"
+
+#: src/e_mod_main.c:667
+
+msgid "Ok"
+msgstr "ठीक"
+
+#: src/e_mod_main.c:668
+
+msgid "Close"
+msgstr "बंद"
+
+#: src/e_mod_main.c:818
+
+msgid "Add an alarm"
+msgstr "अलार्म जोड़ें"
+
+#: src/e_mod_main.c:828
+
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+#: src/e_mod_main.c:854
+#, c-format
+msgid "Snooze %.14s of %.2d:%.2d"
+msgstr "स्नूज़ %.14s में से %.2d:%.2d"
+
+#: src/e_mod_main.c:868
+
+msgid "Snooze (No alarm to delay)"
+msgstr "स्नूज़ (कोई देरी करने वाला अलार्म नहीं)"
+
+#: src/e_mod_main.c:1040
+#, c-format
+msgid ""
+"<hilight>Alarm module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of alarm module<br>has been upgraded<br>Your settings and "
+"alarms were removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>अलार्म मॉड्यूल : कॉन्फ़िगरेशन अपग्रेड किया गया</hilight><br><br> अलार्म "
+"मॉड्यूल का आपका कॉन्फ़िगरेशन<br> अपग्रेड किया गया है<br> आपकी सेटिंग और अलार्म हटा दिए "
+"गए<br> असुविधा के लिए खेद है<br><br> (%d -> %d)"
+
+#: src/e_mod_main.c:1046 src/e_mod_main.c:1060
+
+msgid "Alarm Module version"
+msgstr "अलार्म मॉड्यूल संस्करण"
+
+#: src/e_mod_main.c:1054
+#, c-format
+msgid ""
+"<hilight>Alarm module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Alarm module<br>has been downgraded<br>Your settings and "
+"alarms were removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>अलार्म मॉड्यूल : कॉन्फ़िगरेशन डाउनग्रेड किया गया</hilight><br><br> अलार्म "
+"मॉड्यूल का आपका कॉन्फ़िगरेशन<br> डाउनग्रेड कर दिया गया है<br> आपकी सेटिंग और अलार्म हटा "
+"दिए गए<br> असुविधा के लिए खेद है<br><br> (%d ->%d)"
