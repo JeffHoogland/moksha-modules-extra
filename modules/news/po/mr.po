@@ -1,0 +1,587 @@
+# Translation in marathi for News module
+# This file is put in the public domain.
+#
+# Saurabh Landge <Lsaurabh.94@gmail.com>, 2025.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: news\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
+"PO-Revision-Date: 2025-03-23 17:40+0530\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: mr_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: src/e_mod_main.c:54
+
+msgid "Config init failed"
+msgstr "कॉन्फिगरेशन सुरू करणे अयशस्वी झाले"
+
+#: src/e_mod_main.c:55
+
+msgid "Parser init failed"
+msgstr "पार्सर इनिट अयशस्वी झाले"
+
+#: src/e_mod_main.c:56
+
+msgid "Feeds init failed"
+msgstr "फीड्स सुरू करणे अयशस्वी झाले"
+
+#: src/e_mod_main.c:57
+
+msgid "Viewer init failed"
+msgstr "व्ह्यूअर इनिट अयशस्वी झाले"
+
+#: src/e_mod_main.c:58
+
+msgid "Popup subsystem init failed"
+msgstr "पॉपअप सबसिस्टम इनिट अयशस्वी झाले"
+
+#: src/e_mod_main.c:221
+
+msgid "News"
+msgstr "बातम्या"
+
+#: src/news_config.c:100
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of news module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>बातम्या मॉड्यूल: कॉन्फिगरेशन अपग्रेड केले</hilight><br><br> तुमचे न्यूज "
+"मॉड्यूलचे कॉन्फिगरेशन<br> अपग्रेड केले आहे<br> तुमच्या सेटिंग्ज काढून टाकल्या गेल्या.<br> "
+"गैरसोयीबद्दल क्षमस्व.<br><br> (%d -> %d)"
+
+#: src/news_config.c:112
+#, c-format
+msgid ""
+"<hilight>News module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of News module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>बातम्या मॉड्यूल : कॉन्फिगरेशन डाउनग्रेड केले</hilight><br><br> तुमचे न्यूज "
+"मॉड्यूलचे कॉन्फिगरेशन<br> डाउनग्रेड केले आहे<br> तुमच्या सेटिंग्ज काढून टाकल्या गेल्या.<br> "
+"गैरसोयीबद्दल क्षमस्व.<br><br> (%d ->%d)"
+
+#: src/news_config_dialog.c:90
+
+msgid "News Main Configuration"
+msgstr "बातम्या मुख्य कॉन्फिगरेशन"
+
+#: src/news_config_dialog.c:192 src/news_config_dialog.c:230
+#: src/news_config_dialog_feeds.c:358 src/news_menu.c:141
+
+msgid "Feeds"
+msgstr "फीड्स"
+
+#: src/news_config_dialog.c:194 src/news_config_dialog.c:238
+
+msgid "Sort lists by name (disable Move action)"
+msgstr "नावानुसार यादी क्रमवारी लावा (हलवण्याची क्रिया अक्षम करा)"
+
+#: src/news_config_dialog.c:199 src/news_config_dialog.c:307
+#: src/news_viewer.c:308
+
+msgid "News Viewer"
+msgstr "बातम्या दर्शक"
+
+#: src/news_config_dialog.c:201
+
+msgid "Font size"
+msgstr "फॉन्ट आकार"
+
+#: src/news_config_dialog.c:204 src/news_config_dialog.c:318
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/news_config_dialog.c:207
+
+msgid "Font color"
+msgstr "फॉन्ट रंग"
+
+#: src/news_config_dialog.c:232 src/news_config_dialog.c:272
+#: src/news_config_dialog.c:292
+
+msgid "Timer"
+msgstr " टाइमर"
+
+#: src/news_config_dialog.c:234
+#, c-format
+msgid "%1.0f min"
+msgstr "%1.0f मिनिटे"
+
+#: src/news_config_dialog.c:243
+
+msgid "Browser"
+msgstr "ब्राउझर"
+
+#: src/news_config_dialog.c:245
+
+msgid "Uses xdg-open script, from freedesktop.org"
+msgstr "freedesktop.org वरून xdg-open स्क्रिप्ट वापरते."
+
+#: src/news_config_dialog.c:250
+
+msgid "Popup On News"
+msgstr "बातम्यांवर पॉपअप"
+
+#: src/news_config_dialog.c:253
+
+msgid "Never"
+msgstr "कधीही नाही"
+
+#: src/news_config_dialog.c:259
+
+msgid "Only on urgent feeds"
+msgstr "फक्त तातडीच्या फीडवर"
+
+#: src/news_config_dialog.c:265
+
+msgid "On all feeds"
+msgstr "सर्व फीडवर"
+
+#: src/news_config_dialog.c:274 src/news_config_dialog.c:294
+#, c-format
+msgid "%1.0f s"
+msgstr "%1.0f सेकंद"
+
+#: src/news_config_dialog.c:282
+
+msgid "Popup On Warning / Error"
+msgstr "चेतावणी / त्रुटीवर पॉपअप"
+
+#: src/news_config_dialog.c:287
+
+msgid "Show on timeout ?"
+msgstr "टाइमआउटवर दाखवायचे?"
+
+#: src/news_config_dialog.c:309
+
+msgid "Unread feeds first"
+msgstr "प्रथम न वाचलेले फीड"
+
+#: src/news_config_dialog.c:311
+
+msgid "Unread articles first"
+msgstr "प्रथम न वाचलेले लेख"
+
+#: src/news_config_dialog.c:313
+
+msgid "Sort articles by date"
+msgstr "तारखेनुसार लेखांची क्रमवारी लावा"
+
+#: src/news_config_dialog.c:316
+
+msgid "Font"
+msgstr "फॉन्ट"
+
+#: src/news_config_dialog.c:326
+
+msgid "Font Shadow"
+msgstr "फॉन्ट शॅडो"
+
+#: src/news_config_dialog.c:338
+
+msgid "Proxy"
+msgstr "प्रॉक्सी"
+
+#: src/news_config_dialog.c:340
+
+msgid "Enable"
+msgstr "सक्षम करा"
+
+#: src/news_config_dialog.c:342
+
+msgid "Host"
+msgstr "होस्ट"
+
+#: src/news_config_dialog.c:346
+
+msgid "Port"
+msgstr "बंदर"
+
+#: src/news_config_dialog_category.c:50
+
+msgid "News Category Configuration"
+msgstr "बातम्या वर्गवारी कॉन्फिगरेशन"
+
+#: src/news_config_dialog_category.c:135
+
+msgid "Icon"
+msgstr "चिन्ह"
+
+#: src/news_config_dialog_category.c:145 src/news_config_dialog_feed.c:411
+
+msgid "Name"
+msgstr "नाव"
+
+#: src/news_config_dialog_category.c:203 src/news_config_dialog_feed.c:544
+
+msgid "Select an Icon"
+msgstr "एक आयकॉन निवडा"
+
+#: src/news_config_dialog_category.c:228 src/news_config_dialog_feed.c:569
+msgid "OK"
+msgstr "ठीक आहे"
+
+#: src/news_config_dialog_category.c:229 src/news_config_dialog_feed.c:570
+msgid "Cancel"
+msgstr "रद्द करा"
+
+#: src/news_config_dialog_feed.c:63
+msgid "You need to <hilight>create a category</hilight> first"
+msgstr "प्रथम तुम्हाला करावे लागेल<hilight> एक श्रेणी तयार </hilight> "
+
+#: src/news_config_dialog_feed.c:77
+
+msgid "News Feed Configuration"
+msgstr "बातम्या फीड कॉन्फिगरेशन"
+
+#: src/news_config_dialog_feed.c:330
+
+msgid "Basic information"
+msgstr "मूलभूत माहिती"
+
+#: src/news_config_dialog_feed.c:346
+
+msgid "Name :"
+msgstr "नाव:"
+
+#: src/news_config_dialog_feed.c:350
+
+msgid "Feed url :"
+msgstr "फीड URL:"
+
+#: src/news_config_dialog_feed.c:354
+
+msgid "Mark as important feed"
+msgstr "महत्त्वाचे फीड म्हणून चिन्हांकित करा"
+
+#: src/news_config_dialog_feed.c:359
+
+msgid "Category"
+msgstr "वर्ग"
+
+#: src/news_config_dialog_feed.c:369 src/news_config_dialog_feed.c:413
+
+msgid "Language"
+msgstr "भाषा"
+
+#: src/news_config_dialog_feed.c:392
+
+msgid "Advanced information"
+msgstr "प्रगत माहिती"
+
+#: src/news_config_dialog_feed.c:394 src/news_config_dialog_feed.c:415
+
+msgid "Description"
+msgstr "वर्णन"
+
+#: src/news_config_dialog_feed.c:398 src/news_config_dialog_feed.c:417
+
+msgid "Home url"
+msgstr "होम URL"
+
+#: src/news_config_dialog_feed.c:406
+
+msgid "Server information"
+msgstr "सर्व्हर माहिती"
+
+#: src/news_config_dialog_feed.c:408
+
+msgid "Do allow the server to overwrite the information you entered ?"
+msgstr "तुम्ही एंटर केलेली माहिती सर्व्हरला ओव्हरराईट करण्याची परवानगी देता का?"
+
+#: src/news_config_dialog_feeds.c:82
+
+msgid "News Feeds Configuration"
+msgstr "बातम्या फीड कॉन्फिगरेशन"
+
+#: src/news_config_dialog_feeds.c:290
+
+msgid "Categories"
+msgstr "श्रेणी"
+
+#: src/news_config_dialog_feeds.c:301 src/news_config_dialog_feeds.c:375
+#: src/news_config_dialog_item_content.c:283
+
+msgid "Move Up"
+msgstr "वर हलवा"
+
+#: src/news_config_dialog_feeds.c:304 src/news_config_dialog_feeds.c:378
+#: src/news_config_dialog_item_content.c:287
+
+msgid "Move Down"
+msgstr "खाली हलवा"
+
+#: src/news_config_dialog_feeds.c:314 src/news_config_dialog_feeds.c:388
+
+msgid "Add"
+msgstr "जोडा"
+
+#: src/news_config_dialog_feeds.c:316 src/news_config_dialog_feeds.c:390
+
+msgid "Delete"
+msgstr "हटवा"
+
+#: src/news_config_dialog_feeds.c:319 src/news_config_dialog_feeds.c:393
+
+msgid "Configure"
+msgstr "कॉन्फिगर करा"
+
+#: src/news_config_dialog_feeds.c:331 src/news_config_dialog_langs.c:133
+
+msgid "Languages"
+msgstr "भाषा"
+
+#: src/news_config_dialog_feeds.c:333
+
+msgid "All"
+msgstr "सर्व"
+
+#: src/news_config_dialog_feeds.c:336
+
+msgid "Select"
+msgstr "निवडा"
+
+#: src/news_config_dialog_feeds.c:346
+
+msgid "Empty the lists"
+msgstr "याद्या रिकामे करा"
+
+#: src/news_config_dialog_feeds.c:349
+
+msgid "Restore default lists"
+msgstr "डीफॉल्ट सूची पुनर्संचयित करा"
+
+#: src/news_config_dialog_feeds.c:686
+
+msgid ""
+"There are <hilight>feeds</hilight> in this category.<br>You have to "
+"<hilight>remove them first</hilight>"
+msgstr ""
+" या श्रेणीमध्ये<hilight> फीड</hilight> आहेत.<br> आधी<hilight> "
+"त्यांना काढून टाका.</hilight>"
+
+#: src/news_config_dialog_feeds.c:754 src/news_config_dialog_feeds.c:779
+
+msgid "News Module - Are you sure ?"
+msgstr "बातम्या मॉड्यूल - तुम्हाला खात्री आहे का?"
+
+#: src/news_config_dialog_item.c:40
+
+msgid "News Gadget Configuration"
+msgstr "बातम्या गॅझेट कॉन्फिगरेशन"
+
+#: src/news_config_dialog_item.c:104
+
+msgid "View Mode"
+msgstr "दृश्य मोड"
+
+#: src/news_config_dialog_item.c:107
+
+msgid "Show one icon for all feeds"
+msgstr "सर्व फीड्ससाठी एक आयकॉन दाखवा"
+
+#: src/news_config_dialog_item.c:109
+
+msgid "Show all feeds"
+msgstr "सर्व फीड्स दाखवा"
+
+#: src/news_config_dialog_item.c:111
+
+msgid "Show unread feeds"
+msgstr "न वाचलेले फीड दाखवा"
+
+#: src/news_config_dialog_item.c:113
+
+msgid "Show all feeds marked as important"
+msgstr "महत्त्वाचे म्हणून चिन्हांकित केलेले सर्व फीड दाखवा"
+
+#: src/news_config_dialog_item.c:115
+
+msgid "Show unread feeds marked as important"
+msgstr "महत्त्वाचे म्हणून चिन्हांकित केलेले न वाचलेले फीड दाखवा"
+
+#: src/news_config_dialog_item.c:120
+
+msgid "Feed open in"
+msgstr "फीड उघडा"
+
+#: src/news_config_dialog_item.c:123
+
+msgid "the feed viewer"
+msgstr "फीड व्ह्यूअर"
+
+#: src/news_config_dialog_item.c:125
+
+msgid "my favorite browser"
+msgstr "माझा आवडता ब्राउझर"
+
+#: src/news_config_dialog_item.c:127
+
+msgid "Browser opens home url"
+msgstr "ब्राउझर होम URL उघडतो."
+
+#: src/news_config_dialog_item.c:129
+
+msgid "instead of feed url"
+msgstr "फीड URL ऐवजी"
+
+#: src/news_config_dialog_item.c:136
+
+msgid "Apply this to all News gadgets"
+msgstr "हे सर्व बातम्या गॅझेटवर लागू करा"
+
+#: src/news_config_dialog_item_content.c:53
+
+msgid "News Gadget Content Configuration"
+msgstr "बातम्या गॅझेट सामग्री कॉन्फिगरेशन"
+
+#: src/news_config_dialog_item_content.c:258
+
+msgid "Available Feeds"
+msgstr "उपलब्ध फीड्स"
+
+#: src/news_config_dialog_item_content.c:267
+
+msgid "Add this Feed"
+msgstr "हे फीड जोडा"
+
+#: src/news_config_dialog_item_content.c:274
+
+msgid "Selected Feeds"
+msgstr "निवडलेले फीड"
+
+#: src/news_config_dialog_item_content.c:292
+
+msgid "Remove this Feed"
+msgstr "हे फीड काढून टाका"
+
+#: src/news_config_dialog_langs.c:45
+
+msgid "News Feeds Language Configuration"
+msgstr "बातम्या फीड भाषा कॉन्फिगरेशन"
+
+#: src/news_config_dialog_langs.c:123
+
+msgid "Welcome to News Module !"
+msgstr "न्यूज मॉड्यूल मध्ये आपले स्वागत आहे!"
+
+#: src/news_config_dialog_langs.c:125
+
+msgid "Please select the languages that you are able to read"
+msgstr "कृपया तुम्हाला वाचता येणाऱ्या भाषा निवडा."
+
+#: src/news_feed.c:291
+
+msgid "The <hilight>name</hilight> you entered is not correct"
+msgstr "तुम्ही प्रविष्ट केलेले<hilight> नाव</hilight>बरोबर नाही."
+
+#: src/news_feed.c:296
+
+msgid "The need to <hilight>select a category</hilight>."
+msgstr "गरज<hilight> एक श्रेणी निवडा</hilight> ."
+
+#: src/news_feed.c:302
+#, c-format
+msgid ""
+"A feed with the <hilight>name</hilight> %s <hilight>already exists</"
+"hilight><br>in the %s category<br><br>Its not possible to have feeds with "
+"the same name<br>in one category."
+msgstr ""
+"सह एक फीड<hilight> नावे</hilight> %s<hilight> आधीच अस्तित्वात आहे</"
+"hilight><br> %s श्रेणीमध्ये<br><br> एका श्रेणीत आकाधिक नावाचे फीड असणे शक्य नाही.<br> "
+
+
+#: src/news_feed.c:311
+
+msgid "You need to select a <hilight>language</hilight>."
+msgstr "तुम्हाला एक निवडावे लागेल<hilight> भाषा</hilight> ."
+
+#: src/news_feed.c:318
+
+msgid "The <hilight>url</hilight> you specified is not correct"
+msgstr "द<hilight> यूआरएल</hilight> तुम्ही सांगितलेले बरोबर नाही."
+
+#: src/news_feed.c:880
+
+msgid "You need to enter a <hilight>name</hilight> !"
+msgstr "तुम्हाला एंटर करावे लागेल<hilight> नाव</hilight> !"
+
+#: src/news_feed.c:888
+
+msgid ""
+"The <hilight>name</hilight> you entered is <hilight>already used</"
+"hilight><br>by another category"
+msgstr ""
+"तुम्ही प्रविष्ट केलेले <hilight> नावे</hilight> <hilight> आधीच वापरलेले आहे</"
+"hilight><br> दुसऱ्या श्रेणी मध्ये"
+
+#: src/news_menu.c:119
+
+msgid "Set all as read"
+msgstr "सर्व वाचले म्हणून सेट करा"
+
+#: src/news_menu.c:125 src/news_viewer.c:383
+
+msgid "Update"
+msgstr "अद्यतनित करा"
+
+#: src/news_menu.c:136
+
+msgid "Gadget"
+msgstr "गॅझेट"
+
+#: src/news_menu.c:146
+
+msgid "Main"
+msgstr "मुख्य"
+
+#: src/news_menu.c:151
+
+msgid "Settings"
+msgstr "सेटिंग्ज"
+
+#: src/news_menu.c:156
+
+msgid "Gadget Contents"
+msgstr "गॅझेट सामग्री"
+
+#: src/news_utils.h:13
+
+msgid "News Module DEBUG DEBUG DEBUG DEBUG"
+msgstr "बातम्या मॉड्यूल डीबग डीबग डीबग डीबग"
+
+#: src/news_utils.h:20
+
+msgid "News Module"
+msgstr "बातम्या मॉड्यूल"
+
+#: src/news_utils.h:27
+
+msgid "News Module Error"
+msgstr "बातम्या मॉड्यूल त्रुटी"
+
+#: src/news_viewer.c:375
+
+msgid "Feeds in this gadget"
+msgstr "या गॅझेटमधील फीड्स"
+
+#: src/news_viewer.c:391
+
+msgid "Set as read"
+msgstr "वाचलेले म्हणून सेट करा"
+
+#: src/news_viewer.c:441
+
+msgid "Articles in selected feed"
+msgstr "निवडलेल्या फीडमधील लेख"

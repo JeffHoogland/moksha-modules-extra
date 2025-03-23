@@ -1,0 +1,85 @@
+# Translation to Marathi for net module
+# This file is put in the public domain.
+#
+# Saurabh Landge <Lsaurabh.94@gmail.com>, 2025.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
+"PO-Revision-Date: 2025-03-23 17:33+0530\n"
+"Last-Translator: Saurabh Landge <Lsaurabh.94@gmail.com>, 2025\n"
+"Language-Team: bodhiLinux\n"
+"Language: mr_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: .\n"
+
+#: src/e_mod_configure.c:44
+
+msgid "Net Module Settings"
+msgstr "नेट मॉड्यूल सेटिंग्ज"
+
+#: src/e_mod_configure.c:116
+
+msgid "General Settings"
+msgstr "सामान्य सेटिंग्ज"
+
+#: src/e_mod_configure.c:117
+
+msgid "Show Text"
+msgstr "मजकूर दाखवा"
+
+#: src/e_mod_configure.c:119
+
+msgid "Show Popup On Mouse-Over"
+msgstr "माउस-ओव्हरवर पॉपअप दाखवा"
+
+#: src/e_mod_configure.c:121
+
+msgid "Launch Application On Double-Click"
+msgstr "डबल-क्लिक करून अॅप्लिकेशन लाँच करा"
+
+#: src/e_mod_configure.c:127
+
+msgid "Activity Notification Level"
+msgstr "अ‍ॅक्टिव्हिटी सूचना पातळी"
+
+#: src/e_mod_configure.c:129
+
+msgid "High (MB)"
+msgstr "उच्च (MB)"
+
+#: src/e_mod_configure.c:131
+
+msgid "Middle (KB)"
+msgstr "मध्य (केबी)"
+
+#: src/e_mod_configure.c:133
+
+msgid "Low (B)"
+msgstr "कमी (ब)"
+
+#: src/e_mod_configure.c:139
+
+msgid "Device Settings"
+msgstr "डिव्हाइस सेटिंग्ज"
+
+#: src/e_mod_gadcon.c:96
+
+msgid "Net"
+msgstr "नेट"
+
+#: src/e_mod_net.c:161
+
+msgid "Settings"
+msgstr "सेटिंग्ज"
+
+#: src/e_mod_net.c:195
+#, c-format
+msgid "Device - %s"
+msgstr "डिव्हाइस - %s"
