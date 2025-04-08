@@ -4,8 +4,8 @@
 struct _E_Config_Dialog_Data
 {
   int show_date, show_time, show_tip;
-  double font_size_up, font_size_down;
-  char *time_format, *date_format, *tip_format, *time_offset;
+  double font_size_up, font_size_down, t_offset;
+  char *time_format, *date_format, *tip_format;
   E_Color color[3]; 
 };
 
@@ -50,6 +50,7 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
    cfdata->show_time = ci->show_time;
    cfdata->show_date = ci->show_date;
    cfdata->show_tip = ci->show_tip;
+   cfdata->t_offset = ci->t_offset;
    cfdata->font_size_up = ci->font_size_up;
    cfdata->font_size_down = ci->font_size_down;
    cfdata->color->r = ci->color_r;
@@ -57,8 +58,6 @@ _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata)
    cfdata->color->b = ci->color_b;
    cfdata->color->a = ci->color_alpha;
    if (ci->time_format) cfdata->time_format = strdup(ci->time_format);
-   if (ci->time_offset) cfdata->time_offset = strdup(ci->time_offset);
-   printf("Offset je %s ",cfdata->time_offset);
    if (ci->date_format) cfdata->date_format = strdup(ci->date_format);
    if (ci->tip_format) cfdata->tip_format = strdup(ci->tip_format);
 }
@@ -81,7 +80,6 @@ _free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
    if (!tclock_config) return;
    tclock_config->config_dialog = NULL;
    free(cfdata->time_format);
-   free(cfdata->time_offset);
    free(cfdata->date_format);
    free(cfdata->tip_format);
    E_FREE(cfdata);
@@ -93,7 +91,6 @@ _basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data 
    Evas_Object *o = NULL, *of = NULL, *ob = NULL;
    Evas_Object *time_entry = NULL, *time_check = NULL;
    Evas_Object *date_entry = NULL, *date_check = NULL;
-   Evas_Object *offset_entry = NULL;
    Evas_Object *tooltip_entry = NULL, *tooltip_check = NULL;
 
    o = e_widget_list_add(evas, 0, 0);
@@ -111,12 +108,8 @@ _basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data 
 
    ob = e_widget_label_add(evas, D_("Add time offset (e.g.+2)"));
    e_widget_frametable_object_append(of, ob, 0, 3, 1, 1, 1, 0, 1, 0);
-   
-   offset_entry = e_widget_entry_add(evas, &cfdata->time_offset, NULL, NULL, NULL);
-   //~ e_widget_on_change_hook_set(time_check, _cb_time_check, time_entry);
-   e_widget_disabled_set(time_entry, !cfdata->show_time);
-   e_widget_size_min_set(time_entry, 150, 20);
-   e_widget_frametable_object_append(of, offset_entry, 0, 4, 1, 1, 1, 0, 1, 0);
+   ob = e_widget_slider_add(evas, 1, 0, "%.1f", -12, 14, 0.5, 0, &(cfdata->t_offset), NULL, 40);
+   e_widget_frametable_object_append(of, ob, 0, 4, 1, 1, 1, 0, 1, 0);
 
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
@@ -182,6 +175,7 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    ci->show_date = cfdata->show_date;
    ci->show_time = cfdata->show_time;
    ci->show_tip = cfdata->show_tip;
+   ci->t_offset = cfdata->t_offset;
    ci->font_size_up = cfdata->font_size_up;
    ci->font_size_down = cfdata->font_size_down;
    ci->color_r = cfdata->color->r;
@@ -191,8 +185,6 @@ _basic_apply(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 
    if (ci->time_format) eina_stringshare_del(ci->time_format);
    ci->time_format = eina_stringshare_add(cfdata->time_format);
-   if (ci->time_offset) eina_stringshare_del(ci->time_offset);
-   ci->time_offset = eina_stringshare_add(cfdata->time_offset);
    if (ci->date_format) eina_stringshare_del(ci->date_format);
    ci->date_format = eina_stringshare_add(cfdata->date_format);
    if (ci->tip_format) eina_stringshare_del(ci->tip_format);

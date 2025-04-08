@@ -322,7 +322,6 @@ _tclock_cb_check(void *data __UNUSED__)
    struct tm *local_time;
    char buf[127];
    char buff[128];
-   int offset_int;
 
    EINA_LIST_FOREACH(tclock_config->instances, l, inst)
      {
@@ -350,9 +349,7 @@ _tclock_cb_check(void *data __UNUSED__)
 
         memset (buf, 0, sizeof(buf));
 
-        offset_int = atoi(inst->ci->time_offset);
-
-        current_time = time(NULL) + offset_int * 3600;
+        current_time = time(NULL) + inst->ci->t_offset * 3600;
         local_time = localtime(&current_time);
 
         if (inst->ci->time_format)
@@ -394,10 +391,10 @@ _tclock_config_item_get(const char *id)
    ci->show_time = 1;
    ci->show_tip = 1;
    ci->time_format = eina_stringshare_add("%T");
-   ci->time_offset = eina_stringshare_add("0");
 
    ci->date_format = eina_stringshare_add("%d/%m/%y");
    ci->tip_format = eina_stringshare_add("%A, %B %d, %Y");
+   ci->t_offset = 0;
    ci->font_size_up = 12;
    ci->font_size_down = 10;
    ci->color_r = 255;
@@ -431,8 +428,8 @@ e_modapi_init(E_Module *m)
    E_CONFIG_VAL(D, T, show_tip, INT);
    E_CONFIG_VAL(D, T, date_format, STR);
    E_CONFIG_VAL(D, T, time_format, STR);
-   E_CONFIG_VAL(D, T, time_offset, STR);
    E_CONFIG_VAL(D, T, tip_format, STR);
+   E_CONFIG_VAL(D, T, t_offset, DOUBLE);
    E_CONFIG_VAL(D, T, font_size_up, DOUBLE);
    E_CONFIG_VAL(D, T, font_size_down, DOUBLE);
    E_CONFIG_VAL(D, T, color_r, DOUBLE);
@@ -460,9 +457,9 @@ e_modapi_init(E_Module *m)
         ci->show_time = 1;
         ci->show_tip = 1;
         ci->time_format = eina_stringshare_add("%T");
-        ci->time_offset = eina_stringshare_add("0");
         ci->date_format = eina_stringshare_add("%d/%m/%y");
         ci->tip_format = eina_stringshare_add("%A, %B %d, %Y");
+        ci->t_offset = 0;
         ci->font_size_up = 12;
         ci->font_size_down = 10;
         ci->color_r = 255;
