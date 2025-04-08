@@ -90,9 +90,9 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    tclock_config->instances =
      eina_list_append(tclock_config->instances, inst);
 
-   _tclock_cb_check(inst);
+   _tclock_cb_check(NULL);
    if (!check_timer)
-     check_timer = ecore_timer_add(1.0, _tclock_cb_check, inst);
+     check_timer = ecore_timer_add(1.0, _tclock_cb_check, NULL);
    return gcc;
 }
 
@@ -314,9 +314,9 @@ _tclock_config_updated(Config_Item *ci __UNUSED__)
 }
 
 static Eina_Bool
-_tclock_cb_check(void *data)
+_tclock_cb_check(void *data __UNUSED__)
 {
-   Instance *inst = data;
+   Instance *inst;
    Eina_List *l;
    time_t current_time;
    struct tm *local_time;
