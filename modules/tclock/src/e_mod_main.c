@@ -375,8 +375,9 @@ _tclock_cb_check(void *data)
         edje_object_color_class_set (inst->tclock, "module_label", inst->ci->color_r,
                                      inst->ci->color_g, inst->ci->color_b, 
                                      inst->ci->color_alpha, 0, 0, 0, 255, 0, 0, 0, 255);
+        _eval_instance_size(inst);
      }
-   _eval_instance_size(inst);
+
    return EINA_TRUE;
 }
 
