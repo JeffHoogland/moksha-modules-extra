@@ -152,14 +152,15 @@ _basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data 
 
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
-   //~ Color dialog----------------------------------------
+   // Color dialog----------------------------------------
    of = e_widget_frametable_add(evas, D_("Label color"), 1);
    
    ob = e_widget_label_add(evas, D_("Click for the color selector"));
    e_widget_frametable_object_append(of, ob, 0, 0, 1, 1, 1, 1, 1, 1); 
 
    ob = e_widget_color_well_add_full(evas, cfdata->color, 1, 1);
-   e_widget_frametable_object_append_full(of, ob, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 45,25,45,25); 
+   e_widget_frametable_object_append_full(of, ob, 1, 0, 1, 1, 1, 1,
+                                          1, 1, 0, 0, 45, 25, 45, 25);
    
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
