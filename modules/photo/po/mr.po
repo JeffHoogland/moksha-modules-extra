@@ -1,0 +1,433 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: photo\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
+"PO-Revision-Date: 2025-04-28 13:46+0530\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: mr_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: src/e_mod_main.c:54 src/e_mod_main.c:61 src/e_mod_main.c:68
+#: src/e_mod_main.c:75 src/e_mod_main.c:82 src/e_mod_main.c:89
+#, fuzzy
+msgid "Photo Module"
+msgstr "फोटो मॉड्यूल"
+
+#: src/e_mod_main.c:54
+#, fuzzy
+msgid "E Canvas init failed!"
+msgstr "ई कॅनव्हासची सुरुवात अयशस्वी झाली!"
+
+#: src/e_mod_main.c:61
+#, fuzzy
+msgid "Theme init failed!"
+msgstr "थीमची सुरुवात अयशस्वी झाली!"
+
+#: src/e_mod_main.c:68
+#, fuzzy
+msgid "Config init failed"
+msgstr "कॉन्फिगरेशन सुरू करणे अयशस्वी झाले"
+
+#: src/e_mod_main.c:75
+#, fuzzy
+msgid "Picture subsystem init failed"
+msgstr "चित्र उपप्रणाली प्रारंभ अयशस्वी झाली"
+
+#: src/e_mod_main.c:82
+#, fuzzy
+msgid "Popup warn subsystem init failed"
+msgstr "पॉपअप चेतावणी उपप्रणाली प्रारंभ अयशस्वी झाली."
+
+#: src/e_mod_main.c:89
+#, fuzzy
+msgid "Popup info subsystem init failed"
+msgstr "पॉपअप माहिती उपप्रणाली init अयशस्वी झाली."
+
+#: src/e_mod_main.c:182
+#, fuzzy
+msgid "Photo"
+msgstr "छायाचित्र"
+
+#: src/photo_config.c:73
+#, fuzzy, c-format
+msgid ""
+"<hilight>Photo module : Configuration Upgraded</hilight><br><br>Your "
+"configuration of photo module<br>has been upgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d -> %d)"
+msgstr ""
+"<hilight>फोटो मॉड्यूल: कॉन्फिगरेशन अपग्रेड केले आहे.</hilight><br><br> फोटो मॉड्यूलचे "
+"तुमचे कॉन्फिगरेशन<br> अपग्रेड केले आहे<br> तुमच्या सेटिंग्ज काढून टाकल्या गेल्या.<br> "
+"गैरसोयीबद्दल क्षमस्व.<br><br> (%d -> %d)"
+
+#: src/photo_config.c:79 src/photo_config.c:93
+#, fuzzy
+msgid "Photo Module version "
+msgstr "फोटो मॉड्यूल आवृत्ती"
+
+#: src/photo_config.c:87
+#, fuzzy, c-format
+msgid ""
+"<hilight>Photo module : Configuration Downgraded</hilight><br><br>Your "
+"configuration of Photo module<br>has been downgraded<br>Your settings were "
+"removed<br>Sorry for the inconvenience<br><br>(%d ->%d)"
+msgstr ""
+"<hilight>फोटो मॉड्यूल: कॉन्फिगरेशन डाउनग्रेड केले आहे.</hilight><br><br> फोटो मॉड्यूलचे "
+"तुमचे कॉन्फिगरेशन<br> डाउनग्रेड केले आहे<br> तुमच्या सेटिंग्ज काढून टाकल्या गेल्या.<br> "
+"गैरसोयीबद्दल क्षमस्व.<br><br> (%d ->%d)"
+
+#: src/photo_config_dialog.c:63
+#, fuzzy
+msgid "Photo Configuration"
+msgstr "फोटो कॉन्फिगरेशन"
+
+#: src/photo_config_dialog.c:217
+#, fuzzy
+msgid "Picture directories"
+msgstr "चित्र निर्देशिका"
+
+#: src/photo_config_dialog.c:232
+#, fuzzy
+msgid "Add"
+msgstr "जोडा"
+
+#: src/photo_config_dialog.c:234
+msgid "Delete"
+msgstr "हटवा"
+
+#: src/photo_config_dialog.c:236
+#, fuzzy
+msgid "Configure"
+msgstr "कॉन्फिगर करा"
+
+#: src/photo_config_dialog.c:239
+#, fuzzy
+msgid "Reload picture directories"
+msgstr "चित्र निर्देशिका रीलोड करा"
+
+#: src/photo_config_dialog.c:242
+#, fuzzy
+msgid "Stop loading"
+msgstr "लोड करणे थांबवा"
+
+#: src/photo_config_dialog.c:249 src/photo_config_dialog_item.c:126
+#, fuzzy
+msgid "Appearance"
+msgstr "देखावा"
+
+#: src/photo_config_dialog.c:251 src/photo_config_dialog_item.c:135
+#, fuzzy
+msgid "Always show label"
+msgstr "नेहमी लेबल दाखवा"
+
+#: src/photo_config_dialog.c:253
+#, fuzzy
+msgid "Nice transitions"
+msgstr "छान संक्रमणे"
+
+#: src/photo_config_dialog.c:259
+#, fuzzy
+msgid "Default Mouse actions"
+msgstr "डीफॉल्ट माऊस क्रिया"
+
+#: src/photo_config_dialog.c:261 src/photo_config_dialog_item.c:190
+#, fuzzy
+msgid "Over"
+msgstr "ओव्हर"
+
+#: src/photo_config_dialog.c:265 src/photo_config_dialog_item.c:194
+#, fuzzy
+msgid "Left"
+msgstr "डावीकडे"
+
+#: src/photo_config_dialog.c:267 src/photo_config_dialog.c:273
+#: src/photo_config_dialog_item.c:196 src/photo_config_dialog_item.c:202
+#, fuzzy
+msgid "click"
+msgstr "क्लिक करा"
+
+#: src/photo_config_dialog.c:271 src/photo_config_dialog_item.c:200
+msgid "Middle"
+msgstr "मध्यभागी"
+
+#: src/photo_config_dialog.c:276 src/photo_config_dialog_item.c:141
+msgid "No"
+msgstr "नाही"
+
+#: src/photo_config_dialog.c:315
+#, fuzzy
+msgid "Popups"
+msgstr "पॉपअप"
+
+#: src/photo_config_dialog.c:317
+#, fuzzy
+msgid "Picture loader popup"
+msgstr "चित्र लोडर पॉपअप"
+
+#: src/photo_config_dialog.c:320
+msgid "Never"
+msgstr "कधीही नाही"
+
+#: src/photo_config_dialog.c:322
+#, fuzzy
+msgid "Summary"
+msgstr "सारांश"
+
+#: src/photo_config_dialog.c:324
+#, fuzzy
+msgid "Verbose"
+msgstr "शब्दबद्ध"
+
+#: src/photo_config_dialog.c:329
+#, fuzzy
+msgid "Miscellaneous"
+msgstr "विविध"
+
+#: src/photo_config_dialog.c:331
+#, fuzzy
+msgid "Remove generated backgrounds"
+msgstr "जनरेटेड बॅकग्राउंड काढून टाका"
+
+#: src/photo_config_dialog.c:335
+#, fuzzy
+msgid "Pictures viewer"
+msgstr "चित्र दर्शक"
+
+#: src/photo_config_dialog.c:341
+#, fuzzy
+msgid "Images Quality"
+msgstr "प्रतिमा गुणवत्ता"
+
+#: src/photo_config_dialog.c:343
+#, fuzzy, c-format
+msgid "%1.0f pix"
+msgstr "%1.0f फोटो"
+
+#: src/photo_config_dialog.c:350
+#, fuzzy
+msgid "Automatically reload directories"
+msgstr "स्वयंचलितपणे निर्देशिका रीलोड करा"
+
+#: src/photo_config_dialog.c:353
+#, fuzzy
+msgid "when add / modify directory list"
+msgstr "जेव्हा निर्देशिका यादी जोडा / सुधारित करा"
+
+#: src/photo_config_dialog.h:36
+#, fuzzy
+msgid "Show label"
+msgstr "लेबल दाखवा"
+
+#: src/photo_config_dialog.h:38
+#, fuzzy
+msgid "Show information"
+msgstr "माहिती दाखवा"
+
+#: src/photo_config_dialog.h:40 src/photo_menu.c:63
+#, fuzzy
+msgid "Previous picture"
+msgstr "मागील चित्र"
+
+#: src/photo_config_dialog.h:42 src/photo_menu.c:59
+#, fuzzy
+msgid "Next picture"
+msgstr "पुढील चित्र"
+
+#: src/photo_config_dialog.h:44
+#, fuzzy
+msgid "Pause"
+msgstr "विराम द्या"
+
+#: src/photo_config_dialog.h:46 src/photo_menu.c:83
+#, fuzzy
+msgid "Set as background"
+msgstr "पार्श्वभूमी म्हणून सेट करा"
+
+#: src/photo_config_dialog.h:48
+#, fuzzy
+msgid "Open viewer"
+msgstr "दर्शक उघडा"
+
+#: src/photo_config_dialog.h:50
+#, fuzzy
+msgid "Show menu"
+msgstr "मेनू दाखवा"
+
+#: src/photo_config_dialog_dir.c:38
+#, fuzzy
+msgid "Photo Directory Configuration"
+msgstr "फोटो निर्देशिका कॉन्फिगरेशन"
+
+#: src/photo_config_dialog_dir.c:118
+#, fuzzy
+msgid "Directory"
+msgstr "निर्देशिका"
+
+#: src/photo_config_dialog_dir.c:127
+#, fuzzy
+msgid "Loading options"
+msgstr "पर्याय लोड करत आहे"
+
+#: src/photo_config_dialog_dir.c:129
+#, fuzzy
+msgid "Recursive"
+msgstr "रिकर्सिव्ह"
+
+#: src/photo_config_dialog_dir.c:131
+#, fuzzy
+msgid "Read hidden files"
+msgstr "लपवलेल्या फाइल्स वाचा"
+
+#: src/photo_config_dialog_dir.c:158
+#, fuzzy
+msgid "Photo Module Warning"
+msgstr "फोटो मॉड्यूल चेतावणी"
+
+#: src/photo_config_dialog_item.c:48
+#, fuzzy
+msgid "Photo Item Configuration"
+msgstr "फोटो आयटम कॉन्फिगरेशन"
+
+#: src/photo_config_dialog_item.c:113
+#, fuzzy
+msgid "Timer between pictures change"
+msgstr "चित्रांमधील टाइमर बदलतो"
+
+#: src/photo_config_dialog_item.c:115
+msgid "Activate"
+msgstr "सक्रिय करा"
+
+#: src/photo_config_dialog_item.c:118
+#, fuzzy, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f सेकंद"
+
+#: src/photo_config_dialog_item.c:128
+#, fuzzy
+msgid "Alpha"
+msgstr "अल्फा"
+
+#: src/photo_config_dialog_item.c:131
+#, fuzzy, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/photo_config_dialog_item.c:139
+msgid "Yes"
+msgstr "होय"
+
+#: src/photo_config_dialog_item.c:143 src/photo_config_dialog_item.c:205
+#, fuzzy
+msgid "Default setting"
+msgstr "डीफॉल्ट सेटिंग"
+
+#: src/photo_config_dialog_item.c:188
+#, fuzzy
+msgid "Mouse actions"
+msgstr "माऊस क्रिया"
+
+#: src/photo_item.c:415 src/photo_item.c:475
+#, fuzzy, c-format
+msgid ""
+"<hilight>File %s doesn't exist.</hilight><br><br>This file is in the picture "
+"list, but it seems you removed<br>it from disk. It can't be set as "
+"background, sorry."
+msgstr ""
+"<hilight>%s फाइल अस्तित्वात नाही.</hilight><br><br> ही फाइल चित्र सूचीमध्ये आहे, "
+"परंतु तुम्ही काढून टाकली आहे असे दिसते.<br> ते डिस्कवरून. ते पार्श्वभूमी म्हणून सेट करता येत "
+"नाही, माफ करा."
+
+#: src/photo_item.c:418 src/photo_item.c:478 src/photo_picture_local.c:262
+#, fuzzy
+msgid "Photo Module Error"
+msgstr "फोटो मॉड्यूल त्रुटी"
+
+#: src/photo_item.c:1037
+#, fuzzy
+msgid "Picture Import Error"
+msgstr "चित्र आयात करताना त्रुटी"
+
+#: src/photo_item.c:1038
+#, fuzzy
+msgid "Moksha was unable to import the picture<br>due to conversion errors."
+msgstr "मोक्ष चित्र आयात करू शकला नाही.<br> रूपांतरण त्रुटींमुळे."
+
+#: src/photo_menu.c:34
+#, fuzzy
+msgid "Module Settings"
+msgstr "मॉड्यूल सेटिंग्ज"
+
+#: src/photo_menu.c:40
+msgid "Settings"
+msgstr "सेटिंग्ज"
+
+#: src/photo_menu.c:49
+#, fuzzy
+msgid "Pause slideshow"
+msgstr "स्लाईड शो थांबवा"
+
+#: src/photo_menu.c:54
+#, fuzzy
+msgid "Resume slideshow"
+msgstr "स्लाईडशो पुन्हा सुरू करा"
+
+#: src/photo_menu.c:69
+#, fuzzy
+msgid "Historic"
+msgstr "ऐतिहासिक"
+
+#: src/photo_menu.c:79
+#, fuzzy
+msgid "Picture information"
+msgstr "चित्र माहिती"
+
+#: src/photo_menu.c:87
+#, fuzzy
+msgid "Open in"
+msgstr "मध्ये उघडा"
+
+#: src/photo_picture_local.c:256
+#, fuzzy, c-format
+msgid ""
+"<hilight>Directory %s doesn't exists.</hilight><br><br>You can change the "
+"picture's folders in main configuration panel<br>They can be jpeg or "
+"png<br><br>After import, if you can remove these files and the pictures "
+"still can<br>be viewed, but you won't be able to set them as wallpaper "
+"anymore<br><br>"
+msgstr ""
+"<hilight>%s ही निर्देशिका अस्तित्वात नाही.</hilight><br><br> तुम्ही मुख्य कॉन्फिगरेशन "
+"पॅनेलमध्ये चित्राचे फोल्डर बदलू शकता.<br> ते jpeg किंवा png असू शकतात.<br><br> आयात "
+"केल्यानंतर, जर तुम्ही या फायली काढून टाकू शकत असाल आणि चित्रे अजूनही काढू शकत असतील "
+"तर<br> पाहिले जाऊ शकतात, परंतु तुम्ही त्यांना आता वॉलपेपर म्हणून सेट करू शकणार "
+"नाही<br><br>"
+
+#: src/photo_picture_local.c:600
+#, fuzzy
+msgid "Photo Module Information"
+msgstr "फोटो मॉड्यूल माहिती"
+
+#: src/photo_picture_local.c:601
+#, fuzzy
+msgid ""
+"<hilight>Creating thumbs</hilight><br><br>Some pictures are being thumbed in "
+"a <hilight>background task</hilight>.<br>It can take a while, but after, "
+"loading will be faster and lighter :)<br><br>Each time you will load "
+"pictures that haven't been loaded in Photo module before,<br>they will be "
+"thumbed.<br><br>While creating popups, you will not be able to see any "
+"picture in Photo.<br>I hope i'll be able to change that :)"
+msgstr ""
+"<hilight>अंगठे तयार करणे</hilight><br><br> काही चित्रांना 'अ' मध्ये थंब केले जात आहे."
+"<hilight> पार्श्वभूमी कार्य</hilight> .<br> यास थोडा वेळ लागू शकतो, परंतु नंतर, लोडिंग "
+"जलद आणि हलके होईल :)<br><br> प्रत्येक वेळी तुम्ही फोटो मॉड्यूलमध्ये यापूर्वी लोड न केलेले "
+"फोटो लोड कराल,<br> त्यांना अंगठा दिला जाईल.<br><br> पॉपअप तयार करताना, तुम्हाला "
+"फोटोमध्ये कोणताही फोटो दिसणार नाही.<br> मला आशा आहे की मी ते बदलू शकेन :)"
