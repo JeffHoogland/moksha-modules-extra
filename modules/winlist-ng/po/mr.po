@@ -1,0 +1,108 @@
+# winlist-ng module marathi translated
+# This file is put in the public domain.
+# Saurabh Landge <lsaurabh.94@gmail.com>, 2025.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: winlist-ng\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 18:14-0500\n"
+"PO-Revision-Date: 2025-04-29 11:19+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: mr_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: src/e_mod_main.c:174
+
+msgid "Winlist NG"
+msgstr "विनलिस्ट एनजी"
+
+#: src/e_mod_main.c:211
+
+msgid "Winlist NG Module"
+msgstr "विनलिस्ट एनजी मॉड्यूल"
+
+#: src/e_mod_main.c:212
+
+msgid "a replacement for the standard winlist"
+msgstr "मानक विनलिस्टची जागा"
+
+#: src/e_mod_keybindings.c:4
+
+msgid "NG Winlist"
+msgstr "एनजी विनलिस्ट"
+
+#: src/e_mod_keybindings.c:5
+
+msgid "Switch To Next Window"
+msgstr "पुढील विंडोवर स्विच करा"
+
+#: src/e_mod_keybindings.c:6
+
+msgid "Switch To Previous Window"
+msgstr "मागील विंडोवर स्विच करा"
+
+#: src/e_mod_keybindings.c:7
+
+msgid "Show Windows From All Desks"
+msgstr "सर्व डेस्कवरून विंडोज दाखवा"
+
+#: src/e_mod_keybindings.c:8
+
+msgid "Show Windows From Other Zones"
+msgstr "इतर झोनमधील विंडोज दाखवा"
+
+#: src/ng_config.c:47
+
+msgid "Winlist NG Configuration"
+msgstr "विनलिस्ट एनजी कॉन्फिगरेशन"
+
+#: src/ng_config.c:105
+
+msgid "Fade Animation"
+msgstr "फेड अ‍ॅनिमेशन"
+
+#: src/ng_config.c:116
+
+msgid "Size"
+msgstr "आकार"
+
+#: src/ng_config.c:117
+
+msgid "Icon Size:"
+msgstr "आयकॉन आकार:"
+
+#: src/ng_config.c:119
+#, c-format
+msgid "%1.0f px"
+msgstr "%1.0f पिक्सेल"
+
+#: src/ng_config.c:124
+
+msgid "Zooming"
+msgstr "झूम करत आहे"
+
+#: src/ng_config.c:125
+
+msgid "Zoomfactor:"
+msgstr "झूमफॅक्टर:"
+
+#: src/ng_config.c:127 src/ng_config.c:132
+#, c-format
+msgid "%0.1f"
+msgstr "%0.1f"
+
+#: src/ng_config.c:130
+
+msgid "Zoom Range:"
+msgstr "झूम रेंज:"
+
+#: src/ng_winlist.c:727
+
+msgid "No name!"
+msgstr "नाव नाही!"

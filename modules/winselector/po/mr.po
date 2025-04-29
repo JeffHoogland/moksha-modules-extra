@@ -1,7 +1,7 @@
 # Marathi translations for the Winselector module.
 # This file is put in the public domain.
 #
-# Automatically generated, 2025.
+# Saurabh Landge <Lsaurabh.94@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
@@ -18,7 +18,7 @@ msgstr ""
 
 #: src/e_mod_main.c:140
 msgid "Winselector"
-msgstr ""
+msgstr "Winselector"
 
 #: src/e_mod_main.c:283
 msgid "No windows"
@@ -26,4 +26,4 @@ msgstr "खिडक्या नाहीत"
 
 #: src/e_mod_main.c:328
 msgid "No name!"
-msgstr ""
+msgstr "कोणतेही नाव अस्तित्वात नाही!"
