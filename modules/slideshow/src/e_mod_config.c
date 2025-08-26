@@ -111,18 +111,15 @@ _basic_create(__UNUSED__ E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data 
 
    o = e_widget_list_add (evas, 0, 0);
    of = e_widget_framelist_add (evas, D_ ("Cycles Time"), 0);
-   ob =
-     e_widget_check_add (evas, D_ ("Disable Timer"), &(cfdata->disable_timer));
+   ob = e_widget_check_add (evas, D_ ("Disable Timer"), &(cfdata->disable_timer));
    e_widget_framelist_object_append (of, ob);
-   ob =
-     e_widget_slider_add (evas, 1, 0, D_ ("%3.0f seconds"), 5.0, 2400.0, 
+   ob = e_widget_slider_add (evas, 1, 0, D_ ("%3.0f seconds"), 5.0, 2400.0, 
                           1.0, 0, &(cfdata->poll_time), NULL, 200);
    e_widget_framelist_object_append (of, ob);
    e_widget_list_object_append (o, of, 1, 1, 0.5);
 
    of = e_widget_framelist_add (evas, D_ ("Day/Night backgrounds"), 0);
-   ob =
-     e_widget_check_add (evas, D_ ("Disable Scheduler"), &(cfdata->disable_sched));
+   ob = e_widget_check_add (evas, D_ ("Disable Scheduler"), &(cfdata->disable_sched));
    e_widget_framelist_object_append (of, ob);
    ob = e_widget_slider_add(evas, 1, 0, D_("%1.0f hr"), 0.0, 23.0, 
                             1.0, 0, &(cfdata->hours), NULL, 130);
@@ -188,7 +185,7 @@ _basic_create(__UNUSED__ E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data 
    e_widget_framelist_object_append (of, ob);
    ob = e_widget_radio_add(evas, D_("Set wallpaper on current screen"), 2, rg);
    e_widget_framelist_object_append (of, ob);
-   if(ecore_x_xinerama_screen_count_get() > 1)
+   if (ecore_x_xinerama_screen_count_get() > 1)
      {
        ob = e_widget_radio_add(evas, D_("Set wallpaper on current monitor (Xinerama support)"), 2, rg);
        e_widget_framelist_object_append (of, ob);

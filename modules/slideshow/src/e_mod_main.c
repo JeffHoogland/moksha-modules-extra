@@ -371,11 +371,13 @@ e_modapi_init(E_Module *m)
 
    slide_config = e_config_domain_load("module.slideshow", conf_edd);
    
-   if (slide_config) {
-     /* Check config version */
-     if (!e_util_module_config_check("Slideshow", slide_config->version, MOD_CONFIG_FILE_VERSION))
+   if (slide_config)
+     {
+       /* Check config version */
+       if (!e_util_module_config_check("Slideshow", 
+           slide_config->version, MOD_CONFIG_FILE_VERSION))
        _slide_conf_free();
-   }
+     }
 
    /* If we don't have a config yet, or it got erased above,
    * then create a default one */
@@ -636,9 +638,9 @@ _slide_set_bg(void *data, const char *bg)
    snprintf (buf, sizeof (buf), "%s/%s", inst->ci->dir, bg);
    if (!eina_str_has_extension(bg, ".edj"))
      {
-         inst->in_file = strdup(buf);
-         _import_edj_gen(inst);
-         snprintf (buf, sizeof (buf), "%s.edj", ecore_file_strip_ext(buf));
+        inst->in_file = strdup(buf);
+        _import_edj_gen(inst);
+        snprintf (buf, sizeof (buf), "%s.edj", ecore_file_strip_ext(buf));
      }
 
    if (inst->ci->all_desks == 0)
@@ -651,7 +653,7 @@ _slide_set_bg(void *data, const char *bg)
      }
    else if (inst->ci->all_desks == 1)
      {
-        while (e_config->desktop_backgrounds)
+       while (e_config->desktop_backgrounds)
           {
              E_Config_Desktop_Background *cfbg;
 
