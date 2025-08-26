@@ -1,0 +1,64 @@
+# Marathi translation for Penguins Module
+# This file is put in the public domain.
+#
+# Saurabh Landge <Lsaurabh.94@gmail.com>, 2025.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: penguins\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-20 12:05-0500\n"
+"PO-Revision-Date: 2025-04-28 13:37+0530\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: mr_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: src/e_mod_config.c:42
+
+msgid "Population Settings"
+msgstr "लोकसंख्या सेटिंग्ज"
+
+#: src/e_mod_config.c:92
+
+msgid "Number of penguins:"
+msgstr "पेंग्विनची संख्या:"
+
+#: src/e_mod_config.c:94 src/e_mod_config.c:104
+#, c-format
+msgid "%1.0f"
+msgstr "%1.0f"
+
+#: src/e_mod_config.c:97
+
+msgid "Zoom factor:"
+msgstr "झूम फॅक्टर:"
+
+#: src/e_mod_config.c:99
+#, c-format
+msgid "%1.1f X"
+msgstr "%1.1f एक्स"
+
+#: src/e_mod_config.c:102
+
+msgid "Transparency:"
+msgstr "पारदर्शकता:"
+
+#: src/e_mod_config.c:108
+
+msgid "Select population:"
+msgstr "लोकसंख्या निवडा:"
+
+#: src/e_mod_main.c:60
+
+msgid "Look"
+msgstr "पहा"
+
+#: src/e_mod_main.c:61
+
+msgid "Penguins"
+msgstr "पेंग्विन"

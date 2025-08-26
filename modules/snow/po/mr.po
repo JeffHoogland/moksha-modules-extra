@@ -1,0 +1,64 @@
+# Marathi Translation for Snow Module
+# This file is put in the public domain.
+#
+# Saurabh Landge <Lsaurabh.94@gmail.com>, 2025.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: snow\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-22 10:11-0500\n"
+"PO-Revision-Date: 2025-04-29 10:58+0530\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: mr_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: src/e_mod_config.c:42
+
+msgid "Snow Configuration"
+msgstr "बर्फाचे कॉन्फिगरेशन"
+
+#: src/e_mod_config.c:99
+
+msgid "General Settings"
+msgstr "सामान्य सेटिंग्ज"
+
+#: src/e_mod_config.c:100
+
+msgid "Show Trees"
+msgstr "झाडे दाखवा"
+
+#: src/e_mod_config.c:104
+
+msgid "Snow Density"
+msgstr "बर्फाची घनता"
+
+#: src/e_mod_config.c:106
+
+msgid "Sparse"
+msgstr "विरळ"
+
+#: src/e_mod_config.c:108
+
+msgid "Medium"
+msgstr "मध्यम"
+
+#: src/e_mod_config.c:110
+
+msgid "Dense"
+msgstr "दाट"
+
+#: src/e_mod_main.c:36
+
+msgid "Look"
+msgstr "पहा"
+
+#: src/e_mod_main.c:38
+
+msgid "Snow"
+msgstr "हिमवर्षाव"
