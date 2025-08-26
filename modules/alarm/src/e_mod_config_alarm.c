@@ -131,6 +131,7 @@ _fill_data(E_Config_Dialog_Data *cfdata, Alarm *al)
           }
         else
           cfdata->sched.date = strdup("");
+
         cfdata->sched.day_monday = al->sched.day_monday;
         cfdata->sched.day_tuesday = al->sched.day_tuesday;
         cfdata->sched.day_wenesday = al->sched.day_wenesday;
@@ -138,11 +139,12 @@ _fill_data(E_Config_Dialog_Data *cfdata, Alarm *al)
         cfdata->sched.day_friday = al->sched.day_friday;
         cfdata->sched.day_saturday = al->sched.day_saturday;
         cfdata->sched.day_sunday = al->sched.day_sunday;
-    cfdata->autoremove = al->autoremove;
-    if (al->description)
+        cfdata->autoremove = al->autoremove;
+        if (al->description)
           cfdata->description = strdup(al->description);
-    else
+        else
           cfdata->description = strdup("");
+        
         cfdata->open_popup = al->open_popup;
         cfdata->run_program = al->run_program;
         if (al->program)
