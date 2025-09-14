@@ -69,7 +69,7 @@ static Info *global_info = NULL;
 static void _e_smart_reconfigure(Evas_Object *obj);
 static Eina_Bool _e_smart_reconfigure_do(void *data);
 static void _thumb_gen(void *data, Evas_Object *obj, void *event_info);
-static void _item_down(void *data, Evas *e, Evas_Object *obj, void *event_info);
+//~ static void _item_down(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static void _item_up(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static int _sort_cb(const void *d1, const void *d2);
 static void _scan(Info *info);
@@ -323,8 +323,8 @@ _e_smart_reconfigure_do(void *data)
                             edje_object_signal_emit(it->frame, "e,state,selected", "e");
                             evas_object_raise(it->frame);
                          }
-                       evas_object_event_callback_add(it->frame, EVAS_CALLBACK_MOUSE_DOWN,
-                                                      _item_down, it);
+                       //~ evas_object_event_callback_add(it->frame, EVAS_CALLBACK_MOUSE_DOWN,
+                                                      //~ _item_down, it);
                        evas_object_event_callback_add(it->frame, EVAS_CALLBACK_MOUSE_UP,
                                                       _item_up, it);
 
@@ -827,13 +827,14 @@ _thumb_gen(void *data, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
      }
 }
 
+/*
 static void
 _item_down(void *data __UNUSED__, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
 {
-//   Evas_Event_Mouse_Down *ev = event_info;
-//   Item *it = data;
-//   _pan_sel(it->obj, it);
-}
+  Evas_Event_Mouse_Down *ev = event_info;
+  Item *it = data;
+  _pan_sel(it->obj, it);
+} */
 
 static void
 _item_up(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
@@ -881,8 +882,8 @@ _pan_file_add(Evas_Object *obj, const char *file, Eina_Bool remote, Eina_Bool th
         edje_object_signal_emit(it->frame, "e,state,selected", "e");
         evas_object_raise(it->frame);
      }
-   evas_object_event_callback_add(it->frame, EVAS_CALLBACK_MOUSE_DOWN,
-                                  _item_down, it);
+   //~ evas_object_event_callback_add(it->frame, EVAS_CALLBACK_MOUSE_DOWN,
+                                  //~ _item_down, it);
    evas_object_event_callback_add(it->frame, EVAS_CALLBACK_MOUSE_UP,
                                   _item_up, it);
 
