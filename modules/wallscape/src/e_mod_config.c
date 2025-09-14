@@ -907,7 +907,6 @@ _pan_file_add(Evas_Object *obj, const char *file, Eina_Bool remote, Eina_Bool th
 
    e_thumb_icon_begin(it->image);
    it->do_thumb = 1;
-//   e_thumb_icon_begin(it->image);
 
    if (it->theme)
      {
