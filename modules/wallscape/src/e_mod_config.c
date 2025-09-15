@@ -124,6 +124,15 @@ _pan_child_size_get(Evas_Object *obj, Evas_Coord *w, Evas_Coord *h)
    if (h) *h = sd->ch;
 }
 
+static const char *
+bg_nofade_check(const char *path)
+{
+   if (edje_file_group_exists(path, "e/desktop/background/nofade"))
+     return "e/desktop/background/nofade";
+   else
+     return "e/desktop/background";
+}
+
 static Eina_Bool
 _e_smart_reconfigure_do(void *data)
 {
@@ -340,11 +349,11 @@ _e_smart_reconfigure_do(void *data)
                             f = e_theme_edje_file_get("base/theme/backgrounds",
                                                       "e/desktop/background");
                             e_thumb_icon_file_set(it->image, f,
-                                                  "e/desktop/background");
+                                                  bg_nofade_check(f));
                          }
                        else
                          e_thumb_icon_file_set(it->image, it->file,
-                                               "e/desktop/background");
+                                               bg_nofade_check(it->file));
                        e_thumb_icon_size_set(it->image, sd->info->iw,
                                              sd->info->ih);
                        evas_object_show(it->image);
@@ -898,10 +907,10 @@ _pan_file_add(Evas_Object *obj, const char *file, Eina_Bool remote, Eina_Bool th
         const char *f = e_theme_edje_file_get("base/theme/backgrounds",
                                               "e/desktop/background");
 
-        e_thumb_icon_file_set(it->image, f, "e/desktop/background");
+        e_thumb_icon_file_set(it->image, f, bg_nofade_check(f));
      }
    else
-     e_thumb_icon_file_set(it->image, it->file, "e/desktop/background");
+     e_thumb_icon_file_set(it->image, it->file, bg_nofade_check(it->file));
    e_thumb_icon_size_set(it->image, sd->info->iw, sd->info->ih);
    evas_object_show(it->image);
 
@@ -1246,14 +1255,15 @@ wp_browser_new(E_Container *con)
    info->mini = edje_object_add(e_livethumb_evas_get(info->preview));
    e_livethumb_thumb_set(info->preview, info->mini);
    evas_object_show(info->mini);
+
    if (info->bg_file)
-     edje_object_file_set(info->mini, info->bg_file, "e/desktop/background");
+     edje_object_file_set(info->mini, info->bg_file, bg_nofade_check(info->bg_file));
    else
      {
         const char *f = e_theme_edje_file_get("base/theme/backgrounds",
                                               "e/desktop/background");
 
-        edje_object_file_set(info->mini, f, "e/desktop/background");
+        edje_object_file_set(info->mini, f, bg_nofade_check(f));
      }
 
    // scrolled thumbs
