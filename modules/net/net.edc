@@ -4,13 +4,11 @@ images
    image: "rx.png" COMP;
    image: "tx.png" COMP;
    image: "idle.png" COMP;
-   image: "bd.png" COMP;
 }
 
 collections {
-  group {
-       name: "modules/net/main";
-       max: 128 128;
+  group { name: "modules/net/main";
+    max: 128 128;
     parts {
        part { name: "rx"; type: IMAGE;
           mouse_events: 0;
