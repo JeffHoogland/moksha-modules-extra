@@ -1,5 +1,3 @@
-
-
 This is the Winlist NG module for Enlightenment.
 
 it is a replacement for the standard winlist.
@@ -9,10 +7,9 @@ also will get a lot of functionality i was missing, for example:
 decide while selecting if you want to jump to the desk of the 
 selected app or bring the selected app to the current desk, close 
 the selected app directly, show the selected app on the current 
-desk(if it's on another desk), etc.
+desk (if it's on another desk), etc.
 
-
-if you want to use it with a composite manager run: 
+If you want to use it with a composite manager run: 
 xcompmgr, kompmgr or something else that does composite managing
 and then restart e.
 
@@ -22,7 +19,7 @@ The initial configuration shows the Winlist with ctrl+alt+',' and ctrl+alt+'.'
 
 Configure the keybindings in e's keybindings config dialog (NG Winlist).
 
-- you can also configure it for mouse wheel bindings 
+You can also configure it for mouse wheel bindings 
 
 
 KEYS:
@@ -31,7 +28,7 @@ Configure the keybindings in e's keybindings config dialog (NG Winlist).
 
 toggles: a - shows all application
 
-d - toggles shows applications from other/all desks (other / all / off)
+d - toggles shows applications from other/all desks (other/all/off)
 
 D - keeps show desktop toggle for next invocation of winlist
 
@@ -43,5 +40,5 @@ w - shows only all apps that are of the same type as the currently selected
 
 q - keeps the current state of the app (e.g. when it was moved to the current desk, uniconifed, etc.) when it becomes unselected or one exits winlist. this is for example useful when you want to bring a bunch of windows to the current desk. --
 
-esc - restore desktop
+ESC - restore desktop
 
