@@ -148,11 +148,11 @@
 
 images
 {
-  image: "bg.png" COMP; 
+  //~ image: "bg.png" COMP; 
   image: "bg_detour.png" COMP; 
   image: "detour_bg.png" COMP; 
-  image: "bg_new.png" COMP; 
-  image: "bg_new2.png" COMP; 
+  //~ image: "bg_new.png" COMP; 
+  //~ image: "bg_new2.png" COMP; 
   image: "bg_new_over.png" COMP; 
 }
 
