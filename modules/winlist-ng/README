@@ -1,6 +1,6 @@
 This is the Winlist NG module for Enlightenment.
 
-it is a replacement for the standard winlist.
+It is a replacement for the standard winlist.
 
 This module should not only look different as the e17 winlist, it 
 also will get a lot of functionality i was missing, for example: 
@@ -17,7 +17,7 @@ KEYS:
 
 The initial configuration shows the Winlist with ctrl+alt+',' and ctrl+alt+'.'
 
-Configure the keybindings in e's keybindings config dialog (NG Winlist).
+Configure the keybindings in E's keybindings config dialog (NG Winlist).
 
 You can also configure it for mouse wheel bindings 
 
