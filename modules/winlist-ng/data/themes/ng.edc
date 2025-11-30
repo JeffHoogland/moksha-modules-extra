@@ -1,8 +1,5 @@
-
 #define BG_COLOR 255 255 255 230
-
 #define BG_IMAGE "detour_bg.png" # "bg.png"
-
 
 #define ICON_CLIP() \
    part { \
@@ -10,20 +7,20 @@
      type: RECT; \
      mouse_events: 0; \
       description { \
-	state:    "default" 0.0; \
-	color: 220 220 220 200; \
+        state:    "default" 0.0; \
+        color: 220 220 220 200; \
       } \
       description { \
-	state:    "inactive" 0.0; \
-	color: 225 225 225 245; \
+        state:    "inactive" 0.0; \
+        color: 225 225 225 245; \
       }  \
       description { \
-	state:    "active" 0.0; \
-	color: 255 255 255 255; \
+        state:    "active" 0.0; \
+        color: 255 255 255 255; \
       } \
       description { \
-	state:    "visible" 0.0; \
-	color: 255 255 255 255; \
+        state:    "visible" 0.0; \
+        color: 255 255 255 255; \
       } \
    } \
 
@@ -35,9 +32,9 @@
      mouse_events:  0; \
      clip_to:       "icon_clip"; \
       description { \
-	state:    "default" 0.0; \
-	aspect: 1.0 1.0; \
-	aspect_preference: BOTH; \
+        state:    "default" 0.0; \
+        aspect: 1.0 1.0; \
+        aspect_preference: BOTH; \
          rel1 { \
            relative: 0.0  0.0; \
            offset:   0   0; \
@@ -48,8 +45,8 @@
          } \
       } \
       description { \
-	state:    "active" 0.0; \
-	inherit:  "default" 0.0; \
+        state:    "active" 0.0; \
+        inherit:  "default" 0.0; \
          rel1 { \
            relative: 0.0  0.0; \
            offset:   0   0; \
@@ -60,8 +57,8 @@
          } \
       } \
       description { \
-	state:    "attention" 0.0; \
-	inherit:  "default" 0.0; \
+       state:    "attention" 0.0; \
+       inherit:  "default" 0.0; \
          rel1 { \
            relative: 0.5  0.5; \
            offset:   0   0; \
@@ -148,8 +145,6 @@
      transition: LINEAR 0.0;                    \
      target:  "e.text.label";                   \
    }                                            \
-                                                \
-                                                \
 
 images
 {
@@ -169,80 +164,72 @@ collections {
          part {
            name: "bg";
            mouse_events: 0;
-            description {
-              state:    "default" 0.0;
-
-               image {
+           description { state: "default" 0.0;
+              image {
                  normal: "bg_detour.png";
                  border: 13 13 15 15;
-               }
-
-               fill {
+              }
+              fill {
                  smooth: 0;
-               }
+              }
               color: 255 255 255 255;
-            }
+          }
+        }
+        part {
+          name: "clip";
+          type: RECT;
+          description { state: "default" 0.0;
+              rel1 {
+                to: "bg";
+                relative: 0.0  1.0;
+                offset:   0    -42;
+              }
+              rel2 {
+                to: "bg";
+                relative: 1.0  1.0;
+                offset:   -1    -1;
+              }
          }
-	 part {
-	 name: "clip";
-	 type: RECT;
-	    description {
-              state:    "default" 0.0;
-
-               rel1 {
-	       to: "bg";
-	       relative: 0.0  1.0;
-                 offset:   0    -42;
-               }
-               rel2 {
-	       to: "bg";
-                 relative: 1.0  1.0;
-                 offset:   -1    -1;
-               }
-	    }
-	 }
-         part {      
-           name: "e.text.label";
-           type: TEXT;
-           effect: SOFT_SHADOW;
-	   clip_to: "clip";
-	   
-           mouse_events: 0;
-            description {
-              state: "default" 0.0;
-               rel1 {
-                 relative: 0.0  1.0;
-                 offset:   0    -42;
-               }
-               rel2 {
-                 relative: 1.0  1.0;
-                 offset:   -1    -1;
-               }
-              color: 255 255 255 0;
-              color3: 0 0 0 0;
-               text {
-                 text: "Icon Name";
-                 font: "Sans:style=Bold";
-                 size: 11;
-                 min:  1 0;
-                 align: 0.5 0.5;
-               }
-              visible: 0;
-          
-            }
-            description {
-              state: "visible" 0.0;
-              inherit: "default" 0.0;
-              visible: 1;
-              color: 255 255 255 255;
-              color3: 0 0 0 58;
-            }
+       }
+       part {      
+         name: "e.text.label";
+         type: TEXT;
+         effect: SOFT_SHADOW;
+         clip_to: "clip";
+         mouse_events: 0;
+         description { state: "default" 0.0;
+             rel1 {
+                relative: 0.0  1.0;
+                offset:   0    -42;
+             }
+             rel2 {
+                relative: 1.0  1.0;
+                offset:   -1    -1;
+             }
+             color: 255 255 255 0;
+             color3: 0 0 0 0;
+             text {
+                text: "Icon Name";
+                font: "Sans:style=Bold";
+                size: 11;
+                min:  1 0;
+                align: 0.5 0.5;
+             }
+             visible: 0;
+         }
+         description {
+            state: "visible" 0.0;
+            inherit: "default" 0.0;
+            visible: 1;
+            color: 255 255 255 255;
+            color3: 0 0 0 58;
          }
       }
-      programs {
-         TEXT_PRGS();      
-      }
-   }
+    }
+    programs {
+       TEXT_PRGS();      
+    }
+ }
   
    group {
      name: "e/modules/ng/bg_composite";
@@ -250,82 +237,73 @@ collections {
          part {
            name: "bg";
            mouse_events: 0;
-            description {
-              state:    "default" 0.0;
-
-               image {
+           description { state: "default" 0.0;
+              image {
                  normal: "detour_bg.png";
                  border: 20 20 20 20;
-               }
-
-               fill {
+              }
+              fill {
                  smooth: 0;
-               }
+              }
               color: 255 255 255 255;
-            } 
-         }
-	 part {
-	 name: "clip";
-	 type: RECT;
-	    description {
-              state:    "default" 0.0;
-
-               rel1 {
-	       to: "bg";
-                 offset:   20    0;
-               }
-               rel2 {
-	       to: "bg";
-                 offset:   -21    -1;
-               }
-	    }
-	 }
-         part {      
-           name: "e.text.label";
-           type: TEXT;
-           effect: SHADOW; 
-           mouse_events: 0;
-	   clip_to: "clip";
-            description {
-              state: "default" 0.0;
-               rel1 {
-	       to: "clip";
-                 relative: 0.0  1.0;
-                 offset:   0    -46;
-               }
-               rel2 {
-	       to: "clip";
-                 relative: 1.0  1.0;
-                 offset:   -1    -1;
-               }
-               //            color: 255 255 255 0;
-//              color3: 0 0 0 0;
-              color: 60 60 60 255;
-		color3: 170 168 169 128;
-               text {
-                 text: "Icon Name";
-                 font: "Sans:style=Bold";
-                 size: 11;
-                 min:  1 0;
-                 align: 0.5 0.5;
-                 text_class: "module_large_s";
-               }
-              visible: 0;
-          
-            }
-            description {
-              state: "visible" 0.0;
+          } 
+        }
+        part {
+          name: "clip";
+          type: RECT;
+          description { state: "default" 0.0;
+             rel1 {
+                to: "bg";
+                offset:   20    0;
+             }
+             rel2 {
+                to: "bg";
+                offset:   -21    -1;
+             }
+          }
+        }
+        part {
+          name: "e.text.label";
+          type: TEXT;
+          effect: SHADOW; 
+          mouse_events: 0;
+          clip_to: "clip";
+          description { state: "default" 0.0;
+             rel1 {
+                to: "clip";
+                relative: 0.0  1.0;
+                offset:   0    -46;
+             }
+             rel2 {
+                to: "clip";
+                relative: 1.0  1.0;
+                offset:   -1    -1;
+             }
+             // color: 255 255 255 0;
+             // color3: 0 0 0 0;
+             color: 60 60 60 255;
+             color3: 170 168 169 128;
+             text {
+               text: "Icon Name";
+               font: "Sans:style=Bold";
+               size: 11;
+               min:  1 0;
+               align: 0.5 0.5;
+               text_class: "module_large_s";
+             }
+             visible: 0;
+          }
+          description { state: "visible" 0.0;
               inherit: "default" 0.0;
               visible: 1;
-               // color: 255 255 255 255;
-               //color2: 0 0 60 100;
-          
-               //color3: 0 0 0 48;
-            }
-         }
+              // color: 255 255 255 255;
+              // color2: 0 0 60 100;
+              //color3: 0 0 0 48;
+          }
+        }
       }
       programs {
-         TEXT_PRGS();      
+         TEXT_PRGS();
       }
    }
 
@@ -335,18 +313,16 @@ collections {
          part {
            name: "bg";
            mouse_events: 0;
-            description {
-              state:    "default" 0.0;
-
-               image {
-                 normal: "bg_new_over.png";
-                 border: 13 15 40 15;
-               }
-               fill {
-                 smooth: 0;
-               }
+           description {state:    "default" 0.0;
+              image {
+                normal: "bg_new_over.png";
+                border: 13 15 40 15;
+              }
+              fill {
+                smooth: 0;
+              }
               color: 255 255 255 0;
-            }
+           }
          }
       }
    }
@@ -358,54 +334,45 @@ collections {
      max: 128 128; 
    
       parts {
-
          ICON_CLIP();
-      
          ICON();
-      
-         part {      
+         part {
            name: "e.text.label";
            type: TEXT;
            effect: SOFT_SHADOW;  
            mouse_events: 0;
-            description {
-              state: "default" 0.0;
+           description { state: "default" 0.0;
               visible: 0;
-               rel1 {
+              rel1 {
                  relative: 0.0  1.0;
                  offset:   0    0;
-               }
-               rel2 {
+              }
+              rel2 {
                  relative: 1.0  1.0;
                  offset:   -1    18;
-               }
+              }
               color: 255 255 255 0;
               color3: 0 0 0 0;
-               text {
+              text {
                  text: "Icon Name";
                  font: "Sans:style=Bold";
                  size: 14;
                  min:  1 1;
                  align: 0.5 0.5;
-
                }
-            }
-            description {
-              state: "visible" 0.0;
-              inherit: "default" 0.0;
-              visible: 1;
-          
-              color: 255 255 255 255;
-              color3: 0 0 0 48;
-            }
-         }
-      }
+          }
+          description { state: "visible" 0.0;
+             inherit: "default" 0.0;
+             visible: 1;
+             color: 255 255 255 255;
+             color3: 0 0 0 48;
+          }
+       }
+     }
 
-      programs {
+     programs {
          DEFAULT_PRGS();
-      
          TEXT_PRGS();
-
          program {
            name:    "go_active_in";
            signal:  "e,state,attention";
