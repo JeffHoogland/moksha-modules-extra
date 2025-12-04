@@ -19,7 +19,7 @@ ngw_box_new(Ng *ng)
   box->win_w = ng->win->w;
   box->win_h = ng->win->h;
   box->o_bg = NULL;
-    box->zoom = 1.0;
+  box->zoom = 1.0;
 
   box->w = 0;
   box->h = 0;
@@ -45,11 +45,9 @@ ngw_box_new(Ng *ng)
       if (!e_theme_edje_object_set(box->o_over, "base/theme/modules/ng", "e/modules/ng/over"))
         edje_object_file_set(box->o_over, ngw_config->theme_path, "e/modules/ng/over");
 
-    evas_object_layer_set(box->o_over, 100);
-  evas_object_clip_set(box->o_over, box->clip);
-
-  evas_object_show(box->o_over);
-     
+      evas_object_layer_set(box->o_over, 100);
+      evas_object_clip_set(box->o_over, box->clip);
+      evas_object_show(box->o_over);
     }
   else
     {  
@@ -58,13 +56,9 @@ ngw_box_new(Ng *ng)
     }
   
   evas_object_layer_set(box->o_bg, -1);
-
   evas_object_clip_set(box->o_bg, box->clip);
-
   evas_object_show(box->o_bg);
-
   box->zoom = ng->cfg->zoomfactor;
-
   return box;
 }
 
@@ -100,7 +94,7 @@ ngw_box_position_to_item(Ngw_Box *box, Ngw_Item  *item)
    if (!item) return;
    
    box->pos = item->x; // - (box->icon_size + ITEM_SPACING)/2;
-  _ngw_box_redraw(box);
+   _ngw_box_redraw(box);
 }
 
 void 
@@ -145,23 +139,22 @@ _ngw_box_zoom_function(Ngw_Box *box, double d, double *zoom, double *disp)
   if (d > -range && d < range)
     {
       *zoom = (box->zoom - 1.0) * (cfg->zoomfactor - 1.0) *
-	((sqrt_ff_1 - sqrt_ffxx) / (sqrt_ff_1 - f)) + 1.0;
+       ((sqrt_ff_1 - sqrt_ffxx) / (sqrt_ff_1 - f)) + 1.0;
 
       *disp = (box->icon_size + ITEM_SPACING)
            * ((box->zoom - 1.0) * (cfg->zoomfactor - 1.0)
-	   * (range * (x * (2 * sqrt_ff_1 - sqrt_ffxx) -
-	     ff * atan(x / sqrt_ffxx)) / (2.0 * (sqrt_ff_1 - f))) + d);
+      * (range * (x * (2 * sqrt_ff_1 - sqrt_ffxx) -
+      ff * atan(x / sqrt_ffxx)) / (2.0 * (sqrt_ff_1 - f))) + d);
     }
   else
     {
       *zoom = 1.0;
 
       *disp = (box->icon_size + ITEM_SPACING) *
-	((box->zoom - 1.0) * (cfg->zoomfactor - 1.0) *
-	 (range * (sqrt_ff_1 - ff * atan(1.0 / sqrt_ff_1)) /
-	  (2.0 * (sqrt_ff_1 - f))) + range + fabs(d) - range);
-      if (d < 0.0)
-	*disp = -(*disp);
+      ((box->zoom - 1.0) * (cfg->zoomfactor - 1.0) *
+      (range * (sqrt_ff_1 - ff * atan(1.0 / sqrt_ff_1)) /
+      (2.0 * (sqrt_ff_1 - f))) + range + fabs(d) - range);
+      if (d < 0.0) *disp = -(*disp);
     }
 }
 
@@ -202,9 +195,6 @@ static void _ngw_box_redraw(Ngw_Box *box)
           evas_object_resize(box->o_over, end2 - end1 + 30,
                              (int) (box->icon_size * (cfg->zoomfactor + 0.5) + 40)); // FIXME * item_zoomed
         }
-      
-
-
     }
   for (; l; l = l->next)
     {
@@ -223,5 +213,4 @@ static void _ngw_box_redraw(Ngw_Box *box)
       evas_object_resize(it->obj, size, size);
     }
 }
-
 

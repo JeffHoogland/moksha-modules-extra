@@ -17,36 +17,36 @@ _ng_border_icon_add(E_Border *bd, Evas *evas)
     {
       o = edje_object_add(evas);
       if (!bd->internal_icon)
-	e_util_edje_icon_set(o, "enlightenment/e");
+        e_util_edje_icon_set(o, "enlightenment/e");
       else
-	{
-	  if (!bd->internal_icon_key)
-	    {
-	      char *ext;
-	      ext = strrchr(bd->internal_icon, '.');
-	      if ((ext) && ((!strcmp(ext, ".edj"))))
-		{
-		  if (!edje_object_file_set(o, bd->internal_icon, "icon"))
-		    e_util_edje_icon_set(o, "enlightenment/e");
-		}
-	      else if (ext)
-		{
-		  evas_object_del(o);
-		  o = e_icon_add(evas);
-		  e_icon_file_set(o, bd->internal_icon);
-		}
-	      else
-		{
-		  if (!e_util_edje_icon_set(o, bd->internal_icon))
-		    e_util_edje_icon_set(o, "enlightenment/e");
-		}
-	    }
-	  else
-	    {
-	      edje_object_file_set(o, bd->internal_icon,
-				   bd->internal_icon_key);
-	    }
-	}
+        {
+          if (!bd->internal_icon_key)
+            {
+              char *ext;
+              ext = strrchr(bd->internal_icon, '.');
+              if ((ext) && ((!strcmp(ext, ".edj"))))
+                {
+                  if (!edje_object_file_set(o, bd->internal_icon, "icon"))
+                  e_util_edje_icon_set(o, "enlightenment/e");
+                }
+              else if (ext)
+                {
+                  evas_object_del(o);
+                  o = e_icon_add(evas);
+                  e_icon_file_set(o, bd->internal_icon);
+                }
+              else
+                {
+                  if (!e_util_edje_icon_set(o, bd->internal_icon))
+                    e_util_edje_icon_set(o, "enlightenment/e");
+                }
+            }
+          else
+            {
+              edje_object_file_set(o, bd->internal_icon,
+              bd->internal_icon_key);
+            }
+        }
       return o;
     }
 
@@ -58,21 +58,20 @@ _ng_border_icon_add(E_Border *bd, Evas *evas)
       o = e_icon_add(evas);
 
       size = bd->client.netwm.icons[0].width;
-	
+
       for (i = 1; i < bd->client.netwm.num_icons; i++)
-	{
-	  if ((tmp = bd->client.netwm.icons[i].width) > size)
-	    {
-	      size = tmp;
-	      found = i;
-	    }
-	}
+        {
+          if ((tmp = bd->client.netwm.icons[i].width) > size)
+            {
+              size = tmp;
+              found = i;
+            }
+        }
 
       e_icon_data_set(o, bd->client.netwm.icons[found].data,
-		      bd->client.netwm.icons[found].width,
-		      bd->client.netwm.icons[found].height);
+                         bd->client.netwm.icons[found].width,
+                         bd->client.netwm.icons[found].height);
       e_icon_alpha_set(o, 1);
-
       return o;
     }
 
@@ -96,17 +95,17 @@ _ng_border_icon_add(E_Border *bd, Evas *evas)
       size = bd->client.netwm.icons[0].width;
 
       for (i = 1; i < bd->client.netwm.num_icons; i++)
-	{
-	  if ((tmp = bd->client.netwm.icons[i].width) > size)
-	    {
-	      size = tmp;
-	      found = i;
-	    }
-	}
+        {
+          if ((tmp = bd->client.netwm.icons[i].width) > size)
+            {
+              size = tmp;
+              found = i;
+            }
+        }
 
       e_icon_data_set(o, bd->client.netwm.icons[found].data,
-		      bd->client.netwm.icons[found].width,
-		      bd->client.netwm.icons[found].height);
+                         bd->client.netwm.icons[found].width,
+                         bd->client.netwm.icons[found].height);
       e_icon_alpha_set(o, 1);
       return o;
     }
@@ -200,6 +199,4 @@ ngw_item_signal_emit(Ngw_Item *it, char *sig)
 {
    if (it->obj)  edje_object_signal_emit(it->obj, sig, "e");
 }
-
-
 

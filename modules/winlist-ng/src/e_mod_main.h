@@ -159,7 +159,7 @@ void         ngw_item_mouse_up        (Ngw_Item *it, Evas_Event_Mouse_Up *ev);
 void         ngw_item_drag_start      (Ngw_Item *it);
 void         ngw_item_free            (Ngw_Item *it);
 
-Ngw_Box      *ngw_box_new             (Ng *ng);
+Ngw_Box     *ngw_box_new              (Ng *ng);
 void         ngw_box_free             (Ngw_Box *box);
 void         ngw_box_item_show        (Ngw_Box *box, Ngw_Item *it);
 void         ngw_box_item_remove      (Ngw_Box *box, Ngw_Item *it);
@@ -169,9 +169,6 @@ void         ngw_box_position_to_item (Ngw_Box *box, Ngw_Item *it);
 
 void         ngw_win_show             (Ngw_Win *win);
 void         ngw_win_hide             (Ngw_Win *win);
-
-
-
 
 void         ngw_border_menu_show     (Ng *ng, E_Border *bd, Evas_Coord x, Evas_Coord y, int dir, Ecore_X_Time timestamp);
 
