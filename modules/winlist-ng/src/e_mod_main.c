@@ -170,8 +170,9 @@ e_modapi_init(E_Module *m)
 
    ngw_register_module_actions();
    ngw_register_module_keybindings();
-
-   e_configure_registry_item_add("extensions/winlist_ng", 50, D_("Winlist NG"), NULL, "enlightenment/winlist", _ngw_config_dialog);
+   
+   snprintf(buf, sizeof(buf), "%s/e-module-ng.edj", e_module_dir_get(ngw_config->module));
+   e_configure_registry_item_add("extensions/winlist_ng", 50, D_("Winlist NG"), NULL, buf, _ngw_config_dialog);
 
    return m;
 }
