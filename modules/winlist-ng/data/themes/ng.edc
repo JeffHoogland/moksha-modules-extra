@@ -290,6 +290,7 @@ collections {
                min:  1 0;
                align: 0.5 0.5;
                text_class: "module_large_s";
+               ellipsis: -1;
              }
              visible: 0;
           }
