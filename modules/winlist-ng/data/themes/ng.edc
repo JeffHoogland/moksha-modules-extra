@@ -214,6 +214,7 @@ collections {
                 size: 11;
                 min:  1 0;
                 align: 0.5 0.5;
+                ellipsis: -1;
              }
              visible: 0;
          }
